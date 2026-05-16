@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Recurse \"c:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\")",
+      "Bash(Select-Object FullName)",
+      "Bash(Format-Table -HideTableHeaders)",
+      "Bash(python scripts/fetch_url.py \"https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f\")",
+      "Bash(python scripts/fetch_url.py \"https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/\")",
+      "Bash(python -X utf8 scripts/fetch_url.py \"https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('TITLE:', d.get\\('title',''\\)\\); print\\('LEN:', len\\(d.get\\('content',''\\)\\)\\); print\\('SNIPPET:', d.get\\('content',''\\)[:500]\\)\")",
+      "Bash(python scripts/fetch_url.py \"https://www.reddit.com/r/AI_Agents/comments/1sqg5ew/spent_a_weekend_actually_understanding_and/\")",
+      "Bash(python scripts/fetch_url.py \"https://medium.com/@urvvil08/andrej-karpathys-llm-wiki-create-your-own-knowledge-base-8779014accd5\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('TITLE:', d.get\\('title',''\\)\\); print\\('LEN:', len\\(d.get\\('content',''\\)\\)\\); print\\('SNIPPET:', d.get\\('content',''\\)[:800]\\)\")",
+      "Bash(python scripts/fetch_url.py \"https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code\")",
+      "Bash(python scripts/fetch_url.py \"https://github.com/lucasastorian/llmwiki\")",
+      "mcp__web-reader__webReader",
+      "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\concepts\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\tools\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\agents\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\models\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\news\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\tips\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\wiki\\\\people\", \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\\\\sources\\\\web\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"Directories created\")",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/iXd0t60YmMw?si=tWrSQ68a7ZorEweq\" --save)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('TITLE:', d.get\\('title',''\\)\\); print\\('CHANNEL:', d.get\\('channel',''\\)\\); print\\('DATE:', d.get\\('date',''\\)\\); print\\('TRANSCRIPT LEN:', len\\(d.get\\('transcript',''\\)\\)\\); print\\('SNIPPET:', d.get\\('transcript',''\\)[:300]\\)\")",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p \"C:/Shared/OneDrive/AIProjects/AIWiki/sources/transcripts\")",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/iXd0t60YmMw\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/4SB3T1reCHw\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/FR9USL0yj3I\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/zVEb19AwkqM\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/3sx3viLjR8Q\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/rpFietivKS4\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/VjxzsCurQ-0\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/ijBJVzxSBRA\" --save)",
+      "Bash(Test-Path \"C:/Shared/OneDrive/AIProjects/AIWiki/index.md\")",
+      "Bash(Get-Content \"C:/Shared/OneDrive/AIProjects/AIWiki/index.md\" -TotalCount 5)",
+      "Bash(python scripts/fetch_url.py \"https://codewithdan.com/using-telegram-with-github-copilot-cli/\")",
+      "Bash(python scripts/fetch_url.py \"https://burkeholland.github.io/cpt\")",
+      "Bash(python scripts/fetch_url.py \"https://github.com/andysingal/LLMops\")"
+    ]
+  }
+}

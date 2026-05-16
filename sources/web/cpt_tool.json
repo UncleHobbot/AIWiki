@@ -1,0 +1,8 @@
+{
+  "title": "cpt - Add Copilot chat to any terminal",
+  "content": "~/projects/webapp ❯ npm start Error: listen EADDRINUSE: address already in use :::3000 ~/projects/webapp ❯ ctrl+k ✦ cpt gpt-5.4-mini tab↹ model what's using port 3000? kill it ▸ lsof -ti :3000 | xargs kill -9 Refine your request... enter accept · type to refine · esc quit ~/projects/webapp ❯ lsof -ti :3000 | xargs kill -9",
+  "method": "readability",
+  "url": "https://burkeholland.github.io/cpt/",
+  "original_url": "https://burkeholland.github.io/cpt",
+  "status_code": 200
+}

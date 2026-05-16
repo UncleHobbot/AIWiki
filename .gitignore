@@ -1,0 +1,11 @@
+.env
+.state/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+.obsidian/
+*.tmp

@@ -2,10 +2,21 @@ Generate a weekly digest of all wiki entries created or updated in the last 7 da
 
 Steps:
 1. Determine the current ISO week number (YYYY-WNN format)
-2. Check if digests/YYYY-WNN.md already exists — if so, regenerate it from scratch
-3. Scan all .md files in wiki/ and filter to those with an "updated:" date within the last 7 days
-4. Group the qualifying entries by category
-5. Write digests/YYYY-WNN.md with the following bilingual structure:
+
+2. Load the terminology memory from digests/memory.json if it exists.
+   This is the list of terms already explained in previous digests.
+   Keep it in context for Step 5.
+
+3. Check if digests/YYYY-WNN.md already exists — if so, regenerate it from scratch
+
+4. Scan all .md files in wiki/ and filter to those with an "updated:" date within
+   the last 7 days. Group by category.
+
+5. Write digests/YYYY-WNN.md with the following bilingual structure.
+
+   IMPORTANT: check every technical term against memory.json["terms"].
+   If the term appears there, do NOT re-explain it — just use it directly.
+   Only define a term inline if it is NOT already in memory.json.
 
 ---
 title: "LLM Wiki Digest — Week NN, YYYY"
@@ -47,4 +58,21 @@ entries_updated: M
 ## 🔗 Стоит прочитать
 [Same 5 URLs — no translation needed for URLs themselves]
 
-6. Report: digest saved to digests/YYYY-WNN.md
+6. After writing the digest, update digests/memory.json:
+   a. For every technical term, acronym, tool name, or model name that was
+      DEFINED or EXPLAINED in this digest, add it to memory.json["terms"]
+      with a one-line definition.
+   b. Merge with existing memory (do not overwrite terms already present).
+   c. Update memory.json["last_updated"] to the current ISO week.
+
+   memory.json schema:
+   {
+     "last_updated": "YYYY-WNN",
+     "terms": {
+       "RAG": "Retrieval-Augmented Generation: combining LLM generation with retrieval from an external knowledge store",
+       "MCP": "Model Context Protocol: open standard for connecting LLMs to external tools and data sources",
+       "...": "..."
+     }
+   }
+
+7. Report: digest saved to digests/YYYY-WNN.md, N terms added to memory.json

@@ -429,6 +429,19 @@ Shared utilities:
 - `detect_category(text)` — heuristic classifier
 - `load_env()` — loads `.env` file
 
+### `scripts/build_relations.py`
+
+```
+Usage: python scripts/build_relations.py              # rebuild all 82 entries
+       python scripts/build_relations.py --slug <slug> # update one entry fast
+Output: .state/relations/<slug>.json per entry
+        .state/relations/_index.json  aggregated by_tag / by_category lookup
+```
+
+Powers the relational mode of `/wiki-search`. Run after any ingestion batch.
+The `_index.json` maps every tag and category to the slugs that carry it, enabling
+queries like "tools using RAG" or "concepts about self-play" without full-text grep.
+
 ### `scripts/obs.py`
 
 ```
@@ -470,8 +483,9 @@ Run these manually or set up a cron job / Task Scheduler:
 | `/wiki-reddit` | Daily | Morning scan for overnight posts |
 | `/wiki-inbox` | As needed | After adding files to inbox/ |
 | `/wiki-digest` | Weekly | Every Monday morning |
-| `/wiki-check` | After any batch | Ensures every entry has its Russian section |
+| `/wiki-check` | After any batch | Ensures every entry has its Russian section + obs.py health |
 | `/wiki-index` | After any batch | Keep index current |
+| `python scripts/build_relations.py` | After any batch | Rebuild relation index for `/wiki-search` relational queries |
 
 ---
 

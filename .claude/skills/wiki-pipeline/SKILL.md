@@ -101,6 +101,30 @@ If `## To Read` is empty, skip this step. Otherwise run `/wiki-links` again.
 
 ---
 
+## Step 3b — Update Relation Index
+
+**What it does:** Rebuilds the relation index so `/wiki-search` relational
+queries stay accurate after new entries are created.
+
+**Run:**
+```
+python scripts/build_relations.py
+```
+
+If only one entry was created or updated, use the faster single-entry update:
+```
+python scripts/build_relations.py --slug <slug>
+```
+
+**Success criteria:**
+- `.state/relations/_index.json` updated timestamp matches today
+- Entry count in the index matches the wiki file count
+
+**Failure handling:** Non-fatal — log and continue. The index is a cache;
+stale data causes search misses, not data corruption.
+
+---
+
 ## Step 4 — Check Entry Health (`/wiki-check`)
 
 **What it does:** Audits all wiki entries for missing Russian sections, then
@@ -176,6 +200,7 @@ if ($isMonday -or -not $exists) { # run /wiki-digest }
 **Run:**
 ```
 git add wiki/ inbox/ index.md digests/ log.md .state/reddit_cursor.json .state/processed_urls.json .state/last_run.json
+# Note: .state/relations/ is gitignored — relations are rebuilt from source on each run
 git commit -m "<structured message>"
 git push
 ```

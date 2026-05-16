@@ -33,6 +33,18 @@ In Karpathy's own setup: Obsidian is the viewer (IDE), the LLM agent is the prog
 
 For search at scale beyond `index.md`, [qmd](https://github.com/qmd-lab/qmd) is recommended — a local markdown search engine with hybrid BM25/vector search and an MCP server, usable by the LLM as a native tool.
 
+## Debate
+The LLM Wiki pattern has attracted both enthusiasm and critique since Karpathy published the gist (41,000+ bookmarks in the first week).
+
+**Critique (community voices):**
+- *Hallucinations bake in permanently:* In pure RAG, a hallucination affects one answer. In LLM Wiki, a misunderstood source can get written into a wiki page as "fact" and propagate via cross-links to other pages before anyone notices. This makes the Lint step non-optional.
+- *Not production-ready at scale:* The pattern is designed for ~100–500 curated sources. For larger, rapidly changing corpora, the cost of re-ingesting updates and maintaining consistency grows faster than the benefit.
+- *High per-ingest LLM cost:* Writing and updating 10–15 wiki pages per new source is expensive at scale. For a team ingesting dozens of sources daily, the token costs compound.
+- *Context layer design matters:* Nate B Jones ("Open Brain") argues that LLM Wiki and Open Brain solve the same problem differently — choosing your "context layer" architecture is "one of the single most important things you can do in 2026." Neither is universally superior.
+
+**Industry validation:**
+Pinecone — the company that built the market-leading vector database powering most RAG systems — independently converged on the same compiled-knowledge-layer concept with their "Nexus" product launch (May 2026), citing 85% of agent effort wasted on retrieval and 50–60% task completion rates with agentic RAG. See [[pinecone-nexus]].
+
 ## Notable Quotes
 > "The tedious part of maintaining a knowledge base is not the reading or the thinking — it's the bookkeeping. Humans abandon wikis because the maintenance burden grows faster than the value. LLMs don't get bored, don't forget to update a cross-reference, and can touch 15 files in one pass." — Andrej Karpathy
 
@@ -40,6 +52,9 @@ For search at scale beyond `index.md`, [qmd](https://github.com/qmd-lab/qmd) is 
 
 ## Related Entries
 - [[llmwiki-open-source]]
+- [[llm-wiki-ecosystem]]
+- [[pinecone-nexus]]
+- [[karpathy-deep-dive-llms]]
 - [[github-copilot-cli]]
 
 ---

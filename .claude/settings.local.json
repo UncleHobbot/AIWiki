@@ -33,7 +33,29 @@
       "Bash(Get-Content \"C:/Shared/OneDrive/AIProjects/AIWiki/index.md\" -TotalCount 5)",
       "Bash(python scripts/fetch_url.py \"https://codewithdan.com/using-telegram-with-github-copilot-cli/\")",
       "Bash(python scripts/fetch_url.py \"https://burkeholland.github.io/cpt\")",
-      "Bash(python scripts/fetch_url.py \"https://github.com/andysingal/LLMops\")"
+      "Bash(python scripts/fetch_url.py \"https://github.com/andysingal/LLMops\")",
+      "Bash(python -c ' *)",
+      "Bash(python scripts/parse_wiki.py)",
+      "Bash(python scripts/parse_wiki_index.py)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/Z8kFhWXKay4\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/DqXtRpBe9FA\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/ig2gul3RkFk\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/orTRCgjlLKo\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/3_7veI7H0Og\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/6N7iejEp-dI\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/X9qHpCTGmEU\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/gexxq4VbPfs\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/dxq7WtWxi44\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/0TPq43Wpbz0\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/7xTGNNLPyMI\" --save)",
+      "Bash(python scripts/fetch_youtube.py \"https://youtu.be/lYVmlpz0Kv4\" --save)",
+      "Bash(python scripts/fetch_url.py \"https://github.com/nicholasglazer/gnosis-mcp\")",
+      "Bash(python scripts/fetch_url.py \"https://gnosismcp.com/\")",
+      "Bash(python scripts/fetch_url.py \"https://www.pulsemcp.com/servers/gh-nicholasglazer-gnosis\")",
+      "Bash(python scripts/fetch_url.py \"https://entire.io/home\")",
+      "Bash(python scripts/fetch_url.py \"https://docs.entire.io/overview\")",
+      "Bash(python scripts/fetch_url.py \"https://docs.entire.io/agents/copilot-cli\")",
+      "Bash(python scripts/fetch_url.py \"https://docs.entire.io/agents/opencode\")"
     ]
   }
 }

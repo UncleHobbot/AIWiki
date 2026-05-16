@@ -1,5 +1,6 @@
 .env
 .state/
+sources/reddit/
 __pycache__/
 *.pyc
 *.pyo
@@ -9,3 +10,4 @@ venv/
 node_modules/
 .obsidian/
 *.tmp
+.claude/settings.local.json

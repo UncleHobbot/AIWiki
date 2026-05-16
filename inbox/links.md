@@ -1,14 +1,21 @@
 # Links to Process
 
 ## To Read
-- https://codewithdan.com/using-telegram-with-github-copilot-cli/
-- https://github.com/github/app
-- https://burkeholland.github.io/cpt
-- https://github.com/andysingal/LLMops
 
 ## High Priority
 
 ## Done
+[nicholasglazer/gnosis-mcp](https://github.com/nicholasglazer/gnosis-mcp)
+[gnosis-mcp — Documentation search for AI agents](https://gnosismcp.com/)
+[Gnosis MCP Server by nicholasglazer | PulseMCP](https://www.pulsemcp.com/servers/gh-nicholasglazer-gnosis)
+[Entire · A new developer platform is coming](https://entire.io/home)
+[Overview - Entire](https://docs.entire.io/overview)
+[Copilot CLI - Entire](https://docs.entire.io/agents/copilot-cli)
+[OpenCode - Entire](https://docs.entire.io/agents/opencode)
+https://codewithdan.com/using-telegram-with-github-copilot-cli/
+https://github.com/github/app
+https://burkeholland.github.io/cpt
+https://github.com/andysingal/LLMops
 [llm-wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 [From idea to pull request: A practical guide to building with GitHub Copilot CLI - The GitHub Blog](https://github.blog/ai-and-ml/github-copilot/from-idea-to-pull-request-a-practical-guide-to-building-with-github-copilot-cli/)
 [Spent a weekend actually understanding and building Karpathy's "LLM Wiki" — here's what worked, what didn't : r/AI_Agents](https://www.reddit.com/r/AI_Agents/comments/1sqg5ew/spent_a_weekend_actually_understanding_and/)

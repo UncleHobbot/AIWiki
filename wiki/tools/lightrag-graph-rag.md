@@ -32,6 +32,9 @@ A key practical advantage is the incremental update algorithm. Unlike systems th
 ## Related Entries
 - [[llm-wiki-scientific-research]]
 - [[llm-wiki-pattern]]
+- [[llm-wiki-academic-applications]]
+- [[karma-knowledge-graph-enrichment]]
+- [[parness-automated-scientific-research]]
 
 ---
 <!-- RU -->
@@ -58,3 +61,6 @@ LightRAG разработан исследователями из Универс
 ## Связанные записи
 - [[llm-wiki-scientific-research]]
 - [[llm-wiki-pattern]]
+- [[llm-wiki-academic-applications]]
+- [[karma-knowledge-graph-enrichment]]
+- [[parness-automated-scientific-research]]

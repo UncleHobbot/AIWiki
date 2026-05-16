@@ -60,6 +60,9 @@ Three dimensions where a well-maintained personal wiki (this one included) is al
 - [[llm-wiki-pattern]]
 - [[llm4sr-survey]]
 - [[lightrag-graph-rag]]
+- [[karma-knowledge-graph-enrichment]]
+- [[surveygen-i-scientific-survey]]
+- [[parness-automated-scientific-research]]
 - [[omegawiki-research-platform]]
 - [[self-guided-self-play]]
 
@@ -113,5 +116,8 @@ Three dimensions where a well-maintained personal wiki (this one included) is al
 - [[llm-wiki-pattern]]
 - [[llm4sr-survey]]
 - [[lightrag-graph-rag]]
+- [[karma-knowledge-graph-enrichment]]
+- [[surveygen-i-scientific-survey]]
+- [[parness-automated-scientific-research]]
 - [[omegawiki-research-platform]]
 - [[self-guided-self-play]]

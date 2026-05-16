@@ -43,3 +43,5 @@
 **10:30 /wiki-links (queued)** — 4 arXiv sources from research added to inbox/links.md: arXiv:2502.06472 (KARMA), arXiv:2508.14317 (SurveyGen-I), arXiv:2410.05779 (LightRAG), arXiv:2605.05258 (PARNESS). LLM4SR (2501.04306) skipped — already processed.
 
 **10:45 wiki entry** — Created wiki/concepts/llm-wiki-academic-applications.md: bilingual survey entry covering 5 papers, 3 feature ideas, 200-word executive summary. Linked from llm-wiki-pattern and llm4sr-survey. Vault: 79 entries, 0 broken links, 0 orphans.
+
+**11:30 /wiki-links** — 4 arXiv papers processed. 3 created: karma-knowledge-graph-enrichment (concepts — 9-agent KG enrichment, 83.1% correctness, NeurIPS 2025), surveygen-i-scientific-survey (concepts — memory-guided survey generation, IJCNLP-AIJLP 2025), parness-automated-scientific-research (tools — DAG kernel + scenario-typed KG retrieval, arXiv 2026). 1 updated: lightrag-graph-rag (added cross-links to new entries). Vault: 82 entries, 0 broken links, 0 orphans. Processed URLs: 208.

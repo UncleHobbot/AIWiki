@@ -1,20 +1,23 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 78_
+_Last updated: 2026-05-17 | Total entries: 82_
 
 ---
 
-## 🧠 Concepts (6)
+## 🧠 Concepts (8)
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
+- [[karma-knowledge-graph-enrichment]] — Nine collaborative LLM agents automate KG enrichment: 38,230 entities at 83.1% correctness across 1,200 PubMed articles, 18.6% conflict-edge reduction via multi-layer consensus (NeurIPS 2025).
 - [[karpathy-deep-dive-llms]] — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are built.
 - [[llm-wiki-academic-applications]] — Survey of 5 key papers (KARMA, SurveyGen-I, LightRAG, PARNESS, LLM4SR) showing where academic LLM knowledge-base research stands, where a personal wiki already leads, and 3 concrete feature gaps to close.
 - [[llm-wiki-pattern]] — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, structured knowledge base.
 - [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
 - [[self-guided-self-play]] — SGS adds a Guide role to LLM self-play that prevents Conjecturer collapse; a 7B model after 200 rounds beat a 671B baseline on Lean4 theorem proving.
+- [[surveygen-i-scientific-survey]] — Memory-guided long-form survey generation: a terminology memory store prevents re-explaining defined terms across sections and across weekly runs (IJCNLP-AIJLP 2025).
 
 ---
 
-## 🛠️ Tools (27)
+## 🛠️ Tools (28)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
+- [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
 - [[awesome-agent-skills]] — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Vercel, Cloudflare, Sentry, and more).
 - [[claude-code-frameworks]] — The Claude Code community has produced several competing skill frameworks (GSD, Superpowers, Ouroboros, Han) with pre-built skills, agents, and workflows.
 - [[cpt-copilot-terminal]] — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal, letting you ask GitHub Copilot questions and get shell commands inline.

@@ -154,7 +154,11 @@ RAPIDAPI_KEY=your_key_here
 4. **Be concise, not exhaustive.** Entries should be scannable. Use bullet points for facts, short paragraphs for concepts. Max ~600 words per language section.
 5. **Date-stamp news entries.** Anything in `wiki/news/` must have a `date:` field in front matter.
 6. **Update the index.** After creating or updating any entry, regenerate `index.md`.
-7. **Log what you did.** After each run, append a one-line summary to `.state/last_run.json`.
+7. **Log what you did.** After each run, do both:
+   - Append a structured JSON entry to `.state/last_run.json` (machine-readable, for the pipeline)
+   - Append a human-readable line to `log.md` under today's `## YYYY-MM-DD` heading (create the heading if it doesn't exist yet)
+   
+   **`log.md` entry format:** `**HH:MM /command** — N entries created, M updated. Key items: slug1 (category), slug2 (category). Index: X total.`
 8. **Keep links healthy.** `python scripts/obs.py broken` lists `[[links]]` to entries that do not yet exist — treat each as a stub to create. `python scripts/obs.py orphans` lists entries no one links to — add them to Related Entries in semantically close entries.
 
 ### Language Rules for Russian Translation

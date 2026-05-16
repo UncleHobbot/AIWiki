@@ -175,7 +175,7 @@ if ($isMonday -or -not $exists) { # run /wiki-digest }
 
 **Run:**
 ```
-git add wiki/ inbox/ index.md digests/ .state/reddit_cursor.json .state/processed_urls.json .state/last_run.json
+git add wiki/ inbox/ index.md digests/ log.md .state/reddit_cursor.json .state/processed_urls.json .state/last_run.json
 git commit -m "<structured message>"
 git push
 ```

@@ -5,3 +5,41 @@
 **12:00 /wiki-reddit** — Scanned 12 subreddits, 52 qualifying posts, 7 entries created: orthrus-qwen3-acceleration (tools), arxiv-llm-ban-policy (news), figure-ai-03-robot-30-hours (news), deepseek-v4-vs-opus-kimi (models), shokunin-memory-system (tools), gen-ai-web-traffic-may-2026 (news), github-copilot-pricing-exodus (news). Also fixed fetch_reddit.py OAuth fallback + UTF-8 encoding.
 
 **14:30 /wiki-reddit (run 2)** — Scanned 12 subreddits incrementally, 109 posts fetched, 69 qualifying (66 new). 12 entries created: poetiq-recursive-self-improvement (tools), openai-100-dollar-tier (news), tabpfn-3-tabular-foundation-model (models), mythos-cybersecurity-agent (agents), roo-code-shutdown-roomote (news), apple-m5-kernel-exploit-ai (news), figure-ai-team-robots-livestream (news), cline-roo-alternatives (tips), chorus-multi-model-setup (tips), fda-ai-clinical-trials (news), mcp-financial-data-server (tools), gpt-vs-glm-5-1-comparison (models). Index rebuilt: 37 entries total. State updated: 156 processed URLs, 12 subreddit cursors.
+
+**13:00 /wiki-inbox** — 6 links + 8 YouTube videos processed. 5 entries created: llm-wiki-pattern (concepts), github-copilot-cli (tools), llmwiki-open-source (tools), llm-wiki-setup-guide (tips), llm-wiki-enterprise-patterns (agents). YouTube: 8 LLM Wiki tutorial videos, 2 entries from full transcripts. Index: 12 entries total.
+
+**14:00 /wiki-inbox** — 4 links processed. 3 entries created: copilot-cli-telegram-bridge (tips), cpt-copilot-terminal (tools), llm-wiki-ecosystem (tools). 1 updated: github-copilot-app (added official README details). Index: 21 entries.
+
+---
+
+## 2026-05-16
+
+**00:00 /wiki-inbox** — 8 Claude Code doc pages + 10 YouTube talks processed. 16 entries created: claude-code-agentic-loop, claude-code-extensions-overview, claude-code-directory, claude-code-memory, claude-code-permission-modes, claude-code-workflows-best-practices (agents/tips); 10 AI Agents Montreal talks (8 with full yt-dlp transcripts, 2 description-only due to rate limiting). Index: 55 entries.
+
+**01:00 /wiki-reddit** — Scanned 12 subreddits (incremental). 2 entries created: claude-code-deferral-behavior (tips — Opus 4.7 task-skipping pattern), claude-code-frameworks (tips — GSD/Superpowers/Ouroboros/Han guide). Queued github.com/testdouble/han to links.md. Index: 57 entries.
+
+**12:00 /wiki-inbox** — 4 links processed. 3 entries created: dotnet-claude-kit (tools — .NET 10 expert layer for Claude Code), awesome-agent-skills (tools — 1000+ curated agent skills), visual-explainer (tools — HTML diagram skill). 1 skipped: AntonIliashenko/MathWiki (404). Index: 73 entries.
+
+**13:00 /wiki-reddit** — Scanned 14 subreddits (added r/ollama, r/vibecoding). 350 posts, 77 qualifying. 2 entries created: self-guided-self-play (concepts — SGS algorithm, 7B beats 671B on Lean4), dynamic-compute-budget-local-llm (tips — DCA gets Qwen-35B to 39.9% on HLE). Queued 5 URLs to links.md. Index: 75 entries.
+
+**14:00 /wiki-links** — 5 URLs processed. 2 created: agi-impossibility-proof-debunked (concepts — Guerzhoy 2026 debunks Van Rooij Ingenia Theorem), github-spec-kit (tools — spec-driven dev toolkit, 30+ agents). 1 updated: self-guided-self-play (added authors Bailey et al. + arXiv sources). Index: 77 entries. Processed URLs: 204.
+
+**15:00 /wiki-digest** — Inaugural bilingual digest generated: digests/2026-W20.md. Covers all 77 entries (wiki launched this week). Categories: 11 news, 27 tools, 20 tips, 11 agents, 5 concepts, 3 models. Top story: Mythos cybersecurity agent (32-step network attack benchmark).
+
+**16:00 vault lint** — `python scripts/obs.py check` run after installing obsidiantools 0.11.0. Fixed: 7 broken [[links]] (resolved to existing entries or removed), 32 orphaned entries (connected via Related Entries edits across 17 files). Also fixed EN/RU divergence in llm-wiki-pattern (RU had 2 related entries vs 5 in EN). Final state: 0 broken, 0 orphans, 0 isolated across 78 entries.
+
+**17:00 tooling** — Installed obsidiantools 0.11.0. Created scripts/obs.py (Obsidian vault CLI: backlinks, orphans, broken links, top-linked, full health check). Created requirements.txt. Updated CLAUDE.md with Windows Environment, Editing Conventions, and Network Fetching sections. Updated wiki-check and wiki-index commands to run obs.py.
+
+**17:30 wiki-pipeline skill** — Extracted canonical 7-step maintenance sequence from 6 session transcripts. Created .claude/skills/wiki-pipeline/SKILL.md, .claude/commands/wiki-pipeline.md, wiki-pipeline-task.xml, wiki-pipeline-run.ps1. Task Scheduler trigger: daily 08:00, logs to .state/pipeline.log.
+
+---
+
+## 2026-05-17
+
+**09:00 scripts/_template.py** — Created Python boilerplate with UTF-8 stdout reconfigure, read/write helpers with explicit encoding='utf-8', ASCII-safe log() helper, and parse_ytdlp_json() / parse_ytdlp_json_stream() for yt-dlp output parsing. Updated CLAUDE.md to mandate all new Python scripts start from this template.
+
+**10:00 research** — Task agent researched academic applications of LLM-powered personal wikis. Found 5 key papers: KARMA (NeurIPS 2025), SurveyGen-I (IJCNLP-AIJLP 2025), LightRAG (EMNLP 2025), PARNESS (2026), LLM4SR (2025). Identified 3 feature gaps: contradiction detector, relation index, digest terminology memory.
+
+**10:30 /wiki-links (queued)** — 4 arXiv sources from research added to inbox/links.md: arXiv:2502.06472 (KARMA), arXiv:2508.14317 (SurveyGen-I), arXiv:2410.05779 (LightRAG), arXiv:2605.05258 (PARNESS). LLM4SR (2501.04306) skipped — already processed.
+
+**10:45 wiki entry** — Created wiki/concepts/llm-wiki-academic-applications.md: bilingual survey entry covering 5 papers, 3 feature ideas, 200-word executive summary. Linked from llm-wiki-pattern and llm4sr-survey. Vault: 79 entries, 0 broken links, 0 orphans.

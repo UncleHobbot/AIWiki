@@ -15,7 +15,7 @@ _Last updated: 2026-05-17 | Total entries: 84_
 
 ---
 
-## 🛠️ Tools (29)
+## 🛠️ Tools (30)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
 - [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
 - [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
@@ -25,6 +25,7 @@ _Last updated: 2026-05-17 | Total entries: 84_
 - [[dotnet-claude-kit]] — A curated knowledge and action layer that turns Claude Code into a senior .NET 10 / C# 14 expert with 47 skills, 10 agents, and 15 Roslyn MCP tools.
 - [[entire-platform]] — Entire is an open-source CLI that hooks into your git workflow and captures full AI agent sessions as "Checkpoints."
 - [[freebuff]] — `freebuff` is a 100% free CLI coding agent that lets you choose from top open models including DeepSeek v4 Pro/Flash.
+- [[github-copilot-cli]] — GitHub Copilot CLI is a GitHub-aware coding agent that lives in the terminal, letting you move from natural-language requests to pull requests without leaving the command line.
 - [[github-spec-kit]] — GitHub's open-source Spec-Driven Development toolkit: constitution → specify → plan → tasks → implement workflow for 30+ AI coding agents.
 - [[gnosis-mcp]] — Gnosis MCP is a zero-config local MCP server that gives AI agents hybrid keyword + semantic search over your documentation.
 - [[goai-graph-of-ideas]] — GoAI is a system that constructs educational knowledge graphs from AI research papers, capturing prerequisite knowledge paths.

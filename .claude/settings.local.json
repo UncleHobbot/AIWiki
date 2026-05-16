@@ -21,7 +21,12 @@
       "Bash(python scripts/parse_wiki_index.py)",
       "Bash(python scripts/fetch_url.py *)",
       "Bash(python scripts/fetch_youtube.py *)",
-      "Bash(python scripts/fetch_reddit.py *)"
+      "Bash(python scripts/fetch_reddit.py *)",
+      "Bash(python -m py_compile scripts/inbox_coordinator.py)",
+      "Bash(python -m py_compile scripts/parallel_fetch.py)",
+      "Bash(python -m py_compile scripts/benchmark_inbox.py)",
+      "Bash(python scripts/benchmark_inbox.py --items 20 --workers 8 --runs 3 --speedup 20)",
+      "Bash(git add *)"
     ]
   }
 }

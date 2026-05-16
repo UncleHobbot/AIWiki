@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-16 | Total entries: 61_
+_Last updated: 2026-05-16 | Total entries: 63_
 
 ---
 
@@ -72,7 +72,7 @@ _Last updated: 2026-05-16 | Total entries: 61_
 
 ---
 
-## 💡 Tips (17)
+## 💡 Tips (19)
 
 - [[agentic-ai-coding-patterns-tornhill]] — Adam Tornhill's battle-tested patterns for agentic AI coding: speed with quality, framed as a competitive secret weapon.
 - [[agentic-ai-development-copilot-lessons]] — Five practical lessons from real-world GitHub Copilot CLI usage: TDD discipline, commit control, local-first workflow.
@@ -87,7 +87,9 @@ _Last updated: 2026-05-16 | Total entries: 61_
 - [[github-copilot-cli-best-practices]] — Layered instructions, model selection by task complexity, plan-first execution, and focused sessions for Copilot CLI.
 - [[karpathy-claude-code-guidelines]] — Karpathy-inspired CLAUDE.md: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution.
 - [[llm-assisted-coding-systems-perspective]] — Systems thinking, XP, and Lean applied to diagnose why common AI coding workflows fail — and how to fix them.
+- [[llm-wiki-scientific-research]] — LLM Wiki applied to scientific research: GROBID ingestion, citation chaining, math-aware search, MiniCheck verification, and OmegaWiki as the state-of-the-art academic implementation.
 - [[llm-wiki-setup-guide]] — Step-by-step guide to building Karpathy's LLM Wiki: tools, folder structure, schema, and ingestion workflow.
+- [[mathwiki-improvement-plan]] — Concrete 4-phase plan to layer Claude Code automation on Yaro2709/MathWiki: index generation, proof coverage, LLM proof sketches, GROBID ingestion, and Quartz publishing.
 - [[spec-driven-development-bmad]] — From vibe coding to production-quality AI development: BMAD, custom skills, and the spec-driven workflow.
 - [[test-driven-agentic-behaviours]] — How to apply TDD principles to AI agent behaviors: specify what the agent should do before it does it.
 - [[xp-practices-ai-assisted-development]] — Why XP practices (TDD, pairing, CI, trunk-based dev) are exactly what make AI-assisted development sustainable.

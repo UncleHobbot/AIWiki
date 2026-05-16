@@ -1,9 +1,19 @@
 # Links to Process
 
 ## To Read
+
 ## High Priority
 
 ## Done
+https://arxiv.org/abs/2604.20209 <!-- SGS: Self-Guided Self-Play for LLMs (Lean4 theorem proving) -->
+https://github.com/LukeBailey181/sgs <!-- SGS code -->
+https://github.com/ryoiki-tokuiten/Iterative-Contextual-Refinements <!-- Dynamic Compute Budget Allocation technique -->
+https://arxiv.org/abs/2411.06498 <!-- Debunking Van Rooij AGI impossibility theorem (CBB 2026) -->
+https://github.com/github/spec-kit <!-- GitHub Spec-Kit: spec-driven development for Claude Code -->
+[codewithmukesh/dotnet-claude-kit: Make Claude Code a .NET 10 Expert](https://github.com/codewithmukesh/dotnet-claude-kit)
+[VoltAgent/awesome-agent-skills: A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.](https://github.com/VoltAgent/awesome-agent-skills)
+[nicobailon/visual-explainer: Agent skill that generates rich HTML pages or slide decks for diagrams, diff reviews, plan audits, data tables, and project recaps](https://github.com/nicobailon/visual-explainer)
+[AntonIliashenko/MathWiki](https://github.com/AntonIliashenko/MathWiki) <!-- 404 not found -->
 https://github.com/testdouble/han
 https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course
 https://docs.github.com/en/copilot/how-tos/copilot-cli/cli-best-practices

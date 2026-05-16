@@ -54,7 +54,8 @@ llm-wiki/
 │   ├── fetch_youtube.py
 │   ├── fetch_twitter.py
 │   ├── fetch_url.py
-│   └── utils.py
+│   ├── utils.py
+│   └── obs.py                  ← Obsidian vault analysis CLI (backlinks, orphans, broken links)
 ├── .state/                     ← Processing state & deduplication cache
 │   ├── processed_urls.json     ← Already-processed URLs (skip list)
 │   ├── reddit_cursor.json      ← Last-seen post IDs per subreddit
@@ -124,12 +125,13 @@ RAPIDAPI_KEY=your_key_here
 ### Core Principles
 
 1. **Every entry is bilingual.** Each `.md` file in `wiki/` contains both English and Russian content in the same file — English section first, Russian section second, separated by a clear divider. Never create separate files for translations.
-2. **Deduplicate aggressively.** Before creating a new entry, check `index.md` and `.state/processed_urls.json`. Update existing entries rather than creating duplicates.
+2. **Deduplicate aggressively.** Before creating a new entry, check `index.md` and `.state/processed_urls.json`. Also run `python scripts/obs.py backlinks <slug>` to check if other entries already reference a slug — that's a signal the topic exists or is expected. Update existing entries rather than creating duplicates.
 3. **Preserve source attribution.** Every wiki entry must include a `sources:` front-matter block with original URLs.
 4. **Be concise, not exhaustive.** Entries should be scannable. Use bullet points for facts, short paragraphs for concepts. Max ~600 words per language section.
 5. **Date-stamp news entries.** Anything in `wiki/news/` must have a `date:` field in front matter.
 6. **Update the index.** After creating or updating any entry, regenerate `index.md`.
 7. **Log what you did.** After each run, append a one-line summary to `.state/last_run.json`.
+8. **Keep links healthy.** `python scripts/obs.py broken` lists `[[links]]` to entries that do not yet exist — treat each as a stub to create. `python scripts/obs.py orphans` lists entries no one links to — add them to Related Entries in semantically close entries.
 
 ### Language Rules for Russian Translation
 
@@ -377,6 +379,36 @@ Shared utilities:
 - `slugify(title)` — creates filename-safe slugs
 - `detect_category(text)` — heuristic classifier
 - `load_env()` — loads `.env` file
+
+### `scripts/obs.py`
+
+```
+Usage: python scripts/obs.py <command> [args]
+
+Commands:
+  backlinks <slug>   Who links TO this entry (reverse lookup)
+  links <slug>       What this entry links TO (with [BROKEN] flags)
+  broken             All [[links]] pointing to nonexistent .md files
+  orphans            Entries with zero incoming backlinks
+  isolated           Entries with no links in or out
+  top [N]            Top N most-linked entries (default 10)
+  check              Full vault health report (all of the above)
+```
+
+Backed by `obsidiantools` — parses `[[wiki-link]]` syntax and builds the full backlink graph.
+
+**When to use `obs.py`:**
+
+| Situation | Command |
+|---|---|
+| Creating a new entry — find other entries that already reference it | `python scripts/obs.py backlinks <new-slug>` |
+| Filling in "Related Entries" for an entry | `python scripts/obs.py links <slug>` to see outbound links; `backlinks` for inbound |
+| After any batch run (`/wiki-reddit`, `/wiki-inbox`) | `python scripts/obs.py check` to surface broken links and new orphans |
+| In `/wiki-check` — validate link integrity | `python scripts/obs.py broken` |
+| In `/wiki-index` — flag entries no one links to | `python scripts/obs.py orphans` |
+| Deciding which entries to write next | `python scripts/obs.py broken` — every target is a stub to create |
+
+**Note on duplicate backlink counts:** because each `.md` file contains both an English and a Russian `## Related Entries` section with identical `[[links]]`, obsidiantools counts each backlink twice. `obs.py` automatically deduplicates these so reported counts are accurate.
 
 ---
 

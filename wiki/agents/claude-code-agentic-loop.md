@@ -34,6 +34,7 @@ When you give Claude a task, it doesn't produce a single response. Instead it ch
 - [[claude-code-extensions-overview]]
 - [[claude-code-memory]]
 - [[claude-code-permission-modes]]
+- [[how-coding-agents-read-code]]
 
 ---
 <!-- RU -->
@@ -63,3 +64,4 @@ Claude Code — агентный ассистент, работающий по �
 - [[claude-code-extensions-overview]]
 - [[claude-code-memory]]
 - [[claude-code-permission-modes]]
+- [[how-coding-agents-read-code]]

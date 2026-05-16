@@ -43,6 +43,7 @@ Getting the most from Claude Code requires treating context as your primary reso
 - [[claude-code-agentic-loop]]
 - [[claude-code-permission-modes]]
 - [[claude-code-memory]]
+- [[chorus-multi-model-setup]]
 
 ---
 <!-- RU -->
@@ -81,3 +82,4 @@ Getting the most from Claude Code requires treating context as your primary reso
 - [[claude-code-agentic-loop]]
 - [[claude-code-permission-modes]]
 - [[claude-code-memory]]
+- [[chorus-multi-model-setup]]

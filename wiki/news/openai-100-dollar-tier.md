@@ -31,7 +31,7 @@ The tier fills a pricing gap that left heavy but non-enterprise users without a 
 
 ## Related Entries
 - [[github-copilot-pricing-exodus]]
-- [[codex-on-phone]]
+- [[gen-ai-web-traffic-may-2026]]
 
 ---
 <!-- RU -->
@@ -57,4 +57,4 @@ OpenAI запустила тариф Pro за $100/мес. 9 апреля 2026 �
 
 ## Связанные записи
 - [[github-copilot-pricing-exodus]]
-- [[codex-on-phone]]
+- [[gen-ai-web-traffic-may-2026]]

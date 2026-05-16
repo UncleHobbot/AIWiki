@@ -1,107 +1,113 @@
 # LLM Wiki Index
-_Last updated: 2026-05-16 | Total entries: 63_
+_Last updated: 2026-05-16 | Total entries: 77_
 
 ---
 
-## 🧠 Concepts (2)
-
-- [[karpathy-deep-dive-llms]] — Karpathy's comprehensive deep dive into how LLMs like ChatGPT are built, from training pipelines to practical mental models.
-- [[llm-wiki-pattern]] — Karpathy's pattern: an LLM agent builds and maintains a persistent structured wiki from raw sources, instead of re-deriving knowledge on every query.
+## 🧠 Concepts (5)
+- [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
+- [[karpathy-deep-dive-llms]] — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are built.
+- [[llm-wiki-pattern]] — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, structured knowledge base.
+- [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
+- [[self-guided-self-play]] — SGS adds a Guide role to LLM self-play that prevents Conjecturer collapse; a 7B model after 200 rounds beat a 671B baseline on Lean4 theorem proving.
 
 ---
 
-## 🛠️ Tools (17)
-
-- [[claude-code-frameworks]] — Comparison of Claude Code skill frameworks (GSD, Superpowers, Ouroboros, Han) and when to reach for one.
-- [[cpt-copilot-terminal]] — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal for GitHub Copilot suggestions.
-- [[entire-platform]] — Open-source CLI that captures full AI agent sessions as git-linked "Checkpoints" so you can rewind or resume any past session.
-- [[freebuff]] — 100% free CLI coding agent supporting DeepSeek, Kimi, and MiniMax models via a single `npm` install.
-- [[github-copilot-cli]] — GitHub Copilot CLI: a terminal-native GitHub-aware agent for moving from intent to reviewed diffs and PRs.
-- [[gnosis-mcp]] — Zero-config local MCP server for hybrid keyword + semantic search over documentation, with 10–60× token savings.
-- [[graphify-llm-wiki]] — AI coding skill (21k+ stars) that applies the LLM Wiki pattern to codebases, building a structured knowledge graph.
-- [[han-claude-code-plugin]] — Test Double's Claude Code plugin: 15 skills, 21 specialist agents for planning, review, and documentation — for solo engineers.
-- [[llm-wiki-ecosystem]] — Curated map of open-source LLM Wiki implementations, from simple Obsidian vaults to full research lifecycle platforms.
-- [[llmwiki-open-source]] — Open-source LLM Wiki implementation: point at a folder, connect Claude via MCP, and it writes wiki pages automatically.
-- [[mcp-financial-data-server]] — Self-hosted MCP server serving SEC filings, 13F holdings, insider trades, FRED indicators, and more — no API keys required.
-- [[nwave-ai-refactoring-framework]] — nWave: agentic AI framework for bringing engineering excellence to legacy code refactoring.
-- [[orthrus-qwen3-acceleration]] — Diffusion attention head added to frozen autoregressive transformers, achieving 7.8× speedup with identical output distributions.
-- [[poetiq-recursive-self-improvement]] — YC-backed startup using recursive self-improvement to build optimized "harnesses" around LLMs, achieving SOTA on LiveCodeBench Pro.
-- [[react-doctor]] — Zero-config CLI that catches bad React code written by AI agents; works with Next.js, Vite, and React Native.
-- [[shokunin-memory-system]] — Local ChromaDB-based memory system for coding agents with 35 domain-specific skills and 3 MCP servers.
-- [[wiki-os]] — Open-source browser UI for LLM Wiki vaults with article graphs, vault statistics, and agent activity display.
+## 🛠️ Tools (27)
+- [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
+- [[awesome-agent-skills]] — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Vercel, Cloudflare, Sentry, and more).
+- [[claude-code-frameworks]] — The Claude Code community has produced several competing skill frameworks (GSD, Superpowers, Ouroboros, Han) with pre-built skills, agents, and workflows.
+- [[cpt-copilot-terminal]] — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal, letting you ask GitHub Copilot questions and get shell commands inline.
+- [[dotnet-claude-kit]] — A curated knowledge and action layer that turns Claude Code into a senior .NET 10 / C# 14 expert with 47 skills, 10 agents, and 15 Roslyn MCP tools.
+- [[entire-platform]] — Entire is an open-source CLI that hooks into your git workflow and captures full AI agent sessions as "Checkpoints."
+- [[freebuff]] — `freebuff` is a 100% free CLI coding agent that lets you choose from top open models including DeepSeek v4 Pro/Flash.
+- [[github-spec-kit]] — GitHub's open-source Spec-Driven Development toolkit: constitution → specify → plan → tasks → implement workflow for 30+ AI coding agents.
+- [[gnosis-mcp]] — Gnosis MCP is a zero-config local MCP server that gives AI agents hybrid keyword + semantic search over your documentation.
+- [[goai-graph-of-ideas]] — GoAI is a system that constructs educational knowledge graphs from AI research papers, capturing prerequisite knowledge paths.
+- [[graphify-llm-wiki]] — Graphify is an AI coding assistant skill that applies Karpathy's LLM Wiki pattern to codebases — building a living knowledge graph of any repository.
+- [[grobid-pdf-parser]] — GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructuring raw scientific PDF documents.
+- [[han-claude-code-plugin]] — Han is a Claude Code plugin by Test Double that gives solo or small-team engineers access to a swarm of specialist AI subagents.
+- [[lightrag-graph-rag]] — LightRAG is a graph-enhanced RAG system that integrates knowledge graph structures into text indexing and retrieval.
+- [[llm-wiki-ecosystem]] — A curated map of open-source implementations of Karpathy's LLM Wiki pattern — from simple Obsidian-based local wikis to full agentic pipelines.
+- [[llmwiki-open-source]] — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files and the local MCP server writes your wiki.
+- [[mcp-financial-data-server]] — Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves financial data to AI agents.
+- [[minicheck-fact-verification]] — MiniCheck is an efficient fact-checking system that builds small models (770M parameters) matching GPT-4-level accuracy on grounding verification.
+- [[nwave-ai-refactoring-framework]] — nWave is an AI-guided refactoring framework for safely modernizing legacy code in structured micro-steps.
+- [[omegawiki-research-platform]] — OmegaWiki is an open-source, wiki-centric full-lifecycle AI research platform by DAIR Lab at Peking University.
+- [[orthrus-qwen3-acceleration]] — Orthrus-Qwen3: diffusion attention mechanism achieving up to 7.8× LLM token generation speedup on Qwen3-8B.
+- [[poetiq-recursive-self-improvement]] — Poetiq is a Y Combinator-backed startup whose Meta-System uses recursive self-improvement to build and refine coding agents.
+- [[react-doctor]] — React Doctor v2 is a zero-config CLI tool that catches bad React code written by AI coding agents.
+- [[shokunin-memory-system]] — Shokunin is a persistent memory system for coding agents, maintaining context across sessions.
+- [[visual-explainer]] — An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages with interactive Mermaid diagrams.
+- [[wiki-os]] — Wiki OS is a free, open-source browser-based interface for LLM Wiki vaults that displays article graphs, vault statistics, and bilingual entries.
+- [[yaro-mathwiki]] — Yaro2709/MathWiki is a hand-curated Obsidian vault containing 730+ atomic mathematical statements (definitions, theorems, proofs).
 
 ---
 
 ## 🤖 Agents (11)
-
-- [[acdc-agent-centric-development-cycle]] — Edgar Kussberg's AC/DC framework for restructuring the entire SDLC around AI agents, not treating them as add-ons.
-- [[claude-code-agentic-loop]] — How Claude Code's three-phase loop (gather context → take action → verify results) powers its agentic behavior.
-- [[claude-code-directory]] — How Claude Code reads all configuration from `.claude/` and `~/.claude/`: CLAUDE.md, settings, skills, hooks, subagents.
-- [[claude-code-extensions-overview]] — Claude Code's extension layer: CLAUDE.md, Skills, MCP, Subagents, Hooks, and Plugins explained.
-- [[claude-code-memory]] — Claude Code's two memory systems: CLAUDE.md (you write) and auto memory (Claude writes based on your patterns).
-- [[claude-code-permission-modes]] — Claude Code permission modes: from reviewing every action to fully autonomous background execution.
-- [[how-coding-agents-read-code]] — How coding agents assemble context, navigate repositories, and why they fail on large or legacy systems.
-- [[llm-wiki-enterprise-patterns]] — How the 3-layer LLM Wiki pattern scales from personal knowledge management to 20+ specialized agents in production.
-- [[mythos-cybersecurity-agent]] — Anthropic's Mythos Preview: first AI to autonomously complete a 32-step simulated corporate network attack (83.1% cybersecurity benchmark).
-- [[new-organizational-models-ai-agents]] — How organizations must restructure leadership, roles, and planning as AI agents transform the workplace.
-- [[specs-to-production-ai-agents]] — End-to-end workflow from product specification to production-ready software using AI agents, contrasting vibe coding with disciplined agentic development.
+- [[acdc-agent-centric-development-cycle]] — AC/DC (Agent-Centric Development Cycle) is a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons.
+- [[claude-code-agentic-loop]] — Claude Code is an agentic assistant built on a three-phase loop — gather context, take action, verify results — powered by Claude models and built-in tools.
+- [[claude-code-directory]] — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules, and auto memory — from `.claude/` directories.
+- [[claude-code-extensions-overview]] — Claude Code's extension layer: persistent context (CLAUDE.md), reusable workflows (Skills), external services (MCP), isolated workers (Subagents), and event automation (Hooks).
+- [[claude-code-memory]] — Claude Code persists knowledge across sessions through CLAUDE.md (explicit instructions) and Auto Memory (automatic file-based memory).
+- [[claude-code-permission-modes]] — Claude Code's permission modes control how often it pauses to ask approval before editing files or running commands.
+- [[how-coding-agents-read-code]] — How AI coding agents actually read code: context window mechanics, chunking strategies, and token budgets in production systems.
+- [[llm-wiki-enterprise-patterns]] — How the LLM Wiki 3-layer pattern (raw sources → wiki → schema) scales from personal knowledge management to production enterprise systems.
+- [[mythos-cybersecurity-agent]] — Mythos: an AI cybersecurity agent for automated security research and vulnerability analysis.
+- [[new-organizational-models-ai-agents]] — Explores how organizations must restructure around AI agents, moving from human-centric hierarchies to human-AI hybrid operating models.
+- [[specs-to-production-ai-agents]] — End-to-end workflow for going from a product specification to production software using AI agents as primary implementers.
 
 ---
 
 ## 🔬 Models (3)
-
-- [[deepseek-v4-vs-opus-kimi]] — DeepSeek V4 Pro scores 77/100 vs Claude Opus 4.7's 91 and Kimi K2.6's 68 on a complex workflow orchestration backend.
-- [[gpt-vs-glm-5-1-comparison]] — GLM-5.1 reaches 94.6% of Claude Opus 4.6's coding score at a fraction of the cost in a side-by-side comparison.
-- [[tabpfn-3-tabular-foundation-model]] — TabPFN-3: tabular foundation model with 93% win rate over classical ML, no training or hyperparameter tuning required.
+- [[deepseek-v4-vs-opus-kimi]] — Benchmark comparison of DeepSeek V4 Pro, Claude Opus 4.7, and Kimi K2.6 across coding and reasoning tasks.
+- [[gpt-vs-glm-5-1-comparison]] — A side-by-side coding comparison of GPT and GLM-5.1 on real tasks, comparing output quality and cost.
+- [[tabpfn-3-tabular-foundation-model]] — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100.
 
 ---
 
 ## 📰 News (11, sorted by date descending)
-
-- 2026-05-15 [[apple-m5-kernel-exploit-ai]] — First public macOS kernel exploit on Apple M5 surviving Memory Integrity Enforcement, built with AI assistance in five days.
-- 2026-05-15 [[arxiv-llm-ban-policy]] — arXiv now imposes 1-year bans for papers with unchecked LLM-generated content such as hallucinated references.
-- 2026-05-15 [[fda-ai-clinical-trials]] — FDA uses causal AI to monitor clinical trials in real time, potentially reducing timelines by 20–40%.
-- 2026-05-15 [[figure-ai-03-robot-30-hours]] — Figure AI 03 humanoid robot operates continuously for 30+ hours including autonomous self-charging.
-- 2026-05-15 [[gen-ai-web-traffic-may-2026]] — ChatGPT drops from 77.6% to ~50% market share; Gemini surges to 26.7%, Claude grows to 7.95%.
-- 2026-05-15 [[github-copilot-pricing-exodus]] — GitHub Copilot's usage-based pricing triggers 15× cost increases and mass migration to OpenCode and Codex.
-- 2026-05-15 [[openai-100-dollar-tier]] — OpenAI launches $100/month ChatGPT tier with 5× Codex usage, competing directly with Claude Max.
-- 2026-05-15 [[roo-code-shutdown-roomote]] — Roo Code (3M installs) shuts down May 15, 2026; team pivots entirely to Roomote cloud agent.
-- 2026-05-14 [[github-copilot-app]] — GitHub releases standalone desktop app for agent-driven development with parallel workstreams and full PR lifecycle.
-- 2026-05-13 [[figure-ai-team-robots-livestream]] — Three Figure F.03 robots sort packages at human-parity speed (~2.6 sec/package) during a full 8-hour livestreamed shift.
-- 2026-05-07 [[pinecone-nexus]] — Pinecone launches Nexus "compiled knowledge engine" for agents, directly paralleling Karpathy's LLM Wiki at production scale.
+- 2026-05-15 [[apple-m5-kernel-exploit-ai]] — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon using AI assistance.
+- 2026-05-15 [[arxiv-llm-ban-policy]] — arXiv implements a 1-year submission ban for papers with unchecked LLM-generated errors.
+- 2026-05-15 [[fda-ai-clinical-trials]] — FDA uses AI to shorten clinical trial timelines and accelerate drug approval review.
+- 2026-05-15 [[figure-ai-03-robot-30-hours]] — Figure AI 03 humanoid robot operates continuously for 30+ hours straight on a real-world task.
+- 2026-05-15 [[gen-ai-web-traffic-may-2026]] — Gen AI web traffic update: ChatGPT nears 50% share, Gemini and Claude both rising in May 2026.
+- 2026-05-15 [[github-copilot-pricing-exodus]] — GitHub Copilot's shift to usage-based pricing triggers a user exodus to open-source alternatives.
+- 2026-05-15 [[openai-100-dollar-tier]] — OpenAI launched a $100/month ChatGPT Pro tier in April 2026, slotting between Plus ($20) and Pro ($200).
+- 2026-05-15 [[roo-code-shutdown-roomote]] — Roo Code shuts down after 3 million installs and pivots to Roomote, a remote coding agent product.
+- 2026-05-14 [[github-copilot-app]] — GitHub released a standalone desktop application for agent-driven parallel development with GitHub Copilot.
+- 2026-05-13 [[figure-ai-team-robots-livestream]] — Figure AI 03 team of humanoid robots shown working together on a livestream.
+- 2026-05-07 [[pinecone-nexus]] — Pinecone announced Nexus, a "compiled knowledge engine" for agents that pre-compiles retrieval at index time.
 
 ---
 
-## 💡 Tips (19)
-
-- [[agentic-ai-coding-patterns-tornhill]] — Adam Tornhill's battle-tested patterns for agentic AI coding: speed with quality, framed as a competitive secret weapon.
-- [[agentic-ai-development-copilot-lessons]] — Five practical lessons from real-world GitHub Copilot CLI usage: TDD discipline, commit control, local-first workflow.
-- [[chorus-multi-model-setup]] — CHORUS: run 2–4 AI coding assistants in parallel to catch bugs any single model misses, at zero extra cost.
-- [[claude-code-deferral-behavior]] — Opus 4.7's task-skipping "deferred" pattern: causes, community workarounds, and a deferral-detection hook.
-- [[claude-code-handoff-prototype-skills]] — Three high-value Claude Code skills: /handoff, /prototype, and improve-codebase-architecture.
-- [[claude-code-plugins-guide]] — Curated ranking of the top 36 Claude Code plugins with install instructions and the 3–5 plugin sweet spot.
-- [[claude-code-prompting-era]] — Claude 4.7 is now literal (do exactly what's typed); GPT-5.5 is more autonomous — both make the prompt writer the bottleneck.
-- [[claude-code-workflows-best-practices]] — Context as primary resource, give Claude a verification path, use parallel sessions and subagents to scale.
-- [[cline-roo-alternatives]] — Community consensus: Claude Code is the top alternative to Cline/Roo Code, followed by Kilo Code and OpenCode.
-- [[copilot-cli-telegram-bridge]] — Bridge GitHub Copilot CLI to Telegram for mobile coding agent sessions without a terminal.
-- [[github-copilot-cli-best-practices]] — Layered instructions, model selection by task complexity, plan-first execution, and focused sessions for Copilot CLI.
-- [[karpathy-claude-code-guidelines]] — Karpathy-inspired CLAUDE.md: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution.
-- [[llm-assisted-coding-systems-perspective]] — Systems thinking, XP, and Lean applied to diagnose why common AI coding workflows fail — and how to fix them.
-- [[llm-wiki-scientific-research]] — LLM Wiki applied to scientific research: GROBID ingestion, citation chaining, math-aware search, MiniCheck verification, and OmegaWiki as the state-of-the-art academic implementation.
-- [[llm-wiki-setup-guide]] — Step-by-step guide to building Karpathy's LLM Wiki: tools, folder structure, schema, and ingestion workflow.
-- [[mathwiki-improvement-plan]] — Concrete 4-phase plan to layer Claude Code automation on Yaro2709/MathWiki: index generation, proof coverage, LLM proof sketches, GROBID ingestion, and Quartz publishing.
-- [[spec-driven-development-bmad]] — From vibe coding to production-quality AI development: BMAD, custom skills, and the spec-driven workflow.
-- [[test-driven-agentic-behaviours]] — How to apply TDD principles to AI agent behaviors: specify what the agent should do before it does it.
-- [[xp-practices-ai-assisted-development]] — Why XP practices (TDD, pairing, CI, trunk-based dev) are exactly what make AI-assisted development sustainable.
+## 💡 Tips (20)
+- [[agentic-ai-coding-patterns-tornhill]] — Adam Tornhill's battle-tested patterns for agentic AI coding: speed with quality, context management, and verification loops.
+- [[agentic-ai-development-copilot-lessons]] — Practitioner lessons from real-world agentic AI-assisted development using GitHub Copilot CLI on an open-source project.
+- [[chorus-multi-model-setup]] — CHORUS: a multi-model coding setup that routes tasks to the best model for each job.
+- [[claude-code-deferral-behavior]] — Opus 4.7 task-skipping pattern: when and why Claude Code defers work, and how to prevent it.
+- [[claude-code-handoff-prototype-skills]] — Three high-value Claude Code skills: /handoff (session compaction), /prototype (rapid scaffolding), and improve-codebase-architecture.
+- [[claude-code-plugins-guide]] — A curated ranking of the most useful Claude Code plugins across official marketplace, community, and partner categories.
+- [[claude-code-prompting-era]] — The new prompting era: Claude 4.7 literal execution vs GPT-5.5 autonomous behavior, and what it means for prompt engineering.
+- [[claude-code-workflows-best-practices]] — Official best practices for Claude Code: context management, planning, verification, and multi-agent workflows.
+- [[cline-roo-alternatives]] — Community recommendations for Cline and Roo Code alternatives in 2026, following their decline.
+- [[copilot-cli-telegram-bridge]] — Using Telegram as a mobile front-end for GitHub Copilot CLI via the examon/copilot-cli-telegram-bridge extension.
+- [[github-copilot-cli-best-practices]] — GitHub Copilot CLI is a terminal-native agentic coding assistant; best practices for workflow integration.
+- [[karpathy-claude-code-guidelines]] — A single CLAUDE.md distilling Karpathy-inspired coding guidelines for Claude Code projects.
+- [[llm-assisted-coding-systems-perspective]] — Dragan Stepanović applies systems thinking to LLM-assisted coding: feedback loops, constraints, and emergent behavior.
+- [[llm-wiki-scientific-research]] — The LLM Wiki pattern applied to scientific research and academic writing workflows.
+- [[llm-wiki-setup-guide]] — Step-by-step guide to building Karpathy's LLM Wiki from scratch: tools, folder structure, and first entries.
+- [[mathwiki-improvement-plan]] — Plan for automating and improving the Yaro2709/MathWiki hand-crafted Obsidian math knowledge base with AI.
+- [[spec-driven-development-bmad]] — Fabrice Monnier's journey from vibe coding to spec-driven development with BMAD and custom skills.
+- [[test-driven-agentic-behaviours]] — Antony Marcano demonstrates applying TDD principles to define and verify agentic AI behaviors.
+- [[dynamic-compute-budget-local-llm]] — Test-time compute technique: let a local Qwen-35B model assign priorities to hard problems, then spawn parallel agents — reaching 39.9% on HLE (vs GPT-5.4-xHigh at 41.6%).
+- [[xp-practices-ai-assisted-development]] — Paul Hammond argues that Extreme Programming practices (TDD, pairing, small releases) are the missing piece for AI-assisted development.
 
 ---
 
 ## 👤 People (0)
-
 _No entries yet._
 
 ---
 
 ## 📅 Digests
-
 _No digests generated yet._

@@ -34,6 +34,9 @@ The broader trend: coding agent pricing is in flux across all providers. Claude 
 ## Related Entries
 - [[github-copilot-cli]]
 - [[deepseek-v4-vs-opus-kimi]]
+- [[openai-100-dollar-tier]]
+- [[gen-ai-web-traffic-may-2026]]
+- [[freebuff]]
 
 ---
 <!-- RU -->
@@ -58,3 +61,6 @@ The broader trend: coding agent pricing is in flux across all providers. Claude 
 ## Связанные записи
 - [[github-copilot-cli]]
 - [[deepseek-v4-vs-opus-kimi]]
+- [[openai-100-dollar-tier]]
+- [[gen-ai-web-traffic-may-2026]]
+- [[freebuff]]

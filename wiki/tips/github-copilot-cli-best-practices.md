@@ -37,6 +37,8 @@ Context visualization: use `/context` to see a breakdown of token usage (system/
 ## Related Entries
 - [[github-copilot-cli]]
 - [[claude-code-workflows-best-practices]]
+- [[agentic-ai-development-copilot-lessons]]
+- [[copilot-cli-telegram-bridge]]
 
 ---
 <!-- RU -->
@@ -67,3 +69,5 @@ GitHub Copilot CLI — агентный помощник по написанию
 ## Связанные записи
 - [[github-copilot-cli]]
 - [[claude-code-workflows-best-practices]]
+- [[agentic-ai-development-copilot-lessons]]
+- [[copilot-cli-telegram-bridge]]

@@ -44,6 +44,10 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 - [[claude-code-agentic-loop]]
 - [[claude-code-directory]]
 - [[claude-code-memory]]
+- [[claude-code-frameworks]]
+- [[entire-platform]]
+- [[gnosis-mcp]]
+- [[mcp-financial-data-server]]
 
 ---
 <!-- RU -->
@@ -84,3 +88,7 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 - [[claude-code-agentic-loop]]
 - [[claude-code-directory]]
 - [[claude-code-memory]]
+- [[claude-code-frameworks]]
+- [[entire-platform]]
+- [[gnosis-mcp]]
+- [[mcp-financial-data-server]]

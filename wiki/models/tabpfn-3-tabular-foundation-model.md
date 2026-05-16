@@ -32,9 +32,8 @@ The architecture introduces a reduced KV cache with row-chunked inference, makin
 Prior Labs, founded by Frank Hutter and backed by €9M in seed funding from Balderton Capital, XTX Markets, and others, reports enterprise adoption by Hitachi (predictive maintenance for rail networks) and Oxford Cancer Analytics (lung disease detection). The model is released under a permissive license for research and internal evaluation, with commercial API and enterprise licensing available.
 
 ## Related Entries
-- [[tabpfn-v2-nature-publication]]
-- [[tabular-foundation-models]]
-- [[test-time-compute-scaling]]
+- [[llm4sr-survey]]
+- [[dynamic-compute-budget-local-llm]]
 
 ---
 <!-- RU -->
@@ -60,6 +59,5 @@ TabPFN-3 продолжает линейку моделей: TabPFN v1 (1K ст�
 Prior Labs, основанная Фрэнком Хуттером и получившая €9M посевных инвестиций от Balderton Capital, XTX Markets и других инвесторов, сообщает о корпоративном внедрении компанией Hitachi (предиктивное обслуживание железнодорожных сетей) и Oxford Cancer Analytics (обнаружение заболеваний лёгких). Модель выпущена под пермиссивной лицензией для исследований и внутренней оценки; коммерческие API и корпоративные лицензии доступны отдельно.
 
 ## Связанные записи
-- [[tabpfn-v2-nature-publication]]
-- [[tabular-foundation-models]]
-- [[test-time-compute-scaling]]
+- [[llm4sr-survey]]
+- [[dynamic-compute-budget-local-llm]]

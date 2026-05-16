@@ -33,7 +33,8 @@ Compared to diffusion language models like Dream, Fast-dLLM-v2, SDAR, and Mercur
 The community expressed strong interest in seeing this technique applied to larger models like Qwen 3.6 27B.
 
 ## Related Entries
-- [[qwen3-models]]
+- [[dynamic-compute-budget-local-llm]]
+- [[deepseek-v4-vs-opus-kimi]]
 
 ---
 <!-- RU -->
@@ -61,4 +62,5 @@ Orthrus замораживает всю базовую модель и обуч�
 Сообщество выразило большой интерес к применению этой техники к большим моделям, таким как Qwen 3.6 27B.
 
 ## Связанные записи
-- [[qwen3-models]]
+- [[dynamic-compute-budget-local-llm]]
+- [[deepseek-v4-vs-opus-kimi]]

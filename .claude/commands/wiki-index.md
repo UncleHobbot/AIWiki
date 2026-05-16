@@ -1,11 +1,13 @@
 Regenerate index.md from all entries currently in wiki/.
 
 Steps:
-1. Recursively list all .md files in wiki/
-2. For each file, read its front matter and extract: title, title_ru, category, tags, updated, date (if present)
-3. Extract the first sentence of the "## Summary" section as the one-line description
-4. Group entries by category
-5. Write index.md with this structure:
+1. Run: python scripts/obs.py orphans
+   Collect the list of entries with no incoming backlinks — these get an (orphan) marker in the index.
+2. Recursively list all .md files in wiki/
+3. For each file, read its front matter and extract: title, title_ru, category, tags, updated, date (if present)
+4. Extract the first sentence of the "## Summary" section as the one-line description
+5. Group entries by category
+6. Write index.md with this structure:
 
 # LLM Wiki Index
 _Last updated: YYYY-MM-DD | Total entries: N_
@@ -37,4 +39,4 @@ _Last updated: YYYY-MM-DD | Total entries: N_
 - [[YYYY-WNN]] — Week NN, YYYY (N entries)
 ...
 
-6. Report: index.md updated, N total entries indexed
+7. Report: index.md updated, N total entries indexed, K orphans flagged

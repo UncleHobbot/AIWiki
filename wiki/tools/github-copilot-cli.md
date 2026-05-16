@@ -31,6 +31,7 @@ The Copilot SDK (technical preview as of 2026) exposes the same execution engine
 ## Related Entries
 - [[llm-wiki-pattern]]
 - [[llmwiki-open-source]]
+- [[cpt-copilot-terminal]]
 
 ---
 <!-- RU -->
@@ -58,3 +59,4 @@ Copilot SDK (техническое превью на 2026 год) предос�
 ## Связанные записи
 - [[llm-wiki-pattern]]
 - [[llmwiki-open-source]]
+- [[cpt-copilot-terminal]]

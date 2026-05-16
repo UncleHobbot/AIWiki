@@ -89,6 +89,9 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 ## Related Entries
 - [[claude-code-handoff-prototype-skills]]
 - [[llm-wiki-setup-guide]]
+- [[han-claude-code-plugin]]
+- [[react-doctor]]
+- [[visual-explainer]]
 
 ---
 <!-- RU -->
@@ -115,3 +118,6 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 ## Связанные записи
 - [[claude-code-handoff-prototype-skills]]
 - [[llm-wiki-setup-guide]]
+- [[han-claude-code-plugin]]
+- [[react-doctor]]
+- [[visual-explainer]]

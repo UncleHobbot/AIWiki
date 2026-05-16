@@ -28,6 +28,7 @@ Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) 
 - [[claude-code-agentic-loop]]
 - [[llm-assisted-coding-systems-perspective]]
 - [[nwave-ai-refactoring-framework]]
+- [[new-organizational-models-ai-agents]]
 
 ---
 <!-- RU -->
@@ -52,3 +53,4 @@ Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) 
 - [[claude-code-agentic-loop]]
 - [[llm-assisted-coding-systems-perspective]]
 - [[nwave-ai-refactoring-framework]]
+- [[new-organizational-models-ai-agents]]

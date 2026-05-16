@@ -56,6 +56,10 @@ Pinecone — the company that built the market-leading vector database powering 
 - [[pinecone-nexus]]
 - [[karpathy-deep-dive-llms]]
 - [[github-copilot-cli]]
+- [[wiki-os]]
+- [[graphify-llm-wiki]]
+- [[goai-graph-of-ideas]]
+- [[lightrag-graph-rag]]
 
 ---
 <!-- RU -->
@@ -87,4 +91,11 @@ Pinecone — the company that built the market-leading vector database powering 
 
 ## Связанные записи
 - [[llmwiki-open-source]]
+- [[llm-wiki-ecosystem]]
+- [[pinecone-nexus]]
+- [[karpathy-deep-dive-llms]]
 - [[github-copilot-cli]]
+- [[wiki-os]]
+- [[graphify-llm-wiki]]
+- [[goai-graph-of-ideas]]
+- [[lightrag-graph-rag]]

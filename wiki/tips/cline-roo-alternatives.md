@@ -50,6 +50,7 @@ A significant subplot is Roo Code merging with Cline, which one commenter noted 
 ## Related Entries
 - [[roo-code-shutdown-roomote]]
 - [[github-copilot-pricing-exodus]]
+- [[freebuff]]
 
 ---
 <!-- RU -->
@@ -88,3 +89,4 @@ A significant subplot is Roo Code merging with Cline, which one commenter noted 
 ## Связанные записи
 - [[roo-code-shutdown-roomote]]
 - [[github-copilot-pricing-exodus]]
+- [[freebuff]]

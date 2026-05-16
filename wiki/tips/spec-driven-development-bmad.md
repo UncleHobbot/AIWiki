@@ -28,6 +28,7 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - [[specs-to-production-ai-agents]]
 - [[xp-practices-ai-assisted-development]]
 - [[claude-code-workflows-best-practices]]
+- [[github-spec-kit]]
 
 ---
 <!-- RU -->
@@ -52,3 +53,4 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - [[specs-to-production-ai-agents]]
 - [[xp-practices-ai-assisted-development]]
 - [[claude-code-workflows-best-practices]]
+- [[github-spec-kit]]

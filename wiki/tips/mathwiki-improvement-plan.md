@@ -132,6 +132,8 @@ Config needed: register custom callout types (`definition`, `theorem`, `axiom`, 
 - [[llm-wiki-scientific-research]]
 - [[llm-wiki-pattern]]
 - [[test-driven-agentic-behaviours]]
+- [[yaro-mathwiki]]
+- [[automathkg]]
 
 ---
 <!-- RU -->
@@ -187,3 +189,5 @@ Quartz 4 конвертирует Obsidian-хранилище в статиче�
 - [[llm-wiki-scientific-research]]
 - [[llm-wiki-pattern]]
 - [[test-driven-agentic-behaviours]]
+- [[yaro-mathwiki]]
+- [[automathkg]]

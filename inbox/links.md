@@ -1,6 +1,10 @@
 # Links to Process
 
 ## To Read
+https://arxiv.org/abs/2502.06472 <!-- KARMA: Multi-Agent LLMs for Knowledge Graph Enrichment (NeurIPS 2025) -->
+https://arxiv.org/abs/2508.14317 <!-- SurveyGen-I: Consistent Scientific Survey Generation with Memory-Guided Writing (IJCNLP-AIJLP 2025) -->
+https://arxiv.org/abs/2410.05779 <!-- LightRAG: Simple and Fast Retrieval-Augmented Generation (EMNLP 2025) -->
+https://arxiv.org/abs/2605.05258 <!-- PARNESS: Automated Scientific Research with Cross-Run Knowledge Accumulation (2026) -->
 
 ## High Priority
 

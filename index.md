@@ -1,13 +1,14 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 84_
+_Last updated: 2026-05-17 | Total entries: 85_
 
 ---
 
-## 🧠 Concepts (8)
+## 🧠 Concepts (9)
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
 - [[karma-knowledge-graph-enrichment]] — Nine collaborative LLM agents automate KG enrichment: 38,230 entities at 83.1% correctness across 1,200 PubMed articles, 18.6% conflict-edge reduction via multi-layer consensus (NeurIPS 2025).
 - [[karpathy-deep-dive-llms]] — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are built.
 - [[llm-wiki-academic-applications]] — Survey of 5 key papers (KARMA, SurveyGen-I, LightRAG, PARNESS, LLM4SR) showing where academic LLM knowledge-base research stands, where a personal wiki already leads, and 3 concrete feature gaps to close.
+- [[llm-wiki-implementations-landscape]] — State of the LLM Wiki ecosystem (May 2026): 30+ implementations, WiCER benchmark finding 53–60% compilation failure rate, two camps (personal PKM vs agent layer), Obsidian debate, productization wave.
 - [[llm-wiki-pattern]] — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, structured knowledge base.
 - [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
 - [[self-guided-self-play]] — SGS adds a Guide role to LLM self-play that prevents Conjecturer collapse; a 7B model after 200 rounds beat a 671B baseline on Lean4 theorem proving.

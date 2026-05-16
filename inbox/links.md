@@ -1,6 +1,28 @@
 # Links to Process
 
 ## To Read
+https://arxiv.org/abs/2605.07068 <!-- WiCER: Wiki-memory Compile, Evaluate, Refine — only peer-reviewed benchmark of LLM Wiki compilation quality -->
+https://github.com/SamurAIGPT/llm-wiki-agent <!-- ~2k stars, cross-platform: Claude Code/Codex/Gemini/OpenCode, supports PDF/DOCX/EPUB via markitdown -->
+https://github.com/AgriciDaniel/claude-obsidian <!-- Claude + Obsidian: 10 skills, 2 parallel agents, hot cache, /wiki /autoresearch commands (~1.5k stars) -->
+https://github.com/nvk/llm-wiki <!-- Parallel multi-agent research + thesis-driven mode, also available as Claude Code marketplace plugin -->
+https://github.com/skyllwt/OmegaWiki <!-- Full academic lifecycle: arXiv → KG (9 entity types) → gap detection → paper writing → peer review; daily GH Actions -->
+https://github.com/kytmanov/obsidian-llm-wiki-local <!-- 100% local with Ollama: no data leaves the machine -->
+https://github.com/ktundwal/librarian <!-- Personal knowledge layer for coding agents; zero API keys, runs locally, CLI-first -->
+https://github.com/tjiahen/awesome-llm-wiki <!-- Community-maintained awesome list of LLM wiki tools, schemas, implementations -->
+https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2 <!-- LLM Wiki v2: adds memory lifecycle (confidence scoring, retention decay), consolidation tiers, typed KG -->
+https://github.com/topics/llm-wiki-personal-knowledge-base <!-- GitHub topic: live index of the ecosystem -->
+https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an <!-- VentureBeat mainstream coverage -->
+https://medium.com/@paulo.deassis/building-an-llm-research-wiki-how-i-turned-3-000-pages-of-philosophy-into-a-living-knowledge-609de9935cd9 <!-- Philosophy wiki: 3,000 pages of Continental philosophy compiled -->
+https://medium.com/artificial-intel-ligence-playground/beyond-catastrophic-forgetting-how-to-build-an-llm-wiki-for-the-long-game-8cea92f3868c <!-- Scaling/chunking strategies when wiki exceeds context -->
+https://pub.towardsai.net/andrej-karpathy-killed-rag-or-did-he-the-llm-wiki-pattern-7824d876e790 <!-- Best critical analysis: when NOT to use LLM wiki -->
+https://news.ycombinator.com/item?id=47640875 <!-- HN thread: original gist, 158pts, main community debate on model collapse + scaling -->
+https://llm-wiki.net/ <!-- Hub site: skills/plugin registry for LLM wiki ecosystem -->
+https://levelup.gitconnected.com/beyond-rag-how-andrej-karpathy-llm-wiki-pattern-builds-knowledge-that-actually-compounds-31a08528665e <!-- Technical deep-dive: RAG vs compile distinction -->
+https://mychen76.medium.com/llm-wiki-the-foundation-for-market-intelligence-knowledge-9166bfa2e7b6 <!-- Enterprise/market intelligence use case -->
+https://medium.com/@jsong_49820/how-i-built-a-self-improving-llm-wiki-with-hermes-agent-and-why-im-not-using-obsidian-1e9a7fa438c1 <!-- Anti-Obsidian argument: VS Code + Git stack instead -->
+https://github.com/NicholasSpisak/second-brain <!-- Obsidian vault structure: raw/ inbox + wiki/ LLM-maintained, entities/concepts/synthesis -->
+https://denser.ai/blog/llm-wiki-karpathy-knowledge-base/ <!-- Technical RAG vs LLM Wiki architecture comparison -->
+https://news.ycombinator.com/item?id=47899844 <!-- HN: git-native implementation (no Obsidian dependency) -->
 
 ## High Priority
 

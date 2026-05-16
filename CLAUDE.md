@@ -120,6 +120,29 @@ RAPIDAPI_KEY=your_key_here
 
 ---
 
+## 🪟 Windows Environment
+
+- Always use UTF-8 encoding explicitly when writing Python scripts (`# -*- coding: utf-8 -*-` header and `encoding='utf-8'` on all file opens/writes).
+- Avoid emoji/Unicode literals in Python script output; use ASCII fallbacks or escape sequences (the Windows console defaults to CP1252, not UTF-8).
+- Do NOT use `/tmp/` paths — they don't work with the Read tool on Windows. Use project-relative paths or `%TEMP%`.
+- When parsing yt-dlp output, strip progress lines before JSON parsing (yt-dlp writes download-progress text to the same stream).
+
+---
+
+## ✏️ Editing Conventions
+
+- Match existing indentation exactly (tabs vs spaces) when using Edit; if uncertain, Read the file first.
+- When editing JSON files (especially `.state/*.json`, `settings.local.json`), validate that there are no trailing commas before saving — Python's `json.load` and Node's `JSON.parse` both reject them.
+
+---
+
+## 🌐 Network Fetching
+
+- Prefer the `web-reader` MCP tool for fetching web content; only fall back to `scripts/fetch_url.py` (direct HTTP) if the MCP fails.
+- Respect `robots.txt` — do not write scrapers that bypass it. If a site blocks fetching, note it in the entry's sources and skip.
+
+---
+
 ## 🤖 Claude Code Behavior Rules
 
 ### Core Principles

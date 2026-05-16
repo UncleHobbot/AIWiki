@@ -1,0 +1,51 @@
+# Pre-commit hooks for LLM Wiki quality enforcement.
+#
+# First-time setup (run once):
+#   pip install pre-commit
+#   pre-commit install
+#
+# Manual run against all files:
+#   pre-commit run --all-files
+#
+# Manual run against staged files only:
+#   pre-commit run
+#
+# The wiki-quality hook runs the fast subset of the pytest suite (no external
+# URL checks).  To bypass in an emergency:
+#   git commit --no-verify   # use sparingly
+
+repos:
+  # ── Standard file hygiene ────────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        types: [markdown]
+      - id: end-of-file-fixer
+        types: [markdown]
+      - id: check-yaml
+        files: ^\.pre-commit-config\.yaml$
+      - id: check-json
+        files: ^\.state/.*\.json$
+
+  # ── Wiki structural quality ──────────────────────────────────────────────
+  - repo: local
+    hooks:
+      - id: wiki-quality
+        name: Wiki quality checks (frontmatter · RU sections · wikilinks · index)
+        language: python
+        entry: pytest
+        args:
+          - tests/test_wiki.py
+          - -v
+          - --tb=short
+          # "slow" URL checks are intentionally excluded from the commit hook.
+          # Run `pytest tests/test_wiki.py --run-slow` periodically by hand.
+        pass_filenames: false
+        # Run whenever a wiki entry, the index, or the test suite itself changes.
+        files: ^(wiki/.*\.md|index\.md|tests/test_wiki\.py)$
+        additional_dependencies:
+          - pytest>=7.4
+          - python-frontmatter>=1.0
+          - requests>=2.28
+          - PyYAML>=6.0

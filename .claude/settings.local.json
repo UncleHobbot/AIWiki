@@ -26,7 +26,17 @@
       "Bash(python -m py_compile scripts/parallel_fetch.py)",
       "Bash(python -m py_compile scripts/benchmark_inbox.py)",
       "Bash(python scripts/benchmark_inbox.py --items 20 --workers 8 --runs 3 --speedup 20)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Shared\\\\OneDrive\\\\AIProjects\\\\AIWiki\" -Force)",
+      "Bash(Select-Object Name, FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(python -c \"import frontmatter; import pytest; print\\('imports ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -m pytest tests/test_wiki.py --collect-only -q)",
+      "Bash(python -m pytest tests/test_wiki.py --tb=line -q)",
+      "Bash(cd \"/c/Shared/OneDrive/AIProjects/AIWiki\" && grep -n \"\\\\[\\\\[\" wiki/tips/mathwiki-improvement-plan.md | head -20)",
+      "Bash(python -m pytest tests/test_wiki.py --tb=short -q)",
+      "Bash(python -m pytest tests/test_wiki.py -v --tb=short)"
     ]
   }
 }

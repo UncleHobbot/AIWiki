@@ -2,7 +2,7 @@
 
 Personal AI knowledge base inspired by [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) concept. Every entry is bilingual (English + Russian) in a single file.
 
-Raw sources (web clips, Reddit, YouTube, tweets) are automatically distilled into structured wiki entries by LLM agents via [opencode](https://opencode.ai) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+Raw sources (web clips, Reddit, YouTube, tweets, social posts) are automatically distilled into structured wiki entries by LLM agents via [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Architecture
 
@@ -12,13 +12,13 @@ Three-layer pattern:
 |---|---|---|
 | Raw sources | `inbox/`, `sources/` | Immutable inputs |
 | Distilled knowledge | `wiki/` | LLM-written bilingual entries |
-| Schema | `AGENTS.md` | Navigation map for agents |
+| Schema | `CLAUDE.md` | Navigation map for agents |
 
 ## Stats
 
-- **21 entries** across 7 categories: concepts, tools, agents, models, news, tips, people
-- **12 monitored subreddits** scanned daily
-- **10 slash commands** for ingestion, search, and maintenance
+- **61 entries** across 6 active categories: concepts, tools, agents, models, news, tips
+- **14 monitored subreddits** scanned daily
+- **11 slash commands** for ingestion, search, and maintenance
 
 ## Quick Start
 
@@ -31,17 +31,18 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 # .env — Reddit API keys (optional, public API works without them)
 ```
 
-Open in [Obsidian](https://obsidian.md) for graph view and browsing, or use opencode/Claude Code for agent-driven ingestion.
+Open in [Obsidian](https://obsidian.md) for graph view and browsing, or use Claude Code for agent-driven ingestion.
 
-## Commands (opencode)
+## Commands (Claude Code)
 
 | Command | Description |
 |---|---|
-| `/wiki-inbox` | Process everything in `inbox/` |
-| `/wiki-links` | Fetch and process URLs |
-| `/wiki-reddit` | Scan 12 subreddits for new posts |
+| `/wiki-inbox` | Process everything in `inbox/` (runs all sub-commands) |
+| `/wiki-links` | Fetch and process URLs from `inbox/links.md` |
+| `/wiki-reddit` | Scan 14 subreddits for new posts |
 | `/wiki-youtube` | Extract knowledge from YouTube transcripts |
-| `/wiki-tweets` | Process tweet dumps |
+| `/wiki-tweets` | Process tweet URLs from `inbox/twitter.md` |
+| `/wiki-posts` | Process raw social media text posts from `inbox/posts.md` |
 | `/wiki-clippings` | Process Obsidian Web Clipper exports |
 | `/wiki-digest` | Generate weekly bilingual digest |
 | `/wiki-index` | Rebuild `index.md` |
@@ -72,9 +73,19 @@ English content here...
 Русский контент здесь...
 ```
 
+## Inbox Files
+
+| File | Purpose |
+|---|---|
+| `inbox/links.md` | URLs to fetch and process |
+| `inbox/youtube.md` | YouTube video URLs |
+| `inbox/twitter.md` | Tweet URLs |
+| `inbox/posts.md` | Raw social media text posts (LinkedIn, Bluesky, etc.) |
+| `inbox/clippings/` | Obsidian Web Clipper `.md` exports |
+
 ## Monitored Subreddits
 
-r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding
+r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding
 
 ## License
 

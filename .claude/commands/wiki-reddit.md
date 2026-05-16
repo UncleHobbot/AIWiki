@@ -3,7 +3,7 @@ Scan all configured subreddits for new posts and extract relevant knowledge.
 Monitored subreddits:
   r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM,
   r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity,
-  r/ChatGPT, r/ChatGPTCoding
+  r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding
 
 Steps:
 1. For each subreddit, run:

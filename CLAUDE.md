@@ -20,8 +20,9 @@ llm-wiki/
 ├── inbox/                      ← Raw unprocessed inputs (drop zone)
 │   ├── clippings/              ← Obsidian Web Clipper exports (.md files)
 │   ├── links.md                ← Flat list of URLs to process
-│   ├── tweets/                 ← Twitter/X post dumps (.txt or .md)
-│   └── youtube.md              ← YouTube video URLs (one per line)
+│   ├── twitter.md              ← Twitter/X tweet URLs to process (like links.md)
+│   ├── youtube.md              ← YouTube video URLs (one per line)
+│   └── posts.md                ← Raw text posts from social media (LinkedIn, Bluesky, etc.)
 ├── sources/                    ← Fetched & cached raw content (do not edit manually)
 │   ├── reddit/                 ← Reddit post/comment snapshots
 │   ├── web/                    ← Fetched article content
@@ -41,6 +42,7 @@ llm-wiki/
 │       ├── wiki-clippings.md   → /wiki-clippings
 │       ├── wiki-links.md       → /wiki-links
 │       ├── wiki-tweets.md      → /wiki-tweets
+│       ├── wiki-posts.md       → /wiki-posts
 │       ├── wiki-youtube.md     → /wiki-youtube
 │       ├── wiki-reddit.md      → /wiki-reddit
 │       ├── wiki-digest.md      → /wiki-digest
@@ -215,7 +217,8 @@ Commands live as `.md` files in `.claude/commands/`. Claude Code loads them auto
 | `/wiki-inbox` | Process everything in `inbox/` (runs all sub-commands in sequence) |
 | `/wiki-clippings` | Process Obsidian Web Clipper `.md` exports |
 | `/wiki-links` | Fetch and process URLs from `inbox/links.md` |
-| `/wiki-tweets` | Process tweet dumps from `inbox/tweets/` |
+| `/wiki-tweets` | Fetch and process tweet URLs from `inbox/twitter.md` |
+| `/wiki-posts` | Process raw social media text posts from `inbox/posts.md` |
 | `/wiki-youtube` | Process YouTube URLs from `inbox/youtube.md` |
 | `/wiki-reddit` | Scan all configured subreddits for new posts |
 | `/wiki-digest` | Generate the weekly bilingual digest |
@@ -229,7 +232,7 @@ Commands live as `.md` files in `.claude/commands/`. Claude Code loads them auto
 
 ### `/wiki-inbox`
 
-Runs `/wiki-clippings` → `/wiki-links` → `/wiki-tweets` → `/wiki-youtube` in sequence, then rebuilds `index.md` and logs the run to `.state/last_run.json`.
+Runs `/wiki-clippings` → `/wiki-links` → `/wiki-tweets` → `/wiki-posts` → `/wiki-youtube` in sequence, then rebuilds `index.md` and logs the run to `.state/last_run.json`.
 
 ---
 
@@ -254,7 +257,40 @@ Parses all URLs from `inbox/links.md` (ignores comment text), skips already-proc
 
 ### `/wiki-tweets`
 
-Reads all files in `inbox/tweets/` (plain text `---`-separated, markdown blockquotes, or JSON arrays), expands t.co URLs via `python scripts/fetch_twitter.py`, queues external URLs for the `/wiki-links` workflow, and creates bilingual entries for any notable insights found directly in the tweet text.
+Parses tweet URLs from `inbox/twitter.md` (same format as `inbox/links.md`: lines under `## To Read`, `## Done` at bottom), runs `python scripts/fetch_twitter.py <url>` for each new URL to fetch the tweet text and expand any t.co links, queues external URLs for `/wiki-links`, creates bilingual entries for notable insights, marks URLs as processed, and moves them to the `## Done` section.
+
+**`inbox/twitter.md` format:**
+```markdown
+## To Read
+- https://x.com/user/status/123456789
+- https://twitter.com/user/status/987654321  <!-- optional note -->
+
+## Done
+```
+
+---
+
+### `/wiki-posts`
+
+Reads `inbox/posts.md`, processes each raw text post block (separated by `---`), extracts the source/author/date from the optional metadata comment, classifies the insight, and creates or updates a bilingual wiki entry. Marks processed posts by moving them to a `## Done` section.
+
+**`inbox/posts.md` format:**
+```markdown
+## To Process
+
+<!-- Source: LinkedIn | Author: John Doe | Date: 2026-05-16 -->
+Post text goes here. Can be multi-line.
+Key insight or announcement from this post.
+
+---
+
+<!-- Source: Bluesky | Author: @user.bsky.social | Date: 2026-05-15 -->
+Another post text here.
+
+---
+
+## Done
+```
 
 ---
 
@@ -268,7 +304,7 @@ Parses YouTube URLs from `inbox/youtube.md`, runs `python scripts/fetch_youtube.
 
 Runs `python scripts/fetch_reddit.py <subreddit> --use-cursor --with-comments` for each monitored subreddit, filters posts with score > 50 or comment count > 20, classifies each post, writes bilingual entries to `wiki/<category>/<slug>.md`, queues any external URLs for the `/wiki-links` workflow, and updates `.state/reddit_cursor.json`.
 
-**Monitored subreddits:** r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding
+**Monitored subreddits:** r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding
 
 ---
 

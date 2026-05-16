@@ -152,7 +152,6 @@ Write-Header "Creating directory structure"
 
 $Directories = @(
     'inbox\clippings',
-    'inbox\tweets',
     'sources\reddit',
     'sources\web',
     'sources\transcripts',
@@ -285,7 +284,7 @@ if ($MissingScripts.Count -gt 0) {
 Write-Header "Initialising state files"
 
 $StateFiles = @{
-    '.state\processed_urls.json' = '{"urls": [], "count": 0}'
+    '.state\processed_urls.json' = '[]'
     '.state\reddit_cursor.json'  = '{}'
     '.state\last_run.json'       = '[]'
 }
@@ -338,13 +337,14 @@ Write-Host ""
 Write-Host "  2. Add content to the inbox:" -ForegroundColor Gray
 Write-Host "     inbox\links.md       ← paste article URLs" -ForegroundColor DarkGray
 Write-Host "     inbox\youtube.md     ← paste YouTube URLs" -ForegroundColor DarkGray
+Write-Host "     inbox\twitter.md     ← paste tweet URLs" -ForegroundColor DarkGray
+Write-Host "     inbox\posts.md       ← paste social media text posts" -ForegroundColor DarkGray
 Write-Host "     inbox\clippings\     ← drop Obsidian Web Clipper .md files" -ForegroundColor DarkGray
-Write-Host "     inbox\tweets\        ← drop tweet dump .txt/.md files" -ForegroundColor DarkGray
 Write-Host ""
 Write-Host "  3. Start Claude Code from this folder:" -ForegroundColor Gray
 Write-Host "     claude" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "  4. Try your first command in Claude Code:" -ForegroundColor Gray
-Write-Host "     /wiki scan-reddit" -ForegroundColor Yellow
-Write-Host "     /wiki process-inbox" -ForegroundColor Yellow
+Write-Host "     /wiki-reddit" -ForegroundColor Yellow
+Write-Host "     /wiki-inbox" -ForegroundColor Yellow
 Write-Host ""

@@ -1,24 +1,28 @@
-Process all tweet dump files in inbox/tweets/.
+Fetch and process all tweet URLs listed in inbox/twitter.md.
 
-Accepted file formats:
-  - Plain text: tweets separated by lines containing only ---
-  - Markdown: each tweet as a blockquote starting with >
-  - JSON: array of objects with "text", "author", and optionally "url" fields
+inbox/twitter.md format:
+  Lines starting with - or * that contain a Twitter/X URL are treated as links.
+  Text after <!-- is treated as a comment and ignored.
+  Lines under a "## Done" heading are skipped.
 
 Steps:
-1. List all files in inbox/tweets/
-2. For each file, run: python scripts/fetch_twitter.py "<filepath>"
-   This parses the tweets and expands any t.co short URLs.
-3. For each parsed tweet:
-   a. Collect all external URLs (non-Twitter/X) from the expanded URL list
-   b. If the tweet text itself contains a notable insight (tip, announcement, research finding, tool mention):
+1. Parse inbox/twitter.md and collect all unprocessed tweet URLs
+2. Load .state/processed_urls.json and skip any URL already listed there
+3. For each remaining URL:
+   a. Run: python scripts/fetch_twitter.py "<url>"
+      This fetches the tweet text and expands t.co short URLs
+   b. If the fetch fails, log the URL and error to .state/fetch_errors.json and continue
+   c. Collect all external URLs (non-Twitter/X) found in the tweet
+   d. If the tweet text itself contains a notable insight (tip, announcement, research
+      finding, tool mention):
       - Classify it: news / tips / concepts / tools / people
-      - Create or update the matching bilingual wiki entry at wiki/<category>/<slug>.md
+      - Create or update the bilingual wiki entry at wiki/<category>/<slug>.md
       - The entry must contain English and Russian sections separated by:
         ---
         <!-- RU -->
-4. Add all collected external URLs to inbox/links.md under "## To Read" for processing by wiki-links
-5. Move each processed tweet file to sources/tweets/<original-filename>
-6. Report: N tweet insights captured, M URLs queued
+   e. Append the tweet URL to .state/processed_urls.json
+4. Add all collected external URLs to inbox/links.md under "## To Read"
+5. Move all processed URLs to a "## Done" section at the bottom of inbox/twitter.md
+6. Report: N tweet insights captured, M URLs queued, K failed
 
 Wiki entry format to follow: see CLAUDE.md § Wiki Entry Format.

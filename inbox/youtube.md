@@ -1,6 +1,17 @@
 # YouTube Queue
 
 ## Done
+https://www.youtube.com/watch?v=Y5xXDA4tQlk
+https://youtu.be/J6QILoLM0CE?si=Teu5sno-ngAswL93
+https://youtu.be/BqzODQ0Qajo?si=sNfgtGzfDq3ARNKT
+https://youtu.be/OTdCijajbH0?si=Jkcou7N9KYLQAkze
+https://youtu.be/eEA0gJnWLh0?si=gMQ_ehN6FymkR0bB
+https://youtu.be/YXXFjebvfNc?si=0ry7-M_ui2vr8wJS
+https://youtu.be/M58tOdNHbxM?si=2X_71Bes4qiKO9JF
+https://youtu.be/AQWyhqzGHaU?si=91Mz417AP1bUySBr
+https://youtu.be/Zdobci6tWeM?si=hZVc9dZjisGVFjh_
+https://youtu.be/McozJv6ThiQ?si=NIdE8ehZeIpk3ZT3
+https://youtu.be/YXx4YQnu7Cs?si=piQs9H3wbbKAnMSb
 https://youtu.be/iXd0t60YmMw?si=tWrSQ68a7ZorEweq
 https://youtu.be/4SB3T1reCHw?si=WHU3XOFHESpdFyrU
 https://youtu.be/FR9USL0yj3I?si=80GYZS9y8vpFJGSb

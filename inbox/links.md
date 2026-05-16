@@ -1,10 +1,22 @@
 # Links to Process
 
 ## To Read
-
 ## High Priority
 
 ## Done
+https://github.com/testdouble/han
+https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course
+https://docs.github.com/en/copilot/how-tos/copilot-cli/cli-best-practices
+https://www.reddit.com/r/GithubCopilot/comments/1rqgmsz/the_copilot_cli_is_the_best_ai_tool_ive_used_it/ <!-- robots.txt blocked -->
+https://github.com/forrestchang/andrej-karpathy-skills
+[How Claude Code works - Claude Code Docs](https://code.claude.com/docs/en/how-claude-code-works)
+[Extend Claude Code - Claude Code Docs](https://code.claude.com/docs/en/features-overview)
+[Explore the .claude directory - Claude Code Docs](https://code.claude.com/docs/en/claude-directory)
+[Explore the context window - Claude Code Docs](https://code.claude.com/docs/en/context-window)
+[How Claude remembers your project - Claude Code Docs](https://code.claude.com/docs/en/memory)
+[Choose a permission mode - Claude Code Docs](https://code.claude.com/docs/en/permission-modes)
+[Common workflows - Claude Code Docs](https://code.claude.com/docs/en/common-workflows)
+[Best practices for Claude Code - Claude Code Docs](https://code.claude.com/docs/en/best-practices)
 [nicholasglazer/gnosis-mcp](https://github.com/nicholasglazer/gnosis-mcp)
 [gnosis-mcp — Documentation search for AI agents](https://gnosismcp.com/)
 [Gnosis MCP Server by nicholasglazer | PulseMCP](https://www.pulsemcp.com/servers/gh-nicholasglazer-gnosis)

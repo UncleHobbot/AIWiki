@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Windows Task Scheduler definition for the LLM Wiki daily maintenance pipeline.
+
+  INSTALL:
+    schtasks /Create /XML "C:\Shared\OneDrive\AIProjects\AIWiki\wiki-pipeline-task.xml" /TN "LLMWiki\DailyPipeline" /F
+
+  VERIFY:
+    schtasks /Query /TN "LLMWiki\DailyPipeline" /FO LIST
+
+  RUN MANUALLY (for testing):
+    schtasks /Run /TN "LLMWiki\DailyPipeline"
+
+  DISABLE:
+    schtasks /Change /TN "LLMWiki\DailyPipeline" /DISABLE
+
+  DELETE:
+    schtasks /Delete /TN "LLMWiki\DailyPipeline" /F
+
+  LOG:
+    Pipeline output is appended to:
+    C:\Shared\OneDrive\AIProjects\AIWiki\.state\pipeline.log
+    Rotate manually or add a weekly log-trim task.
+
+  NOTES:
+  - Runs at 08:00 daily, only when user is logged in (not "run whether logged on or not")
+    because claude.exe needs the user session for auth tokens in %APPDATA%
+  - ExecutionTimeLimit of 2 hours (PT2H) covers the longest observed session
+  - The wrapper script (wiki-pipeline-run.ps1) handles logging and exit-code capture
+-->
+<Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Date>2026-05-17T08:00:00</Date>
+    <Author>uncle</Author>
+    <Description>Daily LLM Wiki maintenance: reddit scan, inbox processing, link enrichment, health check, index rebuild, weekly digest, git push.</Description>
+    <URI>\LLMWiki\DailyPipeline</URI>
+  </RegistrationInfo>
+
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>2026-05-17T08:00:00</StartBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByDay>
+        <DaysInterval>1</DaysInterval>
+      </ScheduleByDay>
+    </CalendarTrigger>
+  </Triggers>
+
+  <Principals>
+    <Principal id="Author">
+      <UserId>S-1-5-21-3809332027-2370408898-1028904417-1001</UserId>
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <IdleSettings>
+      <StopOnIdleEnd>false</StopOnIdleEnd>
+      <RestartOnIdle>false</RestartOnIdle>
+    </IdleSettings>
+    <AllowStartOnDemand>true</AllowStartOnDemand>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <RunOnlyIfIdle>false</RunOnlyIfIdle>
+    <WakeToRun>false</WakeToRun>
+    <ExecutionTimeLimit>PT2H</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+
+  <Actions Context="Author">
+    <Exec>
+      <Command>powershell.exe</Command>
+      <Arguments>-NonInteractive -ExecutionPolicy Bypass -File "C:\Shared\OneDrive\AIProjects\AIWiki\wiki-pipeline-run.ps1"</Arguments>
+      <WorkingDirectory>C:\Shared\OneDrive\AIProjects\AIWiki</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>

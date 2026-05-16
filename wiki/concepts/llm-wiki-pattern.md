@@ -60,6 +60,7 @@ Pinecone — the company that built the market-leading vector database powering 
 - [[graphify-llm-wiki]]
 - [[goai-graph-of-ideas]]
 - [[lightrag-graph-rag]]
+- [[llm-wiki-academic-applications]]
 
 ---
 <!-- RU -->

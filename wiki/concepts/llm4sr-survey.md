@@ -40,6 +40,7 @@ The authors highlight transformative potential while remaining candid about curr
 - [[minicheck-fact-verification]]
 - [[fda-ai-clinical-trials]]
 - [[tabpfn-3-tabular-foundation-model]]
+- [[llm-wiki-academic-applications]]
 
 ---
 <!-- RU -->
@@ -74,3 +75,4 @@ LLM4SR — первый систематический обзор, посвящ�
 - [[minicheck-fact-verification]]
 - [[fda-ai-clinical-trials]]
 - [[tabpfn-3-tabular-foundation-model]]
+- [[llm-wiki-academic-applications]]

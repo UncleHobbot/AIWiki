@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 85_
+_Last updated: 2026-05-17 | Total entries: 86_
 
 ---
 
@@ -65,9 +65,10 @@ _Last updated: 2026-05-17 | Total entries: 85_
 
 ---
 
-## 🔬 Models (3)
+## 🔬 Models (4)
 - [[deepseek-v4-vs-opus-kimi]] — Benchmark comparison of DeepSeek V4 Pro, Claude Opus 4.7, and Kimi K2.6 across coding and reasoning tasks.
 - [[gpt-vs-glm-5-1-comparison]] — A side-by-side coding comparison of GPT and GLM-5.1 on real tasks, comparing output quality and cost.
+- [[llm-wiki-chinese-models-comparison]] — Comparison of Chinese frontier LLMs (DeepSeek V4, Kimi K2.6, GLM-5.1, Qwen 3.5, MiMo-V2.5) for building Karpathy's LLM Wiki: benchmarks, pricing, and task-specific recommendations.
 - [[tabpfn-3-tabular-foundation-model]] — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100.
 
 ---

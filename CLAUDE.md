@@ -122,10 +122,11 @@ RAPIDAPI_KEY=your_key_here
 
 ## 🪟 Windows Environment
 
-- Always use UTF-8 encoding explicitly when writing Python scripts (`# -*- coding: utf-8 -*-` header and `encoding='utf-8'` on all file opens/writes).
-- Avoid emoji/Unicode literals in Python script output; use ASCII fallbacks or escape sequences (the Windows console defaults to CP1252, not UTF-8).
+- **All new Python scripts must start from `scripts/_template.py`.** Copy it, rename it, replace the `main()` body. Do not delete the UTF-8 setup block or the helper functions at the top.
+- Always use UTF-8 encoding explicitly when writing Python scripts (`# -*- coding: utf-8 -*-` header and `encoding='utf-8'` on all file opens/writes). Use the `read_text`/`write_text`/`read_json`/`write_json` helpers from `_template.py` instead of bare `open()`.
+- Avoid emoji/Unicode literals in Python script output; use the `log()` helper from `_template.py` which enforces ASCII-safe output.
 - Do NOT use `/tmp/` paths — they don't work with the Read tool on Windows. Use project-relative paths or `%TEMP%`.
-- When parsing yt-dlp output, strip progress lines before JSON parsing (yt-dlp writes download-progress text to the same stream).
+- When parsing yt-dlp output, use `parse_ytdlp_json()` or `parse_ytdlp_json_stream()` from `_template.py` — yt-dlp writes download-progress text to the same stream as JSON output.
 
 ---
 
@@ -358,6 +359,27 @@ Lists all `.md` files in `wiki/`, checks each for the `<!-- RU -->` divider, gen
 ---
 
 ## 🐍 Helper Scripts Reference
+
+### `scripts/_template.py` ← start here for every new script
+
+**All new Python scripts must be copied from this file.** It provides:
+
+| Helper | What it does |
+|---|---|
+| UTF-8 stdout/stderr reconfigure | Prevents CP1252 crashes on Windows before any `print()` call |
+| `read_text(path)` / `write_text(path, content)` | File I/O with explicit `encoding='utf-8'` |
+| `read_json(path)` / `write_json(path, data)` | JSON I/O with UTF-8 and no trailing commas |
+| `log(msg, level)` | Timestamps + strips non-ASCII so logs survive CP1252 pipes |
+| `parse_ytdlp_json(raw)` | Strips yt-dlp progress lines, returns single parsed JSON object |
+| `parse_ytdlp_json_stream(raw)` | Same but for multi-object (playlist / `--print-json`) output |
+
+```python
+# Quickstart — copy _template.py, then:
+cp scripts/_template.py scripts/my_new_script.py
+# Edit the module docstring and main() body. Keep everything above main() intact.
+```
+
+---
 
 ### `scripts/fetch_url.py`
 

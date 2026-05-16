@@ -69,6 +69,9 @@ def load_processed_urls() -> set:
     p = Path(".state/processed_urls.json")
     if p.exists():
         data = json.loads(p.read_text(encoding="utf-8"))
+        # Support both plain-list format (legacy) and {"urls": [...]} dict format
+        if isinstance(data, list):
+            return set(data)
         return set(data.get("urls", []))
     return set()
 
@@ -190,6 +193,8 @@ def scan_posts(path: str) -> list:
     return [
         {"type": "post", "text": block, "source_file": path}
         for block in blocks
+        # Skip template header text and trivially short blocks
+        if len(block) >= 50 and not block.startswith("#")
     ]
 
 
@@ -227,7 +232,7 @@ def main() -> int:
 
     totals = {k: len(v) for k, v in groups.items()}
     manifest = {
-        "generated": datetime.datetime.utcnow().isoformat() + "Z",
+        "generated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "groups": groups,
         "totals": totals,
         "total_items": sum(totals.values()),

@@ -25,7 +25,10 @@ def ensure_state_dir():
 def load_processed_urls() -> set:
     ensure_state_dir()
     if PROCESSED_URLS_FILE.exists():
-        data = json.loads(PROCESSED_URLS_FILE.read_text())
+        data = json.loads(PROCESSED_URLS_FILE.read_text(encoding="utf-8"))
+        # Support both plain-list format (legacy) and {"urls": [...]} dict format
+        if isinstance(data, list):
+            return set(data)
         return set(data.get("urls", []))
     return set()
 

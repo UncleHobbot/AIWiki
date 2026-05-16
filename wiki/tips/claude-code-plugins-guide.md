@@ -92,6 +92,7 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 - [[han-claude-code-plugin]]
 - [[react-doctor]]
 - [[visual-explainer]]
+- [[package-hallucination-mcp]]
 
 ---
 <!-- RU -->
@@ -121,3 +122,4 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 - [[han-claude-code-plugin]]
 - [[react-doctor]]
 - [[visual-explainer]]
+- [[package-hallucination-mcp]]

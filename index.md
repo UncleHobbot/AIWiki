@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 82_
+_Last updated: 2026-05-17 | Total entries: 84_
 
 ---
 
@@ -15,8 +15,9 @@ _Last updated: 2026-05-17 | Total entries: 82_
 
 ---
 
-## 🛠️ Tools (28)
+## 🛠️ Tools (29)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
+- [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
 - [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
 - [[awesome-agent-skills]] — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Vercel, Cloudflare, Sentry, and more).
 - [[claude-code-frameworks]] — The Claude Code community has produced several competing skill frameworks (GSD, Superpowers, Ouroboros, Han) with pre-built skills, agents, and workflows.
@@ -69,7 +70,8 @@ _Last updated: 2026-05-17 | Total entries: 82_
 
 ---
 
-## 📰 News (11, sorted by date descending)
+## 📰 News (13, sorted by date descending)
+- 2026-05-17 [[codex-on-mobile]] — OpenAI's Codex coding agent became available on iOS and Android, extending agentic coding sessions to mobile devices.
 - 2026-05-15 [[apple-m5-kernel-exploit-ai]] — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon using AI assistance.
 - 2026-05-15 [[arxiv-llm-ban-policy]] — arXiv implements a 1-year submission ban for papers with unchecked LLM-generated errors.
 - 2026-05-15 [[fda-ai-clinical-trials]] — FDA uses AI to shorten clinical trial timelines and accelerate drug approval review.

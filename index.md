@@ -95,7 +95,7 @@ _Last updated: 2026-05-17 | Total entries: 94_
 
 ---
 
-## 💡 Tips (20)
+## 💡 Tips (21)
 - [[agentic-ai-coding-patterns-tornhill]] — Adam Tornhill's battle-tested patterns for agentic AI coding: speed with quality, context management, and verification loops.
 - [[agentic-ai-development-copilot-lessons]] — Practitioner lessons from real-world agentic AI-assisted development using GitHub Copilot CLI on an open-source project.
 - [[chorus-multi-model-setup]] — CHORUS: a multi-model coding setup that routes tasks to the best model for each job.
@@ -108,6 +108,7 @@ _Last updated: 2026-05-17 | Total entries: 94_
 - [[copilot-cli-telegram-bridge]] — Using Telegram as a mobile front-end for GitHub Copilot CLI via the examon/copilot-cli-telegram-bridge extension.
 - [[github-copilot-cli-best-practices]] — GitHub Copilot CLI is a terminal-native agentic coding assistant; best practices for workflow integration.
 - [[karpathy-claude-code-guidelines]] — A single CLAUDE.md distilling Karpathy-inspired coding guidelines for Claude Code projects.
+- [[llm-assumption-propagation]] — Karpathy's insight: LLMs make wrong assumptions and run with them without checking. How to diagnose, interrupt, and prevent assumption propagation in agentic coding.
 - [[llm-assisted-coding-systems-perspective]] — Dragan Stepanović applies systems thinking to LLM-assisted coding: feedback loops, constraints, and emergent behavior.
 - [[llm-wiki-scientific-research]] — The LLM Wiki pattern applied to scientific research and academic writing workflows.
 - [[llm-wiki-setup-guide]] — Step-by-step guide to building Karpathy's LLM Wiki from scratch: tools, folder structure, and first entries.

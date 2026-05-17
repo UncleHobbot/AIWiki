@@ -13,7 +13,7 @@ sources:
 ---
 
 ## Summary
-A curated map of open-source implementations of Karpathy's LLM Wiki pattern, updated to reflect the May 2026 ecosystem: 30+ repos, a peer-reviewed scientific benchmark (WiCER), a dedicated hub site, and two distinct camps — personal PKM tools and agent knowledge layers.
+A curated map of open-source implementations of Karpathy's LLM Wiki pattern, updated to reflect the May 2026 ecosystem: 30+ repos, a peer-reviewed scientific benchmark (WiCER), a dedicated hub site, and two distinct camps — personal PKM tools and agent knowledge layers. Includes a direct comparison with AIWiki and a list of ideas worth borrowing.
 
 ## Key Ideas
 - **The core pattern is a substrate, not a product.** Raw sources → LLM-managed wiki → schema/instructions. Every project below instantiates this same three-layer architecture differently.
@@ -28,45 +28,106 @@ A curated map of open-source implementations of Karpathy's LLM Wiki pattern, upd
 
 | Project | Stars | Key features |
 |---|---|---|
-| **SamurAIGPT/llm-wiki-agent** | ~2,000 | Cross-platform: Claude Code, Codex, OpenCode, Gemini CLI. Accepts PDF, DOCX, PPTX, XLSX, EPUB via markitdown |
-| **AgriciDaniel/claude-obsidian** | ~1,500 | 10 skills, 2 parallel research agents, hot cache, `/wiki` `/save` `/autoresearch` commands |
-| **memoriki** | — | LLM Wiki + MemPalace MCP server for real memory. `pip install mempalace` |
-| **kytmanov/obsidian-llm-wiki-local** | — | 100% local via Ollama; no data leaves the machine |
-| **NicholasSpisak/second-brain** | — | Clean vault structure: `raw/` inbox → `wiki/` with sources/entities/concepts/synthesis |
-| **llmwiki** (lucasastorian) | — | FastAPI + Next.js + stdio MCP, SQLite FTS5, hosted version at llmwiki.app |
+| [**SamurAIGPT/llm-wiki-agent**](https://github.com/SamurAIGPT/llm-wiki-agent) | ~2,000 | Cross-platform: Claude Code, Codex, OpenCode, Gemini CLI. Accepts PDF, DOCX, PPTX, XLSX, EPUB via markitdown |
+| [**AgriciDaniel/claude-obsidian**](https://github.com/AgriciDaniel/claude-obsidian) | ~1,500 | 10 skills, 2 parallel research agents, hot cache, `/wiki` `/save` `/autoresearch` commands |
+| [**memoriki**](https://github.com/AyanbekDos/memoriki) | — | LLM Wiki + [MemPalace MCP server](https://github.com/AyanbekDos/memoriki) (29 MCP tools: palace reads/writes, KG ops, agent diaries). Semantic search over verbatim stored text — no summarization |
+| [**kytmanov/obsidian-llm-wiki-local**](https://github.com/kytmanov/obsidian-llm-wiki-local) | — | 100% local via Ollama; no data leaves the machine |
+| [**NicholasSpisak/second-brain**](https://github.com/NicholasSpisak/second-brain) | — | Clean vault structure: `raw/` inbox → `wiki/` with sources/entities/concepts/synthesis sub-layers |
+| [**llmwiki**](https://github.com/lucasastorian/llmwiki) (lucasastorian) | — | FastAPI + Next.js + stdio MCP, SQLite FTS5, hosted at [llmwiki.app](https://llmwiki.app) |
 
 ### Agent Knowledge Layers (multi-agent / API-first)
 
 | Project | Key features |
 |---|---|
-| **nvk/llm-wiki** | Parallel multi-agent research, thesis-driven investigation, Claude Code marketplace plugin via llm-wiki.net |
-| **ktundwal/librarian** | "Personal knowledge layer for coding agents." Zero API keys, CLI-first, local. Emphasis on coding context |
-| **skyllwt/OmegaWiki** | Most ambitious: arXiv ingest → KG (9 entity types) → gap detection → idea generation → paper writing → peer review. 23 Claude Code skills, bilingual EN/ZH, daily GitHub Actions |
-| **OpenKB** | CLI-based; uses PageIndex for long PDFs without chunking. Structure: sources/ → summaries/ → concepts/ → explorations/ → reports/ |
-| **claude-memory-compiler** | Captures Claude Code sessions via hooks → extracts decisions/lessons/patterns → compiles to structured wiki |
+| [**nvk/llm-wiki**](https://github.com/nvk/llm-wiki) | Parallel multi-agent research, thesis-driven investigation, topic archive, confidence scoring, Claude Code marketplace plugin via [llm-wiki.net](https://llm-wiki.net/) |
+| [**ktundwal/librarian**](https://github.com/ktundwal/librarian) | "Personal knowledge layer for coding agents." Zero API keys, CLI-first, local. Associative recall by semantic connection, not just keywords |
+| [**skyllwt/OmegaWiki**](https://github.com/skyllwt/OmegaWiki) | Most ambitious: arXiv ingest → KG (9 entity types) → gap detection → idea generation → paper writing → peer review. 23 Claude Code skills, bilingual EN/ZH, daily GitHub Actions (arXiv at UTC 00:17 → SMTP digest) |
+| [**OpenKB**](https://github.com/VectifyAI/OpenKB) | CLI by VectifyAI; uses [PageIndex](https://github.com/VectifyAI/PageIndex) for long PDFs (hierarchical tree, no vector DB). Structure: sources/ → summaries/ → concepts/ → explorations/ → reports/ |
+| [**claude-memory-compiler**](https://github.com/coleam00/claude-memory-compiler) | Captures Claude Code sessions via hooks → Claude Agent SDK extracts decisions/lessons → compiles to cross-referenced wiki. Auto-compiles at end of day if daily log changed |
+| [**mduongvandinh/llm-wiki**](https://github.com/mduongvandinh/llm-wiki) | Auto-discovery (`/discover` finds new sources from the web); built-in Reddit scanning + GitHub tracking; ready-made variants for book companion, competitive intel, job search |
 
 ### Extensions of the Original Pattern
 
 | Resource | What it adds |
 |---|---|
-| **LLM Wiki v2 gist** (rohitg00) | Memory lifecycle: confidence scoring, retention decay, consolidation tiers (working → procedural), typed knowledge graph |
-| **Hermes Agent skill** (Nous Research) | Only major agent framework to ship LLM Wiki as a built-in; includes ingest/query/lint |
-| **llm-wiki.net** | Hub site and plugin registry for implementations across Claude Code, Codex, OpenCode, Gemini CLI |
-| **awesome-llm-wiki** (tjiahen) | Community-maintained curated list of all implementations |
+| [**LLM Wiki v2 gist**](https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2) (rohitg00) | Memory lifecycle: confidence scoring, retention decay, consolidation tiers (working → procedural), typed knowledge graph |
+| [**Hermes Agent skill**](https://github.com/NousResearch/hermes-agent/tree/main/skills/research/llm-wiki) (Nous Research) | Only major agent framework to ship LLM Wiki as a built-in; [SKILL.md](https://github.com/NousResearch/hermes-agent/blob/main/skills/research/llm-wiki/SKILL.md) includes ingest/query/lint |
+| [**llm-wiki.net**](https://llm-wiki.net/) | Hub site and plugin registry for implementations across Claude Code, Codex, OpenCode, Gemini CLI |
+| [**awesome-llm-wiki**](https://github.com/tjiahen/awesome-llm-wiki) (tjiahen) | Community-maintained curated list of all implementations |
+| [**WiCER benchmark**](https://arxiv.org/abs/2605.07068) (Huerta 2026) | Only peer-reviewed quality benchmark: 53–60% blind compilation failure rate across 17 domains |
 
-### Architecture Pattern
+---
 
-```
-YOUR AGENTS
-(writer, researcher, strategist, analyst)
-        ↓ reads from          ↓ reads from
-KNOWLEDGE BASE LAYER    BRAND FOUNDATION
-(dynamic, LLM-           (static, human-edited:
-maintained, grows)       voice, rules, positioning)
-        ↑ compiles from
-    raw/ inbox
-(tweets, articles, bookmarks, PDFs, notes)
-```
+## Comparison with AIWiki
+
+AIWiki (this project) is most architecturally similar to **nvk/llm-wiki** and **skyllwt/OmegaWiki**. The table shows where AIWiki leads, matches, and lags.
+
+| Feature | AIWiki | nvk/llm-wiki | OmegaWiki | mduongvandinh |
+|---|---|---|---|---|
+| Bilingual output | **EN + RU (unique)** | EN only | EN + ZH | VI + EN |
+| Windows-first | **Yes (unique)** | macOS-first | Linux/macOS | macOS-first |
+| Reddit scanning | **14 subreddits** | None | None | Built-in |
+| Source types | Reddit, YouTube, links, tweets, clips, posts | Links, web | arXiv only | Reddit, GitHub, web |
+| Parallel fetch | **ThreadPoolExecutor** | Multi-agent | GitHub Actions | Sequential |
+| Quality tests | **pytest + pre-commit (unique)** | None found | None found | None found |
+| Vault analysis | **obsidiantools + obs.py** | None | None | None |
+| Relation index | **by_tag + by_alias + by_category** | None | None | None |
+| Digest memory | **digests/memory.json** | None | SMTP digest | None |
+| Confidence field | Yes (just added) | Yes (built-in) | No | No |
+| Topic archive | No | **Yes** | No | No |
+| Thesis articles | No | **Yes** | Partial | No |
+| Inventory tracking | No | **Yes** | No | No |
+| Scheduled automation | **Windows Task Scheduler** | cron | GitHub Actions | Manual |
+| Entries | **~105 (active)** | User-dependent | Auto-growing | User-dependent |
+
+**Where AIWiki is unique among all known implementations:**
+- Only EN+RU bilingual implementation
+- Only Windows-native implementation
+- Only project with a pytest entry-validation suite + pre-commit hooks
+- Only project with `obs.py` obsidiantools-backed backlink/orphan analysis
+- Only project with a relational search index (`by_alias`, `by_tag`)
+
+**Where nvk/llm-wiki leads AIWiki:**
+- Topic archive (`.archive/` for old interests — keeps context clean)
+- Thesis articles (`wiki/theses/`) with `verdict: proven|refuted|contested`
+- Inventory tracking (durable items, candidates, entities with status/priority)
+- Directory-level `_index.md` files (every subdirectory has its own navigable index)
+- Multi-wiki peek (cross-topic queries)
+
+**Where OmegaWiki leads AIWiki:**
+- Daily automated arXiv ingestion via GitHub Actions (no manual trigger needed)
+- SMTP digest delivery (push, not pull — digest arrives in your inbox)
+- Novelty check against existing wiki before writing new entries (avoids duplication proactively)
+- Full academic lifecycle in a single coherent system
+
+---
+
+## What Ideas We Can Steal
+
+Concrete features from other implementations worth adapting to AIWiki's architecture:
+
+**1. Auto-discovery (`/wiki-discover`) — from mduongvandinh/llm-wiki**
+Rather than waiting for URLs to appear in `inbox/links.md`, a discover command proactively finds new relevant sources: given a topic or tag, search the web for recent articles, papers, and repos and propose them for ingestion. We already scan Reddit; this would extend to the broader web.
+
+**2. Session knowledge capture — from claude-memory-compiler**
+After each Claude Code session (on session end or auto-compact), a hook extracts key decisions, patterns, and lessons into a daily log entry, which gets compiled into wiki entries. We already log runs in `log.md`; the missing piece is extracting *knowledge* from session transcripts automatically, not just activity metadata.
+
+**3. Directory-level `_index.md` — from nvk/llm-wiki**
+Every `wiki/<category>/` directory gets its own `_index.md` with a contents table, category stats, and recent changes. This replaces the single monolithic `index.md` with navigable per-category indexes. Better for large vaults and more informative for agents starting in an unfamiliar category.
+
+**4. SMTP daily digest — from OmegaWiki**
+Instead of generating a digest that you have to go find, push it to an email address (or Telegram) automatically after the daily pipeline run. One webhook + SMTP call appended to `wiki-pipeline-run.ps1`.
+
+**5. Novelty check before compile — from OmegaWiki**
+Before writing a new wiki entry, run a quick similarity search against existing entries (by title, tags, or key phrases). Flag near-duplicates for human review rather than silently creating a second entry on the same topic. Our `obs.py` backlinks already detect explicit cross-links; this would catch semantic duplicates from different source paths.
+
+**6. Thesis articles (`wiki/theses/`) — from nvk/llm-wiki**
+A dedicated article type with `verdict: proven|refuted|contested|open` frontmatter for contentious questions ("Does vibe coding improve or hurt code quality?", "Is LLM Wiki compilation safe without lint?"). Currently we handle this with `## Debate` sections in regular entries; a proper thesis type makes evidence tracking first-class.
+
+**7. PageIndex for long PDFs — from OpenKB/VectifyAI**
+Our current YouTube/PDF ingestion reads transcripts as flat text. For papers longer than ~20 pages, a hierarchical page-tree index (PageIndex) lets the LLM navigate efficiently without chunking. Relevant once the research paper inbox grows.
+
+---
 
 ## Details
 
@@ -86,19 +147,20 @@ maintained, grows)       voice, rules, positioning)
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 - [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
 
 ## Краткое описание
-Кураторская карта реализаций паттерна LLM-вики Карпатого, обновлённая до состояния на май 2026: 30+ репозиториев, рецензируемый научный бенчмарк (WiCER), специализированный хаб-сайт и два лагеря — инструменты персонального PKM и агентные слои знаний.
+Кураторская карта реализаций паттерна LLM-вики Карпатого (май 2026): 30+ репозиториев, рецензируемый бенчмарк WiCER, хаб-сайт и два лагеря — персональный PKM и агентный слой знаний. Включает прямое сравнение с AIWiki и список идей для заимствования.
 
 ## Ключевые идеи
-- **Паттерн — это подложка, не продукт.** Сырые источники → LLM-управляемая вики → схема/инструкции. Каждый проект ниже реализует одну и ту же трёхуровневую архитектуру по-своему.
-- **Сложились два лагеря:** *Персональные базы знаний* (один пользователь, локально, Obsidian) и *уровни знаний агента* (мульти-агентные, структурированные API, явные lint-операции).
-- **Пробел компиляции — главная нерешённая проблема.** Единственное научное исследование (WiCER) выявило 53–60% катастрофических отказов при слепой компиляции. Большинство реализаций не имеют проверок качества.
-- **Поиск без RAG.** Большинство реализаций используют простой индексный файл + навигацию LLM, не требующие векторной БД до ~500 документов.
-- **Запросы пополняют вики.** Все зрелые реализации сохраняют ценные ответы на запросы обратно как страницы вики.
+- **Паттерн — это подложка, не продукт.** Каждый проект по-своему реализует одну трёхуровневую архитектуру: сырые источники → LLM-вики → схема.
+- **Два лагеря:** персональные базы знаний (Obsidian, локально) и агентные слои знаний (мультиагентные, structured API, lint).
+- **Пробел компиляции — главная нерешённая проблема.** WiCER: 53–60% отказов при слепой компиляции. Большинство реализаций не имеют проверок качества.
+- **Поиск без RAG.** Простой index.md + LLM-навигация вместо векторной БД — достаточно для корпусов до ~500 документов.
+- **Запросы пополняют вики.** Зрелые реализации сохраняют ценные ответы обратно как страницы вики.
 
 ## Ключевые реализации
 
@@ -106,38 +168,66 @@ maintained, grows)       voice, rules, positioning)
 
 | Проект | Звёзды | Ключевые особенности |
 |---|---|---|
-| **SamurAIGPT/llm-wiki-agent** | ~2000 | Кроссплатформенный: Claude Code, Codex, OpenCode, Gemini CLI; принимает PDF, DOCX, PPTX, XLSX, EPUB |
-| **AgriciDaniel/claude-obsidian** | ~1500 | 10 навыков, 2 параллельных агента, горячий кэш, команды `/wiki` `/save` `/autoresearch` |
-| **memoriki** | — | LLM Wiki + MCP-сервер MemPalace для настоящей памяти |
-| **kytmanov/obsidian-llm-wiki-local** | — | 100% локально через Ollama; данные не покидают машину |
-| **NicholasSpisak/second-brain** | — | Чистая структура vault: `raw/` inbox → `wiki/` с источниками/сущностями/концепциями/синтезом |
-| **llmwiki** (lucasastorian) | — | FastAPI + Next.js + stdio MCP, SQLite FTS5, хостируемая версия llmwiki.app |
+| [**SamurAIGPT/llm-wiki-agent**](https://github.com/SamurAIGPT/llm-wiki-agent) | ~2000 | Кросс-платформенный: Claude Code, Codex, OpenCode, Gemini CLI; принимает PDF, DOCX, PPTX, XLSX, EPUB |
+| [**AgriciDaniel/claude-obsidian**](https://github.com/AgriciDaniel/claude-obsidian) | ~1500 | 10 навыков, 2 параллельных агента, горячий кэш, команды `/wiki` `/save` `/autoresearch` |
+| [**memoriki**](https://github.com/AyanbekDos/memoriki) | — | LLM Wiki + MCP-сервер MemPalace (29 MCP-инструментов). Семантический поиск по дословно сохранённому тексту |
+| [**kytmanov/obsidian-llm-wiki-local**](https://github.com/kytmanov/obsidian-llm-wiki-local) | — | 100% локально через Ollama; данные не покидают машину |
+| [**NicholasSpisak/second-brain**](https://github.com/NicholasSpisak/second-brain) | — | Структура: `raw/` inbox → `wiki/` с подслоями sources/entities/concepts/synthesis |
+| [**llmwiki**](https://github.com/lucasastorian/llmwiki) (lucasastorian) | — | FastAPI + Next.js + stdio MCP, SQLite FTS5, хостируемая версия на [llmwiki.app](https://llmwiki.app) |
 
 ### Агентные слои знаний
 
 | Проект | Ключевые особенности |
 |---|---|
-| **nvk/llm-wiki** | Параллельный мультиагентный режим, тезисное исследование, marketplace-плагин Claude Code |
-| **ktundwal/librarian** | «Персональный уровень знаний для coding agents»: нулевые API-ключи, CLI-first, локально |
-| **skyllwt/OmegaWiki** | Самый амбициозный: arXiv → граф знаний → обнаружение пробелов → написание статей → рецензии. 23 навыка Claude Code, двуязычный, ежедневные GitHub Actions |
-| **OpenKB** | CLI; PageIndex для длинных PDF без нарезки |
-| **claude-memory-compiler** | Захватывает сессии Claude Code через хуки → компилирует решения/уроки в вики |
+| [**nvk/llm-wiki**](https://github.com/nvk/llm-wiki) | Параллельный мульти-агент, тезисное исследование, архив тем, confidence scoring, marketplace-плагин Claude Code |
+| [**ktundwal/librarian**](https://github.com/ktundwal/librarian) | Нулевые API-ключи, CLI-first, локально; ассоциативный поиск по семантической связи |
+| [**skyllwt/OmegaWiki**](https://github.com/skyllwt/OmegaWiki) | arXiv → граф знаний → генерация идей → написание статей → рецензии. 23 навыка Claude Code, двуязычный EN/ZH, ежедневные GitHub Actions |
+| [**OpenKB**](https://github.com/VectifyAI/OpenKB) | PageIndex для длинных PDF без векторной БД. Структура: sources/ → summaries/ → concepts/ → explorations/ |
+| [**claude-memory-compiler**](https://github.com/coleam00/claude-memory-compiler) | Захватывает сессии Claude Code → компилирует решения/уроки в вики. Авто-компиляция в конце дня |
+| [**mduongvandinh/llm-wiki**](https://github.com/mduongvandinh/llm-wiki) | Авто-обнаружение источников (`/discover`); сканирование Reddit и отслеживание GitHub; варианты для конкурентной разведки |
 
 ### Расширения оригинального паттерна
 
 | Ресурс | Что добавляет |
 |---|---|
-| **LLM Wiki v2 gist** (rohitg00) | Жизненный цикл памяти: уверенность, затухание, уровни консолидации, типизированный граф |
-| **Hermes Agent** (Nous Research) | Единственный крупный фреймворк агентов со встроенным LLM Wiki |
-| **llm-wiki.net** | Хаб-сайт и реестр плагинов для Claude Code, Codex, OpenCode, Gemini CLI |
+| [**LLM Wiki v2 gist**](https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2) (rohitg00) | Жизненный цикл памяти: затухание, уровни консолидации, типизированный граф знаний |
+| [**Hermes Agent**](https://github.com/NousResearch/hermes-agent/tree/main/skills/research/llm-wiki) (Nous Research) | Единственный крупный фреймворк со встроенным LLM Wiki |
+| [**llm-wiki.net**](https://llm-wiki.net/) | Хаб и реестр плагинов |
+| [**awesome-llm-wiki**](https://github.com/tjiahen/awesome-llm-wiki) | Community-maintained список всех реализаций |
+| [**WiCER**](https://arxiv.org/abs/2605.07068) (Huerta 2026) | Единственный рецензируемый бенчмарк: 53–60% отказов слепой компиляции |
 
-## Подробнее
+---
 
-**Бенчмарк WiCER** — критически важный ориентир для всех, кто строит на этом паттерне: без систематического шага оценки компиляция отказывает в более чем половине случаев. Проверьте наличие lint/health-check в любом инструменте LLM-вики, прежде чем доверять ему свои знания.
+## Сравнение с AIWiki
 
-**OmegaWiki** и **Hermes Agent** представляют исследовательский/корпоративный конец спектра. OmegaWiki использует вики как единый источник истины для полного академического жизненного цикла. Hermes Agent поставляет паттерн как встроенный навык по умолчанию — единственный крупный фреймворк, сделавший это.
+AIWiki архитектурно ближе всего к nvk/llm-wiki и skyllwt/OmegaWiki.
 
-**Дебаты об Obsidian** усиливаются. Растущее меньшинство (пост в блоге Hermes Agent, HN-тред о git-native реализации) утверждает, что VS Code + Git достаточно — возможности Obsidian, ценные для людей-заметочников, менее полезны, когда LLM создаёт все связи.
+**Уникальные возможности AIWiki среди всех известных реализаций:**
+- Единственная EN+RU двуязычная реализация
+- Единственная Windows-native реализация
+- Единственный проект с pytest-валидацией записей + pre-commit хуками
+- Единственный с `obs.py` (obsidiantools) для анализа обратных ссылок/сирот
+- Единственный с реляционным индексом поиска (`by_alias`, `by_tag`, `by_category`)
+
+**Где nvk/llm-wiki опережает AIWiki:** архив тем, тезисные статьи, отслеживание инвентаря, директориальные `_index.md`, мульти-вики peering.
+
+**Где OmegaWiki опережает AIWiki:** ежедневная автоматическая загрузка arXiv, SMTP-рассылка дайджеста, проверка новизны перед компиляцией.
+
+## Что можно позаимствовать
+
+1. **Авто-обнаружение источников** (mduongvandinh) — команда `/discover`, которая находит новые релевантные источники в интернете по тегу или теме, не дожидаясь ручного добавления в inbox.
+
+2. **Захват знаний из сессий** (claude-memory-compiler) — хук извлекает ключевые решения и паттерны из транскриптов Claude Code и компилирует их в статьи вики.
+
+3. **Директориальные `_index.md`** (nvk/llm-wiki) — каждая `wiki/<категория>/` получает собственный индекс с таблицей содержимого и статистикой.
+
+4. **SMTP-рассылка дайджеста** (OmegaWiki) — после ежедневного запуска пайплайна дайджест отправляется на email или в Telegram.
+
+5. **Проверка новизны перед компиляцией** (OmegaWiki) — быстрый поиск по существующим записям перед созданием новой, чтобы не плодить дубликаты.
+
+6. **Тезисные статьи** (nvk/llm-wiki) — тип записи `wiki/theses/` с полем `verdict: proven|refuted|contested|open` для спорных вопросов.
+
+7. **PageIndex для длинных PDF** (OpenKB) — иерархический индекс страниц вместо плоской нарезки для документов длиннее 20 страниц.
 
 ## Связанные записи
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
@@ -147,3 +237,4 @@ maintained, grows)       voice, rules, positioning)
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 - [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))

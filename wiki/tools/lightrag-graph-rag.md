@@ -37,6 +37,7 @@ A key practical advantage is the incremental update algorithm. Unlike systems th
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 - [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
+- [[rag-explained-embeddings-vector-db]] ([RAG Explained in 18 Minutes: Embeddings, Vector DBs, and Advanced Techniques](../concepts/rag-explained-embeddings-vector-db.md))
 
 ---
 <!-- RU -->
@@ -66,3 +67,4 @@ LightRAG разработан исследователями из Универс
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 - [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
+- [[rag-explained-embeddings-vector-db]] ([RAG Explained in 18 Minutes: Embeddings, Vector DBs, and Advanced Techniques](../concepts/rag-explained-embeddings-vector-db.md))

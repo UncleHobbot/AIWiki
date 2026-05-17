@@ -37,6 +37,7 @@ The broader trend: coding agent pricing is in flux across all providers. Claude 
 - [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
 - [[gen-ai-web-traffic-may-2026]] ([Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](../news/gen-ai-web-traffic-may-2026.md))
 - [[freebuff]] ([freebuff: Free Coding Agent with Top Open Models](../tools/freebuff.md))
+- [[choose-llm-api-self-host-hybrid]] ([How to Choose an LLM for Your AI Agent: API, Self-Host, or Hybrid](../tips/choose-llm-api-self-host-hybrid.md))
 
 ---
 <!-- RU -->
@@ -64,3 +65,4 @@ The broader trend: coding agent pricing is in flux across all providers. Claude 
 - [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
 - [[gen-ai-web-traffic-may-2026]] ([Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](../news/gen-ai-web-traffic-may-2026.md))
 - [[freebuff]] ([freebuff: Free Coding Agent with Top Open Models](../tools/freebuff.md))
+- [[choose-llm-api-self-host-hybrid]] ([How to Choose an LLM for Your AI Agent: API, Self-Host, or Hybrid](../tips/choose-llm-api-self-host-hybrid.md))

@@ -38,6 +38,7 @@ This makes Graphify particularly useful for:
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
 - [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[gitnexus-codebase-knowledge-graph]] ([GitNexus: Codebase Knowledge Graph for Coding Agents](../tools/gitnexus-codebase-knowledge-graph.md))
 
 ---
 <!-- RU -->
@@ -62,3 +63,4 @@ Graphify рассматривается как одна из первых реа
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
 - [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[gitnexus-codebase-knowledge-graph]] ([GitNexus: Codebase Knowledge Graph for Coding Agents](../tools/gitnexus-codebase-knowledge-graph.md))

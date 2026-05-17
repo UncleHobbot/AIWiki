@@ -60,6 +60,8 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 - [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
 - [[agi-impossibility-proof-debunked]] ([Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](../concepts/agi-impossibility-proof-debunked.md))
 - [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))
+- [[llm-fundamentals-tokens-to-production]] ([Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](../concepts/llm-fundamentals-tokens-to-production.md))
+- [[yandex-agents-week-2026-intro]] ([Yandex Agents Week 2026: Intro to AI Agents and LLMs](../concepts/yandex-agents-week-2026-intro.md))
 
 ---
 <!-- RU -->
@@ -96,3 +98,5 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 - [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
 - [[agi-impossibility-proof-debunked]] ([Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](../concepts/agi-impossibility-proof-debunked.md))
 - [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))
+- [[llm-fundamentals-tokens-to-production]] ([Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](../concepts/llm-fundamentals-tokens-to-production.md))
+- [[yandex-agents-week-2026-intro]] ([Yandex Agents Week 2026: Intro to AI Agents and LLMs](../concepts/yandex-agents-week-2026-intro.md))

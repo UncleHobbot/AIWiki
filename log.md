@@ -62,3 +62,5 @@
 
 **19:00 maintenance** — Updated README.md: 61→94 entries, added parallel pipeline, scheduled automation, quality assurance, full scripts table, OpenCode support sections. Committed opencode.json model assignments (deepseek-v4-flash for ingestion, kimi-k2.6 for YouTube/pipeline, glm-5.1 for check/fix).
 
+
+**14:19 ecosystem update** — Rewrote llm-wiki-ecosystem.md: added GitHub links to all 15 projects, comparison table (AIWiki vs nvk/OmegaWiki/mduongvandinh), 7 ideas-to-steal section. Fixed 6 orphans from other session.

@@ -113,6 +113,7 @@ Three documented patterns that combine both:
 - [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
 - [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-compiled-knowledge-vs-rag]] ([LLM Wiki vs RAG: Compiled Knowledge Architecture](../concepts/llm-wiki-compiled-knowledge-vs-rag.md))
 
 ---
 <!-- RU -->

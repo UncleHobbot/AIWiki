@@ -64,3 +64,5 @@
 
 
 **14:19 ecosystem update** — Rewrote llm-wiki-ecosystem.md: added GitHub links to all 15 projects, comparison table (AIWiki vs nvk/OmegaWiki/mduongvandinh), 7 ideas-to-steal section. Fixed 6 orphans from other session.
+
+**14:36 research + wiki article** — Created autonomous-personal-agents-openclaw-hermes-zeroclaw (agents): OpenClaw/Hermes/ZeroClaw/NemoClaw/Zo comparison across features, NAS hosting, messenger integrations, personal task automation. Fixed 5 orphans from other sessions. Vault: 109 entries.

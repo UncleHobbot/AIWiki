@@ -29,6 +29,8 @@ Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) 
 - [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
 - [[nwave-ai-refactoring-framework]] ([nWave: AI-Guided Refactoring Framework for Legacy Code](../tools/nwave-ai-refactoring-framework.md))
 - [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
+- [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] ([Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw, NemoClaw, Zo](../agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md))
+- [[microsoft-ai-agents-beginners-course]] ([Microsoft AI Agents for Beginners: 12-Lesson Course](../tools/microsoft-ai-agents-beginners-course.md))
 
 ---
 <!-- RU -->

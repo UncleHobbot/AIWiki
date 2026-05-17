@@ -3,6 +3,8 @@ title: "Andrej Karpathy"
 title_ru: "Андрей Карпаты"
 category: people
 tags: [karpathy, openai, tesla, stanford, cs231n, software-2-0, llm-wiki, llm-os, vibe-coding, eureka-labs, deep-learning]
+aliases: [Karpathy, Andrej Karpathy, @karpathy]
+confidence: high
 date: 2026-05-17
 updated: 2026-05-17
 sources:

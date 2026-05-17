@@ -1,5 +1,18 @@
 # YouTube Queue
 
+## Done (May 17)
+https://youtu.be/JB2P5Gk23VI?si=DC3_BsUVJ9ciTBZK <!-- IBM: RAG's Evolution from Simple Retrieval to Agentic AI -->
+https://youtu.be/bhsd9MXfccg?si=6Lqm69xOBZvpbPW3 <!-- AI Stack Engineer: OpenCode + GitNexus codebase knowledge graph -->
+https://www.youtube.com/live/C1OCgbONSAw <!-- Yandex: Agents Week 2026 Intro to AI Agents LLM -->
+https://youtu.be/xU7Llr8DUUk?si=1IAG3zHL1EFmdsf7 <!-- Kirichenko: Karpathy killed RAG with Obsidian + Claude Code -->
+https://www.youtube.com/watch?v=8tVAeYASYT0 <!-- Bereznitsky: Clean Architecture in AI coding era -->
+https://www.youtube.com/watch?v=GkKSDBgz4XQ <!-- Bereznitsky: RAG explained in 18 minutes -->
+https://www.youtube.com/watch?v=GD0MwuGAP18 <!-- Bereznitsky: Critical LLM knowledge base (139K views) -->
+https://www.youtube.com/watch?v=7oRBHxMvWxQ <!-- Bereznitsky: Context engineering for AI agents -->
+https://www.youtube.com/watch?v=rN4_Y67Tr8I <!-- Bereznitsky: Anatomy of AI agent - pipeline, loop, tools -->
+https://www.youtube.com/watch?v=vjMxeQ3aIGM <!-- Bereznitsky: Expensive model ≠ smart agent -->
+https://www.youtube.com/watch?v=n1TMMZKYMpo <!-- Bereznitsky: How to choose LLM - API, self-host, hybrid -->
+
 ## Done
 https://www.youtube.com/watch?v=6BB6exR8Zd8&pp=0gcJCQQLAYcqIYzv <!-- Matt Pocock: I stopped using /grill-me for coding -->
 https://www.youtube.com/watch?v=lNOQaakmyDU <!-- Matt Pocock: Anthropic dedicated monthly credit cut -->

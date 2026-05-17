@@ -3,6 +3,8 @@ title: "Roo Code Shuts Down After 3M Installs, Pivots to Roomote"
 title_ru: "Roo Code закрывается после 3 млн установок, переходит на Roomote"
 category: news
 tags: [roo-code, roomote, coding-agent, shutdown, pivot]
+aliases: [Roo Code, RooCode, Roomote]
+confidence: medium
 date: 2026-05-15
 updated: 2026-05-15
 sources:

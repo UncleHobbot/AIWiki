@@ -3,6 +3,8 @@ title: "Mythos: AI Cybersecurity Agent"
 title_ru: "Mythos: ИИ-агент кибербезопасности"
 category: agents
 tags: [mythos, cybersecurity, hacking, agent, llm]
+aliases: [Mythos, Claude Mythos, Mythos Preview, Anthropic cybersecurity model]
+confidence: high
 date: 2026-05-15
 updated: 2026-05-15
 sources:

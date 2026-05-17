@@ -3,6 +3,8 @@ title: "Gnosis MCP: Documentation Search Server for AI Agents"
 title_ru: "Gnosis MCP: сервер поиска документации для AI-агентов"
 category: tools
 tags: [mcp, documentation, search, rag, sqlite, hybrid-search, claude-code]
+aliases: [Gnosis MCP, gnosis, doc search MCP, local documentation search]
+confidence: high
 updated: 2026-05-15
 sources:
   - https://github.com/nicholasglazer/gnosis-mcp

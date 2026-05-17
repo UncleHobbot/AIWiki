@@ -1,24 +1,29 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 94_
+_Last updated: 2026-05-17 | Total entries: 103_
 
 ---
 
-## 🧠 Concepts (11)
+## 🧠 Concepts (16)
 - [[agent-harness-engineering]] — Agent = Model + Harness: the discipline of designing the scaffolding (prompts, tools, context policies, hooks, recovery paths) around an LLM; a great harness beats a great model with a bad one (O'Reilly 2026, VS Code blog).
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
+- [[clean-architecture-ai-coding-era]] — Clean Architecture principles become critical when AI writes 80% of code — proper structure (Entities, Use Cases, Dependency Rule) gives LLMs the boundaries they need to generate quality code.
 - [[karma-knowledge-graph-enrichment]] — Nine collaborative LLM agents automate KG enrichment: 38,230 entities at 83.1% correctness across 1,200 PubMed articles, 18.6% conflict-edge reduction via multi-layer consensus (NeurIPS 2025).
 - [[karpathy-deep-dive-llms]] — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are built.
+- [[llm-fundamentals-tokens-to-production]] — Comprehensive one-hour guide to LLM fundamentals for engineers: tokens, attention, transformers, context windows, inference optimization, and why context engineering > prompt engineering. 139K views.
 - [[llm-wiki-academic-applications]] — Survey of 5 key papers (KARMA, SurveyGen-I, LightRAG, PARNESS, LLM4SR) showing where academic LLM knowledge-base research stands, where a personal wiki already leads, and 3 concrete feature gaps to close.
 - [[llm-wiki-implementations-landscape]] — State of the LLM Wiki ecosystem (May 2026): 30+ implementations, WiCER benchmark finding 53–60% compilation failure rate, two camps (personal PKM vs agent layer), Obsidian debate, productization wave.
 - [[llm-wiki-pattern]] — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, structured knowledge base.
 - [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
+- [[rag-explained-embeddings-vector-db]] — RAG explained in 18 minutes: chunks, embeddings, vector databases, and advanced techniques (hybrid search, reranking, query expansion).
+- [[rags-evolution-agentic-ai]] — IBM traces the 5-stage evolution from keyword search → semantic search → hybrid → traditional RAG → agentic RAG where retrieval becomes a reasoning tool.
 - [[self-guided-self-play]] — SGS adds a Guide role to LLM self-play that prevents Conjecturer collapse; a 7B model after 200 rounds beat a 671B baseline on Lean4 theorem proving.
 - [[surveygen-i-scientific-survey]] — Memory-guided long-form survey generation: a terminology memory store prevents re-explaining defined terms across sections and across weekly runs (IJCNLP-AIJLP 2025).
-- [[gnosis-mcp-vs-llm-wiki-pattern]] -- Deep comparison: Gnosis MCP (local RAG search, fast factual lookup) vs LLM Wiki (compiled synthesis, small stable corpora) -- token economics, failure modes, hybrid architectures.
+- [[gnosis-mcp-vs-llm-wiki-pattern]] — Deep comparison: Gnosis MCP (local RAG search, fast factual lookup) vs LLM Wiki (compiled synthesis, small stable corpora) — token economics, failure modes, hybrid architectures.
+- [[yandex-agents-week-2026-intro]] — Opening lecture of Yandex Education Agents Week 2026: AI agent fundamentals, LLM basics (weights, next-token prediction), and building a basic agent in practice.
 
 ---
 
-## 🛠️ Tools (31)
+## 🛠️ Tools (32)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
 - [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
 - [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
@@ -33,6 +38,7 @@ _Last updated: 2026-05-17 | Total entries: 94_
 - [[gnosis-mcp]] — Gnosis MCP is a zero-config local MCP server that gives AI agents hybrid keyword + semantic search over your documentation.
 - [[goai-graph-of-ideas]] — GoAI is a system that constructs educational knowledge graphs from AI research papers, capturing prerequisite knowledge paths.
 - [[graphify-llm-wiki]] — Graphify is an AI coding assistant skill that applies Karpathy's LLM Wiki pattern to codebases — building a living knowledge graph of any repository.
+- [[gitnexus-codebase-knowledge-graph]] — GitNexus indexes an entire codebase into a local knowledge graph (LadybugDB) and exposes it to coding agents via MCP — 11 tools, 14 languages, 36K+ GitHub stars.
 - [[grobid-pdf-parser]] — GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructuring raw scientific PDF documents.
 - [[han-claude-code-plugin]] — Han is a Claude Code plugin by Test Double that gives solo or small-team engineers access to a swarm of specialist AI subagents.
 - [[lightrag-graph-rag]] — LightRAG is a graph-enhanced RAG system that integrates knowledge graph structures into text indexing and retrieval.
@@ -53,8 +59,9 @@ _Last updated: 2026-05-17 | Total entries: 94_
 
 ---
 
-## 🤖 Agents (11)
+## 🤖 Agents (13)
 - [[acdc-agent-centric-development-cycle]] — AC/DC (Agent-Centric Development Cycle) is a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons.
+- [[anatomy-ai-agent-pipeline-loop-tools]] — Senior-level dissection of AI agent internals: 7 levels (workflow → multi-agent), 12-stage pipeline, agent loop guardrails, MCP tool design pitfalls, system prompts as contracts.
 - [[claude-code-agentic-loop]] — Claude Code is an agentic assistant built on a three-phase loop — gather context, take action, verify results — powered by Claude models and built-in tools.
 - [[claude-code-directory]] — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules, and auto memory — from `.claude/` directories.
 - [[claude-code-extensions-overview]] — Claude Code's extension layer: persistent context (CLAUDE.md), reusable workflows (Skills), external services (MCP), isolated workers (Subagents), and event automation (Hooks).
@@ -65,6 +72,7 @@ _Last updated: 2026-05-17 | Total entries: 94_
 - [[mythos-cybersecurity-agent]] — Mythos: an AI cybersecurity agent for automated security research and vulnerability analysis.
 - [[new-organizational-models-ai-agents]] — Explores how organizations must restructure around AI agents, moving from human-centric hierarchies to human-AI hybrid operating models.
 - [[specs-to-production-ai-agents]] — End-to-end workflow for going from a product specification to production software using AI agents as primary implementers.
+- [[expensive-model-not-smart-agent]] — Why frontier models don't make smart agents: smart routing (10x savings), 4 memory types (CoALA), and Claude Code's 11-subsystem file-based memory architecture.
 
 ---
 
@@ -95,9 +103,10 @@ _Last updated: 2026-05-17 | Total entries: 94_
 
 ---
 
-## 💡 Tips (21)
+## 💡 Tips (24)
 - [[agentic-ai-coding-patterns-tornhill]] — Adam Tornhill's battle-tested patterns for agentic AI coding: speed with quality, context management, and verification loops.
 - [[agentic-ai-development-copilot-lessons]] — Practitioner lessons from real-world agentic AI-assisted development using GitHub Copilot CLI on an open-source project.
+- [[choose-llm-api-self-host-hybrid]] — Engineering framework for choosing between cloud API, self-hosted open-source, and hybrid architectures with a model router — no ideology, only engineering criteria.
 - [[chorus-multi-model-setup]] — CHORUS: a multi-model coding setup that routes tasks to the best model for each job.
 - [[claude-code-deferral-behavior]] — Opus 4.7 task-skipping pattern: when and why Claude Code defers work, and how to prevent it.
 - [[claude-code-handoff-prototype-skills]] — Three high-value Claude Code skills: /handoff (session compaction), /prototype (rapid scaffolding), and improve-codebase-architecture.
@@ -105,9 +114,11 @@ _Last updated: 2026-05-17 | Total entries: 94_
 - [[claude-code-prompting-era]] — The new prompting era: Claude 4.7 literal execution vs GPT-5.5 autonomous behavior, and what it means for prompt engineering.
 - [[claude-code-workflows-best-practices]] — Official best practices for Claude Code: context management, planning, verification, and multi-agent workflows.
 - [[cline-roo-alternatives]] — Community recommendations for Cline and Roo Code alternatives in 2026, following their decline.
+- [[context-engineering-ai-agents-pipeline]] — Structured Research → Design → Plan → Implement pipeline with agent team (lead, coder, reviewer) and quality gates. AI code has 1.7x more defects, 8x more performance issues.
 - [[copilot-cli-telegram-bridge]] — Using Telegram as a mobile front-end for GitHub Copilot CLI via the examon/copilot-cli-telegram-bridge extension.
 - [[github-copilot-cli-best-practices]] — GitHub Copilot CLI is a terminal-native agentic coding assistant; best practices for workflow integration.
 - [[karpathy-claude-code-guidelines]] — A single CLAUDE.md distilling Karpathy-inspired coding guidelines for Claude Code projects.
+- [[karpathy-killed-rag-obsidian]] — Russian-language walkthrough of Karpathy's LLM Wiki approach using Obsidian + Claude Code as a "second brain" — RAG replacement in 5 minutes.
 - [[llm-assumption-propagation]] — Karpathy's insight: LLMs make wrong assumptions and run with them without checking. How to diagnose, interrupt, and prevent assumption propagation in agentic coding.
 - [[llm-assisted-coding-systems-perspective]] — Dragan Stepanović applies systems thinking to LLM-assisted coding: feedback loops, constraints, and emergent behavior.
 - [[llm-wiki-scientific-research]] — The LLM Wiki pattern applied to scientific research and academic writing workflows.

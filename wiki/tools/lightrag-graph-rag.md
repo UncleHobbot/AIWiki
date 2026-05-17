@@ -3,6 +3,8 @@ title: "LightRAG: Graph-Enhanced Retrieval-Augmented Generation"
 title_ru: "LightRAG: графовое улучшение Retrieval-Augmented Generation"
 category: tools
 tags: [lightrag, rag, knowledge-graph, retrieval, embedding, graphrag, nlp]
+aliases: [LightRAG, GraphRAG alternative, graph RAG, dual-level retrieval]
+confidence: high
 date: 2026-05-16
 updated: 2026-05-16
 sources:

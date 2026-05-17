@@ -3,6 +3,8 @@ title: "LLM Wiki Pattern"
 title_ru: "Паттерн LLM-вики"
 category: concepts
 tags: [knowledge-base, rag, obsidian, karpathy, agent, personal-wiki, compounding-knowledge]
+aliases: [LLM Wiki, Karpathy Wiki, Karpathy knowledge base, personal wiki LLM, compile don't retrieve]
+confidence: high
 updated: 2026-05-15
 sources:
   - https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f

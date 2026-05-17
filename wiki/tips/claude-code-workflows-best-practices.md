@@ -44,6 +44,7 @@ Getting the most from Claude Code requires treating context as your primary reso
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
 - [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Coding Setup](../tips/chorus-multi-model-setup.md))
+- [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks That Make AI Feel Like a Real Engineer](../tips/claude-code-12-setup-tricks.md))
 
 ---
 <!-- RU -->

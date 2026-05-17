@@ -66,3 +66,5 @@
 **14:19 ecosystem update** — Rewrote llm-wiki-ecosystem.md: added GitHub links to all 15 projects, comparison table (AIWiki vs nvk/OmegaWiki/mduongvandinh), 7 ideas-to-steal section. Fixed 6 orphans from other session.
 
 **14:36 research + wiki article** — Created autonomous-personal-agents-openclaw-hermes-zeroclaw (agents): OpenClaw/Hermes/ZeroClaw/NemoClaw/Zo comparison across features, NAS hosting, messenger integrations, personal task automation. Fixed 5 orphans from other sessions. Vault: 109 entries.
+
+**14:45 C:/Program Files/Git/wiki-posts** — 2 posts processed. 1 created: claude-code-12-setup-tricks (tips — 12 env setup practices: CLAUDE.md memory, git worktrees, MCP, subagents, slash commands, CI/CD integration). 1 skipped (trending repos list → 5 URLs queued to links.md: agentmemory, 9router, UI-TARS-desktop, mattpocock/skills, CloakBrowser). Vault: 111 entries.

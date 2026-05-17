@@ -33,6 +33,7 @@ The MCP server solution is architecturally simple: register it as an MCP tool na
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
 - [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
+- [[cloakbrowser-stealth-chromium]] ([CloakBrowser: Stealth Chromium for Bot Detection Bypass](../tools/cloakbrowser-stealth-chromium.md))
 
 ---
 <!-- RU -->

@@ -1,5 +1,12 @@
 # Links to Process
 
+## To Read
+https://github.com/rohitg00/agentmemory <!-- agentmemory: #1 persistent memory for AI coding agents, 6.9k stars, real-world benchmarks -->
+https://github.com/decolua/9router <!-- 9router: unlimited FREE AI coding — connects Claude Code/Codex/Cursor/Copilot to 40+ free providers, RTK -40% tokens -->
+https://github.com/bytedance/UI-TARS-desktop <!-- UI-TARS-desktop: open-source multimodal AI agent stack by ByteDance, 3.5k stars -->
+https://github.com/mattpocock/skills <!-- Matt Pocock's skills repo: 18.3k stars, the .claude/skills directory -->
+https://github.com/CloakHQ/CloakBrowser <!-- CloakBrowser: stealth Chromium passing all bot detection tests, drop-in Playwright replacement, 9.1k stars -->
+
 ## High Priority
 
 ## Done

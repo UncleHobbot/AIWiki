@@ -33,6 +33,7 @@ llm-wiki/
 ├── inbox/                      ← Raw unprocessed inputs (drop zone)
 │   ├── clippings/              ← Obsidian Web Clipper exports (.md files)
 │   ├── links.md                ← Flat list of URLs to process
+│   ├── posts.md                ← Social media text posts (--- separated)
 │   ├── tweets/                 ← Twitter/X post dumps (.txt or .md)
 │   └── youtube.md              ← YouTube video URLs (one per line)
 ├── sources/                    ← Fetched & cached raw content (do not edit manually)
@@ -219,11 +220,15 @@ Commands are defined in `opencode.json` under the `command` key and triggered wi
 | `/wiki-links` | Fetch and process URLs from `inbox/links.md` |
 | `/wiki-tweets` | Process tweet dumps from `inbox/tweets/` |
 | `/wiki-youtube` | Process YouTube URLs from `inbox/youtube.md` |
+| `/wiki-posts` | Process social media text posts from `inbox/posts.md` |
 | `/wiki-reddit` | Scan all configured subreddits for new posts |
 | `/wiki-digest` | Generate the weekly bilingual digest |
 | `/wiki-index` | Rebuild `index.md` from all wiki entries |
 | `/wiki-search` | Search wiki entries — e.g. `/wiki-search RAG retrieval` |
 | `/wiki-check` | Find and fix entries missing their Russian section |
+| `/wiki-fix` | Run wiki quality test suite and auto-fix failures |
+| `/wiki-inbox-parallel` | Parallel inbox processing with subagents for speed |
+| `/wiki-pipeline` | Run full maintenance pipeline (reddit → inbox → links → check → index → digest → git) |
 
 > **How it works:** each command in `opencode.json` contains the full instructions opencode follows when you type that command. The detail for each command is summarised below.
 
@@ -231,7 +236,7 @@ Commands are defined in `opencode.json` under the `command` key and triggered wi
 
 ### `/wiki-inbox`
 
-Runs `/wiki-clippings` → `/wiki-links` → `/wiki-tweets` → `/wiki-youtube` in sequence, then rebuilds `index.md` and logs the run to `.state/last_run.json`.
+Runs `/wiki-clippings` → `/wiki-links` → `/wiki-tweets` → `/wiki-posts` → `/wiki-youtube` in sequence, then rebuilds `index.md` and logs the run to `.state/last_run.json`.
 
 ---
 
@@ -270,7 +275,7 @@ Parses YouTube URLs from `inbox/youtube.md`, runs `python scripts/fetch_youtube.
 
 Runs `python scripts/fetch_reddit.py <subreddit> --use-cursor --with-comments` for each monitored subreddit, filters posts with score > 50 or comment count > 20, classifies each post, writes bilingual entries to `wiki/<category>/<slug>.md`, queues any external URLs for the `/wiki-links` workflow, and updates `.state/reddit_cursor.json`.
 
-**Monitored subreddits:** r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding
+**Monitored subreddits:** r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding
 
 ---
 
@@ -295,6 +300,41 @@ The text after `/wiki-search` is passed as `$ARGUMENTS`. Searches file names and
 ### `/wiki-check`
 
 Lists all `.md` files in `wiki/`, checks each for the `<!-- RU -->` divider, generates and appends the Russian section for any file that is missing it.
+
+---
+
+### `/wiki-posts`
+
+Processes social media text posts from `inbox/posts.md`. Posts are separated by `---` dividers and may include optional metadata comments (`<!-- Source: Platform | Author: name | Date: YYYY-MM-DD -->`). Extracts notable insights (tips, tool announcements, research findings), classifies them, creates bilingual wiki entries, queues external URLs for `/wiki-links`, and moves processed blocks to `## Done`.
+
+**`inbox/posts.md` format:**
+```markdown
+## To Process
+<!-- Source: Twitter | Author: someone | Date: 2026-05-16 -->
+Interesting insight about LLMs and knowledge graphs...
+
+---
+<!-- Source: Reddit | Author: another | Date: 2026-05-15 -->
+Tool announcement: new MCP server for...
+```
+
+---
+
+### `/wiki-fix`
+
+Runs `pytest tests/test_wiki.py -v --tb=short` and auto-fixes all failures, iterating up to 5 rounds. Fix categories processed in order: frontmatter fields → Russian sections → broken wikilinks → index rebuild → orphan pages. Prints a summary of fixes applied and any remaining failures. Does not update `log.md` or `.state/last_run.json`.
+
+---
+
+### `/wiki-inbox-parallel`
+
+Parallel version of `/wiki-inbox` using subagents. Phase 1: coordinate and group inbox items by type. Phase 2: parallel fetch with 8 workers via `python scripts/parallel_fetch.py`. Phase 3: specialized processing per source type (posts → clippings → papers → links → twitter → youtube → reddit). Phase 4: merge, deduplication, backlink healing, and orphan resolution. Phase 5: rebuild index and log run. Pass `--benchmark` as argument to include speedup measurements.
+
+---
+
+### `/wiki-pipeline`
+
+Runs the full maintenance pipeline in canonical order: `wiki-reddit` → `wiki-inbox` → `wiki-links` (second pass) → `wiki-check` → `wiki-index` → `wiki-digest` (conditional: only on Monday or if current week's digest is missing) → `git commit + push`. Prints one-line status after each step and a full summary table at the end. Self-healing: recovers from transient failures silently and continues.
 
 ---
 
@@ -344,6 +384,42 @@ Shared utilities:
 - `detect_category(text)` — heuristic classifier
 - `load_env()` — loads `.env` file
 
+### `scripts/inbox_coordinator.py`
+
+```
+Usage: python scripts/inbox_coordinator.py --json
+Output: JSON manifest of all inbox items grouped by type
+```
+
+Scans all inbox sources and returns a grouped manifest for parallel processing.
+
+### `scripts/parallel_fetch.py`
+
+```
+Usage: python scripts/parallel_fetch.py --workers 8
+Output: Fetches all inbox items concurrently, caches to .state/fetch_cache/
+```
+
+Thread pool-based parallel fetcher. Caches results in `.state/fetch_cache/<type>/<hash>.json` for deduplication.
+
+### `scripts/obs.py`
+
+```
+Usage: python scripts/obs.py <command>
+Commands: broken | orphans | check | links <slug>
+```
+
+Wiki vault health tool: detects broken wikilinks, orphaned pages (no incoming backlinks), and generates vault health reports.
+
+### `scripts/build_relations.py`
+
+```
+Usage: python scripts/build_relations.py [--slug <slug>]
+Output: Rebuilds .state/relations/_index.json
+```
+
+Rebuilds the relation index for `/wiki-search` relational queries. Use `--slug` for single-entry incremental updates.
+
 ---
 
 ## 📅 Recommended Automation Schedule
@@ -354,8 +430,10 @@ Run these manually or set up a cron job / Task Scheduler:
 |---|---|---|
 | `/wiki-reddit` | Daily | Morning scan for overnight posts |
 | `/wiki-inbox` | As needed | After adding files to inbox/ |
+| `/wiki-fix` | After any batch | Run test suite and auto-fix failures |
 | `/wiki-digest` | Weekly | Every Monday morning |
 | `/wiki-check` | After any batch | Ensures every entry has its Russian section |
+| `/wiki-pipeline` | Weekly or on-demand | Full maintenance run |
 | `/wiki-index` | After any batch | Keep index current |
 
 ---

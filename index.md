@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 89_
+_Last updated: 2026-05-17 | Total entries: 92_
 
 ---
 
@@ -76,8 +76,9 @@ _Last updated: 2026-05-17 | Total entries: 89_
 
 ---
 
-## 📰 News (13, sorted by date descending)
+## 📰 News (14, sorted by date descending)
 - 2026-05-17 [[codex-on-mobile]] — OpenAI's Codex coding agent became available on iOS and Android, extending agentic coding sessions to mobile devices.
+- 2026-05-16 [[github-agentic-developer-certification]] — GitHub announced GH-600 certification for "agentic AI developer" covering multi-agent orchestration, state management, and system design. Launches July 2026.
 - 2026-05-15 [[apple-m5-kernel-exploit-ai]] — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon using AI assistance.
 - 2026-05-15 [[arxiv-llm-ban-policy]] — arXiv implements a 1-year submission ban for papers with unchecked LLM-generated errors.
 - 2026-05-15 [[fda-ai-clinical-trials]] — FDA uses AI to shorten clinical trial timelines and accelerate drug approval review.
@@ -116,7 +117,8 @@ _Last updated: 2026-05-17 | Total entries: 89_
 
 ---
 
-## 👤 People (1)
+## 👤 People (2)
+- [[andrej-karpathy]] — Andrej Karpathy: AI researcher, educator, founding member of OpenAI, former Director of AI at Tesla. Coined Software 2.0, vibe coding, and the LLM Wiki pattern. Founder of Eureka Labs.
 - [[matt-pocock-aihero]] — Matt Pocock (aihero.dev): TypeScript educator turned AI practitioner; creator of the viral /grill-me skill (46k+ stars), tracer bullets technique, and codebase-design-for-AI philosophy.
 
 ---

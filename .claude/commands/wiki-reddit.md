@@ -31,5 +31,7 @@ Steps:
 3. Update .state/reddit_cursor.json with the newest post ID seen per subreddit
 4. Rebuild index.md
 5. Report: per subreddit — N posts scanned, M entries created/updated, K URLs queued
+6. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-reddit" "<N subreddits, M entries created: slug1 (cat), slug2 (cat). Index: X total.>"
 
 Wiki entry format to follow: see CLAUDE.md § Wiki Entry Format.

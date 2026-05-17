@@ -76,3 +76,5 @@ entries_updated: M
    }
 
 7. Report: digest saved to digests/YYYY-WNN.md, N terms added to memory.json
+8. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-digest" "<YYYY-WNN digest generated, N entries covered, M terms added to memory.json.>"

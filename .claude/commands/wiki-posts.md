@@ -31,5 +31,7 @@ Steps:
    g. If the post is opinion/discussion without clear extractable knowledge, skip it
 4. Move processed post blocks to a "## Done" section at the bottom of inbox/posts.md
 5. Report: N entries created, M updated, K skipped (no notable insight)
+6. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-posts" "<N created, M updated, K skipped. Key items: slug1 (cat).>"
 
 Wiki entry format to follow: see CLAUDE.md § Wiki Entry Format.

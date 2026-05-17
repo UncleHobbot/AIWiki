@@ -193,12 +193,16 @@ if ($isMonday -or -not $exists) { # run /wiki-digest }
 
 ---
 
-## Step 7 — Commit and Push
+## Step 7 — Log, Commit, and Push
 
-**What it does:** Commits all changes with a structured message and pushes to origin.
+**What it does:** Writes the pipeline summary to log.md, then commits all changes and pushes.
 
 **Run:**
 ```
+# 1. Write pipeline summary to log.md FIRST (before git add)
+python scripts/log_run.py "/wiki-pipeline" "reddit: X subs, Y entries. inbox: Z items. links: N processed. health: 0 broken, 0 orphans. digest: <created/skipped>. vault: X entries."
+
+# 2. Commit everything including the freshly updated log.md
 git add wiki/ inbox/ index.md digests/ log.md .state/reddit_cursor.json .state/processed_urls.json .state/last_run.json
 # Note: .state/relations/ is gitignored — relations are rebuilt from source on each run
 git commit -m "<structured message>"

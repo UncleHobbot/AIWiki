@@ -8,5 +8,7 @@ Steps:
 5. Run the wiki-youtube workflow (process all URLs in inbox/youtube.md)
 6. Rebuild index.md from all wiki/ entries
 7. Append a one-line summary of this run to .state/last_run.json
+8. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-inbox" "<N created, M updated. Key items: slug1 (cat), slug2 (cat). Index: X total.>"
 
 Report total entries created, updated, and skipped across all sources.

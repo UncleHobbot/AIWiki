@@ -30,5 +30,7 @@ Steps:
    j. Append the URL to .state/processed_urls.json
 4. Rebuild index.md
 5. Report: N entries created, M updated, K failed
+6. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-youtube" "<N created, M updated. Key items: slug1 (cat), slug2 (cat). Index: X total.>"
 
 Wiki entry format to follow: see CLAUDE.md § Wiki Entry Format.

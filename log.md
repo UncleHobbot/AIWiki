@@ -61,3 +61,4 @@
 **18:30 /wiki-fix** — pytest: 285 passed, 1 failed (llm-assumption-propagation missing from index.md Tips section). Fixed in 1 round. Final: 285 passed, 0 failed.
 
 **19:00 maintenance** — Updated README.md: 61→94 entries, added parallel pipeline, scheduled automation, quality assurance, full scripts table, OpenCode support sections. Committed opencode.json model assignments (deepseek-v4-flash for ingestion, kimi-k2.6 for YouTube/pipeline, glm-5.1 for check/fix).
+

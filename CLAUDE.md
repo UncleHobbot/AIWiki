@@ -159,6 +159,13 @@ RAPIDAPI_KEY=your_key_here
    - Append a human-readable line to `log.md` under today's `## YYYY-MM-DD` heading (create the heading if it doesn't exist yet)
    
    **`log.md` entry format:** `**HH:MM /command** — N entries created, M updated. Key items: slug1 (category), slug2 (category). Index: X total.`
+   
+   **Use the helper script — it handles heading creation automatically:**
+   ```
+   python scripts/log_run.py "/wiki-reddit" "14 subs, 2 entries created: foo (tools), bar (news). Index: 94."
+   ```
+   
+   This step is **mandatory and non-optional**. Every wiki command file ends with an explicit log step. If you skip it, the log falls behind and must be backfilled manually. Skipping is not faster — it creates more work.
 8. **Keep links healthy.** `python scripts/obs.py broken` lists `[[links]]` to entries that do not yet exist — treat each as a stub to create. `python scripts/obs.py orphans` lists entries no one links to — add them to Related Entries in semantically close entries.
 
 ### Language Rules for Russian Translation
@@ -428,6 +435,15 @@ Shared utilities:
 - `slugify(title)` — creates filename-safe slugs
 - `detect_category(text)` — heuristic classifier
 - `load_env()` — loads `.env` file
+
+### `scripts/log_run.py`
+
+```
+Usage: python scripts/log_run.py <command> <message>
+Output: Appends **HH:MM <command>** — <message> to log.md under today's heading.
+```
+
+Called as the final step of every wiki command. Creates the `## YYYY-MM-DD` heading automatically if it doesn't exist. Use this instead of editing log.md manually.
 
 ### `scripts/build_relations.py`
 

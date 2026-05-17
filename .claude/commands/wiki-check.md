@@ -24,3 +24,5 @@ Steps:
 5. For files where the divider exists but the Russian section is empty or very short (< 50 chars):
    treat them as missing and regenerate the Russian section
 6. Report: N files updated, M files already complete, K broken links, J orphans
+7. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-check" "<N RU sections added, K broken links fixed, J orphans connected. Vault: X entries.>"

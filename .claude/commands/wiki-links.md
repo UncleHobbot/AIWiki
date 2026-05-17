@@ -22,5 +22,7 @@ Steps:
 4. Move all processed URLs to a "## Done" section at the bottom of inbox/links.md
 5. Rebuild index.md
 6. Report: N created, M updated, K failed
+7. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-links" "<N created, M updated, K failed. Key items: slug1 (cat), slug2 (cat). Processed URLs: X.>"
 
 Wiki entry format to follow: see CLAUDE.md § Wiki Entry Format.

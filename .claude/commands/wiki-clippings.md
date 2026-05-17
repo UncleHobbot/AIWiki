@@ -18,5 +18,8 @@ Steps:
 3. Rebuild index.md
 4. Report: N created, M updated, K skipped
 
+**Write to log.md after completing** (required — do not skip):
+   python scripts/log_run.py "/wiki-clippings" "<N created, M updated, K skipped. Key items: slug1 (cat). Index: X total.>"
+
 Wiki entry format to follow: see CLAUDE.md § Wiki Entry Format.
 Language rules: see CLAUDE.md § Language Rules for Russian Translation.

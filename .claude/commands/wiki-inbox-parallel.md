@@ -158,3 +158,6 @@ Print a summary table:
 If the --benchmark flag is passed as $ARGUMENTS, also run:
     python scripts/benchmark_inbox.py --items 20 --workers 8 --runs 3
 and append the speedup table to the final report.
+
+**Write to log.md after completing** (required — do not skip):
+   python scripts/log_run.py "/wiki-inbox-parallel" "<fetch: N/M in X.Xs. C created, U updated, S skipped, F failed. Key items: slug1 (cat). Vault: X entries.>"

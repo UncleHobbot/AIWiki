@@ -40,3 +40,5 @@ _Last updated: YYYY-MM-DD | Total entries: N_
 ...
 
 7. Report: index.md updated, N total entries indexed, K orphans flagged
+8. **Write to log.md** (required — do not skip):
+   python scripts/log_run.py "/wiki-index" "<index.md rebuilt, N entries, K orphans flagged.>"

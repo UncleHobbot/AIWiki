@@ -33,9 +33,9 @@ llm-wiki/
 ├── inbox/                      ← Raw unprocessed inputs (drop zone)
 │   ├── clippings/              ← Obsidian Web Clipper exports (.md files)
 │   ├── links.md                ← Flat list of URLs to process
-│   ├── posts.md                ← Social media text posts (--- separated)
-│   ├── tweets/                 ← Twitter/X post dumps (.txt or .md)
-│   └── youtube.md              ← YouTube video URLs (one per line)
+│   ├── twitter.md              ← Twitter/X tweet URLs to process (like links.md)
+│   ├── youtube.md              ← YouTube video URLs (one per line)
+│   └── posts.md                ← Raw text posts from social media (LinkedIn, Bluesky, etc.)
 ├── sources/                    ← Fetched & cached raw content (do not edit manually)
 │   ├── reddit/                 ← Reddit post/comment snapshots
 │   ├── web/                    ← Fetched article content
@@ -50,10 +50,13 @@ llm-wiki/
 │   └── people/                 ← Notable researchers & builders
 ├── digests/                    ← Weekly digests (bilingual, one file per week)
 ├── scripts/                    ← Python helper scripts
+│   ├── _template.py            ← Template for all new scripts (copy & rename)
 │   ├── fetch_reddit.py
 │   ├── fetch_youtube.py
 │   ├── fetch_twitter.py
 │   ├── fetch_url.py
+│   ├── log_run.py              ← Logging helper for wiki commands
+│   ├── obs.py                  ← Obsidian vault analysis CLI (backlinks, orphans, broken links)
 │   └── utils.py
 ├── .state/                     ← Processing state & deduplication cache
 │   ├── processed_urls.json     ← Already-processed URLs (skip list)
@@ -119,18 +122,53 @@ RAPIDAPI_KEY=your_key_here
 
 ---
 
+## 🪟 Windows Environment
+
+- **All new Python scripts must start from `scripts/_template.py`.** Copy it, rename it, replace the `main()` body. Do not delete the UTF-8 setup block or the helper functions at the top.
+- Always use UTF-8 encoding explicitly when writing Python scripts (`# -*- coding: utf-8 -*-` header and `encoding='utf-8'` on all file opens/writes). Use the `read_text`/`write_text`/`read_json`/`write_json` helpers from `_template.py` instead of bare `open()`.
+- Avoid emoji/Unicode literals in Python script output; use the `log()` helper from `_template.py` which enforces ASCII-safe output.
+- Do NOT use `/tmp/` paths — they don't work with the Read tool on Windows. Use project-relative paths or `%TEMP%`.
+- When parsing yt-dlp output, use `parse_ytdlp_json()` or `parse_ytdlp_json_stream()` from `_template.py` — yt-dlp writes download-progress text to the same stream as JSON output.
+
+---
+
+## ✏️ Editing Conventions
+
+- Match existing indentation exactly (tabs vs spaces) when using Edit; if uncertain, Read the file first.
+- When editing JSON files (especially `.state/*.json`, `settings.local.json`), validate that there are no trailing commas before saving — Python's `json.load` and Node's `JSON.parse` both reject them.
+
+---
+
+## 🌐 Network Fetching
+
+- Prefer the `web-reader` MCP tool for fetching web content; only fall back to `scripts/fetch_url.py` (direct HTTP) if the MCP fails.
+- Respect `robots.txt` — do not write scrapers that bypass it. If a site blocks fetching, note it in the entry's sources and skip.
+
+---
+
 ## 🤖 Behavior Rules
 
 ### Core Principles
 
 1. **Every entry is bilingual.** Each `.md` file in `wiki/` contains both English and Russian content in the same file — English section first, Russian section second, separated by a clear divider. Never create separate files for translations.
-2. **Deduplicate aggressively.** Before creating a new entry, check `index.md` and `.state/processed_urls.json`. Update existing entries rather than creating duplicates.
+2. **Deduplicate aggressively.** Before creating a new entry, check `index.md` and `.state/processed_urls.json`. Also run `python scripts/obs.py backlinks <slug>` to check if other entries already reference a slug — that's a signal the topic exists or is expected. Update existing entries rather than creating duplicates.
 3. **Preserve source attribution.** Every wiki entry must include a `sources:` front-matter block with original URLs.
 4. **Be concise, not exhaustive.** Entries should be scannable. Use bullet points for facts, short paragraphs for concepts. Max ~600 words per language section.
 5. **Date-stamp news entries.** Anything in `wiki/news/` must have a `date:` field in front matter.
 6. **Update the index.** After creating or updating any entry, regenerate `index.md`.
-7. **Log what you did.** After each run, append a one-line summary with date, command, and outcome to `log.md`.
-8. **Controlled context injection.** Structure information so agents receive only the context relevant to the current task. Use `AGENTS.md` as the navigation map — know where data lives and in what format — rather than scanning everything and bloating the context window.
+7. **Log what you did.** After each run, do both:
+   - Append a structured JSON entry to `.state/last_run.json` (machine-readable, for the pipeline)
+   - Append a human-readable line to `log.md` under today's `## YYYY-MM-DD` heading (create the heading if it doesn't exist yet)
+   
+   **`log.md` entry format:** `**HH:MM /command** — N entries created, M updated. Key items: slug1 (category), slug2 (category). Index: X total.`
+   
+   **Use the helper script — it handles heading creation automatically:**
+   ```
+   python scripts/log_run.py "/wiki-reddit" "14 subs, 2 entries created: foo (tools), bar (news). Index: 94."
+   ```
+   
+   This step is **mandatory and non-optional**. Every wiki command file ends with an explicit log step. If you skip it, the log falls behind and must be backfilled manually. Skipping is not faster — it creates more work.
+8. **Keep links healthy.** `python scripts/obs.py broken` lists `[[links]]` to entries that do not yet exist — treat each as a stub to create. `python scripts/obs.py orphans` lists entries no one links to — add them to Related Entries in semantically close entries.
 
 ### Language Rules for Russian Translation
 
@@ -152,6 +190,8 @@ title: "Entry Title"
 title_ru: "Название записи"
 category: concepts | tools | agents | models | news | tips | people
 tags: [tag1, tag2, tag3]
+aliases: [Alternate Name, acronym, common search term]   # optional — improves /wiki-search recall
+confidence: high | medium | low                          # optional — based on source tier
 date: YYYY-MM-DD          # required for news entries
 updated: YYYY-MM-DD
 sources:
@@ -174,8 +214,8 @@ Longer prose explanation, 2-4 paragraphs max.
 > "Exact quote if particularly insightful" — Author, Source
 
 ## Related Entries
-- [[related-slug-1]]
-- [[related-slug-2]]
+- [[related-slug-1]] ([Title One](../category/related-slug-1.md))
+- [[related-slug-2]] ([Title Two](../category/related-slug-2.md))
 
 ---
 <!-- RU -->
@@ -195,12 +235,12 @@ Longer prose explanation, 2-4 paragraphs max.
 > "Цитата, если особенно содержательна" — Автор, Источник
 
 ## Связанные записи
-- [[related-slug-1]]
-- [[related-slug-2]]
+- [[related-slug-1]] ([Title One](../category/related-slug-1.md))
+- [[related-slug-2]] ([Title Two](../category/related-slug-2.md))
 ```
 
 **Format rules:**
-- **The `---\n<!-- RU -->` divider is the exact separator used to locate and update each language section independently.
+- The `---\n<!-- RU -->` divider is the exact separator used to locate and update each language section independently.
 - Front-matter keys are always in English; `title_ru` holds the Russian title.
 - Code blocks, command-line examples, and file paths are **never** translated — they appear only in the English section and are not repeated in the Russian section.
 - The `## Related Entries` links are identical in both sections (slugs are language-neutral).
@@ -218,9 +258,9 @@ Commands are defined in `opencode.json` under the `command` key and triggered wi
 | `/wiki-inbox` | Process everything in `inbox/` (runs all sub-commands in sequence) |
 | `/wiki-clippings` | Process Obsidian Web Clipper `.md` exports |
 | `/wiki-links` | Fetch and process URLs from `inbox/links.md` |
-| `/wiki-tweets` | Process tweet dumps from `inbox/tweets/` |
+| `/wiki-tweets` | Fetch and process tweet URLs from `inbox/twitter.md` |
+| `/wiki-posts` | Process raw social media text posts from `inbox/posts.md` |
 | `/wiki-youtube` | Process YouTube URLs from `inbox/youtube.md` |
-| `/wiki-posts` | Process social media text posts from `inbox/posts.md` |
 | `/wiki-reddit` | Scan all configured subreddits for new posts |
 | `/wiki-digest` | Generate the weekly bilingual digest |
 | `/wiki-index` | Rebuild `index.md` from all wiki entries |
@@ -261,7 +301,16 @@ Parses all URLs from `inbox/links.md` (ignores comment text), skips already-proc
 
 ### `/wiki-tweets`
 
-Reads all files in `inbox/tweets/` (plain text `---`-separated, markdown blockquotes, or JSON arrays), expands t.co URLs via `python scripts/fetch_twitter.py`, queues external URLs for the `/wiki-links` workflow, and creates bilingual entries for any notable insights found directly in the tweet text.
+Parses tweet URLs from `inbox/twitter.md` (same format as `inbox/links.md`: lines under `## To Read`, `## Done` at bottom), runs `python scripts/fetch_twitter.py <url>` for each new URL to fetch the tweet text and expand any t.co links, queues external URLs for `/wiki-links`, creates bilingual entries for notable insights, marks URLs as processed, and moves them to the `## Done` section.
+
+**`inbox/twitter.md` format:**
+```markdown
+## To Read
+- https://x.com/user/status/123456789
+- https://twitter.com/user/status/987654321  <!-- optional note -->
+
+## Done
+```
 
 ---
 
@@ -305,17 +354,24 @@ Lists all `.md` files in `wiki/`, checks each for the `<!-- RU -->` divider, gen
 
 ### `/wiki-posts`
 
-Processes social media text posts from `inbox/posts.md`. Posts are separated by `---` dividers and may include optional metadata comments (`<!-- Source: Platform | Author: name | Date: YYYY-MM-DD -->`). Extracts notable insights (tips, tool announcements, research findings), classifies them, creates bilingual wiki entries, queues external URLs for `/wiki-links`, and moves processed blocks to `## Done`.
+Reads `inbox/posts.md`, processes each raw text post block (separated by `---`), extracts the source/author/date from the optional metadata comment, classifies the insight, and creates or updates a bilingual wiki entry. Marks processed posts by moving them to a `## Done` section.
 
 **`inbox/posts.md` format:**
 ```markdown
 ## To Process
-<!-- Source: Twitter | Author: someone | Date: 2026-05-16 -->
-Interesting insight about LLMs and knowledge graphs...
+
+<!-- Source: LinkedIn | Author: John Doe | Date: 2026-05-16 -->
+Post text goes here. Can be multi-line.
+Key insight or announcement from this post.
 
 ---
-<!-- Source: Reddit | Author: another | Date: 2026-05-15 -->
-Tool announcement: new MCP server for...
+
+<!-- Source: Bluesky | Author: @user.bsky.social | Date: 2026-05-15 -->
+Another post text here.
+
+---
+
+## Done
 ```
 
 ---
@@ -339,6 +395,27 @@ Runs the full maintenance pipeline in canonical order: `wiki-reddit` → `wiki-i
 ---
 
 ## 🐍 Helper Scripts Reference
+
+### `scripts/_template.py` ← start here for every new script
+
+**All new Python scripts must be copied from this file.** It provides:
+
+| Helper | What it does |
+|---|---|
+| UTF-8 stdout/stderr reconfigure | Prevents CP1252 crashes on Windows before any `print()` call |
+| `read_text(path)` / `write_text(path, content)` | File I/O with explicit `encoding='utf-8'` |
+| `read_json(path)` / `write_json(path, data)` | JSON I/O with UTF-8 and no trailing commas |
+| `log(msg, level)` | Timestamps + strips non-ASCII so logs survive CP1252 pipes |
+| `parse_ytdlp_json(raw)` | Strips yt-dlp progress lines, returns single parsed JSON object |
+| `parse_ytdlp_json_stream(raw)` | Same but for multi-object (playlist / `--print-json`) output |
+
+```python
+# Quickstart — copy _template.py, then:
+cp scripts/_template.py scripts/my_new_script.py
+# Edit the module docstring and main() body. Keep everything above main() intact.
+```
+
+---
 
 ### `scripts/fetch_url.py`
 
@@ -384,41 +461,57 @@ Shared utilities:
 - `detect_category(text)` — heuristic classifier
 - `load_env()` — loads `.env` file
 
-### `scripts/inbox_coordinator.py`
+### `scripts/log_run.py`
 
 ```
-Usage: python scripts/inbox_coordinator.py --json
-Output: JSON manifest of all inbox items grouped by type
+Usage: python scripts/log_run.py <command> <message>
+Output: Appends **HH:MM <command>** — <message> to log.md under today's heading.
 ```
 
-Scans all inbox sources and returns a grouped manifest for parallel processing.
-
-### `scripts/parallel_fetch.py`
-
-```
-Usage: python scripts/parallel_fetch.py --workers 8
-Output: Fetches all inbox items concurrently, caches to .state/fetch_cache/
-```
-
-Thread pool-based parallel fetcher. Caches results in `.state/fetch_cache/<type>/<hash>.json` for deduplication.
-
-### `scripts/obs.py`
-
-```
-Usage: python scripts/obs.py <command>
-Commands: broken | orphans | check | links <slug>
-```
-
-Wiki vault health tool: detects broken wikilinks, orphaned pages (no incoming backlinks), and generates vault health reports.
+Called as the final step of every wiki command. Creates the `## YYYY-MM-DD` heading automatically if it doesn't exist. Use this instead of editing log.md manually.
 
 ### `scripts/build_relations.py`
 
 ```
-Usage: python scripts/build_relations.py [--slug <slug>]
-Output: Rebuilds .state/relations/_index.json
+Usage: python scripts/build_relations.py              # rebuild all entries
+       python scripts/build_relations.py --slug <slug> # update one entry fast
+Output: .state/relations/<slug>.json per entry
+        .state/relations/_index.json  aggregated by_tag / by_category lookup
 ```
 
-Rebuilds the relation index for `/wiki-search` relational queries. Use `--slug` for single-entry incremental updates.
+Powers the relational mode of `/wiki-search`. Run after any ingestion batch.
+The `_index.json` maps every tag and category to the slugs that carry it, enabling
+queries like "tools using RAG" or "concepts about self-play" without full-text grep.
+
+### `scripts/obs.py`
+
+```
+Usage: python scripts/obs.py <command> [args]
+
+Commands:
+  backlinks <slug>   Who links TO this entry (reverse lookup)
+  links <slug>       What this entry links TO (with [BROKEN] flags)
+  broken             All [[links]] pointing to nonexistent .md files
+  orphans            Entries with zero incoming backlinks
+  isolated           Entries with no links in or out
+  top [N]            Top N most-linked entries (default 10)
+  check              Full vault health report (all of the above)
+```
+
+Backed by `obsidiantools` — parses `[[wiki-link]]` syntax and builds the full backlink graph.
+
+**When to use `obs.py`:**
+
+| Situation | Command |
+|---|---|
+| Creating a new entry — find other entries that already reference it | `python scripts/obs.py backlinks <new-slug>` |
+| Filling in "Related Entries" for an entry | `python scripts/obs.py links <slug>` to see outbound links; `backlinks` for inbound |
+| After any batch run (`/wiki-reddit`, `/wiki-inbox`) | `python scripts/obs.py check` to surface broken links and new orphans |
+| In `/wiki-check` — validate link integrity | `python scripts/obs.py broken` |
+| In `/wiki-index` — flag entries no one links to | `python scripts/obs.py orphans` |
+| Deciding which entries to write next | `python scripts/obs.py broken` — every target is a stub to create |
+
+**Note on duplicate backlink counts:** because each `.md` file contains both an English and a Russian `## Related Entries` section with identical `[[links]]`, obsidiantools counts each backlink twice. `obs.py` automatically deduplicates these so reported counts are accurate.
 
 ---
 
@@ -432,9 +525,10 @@ Run these manually or set up a cron job / Task Scheduler:
 | `/wiki-inbox` | As needed | After adding files to inbox/ |
 | `/wiki-fix` | After any batch | Run test suite and auto-fix failures |
 | `/wiki-digest` | Weekly | Every Monday morning |
-| `/wiki-check` | After any batch | Ensures every entry has its Russian section |
+| `/wiki-check` | After any batch | Ensures every entry has its Russian section + obs.py health |
 | `/wiki-pipeline` | Weekly or on-demand | Full maintenance run |
 | `/wiki-index` | After any batch | Keep index current |
+| `python scripts/build_relations.py` | After any batch | Rebuild relation index for `/wiki-search` relational queries |
 
 ---
 
@@ -467,6 +561,42 @@ Is it about a researcher, builder, or public figure?
   → YES → people/
   → NO → concepts/ (default)
 ```
+
+---
+
+## 📐 Optional Frontmatter Fields
+
+### `aliases` — improves search recall
+```yaml
+aliases: [RAG, Retrieval Augmented Generation, retrieval-augmented]
+```
+List alternate names, acronyms, and common search terms for this entry.
+`/wiki-search` checks `by_alias` in the relation index before anything else,
+so a user typing "RAG" will immediately find `lightrag-graph-rag` even if
+"RAG" isn't in the slug. Add aliases whenever the slug alone is not the term
+people would naturally search.
+
+### `confidence` — source reliability signal
+```yaml
+confidence: high    # primary sources: arXiv, official docs, GitHub release notes
+confidence: medium  # reputable: HuggingFace blog, Anthropic blog, vendor posts
+confidence: low     # community: Reddit, tweets, unverified Medium posts
+```
+Maps to the Source Reliability Tiers in this file. Omit for entries with mixed
+or unknown source quality. `/wiki-search` can filter by confidence:
+`/wiki-search high confidence tools`.
+
+### Dual-linking in Related Entries
+Use both wikilink and markdown link on the same line so the entry renders
+correctly both in Obsidian and on GitHub:
+```markdown
+## Related Entries
+- [[lightrag-graph-rag]] ([LightRAG](../tools/lightrag-graph-rag.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+```
+The path is relative from the current file's directory. Format:
+`../category/slug.md`. Applies going forward — existing entries don't need
+to be backfilled all at once.
 
 ---
 

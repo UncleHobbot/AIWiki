@@ -1,9 +1,9 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 103_
+_Last updated: 2026-05-17 | Total entries: 106_
 
 ---
 
-## 🧠 Concepts (16)
+## 🧠 Concepts (17)
 - [[agent-harness-engineering]] — Agent = Model + Harness: the discipline of designing the scaffolding (prompts, tools, context policies, hooks, recovery paths) around an LLM; a great harness beats a great model with a bad one (O'Reilly 2026, VS Code blog).
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
 - [[clean-architecture-ai-coding-era]] — Clean Architecture principles become critical when AI writes 80% of code — proper structure (Entities, Use Cases, Dependency Rule) gives LLMs the boundaries they need to generate quality code.
@@ -12,6 +12,7 @@ _Last updated: 2026-05-17 | Total entries: 103_
 - [[llm-fundamentals-tokens-to-production]] — Comprehensive one-hour guide to LLM fundamentals for engineers: tokens, attention, transformers, context windows, inference optimization, and why context engineering > prompt engineering. 139K views.
 - [[llm-wiki-academic-applications]] — Survey of 5 key papers (KARMA, SurveyGen-I, LightRAG, PARNESS, LLM4SR) showing where academic LLM knowledge-base research stands, where a personal wiki already leads, and 3 concrete feature gaps to close.
 - [[llm-wiki-implementations-landscape]] — State of the LLM Wiki ecosystem (May 2026): 30+ implementations, WiCER benchmark finding 53–60% compilation failure rate, two camps (personal PKM vs agent layer), Obsidian debate, productization wave.
+- [[llm-wiki-compiled-knowledge-vs-rag]] — Compiled knowledge (LLM Wiki) vs interpreted retrieval (RAG) vs Agentic Search: compiler analogy, cost comparison ($43,750/month RAG at 50M queries), hybrid architecture as the enterprise answer.
 - [[llm-wiki-pattern]] — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, structured knowledge base.
 - [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
 - [[rag-explained-embeddings-vector-db]] — RAG explained in 18 minutes: chunks, embeddings, vector databases, and advanced techniques (hybrid search, reranking, query expansion).
@@ -23,7 +24,7 @@ _Last updated: 2026-05-17 | Total entries: 103_
 
 ---
 
-## 🛠️ Tools (32)
+## 🛠️ Tools (34)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
 - [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
 - [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
@@ -39,12 +40,14 @@ _Last updated: 2026-05-17 | Total entries: 103_
 - [[goai-graph-of-ideas]] — GoAI is a system that constructs educational knowledge graphs from AI research papers, capturing prerequisite knowledge paths.
 - [[graphify-llm-wiki]] — Graphify is an AI coding assistant skill that applies Karpathy's LLM Wiki pattern to codebases — building a living knowledge graph of any repository.
 - [[gitnexus-codebase-knowledge-graph]] — GitNexus indexes an entire codebase into a local knowledge graph (LadybugDB) and exposes it to coding agents via MCP — 11 tools, 14 languages, 36K+ GitHub stars.
+- [[local-rag-obsidian-zotero]] — 100% local RAG stack for Obsidian + Zotero + Claude Code: LightRAG + Ollama + MCP, knowledge graph + vector index, zero cloud dependency.
 - [[grobid-pdf-parser]] — GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructuring raw scientific PDF documents.
 - [[han-claude-code-plugin]] — Han is a Claude Code plugin by Test Double that gives solo or small-team engineers access to a swarm of specialist AI subagents.
 - [[lightrag-graph-rag]] — LightRAG is a graph-enhanced RAG system that integrates knowledge graph structures into text indexing and retrieval.
 - [[llm-wiki-ecosystem]] — A curated map of open-source implementations of Karpathy's LLM Wiki pattern — from simple Obsidian-based local wikis to full agentic pipelines.
 - [[llmwiki-open-source]] — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files and the local MCP server writes your wiki.
 - [[mcp-financial-data-server]] — Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves financial data to AI agents.
+- [[microsoft-ai-agents-beginners-course]] — Microsoft's official 12-lesson course for building AI agents with Python, Microsoft Agent Framework, and Azure AI Foundry V2. Available in 50+ languages.
 - [[minicheck-fact-verification]] — MiniCheck is an efficient fact-checking system that builds small models (770M parameters) matching GPT-4-level accuracy on grounding verification.
 - [[nwave-ai-refactoring-framework]] — nWave is an AI-guided refactoring framework for safely modernizing legacy code in structured micro-steps.
 - [[omegawiki-research-platform]] — OmegaWiki is an open-source, wiki-centric full-lifecycle AI research platform by DAIR Lab at Peking University.

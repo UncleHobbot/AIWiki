@@ -93,6 +93,7 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 - [[react-doctor]]
 - [[visual-explainer]]
 - [[package-hallucination-mcp]]
+- [[matt-pocock-aihero]]
 
 ---
 <!-- RU -->
@@ -123,3 +124,4 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 - [[react-doctor]]
 - [[visual-explainer]]
 - [[package-hallucination-mcp]]
+- [[matt-pocock-aihero]]

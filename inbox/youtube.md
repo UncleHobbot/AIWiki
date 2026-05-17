@@ -1,6 +1,20 @@
 # YouTube Queue
 
 ## Done
+https://www.youtube.com/watch?v=6BB6exR8Zd8&pp=0gcJCQQLAYcqIYzv <!-- Matt Pocock: I stopped using /grill-me for coding -->
+https://www.youtube.com/watch?v=lNOQaakmyDU <!-- Matt Pocock: Anthropic dedicated monthly credit cut -->
+https://www.youtube.com/watch?v=DNqsMXH6Eog <!-- Matt Pocock: New Skills! /handoff, /prototype, /review -->
+https://www.youtube.com/watch?v=MzWIIlx0Gpc <!-- Matt Pocock: Burn through the backlog with /triage -->
+https://www.youtube.com/watch?v=E5-QK3CDVQM <!-- Matt Pocock: I Open-Sourced My Own AFK Software Factory -->
+https://www.youtube.com/watch?v=3MP8D-mdheA <!-- Matt Pocock: How To De-Slop A Codebase Ruined By AI -->
+https://www.youtube.com/watch?v=9VNG0h4pLh0 <!-- Matt Pocock: Never Trust An LLM -->
+https://www.youtube.com/watch?v=llwTBpPqo9A <!-- Matt Pocock: Claude Code tried to improve /init -->
+https://www.youtube.com/watch?v=hX7yG1KVYhI <!-- Matt Pocock: Building a REAL feature with Claude Code -->
+https://www.youtube.com/watch?v=EJyuu6zlQCg <!-- Matt Pocock: 5 Claude Code skills I use every day -->
+https://www.youtube.com/watch?v=Ah9p7v7nJWg <!-- Matt Pocock: The 7 phases of AI-driven development -->
+https://www.youtube.com/watch?v=uC44zFz7JSM <!-- Matt Pocock: Your codebase is NOT ready for AI -->
+https://www.youtube.com/watch?v=WNx-s-RxVxk&t=508s <!-- Matt Pocock: I was an AI skeptic. Then I tried plan mode -->
+## Done (previous)
 https://www.youtube.com/watch?v=Y5xXDA4tQlk
 https://youtu.be/J6QILoLM0CE?si=Teu5sno-ngAswL93
 https://youtu.be/BqzODQ0Qajo?si=sNfgtGzfDq3ARNKT

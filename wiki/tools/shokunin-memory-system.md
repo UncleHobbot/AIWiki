@@ -33,6 +33,7 @@ The skill system grew from the memory project into a comprehensive agent knowled
 ## Related Entries
 - [[llm-wiki-pattern]]
 - [[github-copilot-cli]]
+- [[tencent-db-agent-memory]]
 
 ---
 <!-- RU -->
@@ -58,3 +59,4 @@ Shokunin — локальная система памяти для ИИ-коди
 ## Связанные записи
 - [[llm-wiki-pattern]]
 - [[github-copilot-cli]]
+- [[tencent-db-agent-memory]]

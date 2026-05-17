@@ -1,9 +1,10 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 86_
+_Last updated: 2026-05-17 | Total entries: 89_
 
 ---
 
-## 🧠 Concepts (9)
+## 🧠 Concepts (10)
+- [[agent-harness-engineering]] — Agent = Model + Harness: the discipline of designing the scaffolding (prompts, tools, context policies, hooks, recovery paths) around an LLM; a great harness beats a great model with a bad one (O'Reilly 2026, VS Code blog).
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
 - [[karma-knowledge-graph-enrichment]] — Nine collaborative LLM agents automate KG enrichment: 38,230 entities at 83.1% correctness across 1,200 PubMed articles, 18.6% conflict-edge reduction via multi-layer consensus (NeurIPS 2025).
 - [[karpathy-deep-dive-llms]] — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are built.
@@ -16,7 +17,7 @@ _Last updated: 2026-05-17 | Total entries: 86_
 
 ---
 
-## 🛠️ Tools (30)
+## 🛠️ Tools (31)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
 - [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
 - [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
@@ -44,6 +45,7 @@ _Last updated: 2026-05-17 | Total entries: 86_
 - [[poetiq-recursive-self-improvement]] — Poetiq is a Y Combinator-backed startup whose Meta-System uses recursive self-improvement to build and refine coding agents.
 - [[react-doctor]] — React Doctor v2 is a zero-config CLI tool that catches bad React code written by AI coding agents.
 - [[shokunin-memory-system]] — Shokunin is a persistent memory system for coding agents, maintaining context across sessions.
+- [[tencent-db-agent-memory]] — Fully local 4-tier agent memory (symbolic short-term + layered long-term); cuts token use 61% and improves pass rate 51% vs flat vector stores (Tencent, 2026).
 - [[visual-explainer]] — An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages with interactive Mermaid diagrams.
 - [[wiki-os]] — Wiki OS is a free, open-source browser-based interface for LLM Wiki vaults that displays article graphs, vault statistics, and bilingual entries.
 - [[yaro-mathwiki]] — Yaro2709/MathWiki is a hand-curated Obsidian vault containing 730+ atomic mathematical statements (definitions, theorems, proofs).
@@ -65,8 +67,9 @@ _Last updated: 2026-05-17 | Total entries: 86_
 
 ---
 
-## 🔬 Models (4)
+## 🔬 Models (5)
 - [[deepseek-v4-vs-opus-kimi]] — Benchmark comparison of DeepSeek V4 Pro, Claude Opus 4.7, and Kimi K2.6 across coding and reasoning tasks.
+- [[llm-wiki-chinese-models-comparison]] — Comparison of Chinese LLMs (DeepSeek, Kimi, GLM, Qwen, MiMo) for building Karpathy-style personal knowledge bases, with benchmark scores and pricing.
 - [[gpt-vs-glm-5-1-comparison]] — A side-by-side coding comparison of GPT and GLM-5.1 on real tasks, comparing output quality and cost.
 - [[llm-wiki-chinese-models-comparison]] — Comparison of Chinese frontier LLMs (DeepSeek V4, Kimi K2.6, GLM-5.1, Qwen 3.5, MiMo-V2.5) for building Karpathy's LLM Wiki: benchmarks, pricing, and task-specific recommendations.
 - [[tabpfn-3-tabular-foundation-model]] — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100.
@@ -113,8 +116,8 @@ _Last updated: 2026-05-17 | Total entries: 86_
 
 ---
 
-## 👤 People (0)
-_No entries yet._
+## 👤 People (1)
+- [[matt-pocock-aihero]] — Matt Pocock (aihero.dev): TypeScript educator turned AI practitioner; creator of the viral /grill-me skill (46k+ stars), tracer bullets technique, and codebase-design-for-AI philosophy.
 
 ---
 

@@ -1,6 +1,26 @@
 # Links to Process
 
 ## To Read
+
+## High Priority
+
+## Done
+[GitHub Copilot app](https://github.com/features/preview/github-app)
+https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens <!-- robots.txt blocked -->
+https://github.com/Tencent/TencentDB-Agent-Memory
+[From Vibe Coding to Spec-Driven Development | Towards Data Science](https://towardsdatascience.com/from-vibe-coding-to-spec-driven-development/) <!-- robots.txt blocked -->
+https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vscode
+https://www.oreilly.com/radar/agent-harness-engineering/
+[Choosing the Right Agentic Design Pattern: A Decision-Tree Approach](https://machinelearningmastery.com/choosing-the-right-agentic-design-pattern-a-decision-tree-approach/) <!-- robots.txt blocked -->
+[Become a Real AI Hero](https://www.aihero.dev/)
+[5 Agent Skills I Use Every Day](https://www.aihero.dev/5-agent-skills-i-use-every-day)
+[How To Make Codebases AI Agents Love](https://www.aihero.dev/how-to-make-codebases-ai-agents-love)
+[The AI Engineer Roadmap](https://www.aihero.dev/ai-engineer-roadmap)
+[Tracer Bullets: Keeping AI Slop Under Control](https://www.aihero.dev/tracer-bullets)
+[Skills Changelog: Ubiquitous Language -> /grill-with-docs](https://www.aihero.dev/skills-changelog-ubiquitous-language-grill-with-docs)
+[My 'Grill Me' Skill Went Viral](https://www.aihero.dev/my-grill-me-skill-has-gone-viral)
+[Real-world feature build with Claude Code: every step explained](https://www.aihero.dev/real-world-feature-build-with-claude-code)
+[9 Ways AI Coding Has Rewired My Brain](https://www.aihero.dev/ways-ai-coding-has-rewired-my-brain)
 https://arxiv.org/abs/2605.07068 <!-- WiCER: Wiki-memory Compile, Evaluate, Refine — only peer-reviewed benchmark of LLM Wiki compilation quality -->
 https://github.com/SamurAIGPT/llm-wiki-agent <!-- ~2k stars, cross-platform: Claude Code/Codex/Gemini/OpenCode, supports PDF/DOCX/EPUB via markitdown -->
 https://github.com/AgriciDaniel/claude-obsidian <!-- Claude + Obsidian: 10 skills, 2 parallel agents, hot cache, /wiki /autoresearch commands (~1.5k stars) -->
@@ -23,10 +43,6 @@ https://medium.com/@jsong_49820/how-i-built-a-self-improving-llm-wiki-with-herme
 https://github.com/NicholasSpisak/second-brain <!-- Obsidian vault structure: raw/ inbox + wiki/ LLM-maintained, entities/concepts/synthesis -->
 https://denser.ai/blog/llm-wiki-karpathy-knowledge-base/ <!-- Technical RAG vs LLM Wiki architecture comparison -->
 https://news.ycombinator.com/item?id=47899844 <!-- HN: git-native implementation (no Obsidian dependency) -->
-
-## High Priority
-
-## Done
 https://arxiv.org/abs/2502.06472 <!-- KARMA: Multi-Agent LLMs for Knowledge Graph Enrichment (NeurIPS 2025) -->
 https://arxiv.org/abs/2508.14317 <!-- SurveyGen-I: Consistent Scientific Survey Generation with Memory-Guided Writing (IJCNLP-AIJLP 2025) -->
 https://arxiv.org/abs/2410.05779 <!-- LightRAG: Simple and Fast Retrieval-Augmented Generation (EMNLP 2025) -->

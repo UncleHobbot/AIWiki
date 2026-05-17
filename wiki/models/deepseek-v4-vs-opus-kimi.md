@@ -34,6 +34,7 @@ DeepSeek V4 Flash at $0.02 for the entire run represents a new price tier where 
 ## Related Entries
 - [[orthrus-qwen3-acceleration]]
 - [[gpt-vs-glm-5-1-comparison]]
+- [[llm-wiki-chinese-models-comparison]]
 
 ---
 <!-- RU -->
@@ -59,3 +60,4 @@ DeepSeek V4 Flash за $0.02 за весь запуск представляет
 ## Связанные записи
 - [[orthrus-qwen3-acceleration]]
 - [[gpt-vs-glm-5-1-comparison]]
+- [[llm-wiki-chinese-models-comparison]]

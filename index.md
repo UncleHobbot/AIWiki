@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 92_
+_Last updated: 2026-05-17 | Total entries: 93_
 
 ---
 
@@ -76,7 +76,7 @@ _Last updated: 2026-05-17 | Total entries: 92_
 
 ---
 
-## 📰 News (14, sorted by date descending)
+## 📰 News (15, sorted by date descending)
 - 2026-05-17 [[codex-on-mobile]] — OpenAI's Codex coding agent became available on iOS and Android, extending agentic coding sessions to mobile devices.
 - 2026-05-16 [[github-agentic-developer-certification]] — GitHub announced GH-600 certification for "agentic AI developer" covering multi-agent orchestration, state management, and system design. Launches July 2026.
 - 2026-05-15 [[apple-m5-kernel-exploit-ai]] — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon using AI assistance.
@@ -89,6 +89,7 @@ _Last updated: 2026-05-17 | Total entries: 92_
 - 2026-05-15 [[roo-code-shutdown-roomote]] — Roo Code shuts down after 3 million installs and pivots to Roomote, a remote coding agent product.
 - 2026-05-14 [[github-copilot-app]] — GitHub released a standalone desktop application for agent-driven parallel development with GitHub Copilot.
 - 2026-05-13 [[figure-ai-team-robots-livestream]] — Figure AI 03 team of humanoid robots shown working together on a livestream.
+- 2026-05-11 [[enterprise-gpu-underutilization]] — Enterprises averaging 5% GPU utilization despite millions in investment; inference cost + TCO rose to 41% of AI spend.
 - 2026-05-07 [[pinecone-nexus]] — Pinecone announced Nexus, a "compiled knowledge engine" for agents that pre-compiles retrieval at index time.
 
 ---

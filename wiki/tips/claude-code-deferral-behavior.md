@@ -27,10 +27,10 @@ From community discussion (r/ClaudeCode):
 - Treat as a signal to use `/compact` or restart with fresh context when deferral frequency increases.
 
 ## Related Entries
-- [[claude-code-memory]]
-- [[claude-code-agentic-loop]]
-- [[claude-code-extensions-overview]]
-- [[llm-assumption-propagation]]
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[llm-assumption-propagation]] ([LLM Confusion Management: Models Don't Check Assumptions](../tips/llm-assumption-propagation.md))
 
 ---
 <!-- RU -->
@@ -54,7 +54,7 @@ From community discussion (r/ClaudeCode):
 - Воспринимать как сигнал для использования `/compact` или перезапуска со свежим контекстом при увеличении частоты deferrals.
 
 ## Связанные записи
-- [[claude-code-memory]]
-- [[claude-code-agentic-loop]]
-- [[claude-code-extensions-overview]]
-- [[llm-assumption-propagation]]
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[llm-assumption-propagation]] ([LLM Confusion Management: Models Don't Check Assumptions](../tips/llm-assumption-propagation.md))

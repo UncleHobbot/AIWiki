@@ -33,7 +33,7 @@ This policy represents one of the strongest institutional responses to the flood
 > "Tbh, at this point I would be in for a 3-5 years ban of all co-author. The current state is almost a DDOS attack on the scientific community" — u/Snekgineer, r/MachineLearning
 
 ## Related Entries
-- [[llm-wiki-pattern]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
@@ -59,4 +59,4 @@ arXiv теперь накладывает годичный бан на авто�
 > «Честно говоря, на данном этапе я бы выступил за бан на 3-5 лет для всех соавторов. Текущее состояние почти похоже на DDoS-атаку на научное сообщество» — u/Snekgineer, r/MachineLearning
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))

@@ -26,8 +26,8 @@ Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on
 - ~59 minute talk.
 
 ## Related Entries
-- [[acdc-agent-centric-development-cycle]]
-- [[claude-code-agentic-loop]]
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 
 ---
 <!-- RU -->
@@ -49,5 +49,5 @@ Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on
 - Доклад ~59 минут.
 
 ## Связанные записи
-- [[acdc-agent-centric-development-cycle]]
-- [[claude-code-agentic-loop]]
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))

@@ -31,10 +31,10 @@ When you give Claude a task, it doesn't produce a single response. Instead it ch
 **What survives compaction:** system prompt, project-root CLAUDE.md, auto memory, invoked skill bodies (truncated). Path-scoped rules and nested CLAUDE.md files are lost until a matching file is read again.
 
 ## Related Entries
-- [[claude-code-extensions-overview]]
-- [[claude-code-memory]]
-- [[claude-code-permission-modes]]
-- [[how-coding-agents-read-code]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
+- [[how-coding-agents-read-code]] ([How AI Coding Agents Really Read Code (Inside the Runtime)](../agents/how-coding-agents-read-code.md))
 
 ---
 <!-- RU -->
@@ -61,7 +61,7 @@ Claude Code — агентный ассистент, работающий по �
 **Что переживает уплотнение:** системный промпт, корневой CLAUDE.md проекта, автопамять, тела вызванных навыков (с ограничением 5 000 токенов/навык, 25 000 суммарно). Правила с привязкой к путям и вложенные CLAUDE.md теряются до повторного открытия соответствующих файлов.
 
 ## Связанные записи
-- [[claude-code-extensions-overview]]
-- [[claude-code-memory]]
-- [[claude-code-permission-modes]]
-- [[how-coding-agents-read-code]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
+- [[how-coding-agents-read-code]] ([How AI Coding Agents Really Read Code (Inside the Runtime)](../agents/how-coding-agents-read-code.md))

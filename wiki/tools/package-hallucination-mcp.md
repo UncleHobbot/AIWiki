@@ -30,9 +30,9 @@ The MCP server solution is architecturally simple: register it as an MCP tool na
 **Affected registries:** npm (JavaScript/Node.js), PyPI (Python). Cargo (Rust) and crates.io have lower hallucination rates because Rust package names are less ambiguous in training data.
 
 ## Related Entries
-- [[claude-code-extensions-overview]]
-- [[gnosis-mcp]]
-- [[mcp-financial-data-server]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
 
 ---
 <!-- RU -->
@@ -55,6 +55,6 @@ AI-ассистированное кодирование регулярно ге
 Решение с MCP-сервером архитектурно простое: зарегистрировать его как MCP-инструмент с именем `validate_package` и указать Claude Code (или любому агенту) вызывать его перед любой командой установки. Инструмент делает HEAD-запрос к API реестра и возвращает `{exists: true}` или `{exists: false, alternatives: [...]}`.
 
 ## Связанные записи
-- [[claude-code-extensions-overview]]
-- [[gnosis-mcp]]
-- [[mcp-financial-data-server]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))

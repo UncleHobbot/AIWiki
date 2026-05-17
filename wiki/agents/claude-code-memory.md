@@ -34,9 +34,9 @@ Claude Code persists knowledge across sessions through two complementary systems
 **Troubleshooting:** run `/memory` to verify files are loaded; make instructions more specific; check for conflicting rules across CLAUDE.md files. If instruction is lost after `/compact`, put it in CLAUDE.md not just in conversation.
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[claude-code-directory]]
-- [[claude-code-extensions-overview]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-directory]] ([The .claude Directory](../agents/claude-code-directory.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 
 ---
 <!-- RU -->
@@ -67,6 +67,6 @@ Claude Code сохраняет знания между сессиями чере
 **Диагностика:** запустите `/memory` для проверки загружённых файлов; конкретизируйте инструкции; проверьте конфликты правил между CLAUDE.md-файлами. Если инструкция теряется после `/compact`, поместите её в CLAUDE.md, а не только в разговор.
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[claude-code-directory]]
-- [[claude-code-extensions-overview]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-directory]] ([The .claude Directory](../agents/claude-code-directory.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))

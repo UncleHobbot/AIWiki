@@ -32,8 +32,8 @@ The rebuttal was published in the same journal (*Computational Brain & Behavior*
 The original authors reportedly dismissed early criticism on social media as "mansplaining," which delayed formal academic response. The Guerzhoy paper establishes that no straightforward repair exists and identifies three independent classes of barriers.
 
 ## Related Entries
-- [[karpathy-deep-dive-llms]]
-- [[llm4sr-survey]]
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
 
 ---
 <!-- RU -->
@@ -56,5 +56,5 @@ The original authors reportedly dismissed early criticism on social media as "ma
 Опровержение опубликовано в том же журнале (*Computational Brain & Behavior*, апрель 2026). Ключевой тезис: аргументы теоретической сложности могут что-то сказать об AGI только при условии, что они опираются на специфические свойства человеческого интеллекта — а в доказательстве Ван Рой такой опоры нет.
 
 ## Связанные записи
-- [[karpathy-deep-dive-llms]]
-- [[llm4sr-survey]]
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))

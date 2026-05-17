@@ -25,9 +25,9 @@ Dragan Stepanović (principal engineer, known for "from code review to co-creati
 - Talk from AI Agents Montreal meetup (2026-04-27), speaker based in Berlin.
 
 ## Related Entries
-- [[xp-practices-ai-assisted-development]]
-- [[acdc-agent-centric-development-cycle]]
-- [[claude-code-workflows-best-practices]]
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 
 ---
 <!-- RU -->
@@ -49,6 +49,6 @@ Dragan Stepanović (principal engineer, known for "from code review to co-creati
 - Доклад на AI Agents Montreal meetup (2026-04-27), спикер из Берлина.
 
 ## Связанные записи
-- [[xp-practices-ai-assisted-development]]
-- [[acdc-agent-centric-development-cycle]]
-- [[claude-code-workflows-best-practices]]
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))

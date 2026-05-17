@@ -53,16 +53,16 @@ Pinecone — the company that built the market-leading vector database powering 
 > "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase." — Andrej Karpathy
 
 ## Related Entries
-- [[llmwiki-open-source]]
-- [[llm-wiki-ecosystem]]
-- [[pinecone-nexus]]
-- [[karpathy-deep-dive-llms]]
-- [[github-copilot-cli]]
-- [[wiki-os]]
-- [[graphify-llm-wiki]]
-- [[goai-graph-of-ideas]]
-- [[lightrag-graph-rag]]
-- [[llm-wiki-academic-applications]]
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[pinecone-nexus]] ([Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](../news/pinecone-nexus.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[wiki-os]] ([Wiki OS: Browser UI for LLM Wiki](../tools/wiki-os.md))
+- [[graphify-llm-wiki]] ([Graphify: Knowledge Graph Builder for Codebases](../tools/graphify-llm-wiki.md))
+- [[goai-graph-of-ideas]] ([GoAI: Graph of AI Ideas for Learning Paths and Ideation](../tools/goai-graph-of-ideas.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 
 ---
 <!-- RU -->
@@ -93,12 +93,12 @@ Pinecone — the company that built the market-leading vector database powering 
 > «Obsidian — это IDE; LLM — программист; вики — кодовая база.» — Андрей Карпаты
 
 ## Связанные записи
-- [[llmwiki-open-source]]
-- [[llm-wiki-ecosystem]]
-- [[pinecone-nexus]]
-- [[karpathy-deep-dive-llms]]
-- [[github-copilot-cli]]
-- [[wiki-os]]
-- [[graphify-llm-wiki]]
-- [[goai-graph-of-ideas]]
-- [[lightrag-graph-rag]]
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[pinecone-nexus]] ([Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](../news/pinecone-nexus.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[wiki-os]] ([Wiki OS: Browser UI for LLM Wiki](../tools/wiki-os.md))
+- [[graphify-llm-wiki]] ([Graphify: Knowledge Graph Builder for Codebases](../tools/graphify-llm-wiki.md))
+- [[goai-graph-of-ideas]] ([GoAI: Graph of AI Ideas for Learning Paths and Ideation](../tools/goai-graph-of-ideas.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))

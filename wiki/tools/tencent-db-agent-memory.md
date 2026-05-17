@@ -28,10 +28,10 @@ The long-term layer maintains structured "personas" (what the agent has learned 
 **Compatibility**: designed to integrate with any MCP-compatible coding agent. The primary benchmark target is OpenClaw (open-source), but the MCP interface makes it compatible with Claude Code, Cursor, Codex CLI, and OpenCode.
 
 ## Related Entries
-- [[shokunin-memory-system]]
-- [[claude-code-memory]]
-- [[gnosis-mcp]]
-- [[claude-code-extensions-overview]]
+- [[shokunin-memory-system]] ([Shokunin: Persistent Memory for Coding Agents](../tools/shokunin-memory-system.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 
 ---
 <!-- RU -->
@@ -52,7 +52,7 @@ TencentDB Agent Memory — полностью локальная система 
 Долгосрочный слой поддерживает структурированные «персоны» (что агент узнал о предпочтениях пользователя) и «сцены» (каким был контекст задачи в разные моменты) — вместо равновзвешенных векторных эмбеддингов. Это обеспечивает поиск, уважающий границы задач и контекст пользователя.
 
 ## Связанные записи
-- [[shokunin-memory-system]]
-- [[claude-code-memory]]
-- [[gnosis-mcp]]
-- [[claude-code-extensions-overview]]
+- [[shokunin-memory-system]] ([Shokunin: Persistent Memory for Coding Agents](../tools/shokunin-memory-system.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))

@@ -40,10 +40,10 @@ This is the second video in Bereznitsky's "System Design AI Agent — Inside Out
 The Claude Code architecture breakdown is particularly valuable — it reveals that Claude Code uses 11 memory subsystems with purely file-based storage (no vector database). This is consistent with Karpathy's LLM Wiki pattern: structured markdown files with a schema layer for context injection, rather than traditional RAG infrastructure.
 
 ## Related Entries
-- [[claude-code-memory]]
-- [[agent-harness-engineering]]
-- [[anatomy-ai-agent-pipeline-loop-tools]]
-- [[llm-wiki-pattern]]
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
@@ -71,7 +71,7 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 | [~35:00] | Prompt caching и thinking mode |
 
 ## Связанные записи
-- [[claude-code-memory]]
-- [[agent-harness-engineering]]
-- [[anatomy-ai-agent-pipeline-loop-tools]]
-- [[llm-wiki-pattern]]
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))

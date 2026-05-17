@@ -38,9 +38,9 @@ This is the opening lecture of Yandex Education's Agents Week 2026 — a structu
 The lecture covers foundational concepts: what LLMs are at a technical level (weights, next-token prediction), how they're trained, where they excel, and culminates in a hands-on session building a basic agent. This is notable as a Tier 2 educational resource from a major tech company's internal training program.
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[agent-harness-engineering]]
-- [[agentic-ai-coding-patterns-tornhill]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
 
 ---
 <!-- RU -->
@@ -71,6 +71,6 @@ The lecture covers foundational concepts: what LLMs are at a technical level (we
 Открывающая лекция образовательного интенсива Яндекс Образования «Agents Week 2026». Спикер Алёна Зайцева — руководитель службы ИИ-сервисов в Яндекс Лавке, где разрабатываются как клиентские, так и внутренние ИИ-агенты, а также платформа для них. Лекция охватывает фундаментальные концепции и завершается практикумом по созданию простейшего агента.
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[agent-harness-engineering]]
-- [[agentic-ai-coding-patterns-tornhill]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))

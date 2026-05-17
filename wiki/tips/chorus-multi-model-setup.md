@@ -40,8 +40,8 @@ The project is Apache-2.0 licensed, installable via `npm i -g chorus-codes`, and
 
 ## Related Entries
 
-- [[github-copilot-pricing-exodus]]
-- [[cline-roo-alternatives]]
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
+- [[cline-roo-alternatives]] ([Alternatives to Cline and Roo Code in 2026](../tips/cline-roo-alternatives.md))
 
 ---
 <!-- RU -->
@@ -76,5 +76,5 @@ CHORUS работает как локальный демон (порт 7707), к
 
 ## Связанные записи
 
-- [[github-copilot-pricing-exodus]]
-- [[cline-roo-alternatives]]
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
+- [[cline-roo-alternatives]] ([Alternatives to Cline and Roo Code in 2026](../tips/cline-roo-alternatives.md))

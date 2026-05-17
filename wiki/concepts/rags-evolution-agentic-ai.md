@@ -49,9 +49,9 @@ The video presents a clean 5-stage evolutionary model:
 The critical insight: each evolution doesn't replace the previous stage — it builds on it. Keyword search is still the backbone. Semantic search adds understanding. RAG adds generation. Agents add reasoning. The current frontier is systems that know *how to find answers*, not just how to generate them.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[gnosis-mcp-vs-llm-wiki-pattern]]
-- [[llm-wiki-implementations-landscape]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
 
 ---
 <!-- RU -->
@@ -87,6 +87,6 @@ IBM Technology прослеживает полную эволюцию инфор
 Видео представляет чистую 5-ступенчатую модель эволюции: ключевой поиск → семантический поиск → гибридный поиск → традиционный RAG → агентный RAG. Ключевое наблюдение: каждая эволюция не заменяет предыдущую стадию — она строится поверх неё.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[gnosis-mcp-vs-llm-wiki-pattern]]
-- [[llm-wiki-implementations-landscape]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))

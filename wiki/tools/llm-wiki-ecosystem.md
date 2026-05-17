@@ -79,13 +79,13 @@ maintained, grows)       voice, rules, positioning)
 **The Obsidian debate** is growing. A minority — exemplified by the Hermes Agent blog (J. Song, "Why I'm Not Using Obsidian") and the HN "git-native" thread — argues VS Code + Git suffices. The graph-view and backlink UI that make Obsidian valuable for human note-takers are less useful when the LLM is doing all the linking.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-implementations-landscape]]
-- [[llmwiki-open-source]]
-- [[llm-wiki-enterprise-patterns]]
-- [[llm-wiki-academic-applications]]
-- [[llm-wiki-setup-guide]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 
 ---
 <!-- RU -->
@@ -140,10 +140,10 @@ maintained, grows)       voice, rules, positioning)
 **Дебаты об Obsidian** усиливаются. Растущее меньшинство (пост в блоге Hermes Agent, HN-тред о git-native реализации) утверждает, что VS Code + Git достаточно — возможности Obsidian, ценные для людей-заметочников, менее полезны, когда LLM создаёт все связи.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-implementations-landscape]]
-- [[llmwiki-open-source]]
-- [[llm-wiki-enterprise-patterns]]
-- [[llm-wiki-academic-applications]]
-- [[llm-wiki-setup-guide]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))

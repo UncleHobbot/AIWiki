@@ -55,11 +55,11 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 > "Use them as tools in the toolbox, check their work and own the product of your work." — Andrej Karpathy
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[claude-code-prompting-era]]
-- [[self-guided-self-play]]
-- [[agi-impossibility-proof-debunked]]
-- [[andrej-karpathy]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[claude-code-prompting-era]] ([The New Prompting Era: Claude 4.7 Literal vs GPT-5.5 Autonomous](../tips/claude-code-prompting-era.md))
+- [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
+- [[agi-impossibility-proof-debunked]] ([Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](../concepts/agi-impossibility-proof-debunked.md))
+- [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))
 
 ---
 <!-- RU -->
@@ -91,8 +91,8 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 > «Когда это в контекстном окне, модель имеет к этому прямой доступ... ей не нужно это вспоминать.» — Андрей Карпаты
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[claude-code-prompting-era]]
-- [[self-guided-self-play]]
-- [[agi-impossibility-proof-debunked]]
-- [[andrej-karpathy]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[claude-code-prompting-era]] ([The New Prompting Era: Claude 4.7 Literal vs GPT-5.5 Autonomous](../tips/claude-code-prompting-era.md))
+- [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
+- [[agi-impossibility-proof-debunked]] ([Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](../concepts/agi-impossibility-proof-debunked.md))
+- [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))

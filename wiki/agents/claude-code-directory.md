@@ -36,8 +36,8 @@ Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, suba
 **Plaintext warning:** Transcripts are not encrypted at rest. OS file permissions are the only protection. If a tool reads a `.env` file or prints a credential, that value lands in the session JSONL. To reduce exposure: lower `cleanupPeriodDays`, set `CLAUDE_CODE_SKIP_PROMPT_HISTORY=1`, or use deny rules for credential files.
 
 ## Related Entries
-- [[claude-code-extensions-overview]]
-- [[claude-code-memory]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
 
 ---
 <!-- RU -->
@@ -70,5 +70,5 @@ Claude Code читает всю конфигурацию — CLAUDE.md, наст
 **Предупреждение о plaintext:** транскрипты не шифруются в состоянии покоя. Единственная защита — права доступа ОС. Если инструмент прочитает файл `.env` или выведет учётные данные, это попадёт в JSONL сессии. Для снижения рисков: уменьшите `cleanupPeriodDays`, установите `CLAUDE_CODE_SKIP_PROMPT_HISTORY=1` или используйте правила deny для файлов с учётными данными.
 
 ## Связанные записи
-- [[claude-code-extensions-overview]]
-- [[claude-code-memory]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))

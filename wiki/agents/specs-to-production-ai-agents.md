@@ -25,9 +25,9 @@ Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) sho
 - Speaker background: fractional CTO helping early-stage startups go from 0 to 1 on products.
 
 ## Related Entries
-- [[spec-driven-development-bmad]]
-- [[nwave-ai-refactoring-framework]]
-- [[claude-code-workflows-best-practices]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[nwave-ai-refactoring-framework]] ([nWave: AI-Guided Refactoring Framework for Legacy Code](../tools/nwave-ai-refactoring-framework.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 
 ---
 <!-- RU -->
@@ -49,6 +49,6 @@ Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) sho
 - Опыт спикера: фракционный CTO, помогающий ранним стартапам строить продукты с нуля.
 
 ## Связанные записи
-- [[spec-driven-development-bmad]]
-- [[nwave-ai-refactoring-framework]]
-- [[claude-code-workflows-best-practices]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[nwave-ai-refactoring-framework]] ([nWave: AI-Guided Refactoring Framework for Legacy Code](../tools/nwave-ai-refactoring-framework.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))

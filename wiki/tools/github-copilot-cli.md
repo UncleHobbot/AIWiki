@@ -29,9 +29,9 @@ The CLI is not a design substitute: it deliberately does not handle edge cases, 
 The Copilot SDK (technical preview as of 2026) exposes the same execution engine programmatically but omits GitHub-specific features like repo-scoped memory and delegated PR workflows. Use CLI for your own terminal workflow; use the SDK when embedding agentic capabilities inside an application.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llmwiki-open-source]]
-- [[cpt-copilot-terminal]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[cpt-copilot-terminal]] ([cpt: Inline Copilot Chat for Any Terminal](../tools/cpt-copilot-terminal.md))
 
 ---
 <!-- RU -->
@@ -57,6 +57,6 @@ CLI — не замена проектирования: он намеренно 
 Copilot SDK (техническое превью на 2026 год) предоставляет тот же движок исполнения программно, но без GitHub-специфичных возможностей: контекста, привязанного к репозиторию, и делегированных PR-workflow. Используйте CLI для своего терминального workflow; SDK — когда встраиваете агентные возможности в приложение.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llmwiki-open-source]]
-- [[cpt-copilot-terminal]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[cpt-copilot-terminal]] ([cpt: Inline Copilot Chat for Any Terminal](../tools/cpt-copilot-terminal.md))

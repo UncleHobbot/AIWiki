@@ -87,12 +87,12 @@ The Towards AI piece by Mandar Karhade MD PhD ("Karpathy Killed RAG. Or Did He?"
 The WiCER paper adds a more fundamental concern: compilation itself is unreliable without systematic evaluation, and most implementations skip this entirely.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[llm-wiki-academic-applications]]
-- [[llm-wiki-scientific-research]]
-- [[llmwiki-open-source]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 
 ---
 <!-- RU -->
@@ -145,9 +145,9 @@ Gist Карпатого набрал около 16–17 миллионов пр�
 Лучший критический анализ (Mандар Кархаде, Towards AI): LLM-вики **лучше** RAG для ограниченных курируемых корпусов (синтез важнее точного извлечения). RAG **лучше** для миллионов меняющихся документов и точных цитат фрагментов. Паттерн деградирует при масштабировании: свыше ~500–1000 страниц операции навигации и lint становятся дорогостоящими, контекстное окно — узким местом.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[llm-wiki-academic-applications]]
-- [[llm-wiki-scientific-research]]
-- [[llmwiki-open-source]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))

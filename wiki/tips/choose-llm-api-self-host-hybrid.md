@@ -34,9 +34,9 @@ Engineering framework for choosing between cloud API (Anthropic, OpenAI, Google)
 | [~15:00] | Hybrid: when and how |
 
 ## Related Entries
-- [[llm-wiki-chinese-models-comparison]]
-- [[expensive-model-not-smart-agent]]
-- [[dynamic-compute-budget-local-llm]]
+- [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
+- [[expensive-model-not-smart-agent]] ([Expensive Model ≠ Smart Agent: Anatomy of the AI Agent Brain](../agents/expensive-model-not-smart-agent.md))
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
 
 ---
 <!-- RU -->
@@ -64,6 +64,6 @@ Engineering framework for choosing between cloud API (Anthropic, OpenAI, Google)
 | [~15:00] | Гибрид: когда и как |
 
 ## Связанные записи
-- [[llm-wiki-chinese-models-comparison]]
-- [[expensive-model-not-smart-agent]]
-- [[dynamic-compute-budget-local-llm]]
+- [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
+- [[expensive-model-not-smart-agent]] ([Expensive Model ≠ Smart Agent: Anatomy of the AI Agent Brain](../agents/expensive-model-not-smart-agent.md))
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))

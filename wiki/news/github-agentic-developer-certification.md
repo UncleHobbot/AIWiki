@@ -27,10 +27,10 @@ The certification represents a milestone in the professionalization of AI-assist
 The inclusion of "multi-agent orchestration" and "state management" as tested skills suggests the exam will cover patterns like Karpathy's LLM Wiki (three-layer compile architecture), agentic loops, retry/fallback strategies, and context management.
 
 ## Related Entries
-- [[agentic-ai-development-copilot-lessons]]
-- [[acdc-agent-centric-development-cycle]]
-- [[llm-wiki-enterprise-patterns]]
-- [[new-organizational-models-ai-agents]]
+- [[agentic-ai-development-copilot-lessons]] ([Agentic AI Development with GitHub Copilot: Lessons Learned](../tips/agentic-ai-development-copilot-lessons.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
+- [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
 
 ---
 <!-- RU -->
@@ -53,7 +53,7 @@ GitHub анонсировал сертификацию GH-600 для «agentic A
 Включение «многоагентной оркестрации» и «управления состоянием» предполагает, что экзамен будет охватывать такие паттерны, как LLM Wiki Карпати (трёхуровневая архитектура компиляции), агентные циклы, стратегии повторных попыток и управление контекстом.
 
 ## Связанные записи
-- [[agentic-ai-development-copilot-lessons]]
-- [[acdc-agent-centric-development-cycle]]
-- [[llm-wiki-enterprise-patterns]]
-- [[new-organizational-models-ai-agents]]
+- [[agentic-ai-development-copilot-lessons]] ([Agentic AI Development with GitHub Copilot: Lessons Learned](../tips/agentic-ai-development-copilot-lessons.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
+- [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))

@@ -35,9 +35,9 @@ This makes Graphify particularly useful for:
 - Shows the GitHub repo (Safi Shamsi), 21k stars
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[claude-code-plugins-guide]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 
 ---
 <!-- RU -->
@@ -59,6 +59,6 @@ Graphify рассматривается как одна из первых реа
 Ключевая идея: кодовые базы выигрывают от того же подхода компиляции, что и общие базы знаний. Вместо чтения отдельных файлов при каждой задаче, Graphify предварительно обрабатывает кодовую базу в граф знаний. Агент навигирует по этому графу, а не по сырым файлам — быстрее, с лучшей осведомлённостью о перекрёстных ссылках.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[claude-code-plugins-guide]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))

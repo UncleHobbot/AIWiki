@@ -31,10 +31,10 @@ The coarse-to-fine retrieval loop further improves coherence by grounding the ou
 **Application to personal wikis:** the weekly `/wiki-digest` command re-explains the same concepts (RAG, MCP, agents) every run because there is no cross-run memory. Writing `digests/memory.json` after each digest — containing all terms defined that week — and injecting it as a constraint into the next run's Claude prompt would eliminate this problem at near-zero cost. See [[llm-wiki-academic-applications]] for the full design.
 
 ## Related Entries
-- [[llm-wiki-academic-applications]]
-- [[llm4sr-survey]]
-- [[llm-wiki-scientific-research]]
-- [[karma-knowledge-graph-enrichment]]
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
 
 ---
 <!-- RU -->
@@ -57,7 +57,7 @@ SurveyGen-I генерирует длинные, внутренне соглас
 **Применение к личным вики:** команда `/wiki-digest` заново объясняет одни и те же концепции (RAG, MCP, агенты) в каждом запуске, поскольку нет межсессионной памяти. Запись `digests/memory.json` после каждого дайджеста и внедрение его как ограничения в следующий промпт Claude устранит эту проблему практически без затрат. Полный дизайн — в [[llm-wiki-academic-applications]].
 
 ## Связанные записи
-- [[llm-wiki-academic-applications]]
-- [[llm4sr-survey]]
-- [[llm-wiki-scientific-research]]
-- [[karma-knowledge-graph-enrichment]]
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))

@@ -30,8 +30,8 @@ The Reddit discussion highlighted the significance of sustained operation versus
 Community discussion also covered the broader implication: if humanoid robots can work 24/7 with minimal oversight, the economic case for human labor in repetitive physical tasks becomes very difficult to sustain.
 
 ## Related Entries
-- [[figure-ai-team-robots-livestream]]
-- [[deepseek-v4-vs-opus-kimi]]
+- [[figure-ai-team-robots-livestream]] ([Figure AI 03: Team of Humanoid Robots on Livestream](../news/figure-ai-team-robots-livestream.md))
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
 
 ---
 <!-- RU -->
@@ -54,5 +54,5 @@ Community discussion also covered the broader implication: if humanoid robots ca
 Обсуждение подчеркнуло значение непрерывной работы по сравнению с короткими демонстрационными роликами. Если гуманоидные роботы могут работать круглосуточно с минимальным контролем, экономическое обоснование человеческого труда для повторяющихся физических задач становится трудноподдерживаемым.
 
 ## Связанные записи
-- [[figure-ai-team-robots-livestream]]
-- [[deepseek-v4-vs-opus-kimi]]
+- [[figure-ai-team-robots-livestream]] ([Figure AI 03: Team of Humanoid Robots on Livestream](../news/figure-ai-team-robots-livestream.md))
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))

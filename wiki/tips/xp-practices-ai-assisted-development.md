@@ -25,9 +25,9 @@ Paul Hammond (20+ years experience, 13+ years XP practitioner) argues that Extre
 - Talk from AI Agents Montreal meetup (2026-04-05), speaker from Manchester UK.
 
 ## Related Entries
-- [[test-driven-agentic-behaviours]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[claude-code-workflows-best-practices]]
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 
 ---
 <!-- RU -->
@@ -49,6 +49,6 @@ Paul Hammond (20+ years experience, 13+ years XP practitioner) argues that Extre
 - Доклад на AI Agents Montreal meetup (2026-04-05), спикер из Манчестера, UK.
 
 ## Связанные записи
-- [[test-driven-agentic-behaviours]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[claude-code-workflows-best-practices]]
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))

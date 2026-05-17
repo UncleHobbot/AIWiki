@@ -24,9 +24,9 @@ Mobile availability of a serious agentic coding tool is significant because it r
 The practical ceiling remains the mobile keyboard and screen — complex multi-file refactors are still better supervised at a desktop. The more immediate use case is review-and-approve workflows: the agent runs autonomously on a task while the developer monitors progress and intervenes when needed via mobile.
 
 ## Related Entries
-- [[openai-100-dollar-tier]]
-- [[github-copilot-app]]
-- [[claude-code-agentic-loop]]
+- [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 
 ---
 <!-- RU -->
@@ -46,6 +46,6 @@ Coding-агент Codex от OpenAI стал доступен на мобиль�
 Практический потолок остаётся за мобильной клавиатурой и экраном — сложные многофайловые рефакторинги по-прежнему лучше контролировать на десктопе. Наиболее очевидный кейс — рабочие процессы review-and-approve: агент автономно выполняет задачу, пока разработчик отслеживает прогресс и при необходимости вмешивается с мобильного устройства.
 
 ## Связанные записи
-- [[openai-100-dollar-tier]]
-- [[github-copilot-app]]
-- [[claude-code-agentic-loop]]
+- [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))

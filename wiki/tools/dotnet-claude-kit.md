@@ -29,8 +29,8 @@ The kit also includes a "Convention Learning" capability: Claude detects project
 > "Less time reviewing and correcting Claude's output. More time shipping features." — README
 
 ## Related Entries
-- [[claude-code-plugins-guide]]
-- [[claude-code-extensions-overview]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 
 ---
 <!-- RU -->
@@ -56,5 +56,5 @@ Claude Code без настройки не знает .NET-конвенций: �
 > «Меньше времени на ревью и исправление вывода Claude. Больше времени на разработку фич.» — README
 
 ## Связанные записи
-- [[claude-code-plugins-guide]]
-- [[claude-code-extensions-overview]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))

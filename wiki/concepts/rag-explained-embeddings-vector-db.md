@@ -33,9 +33,9 @@ Russian-language deep dive into RAG (Retrieval Augmented Generation) — from ba
 | [9:21] | Advanced techniques: hybrid search, reranking |
 
 ## Related Entries
-- [[rags-evolution-agentic-ai]]
-- [[llm-wiki-pattern]]
-- [[gnosis-mcp-vs-llm-wiki-pattern]]
+- [[rags-evolution-agentic-ai]] ([RAG's Evolution: From Simple Retrieval to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
@@ -61,6 +61,6 @@ Russian-language deep dive into RAG (Retrieval Augmented Generation) — from ba
 | [9:21] | Продвинутые техники: гибридный поиск, реранжирование |
 
 ## Связанные записи
-- [[rags-evolution-agentic-ai]]
-- [[llm-wiki-pattern]]
-- [[gnosis-mcp-vs-llm-wiki-pattern]]
+- [[rags-evolution-agentic-ai]] ([RAG's Evolution: From Simple Retrieval to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))

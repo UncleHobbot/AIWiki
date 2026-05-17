@@ -107,12 +107,12 @@ Three documented patterns that combine both:
 3. **Agent router by query type**: A coordinator agent classifies each incoming query — factual lookup → Gnosis MCP (deterministic, fast); conceptual synthesis → wiki pages; dynamic/fresh data → live tool call. Particula.tech documents this as the production-grade pattern once a knowledge base reaches moderate scale.
 
 ## Related Entries
-- [[gnosis-mcp]]
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[llm-wiki-implementations-landscape]]
-- [[lightrag-graph-rag]]
-- [[llm-wiki-academic-applications]]
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 
 ---
 <!-- RU -->
@@ -160,9 +160,9 @@ Gnosis MCP и паттерн LLM-вики Карпатого решают сме
 3. **Маршрутизатор агентов по типу запроса**: фактический поиск → Gnosis MCP; концептуальный синтез → страницы вики; динамические/свежие данные → живые вызовы инструментов.
 
 ## Связанные записи
-- [[gnosis-mcp]]
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[llm-wiki-implementations-landscape]]
-- [[lightrag-graph-rag]]
-- [[llm-wiki-academic-applications]]
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))

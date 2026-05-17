@@ -32,10 +32,10 @@ The tool addresses a real gap: once your wiki has hundreds of pages, understandi
 - Install: paste a single command in terminal, point at your vault directory
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-setup-guide]]
-- [[llmwiki-open-source]]
-- [[llm-wiki-ecosystem]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
 
 ---
 <!-- RU -->
@@ -57,7 +57,7 @@ Wiki OS — бесплатный браузерный интерфейс с от
 Wiki OS предоставляет целевой интерфейс, делающий паттерн LLM-вики более доступным и наблюдаемым — можно наблюдать за созданием страниц, ростом графа и получать статистику о базе знаний прямо в браузере.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-setup-guide]]
-- [[llmwiki-open-source]]
-- [[llm-wiki-ecosystem]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))

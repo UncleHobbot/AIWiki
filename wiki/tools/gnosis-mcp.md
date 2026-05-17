@@ -59,10 +59,10 @@ claude plugin install gnosis
 **PostgreSQL mode** (production scale): set `GNOSIS_MCP_DATABASE_URL=postgresql://...`, run `gnosis-mcp init-db`, then `gnosis-mcp ingest ./docs/`. Adds tsvector + pgvector hybrid, HNSW index, multi-table search.
 
 ## Related Entries
-- [[llm-wiki-ecosystem]]
-- [[llmwiki-open-source]]
-- [[claude-code-plugins-guide]]
-- [[gnosis-mcp-vs-llm-wiki-pattern]]
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
@@ -96,7 +96,7 @@ claude plugin install gnosis
 **Режим PostgreSQL** (продакшн-масштаб): задайте `GNOSIS_MCP_DATABASE_URL=postgresql://...`, выполните `gnosis-mcp init-db`, затем `gnosis-mcp ingest ./docs/`. Добавляет tsvector + pgvector, HNSW-индекс, multi-table поиск.
 
 ## Связанные записи
-- [[llm-wiki-ecosystem]]
-- [[llmwiki-open-source]]
-- [[claude-code-plugins-guide]]
-- [[gnosis-mcp-vs-llm-wiki-pattern]]
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))

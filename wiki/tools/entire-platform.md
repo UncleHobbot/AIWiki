@@ -59,9 +59,9 @@ entire checkpoint explain             # inspect any commit's agent context
 **Best practice:** commit at logical stopping points rather than having the agent auto-commit. This gives you meaningful Checkpoint granularity. PRs show `Entire-Checkpoint` trailers that reviewers can follow to view the full session.
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[github-copilot-app]]
-- [[llm-wiki-enterprise-patterns]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
 
 ---
 <!-- RU -->
@@ -98,6 +98,6 @@ entire checkpoint explain             # изучить контекст аген
 **Лучшая практика:** делайте коммиты в логических точках остановки, а не позволяйте агенту коммитить автоматически — это даёт осмысленную гранулярность Checkpoint. PR-ы показывают трейлеры `Entire-Checkpoint`, по которым ревьюеры переходят к полной сессии.
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[github-copilot-app]]
-- [[llm-wiki-enterprise-patterns]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))

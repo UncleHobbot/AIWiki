@@ -35,10 +35,10 @@ Context visualization: use `/context` to see a breakdown of token usage (system/
 > "Plan mode is more like mapping your route to the restaurant before you start driving. Interactive mode is a back-and-forth conversation with a waiter. And one-shot mode is like going through the drive-through." — GitHub Copilot CLI for Beginners course
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[claude-code-workflows-best-practices]]
-- [[agentic-ai-development-copilot-lessons]]
-- [[copilot-cli-telegram-bridge]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[agentic-ai-development-copilot-lessons]] ([Agentic AI Development with GitHub Copilot: Lessons Learned](../tips/agentic-ai-development-copilot-lessons.md))
+- [[copilot-cli-telegram-bridge]] ([Using Telegram as a Mobile Front-End for GitHub Copilot CLI](../tips/copilot-cli-telegram-bridge.md))
 
 ---
 <!-- RU -->
@@ -67,7 +67,7 @@ GitHub Copilot CLI — агентный помощник по написанию
 > «Режим планирования — это как прокладывать маршрут перед поездкой. Интерактивный режим — диалог с официантом. А однострочный режим — как заказ через окошко drive-through.» — Курс GitHub Copilot CLI for Beginners
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[claude-code-workflows-best-practices]]
-- [[agentic-ai-development-copilot-lessons]]
-- [[copilot-cli-telegram-bridge]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[agentic-ai-development-copilot-lessons]] ([Agentic AI Development with GitHub Copilot: Lessons Learned](../tips/agentic-ai-development-copilot-lessons.md))
+- [[copilot-cli-telegram-bridge]] ([Using Telegram as a Mobile Front-End for GitHub Copilot CLI](../tips/copilot-cli-telegram-bridge.md))

@@ -25,9 +25,9 @@ Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) pres
 - Runs ~30 minutes talk + Q&A.
 
 ## Related Entries
-- [[xp-practices-ai-assisted-development]]
-- [[test-driven-agentic-behaviours]]
-- [[claude-code-workflows-best-practices]]
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 
 ---
 <!-- RU -->
@@ -49,6 +49,6 @@ Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) pres
 - Доклад ~30 минут + Q&A.
 
 ## Связанные записи
-- [[xp-practices-ai-assisted-development]]
-- [[test-driven-agentic-behaviours]]
-- [[claude-code-workflows-best-practices]]
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))

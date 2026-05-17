@@ -26,9 +26,9 @@ Leandro Damasio (AI Engineer in financial/legal domains, building production LLM
 - ~51 minute talk.
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[acdc-agent-centric-development-cycle]]
-- [[llm-assisted-coding-systems-perspective]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
 
 ---
 <!-- RU -->
@@ -50,6 +50,6 @@ Leandro Damasio (AI Engineer in financial/legal domains, building production LLM
 - Доклад ~51 минута.
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[acdc-agent-centric-development-cycle]]
-- [[llm-assisted-coding-systems-perspective]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))

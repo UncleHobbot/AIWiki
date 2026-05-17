@@ -31,8 +31,8 @@ Search uses SQLite FTS5 with porter stemming — good for keyword queries, no se
 Licensed under Apache 2.0.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[github-copilot-cli]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 
 ---
 <!-- RU -->
@@ -60,5 +60,5 @@ Licensed under Apache 2.0.
 Лицензия: Apache 2.0.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[github-copilot-cli]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))

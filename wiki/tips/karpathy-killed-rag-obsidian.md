@@ -37,10 +37,10 @@ Russian-language walkthrough of Karpathy's LLM Wiki approach using Obsidian + Cl
 This Russian-language video by Yuri Kirichenko is a practical guide to implementing Karpathy's LLM Wiki pattern. It covers the full setup from scratch: configuring Obsidian as the markdown vault, connecting Claude Code to read the vault structure via AGENTS.md, and processing the first article into the wiki format. The key argument is that Karpathy's approach — using structured markdown files with a schema layer (AGENTS.md) for context injection — achieves what RAG promises without any of the infrastructure overhead (vector databases, embedding pipelines, retrieval steps).
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-implementations-landscape]]
-- [[karpathy-deep-dive-llms]]
-- [[andrej-karpathy]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))
 
 ---
 <!-- RU -->
@@ -72,7 +72,7 @@ This Russian-language video by Yuri Kirichenko is a practical guide to implement
 Видео Юрия Кириченко — практическое руководство по реализации паттерна LLM Wiki Карпати. Ключевой аргумент: подход Карпати — использование структурированных markdown-файлов со слоем схемы (AGENTS.md) для инъекции контекста — достигает того, что обещает RAG, без какой-либо инфраструктурной нагрузки (векторные БД, пайплайны эмбеддингов, этапы поиска).
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-implementations-landscape]]
-- [[karpathy-deep-dive-llms]]
-- [[andrej-karpathy]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](../concepts/llm-wiki-implementations-landscape.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))

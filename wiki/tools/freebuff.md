@@ -26,8 +26,8 @@ The availability of models like DeepSeek v4 Pro (competitive with mid-tier paid 
 No detailed documentation was available at announcement beyond the install command and model list.
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[deepseek-v4-vs-opus-kimi]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
 
 ---
 <!-- RU -->
@@ -47,5 +47,5 @@ No detailed documentation was available at announcement beyond the install comma
 Доступность таких моделей, как DeepSeek v4 Pro (конкурентоспособен с моделями среднего уровня) и MiniMax M2.7, делает freebuff жизнеспособным вариантом для исследовательского кодирования, прототипирования или команд без бюджета на коммерческих агентов.
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[deepseek-v4-vs-opus-kimi]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))

@@ -28,9 +28,9 @@ The system's beam search algorithm traverses this graph to construct learning pa
 The Idea Studio component leverages the knowledge graph as a creative scaffold. By mapping the space of existing approaches and their relationships, it helps students identify underexplored directions, formulate clear problem statements, and receive iterative feedback on proposed ideas. This combination of structured knowledge representation and interactive ideation support aims to accelerate the transition from passive learning to active research contribution.
 
 ## Related Entries
-- [[llm-wiki-scientific-research]]
-- [[automathkg]]
-- [[llm-wiki-pattern]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
@@ -54,6 +54,6 @@ GoAI — система построения образовательных гр
 Компонент Idea Studio использует граф знаний как творческий каркас. Отображая пространство существующих подходов и их взаимосвязей, он помогает студентам находить малоизученные направления, формулировать чёткие постановки задач и получать итеративную обратную связь по предлагаемым идеям. Это сочетание структурированного представления знаний и интерактивной поддержки генерации идей направлено на ускорение перехода от пассивного обучения к активному вкладу в науку.
 
 ## Связанные записи
-- [[llm-wiki-scientific-research]]
-- [[automathkg]]
-- [[llm-wiki-pattern]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))

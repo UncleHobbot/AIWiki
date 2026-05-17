@@ -55,10 +55,10 @@ From his "How To Make Codebases AI Agents Love" article and "Your Codebase Is NO
 - Dependencies should be explicit — implicit global state is the single worst thing for an agent's ability to understand scope.
 
 ## Related Entries
-- [[claude-code-plugins-guide]]
-- [[claude-code-handoff-prototype-skills]]
-- [[agent-harness-engineering]]
-- [[spec-driven-development-bmad]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
 
 ---
 <!-- RU -->
@@ -92,7 +92,7 @@ Coding-агенты ускоряют разработку, но без тщат�
 Наиболее амбициозная концепция: организовать работу так, чтобы AI-агенты работали автономно (AFK — Away From Keyboard) пока вы занимаетесь другим. Предварительное условие — кодовая база и навыки спроектированы достаточно хорошо, чтобы агент редко нуждался во вмешательстве.
 
 ## Связанные записи
-- [[claude-code-plugins-guide]]
-- [[claude-code-handoff-prototype-skills]]
-- [[agent-harness-engineering]]
-- [[spec-driven-development-bmad]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))

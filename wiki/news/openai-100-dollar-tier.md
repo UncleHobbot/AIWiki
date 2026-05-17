@@ -30,9 +30,9 @@ The competitive framing is unmistakable. Anthropic's Claude Max, also at $100/mo
 The tier fills a pricing gap that left heavy but non-enterprise users without a compelling upgrade path between $20 and $200. With OpenAI generating $2 billion in monthly revenue and surpassing 50 million paid subscribers, the $100 plan captures the segment doing extended autonomous Codex sessions — the multi-hour, multi-agent workflows that the GPT-5.4 architecture was built to serve.
 
 ## Related Entries
-- [[github-copilot-pricing-exodus]]
-- [[gen-ai-web-traffic-may-2026]]
-- [[codex-on-mobile]]
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
+- [[gen-ai-web-traffic-may-2026]] ([Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](../news/gen-ai-web-traffic-may-2026.md))
+- [[codex-on-mobile]] ([Codex Available on Mobile](../news/codex-on-mobile.md))
 
 ---
 <!-- RU -->
@@ -57,6 +57,6 @@ OpenAI запустила тариф Pro за $100/мес. 9 апреля 2026 �
 Тариф заполняет ценовой разрыв, который оставлял активных, но не корпоративных пользователей без веской причины для перехода с $20 на $200. С выручкой $2 млрд в месяц и более 50 млн платных подписчиков, план за $100 захватывает сегмент, запускающий расширенные автономные сессии Codex — многочасовые мультиагентные рабочие процессы, для которых и создана архитектура GPT-5.4.
 
 ## Связанные записи
-- [[github-copilot-pricing-exodus]]
-- [[gen-ai-web-traffic-may-2026]]
-- [[codex-on-mobile]]
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
+- [[gen-ai-web-traffic-may-2026]] ([Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](../news/gen-ai-web-traffic-may-2026.md))
+- [[codex-on-mobile]] ([Codex Available on Mobile](../news/codex-on-mobile.md))

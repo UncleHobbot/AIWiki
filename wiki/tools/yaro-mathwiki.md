@@ -33,9 +33,9 @@ Notable gaps include the absence of English content, no LLM integration for gene
 > "Mathematics is a graph-like structure — not a linear textbook — and standard textbooks fail to expose all the interconnections between definitions and theorems." — MathWiki README
 
 ## Related Entries
-- [[mathwiki-improvement-plan]]
-- [[llm-wiki-scientific-research]]
-- [[automathkg]]
+- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
 
 ---
 <!-- RU -->
@@ -64,6 +64,6 @@ MathWiki рассматривает математические знания к
 > «Математика — это граф, а не линейный учебник: стандартные учебники не показывают все связи между определениями и теоремами.» — MathWiki README
 
 ## Связанные записи
-- [[mathwiki-improvement-plan]]
-- [[llm-wiki-scientific-research]]
-- [[automathkg]]
+- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))

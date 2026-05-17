@@ -31,9 +31,9 @@ The main engineering challenge was not the database integration (that took an af
 The skill system grew from the memory project into a comprehensive agent knowledge base. Skills contain executable scripts, error handling patterns, and production-grade checklists. The auth skill cites OWASP standards; the database skill includes real EXPLAIN ANALYZE examples.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[github-copilot-cli]]
-- [[tencent-db-agent-memory]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[tencent-db-agent-memory]] ([TencentDB Agent Memory: Local Long-Term Memory for AI Agents](../tools/tencent-db-agent-memory.md))
 
 ---
 <!-- RU -->
@@ -57,6 +57,6 @@ Shokunin — локальная система памяти для ИИ-коди
 Основная инженерная сложность заключилась не в интеграции с БД, а в обеспечении стабильного сохранения и поиска памяти агентом. Явные команды в конфигурации оказались значительно эффективнее вежливых предложений на естественном языке.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[github-copilot-cli]]
-- [[tencent-db-agent-memory]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[tencent-db-agent-memory]] ([TencentDB Agent Memory: Local Long-Term Memory for AI Agents](../tools/tencent-db-agent-memory.md))

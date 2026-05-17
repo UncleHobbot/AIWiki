@@ -30,8 +30,8 @@ The system extracts structured entities from LaTeX sources using rule-based rege
 The MathVD vector database, powered by SBERT embeddings with two specialized strategies, enables efficient similarity search across entities. This underpins the two core update mechanisms: knowledge completion, where a Math LLM generates missing proofs or solutions, and knowledge fusion, where similar entities are retrieved via MathVD and an LLM decides whether to merge duplicates or add new entries. Experiments show AutoMathKG achieves superior reachability query performance against five baselines and improves robustness in mathematical reasoning tasks.
 
 ## Related Entries
-- [[llm-wiki-scientific-research]]
-- [[mathwiki-improvement-plan]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 
 ---
 <!-- RU -->
@@ -57,5 +57,5 @@ AutoMathKG решает задачу организации математиче
 Векторная база данных MathVD на базе SBERT-эмбеддингов с двумя специализированными стратегиями обеспечивает эффективный поиск похожих сущностей. Это основа двух ключевых механизмов обновления: дополнение знаний, где Math LLM генерирует недостающие доказательства или решения, и слияние знаний, где похожие сущности извлекаются через MathVD, а LLM принимает решение об объединении дубликатов или добавлении новых записей. Эксперименты показывают, что AutoMathKG достигает превосходных результатов по запросам достижимости по сравнению с пятью базовыми методами и повышает надёжность в задачах математического рассуждения.
 
 ## Связанные записи
-- [[llm-wiki-scientific-research]]
-- [[mathwiki-improvement-plan]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))

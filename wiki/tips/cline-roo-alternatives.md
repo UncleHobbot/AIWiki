@@ -48,9 +48,9 @@ A significant subplot is Roo Code merging with Cline, which one commenter noted 
 > "Worth separating the IDE extension model from the native agent model before picking an alternative. For tasks that span multiple sessions or need to run unattended, the standalone model handles context recovery differently — it's not just a different extension, it's a different interaction pattern." — Reddit user
 
 ## Related Entries
-- [[roo-code-shutdown-roomote]]
-- [[github-copilot-pricing-exodus]]
-- [[freebuff]]
+- [[roo-code-shutdown-roomote]] ([Roo Code Shuts Down After 3M Installs, Pivots to Roomote](../news/roo-code-shutdown-roomote.md))
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
+- [[freebuff]] ([freebuff: Free Coding Agent with Top Open Models](../tools/freebuff.md))
 
 ---
 <!-- RU -->
@@ -87,6 +87,6 @@ A significant subplot is Roo Code merging with Cline, which one commenter noted 
 10. **Gemini CLI** — Автономный терминальный агент от Google, представляет модель «отдельного процесса».
 
 ## Связанные записи
-- [[roo-code-shutdown-roomote]]
-- [[github-copilot-pricing-exodus]]
-- [[freebuff]]
+- [[roo-code-shutdown-roomote]] ([Roo Code Shuts Down After 3M Installs, Pivots to Roomote](../news/roo-code-shutdown-roomote.md))
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
+- [[freebuff]] ([freebuff: Free Coding Agent with Top Open Models](../tools/freebuff.md))

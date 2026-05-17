@@ -44,10 +44,10 @@ This is the most data-driven of Bereznitsky's videos. The key statistics from Ca
 The proposed solution is a structured pipeline where the AI's role is deliberately scoped: research (explore codebase), design (architectural decisions), plan (break into tasks), implement (write code). Only in the implement phase does the AI actually generate code. This prevents the common failure mode of jumping straight to implementation without understanding the codebase.
 
 ## Related Entries
-- [[spec-driven-development-bmad]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[llm-assisted-coding-systems-perspective]]
-- [[clean-architecture-ai-coding-era]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[clean-architecture-ai-coding-era]] ([Clean Architecture in the AI Coding Era](../concepts/clean-architecture-ai-coding-era.md))
 
 ---
 <!-- RU -->
@@ -76,6 +76,6 @@ The proposed solution is a structured pipeline where the AI's role is deliberate
 | [27:14] | ДЕМО: Go-проект |
 
 ## Связанные записи
-- [[spec-driven-development-bmad]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[clean-architecture-ai-coding-era]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[clean-architecture-ai-coding-era]] ([Clean Architecture in the AI Coding Era](../concepts/clean-architecture-ai-coding-era.md))

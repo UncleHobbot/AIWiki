@@ -36,9 +36,9 @@ The video is grounded in a real open-source project (Rust, ~30 minutes runtime) 
 The TDD lesson is particularly counterintuitive: you might expect AI to be better at writing tests, but when it writes tests alongside implementation, it satisfies the stated goal (passing tests) without guaranteeing the tests are meaningful. Splitting the request — test first, implementation second — preserves the TDD invariant and gives you a checkpoint to verify the test's correctness before the implementation obscures it.
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[github-copilot-cli-best-practices]]
-- [[test-driven-agentic-behaviours]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-cli-best-practices]] ([GitHub Copilot CLI: Best Practices and Workflows](../tips/github-copilot-cli-best-practices.md))
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
 
 ---
 <!-- RU -->
@@ -70,6 +70,6 @@ The TDD lesson is particularly counterintuitive: you might expect AI to be bette
 Урок про TDD особенно контринтуитивен: когда AI пишет тесты вместе с реализацией, он достигает заявленной цели (проходящие тесты), не гарантируя их содержательности. Разделение запроса — тест отдельно, реализация отдельно — сохраняет инвариант TDD и даёт точку проверки до того, как реализация «замутит воду».
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[github-copilot-cli-best-practices]]
-- [[test-driven-agentic-behaviours]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-cli-best-practices]] ([GitHub Copilot CLI: Best Practices and Workflows](../tips/github-copilot-cli-best-practices.md))
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))

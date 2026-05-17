@@ -31,9 +31,9 @@ Installation varies by harness:
 The `/share-page` command deploys the generated HTML to Vercel and returns a live URL (requires a `vercel-deploy` Pi skill).
 
 ## Related Entries
-- [[claude-code-plugins-guide]]
-- [[claude-code-extensions-overview]]
-- [[awesome-agent-skills]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[awesome-agent-skills]] ([Awesome Agent Skills](../tools/awesome-agent-skills.md))
 
 ---
 <!-- RU -->
@@ -61,6 +61,6 @@ Agent skill, заменяющий ASCII-арт и терминальные та�
 Команда `/share-page` деплоит HTML на Vercel и возвращает живую ссылку (требует навык `vercel-deploy` для Pi).
 
 ## Связанные записи
-- [[claude-code-plugins-guide]]
-- [[claude-code-extensions-overview]]
-- [[awesome-agent-skills]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[awesome-agent-skills]] ([Awesome Agent Skills](../tools/awesome-agent-skills.md))

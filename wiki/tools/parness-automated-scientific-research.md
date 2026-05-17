@@ -39,11 +39,11 @@ Full-text and code indexing addresses (3) and (4): figures, tables, and methodol
 **Relation to the personal wiki pattern:** PARNESS is the closest academic system to Karpathy's LLM Wiki concept. It independently converged on the same insight — persistent, curated knowledge is more valuable than re-deriving knowledge per session — and built production infrastructure around it. The scenario-typed retrieval is a concrete upgrade path for the wiki's `/wiki-search`, which currently only does flat text matching.
 
 ## Related Entries
-- [[llm-wiki-academic-applications]]
-- [[llm-wiki-pattern]]
-- [[llm4sr-survey]]
-- [[karma-knowledge-graph-enrichment]]
-- [[lightrag-graph-rag]]
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
 
 ---
 <!-- RU -->
@@ -70,8 +70,8 @@ DAG-ядро решает проблему (1): четырёхпольный а�
 **Связь с паттерном личной вики:** PARNESS — ближайшая академическая система к концепции LLM Wiki Карпатого. Она независимо пришла к тому же выводу — постоянные, курируемые знания ценнее повторного извлечения в каждой сессии — и построила вокруг этого производственную инфраструктуру.
 
 ## Связанные записи
-- [[llm-wiki-academic-applications]]
-- [[llm-wiki-pattern]]
-- [[llm4sr-survey]]
-- [[karma-knowledge-graph-enrichment]]
-- [[lightrag-graph-rag]]
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))

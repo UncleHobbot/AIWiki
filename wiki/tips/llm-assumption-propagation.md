@@ -43,11 +43,11 @@ For agentic workflows (Claude Code, Codex, OpenCode), this failure mode is ampli
 > "The models make wrong assumptions on your behalf and just run along with them without checking. They don't manage their confusion, don't seek clarification." — Andrej Karpathy (via @techNmak, May 2026)
 
 ## Related Entries
-- [[karpathy-deep-dive-llms]]
-- [[spec-driven-development-bmad]]
-- [[claude-code-deferral-behavior]]
-- [[claude-code-workflows-best-practices]]
-- [[matt-pocock-aihero]]
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[claude-code-deferral-behavior]] ([Claude Code Deferral Behavior: Opus 4.7 Task-Skipping Pattern](../tips/claude-code-deferral-behavior.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[matt-pocock-aihero]] ([Matt Pocock: AI Hero and Claude Code Skills Author](../people/matt-pocock-aihero.md))
 
 ---
 <!-- RU -->
@@ -86,8 +86,8 @@ For agentic workflows (Claude Code, Codex, OpenCode), this failure mode is ampli
 > «Модели делают неверные предположения от вашего имени и просто следуют им без проверки. Они не управляют своим замешательством, не ищут уточнений.» — Андрей Карпаты (через @techNmak, май 2026)
 
 ## Связанные записи
-- [[karpathy-deep-dive-llms]]
-- [[spec-driven-development-bmad]]
-- [[claude-code-deferral-behavior]]
-- [[claude-code-workflows-best-practices]]
-- [[claude-code-agentic-loop]]
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[claude-code-deferral-behavior]] ([Claude Code Deferral Behavior: Opus 4.7 Task-Skipping Pattern](../tips/claude-code-deferral-behavior.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))

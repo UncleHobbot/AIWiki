@@ -40,9 +40,9 @@ This video targets senior engineers, tech leads, and architects who want to buil
 The key insight on guardrails: "put them in code, not in prompts." Prompt-based constraints are suggestions the model can ignore; code-level constraints (max iterations, timeout limits, output validation) are guarantees.
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[agent-harness-engineering]]
-- [[context-engineering-ai-agents-pipeline]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[context-engineering-ai-agents-pipeline]] ([Context Engineering for AI Agents: From Research to Production Code](../tips/context-engineering-ai-agents-pipeline.md))
 
 ---
 <!-- RU -->
@@ -70,6 +70,6 @@ The key insight on guardrails: "put them in code, not in prompts." Prompt-based 
 | [~30:00] | System prompt как архитектурный контракт |
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[agent-harness-engineering]]
-- [[context-engineering-ai-agents-pipeline]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[context-engineering-ai-agents-pipeline]] ([Context Engineering for AI Agents: From Research to Production Code](../tips/context-engineering-ai-agents-pipeline.md))

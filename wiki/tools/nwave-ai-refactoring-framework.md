@@ -26,9 +26,9 @@ Alessandro Di Gioia (25 years engineering, author of "Agile Technical Practices 
 - Talk from AI Agents Montreal meetup (2026-03-21).
 
 ## Related Entries
-- [[spec-driven-development-bmad]]
-- [[acdc-agent-centric-development-cycle]]
-- [[xp-practices-ai-assisted-development]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
 
 ---
 <!-- RU -->
@@ -51,6 +51,6 @@ Alessandro Di Gioia (25 years engineering, author of "Agile Technical Practices 
 - Доклад на AI Agents Montreal meetup (2026-03-21).
 
 ## Связанные записи
-- [[spec-driven-development-bmad]]
-- [[acdc-agent-centric-development-cycle]]
-- [[xp-practices-ai-assisted-development]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))

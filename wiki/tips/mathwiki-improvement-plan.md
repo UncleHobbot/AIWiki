@@ -129,11 +129,11 @@ Config needed: register custom callout types (`definition`, `theorem`, `axiom`, 
 > "Mathematics is a graph-like structure — not a linear textbook — and standard textbooks fail to expose all the interconnections between definitions and theorems." — MathWiki README philosophy
 
 ## Related Entries
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
-- [[test-driven-agentic-behaviours]]
-- [[yaro-mathwiki]]
-- [[automathkg]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
+- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](../tools/yaro-mathwiki.md))
+- [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
 
 ---
 <!-- RU -->
@@ -186,8 +186,8 @@ Quartz 4 конвертирует Obsidian-хранилище в статиче�
 > «Математика — это граф, а не линейный учебник: стандартные учебники не показывают все связи между определениями и теоремами.» — философия MathWiki README
 
 ## Связанные записи
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
-- [[test-driven-agentic-behaviours]]
-- [[yaro-mathwiki]]
-- [[automathkg]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
+- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](../tools/yaro-mathwiki.md))
+- [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))

@@ -35,9 +35,9 @@ Key factors behind the 5% number:
 Implication for developers: local models on consumer GPUs (e.g., RTX 3090/4090 running Qwen 3.6 27B at Q4) are often more cost-efficient per effective token than enterprise-grade hardware, because they have zero scheduling overhead.
 
 ## Related Entries
-- [[dynamic-compute-budget-local-llm]]
-- [[orthrus-qwen3-acceleration]]
-- [[llm-wiki-chinese-models-comparison]]
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
+- [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
+- [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
 
 ---
 <!-- RU -->
@@ -67,6 +67,6 @@ Implication for developers: local models on consumer GPUs (e.g., RTX 3090/4090 r
 Следствие для разработчиков: локальные модели на потребительских GPU (например, RTX 3090/4090 с Qwen 3.6 27B на Q4) часто более экономичны на эффективный токен, чем оборудование корпоративного класса, из-за нулевых накладных расходов на планирование.
 
 ## Связанные записи
-- [[dynamic-compute-budget-local-llm]]
-- [[orthrus-qwen3-acceleration]]
-- [[llm-wiki-chinese-models-comparison]]
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
+- [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
+- [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))

@@ -25,10 +25,10 @@ Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) 
 - Edgar works on MCP, CLI, and IDE tooling — everything at the intersection of developer/agent experience.
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[llm-assisted-coding-systems-perspective]]
-- [[nwave-ai-refactoring-framework]]
-- [[new-organizational-models-ai-agents]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[nwave-ai-refactoring-framework]] ([nWave: AI-Guided Refactoring Framework for Legacy Code](../tools/nwave-ai-refactoring-framework.md))
+- [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
 
 ---
 <!-- RU -->
@@ -50,7 +50,7 @@ Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) 
 - Работает с MCP, CLI и IDE-инструментарием — всем, что находится на пересечении опыта разработчика и агента.
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[llm-assisted-coding-systems-perspective]]
-- [[nwave-ai-refactoring-framework]]
-- [[new-organizational-models-ai-agents]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[nwave-ai-refactoring-framework]] ([nWave: AI-Guided Refactoring Framework for Legacy Code](../tools/nwave-ai-refactoring-framework.md))
+- [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))

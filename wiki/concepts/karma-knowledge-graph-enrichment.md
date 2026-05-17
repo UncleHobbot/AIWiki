@@ -31,10 +31,10 @@ Experiments on PubMed articles demonstrated that KARMA can enrich existing biome
 **Application to personal wikis:** KARMA's conflict resolution architecture is a direct blueprint for a `scripts/check_conflicts.py` tool — extracting core claims from each new wiki entry and flagging contradictions against existing entries in the same category. See [[llm-wiki-academic-applications]] for the full feature design.
 
 ## Related Entries
-- [[llm-wiki-academic-applications]]
-- [[lightrag-graph-rag]]
-- [[llm4sr-survey]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 
 ---
 <!-- RU -->
@@ -57,7 +57,7 @@ KARMA — мультиагентный LLM-фреймворк для автом�
 **Применение к личным вики:** архитектура разрешения конфликтов KARMA — прямой образец для инструмента `scripts/check_conflicts.py`, который извлекает ключевые утверждения из каждой новой записи вики и сигнализирует о противоречиях с существующими записями той же категории. Полный дизайн функции — в [[llm-wiki-academic-applications]].
 
 ## Связанные записи
-- [[llm-wiki-academic-applications]]
-- [[lightrag-graph-rag]]
-- [[llm4sr-survey]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))

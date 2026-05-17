@@ -32,7 +32,7 @@ Connecting to AI clients is straightforward. For Claude Desktop, add the MCP ser
 FINRA short data and FRED economic indicators require free API keys (available after registration). All other data sources work without any credentials. The system supports ticker filtering to limit syncing to specific stocks and configurable minimum sync dates for faster initial setup.
 
 ## Related Entries
-- [[shokunin-memory-system]]
+- [[shokunin-memory-system]] ([Shokunin: Persistent Memory for Coding Agents](../tools/shokunin-memory-system.md))
 
 ---
 <!-- RU -->
@@ -59,4 +59,4 @@ Equibles решает критическую проблему для польз�
 Шорт-данные FINRA и экономические индикаторы FRED требуют бесплатных API-ключей (доступных после регистрации). Все остальные источники данных работают без учётных данных. Система поддерживает фильтрацию по тикерам для ограничения синхронизации конкретными акциями и настраиваемую минимальную дату синхронизации для ускорения начальной настройки.
 
 ## Связанные записи
-- [[shokunin-memory-system]]
+- [[shokunin-memory-system]] ([Shokunin: Persistent Memory for Coding Agents](../tools/shokunin-memory-system.md))

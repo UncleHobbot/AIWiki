@@ -25,9 +25,9 @@ Antony Marcano demonstrates how to apply test-driven development principles to d
 - Key prompt for agents: write test scenarios for the agent behavior, then verify the agent satisfies them.
 
 ## Related Entries
-- [[xp-practices-ai-assisted-development]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[claude-code-agentic-loop]]
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 
 ---
 <!-- RU -->
@@ -49,6 +49,6 @@ Antony Marcano demonstrates how to apply test-driven development principles to d
 - Ключевой промпт для агентов: напишите тест-сценарии для поведения агента, затем проверьте, что агент им соответствует.
 
 ## Связанные записи
-- [[xp-practices-ai-assisted-development]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[claude-code-agentic-loop]]
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))

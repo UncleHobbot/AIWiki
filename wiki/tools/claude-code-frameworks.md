@@ -31,9 +31,9 @@ From community discussion — key framework differentiators:
 > "All skill frameworks are basically just specifying a bunch of instructions you could otherwise manually tell Claude Code. Each framework is optimized for different results." — r/ClaudeCode community
 
 ## Related Entries
-- [[claude-code-extensions-overview]]
-- [[claude-code-deferral-behavior]]
-- [[claude-code-workflows-best-practices]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-deferral-behavior]] ([Claude Code Deferral Behavior: Opus 4.7 Task-Skipping Pattern](../tips/claude-code-deferral-behavior.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 
 ---
 <!-- RU -->
@@ -61,6 +61,6 @@ From community discussion — key framework differentiators:
 > «Все фреймворки навыков — это, по сути, просто набор инструкций, которые вы могли бы вручную дать Claude Code. Каждый фреймворк оптимизирован для разных результатов.» — сообщество r/ClaudeCode
 
 ## Связанные записи
-- [[claude-code-extensions-overview]]
-- [[claude-code-deferral-behavior]]
-- [[claude-code-workflows-best-practices]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-deferral-behavior]] ([Claude Code Deferral Behavior: Opus 4.7 Task-Skipping Pattern](../tips/claude-code-deferral-behavior.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))

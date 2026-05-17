@@ -41,13 +41,13 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 **Context costs by feature:** CLAUDE.md (every request, full content), Skills (descriptions every request, body on use), MCP (tool names only until used), Subagents (isolated), Hooks (zero until output returned).
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[claude-code-directory]]
-- [[claude-code-memory]]
-- [[claude-code-frameworks]]
-- [[entire-platform]]
-- [[gnosis-mcp]]
-- [[mcp-financial-data-server]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-directory]] ([The .claude Directory](../agents/claude-code-directory.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[claude-code-frameworks]] ([Claude Code Skill Frameworks: GSD, Superpowers, Ouroboros, Han](../tools/claude-code-frameworks.md))
+- [[entire-platform]] ([Entire: Agent Session Checkpointing for Git](../tools/entire-platform.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
 
 ---
 <!-- RU -->
@@ -85,10 +85,10 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 **Стоимость контекста по типу расширения:** CLAUDE.md (каждый запрос, полностью), Skills (описания каждый запрос, тело при использовании), MCP (только имена инструментов до использования), Subagents (изолированы), Hooks (ноль до возврата вывода).
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[claude-code-directory]]
-- [[claude-code-memory]]
-- [[claude-code-frameworks]]
-- [[entire-platform]]
-- [[gnosis-mcp]]
-- [[mcp-financial-data-server]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-directory]] ([The .claude Directory](../agents/claude-code-directory.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[claude-code-frameworks]] ([Claude Code Skill Frameworks: GSD, Superpowers, Ouroboros, Han](../tools/claude-code-frameworks.md))
+- [[entire-platform]] ([Entire: Agent Session Checkpointing for Git](../tools/entire-platform.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))

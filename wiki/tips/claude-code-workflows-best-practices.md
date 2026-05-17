@@ -40,10 +40,10 @@ Getting the most from Claude Code requires treating context as your primary reso
 > "If you've corrected Claude more than twice on the same issue in one session, the context is cluttered with failed approaches. Run `/clear` and start fresh with a more specific prompt that incorporates what you learned." — Claude Code Docs
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[claude-code-permission-modes]]
-- [[claude-code-memory]]
-- [[chorus-multi-model-setup]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Coding Setup](../tips/chorus-multi-model-setup.md))
 
 ---
 <!-- RU -->
@@ -79,7 +79,7 @@ Getting the most from Claude Code requires treating context as your primary reso
 > «Если вы поправляли Claude более двух раз по одному и тому же вопросу в одной сессии, контекст замусорен провальными подходами. Запустите `/clear` и начните заново с более конкретным промптом, включающим то, что вы поняли.» — Claude Code Docs
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[claude-code-permission-modes]]
-- [[claude-code-memory]]
-- [[chorus-multi-model-setup]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
+- [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Coding Setup](../tips/chorus-multi-model-setup.md))

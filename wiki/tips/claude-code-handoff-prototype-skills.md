@@ -33,9 +33,9 @@ Run these in sequence after major design changes for consistent quality improvem
 3. `/simplify`
 
 ## Related Entries
-- [[claude-code-plugins-guide]]
-- [[claude-code-prompting-era]]
-- [[llm-wiki-setup-guide]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-prompting-era]] ([The New Prompting Era: Claude 4.7 Literal vs GPT-5.5 Autonomous](../tips/claude-code-prompting-era.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
 
 ---
 <!-- RU -->
@@ -56,6 +56,6 @@ Run these in sequence after major design changes for consistent quality improvem
 Навык improve-codebase-architecture воплощает другую философию: не ждите большого рефакторинга. Сливайте небольшие PR по улучшению архитектуры каждый день. Ежедневная практика @dillon_mulroy «минимум один PR в день» — конкретный пример устойчивого сокращения технического долга в темпе AI-разработки.
 
 ## Связанные записи
-- [[claude-code-plugins-guide]]
-- [[claude-code-prompting-era]]
-- [[llm-wiki-setup-guide]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-prompting-era]] ([The New Prompting Era: Claude 4.7 Literal vs GPT-5.5 Autonomous](../tips/claude-code-prompting-era.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))

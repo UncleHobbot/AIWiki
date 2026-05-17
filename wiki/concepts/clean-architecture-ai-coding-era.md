@@ -35,9 +35,9 @@ Dmitry Bereznitsky explains why Clean Architecture principles become critical wh
 The core argument: when AI writes most of your code, the architecture becomes more important, not less. LLMs generate better code when they have clear boundaries (Entities, Use Cases, interface adapters). Without these boundaries, AI-generated code accumulates technical debt at alarming speed — clean architecture provides the guardrails that keep AI productive long-term.
 
 ## Related Entries
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[spec-driven-development-bmad]]
-- [[llm-assisted-coding-systems-perspective]]
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
 
 ---
 <!-- RU -->
@@ -60,6 +60,6 @@ The core argument: when AI writes most of your code, the architecture becomes mo
 | [0:00] | Парадокс AI-разработки: скорость vs контроль |
 
 ## Связанные записи
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[spec-driven-development-bmad]]
-- [[llm-assisted-coding-systems-perspective]]
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))

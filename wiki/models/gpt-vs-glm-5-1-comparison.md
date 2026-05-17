@@ -34,7 +34,7 @@ The Reddit community reaction highlights a broader trend: the gap between fronti
 - GLM-5.1 is text-only — no image, audio, or video input support
 
 ## Related Entries
-- [[deepseek-v4-vs-opus-kimi]]
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
 
 ---
 <!-- RU -->
@@ -63,4 +63,4 @@ The Reddit community reaction highlights a broader trend: the gap between fronti
 - GLM-5.1 работает только с текстом — нет поддержки изображений, аудио или видео
 
 ## Связанные записи
-- [[deepseek-v4-vs-opus-kimi]]
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))

@@ -36,9 +36,9 @@ The `github/app` repository is for releases, issues, and discussion only — the
 Early adopter Oren Melamed (GitHub Star) described it as growing into "a new way of work" and singled out `/spar` as his favorite feature for interactive sessions.
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[llm-wiki-enterprise-patterns]]
-- [[github-agentic-developer-certification]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
+- [[github-agentic-developer-certification]] ([GitHub GH-600: Agentic AI Developer Certification](../news/github-agentic-developer-certification.md))
 
 ---
 <!-- RU -->
@@ -59,6 +59,6 @@ GitHub Copilot App (репозиторий: `github/app`) вышел в мае 2
 Ключевое отличие от Copilot в VS Code: приложение предполагает, что вы работаете через агентов и GitHub-примитивы (issues, PR, ветки) как основной интерфейс, а не пишете код напрямую в редакторе. Это делает его более подходящим для оркестрации нескольких агентов по нескольким feature-веткам одновременно.
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[llm-wiki-enterprise-patterns]]
-- [[github-agentic-developer-certification]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
+- [[github-agentic-developer-certification]] ([GitHub GH-600: Agentic AI Developer Certification](../news/github-agentic-developer-certification.md))

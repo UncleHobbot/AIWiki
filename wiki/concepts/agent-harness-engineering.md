@@ -56,10 +56,10 @@ Skills and hooks are the iterative improvement layer: each skill encodes a lesso
 > "The model is one input into a running agent. The rest is the harness." — Addy Osmani, O'Reilly Radar
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[claude-code-extensions-overview]]
-- [[specs-to-production-ai-agents]]
-- [[acdc-agent-centric-development-cycle]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[specs-to-production-ai-agents]] ([From Specs to Production: Building Software with AI Agents End to End](../agents/specs-to-production-ai-agents.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
 
 ---
 <!-- RU -->
@@ -96,7 +96,7 @@ Skills and hooks are the iterative improvement layer: each skill encodes a lesso
 CLAUDE.md и навыки — практическое выражение harness engineering. Каждый навык кодирует урок из прошлой ошибки, заставляя агента надёжно обрабатывать этот класс проблем в будущем. Это и есть принцип Османи: «найти решение, исключающее повторение ошибки».
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[claude-code-extensions-overview]]
-- [[specs-to-production-ai-agents]]
-- [[acdc-agent-centric-development-cycle]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[specs-to-production-ai-agents]] ([From Specs to Production: Building Software with AI Agents End to End](../agents/specs-to-production-ai-agents.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))

@@ -29,8 +29,8 @@ The resulting MiniCheck-FT5 model, at just 770M parameters, achieves accuracy co
 The authors also released LLM-AggreFact, a unified benchmark that aggregates datasets from multiple prior fact-checking studies, providing a standardized evaluation framework. Alongside the benchmark, data synthesis code and pretrained models are available on HuggingFace, including the larger Bespoke-MiniCheck-7B variant tuned for wiki-style claim verification.
 
 ## Related Entries
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 
 ---
 <!-- RU -->
@@ -55,5 +55,5 @@ MiniCheck решает ключевую проблему развёртыван�
 Авторы также выпустили LLM-AggreFact — унифицированный бенчмарк, агрегирующий наборы данных из множества предшествующих исследований проверки фактов и предоставляющий стандартизированную среду оценки. Наряду с бенчмарком доступны код синтеза данных и предобученные модели на HuggingFace, включая более крупный вариант Bespoke-MiniCheck-7B, настроенный для проверки фактов в стиле вики.
 
 ## Связанные записи
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))

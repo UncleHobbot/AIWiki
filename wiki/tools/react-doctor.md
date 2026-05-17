@@ -26,8 +26,8 @@ The tool addresses a real pain point: AI coding agents produce syntactically val
 As AI agents write increasingly more frontend code, tooling designed to verify AI output (rather than human output) becomes a distinct category.
 
 ## Related Entries
-- [[claude-code-plugins-guide]]
-- [[llm-wiki-enterprise-patterns]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
 
 ---
 <!-- RU -->
@@ -48,5 +48,5 @@ React Doctor создан Эйденом Бай (@aidenybai), известным
 Инструмент решает реальную проблему: AI-агенты производят синтаксически корректный React-код, который часто содержит тонкие семантические ошибки — неверные зависимости хуков, антипаттерны или некорректно используемые API.
 
 ## Связанные записи
-- [[claude-code-plugins-guide]]
-- [[llm-wiki-enterprise-patterns]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))

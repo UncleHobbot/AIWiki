@@ -47,7 +47,7 @@ The White House blocked Anthropic's plan to expand Mythos access from ~50 to 120
 
 ## Related Entries
 
-- [[apple-m5-kernel-exploit-ai]]
+- [[apple-m5-kernel-exploit-ai]] ([First Public macOS Kernel Exploit on Apple M5 Built with AI](../news/apple-m5-kernel-exploit-ai.md))
 
 ---
 <!-- RU -->
@@ -83,4 +83,4 @@ Mythos Preview занимает новый уровень в линейке Anth
 
 ## Связанные записи
 
-- [[apple-m5-kernel-exploit-ai]]
+- [[apple-m5-kernel-exploit-ai]] ([First Public macOS Kernel Exploit on Apple M5 Built with AI](../news/apple-m5-kernel-exploit-ai.md))

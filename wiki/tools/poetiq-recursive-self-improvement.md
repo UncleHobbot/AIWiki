@@ -27,8 +27,8 @@ On LiveCodeBench Pro, a benchmark designed to evaluate genuine programming abili
 Poetiq frames LLM capability across three pillars — reasoning (ARC-AGI), retrieval (HLE), and coding (LiveCodeBench Pro) — and has now demonstrated improvements in all three. Their approach contrasts with fine-tuning, which ties improvements to a single model; instead, Poetiq's harnesses are portable across models, making the gains cumulative and broadly applicable. The company previously beat Google and Anthropic on the ARC-AGI benchmark with only $40,000 in spending.
 
 ## Related Entries
-- [[self-guided-self-play]]
-- [[dynamic-compute-budget-local-llm]]
+- [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
 
 ---
 <!-- RU -->
@@ -49,5 +49,5 @@ Poetiq вышел из стелс-режима в ноябре 2025 года с 
 Poetiq рассматривает возможности LLM через три столпа — рассуждение (ARC-AGI), извлечение знаний (HLE) и кодинг (LiveCodeBench Pro) — и продемонстрировал улучшения во всех трёх. В отличие от fine-tuning, привязывающего улучшения к конкретной модели, harness'ы Poetiq переносимы между моделями, что делает прирост кумулятивным и широко применимым. Ранее компания обошла Google и Anthropic на бенчмарке ARC-AGI, потратив всего $40,000.
 
 ## Связанные записи
-- [[self-guided-self-play]]
-- [[dynamic-compute-budget-local-llm]]
+- [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))

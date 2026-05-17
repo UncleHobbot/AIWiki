@@ -34,9 +34,9 @@ A key design principle is anti-repetition memory: failed experiments are recorde
 > "Failed experiments become anti-repetition memory" — OmegaWiki README
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-ecosystem]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
 
 ---
 <!-- RU -->
@@ -65,6 +65,6 @@ OmegaWiki (skyllwt/OmegaWiki, 669+ звёзд, лицензия MIT) перео�
 > "Failed experiments become anti-repetition memory" — README OmegaWiki
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-ecosystem]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))

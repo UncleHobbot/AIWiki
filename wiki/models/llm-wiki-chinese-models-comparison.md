@@ -186,11 +186,11 @@ For a Karpathy-style three-layer wiki system:
 > "The open-weight advantage: if you need downloadable weights, self-hosting, or deeper control of the inference stack, the Chinese frontier is still structurally stronger than the closed Western API tier." — BenchLM
 
 ## Related Entries
-- [[deepseek-v4-vs-opus-kimi]]
-- [[gpt-vs-glm-5-1-comparison]]
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[karpathy-deep-dive-llms]]
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
+- [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
 
 ---
 <!-- RU -->
@@ -354,8 +354,8 @@ For a Karpathy-style three-layer wiki system:
 > «Преимущество открытых весов: если вам нужны загружаемые веса, самохостинг или более глубокий контроль над стеком вывода, китайский фронтир структурно сильнее закрытого западного API-уровня.» — BenchLM
 
 ## Связанные записи
-- [[deepseek-v4-vs-opus-kimi]]
-- [[gpt-vs-glm-5-1-comparison]]
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
-- [[karpathy-deep-dive-llms]]
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
+- [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))

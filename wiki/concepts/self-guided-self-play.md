@@ -33,10 +33,10 @@ The paper evaluates SGS with scaling laws fitted to cumulative solve rate curves
 This technique may extend beyond theorem proving to any domain with a verifiable reward signal: coding, math, formal verification, and structured reasoning tasks.
 
 ## Related Entries
-- [[llm4sr-survey]]
-- [[karpathy-deep-dive-llms]]
-- [[poetiq-recursive-self-improvement]]
-- [[dynamic-compute-budget-local-llm]]
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[poetiq-recursive-self-improvement]] ([Poetiq: Recursive Self-Improvement for Coding](../tools/poetiq-recursive-self-improvement.md))
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
 
 ---
 <!-- RU -->
@@ -61,7 +61,7 @@ SGS решает проблему: Гид использует ту же мод�
 Техника может быть применена за пределами доказательства теорем — в любой области с проверяемым сигналом награды: программирование, математика, формальная верификация.
 
 ## Связанные записи
-- [[llm4sr-survey]]
-- [[karpathy-deep-dive-llms]]
-- [[poetiq-recursive-self-improvement]]
-- [[dynamic-compute-budget-local-llm]]
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[poetiq-recursive-self-improvement]] ([Poetiq: Recursive Self-Improvement for Coding](../tools/poetiq-recursive-self-improvement.md))
+- [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))

@@ -47,9 +47,9 @@ Step-by-step guide to building Karpathy's LLM Wiki from scratch: what tools you 
 - Initial ingest of a large existing collection (50+ docs) can take hours
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llmwiki-open-source]]
-- [[llm-wiki-enterprise-patterns]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
 
 ---
 <!-- RU -->
@@ -86,6 +86,6 @@ Step-by-step guide to building Karpathy's LLM Wiki from scratch: what tools you 
 - Первоначальная загрузка большой коллекции (50+ документов) может занять несколько часов
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llmwiki-open-source]]
-- [[llm-wiki-enterprise-patterns]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
+- [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))

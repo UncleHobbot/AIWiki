@@ -32,15 +32,15 @@ The authors highlight transformative potential while remaining candid about curr
 > "LLMs generate more novel but slightly less valid hypotheses than human researchers." — LLM4SR Survey
 
 ## Related Entries
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
-- [[omegawiki-research-platform]]
-- [[arxiv-llm-ban-policy]]
-- [[grobid-pdf-parser]]
-- [[minicheck-fact-verification]]
-- [[fda-ai-clinical-trials]]
-- [[tabpfn-3-tabular-foundation-model]]
-- [[llm-wiki-academic-applications]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
+- [[arxiv-llm-ban-policy]] ([arXiv Implements 1-Year Ban for Papers with Unchecked LLM Errors](../news/arxiv-llm-ban-policy.md))
+- [[grobid-pdf-parser]] ([GROBID: Machine Learning PDF Parser for Scientific Documents](../tools/grobid-pdf-parser.md))
+- [[minicheck-fact-verification]] ([MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents](../tools/minicheck-fact-verification.md))
+- [[fda-ai-clinical-trials]] ([FDA Shortens Clinical Trial Timelines with AI](../news/fda-ai-clinical-trials.md))
+- [[tabpfn-3-tabular-foundation-model]] ([TabPFN-3: Pre-trained Tabular Foundation Model](../models/tabpfn-3-tabular-foundation-model.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 
 ---
 <!-- RU -->
@@ -67,12 +67,12 @@ LLM4SR — первый систематический обзор, посвящ�
 > «LLM генерируют более новаторские, но немного менее валидные гипотезы, чем исследователи-люди.» — Обзор LLM4SR
 
 ## Связанные записи
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
-- [[omegawiki-research-platform]]
-- [[arxiv-llm-ban-policy]]
-- [[grobid-pdf-parser]]
-- [[minicheck-fact-verification]]
-- [[fda-ai-clinical-trials]]
-- [[tabpfn-3-tabular-foundation-model]]
-- [[llm-wiki-academic-applications]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
+- [[arxiv-llm-ban-policy]] ([arXiv Implements 1-Year Ban for Papers with Unchecked LLM Errors](../news/arxiv-llm-ban-policy.md))
+- [[grobid-pdf-parser]] ([GROBID: Machine Learning PDF Parser for Scientific Documents](../tools/grobid-pdf-parser.md))
+- [[minicheck-fact-verification]] ([MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents](../tools/minicheck-fact-verification.md))
+- [[fda-ai-clinical-trials]] ([FDA Shortens Clinical Trial Timelines with AI](../news/fda-ai-clinical-trials.md))
+- [[tabpfn-3-tabular-foundation-model]] ([TabPFN-3: Pre-trained Tabular Foundation Model](../models/tabpfn-3-tabular-foundation-model.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))

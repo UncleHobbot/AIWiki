@@ -32,11 +32,11 @@ The r/GithubCopilot community has become a de facto migration advisory board. To
 The broader trend: coding agent pricing is in flux across all providers. Claude Code users also report rapidly drying limits, and OpenAI just introduced a $100 tier for Codex.
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[deepseek-v4-vs-opus-kimi]]
-- [[openai-100-dollar-tier]]
-- [[gen-ai-web-traffic-may-2026]]
-- [[freebuff]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
+- [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
+- [[gen-ai-web-traffic-may-2026]] ([Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](../news/gen-ai-web-traffic-may-2026.md))
+- [[freebuff]] ([freebuff: Free Coding Agent with Top Open Models](../tools/freebuff.md))
 
 ---
 <!-- RU -->
@@ -59,8 +59,8 @@ The broader trend: coding agent pricing is in flux across all providers. Claude 
 Сообщество r/GithubCopilot стало де-факто консультационным советом по миграции. Рекомендуется смешанный подход: подписка на дорогие модели отдельно от дешёвых. Общий тренд: ценообразование кодинговых агентов нестабильно у всех провайдеров.
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[deepseek-v4-vs-opus-kimi]]
-- [[openai-100-dollar-tier]]
-- [[gen-ai-web-traffic-may-2026]]
-- [[freebuff]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
+- [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
+- [[gen-ai-web-traffic-may-2026]] ([Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](../news/gen-ai-web-traffic-may-2026.md))
+- [[freebuff]] ([freebuff: Free Coding Agent with Top Open Models](../tools/freebuff.md))

@@ -34,8 +34,8 @@ For Claude Code specifically, this means: explicit task scoping, clear success c
 > "Claude got more literal. GPT got more autonomous. Both now punish the same thing: prompts written without clear thinking behind them."
 
 ## Related Entries
-- [[llm-wiki-setup-guide]]
-- [[claude-code-plugins-guide]]
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 
 ---
 <!-- RU -->
@@ -61,5 +61,5 @@ Claude Opus 4.7 стал значительно буквальнее — вып�
 > «Модели сближаются по возможностям. Разрыв между хорошим и плохим результатом больше не в том, какую модель выбрать. Это 2 минуты структурированного мышления до того, как напечатать что-либо.» — @alex_prompter
 
 ## Связанные записи
-- [[llm-wiki-setup-guide]]
-- [[claude-code-plugins-guide]]
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))

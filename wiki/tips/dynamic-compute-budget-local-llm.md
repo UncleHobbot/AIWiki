@@ -34,8 +34,8 @@ The technique is designed for throwing large compute budgets at problems you'd n
 Community note (r/LocalLLaMA): "The community would probably pool money together to do this for Qwen 3.6 27B" — suggesting there's demand to apply this to smaller, cheaper local models.
 
 ## Related Entries
-- [[orthrus-qwen3-acceleration]]
-- [[karpathy-deep-dive-llms]]
+- [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
 
 ---
 <!-- RU -->
@@ -64,5 +64,5 @@ Community note (r/LocalLLaMA): "The community would probably pool money together
 Заметка сообщества (r/LocalLLaMA): «Сообщество, вероятно, скинется вместе, чтобы сделать это для Qwen 3.6 27B» — что говорит о спросе на применение техники к меньшим, более дешёвым локальным моделям.
 
 ## Связанные записи
-- [[orthrus-qwen3-acceleration]]
-- [[karpathy-deep-dive-llms]]
+- [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))

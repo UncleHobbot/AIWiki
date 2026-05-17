@@ -32,8 +32,8 @@ The guidelines are designed to compose with project-specific instructions — ad
 > "The models make wrong assumptions on your behalf and just run along with them without checking. They don't manage their confusion, don't seek clarifications, don't surface inconsistencies, don't present tradeoffs, don't push back when they should." — Andrej Karpathy
 
 ## Related Entries
-- [[claude-code-workflows-best-practices]]
-- [[spec-driven-development-bmad]]
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
 
 ---
 <!-- RU -->
@@ -60,5 +60,5 @@ The guidelines are designed to compose with project-specific instructions — ad
 > «Модели делают неверные предположения вместо вас и просто продолжают работать с ними, не проверяя. Они не управляют своей неопределённостью, не уточняют, не обнажают противоречия, не представляют компромиссы, не возражают, когда должны.» — Андрей Карпати
 
 ## Связанные записи
-- [[claude-code-workflows-best-practices]]
-- [[spec-driven-development-bmad]]
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))

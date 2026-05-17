@@ -3,7 +3,7 @@ title: "Andrej Karpathy"
 title_ru: "Андрей Карпаты"
 category: people
 tags: [karpathy, openai, tesla, stanford, cs231n, software-2-0, llm-wiki, llm-os, vibe-coding, eureka-labs, deep-learning]
-aliases: [Karpathy, Andrej Karpathy, @karpathy]
+aliases: [Karpathy, Andrej Karpathy, "@karpathy"]
 confidence: high
 date: 2026-05-17
 updated: 2026-05-17
@@ -110,11 +110,11 @@ Karpathy's YouTube channel features two parallel tracks: a technical "Zero to He
 > "When relevant information is in the context window, the model doesn't need to 'recall' — quality improves dramatically. Always paste reference material directly." — Deep Dive into LLMs, 2024
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[karpathy-deep-dive-llms]]
-- [[llm-wiki-ecosystem]]
-- [[acdc-agent-centric-development-cycle]]
-- [[spec-driven-development-bmad]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
 
 ---
 <!-- RU -->
@@ -174,7 +174,7 @@ YouTube-канал Карпаты содержит два параллельны
 > «Vibe coding — это когда ты полностью отдаёшься вайбу, принимаешь экспоненты и забываешь, что код вообще существует.» — Twitter, февраль 2025
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[karpathy-deep-dive-llms]]
-- [[llm-wiki-ecosystem]]
-- [[acdc-agent-centric-development-cycle]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))

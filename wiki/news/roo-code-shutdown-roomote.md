@@ -33,8 +33,8 @@ Roomote, the successor product, is a cloud-based agent that lives in Slack along
 The Roo Code GitHub repo was archived on May 15, 2026, with unused paid service balances refunded. Users needing an IDE extension are directed to Cline, which has incorporated many Roo Code features.
 
 ## Related Entries
-- [[cline-roo-alternatives]]
-- [[github-copilot-pricing-exodus]]
+- [[cline-roo-alternatives]] ([Alternatives to Cline and Roo Code in 2026](../tips/cline-roo-alternatives.md))
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))
 
 ---
 <!-- RU -->
@@ -59,5 +59,5 @@ Roomote — продукт-наследник, облачный coding agent, р
 Репозиторий Roo Code на GitHub был архивирован 15 мая 2026 года, неиспользованные балансы платных сервисов возвращены. Пользователям, нуждающимся в IDE-расширении, рекомендуется Cline, который перенял множество функций Roo Code.
 
 ## Связанные записи
-- [[cline-roo-alternatives]]
-- [[github-copilot-pricing-exodus]]
+- [[cline-roo-alternatives]] ([Alternatives to Cline and Roo Code in 2026](../tips/cline-roo-alternatives.md))
+- [[github-copilot-pricing-exodus]] ([GitHub Copilot Usage-Based Pricing Triggers User Exodus](../news/github-copilot-pricing-exodus.md))

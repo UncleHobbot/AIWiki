@@ -68,10 +68,10 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 > "LLMs generate more novel but slightly less valid hypotheses than human researchers." — LLM4SR Survey, arXiv:2501.04306
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[karpathy-claude-code-guidelines]]
-- [[claude-code-workflows-best-practices]]
-- [[mathwiki-improvement-plan]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[karpathy-claude-code-guidelines]] ([Karpathy-Inspired Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 
 ---
 <!-- RU -->
@@ -119,7 +119,7 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 > «LLM генерируют более новаторские, но немного менее валидные гипотезы, чем исследователи-люди.» — Обзор LLM4SR, arXiv:2501.04306
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[karpathy-claude-code-guidelines]]
-- [[claude-code-workflows-best-practices]]
-- [[mathwiki-improvement-plan]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[karpathy-claude-code-guidelines]] ([Karpathy-Inspired Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))

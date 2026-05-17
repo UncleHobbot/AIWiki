@@ -87,13 +87,13 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 > "Each plugin uses context tokens. More plugins = more overhead. 3-5 active plugins is the sweet spot." — @zodchiii
 
 ## Related Entries
-- [[claude-code-handoff-prototype-skills]]
-- [[llm-wiki-setup-guide]]
-- [[han-claude-code-plugin]]
-- [[react-doctor]]
-- [[visual-explainer]]
-- [[package-hallucination-mcp]]
-- [[matt-pocock-aihero]]
+- [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[han-claude-code-plugin]] ([Han: AI Skills Plugin for Claude Code](../tools/han-claude-code-plugin.md))
+- [[react-doctor]] ([React Doctor: AI-Generated React Code Linter](../tools/react-doctor.md))
+- [[visual-explainer]] ([Visual Explainer](../tools/visual-explainer.md))
+- [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
+- [[matt-pocock-aihero]] ([Matt Pocock: AI Hero and Claude Code Skills Author](../people/matt-pocock-aihero.md))
 
 ---
 <!-- RU -->
@@ -118,10 +118,10 @@ Add first: `npx skills add anthropic/knowledge-work-plugins`
 После этого плагины из этого репозитория появятся на вкладке Discover.
 
 ## Связанные записи
-- [[claude-code-handoff-prototype-skills]]
-- [[llm-wiki-setup-guide]]
-- [[han-claude-code-plugin]]
-- [[react-doctor]]
-- [[visual-explainer]]
-- [[package-hallucination-mcp]]
-- [[matt-pocock-aihero]]
+- [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[han-claude-code-plugin]] ([Han: AI Skills Plugin for Claude Code](../tools/han-claude-code-plugin.md))
+- [[react-doctor]] ([React Doctor: AI-Generated React Code Linter](../tools/react-doctor.md))
+- [[visual-explainer]] ([Visual Explainer](../tools/visual-explainer.md))
+- [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
+- [[matt-pocock-aihero]] ([Matt Pocock: AI Hero and Claude Code Skills Author](../people/matt-pocock-aihero.md))

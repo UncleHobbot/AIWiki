@@ -29,8 +29,8 @@ Claude Code's permission modes control how often it pauses to ask approval befor
 **bypassPermissions:** requires `--permission-mode bypassPermissions` or `--dangerously-skip-permissions` flag; cannot be entered from inside an already-running session; refused when running as root/sudo on Linux/macOS.
 
 ## Related Entries
-- [[claude-code-agentic-loop]]
-- [[claude-code-workflows-best-practices]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 
 ---
 <!-- RU -->
@@ -56,5 +56,5 @@ Claude Code's permission modes control how often it pauses to ask approval befor
 **bypassPermissions:** требует флага `--permission-mode bypassPermissions` или `--dangerously-skip-permissions`; нельзя войти из уже запущенной сессии; отклоняется при запуске от root/sudo на Linux/macOS.
 
 ## Связанные записи
-- [[claude-code-agentic-loop]]
-- [[claude-code-workflows-best-practices]]
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))

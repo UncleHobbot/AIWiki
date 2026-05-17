@@ -41,9 +41,9 @@ This 55-minute video has become a canonical Russian-language reference for LLM f
 The key thesis: "context engineering" is the discipline that matters most for production AI. While prompt engineering focuses on phrasing, context engineering focuses on what information the model receives, in what order, and with what structure — a philosophy directly aligned with Karpathy's LLM Wiki pattern.
 
 ## Related Entries
-- [[rags-evolution-agentic-ai]]
-- [[llm-assisted-coding-systems-perspective]]
-- [[agent-harness-engineering]]
+- [[rags-evolution-agentic-ai]] ([RAG's Evolution: From Simple Retrieval to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 
 ---
 <!-- RU -->
@@ -71,6 +71,6 @@ The key thesis: "context engineering" is the discipline that matters most for pr
 | [~50:00] | Контекстная инженерия: почему контекст > промпты |
 
 ## Связанные записи
-- [[rags-evolution-agentic-ai]]
-- [[llm-assisted-coding-systems-perspective]]
-- [[agent-harness-engineering]]
+- [[rags-evolution-agentic-ai]] ([RAG's Evolution: From Simple Retrieval to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
+- [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))

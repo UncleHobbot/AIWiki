@@ -55,8 +55,8 @@ copilot --experimental --yolo --model gpt-5.5 \
 - Re-check the exact commit you install before running any extension
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[github-copilot-app]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
 
 ---
 <!-- RU -->
@@ -81,5 +81,5 @@ copilot --experimental --yolo --model gpt-5.5 \
 - Не отправляйте промпты или ответы с секретами, данными клиентов или конфиденциальным кодом через Telegram
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[github-copilot-app]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))

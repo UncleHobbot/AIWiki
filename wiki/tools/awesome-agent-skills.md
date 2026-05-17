@@ -32,9 +32,9 @@ Notable team skill bundles:
 This is the primary resource for finding official, quality-verified agent skills as the ecosystem grows rapidly.
 
 ## Related Entries
-- [[claude-code-plugins-guide]]
-- [[claude-code-extensions-overview]]
-- [[dotnet-claude-kit]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[dotnet-claude-kit]] ([dotnet-claude-kit](../tools/dotnet-claude-kit.md))
 
 ---
 <!-- RU -->
@@ -62,6 +62,6 @@ This is the primary resource for finding official, quality-verified agent skills
 Это основной ресурс для поиска официальных, проверенных agent skills по мере быстрого роста экосистемы.
 
 ## Связанные записи
-- [[claude-code-plugins-guide]]
-- [[claude-code-extensions-overview]]
-- [[dotnet-claude-kit]]
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[dotnet-claude-kit]] ([dotnet-claude-kit](../tools/dotnet-claude-kit.md))

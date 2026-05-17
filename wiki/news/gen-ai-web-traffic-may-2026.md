@@ -29,8 +29,8 @@ The data reveals a clear trend: ChatGPT's dominant market position is eroding as
 Claude's growth from 1.37% to 7.95% represents the strongest relative gain, driven by the popularity of Claude Code and the agent/coding use case. Commenters note Google appears to be executing a "pull a Google" strategy — entering late with inferior products but using distribution and resources to close gaps, as they did with Chrome, Gmail, and Maps.
 
 ## Related Entries
-- [[deepseek-v4-vs-opus-kimi]]
-- [[enterprise-gpu-underutilization]]
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
+- [[enterprise-gpu-underutilization]] ([Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](../news/enterprise-gpu-underutilization.md))
 
 ---
 <!-- RU -->
@@ -53,5 +53,5 @@ Claude's growth from 1.37% to 7.95% represents the strongest relative gain, driv
 Рост Claude с 1.37% до 7.95% представляет самый сильный относительный прирост, обусловленный популярностью Claude Code и агентного/кодингового сценария использования.
 
 ## Связанные записи
-- [[deepseek-v4-vs-opus-kimi]]
-- [[enterprise-gpu-underutilization]]
+- [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
+- [[enterprise-gpu-underutilization]] ([Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](../news/enterprise-gpu-underutilization.md))

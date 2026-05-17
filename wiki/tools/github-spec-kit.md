@@ -35,9 +35,9 @@ Community extensions can add Jira integration, post-implementation code review, 
 The toolkit was mentioned in r/ClaudeCode as an alternative to CLAUDE.md-based skill frameworks, with the comment: "I use Github Speckit for anything non-trivial."
 
 ## Related Entries
-- [[spec-driven-development-bmad]]
-- [[claude-code-plugins-guide]]
-- [[awesome-agent-skills]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[awesome-agent-skills]] ([Awesome Agent Skills](../tools/awesome-agent-skills.md))
 
 ---
 <!-- RU -->
@@ -66,6 +66,6 @@ GitHub Spec-Kit — open-source CLI-инструментарий (`specify-cli`)
 Сообщество расширяет инструментарий: интеграция с Jira, ревью кода после реализации, трассировка V-Model, организационные стандарты. Упомянут в r/ClaudeCode: «Я использую Github Speckit для всего нетривиального.»
 
 ## Связанные записи
-- [[spec-driven-development-bmad]]
-- [[claude-code-plugins-guide]]
-- [[awesome-agent-skills]]
+- [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
+- [[awesome-agent-skills]] ([Awesome Agent Skills](../tools/awesome-agent-skills.md))

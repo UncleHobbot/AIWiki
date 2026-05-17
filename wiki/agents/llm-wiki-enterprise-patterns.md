@@ -39,9 +39,9 @@ Setting up and maintaining a vector database is overkill for many agentic use ca
 **Key principle — controlled context injection:** Structure information so agents receive only the context relevant to their current task. This preserves context window space and improves response accuracy at scale.
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-setup-guide]]
-- [[llmwiki-open-source]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
 
 ---
 <!-- RU -->
@@ -66,6 +66,6 @@ Setting up and maintaining a vector database is overkill for many agentic use ca
 **Ключевой принцип — управляемая инъекция контекста:** Структурируйте информацию так, чтобы агенты получали только контекст, релевантный их текущей задаче. Это сохраняет пространство контекстного окна и повышает точность ответов при масштабировании.
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-setup-guide]]
-- [[llmwiki-open-source]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
+- [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))

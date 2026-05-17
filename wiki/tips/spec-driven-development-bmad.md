@@ -25,10 +25,10 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - Talk from AI Agents Montreal meetup (2026-05-04), speaker Fabrice Monnier.
 
 ## Related Entries
-- [[specs-to-production-ai-agents]]
-- [[xp-practices-ai-assisted-development]]
-- [[claude-code-workflows-best-practices]]
-- [[github-spec-kit]]
+- [[specs-to-production-ai-agents]] ([From Specs to Production: Building Software with AI Agents End to End](../agents/specs-to-production-ai-agents.md))
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[github-spec-kit]] ([GitHub Spec-Kit: Spec-Driven Development Toolkit](../tools/github-spec-kit.md))
 
 ---
 <!-- RU -->
@@ -50,7 +50,7 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - Доклад на AI Agents Montreal meetup (2026-05-04), спикер Фабрис Монье.
 
 ## Связанные записи
-- [[specs-to-production-ai-agents]]
-- [[xp-practices-ai-assisted-development]]
-- [[claude-code-workflows-best-practices]]
-- [[github-spec-kit]]
+- [[specs-to-production-ai-agents]] ([From Specs to Production: Building Software with AI Agents End to End](../agents/specs-to-production-ai-agents.md))
+- [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
+- [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[github-spec-kit]] ([GitHub Spec-Kit: Spec-Driven Development Toolkit](../tools/github-spec-kit.md))

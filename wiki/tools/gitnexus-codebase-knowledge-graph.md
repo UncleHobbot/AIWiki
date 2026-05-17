@@ -61,10 +61,10 @@ Compared to Graphify (another codebase graphing tool), GitNexus is deeper: it us
 > "Even smaller models start performing like the big ones because the heavy lifting is done by the precomputed index, not the model's reasoning." — AI Stack Engineer
 
 ## Related Entries
-- [[graphify-llm-wiki]]
-- [[gnosis-mcp]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[claude-code-agentic-loop]]
+- [[graphify-llm-wiki]] ([Graphify: Knowledge Graph Builder for Codebases](../tools/graphify-llm-wiki.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 
 ---
 <!-- RU -->
@@ -107,7 +107,7 @@ GitNexus решает фундаментальное ограничение те
 > «Большинство агентов проваливают большие рефакторинги, потому что видят только редактируемый файл. С этими инструментами они могут сначала спросить граф, спланировать изменение и затем выполнить» — AI Stack Engineer
 
 ## Связанные записи
-- [[graphify-llm-wiki]]
-- [[gnosis-mcp]]
-- [[agentic-ai-coding-patterns-tornhill]]
-- [[claude-code-agentic-loop]]
+- [[graphify-llm-wiki]] ([Graphify: Knowledge Graph Builder for Codebases](../tools/graphify-llm-wiki.md))
+- [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
+- [[agentic-ai-coding-patterns-tornhill]] ([Agentic AI Coding: Best Practice Patterns for Speed with Quality](../tips/agentic-ai-coding-patterns-tornhill.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))

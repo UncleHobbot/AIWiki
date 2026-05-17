@@ -32,9 +32,9 @@ Key finding: the gap in surface coverage between open-weight and frontier propri
 DeepSeek V4 Flash at $0.02 for the entire run represents a new price tier where running the same task 3-4 times to compare attempts is still cheaper than a single Kimi K2.6 run.
 
 ## Related Entries
-- [[orthrus-qwen3-acceleration]]
-- [[gpt-vs-glm-5-1-comparison]]
-- [[llm-wiki-chinese-models-comparison]]
+- [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
+- [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
+- [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
 
 ---
 <!-- RU -->
@@ -58,6 +58,6 @@ Kilo CLI протестировала DeepSeek V4 Pro и Flash против Clau
 DeepSeek V4 Flash за $0.02 за весь запуск представляет новую ценовую категорию, где троекратное выполнение задачи всё равно дешевле одного запуска Kimi K2.6.
 
 ## Связанные записи
-- [[orthrus-qwen3-acceleration]]
-- [[gpt-vs-glm-5-1-comparison]]
-- [[llm-wiki-chinese-models-comparison]]
+- [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
+- [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
+- [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))

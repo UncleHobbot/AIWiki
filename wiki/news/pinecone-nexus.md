@@ -32,8 +32,8 @@ The timing (one month after Karpathy's LLM Wiki gist went viral with 41,000+ boo
 - Key framing: "There are very similar structural elements that Pinecone is now shipping in this product [to Karpathy's LLM Wiki]"
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
 
 ---
 <!-- RU -->
@@ -57,5 +57,5 @@ Pinecone — компания, определившая эпоху RAG свое�
 - Охватывает анонс Nexus в блоге Pinecone, критику RAG и сравнение с подходом Карпатого
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm-wiki-ecosystem]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))

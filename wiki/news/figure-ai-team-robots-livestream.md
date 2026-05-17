@@ -40,7 +40,7 @@ The stream is notable for demonstrating multi-robot coordination in a sustained 
 
 ## Related Entries
 
-- [[figure-ai-03-robot-30-hours]]
+- [[figure-ai-03-robot-30-hours]] ([Figure AI 03 Works 30+ Hours Straight](../news/figure-ai-03-robot-30-hours.md))
 
 ---
 <!-- RU -->
@@ -72,4 +72,4 @@ Figure AI провела прямую трансляцию, в которой т
 
 ## Связанные записи
 
-- [[figure-ai-03-robot-30-hours]]
+- [[figure-ai-03-robot-30-hours]] ([Figure AI 03 Works 30+ Hours Straight](../news/figure-ai-03-robot-30-hours.md))

@@ -32,11 +32,11 @@ The dual-level retrieval paradigm is the central innovation. Low-level retrieval
 A key practical advantage is the incremental update algorithm. Unlike systems that require full graph reconstruction when new documents arrive, LightRAG can insert new entities and relationships into the existing graph, deduplicating as it goes. This makes it feasible to maintain and grow a knowledge base over time without the compounding cost of full rebuilds. Combined with the significant reduction in token usage and ingestion cost, LightRAG presents a more scalable path to graph-based RAG than earlier approaches.
 
 ## Related Entries
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
-- [[llm-wiki-academic-applications]]
-- [[karma-knowledge-graph-enrichment]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 
 ---
 <!-- RU -->
@@ -61,8 +61,8 @@ LightRAG разработан исследователями из Универс
 Ключевое практическое преимущество — алгоритм инкрементального обновления. В отличие от систем, требующих полной реконструкции графа при поступлении новых документов, LightRAG может вставлять новые сущности и отношения в существующий граф с дедупликацией на лету. Это делает возможным поддержание и развитие базы знаний с течением времени без нарастающих затрат на полные перестроения. В сочетании со значительным сокращением использования токенов и стоимости интеграции, LightRAG представляет более масштабируемый подход к графовому RAG по сравнению с более ранними методами.
 
 ## Связанные записи
-- [[llm-wiki-scientific-research]]
-- [[llm-wiki-pattern]]
-- [[llm-wiki-academic-applications]]
-- [[karma-knowledge-graph-enrichment]]
-- [[parness-automated-scientific-research]]
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))

@@ -30,8 +30,8 @@ The `Sizing` model (documented in Han's own docs) lets you control agent swarm s
 > "Han turns planning, review, and documentation work that would normally take a team into a set of deterministic skills you run from Claude Code." — Han README
 
 ## Related Entries
-- [[claude-code-extensions-overview]]
-- [[claude-code-plugins-guide]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 
 ---
 <!-- RU -->
@@ -58,5 +58,5 @@ Han закрывает пробел для разработчиков, рабо�
 > «Han превращает работу по планированию, ревью и документации, которая обычно требует целой команды, в набор детерминированных навыков, запускаемых из Claude Code.» — README Han
 
 ## Связанные записи
-- [[claude-code-extensions-overview]]
-- [[claude-code-plugins-guide]]
+- [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
+- [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))

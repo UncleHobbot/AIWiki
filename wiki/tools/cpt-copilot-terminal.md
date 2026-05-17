@@ -27,8 +27,8 @@ It complements Copilot CLI (which handles full planning and multi-step agentic t
 Install/access from the project page at `burkeholland.github.io/cpt`.
 
 ## Related Entries
-- [[github-copilot-cli]]
-- [[github-copilot-app]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
 
 ---
 <!-- RU -->
@@ -44,5 +44,5 @@ Install/access from the project page at `burkeholland.github.io/cpt`.
 - **Создан Burke Holland** (@burkeholland, GitHub) — лёгкий компаньон к более тяжёлому Copilot CLI для быстрых разовых запросов.
 
 ## Связанные записи
-- [[github-copilot-cli]]
-- [[github-copilot-app]]
+- [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))

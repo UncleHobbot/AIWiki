@@ -57,14 +57,14 @@ Three dimensions where a well-maintained personal wiki (this one included) is al
 > "The bottleneck is no longer generating text. It is knowing what the system already knows." — LLM4SR survey, arXiv:2501.04306
 
 ## Related Entries
-- [[llm-wiki-pattern]]
-- [[llm4sr-survey]]
-- [[lightrag-graph-rag]]
-- [[karma-knowledge-graph-enrichment]]
-- [[surveygen-i-scientific-survey]]
-- [[parness-automated-scientific-research]]
-- [[omegawiki-research-platform]]
-- [[self-guided-self-play]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
+- [[surveygen-i-scientific-survey]] ([SurveyGen-I: Memory-Guided Scientific Survey Generation](../concepts/surveygen-i-scientific-survey.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
+- [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
 
 ---
 <!-- RU -->
@@ -113,11 +113,11 @@ Three dimensions where a well-maintained personal wiki (this one included) is al
 > «Узкое место больше не в генерации текста. Оно в том, чтобы знать, что система уже знает.» — обзор LLM4SR, arXiv:2501.04306
 
 ## Связанные записи
-- [[llm-wiki-pattern]]
-- [[llm4sr-survey]]
-- [[lightrag-graph-rag]]
-- [[karma-knowledge-graph-enrichment]]
-- [[surveygen-i-scientific-survey]]
-- [[parness-automated-scientific-research]]
-- [[omegawiki-research-platform]]
-- [[self-guided-self-play]]
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[llm4sr-survey]] ([LLM4SR: LLMs for Scientific Research Survey](../concepts/llm4sr-survey.md))
+- [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
+- [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
+- [[surveygen-i-scientific-survey]] ([SurveyGen-I: Memory-Guided Scientific Survey Generation](../concepts/surveygen-i-scientific-survey.md))
+- [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
+- [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))

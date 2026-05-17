@@ -188,6 +188,8 @@ title: "Entry Title"
 title_ru: "Название записи"
 category: concepts | tools | agents | models | news | tips | people
 tags: [tag1, tag2, tag3]
+aliases: [Alternate Name, acronym, common search term]   # optional — improves /wiki-search recall
+confidence: high | medium | low                          # optional — based on source tier
 date: YYYY-MM-DD          # required for news entries
 updated: YYYY-MM-DD
 sources:
@@ -210,8 +212,8 @@ Longer prose explanation, 2-4 paragraphs max.
 > "Exact quote if particularly insightful" — Author, Source
 
 ## Related Entries
-- [[related-slug-1]]
-- [[related-slug-2]]
+- [[related-slug-1]] ([Title One](../category/related-slug-1.md))
+- [[related-slug-2]] ([Title Two](../category/related-slug-2.md))
 
 ---
 <!-- RU -->
@@ -231,8 +233,8 @@ Longer prose explanation, 2-4 paragraphs max.
 > "Цитата, если особенно содержательна" — Автор, Источник
 
 ## Связанные записи
-- [[related-slug-1]]
-- [[related-slug-2]]
+- [[related-slug-1]] ([Title One](../category/related-slug-1.md))
+- [[related-slug-2]] ([Title Two](../category/related-slug-2.md))
 ```
 
 **Format rules:**
@@ -534,6 +536,42 @@ Is it about a researcher, builder, or public figure?
   → YES → people/
   → NO → concepts/ (default)
 ```
+
+---
+
+## 📐 Optional Frontmatter Fields
+
+### `aliases` — improves search recall
+```yaml
+aliases: [RAG, Retrieval Augmented Generation, retrieval-augmented]
+```
+List alternate names, acronyms, and common search terms for this entry.
+`/wiki-search` checks `by_alias` in the relation index before anything else,
+so a user typing "RAG" will immediately find `lightrag-graph-rag` even if
+"RAG" isn't in the slug. Add aliases whenever the slug alone is not the term
+people would naturally search.
+
+### `confidence` — source reliability signal
+```yaml
+confidence: high    # primary sources: arXiv, official docs, GitHub release notes
+confidence: medium  # reputable: HuggingFace blog, Anthropic blog, vendor posts
+confidence: low     # community: Reddit, tweets, unverified Medium posts
+```
+Maps to the Source Reliability Tiers in this file. Omit for entries with mixed
+or unknown source quality. `/wiki-search` can filter by confidence:
+`/wiki-search high confidence tools`.
+
+### Dual-linking in Related Entries
+Use both wikilink and markdown link on the same line so the entry renders
+correctly both in Obsidian and on GitHub:
+```markdown
+## Related Entries
+- [[lightrag-graph-rag]] ([LightRAG](../tools/lightrag-graph-rag.md))
+- [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+```
+The path is relative from the current file's directory. Format:
+`../category/slug.md`. Applies going forward — existing entries don't need
+to be backfilled all at once.
 
 ---
 

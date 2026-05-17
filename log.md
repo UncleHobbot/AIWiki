@@ -68,3 +68,5 @@
 **14:36 research + wiki article** — Created autonomous-personal-agents-openclaw-hermes-zeroclaw (agents): OpenClaw/Hermes/ZeroClaw/NemoClaw/Zo comparison across features, NAS hosting, messenger integrations, personal task automation. Fixed 5 orphans from other sessions. Vault: 109 entries.
 
 **14:45 C:/Program Files/Git/wiki-posts** — 2 posts processed. 1 created: claude-code-12-setup-tricks (tips — 12 env setup practices: CLAUDE.md memory, git worktrees, MCP, subagents, slash commands, CI/CD integration). 1 skipped (trending repos list → 5 URLs queued to links.md: agentmemory, 9router, UI-TARS-desktop, mattpocock/skills, CloakBrowser). Vault: 111 entries.
+
+**14:51 C:/Program Files/Git/wiki-links** — 5 URLs processed: agentmemory (tools — LLM Wiki pattern extension, 95.2% recall R@5, 51 MCP tools, $10/yr), 9router (tools — RTK token saver 20-40%, free AI coding via 40+ providers), ui-tars-desktop (agents — ByteDance GUI agent, books hotels/flights autonomously), mattpocock-skills-repo (tools — 18.3k stars, 14 daily skills), cloakbrowser updated (confidence+aliases). 0 failed. Processed URLs: 290.

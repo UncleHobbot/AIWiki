@@ -34,6 +34,7 @@ The skill system grew from the memory project into a comprehensive agent knowled
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[tencent-db-agent-memory]] ([TencentDB Agent Memory: Local Long-Term Memory for AI Agents](../tools/tencent-db-agent-memory.md))
+- [[agentmemory]] ([agentmemory: Persistent Memory for AI Coding Agents](../tools/agentmemory.md))
 
 ---
 <!-- RU -->

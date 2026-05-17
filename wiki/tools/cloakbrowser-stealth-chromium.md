@@ -3,6 +3,8 @@ title: "CloakBrowser: Stealth Chromium for Bot Detection Bypass"
 title_ru: "CloakBrowser: скрытый Chromium для обхода детекции ботов"
 category: tools
 tags: [cloakbrowser, stealth-browser, chromium, playwright, puppeteer, bot-detection, fingerprinting, scraping]
+aliases: [CloakBrowser, CloakHQ, stealth browser, stealth Chromium]
+confidence: high
 date: 2026-05-17
 updated: 2026-05-17
 sources:
@@ -32,8 +34,9 @@ CloakBrowser solves the fundamental problem with browser automation: antibot sys
 The result is a real Chromium binary that antibot systems score as a normal browser. The migration path from Playwright is a single import line change. Current version: v0.3.28 (Chromium 146.0.7680.177.4).
 
 ## Related Entries
-- [[react-doctor]]
-- [[github-copilot-cli]]
+- [[react-doctor]] ([React Doctor: AI-Generated React Code Linter](../tools/react-doctor.md))
+- [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
+- [[ui-tars-desktop-multimodal-agent]] ([UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](../agents/ui-tars-desktop-multimodal-agent.md))
 
 ---
 <!-- RU -->
@@ -52,5 +55,6 @@ CloakBrowser — скрытый браузер на базе Chromium, прох�
 - **MIT лицензия:** Бесплатно, без подписок, без ограничений использования
 
 ## Связанные записи
-- [[react-doctor]]
-- [[github-copilot-cli]]
+- [[react-doctor]] ([React Doctor: AI-Generated React Code Linter](../tools/react-doctor.md))
+- [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
+- [[ui-tars-desktop-multimodal-agent]] ([UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](../agents/ui-tars-desktop-multimodal-agent.md))

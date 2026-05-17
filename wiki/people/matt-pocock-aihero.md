@@ -59,6 +59,7 @@ From his "How To Make Codebases AI Agents Love" article and "Your Codebase Is NO
 - [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[mattpocock-skills-repo]] ([Matt Pocock's Skills Repo: Engineering Skills for Real Engineers](../tools/mattpocock-skills-repo.md))
 
 ---
 <!-- RU -->

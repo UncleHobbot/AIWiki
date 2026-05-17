@@ -1,15 +1,15 @@
 # Links to Process
 
 ## To Read
-https://github.com/rohitg00/agentmemory <!-- agentmemory: #1 persistent memory for AI coding agents, 6.9k stars, real-world benchmarks -->
-https://github.com/decolua/9router <!-- 9router: unlimited FREE AI coding — connects Claude Code/Codex/Cursor/Copilot to 40+ free providers, RTK -40% tokens -->
-https://github.com/bytedance/UI-TARS-desktop <!-- UI-TARS-desktop: open-source multimodal AI agent stack by ByteDance, 3.5k stars -->
-https://github.com/mattpocock/skills <!-- Matt Pocock's skills repo: 18.3k stars, the .claude/skills directory -->
-https://github.com/CloakHQ/CloakBrowser <!-- CloakBrowser: stealth Chromium passing all bot detection tests, drop-in Playwright replacement, 9.1k stars -->
 
 ## High Priority
 
 ## Done
+https://github.com/rohitg00/agentmemory <!-- agentmemory: persistent memory for AI coding agents -->
+https://github.com/decolua/9router <!-- 9router: free AI coding router + RTK token saver -->
+https://github.com/bytedance/UI-TARS-desktop <!-- UI-TARS-desktop: ByteDance multimodal GUI agent stack -->
+https://github.com/mattpocock/skills <!-- Matt Pocock's skills repo: 18.3k stars -->
+https://github.com/CloakHQ/CloakBrowser <!-- CloakBrowser: stealth Chromium -->
 https://particula.tech/blog/karpathy-llm-wiki-compiled-knowledge-vs-rag <!-- Particula: compiler analogy, hybrid wiki+RAG pattern -->
 https://pasqualepillitteri.it/en/news/1496/rag-llm-wiki-agentic-search-differences-costs-2026 <!-- Pasquale: 3-way cost comparison RAG vs Wiki vs Agentic -->
 https://atlan.com/know/llm-wiki-vs-rag-knowledge-base/ <!-- robots.txt blocked -->

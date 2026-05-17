@@ -47,7 +47,7 @@ For agentic workflows (Claude Code, Codex, OpenCode), this failure mode is ampli
 - [[spec-driven-development-bmad]]
 - [[claude-code-deferral-behavior]]
 - [[claude-code-workflows-best-practices]]
-- [[tracer-bullets-agentic-coding]]
+- [[matt-pocock-aihero]]
 
 ---
 <!-- RU -->

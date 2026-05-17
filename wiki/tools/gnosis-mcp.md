@@ -60,6 +60,7 @@ claude plugin install gnosis
 - [[llm-wiki-ecosystem]]
 - [[llmwiki-open-source]]
 - [[claude-code-plugins-guide]]
+- [[gnosis-mcp-vs-llm-wiki-pattern]]
 
 ---
 <!-- RU -->
@@ -96,3 +97,4 @@ claude plugin install gnosis
 - [[llm-wiki-ecosystem]]
 - [[llmwiki-open-source]]
 - [[claude-code-plugins-guide]]
+- [[gnosis-mcp-vs-llm-wiki-pattern]]

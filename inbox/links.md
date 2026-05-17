@@ -1,6 +1,11 @@
 # Links to Process
 
 ## To Read
+https://particula.tech/blog/karpathy-llm-wiki-compiled-knowledge-vs-rag <!-- Token cost table + agent router hybrid pattern (wiki first → RAG overflow) -->
+https://pasqualepillitteri.it/en/news/1496/rag-llm-wiki-agentic-search-differences-costs-2026 <!-- Three-way cost comparison: RAG vs LLM Wiki vs Agentic Search with dollar figures -->
+https://atlan.com/know/llm-wiki-vs-rag-knowledge-base/ <!-- Enterprise failure modes: concurrency, access control, context overflow -->
+https://gnosismcp.com/#compare <!-- Gnosis MCP vs Context7 vs docs-mcp-server vs mcp-local-rag feature matrix -->
+https://github.com/Ricardo-Kaminski/local-rag <!-- 100% local RAG for Obsidian + Zotero + Claude Code using LightRAG + Ollama + MCP -->
 
 ## High Priority
 

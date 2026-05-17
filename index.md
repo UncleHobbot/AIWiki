@@ -1,9 +1,9 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 93_
+_Last updated: 2026-05-17 | Total entries: 94_
 
 ---
 
-## 🧠 Concepts (10)
+## 🧠 Concepts (11)
 - [[agent-harness-engineering]] — Agent = Model + Harness: the discipline of designing the scaffolding (prompts, tools, context policies, hooks, recovery paths) around an LLM; a great harness beats a great model with a bad one (O'Reilly 2026, VS Code blog).
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
 - [[karma-knowledge-graph-enrichment]] — Nine collaborative LLM agents automate KG enrichment: 38,230 entities at 83.1% correctness across 1,200 PubMed articles, 18.6% conflict-edge reduction via multi-layer consensus (NeurIPS 2025).
@@ -14,6 +14,7 @@ _Last updated: 2026-05-17 | Total entries: 93_
 - [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
 - [[self-guided-self-play]] — SGS adds a Guide role to LLM self-play that prevents Conjecturer collapse; a 7B model after 200 rounds beat a 671B baseline on Lean4 theorem proving.
 - [[surveygen-i-scientific-survey]] — Memory-guided long-form survey generation: a terminology memory store prevents re-explaining defined terms across sections and across weekly runs (IJCNLP-AIJLP 2025).
+- [[gnosis-mcp-vs-llm-wiki-pattern]] -- Deep comparison: Gnosis MCP (local RAG search, fast factual lookup) vs LLM Wiki (compiled synthesis, small stable corpora) -- token economics, failure modes, hybrid architectures.
 
 ---
 
@@ -126,3 +127,4 @@ _Last updated: 2026-05-17 | Total entries: 93_
 
 ## 📅 Digests
 _No digests generated yet._
+

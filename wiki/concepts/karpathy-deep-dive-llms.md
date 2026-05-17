@@ -59,6 +59,7 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 - [[claude-code-prompting-era]]
 - [[self-guided-self-play]]
 - [[agi-impossibility-proof-debunked]]
+- [[andrej-karpathy]]
 
 ---
 <!-- RU -->
@@ -94,3 +95,4 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 - [[claude-code-prompting-era]]
 - [[self-guided-self-play]]
 - [[agi-impossibility-proof-debunked]]
+- [[andrej-karpathy]]

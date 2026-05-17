@@ -30,6 +30,7 @@ From community discussion (r/ClaudeCode):
 - [[claude-code-memory]]
 - [[claude-code-agentic-loop]]
 - [[claude-code-extensions-overview]]
+- [[llm-assumption-propagation]]
 
 ---
 <!-- RU -->
@@ -56,3 +57,4 @@ From community discussion (r/ClaudeCode):
 - [[claude-code-memory]]
 - [[claude-code-agentic-loop]]
 - [[claude-code-extensions-overview]]
+- [[llm-assumption-propagation]]

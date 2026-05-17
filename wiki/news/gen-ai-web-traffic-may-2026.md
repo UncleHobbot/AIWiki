@@ -30,6 +30,7 @@ Claude's growth from 1.37% to 7.95% represents the strongest relative gain, driv
 
 ## Related Entries
 - [[deepseek-v4-vs-opus-kimi]]
+- [[enterprise-gpu-underutilization]]
 
 ---
 <!-- RU -->
@@ -53,3 +54,4 @@ Claude's growth from 1.37% to 7.95% represents the strongest relative gain, driv
 
 ## Связанные записи
 - [[deepseek-v4-vs-opus-kimi]]
+- [[enterprise-gpu-underutilization]]

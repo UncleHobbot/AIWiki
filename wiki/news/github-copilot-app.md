@@ -38,6 +38,7 @@ Early adopter Oren Melamed (GitHub Star) described it as growing into "a new way
 ## Related Entries
 - [[github-copilot-cli]]
 - [[llm-wiki-enterprise-patterns]]
+- [[github-agentic-developer-certification]]
 
 ---
 <!-- RU -->
@@ -60,3 +61,4 @@ GitHub Copilot App (репозиторий: `github/app`) вышел в мае 2
 ## Связанные записи
 - [[github-copilot-cli]]
 - [[llm-wiki-enterprise-patterns]]
+- [[github-agentic-developer-certification]]

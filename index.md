@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 106_
+_Last updated: 2026-05-17 | Total entries: 108_
 
 ---
 
@@ -24,8 +24,9 @@ _Last updated: 2026-05-17 | Total entries: 106_
 
 ---
 
-## 🛠️ Tools (34)
+## 🛠️ Tools (35)
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
+- [[cloakbrowser-stealth-chromium]] — Stealth Chromium with 49 C++ source-level fingerprint patches. Drop-in Playwright/Puppeteer replacement. 30/30 bot detection tests passed, +9.1K stars/week.
 - [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
 - [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
 - [[awesome-agent-skills]] — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Vercel, Cloudflare, Sentry, and more).
@@ -62,9 +63,10 @@ _Last updated: 2026-05-17 | Total entries: 106_
 
 ---
 
-## 🤖 Agents (13)
+## 🤖 Agents (14)
 - [[acdc-agent-centric-development-cycle]] — AC/DC (Agent-Centric Development Cycle) is a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons.
 - [[anatomy-ai-agent-pipeline-loop-tools]] — Senior-level dissection of AI agent internals: 7 levels (workflow → multi-agent), 12-stage pipeline, agent loop guardrails, MCP tool design pitfalls, system prompts as contracts.
+- [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] — Self-hosted personal AI agents (OpenClaw, Hermes, ZeroClaw) running locally on Synology/Ollama with Telegram interface.
 - [[claude-code-agentic-loop]] — Claude Code is an agentic assistant built on a three-phase loop — gather context, take action, verify results — powered by Claude models and built-in tools.
 - [[claude-code-directory]] — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules, and auto memory — from `.claude/` directories.
 - [[claude-code-extensions-overview]] — Claude Code's extension layer: persistent context (CLAUDE.md), reusable workflows (Skills), external services (MCP), isolated workers (Subagents), and event automation (Hooks).

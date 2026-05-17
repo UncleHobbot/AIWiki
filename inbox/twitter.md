@@ -1,8 +1,8 @@
 # Twitter / X Queue
 
-## To Read
-[Nainsi Dwivedi on X: "These 12 Claude Code Setup Tricks Made AI Feel Like a Real Engineer" / X](https://x.com/NainsiDwiv50980/status/2056021997659017452)
-https://x.com/sharbel/status/2055680438417412359?s=20
+## Done (May 17)
+https://x.com/NainsiDwiv50980/status/2056021997659017452 <!-- Nainsi: "12 Claude Code Setup Tricks" — X article link, no extractable text -->
+https://x.com/sharbel/status/2055680438417412359 <!-- Sharbel: 10 fastest growing GitHub repos — CloakBrowser +9.1K stars -->
 
 
 ## Done

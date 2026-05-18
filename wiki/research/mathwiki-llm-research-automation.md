@@ -13,95 +13,47 @@ sources:
 
 ## Summary
 
-AntonIliashenko/MathWiki is already a sophisticated LLM-maintained research wiki with 70+ opencode skills, proof error tracking, contradiction directories, and computational verification scripts. This article identifies the **real remaining gaps** — not the basics it already has — and provides ready-to-use prompts and scripts for each one. The focus is on what would make the Smith map deformation theory programme specifically more effective.
+AntonIliashenko/MathWiki is a sophisticated LLM-maintained research wiki for Smith map deformation theory. As of 2026-05-18, all six originally planned infrastructure improvements have been implemented: automated arXiv scanning, broken-link detection, typed frontmatter relations, individual conjecture pages, a failed-approaches archive, and a session handoff brief. This article documents what was built, how it was implemented, and the remaining open gaps.
 
 ## Key Ideas
 
-- **What's already working well:** adversarial proof review, citation-first architecture, `wiki/answers/` for error tracking, `wiki/contradictions/` discipline, `math-reasoning` skill, 70+ domain skills.
-- **Gap 1: No automated arXiv scan.** The repo has `literature-search` and `academic-search` skills but runs manually. A weekly GitHub Action for `math.DG`, `math.SG`, `math.AP` would surface relevant new preprints automatically.
-- **Gap 2: No broken-link detector.** The wiki uses `[[wikilinks]]` but there's no script scanning for targets that don't exist. Several referenced concepts have no page yet.
-- **Gap 3: No typed frontmatter relations.** Semantic dependency between papers and concepts lives in prose, not queryable frontmatter fields — limiting automated context assembly.
-- **Gap 4: Single monolithic research-question file.** As the programme expands to Cayley/Spin(7) and enumerative invariants, individual conjecture pages with `status` fields will scale better than one big file.
-- **Gap 5: No failed-approaches archive.** `wiki/answers/` captures resolved errors. There's no `wiki/approaches/` for abandoned proof strategies — causing dead-end rediscovery in long-running programmes.
-- **Gap 6: No daily research context brief.** Each opencode session starts cold. A `research_context.md` injected via AGENTS.md would carry forward current open questions, recent progress, and active methods without manual re-establishment.
+- **All 6 planned improvements are done** (implemented 2026-05-18): arXiv scan, link checker, typed relations, conjecture pages, approaches archive, context brief.
+- **Bonus improvement 7 was added:** `/wiki-insights` — a retrospective session analysis command that reads git history, `wiki/approaches/`, `wiki/answers/`, and conversation context to surface patterns, failures, and knowledge gaps.
+- **Current state (2026-05-18):** 19 papers, 18 concepts, 3 methods, 7 answers, 5 approaches, 5+1 research-question pages, 1 review; 13 scripts in `scripts/`; 7 domain commands; 70+ opencode skills.
+- **Remaining gaps after implementation:** 22 broken wiki links (missing concept stubs), empty `wiki/contradictions/` (discipline exists, no entries yet), no method pages for Taubes trick / Spencer theory / Banach manifold IFT, and Cayley Smith map deformation theory (Section 2.3 of the preprint is empty — the active mathematical frontier).
+- **OpenCode skills are now project-level** (`.opencode/skills/`) — available to anyone who clones the repo without per-machine installation.
 
-## Baseline: What the Repo Already Has
+## Baseline: What the Repo Has Now
 
-Before adding anything, these are the capabilities *already in place*:
-
-| Capability | How it's implemented |
+| Capability | Implementation |
 |---|---|
-| Adversarial proof review | `academic-paper-reviewer` (5 reviewers: EIC + 3 peers + Devil's Advocate), `grill-me`, `paper-audit` |
-| Proof error tracking | `wiki/answers/` — 4 entries already (Prop 2.9, Thm 4.2, Spencer cohomology, weak Smith equation) |
-| Contradiction tracking | `wiki/contradictions/` directory (currently empty; discipline is established) |
-| Literature search | `literature-search` (Semantic Scholar/arXiv/OpenAlex), `academic-search`, `deep-research` |
-| Mathematical reasoning | `math-reasoning` skill with LaTeX output |
-| Computational verification | `find_smith_maps.py`, `verify_smith.py`, `prove_smith.py` |
-| LaTeX output | `latex-document`, `latex-paper-en`, `paper-compilation` |
-| Confidence labelling | Every page has `confidence: high|medium|low` in frontmatter |
-| Citation management | `citation-management`, `bib-search-citation` |
-| Novelty checking | `novelty-assessment` skill |
-
-Do **not** add these — they're already covered.
+| Adversarial proof review | `academic-paper-reviewer` (EIC + 3 peers + Devil's Advocate), `grill-me`, `paper-audit` |
+| Proof error tracking | `wiki/answers/` — 7 entries (Prop 2.9, Thm 4.2, Spencer cohomology, weak Smith eq., deg-3 harmonics, role of L, spherical coords) |
+| Contradiction tracking | `wiki/contradictions/` — directory established, **0 entries yet** |
+| Failed-approaches archive | `wiki/approaches/` — 5 entries (all targeting `smith-map-def-theory`) |
+| Literature search | `literature-search`, `academic-search`, `deep-research` |
+| arXiv scanning | `/wiki-arxiv` + `scripts/fetch_arxiv.py` — weekly scan, math.DG/SG/AP/CV, 25+ keywords |
+| Broken-link detection | `/wiki-checklinks` + `scripts/check_links.py` — near-miss detection, 3 buckets |
+| Typed frontmatter relations | `/wiki-relations` + `scripts/add_relations.py` — all 19 papers have `builds_on`, `resolves`, `uses`, etc. |
+| Individual conjecture pages | `wiki/research-questions/` — 5 focused pages + hub + `_index.md` with dependency graph |
+| Session handoff brief | `research_context.md` + `/wiki-context` + `scripts/generate_context.py` |
+| Retrospective analysis | `/wiki-insights` + `scripts/analyze_sessions.py` |
+| Mathematical reasoning | `math-reasoning` with LaTeX output |
+| Computational verification | `find_smith_maps.py`, `verify_smith.py`, `prove_smith.py` (all in `scripts/`) |
+| Relation graph queries | `scripts/wiki_graph.py --resolves --builds-on SLUG --dot` |
+| LaTeX output | `latex-document`, `latex-paper-en`, `paper-compilation`; 30+ PDFs in `output/` |
+| Confidence labelling | Every page has `confidence: high|medium|low` |
+| Session analysis | `scripts/analyze_sessions.py [--git] [--gaps] [--failures] [--json]` |
 
 ---
 
-## Improvement 1 — Automated Weekly arXiv Scan (steal from OmegaWiki)
+## Improvement 1 — Automated Weekly arXiv Scan ✅ DONE
 
-OmegaWiki runs a GitHub Action daily for arXiv. For Smith map research, the relevant sections are:
-- `math.DG` (Differential Geometry) — Smith maps, calibrated submanifolds, special holonomy
-- `math.SG` (Symplectic Geometry) — J-holomorphic curves, Gromov-Witten theory
-- `math.AP` (Analysis of PDEs) — elliptic PDE, p-harmonic functions, gradient estimates
-- `math.CV` (Complex Variables) — quasiregular maps, Schwarz lemmas
+**Status:** Implemented 2026-05-18. Commit `fe2a5bc`.
 
-**Add `fetch_arxiv.py` to the repo root:**
+`/wiki-arxiv` fetches the last 14 days of submissions from arXiv (math.DG, math.SG, math.AP, math.CV), filters by 25+ keywords specific to Smith map / calibrated geometry research, presents ranked results (RELEVANT / BORDERLINE / SKIP), and creates `wiki/papers/` entries for confirmed papers. Also writes a scan log to `logs/arxiv-scan-YYYY-MM-DD.md`, flags concepts in abstracts without wiki pages, and checks whether a paper advances the active research question.
 
-```python
-# fetch_arxiv.py — weekly arXiv scanner for Smith map research
-import urllib.request, json, datetime
-from pathlib import Path
-
-AREAS = ["math.DG", "math.SG", "math.AP", "math.CV"]
-KEYWORDS = ["smith map", "calibrated", "associative", "G2 structure",
-            "Spin(7)", "J-holomorphic", "conformal immersion", "p-harmonic"]
-MAX_RESULTS = 20
-
-def fetch_recent(area):
-    base = "https://export.arxiv.org/api/query"
-    query = f"search_query=cat:{area}&sortBy=submittedDate&sortOrder=descending&max_results={MAX_RESULTS}"
-    url = f"{base}?{query}"
-    with urllib.request.urlopen(url, timeout=30) as r:
-        return r.read().decode("utf-8")
-
-def is_relevant(title, abstract):
-    text = (title + " " + abstract).lower()
-    return any(kw in text for kw in KEYWORDS)
-```
-
-**Add to GitHub Actions (`.github/workflows/arxiv-scan.yml`):**
-
-```yaml
-name: Weekly arXiv Scan
-on:
-  schedule:
-    - cron: '0 8 * * 1'  # Every Monday 08:00 UTC
-  workflow_dispatch:
-
-jobs:
-  scan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
-      - run: python fetch_arxiv.py
-      - run: |
-          git config user.email "bot@mathwiki"
-          git config user.name "arxiv-bot"
-          git add wiki/papers/ logs/
-          git commit -m "arxiv-scan: $(date +%Y-%m-%d)" || echo "no new papers"
-          git push
-```
+**Standalone:** `python scripts/fetch_arxiv.py [--days N] [--cat math.DG] [--json]`
 
 **Prompt: Extract paper wiki entry from arXiv abstract**
 ```
@@ -124,26 +76,25 @@ type: paper
 status: reading|read
 updated: [today]
 confidence: medium
+builds_on: []
+resolves: []
+uses: []
+open_problems: []
 ---
 
 # [Title]
 
 ## Key Results
 - [theorem or result 1 — stated precisely]
-- [theorem or result 2]
 
 ## Methods Used
 - [technique from wiki/methods/ if applicable]
 
 ## Connections to My Research
 - [[Smith Map]] — [how this relates]
-- [[research-question: smith-map-deformation-theory]] — [relevance]
 
 ## Open Questions It Raises
 - [question 1]
-
-## Quotes Worth Keeping
-> "[exact quote]" — p. [N]
 
 Flag if any results: (a) contradict existing wiki pages, (b) resolve or
 advance the active research question, (c) introduce a method worth adding
@@ -152,42 +103,18 @@ to wiki/methods/.
 
 ---
 
-## Improvement 2 — Broken-Link Detector
+## Improvement 2 — Broken-Link Detector ✅ DONE
 
-The wiki uses `[[Smith Map]]`, `[[Calibration]]`, etc. throughout, but there's no script to check which referenced pages don't exist. This matters especially as new papers reference concepts not yet documented.
+**Status:** Implemented 2026-05-18. Commit `e6bce7b`.
 
-**Add `check_links.py` to the repo root:**
+`/wiki-checklinks` scans every `[[wikilink]]` against the page index with near-miss detection (Jaccard word-similarity), classifying results into three buckets:
+- **Bucket A** — typo/near-miss (e.g. `[[Elliptic Edge Operators]]` → `Elliptic Edge Operator`)
+- **Bucket B** — links pointing at answer or research-question pages instead of concept pages
+- **Bucket C** — genuinely missing concept stubs
 
-```python
-# check_links.py — find [[links]] with no target page
-import re
-from pathlib import Path
-from collections import defaultdict
+**Current state:** 22 broken links (primarily Bucket C: Laplacian, Ricci Curvature, Weyl Curvature, Dirac Operator, Comass Norm, and ~15 others). Run `/wiki-checklinks` and choose `stubs all` to scaffold them.
 
-WIKI = Path("wiki")
-WIKILINK_RE = re.compile(r"\[\[([^\]|#\n]+?)(?:[|#][^\]]+)?\]\]")
-
-# Build index of all existing page names (case-insensitive)
-existing = set()
-for p in WIKI.rglob("*.md"):
-    existing.add(p.stem.lower())
-    existing.add(p.stem)  # exact case too
-
-# Scan for broken links
-broken = defaultdict(list)
-for p in sorted(WIKI.rglob("*.md")):
-    text = p.read_text(encoding="utf-8")
-    for link in WIKILINK_RE.findall(text):
-        target = link.strip()
-        if target.lower() not in existing and target not in existing:
-            broken[target].append(p.name)
-
-print(f"Broken links: {len(broken)}")
-for target, sources in sorted(broken.items(), key=lambda x: -len(x[1])):
-    print(f"  [[{target}]] — referenced in: {', '.join(sources)}")
-```
-
-Run weekly: `python check_links.py`. Each broken link is a concept page to create.
+**Standalone:** `python scripts/check_links.py [--broken-only] [--orphans-only] [--json]`
 
 **Prompt: Scaffold missing concept pages**
 ```
@@ -198,7 +125,7 @@ conventions.
 My research focus: Smith maps (calibrated + weakly conformal maps),
 G₂/Spin(7) special holonomy, conformal geometry, deformation theory.
 
-Missing concepts: [paste output from check_links.py]
+Missing concepts: [paste output from check_links.py --broken-only]
 
 For each concept, create:
 ---
@@ -225,138 +152,65 @@ Mark concepts you're unsure about with `confidence: low` and add a note
 
 ---
 
-## Improvement 3 — Typed Frontmatter Relations
+## Improvement 3 — Typed Frontmatter Relations ✅ DONE
 
-Currently cross-links live in body text as `[[wikilinks]]` and in `## Connections` sections. This is readable but not machine-queryable. Adding structured frontmatter fields enables:
-- "What papers does this result depend on?" (automated context injection)
-- "What does this paper contradict?" (contradiction detector)
-- "What research questions does this settle?" (progress tracking)
+**Status:** Implemented 2026-05-18. Commit `3d9dc90`. All 19 paper pages updated via `scripts/add_relations.py`.
 
-**Proposed schema for paper pages:**
+**Current graph state:**
+- 25 `builds_on` edges
+- 5 `improves_on` edges
+- 1 `resolves` edge (the 2026 deformation theory preprint resolves `smith-map-def-theory`)
+- 7 `uses` edges
+- 2 `open_problems` edges
+- 0 `challenges` edges (no confirmed contradictions yet)
+
+**Schema (all paper pages):**
 ```yaml
-builds_on:
-  - 2012-mcduff-salamon-j-holomorphic-symplectic-topology  # foundational reference
-improves_on: []  # direct improvement on a specific prior result
-challenges: []   # papers this result contradicts or weakens
-resolves:
-  - smith-map-deformation-theory  # research question this advances
-uses:
-  - Nash-Moser Implicit Function Theorem  # method page
-  - Moser Iteration Technique
-open_problems:
-  - cayley-smith-map-moduli  # leaves open (create stub if needed)
+builds_on:      # paper slugs this work foundationally depends on
+improves_on:    # papers this work directly supersedes
+challenges:     # papers whose claims this contradicts
+resolves:       # research-question slugs this advances
+uses:           # method page names
+open_problems:  # research-question slugs left open
 ```
 
-**Prompt: Add typed relations to existing paper pages**
-```
-I have a paper wiki entry for my differential geometry research. Add
-typed frontmatter relation fields to it.
+**Query:** `python scripts/wiki_graph.py [--resolves] [--builds-on SLUG] [--dot]`
 
-Paper entry: [paste full page]
-
-Available pages for cross-linking:
-  Papers: [list from wiki/papers/]
-  Concepts: [list from wiki/concepts/]
-  Methods: [list from wiki/methods/]
-  Research questions: [list from wiki/research-questions/]
-
-Add these frontmatter fields (leave empty [] if genuinely not applicable):
-  builds_on: [paper slugs this result requires]
-  improves_on: [paper slugs this directly supersedes]
-  challenges: [paper slugs this contradicts]
-  resolves: [research-question slugs this advances]
-  uses: [method page names]
-  open_problems: [new stubs to create]
-
-Return: complete updated frontmatter block only.
-If any `challenges` entries exist, also draft a one-paragraph entry for
-wiki/contradictions/ explaining the conflict.
-```
+**Constraint enforced by `/wiki-relations`:** `challenges` entries require a `wiki/contradictions/` page; all slug references must exist as actual files.
 
 ---
 
-## Improvement 4 — Individual Conjecture Pages
+## Improvement 4 — Individual Conjecture Pages ✅ DONE
 
-`wiki/research-questions/smith-map-deformation-theory.md` is a single 300+ line file covering the entire deformation theory programme. As the programme expands (Cayley case, enumerative invariants, Z₂-harmonic spinors connections), this won't scale.
+**Status:** Implemented 2026-05-18. Commit `340b6db`. Monolithic `smith-map-deformation-theory.md` split into five focused pages.
 
-**Proposed structure:**
-```
-wiki/research-questions/
-  _index.md               # overview + links to all questions
-  smith-map-def-theory.md # the associative case (current, mostly settled)
-  cayley-smith-moduli.md  # Spin(7) case — open
-  enumerative-invariants.md # long-term programme — open
-  z2-spinors-connection.md  # connection to Z₂-harmonic spinors — speculative
-```
+**Current research-question pages:**
 
-**Frontmatter for a conjecture page:**
-```yaml
----
-type: research-question
-status: open|in-progress|settled|abandoned
-difficulty: foundational|tractable|speculative
-last_worked: 2026-05-18
-attempts: 2
-depends_on:
-  - smith-map-deformation-theory  # must be settled first
-blocks:
-  - enumerative-invariants        # this blocks the longer programme
----
-```
+| Page | Status | Difficulty | Notes |
+|---|---|---|---|
+| `smith-map-def-theory` | in-progress | foundational | Associative G₂ case; Prop 2.9 + polynomial non-existence proved; attempts: 7 |
+| `cayley-smith-moduli` | open | tractable | Spin(7) case — **current frontier** |
+| `compactness-smith-maps` | open | foundational | Blocks enumerative theory |
+| `enumerative-invariants-calibrated` | open | speculative | Long-term programme |
+| `z2-spinors-connection` | open | speculative | No precise conjecture yet |
 
-**Prompt: Split the current research-question page**
-```
-I have a single large research-question page covering multiple distinct
-sub-problems. Help me split it into individual conjecture pages.
+The original `smith-map-deformation-theory.md` is preserved as a hub page to avoid breaking existing links. `wiki/research-questions/_index.md` has a dependency table and graph.
 
-Current page: [paste smith-map-deformation-theory.md]
-
-Proposed sub-pages:
-1. smith-map-def-theory (associative G₂ case — largely settled in 2026 preprint)
-2. cayley-smith-moduli (Spin(7) case — fully open)
-3. enumerative-invariants-calibrated (long-term programme — speculative)
-
-For each sub-page:
-- Summarize the specific question (≤ 3 sentences)
-- List "What Is Already Known" (draw from the current page)
-- List "Key Obstacles" (what makes this hard)
-- Set `status:` correctly
-- Set `depends_on:` and `blocks:` relations
-- Preserve all existing proof details in the relevant sub-page
-
-Return all three complete pages.
-```
+**Dependency chain:** `smith-map-def-theory` → `cayley-smith-moduli` → `compactness-smith-maps` → `enumerative-invariants-calibrated`
 
 ---
 
-## Improvement 5 — Failed-Approaches Archive
+## Improvement 5 — Failed-Approaches Archive ✅ DONE
 
-`wiki/answers/` records *resolved* errors (the covering-map mistake, the chain-rule gap). There's no parallel record of *abandoned proof strategies* — approaches that were tried, seemed promising, then hit an obstacle. For a long programme like Cayley Smith map deformation theory, not recording these means rediscovering dead ends months later.
+**Status:** Implemented 2026-05-18. Commit `7fbe236`. Five entries documented in `wiki/approaches/`.
 
-**Add `wiki/approaches/` with this schema:**
-```yaml
----
-type: proof-attempt
-target: cayley-smith-moduli   # which research question
-status: failed|partial|abandoned|promising
-method: Nash-Moser Implicit Function Theorem
-date_attempted: 2026-05-18
----
-
-# Attempt: Nash-Moser for Cayley Smith Maps
-
-## Strategy
-[What the approach tried to do]
-
-## Where It Got Stuck
-[The exact obstacle — be precise enough that future-you won't retry it]
-
-## Why It Might Still Work With Modifications
-[If applicable: what would need to change]
-
-## Alternative Suggested
-[Next approach to try instead]
-```
+| Entry | Method | Status | Core obstacle |
+|---|---|---|---|
+| `covering-map-injectivity` | Covering space argument | failed | `u(L)` need not be a manifold |
+| `naive-linearisation-smith-equation` | Direct linearisation | failed | `D_u ≡ 0` — equality case of a maximum; fundamental obstruction for all k > 2 |
+| `direct-fredholm-spinorial-equation` | IFT on spinorial equation | partial | Overdetermined: rank(domain) < rank(codomain) |
+| `polynomial-smith-map-existence` | Polynomial ansatz (SymPy + NumPy) | failed | Conformality forces nonlinear Jacobian to zero |
+| `submanifold-rigidity-parametrization` | Submanifold rigidity decomposition | failed | No Liouville-type uniqueness for conformal immersions |
 
 **Prompt: Extract a failed-approach entry from a session**
 ```
@@ -377,67 +231,93 @@ entry? If so, draft a `wiki/contradictions/` entry.
 
 ---
 
-## Improvement 6 — Daily Research Context Brief
+## Improvement 6 — Daily Research Context Brief ✅ DONE
 
-Every opencode session starts cold. The AGENTS.md currently provides domain rules and a repository map. Add a generated `research_context.md` — updated after each session — that primes the agent with the current state of the programme:
+**Status:** Implemented 2026-05-18. Commit `f550037`. `research_context.md` committed and active; referenced from AGENTS.md.
 
-**Add to AGENTS.md:**
-```markdown
-## Current Research Context
-See `research_context.md` (regenerate after each session).
+**Current brief excerpt (2026-05-18):**
+> **Frontier:** Cayley (Spin(7)) Smith map deformation theory — Section 2.3 of the deformation theory preprint is empty. **Dead ends — do not retry:** naive linearisation (`D_u ≡ 0`); direct Fredholm on spinorial equation (overdetermined). **Next session:** construct `F̃_Cay = C ∘ F_Cay` by direct analogy with Section 2.1.
 
-The active research question is: wiki/research-questions/smith-map-deformation-theory.md
-Current blockers: [list from approaches/ with status=abandoned or stuck]
-Most recent results: [last 3 entries in wiki/answers/]
-Papers read this month: [from logs/]
-```
+**Regenerate:** `/wiki-context` or `python scripts/generate_context.py --brief`
 
-**Prompt: Generate a fresh research context brief**
-```
-Generate a concise research context brief for injection into my opencode
-AGENTS.md. This will be read at the start of every session.
+---
 
-Current programme: deformation theory of Smith maps (calibrated, weakly
-conformal maps) — developing moduli spaces analogous to J-holomorphic curves.
+## Improvement 7 — Session Retrospective Analysis ✅ DONE (Bonus)
 
-Source material:
-- Active research question: [paste smith-map-deformation-theory.md summary]
-- Recent answers/: [list last 3 answer pages and their resolutions]
-- Recent approaches/: [list any abandoned approaches with reasons]
-- Papers added this month: [list]
+**Status:** Implemented 2026-05-18. Commit `6d90567`. Not in the original plan — added as a result of recognising the need for meta-level session analysis.
 
-Output: a 150-word brief in this structure:
+`/wiki-insights` reads git history, `wiki/approaches/`, `wiki/answers/`, memory files, CLAUDE.md Red Flags, and the current conversation to produce a structured report across six sections:
 
-## Research Context (updated [date])
-**Programme:** [1 sentence]
-**Current frontier:** [1 sentence — what's the next open problem]
-**Recent progress:** [2-3 bullet points]
-**Active dead ends:** [1-2 bullet points — approaches NOT to retry]
-**Next session should focus on:** [1 sentence recommendation]
+1. Working style patterns
+2. Success history
+3. **Failure history** *(enforced as the longest section)*
+4. Process improvements
+5. Knowledge to extract as wiki documents
+6. Immediate actions (ranked by impact, exact file paths)
 
-This should read like a handoff note from your past self to your future self.
-```
+Every observation must cite evidence by slug, commit, or conversation moment. Reports save to `wiki/insights/YYYY-MM-DD-insights.md` on request.
+
+**Standalone:** `python scripts/analyze_sessions.py [--git] [--gaps] [--failures] [--json]`
+
+---
+
+## Remaining Gaps (Post-Implementation)
+
+These items were identified in the 2026-05-18 session but not addressed:
+
+### Gap A — 22 Broken Wiki Links
+
+`/wiki-checklinks` reports 22 broken `[[links]]`, primarily Bucket C (genuinely missing concept stubs). Key missing pages:
+
+- `Laplacian`, `Ricci Curvature`, `Weyl Curvature` — basic differential geometry concepts referenced across many papers but never given stub pages
+- `Dirac Operator` — required for the spinorial formulation of Smith maps
+- `Comass Norm` — used in calibration theory definition
+
+**Fix:** Run `/wiki-checklinks`, then `stubs all` to scaffold the ~19 missing stubs.
+
+### Gap B — Empty `wiki/contradictions/`
+
+The discipline is established (the directory exists, the `challenges:` frontmatter field is enforced). No entries have been created yet despite several near-conflicts being documented in `wiki/answers/`:
+- The original Prop 2.9 proof (covering-map argument) is contradicted by `fixing-proposition-2-9-covering-map-error.md`
+- Theorem 4.2 (`fixing-theorem-4-2-chain-rule.md`) has `confidence: low` — the required gradient estimate is an open problem
+
+**Fix:** Cross-reference `wiki/answers/` entries into `wiki/contradictions/` pages using the `challenges:` field.
+
+### Gap C — Missing Method Pages
+
+Three methods are used across multiple papers and the deformation theory proof but have no `wiki/methods/` pages:
+- **Taubes trick** — used in moduli space compactness arguments
+- **Overdetermined Elliptic PDE / Spencer Theory** — the theoretical backbone of the deformation theory proof
+- **Banach Manifold IFT** — used in the smooth structure theorem (Theorem 2.28)
+
+**Fix:** Create stubs, then fill with material from `sources/Deformations.pdf`.
+
+### Gap D — Cayley Smith Map Deformation Theory (Mathematical)
+
+Section 2.3 of the 2026 preprint (`output/smith-map-deformation-theory.pdf`) is empty. The associative blueprint (spinorial reformulation `η(θ) = 0` → weak Smith equation `F̃ = C ∘ F`) transfers to k = 4, but has not been executed.
+
+**Fix:** Write Section 2.3 using `/wiki-conjecture` to track progress against `wiki/research-questions/cayley-smith-moduli.md`. Use `grill-me` to stress-test the spinorial decomposition before committing to the preprint.
 
 ---
 
 ## What Is Already Excellent (Do Not Rebuild)
 
-- **`academic-paper-reviewer`** already simulates 5 reviewers including Devil's Advocate — this is better than OmegaWiki's cross-model review. Use it.
-- **`grill-me`** is a strong adversarial proof checker. Run it on every new proof before filing in the wiki.
-- **`novelty-assessment`** replaces the "novelty check before compile" idea from OmegaWiki — it already does a systematic search.
-- **`wiki/contradictions/`** already encodes the discipline of tracking conflicts. When it gets populated, the `challenges:` frontmatter field (Improvement 3) will make it queryable.
-- **Python scripts** (`find_smith_maps.py` etc.) are already doing computational grounding. These are ahead of OmegaWiki's feature set.
+- **`academic-paper-reviewer`** already simulates 5 reviewers including Devil's Advocate — better than OmegaWiki's cross-model review. Use it.
+- **`grill-me`** is a strong adversarial proof checker. Run on every new proof before filing in the wiki.
+- **`novelty-assessment`** does systematic novelty search — do not re-implement.
+- **`wiki/contradictions/`** discipline is established. When populated, the `challenges:` field makes it queryable.
+- **Python scripts** (`find_smith_maps.py`, `verify_smith.py`, `prove_smith.py`) are ahead of OmegaWiki's feature set.
+- **`wiki/approaches/`** prevents dead-end rediscovery. Always check it before starting a new proof strategy.
 
 ## Priority Table
 
-| # | Improvement | Effort | Impact | When |
+| # | Item | Effort | Impact | When |
 |---|---|---|---|---|
-| 1 | Add `check_links.py` + run it | 20 min | High | **Now** |
-| 2 | Split research-question page into sub-pages | 1 hr | High | **Now** |
-| 3 | Add typed frontmatter relations to 5 key paper pages | 1 hr | Medium | This week |
-| 4 | Start `wiki/approaches/` — file 2-3 past dead ends | 30 min | High | This week |
-| 5 | Generate and commit `research_context.md` | 15 min | High | **Now** |
-| 6 | `fetch_arxiv.py` + GitHub Action | 3 hr | High (ongoing) | Next sprint |
+| 1 | Fill `wiki/contradictions/` from existing `wiki/answers/` | 30 min | High | **Now** |
+| 2 | Scaffold 22 missing concept stubs via `/wiki-checklinks stubs all` | 20 min | High | **Now** |
+| 3 | Write Cayley Smith map deformation theory (Section 2.3) | weeks | Very high | Active frontier |
+| 4 | Add method pages: Taubes trick, Spencer theory, Banach manifold IFT | 2 hr | Medium | This week |
+| 5 | Resolve Theorem 4.2 (`confidence: low`) once gradient estimate is established | depends | High | After Gap D progress |
 
 ## Related Entries
 
@@ -453,152 +333,92 @@ This should read like a handoff note from your past self to your future self.
 
 ## Краткое описание
 
-AntonIliashenko/MathWiki — уже зрелая LLM-поддерживаемая исследовательская вики с 70+ навыками opencode, трекером ошибок в доказательствах и вычислительными скриптами. Эта статья определяет реальные оставшиеся пробелы и предоставляет готовые промпты и скрипты для каждого из них.
+AntonIliashenko/MathWiki — зрелая LLM-поддерживаемая исследовательская вики для теории деформаций Smith-отображений. По состоянию на 2026-05-18 все шесть запланированных инфраструктурных улучшений реализованы: автоматическое сканирование arXiv, детектор сломанных ссылок, типизированные поля frontmatter, отдельные страницы гипотез, архив неудачных подходов и бриф о текущем состоянии сессии. Статья документирует, что было построено, как это реализовано и какие пробелы остаются.
 
 ## Ключевые идеи
 
-- **Что уже работает хорошо:** состязательная рецензия доказательств, citation-first архитектура, `wiki/answers/` для трекинга ошибок, дисциплина `wiki/contradictions/`, навык `math-reasoning`, 70+ доменных навыков.
-- **Пробел 1: нет автоматического сканирования arXiv.** `literature-search` и `academic-search` работают вручную. Еженедельный GitHub Action для `math.DG`, `math.SG`, `math.AP` выявит релевантные новые препринты автоматически.
-- **Пробел 2: нет детектора сломанных ссылок.** Несколько концептов, на которые ссылается вики, не имеют страниц.
-- **Пробел 3: нет типизированных полей в frontmatter.** Семантические зависимости между статьями и концептами живут в тексте, а не в запрашиваемых полях frontmatter.
-- **Пробел 4: монолитный файл исследовательского вопроса.** По мере расширения программы (случай Cayley/Spin(7), перечислительные инварианты) нужны отдельные страницы гипотез со статусами.
-- **Пробел 5: нет архива неудачных подходов.** `wiki/answers/` фиксирует ошибки. Нет `wiki/approaches/` для стратегий, которые были опробованы и оставлены — это приводит к повторному открытию тупиков.
-- **Пробел 6: нет ежедневного брифа о текущем состоянии исследования.** Каждая сессия opencode начинается с нуля. `research_context.md`, внедрённый через AGENTS.md, передаст контекст от прошлого «я» будущему.
+- **Все 6 запланированных улучшений реализованы** (2026-05-18): сканирование arXiv, детектор ссылок, типизированные отношения, страницы гипотез, архив подходов, бриф контекста.
+- **Добавлено бонусное улучшение 7:** `/wiki-insights` — ретроспективный анализ сессий: читает историю git, `wiki/approaches/`, `wiki/answers/` и контекст беседы, чтобы выявить паттерны, ошибки и пробелы знаний.
+- **Текущее состояние (2026-05-18):** 19 статей, 18 концептов, 3 метода, 7 ответов, 5 подходов, 5+1 страниц исследовательских вопросов, 1 обзор; 13 скриптов в `scripts/`; 7 доменных команд.
+- **Оставшиеся пробелы:** 22 сломанные ссылки (нужны заготовки концептов), пустой `wiki/contradictions/`, нет страниц методов для трюка Таубса / теории Спенсера / ТФН Банаха–Пикара, Section 2.3 препринта пуста (теория деформаций Cayley Smith-отображений).
+- **Навыки OpenCode теперь на уровне проекта** (`.opencode/skills/`) — доступны всем при клонировании репозитория.
 
-## Базовый уровень: что уже есть в репозитории
+## Базовый уровень: что есть сейчас
 
 | Возможность | Реализация |
 |---|---|
 | Состязательная рецензия | `academic-paper-reviewer` (5 рецензентов), `grill-me`, `paper-audit` |
-| Трекинг ошибок в доказательствах | `wiki/answers/` — 4 записи (Предл. 2.9, Теор. 4.2, когомологии Спенсера, слабое уравнение Smith) |
-| Трекинг противоречий | Директория `wiki/contradictions/` (пока пустая) |
+| Трекинг ошибок | `wiki/answers/` — 7 записей |
+| Трекинг противоречий | `wiki/contradictions/` — 0 записей (дисциплина установлена) |
+| Архив неудачных подходов | `wiki/approaches/` — 5 записей |
 | Поиск литературы | `literature-search`, `academic-search`, `deep-research` |
-| Математические рассуждения | Навык `math-reasoning` с LaTeX-выводом |
-| Вычислительная верификация | `find_smith_maps.py`, `verify_smith.py`, `prove_smith.py` |
-| LaTeX-экспорт | `latex-document`, `latex-paper-en`, `paper-compilation` |
-| Метки достоверности | Каждая страница имеет `confidence: high|medium|low` |
+| Сканирование arXiv | `/wiki-arxiv` + `scripts/fetch_arxiv.py` |
+| Детектор ссылок | `/wiki-checklinks` + `scripts/check_links.py` |
+| Типизированные отношения | `/wiki-relations` + `scripts/add_relations.py`, 19 статей обновлены |
+| Страницы гипотез | 5 сфокусированных страниц + hub + `_index.md` с графом зависимостей |
+| Бриф сессии | `research_context.md` + `/wiki-context` + `scripts/generate_context.py` |
+| Ретроспективный анализ | `/wiki-insights` + `scripts/analyze_sessions.py` |
+| Запросы к графу отношений | `scripts/wiki_graph.py --resolves --builds-on SLUG --dot` |
 
-**Не добавляйте** — всё это уже покрыто.
+## Реализованные улучшения
 
----
+### Улучшение 1 — arXiv-сканирование ✅ Готово
 
-## Улучшение 1 — Автоматическое еженедельное сканирование arXiv
+`/wiki-arxiv` получает последние 14 дней подач с arXiv (math.DG, math.SG, math.AP, math.CV), фильтрует по 25+ ключевым словам, ранжирует результаты (RELEVANT / BORDERLINE / SKIP) и создаёт записи `wiki/papers/`. Пишет лог в `logs/arxiv-scan-YYYY-MM-DD.md`. Отдельный скрипт: `python scripts/fetch_arxiv.py [--days N] [--json]`.
 
-Релевантные разделы для Smith map-исследований:
-- `math.DG` (Дифференциальная геометрия) — Smith-отображения, калиброванные подмногообразия, специальная голономия
-- `math.SG` (Симплектическая геометрия) — J-голоморфные кривые, теория Громова-Виттена
-- `math.AP` (Анализ PDE) — эллиптические PDE, p-гармонические функции, оценки градиентов
-- `math.CV` (Комплексный анализ) — квазирегулярные кривые, леммы Шварца
+### Улучшение 2 — Детектор сломанных ссылок ✅ Готово
 
-Добавьте `fetch_arxiv.py` + GitHub Action `.github/workflows/arxiv-scan.yml` (ежепонедельный запуск UTC 08:00). Подробнее — в английской версии выше.
+`/wiki-checklinks` сканирует все `[[wikilinks]]` с нечётким поиском (сходство Жаккара), разбивает по 3 корзинам. **Текущее состояние:** 22 сломанные ссылки. Запустите `/wiki-checklinks`, затем `stubs all` для создания заготовок.
 
-**Промпт: извлечение записи вики из аннотации arXiv**
-```
-Новая статья на arXiv, релевантная моей исследовательской программе по
-Smith-отображениям / калиброванной геометрии.
+### Улучшение 3 — Типизированные поля frontmatter ✅ Готово
 
-Title, Authors, arXiv ID, Abstract: [вставить]
-Существующие статьи в вики (для перекрёстных ссылок): [список из wiki/papers/]
-Существующие концепты: [список из wiki/concepts/]
+Все 19 страниц статей обновлены через `scripts/add_relations.py`. Граф: 25 рёбер `builds_on`, 1 ребро `resolves`, 7 рёбер `uses`. Запросы: `python scripts/wiki_graph.py --resolves --dot`.
 
-Создайте запись вики по конвенциям wiki/papers/.
-Отметьте, если результаты: (а) противоречат существующим страницам,
-(б) продвигают активный исследовательский вопрос, (в) вводят метод
-для wiki/methods/.
-```
+### Улучшение 4 — Отдельные страницы гипотез ✅ Готово
 
----
+Монолитный файл разбит на 5 страниц с dependency-графом: `smith-map-def-theory` → `cayley-smith-moduli` → `compactness-smith-maps` → `enumerative-invariants-calibrated`. Текущий фронтир: теория деформаций Cayley (Spin(7)).
 
-## Улучшение 2 — Детектор сломанных ссылок
+### Улучшение 5 — Архив неудачных подходов ✅ Готово
 
-Добавьте `check_links.py` в корень репозитория (код — в английской версии). Запускайте еженедельно: `python check_links.py`. Каждая сломанная ссылка — страница концепта, которую нужно создать.
+`wiki/approaches/` содержит 5 записей. Ключевые тупики: наивная линеаризация уравнения Smith (`D_u ≡ 0`), прямой метод Фредгольма на спинорном уравнении (переопределённость). Всегда проверяйте этот архив перед началом нового доказательства.
 
-**Промпт: создание заготовок для отсутствующих концептов**
-```
-Эти страницы концептов упоминаются в моей вики по дифференциальной
-геометрии, но не существуют. Создайте заготовки по конвенциям wiki/concepts/.
+### Улучшение 6 — Бриф текущего состояния ✅ Готово
 
-Фокус: Smith-отображения, G₂/Spin(7), конформная геометрия, теория деформаций.
-Отсутствующие концепты: [вывод check_links.py]
-```
+`research_context.md` создан и закоммичен; читается в начале каждой сессии через AGENTS.md. Текущий фронтир: Section 2.3 препринта пуста — нужно построить `F̃_Cay = C ∘ F_Cay`. Регенерация: `/wiki-context`.
+
+### Улучшение 7 — Ретроспективный анализ сессий ✅ Готово (бонус)
+
+`/wiki-insights` читает историю git, `wiki/approaches/`, `wiki/answers/` и контекст, выдавая структурированный отчёт по 6 разделам. Акцент на разделе **Failure history** — намеренно самый длинный. Отчёты сохраняются в `wiki/insights/YYYY-MM-DD-insights.md`.
 
 ---
 
-## Улучшение 3 — Типизированные поля frontmatter
+## Оставшиеся пробелы
 
-Добавьте к страницам статей структурированные поля зависимостей:
-```yaml
-builds_on: [слаг-статьи]
-improves_on: []
-challenges: []
-resolves: [слаг-исследовательского-вопроса]
-uses: [название-метода]
-open_problems: [новые-заготовки]
-```
+### Пробел A — 22 сломанные ссылки (заготовки концептов)
 
----
+Нужны: `Laplacian`, `Ricci Curvature`, `Weyl Curvature`, `Dirac Operator`, `Comass Norm` и ещё ~15 концептов. Исправление: `/wiki-checklinks` → `stubs all`.
 
-## Улучшение 4 — Отдельные страницы гипотез
+### Пробел B — Пустой `wiki/contradictions/`
 
-Разбейте `smith-map-deformation-theory.md` на:
-- `smith-map-def-theory.md` (ассоциативный случай G₂ — в основном решён)
-- `cayley-smith-moduli.md` (случай Spin(7) — полностью открыт)
-- `enumerative-invariants-calibrated.md` (долгосрочная программа — спекулятивно)
+Дисциплина установлена; записей нет. Перекрёстные ссылки `wiki/answers/` (Пред. 2.9, Теор. 4.2) должны стать страницами в `wiki/contradictions/`.
 
-Frontmatter: `status: open|in-progress|settled|abandoned`, `depends_on:`, `blocks:`.
+### Пробел C — Нет страниц методов
 
----
+Отсутствуют: трюк Таубса, переопределённые эллиптические PDE / теория Спенсера, ТФН Банаха–Пикара. Все три используются в доказательстве теоремы деформации.
 
-## Улучшение 5 — Архив неудачных подходов
+### Пробел D — Теория деформаций Cayley (математический фронтир)
 
-Создайте `wiki/approaches/` для стратегий доказательства, которые были опробованы и оставлены. Schema:
-```yaml
-type: proof-attempt
-target: cayley-smith-moduli
-status: failed|partial|abandoned|promising
-method: Nash-Moser Implicit Function Theorem
-date_attempted: 2026-05-18
-```
-
-**Промпт: запись неудавшегося подхода**
-```
-Я провёл сессию, пытаясь доказать [УТВЕРЖДЕНИЕ] с помощью [ПОДХОД] и
-застрял. Извлеките структурированную запись неудавшегося подхода.
-
-Цель: [слаг из wiki/research-questions/]
-Метод: [подход]
-Точка остановки: [где именно]
-Ключевой инсайт: [что узнали, даже если не сработало]
-Причина фундаментального провала (если известна): [почему]
-
-Вывод: полная запись wiki/approaches/ по схеме выше.
-```
-
----
-
-## Улучшение 6 — Ежедневный бриф о текущем состоянии
-
-Добавьте в AGENTS.md ссылку на `research_context.md` — генерируйте его после каждой сессии. Это «записка от прошлого себя будущему себе»: текущий фронтир, недавний прогресс, тупики которых следует избегать.
-
----
-
-## Что уже отлично (не перестраивайте)
-
-- **`academic-paper-reviewer`** — лучше, чем перекрёстная рецензия OmegaWiki. Используйте.
-- **`grill-me`** — сильная состязательная проверка. Запускайте на каждое новое доказательство.
-- **`novelty-assessment`** — уже делает систематический поиск новизны.
-- **Python-скрипты** — уже опережают возможности OmegaWiki.
+Section 2.3 препринта пуста. Следующий шаг: написать спинорное разложение для Spin(7) и построить слабое уравнение Cayley Smith по аналогии с Section 2.1.
 
 ## Приоритет
 
-| # | Улучшение | Усилие | Влияние | Когда |
+| # | Задача | Усилие | Влияние | Когда |
 |---|---|---|---|---|
-| 1 | `check_links.py` + запустить | 20 мин | Высокое | **Сейчас** |
-| 2 | Разбить файл исследовательского вопроса | 1 час | Высокое | **Сейчас** |
-| 3 | Добавить типизированные связи к 5 ключевым статьям | 1 час | Среднее | На этой неделе |
-| 4 | Начать `wiki/approaches/` — записать 2-3 тупика | 30 мин | Высокое | На этой неделе |
-| 5 | Сгенерировать и закоммитить `research_context.md` | 15 мин | Высокое | **Сейчас** |
-| 6 | `fetch_arxiv.py` + GitHub Action | 3 часа | Высокое (регулярно) | Следующий спринт |
+| 1 | Заполнить `wiki/contradictions/` из `wiki/answers/` | 30 мин | Высокое | **Сейчас** |
+| 2 | Заготовки 22 концептов через `/wiki-checklinks stubs all` | 20 мин | Высокое | **Сейчас** |
+| 3 | Написать теорию деформаций Cayley (Section 2.3) | недели | Очень высокое | Активный фронтир |
+| 4 | Страницы методов: трюк Таубса, теория Спенсера, ТФН Банаха | 2 часа | Среднее | На этой неделе |
+| 5 | Закрыть Теорему 4.2 (`confidence: low`) | зависит от Gap D | Высокое | После прогресса в Gap D |
 
 ## Связанные записи
 

@@ -82,3 +82,9 @@
 **06:59 /wiki-digest** — 2026-W21 digest generated, 131 entries covered, 17 terms added to memory.json (total 63). Highlights: Mythos cybersecurity AI, Figure AI 03, Copilot pricing exodus, Poetiq SOTA, Orthrus 7.8x, Sparky robot, harness engineering course.
 
 **07:00 /wiki-check** — 0 RU sections needed (all 131 complete), 0 broken links, 0 orphans. Vault fully healthy. 396 tests passed.
+
+**13:19 manual update** — Updated mathwiki-llm-research-automation.md: all 6 gaps now marked DONE (implemented 2026-05-18), added improvement 7 (/wiki-insights), new remaining-gaps section (22 broken links, empty contradictions/, missing method pages, Cayley Section 2.3).
+
+**13:43 C:/Program Files/Git/wiki-hackernews** — 10 articles fetched, 3 qualified. Created: praisonai-cve-2026-44338-agent-auth-bypass (news), microsoft-mdash-agentic-vulnerability-scanner (agents), node-ipc-backdoor-ai-tool-credentials (news). Skipped 7 (no AI angle or vendor puff piece). Index rebuild pending.
+
+**13:43 C:/Program Files/Git/wiki-hackernews** — 10 articles fetched, 3 qualified, 3 entries created. See above.

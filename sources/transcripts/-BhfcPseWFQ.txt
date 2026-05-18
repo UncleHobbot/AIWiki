@@ -1,0 +1,17 @@
+Video: After This Video, You'll Actually Understand Agent Orchestration
+Channel: Burke Holland
+Date: 2026-02-10
+URL: https://www.youtube.com/watch?v=-BhfcPseWFQ
+
+[Full transcript available — 50033 chars, auto-generated captions]
+
+Key topics:
+- Agent orchestration: one agent calling other agents (sub-agents) vs human manually switching between agents
+- Sub-agents have isolated context windows — don't pollute the main agent's context
+- Ultralight orchestration framework: Orchestrator (Claude Sonnet 4.5) → Planner (GPT-5.2) + Coder (GPT-5.2 Codex) + Designer (Gemini 3 Pro)
+- Orchestrator only has 2 tools: agent tool (call sub-agents) + memory
+- Orchestrator prompt: break down complex requests, delegate to specialists, never implement directly
+- Key insight: Claude Sonnet 4.5 is very "agentic" (eager, acts) but weak at code; GPT-5.2 Codex is best at code; Gemini 3 Pro is best for design
+- 2,277 lines of code created while using only 10.8K context window tokens — because sub-agents have their own context
+- Improvements: have planner save plan to file and pass to coder; parallelize coder into 5 agents; run agents concurrently
+- Framework published as open-source gist

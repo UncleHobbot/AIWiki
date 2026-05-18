@@ -1,0 +1,26 @@
+Video: Hermes Agent just got 10X Better (Agentic OS)
+Channel: Jack Roberts
+Date: 2026-05-15
+URL: https://www.youtube.com/watch?v=7xuWZ-3lyQE
+
+[Full transcript available — 124565 chars, auto-generated captions]
+
+Main topic: Connecting Hermes Agent to Claude Code's operating system layer to create a unified "Agentic OS" with:
+- Cross-platform context sharing between Hermes and Claude Code
+- Visual intelligence integration (Hermes can see screenshots, analyze UI)
+- Pantheon personas (specialized sub-agents with distinct roles)
+- Obsidian memory integration for persistent knowledge across sessions
+- Claude Code as the "operating system" layer handling file/code operations
+
+Key concepts:
+- Hermes Agent as the "front-end" assistant; Claude Code as the "back-end" execution engine
+- Connecting Obsidian vault for persistent memory across Hermes sessions
+- Building a "Pantheon" — named personas/agents each optimized for specific domains
+- Visual intelligence: Hermes can now accept screenshots and analyze UI/code visually
+
+Setup steps covered:
+1. Installing Hermes from scratch
+2. Configuring visual intelligence
+3. Building Pantheon personas
+4. Connecting Obsidian memory
+5. Linking Claude Code as operating system

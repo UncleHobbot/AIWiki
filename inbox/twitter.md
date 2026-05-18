@@ -1,5 +1,9 @@
 # Twitter / X Queue
 
+## Done (May 18)
+https://x.com/tricalt/status/2055876832797581406 <!-- Vasilije: "Memory isn't a plugin. Skills aren't a plugin. They're the same harness." → wiki/concepts/memory-skills-unified-harness.md -->
+https://x.com/0x_kaize/status/2038286026284667239 <!-- kaize: "I stopped hitting Claude's usage limits - 10 things I changed" → wiki/tips/claude-usage-limits-token-management.md -->
+
 ## Done (May 17)
 https://x.com/NainsiDwiv50980/status/2056021997659017452 <!-- Nainsi: "12 Claude Code Setup Tricks" — X article link, no extractable text -->
 https://x.com/sharbel/status/2055680438417412359 <!-- Sharbel: 10 fastest growing GitHub repos — CloakBrowser +9.1K stars -->

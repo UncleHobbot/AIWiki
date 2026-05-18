@@ -1,0 +1,35 @@
+Video: You're Not Behind (Yet): Learn AI Agents in 13 Minutes
+Channel: theMITmonk
+Date: 2026-05-14
+URL: https://www.youtube.com/watch?v=P5sKKnWCvzk
+
+[Full transcript available — 34311 chars, auto-generated captions]
+
+ARR Framework (when to use an agent vs prompt):
+- Autonomous: can run without live judgment?
+- Recurring: happens repeatedly?
+- Reviewable: can you verify if it did the job correctly?
+→ Yes to all 3 = agent candidate. Otherwise use a prompt.
+
+Agent anatomy — 4 roles around the LLM core:
+- Analyst: finds patterns in data
+- Planner: decides what matters and what belongs in the output
+- Operator: writes and sends the output / takes action
+- Auditor: checks for weak logic, missing context, refines
+
+Agent differentiation from chatbot:
+- Chatbot predicts next word; agent decides next action
+- Chatbot waits for your prompt; agent figures out its next move
+- Chatbot: student driver (you guide each turn); agent: hired driver (you set destination, sit in back seat)
+
+OODA Loop analogy (from Air Force Colonel John Boyd, Korean War):
+- Observe → Orient → Decide → Act
+- American F-86 beat faster Soviet MiGs because pilots could see more and adapt faster
+- Agents use same loop to adapt when workflows break — workflow follows script, agent reroutes
+
+Why agents fail:
+- They amplify vague thinking: "Agent is a mirror — it reflects the quality of your thinking back at you"
+- GPS check before automating: Goal (one clear sentence), Proof (what does good look like?), Steps (can you describe each step?)
+
+Opportunity: narrow, specific agents that solve one repeated, hated task better than everyone else
+Key shift: "Output gets cheap; judgment, taste, standards become more valuable"

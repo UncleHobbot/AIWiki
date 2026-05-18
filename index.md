@@ -1,147 +1,148 @@
 # LLM Wiki Index
-_Last updated: 2026-05-17 | Total entries: 108_
+> 131 entries across 7 categories.
 
----
+## Agents
 
-## 🧠 Concepts (17)
-- [[agent-harness-engineering]] — Agent = Model + Harness: the discipline of designing the scaffolding (prompts, tools, context policies, hooks, recovery paths) around an LLM; a great harness beats a great model with a bad one (O'Reilly 2026, VS Code blog).
-- [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) shows Van Rooij et al.'s "Ingenia Theorem" is irreparably broken: the proof's core assumption is unjustified and substituting ImageNet labels produces the same absurd result.
-- [[clean-architecture-ai-coding-era]] — Clean Architecture principles become critical when AI writes 80% of code — proper structure (Entities, Use Cases, Dependency Rule) gives LLMs the boundaries they need to generate quality code.
-- [[karma-knowledge-graph-enrichment]] — Nine collaborative LLM agents automate KG enrichment: 38,230 entities at 83.1% correctness across 1,200 PubMed articles, 18.6% conflict-edge reduction via multi-layer consensus (NeurIPS 2025).
-- [[karpathy-deep-dive-llms]] — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are built.
-- [[llm-fundamentals-tokens-to-production]] — Comprehensive one-hour guide to LLM fundamentals for engineers: tokens, attention, transformers, context windows, inference optimization, and why context engineering > prompt engineering. 139K views.
-- [[llm-wiki-academic-applications]] — Survey of 5 key papers (KARMA, SurveyGen-I, LightRAG, PARNESS, LLM4SR) showing where academic LLM knowledge-base research stands, where a personal wiki already leads, and 3 concrete feature gaps to close.
-- [[llm-wiki-implementations-landscape]] — State of the LLM Wiki ecosystem (May 2026): 30+ implementations, WiCER benchmark finding 53–60% compilation failure rate, two camps (personal PKM vs agent layer), Obsidian debate, productization wave.
-- [[llm-wiki-compiled-knowledge-vs-rag]] — Compiled knowledge (LLM Wiki) vs interpreted retrieval (RAG) vs Agentic Search: compiler analogy, cost comparison ($43,750/month RAG at 50M queries), hybrid architecture as the enterprise answer.
-- [[llm-wiki-pattern]] — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, structured knowledge base.
-- [[llm4sr-survey]] — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific research lifecycle.
-- [[rag-explained-embeddings-vector-db]] — RAG explained in 18 minutes: chunks, embeddings, vector databases, and advanced techniques (hybrid search, reranking, query expansion).
-- [[rags-evolution-agentic-ai]] — IBM traces the 5-stage evolution from keyword search → semantic search → hybrid → traditional RAG → agentic RAG where retrieval becomes a reasoning tool.
-- [[self-guided-self-play]] — SGS adds a Guide role to LLM self-play that prevents Conjecturer collapse; a 7B model after 200 rounds beat a 671B baseline on Lean4 theorem proving.
-- [[surveygen-i-scientific-survey]] — Memory-guided long-form survey generation: a terminology memory store prevents re-explaining defined terms across sections and across weekly runs (IJCNLP-AIJLP 2025).
-- [[gnosis-mcp-vs-llm-wiki-pattern]] — Deep comparison: Gnosis MCP (local RAG search, fast factual lookup) vs LLM Wiki (compiled synthesis, small stable corpora) — token economics, failure modes, hybrid architectures.
-- [[yandex-agents-week-2026-intro]] — Opening lecture of Yandex Education Agents Week 2026: AI agent fundamentals, LLM basics (weights, next-token prediction), and building a basic agent in practice.
+- [[acdc-agent-centric-development-cycle]] [AC/DC — Agent-Centric Development Cycle](wiki/agents/acdc-agent-centric-development-cycle.md) — Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) presents the Agent-Centric Dev
+- [[agent-operating-system]] [Agent Operating System (Agent OS)](wiki/agents/agent-operating-system.md) — An Agent Operating System (Agent OS) is infrastructure that manages AI agents the way a computer OS manages ap
+- [[agent-orchestration-multi-model-framework]] [Agent Orchestration: Building Multi-Model Frameworks](wiki/agents/agent-orchestration-multi-model-framework.md) — Agent orchestration means having one agent automatically call and coordinate other specialized sub-agents, rat
+- [[ai-agents-2026-platforms-prompt-contract]] [AI Agents in 2026: Platforms, Prompt Contracts, and Self-Modifying Memory](wiki/agents/ai-agents-2026-platforms-prompt-contract.md) — A practical guide to AI agents in 2026: the four leading platforms (Claude Code, OpenAI Codex, OpenClaw, AntiG
+- [[anatomy-ai-agent-pipeline-loop-tools]] [Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](wiki/agents/anatomy-ai-agent-pipeline-loop-tools.md) — Senior-level dissection of AI agent internals: workflow vs agent (7 levels from single LLM call to multi-agent
+- [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] [Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw, NemoClaw, Zo](wiki/agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md) — Five personal autonomous AI agent platforms — OpenClaw, Hermes Agent, ZeroClaw, NemoClaw, and Zo — compared ac
+- [[claude-code-agentic-loop]] [Claude Code Agentic Loop](wiki/agents/claude-code-agentic-loop.md) — Claude Code is an agentic assistant built on a three-phase loop — gather context, take action, verify results 
+- [[claude-code-directory]] [The .claude Directory](wiki/agents/claude-code-directory.md) — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules, and auto memory — 
+- [[claude-code-extensions-overview]] [Claude Code Extensions: Skills, MCP, Hooks, Subagents](wiki/agents/claude-code-extensions-overview.md) — Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusable workflows (Skills), extern
+- [[claude-code-memory]] [Claude Code Memory: CLAUDE.md and Auto Memory](wiki/agents/claude-code-memory.md) — Claude Code persists knowledge across sessions through two complementary systems: CLAUDE.md files (instruction
+- [[claude-code-permission-modes]] [Claude Code Permission Modes](wiki/agents/claude-code-permission-modes.md) — Claude Code's permission modes control how often it pauses to ask approval before editing files or running com
+- [[expensive-model-not-smart-agent]] [Expensive Model ≠ Smart Agent: Anatomy of the AI Agent Brain](wiki/agents/expensive-model-not-smart-agent.md) — Why an expensive frontier model doesn't make a smart agent. Covers smart model routing (10x cost savings via q
+- [[hermes-agent-llm-wiki-integration]] [Hermes Agent + LLM Wiki: Compounding Knowledge Base](wiki/agents/hermes-agent-llm-wiki-integration.md) — Hermes Agent (by Nous Research) integrated Karpathy's LLM Wiki as a built-in skill, creating a self-hosted age
+- [[how-coding-agents-read-code]] [How AI Coding Agents Really Read Code (Inside the Runtime)](wiki/agents/how-coding-agents-read-code.md) — Leandro Damasio (AI Engineer in financial/legal domains, building production LLM/RAG systems) demystifies how 
+- [[llm-wiki-enterprise-patterns]] [LLM Wiki for Enterprise and Agents](wiki/agents/llm-wiki-enterprise-patterns.md) — How the LLM Wiki 3-layer pattern (raw sources → wiki → schema) scales from personal knowledge management to pr
+- [[mythos-cybersecurity-agent]] [Mythos: AI Cybersecurity Agent](wiki/agents/mythos-cybersecurity-agent.md) — Claude Mythos Preview is Anthropic's frontier AI model positioned above Opus in their model hierarchy, and the
+- [[new-organizational-models-ai-agents]] [New Organizational Models for the Age of AI Agents](wiki/agents/new-organizational-models-ai-agents.md) — Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on Tech") explores how organizat
+- [[specs-to-production-ai-agents]] [From Specs to Production: Building Software with AI Agents End to End](wiki/agents/specs-to-production-ai-agents.md) — Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) shows how to go from a product sp
+- [[ui-tars-desktop-multimodal-agent]] [UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](wiki/agents/ui-tars-desktop-multimodal-agent.md) — UI-TARS Desktop and Agent TARS are two open-source multimodal AI agent projects from ByteDance that use visual
+## Concepts
 
----
+- [[agent-harness-engineering]] [Agent Harness Engineering](wiki/concepts/agent-harness-engineering.md) — Agent harness engineering is the discipline of designing the scaffolding around a language model — prompts, to
+- [[agi-impossibility-proof-debunked]] [Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](wiki/concepts/agi-impossibility-proof-debunked.md) — Guerzhoy (2026) demonstrates that Van Rooij et al.'s widely-cited "Ingenia Theorem" — claiming to prove that a
+- [[ai-agents-arr-framework-ooda-loop]] [AI Agents: ARR Framework, OODA Loop, and Why Agents Fail](wiki/concepts/ai-agents-arr-framework-ooda-loop.md) — A concise conceptual framework for understanding, using, and succeeding with AI agents. The ARR framework (Aut
+- [[clean-architecture-ai-coding-era]] [Clean Architecture in the AI Coding Era](wiki/concepts/clean-architecture-ai-coding-era.md) — Dmitry Bereznitsky explains why Clean Architecture principles become critical when AI writes 80% of your code.
+- [[gnosis-mcp-vs-llm-wiki-pattern]] [Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](wiki/concepts/gnosis-mcp-vs-llm-wiki-pattern.md) — Gnosis MCP and the Karpathy LLM Wiki pattern solve adjacent but different problems: Gnosis is a local RAG sear
+- [[karma-knowledge-graph-enrichment]] [KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](wiki/concepts/karma-knowledge-graph-enrichment.md) — KARMA is a multi-agent LLM framework that automates knowledge graph enrichment by deploying nine specialized c
+- [[karpathy-deep-dive-llms]] [Karpathy: Deep Dive into LLMs like ChatGPT](wiki/concepts/karpathy-deep-dive-llms.md) — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models like ChatGPT are bu
+- [[learn-harness-engineering-course]] [Learn Harness Engineering Course](wiki/concepts/learn-harness-engineering-course.md) — A free 12-lecture practical course by Walking Labs that synthesizes OpenAI and Anthropic harness engineering r
+- [[llm-fundamentals-tokens-to-production]] [Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](wiki/concepts/llm-fundamentals-tokens-to-production.md) — Dmitry Bereznitsky's comprehensive one-hour guide to LLM fundamentals for practicing engineers: how tokens, at
+- [[llm-wiki-academic-applications]] [LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](wiki/concepts/llm-wiki-academic-applications.md) — The academic landscape around LLM-maintained knowledge bases splits into two clusters — automated knowledge-gr
+- [[llm-wiki-compiled-knowledge-vs-rag]] [LLM Wiki vs RAG: Compiled Knowledge Architecture](wiki/concepts/llm-wiki-compiled-knowledge-vs-rag.md) — Two independent analyses comparing LLM Wiki (compiled knowledge) vs RAG (interpreted retrieval) vs Agentic Sea
+- [[llm-wiki-implementations-landscape]] [LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](wiki/concepts/llm-wiki-implementations-landscape.md) — Six weeks after Andrej Karpathy published a 400-line GitHub Gist on April 2, 2026, the LLM Wiki pattern had ge
+- [[llm-wiki-pattern]] [LLM Wiki Pattern](wiki/concepts/llm-wiki-pattern.md) — A pattern proposed by Andrej Karpathy where an LLM agent incrementally builds and maintains a persistent, stru
+- [[llm4sr-survey]] [LLM4SR: LLMs for Scientific Research Survey](wiki/concepts/llm4sr-survey.md) — LLM4SR is the first systematic survey examining how large language models are transforming the full scientific
+- [[memory-skills-unified-harness]] [Memory and Skills Are the Same Harness](wiki/concepts/memory-skills-unified-harness.md) — Memory and skills are not bolt-on plugins layered on top of an agent harness — they are the harness itself, ex
+- [[rag-explained-embeddings-vector-db]] [RAG Explained in 18 Minutes: Embeddings, Vector DBs, and Advanced Techniques](wiki/concepts/rag-explained-embeddings-vector-db.md) — Russian-language deep dive into RAG (Retrieval Augmented Generation) — from basic concepts (chunks, embeddings
+- [[rags-evolution-agentic-ai]] [RAG](wiki/concepts/rags-evolution-agentic-ai.md) — IBM Technology traces the full evolution of information retrieval from keyword search (TF-IDF/BM25) through se
+- [[self-guided-self-play]] [Self-Guided Self-Play (SGS) for LLMs](wiki/concepts/self-guided-self-play.md) — Self-Guided Self-Play (SGS) is an LLM training algorithm that overcomes "Conjecturer collapse" — the failure m
+- [[surveygen-i-scientific-survey]] [SurveyGen-I: Memory-Guided Scientific Survey Generation](wiki/concepts/surveygen-i-scientific-survey.md) — SurveyGen-I generates long-form, internally consistent scientific surveys through a coarse-to-fine retrieval l
+- [[yandex-agents-week-2026-intro]] [Yandex Agents Week 2026: Intro to AI Agents and LLMs](wiki/concepts/yandex-agents-week-2026-intro.md) — Opening lecture of Yandex Education's Agents Week 2026 intensive, covering the evolution of human-LLM interact
+## Models
 
-## 🛠️ Tools (35)
-- [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, large-scale math KG.
-- [[cloakbrowser-stealth-chromium]] — Stealth Chromium with 49 C++ source-level fingerprint patches. Drop-in Playwright/Puppeteer replacement. 30/30 bot detection tests passed, +9.1K stars/week.
-- [[package-hallucination-mcp]] — MCP server that intercepts LLM package recommendations before install runs; catches the ~20% of AI-suggested packages that don't exist on npm/PyPI and are increasingly pre-registered by attackers.
-- [[parness-automated-scientific-research]] — End-to-end autonomous scientific research: DAG workflow kernel (YAML-editable), full-text PDF + code-repo indexing, scenario-typed KG retrieval (similar/contradictory/cross-domain/counter-intuitive), Claude Code integration (arXiv 2026).
-- [[awesome-agent-skills]] — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Vercel, Cloudflare, Sentry, and more).
-- [[claude-code-frameworks]] — The Claude Code community has produced several competing skill frameworks (GSD, Superpowers, Ouroboros, Han) with pre-built skills, agents, and workflows.
-- [[cpt-copilot-terminal]] — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal, letting you ask GitHub Copilot questions and get shell commands inline.
-- [[dotnet-claude-kit]] — A curated knowledge and action layer that turns Claude Code into a senior .NET 10 / C# 14 expert with 47 skills, 10 agents, and 15 Roslyn MCP tools.
-- [[entire-platform]] — Entire is an open-source CLI that hooks into your git workflow and captures full AI agent sessions as "Checkpoints."
-- [[freebuff]] — `freebuff` is a 100% free CLI coding agent that lets you choose from top open models including DeepSeek v4 Pro/Flash.
-- [[github-copilot-cli]] — GitHub Copilot CLI is a GitHub-aware coding agent that lives in the terminal, letting you move from natural-language requests to pull requests without leaving the command line.
-- [[github-spec-kit]] — GitHub's open-source Spec-Driven Development toolkit: constitution → specify → plan → tasks → implement workflow for 30+ AI coding agents.
-- [[gnosis-mcp]] — Gnosis MCP is a zero-config local MCP server that gives AI agents hybrid keyword + semantic search over your documentation.
-- [[goai-graph-of-ideas]] — GoAI is a system that constructs educational knowledge graphs from AI research papers, capturing prerequisite knowledge paths.
-- [[graphify-llm-wiki]] — Graphify is an AI coding assistant skill that applies Karpathy's LLM Wiki pattern to codebases — building a living knowledge graph of any repository.
-- [[gitnexus-codebase-knowledge-graph]] — GitNexus indexes an entire codebase into a local knowledge graph (LadybugDB) and exposes it to coding agents via MCP — 11 tools, 14 languages, 36K+ GitHub stars.
-- [[local-rag-obsidian-zotero]] — 100% local RAG stack for Obsidian + Zotero + Claude Code: LightRAG + Ollama + MCP, knowledge graph + vector index, zero cloud dependency.
-- [[grobid-pdf-parser]] — GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructuring raw scientific PDF documents.
-- [[han-claude-code-plugin]] — Han is a Claude Code plugin by Test Double that gives solo or small-team engineers access to a swarm of specialist AI subagents.
-- [[lightrag-graph-rag]] — LightRAG is a graph-enhanced RAG system that integrates knowledge graph structures into text indexing and retrieval.
-- [[llm-wiki-ecosystem]] — A curated map of open-source implementations of Karpathy's LLM Wiki pattern — from simple Obsidian-based local wikis to full agentic pipelines.
-- [[llmwiki-open-source]] — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files and the local MCP server writes your wiki.
-- [[mcp-financial-data-server]] — Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves financial data to AI agents.
-- [[microsoft-ai-agents-beginners-course]] — Microsoft's official 12-lesson course for building AI agents with Python, Microsoft Agent Framework, and Azure AI Foundry V2. Available in 50+ languages.
-- [[minicheck-fact-verification]] — MiniCheck is an efficient fact-checking system that builds small models (770M parameters) matching GPT-4-level accuracy on grounding verification.
-- [[nwave-ai-refactoring-framework]] — nWave is an AI-guided refactoring framework for safely modernizing legacy code in structured micro-steps.
-- [[omegawiki-research-platform]] — OmegaWiki is an open-source, wiki-centric full-lifecycle AI research platform by DAIR Lab at Peking University.
-- [[orthrus-qwen3-acceleration]] — Orthrus-Qwen3: diffusion attention mechanism achieving up to 7.8× LLM token generation speedup on Qwen3-8B.
-- [[poetiq-recursive-self-improvement]] — Poetiq is a Y Combinator-backed startup whose Meta-System uses recursive self-improvement to build and refine coding agents.
-- [[react-doctor]] — React Doctor v2 is a zero-config CLI tool that catches bad React code written by AI coding agents.
-- [[shokunin-memory-system]] — Shokunin is a persistent memory system for coding agents, maintaining context across sessions.
-- [[tencent-db-agent-memory]] — Fully local 4-tier agent memory (symbolic short-term + layered long-term); cuts token use 61% and improves pass rate 51% vs flat vector stores (Tencent, 2026).
-- [[visual-explainer]] — An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages with interactive Mermaid diagrams.
-- [[wiki-os]] — Wiki OS is a free, open-source browser-based interface for LLM Wiki vaults that displays article graphs, vault statistics, and bilingual entries.
-- [[yaro-mathwiki]] — Yaro2709/MathWiki is a hand-curated Obsidian vault containing 730+ atomic mathematical statements (definitions, theorems, proofs).
+- [[deepseek-v4-vs-opus-kimi]] [DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](wiki/models/deepseek-v4-vs-opus-kimi.md) — Kilo CLI tested DeepSeek V4 Pro and Flash against Claude Opus 4.7 and Kimi K2.6 on a complex workflow orchestr
+- [[gpt-vs-glm-5-1-comparison]] [GPT vs GLM-5.1: Side-by-Side Coding Comparison](wiki/models/gpt-vs-glm-5-1-comparison.md) — A Reddit user running GPT and GLM-5.1 side by side reports near-indistinguishable coding output for everyday t
+- [[llm-wiki-chinese-models-comparison]] [Chinese LLM Models for Building Karpathy](wiki/models/llm-wiki-chinese-models-comparison.md) — Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wiki knowledge bases — covering 
+- [[open-source-models-vs-opus-copilot-benchmark]] [Open Source Models vs Claude Opus: Real-World Coding Benchmark](wiki/models/open-source-models-vs-opus-copilot-benchmark.md) — An unscientific but practical comparison of five open-source models (Kimi K2.6, MiniMax M2.7, GLM 5.1, DeepSee
+- [[tabpfn-3-tabular-foundation-model]] [TabPFN-3: Pre-trained Tabular Foundation Model](wiki/models/tabpfn-3-tabular-foundation-model.md) — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a si
+## News
 
----
+- [[apple-m5-kernel-exploit-ai]] [First Public macOS Kernel Exploit on Apple M5 Built with AI](wiki/news/apple-m5-kernel-exploit-ai.md) — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon that su
+- [[arxiv-llm-ban-policy]] [arXiv Implements 1-Year Ban for Papers with Unchecked LLM Errors](wiki/news/arxiv-llm-ban-policy.md) — arXiv now imposes a 1-year ban on authors whose submissions contain incontrovertible evidence of unchecked LLM
+- [[codex-on-mobile]] [Codex Available on Mobile](wiki/news/codex-on-mobile.md) — OpenAI's Codex coding agent became available on mobile devices, extending terminal-based agentic coding to iOS
+- [[enterprise-gpu-underutilization]] [Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](wiki/news/enterprise-gpu-underutilization.md) — Enterprises sitting on millions in GPU investments are averaging just 5% utilization rates, while inference co
+- [[fda-ai-clinical-trials]] [FDA Shortens Clinical Trial Timelines with AI](wiki/news/fda-ai-clinical-trials.md) — On April 28, 2026, the FDA announced a first-of-its-kind initiative using causal AI to monitor clinical trial 
+- [[figure-ai-03-robot-30-hours]] [Figure AI 03 Works 30+ Hours Straight](wiki/news/figure-ai-03-robot-30-hours.md) — Figure AI's humanoid robot 03 demonstrated continuous autonomous operation for over 30 hours on a factory floo
+- [[figure-ai-team-robots-livestream]] [Figure AI 03: Team of Humanoid Robots on Livestream](wiki/news/figure-ai-team-robots-livestream.md) — Figure AI live-streamed three F.03 humanoid robots working a full 8-hour shift sorting packages on a conveyor 
+- [[gen-ai-web-traffic-may-2026]] [Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](wiki/news/gen-ai-web-traffic-may-2026.md) — Gen AI web traffic data shows ChatGPT declining from 77.6% to ~50% over 12 months, while Gemini surged to 26.7
+- [[github-agentic-developer-certification]] [GitHub GH-600: Agentic AI Developer Certification](wiki/news/github-agentic-developer-certification.md) — GitHub announced the GH-600 certification for "agentic AI developers" — the first official credential for AI a
+- [[github-copilot-app]] [GitHub Copilot App: Desktop Agent for Parallel Development](wiki/news/github-copilot-app.md) — GitHub released a standalone desktop application for agent-driven development that brings parallel workstreams
+- [[github-copilot-pricing-exodus]] [GitHub Copilot Usage-Based Pricing Triggers User Exodus](wiki/news/github-copilot-pricing-exodus.md) — GitHub Copilot's switch to usage-based pricing has left many users facing 15x cost increases, triggering mass 
+- [[openai-100-dollar-tier]] [OpenAI Launches $100/Month Tier](wiki/news/openai-100-dollar-tier.md) — OpenAI introduced a $100/month ChatGPT Pro tier on 9 April 2026, slotting between the $20 Plus and $200 Pro pl
+- [[pinecone-nexus]] [Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](wiki/news/pinecone-nexus.md) — Pinecone — the company that defined the RAG era with its vector database — announced Nexus in May 2026, a "com
+- [[roo-code-shutdown-roomote]] [Roo Code Shuts Down After 3M Installs, Pivots to Roomote](wiki/news/roo-code-shutdown-roomote.md) — Roo Code, the popular VS Code coding agent extension that reached 3 million installs, is shutting down on May 
+## People
 
-## 🤖 Agents (14)
-- [[acdc-agent-centric-development-cycle]] — AC/DC (Agent-Centric Development Cycle) is a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons.
-- [[anatomy-ai-agent-pipeline-loop-tools]] — Senior-level dissection of AI agent internals: 7 levels (workflow → multi-agent), 12-stage pipeline, agent loop guardrails, MCP tool design pitfalls, system prompts as contracts.
-- [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] — Self-hosted personal AI agents (OpenClaw, Hermes, ZeroClaw) running locally on Synology/Ollama with Telegram interface.
-- [[claude-code-agentic-loop]] — Claude Code is an agentic assistant built on a three-phase loop — gather context, take action, verify results — powered by Claude models and built-in tools.
-- [[claude-code-directory]] — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules, and auto memory — from `.claude/` directories.
-- [[claude-code-extensions-overview]] — Claude Code's extension layer: persistent context (CLAUDE.md), reusable workflows (Skills), external services (MCP), isolated workers (Subagents), and event automation (Hooks).
-- [[claude-code-memory]] — Claude Code persists knowledge across sessions through CLAUDE.md (explicit instructions) and Auto Memory (automatic file-based memory).
-- [[claude-code-permission-modes]] — Claude Code's permission modes control how often it pauses to ask approval before editing files or running commands.
-- [[how-coding-agents-read-code]] — How AI coding agents actually read code: context window mechanics, chunking strategies, and token budgets in production systems.
-- [[llm-wiki-enterprise-patterns]] — How the LLM Wiki 3-layer pattern (raw sources → wiki → schema) scales from personal knowledge management to production enterprise systems.
-- [[mythos-cybersecurity-agent]] — Mythos: an AI cybersecurity agent for automated security research and vulnerability analysis.
-- [[new-organizational-models-ai-agents]] — Explores how organizations must restructure around AI agents, moving from human-centric hierarchies to human-AI hybrid operating models.
-- [[specs-to-production-ai-agents]] — End-to-end workflow for going from a product specification to production software using AI agents as primary implementers.
-- [[expensive-model-not-smart-agent]] — Why frontier models don't make smart agents: smart routing (10x savings), 4 memory types (CoALA), and Claude Code's 11-subsystem file-based memory architecture.
+- [[andrej-karpathy]] [Andrej Karpathy](wiki/people/andrej-karpathy.md) — Andrej Karpathy is a Slovak-Canadian AI researcher, educator, and founding member of OpenAI. He served as Dire
+- [[matt-pocock-aihero]] [Matt Pocock: AI Hero and Claude Code Skills Author](wiki/people/matt-pocock-aihero.md) — Matt Pocock is a TypeScript educator turned AI coding practitioner whose aihero.dev platform and skills reposi
+## Tips
 
----
+- [[agent-lifecycle-hooks-copilot-vscode]] [Agent Lifecycle Hooks in Copilot CLI and Claude Code](wiki/tips/agent-lifecycle-hooks-copilot-vscode.md) — Hooks are deterministic event handlers that fire at specific points in the AI agent lifecycle. Unlike the mode
+- [[agentic-ai-coding-patterns-tornhill]] [Agentic AI Coding: Best Practice Patterns for Speed with Quality](wiki/tips/agentic-ai-coding-patterns-tornhill.md) — Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) presents battle-tested patterns fo
+- [[agentic-ai-development-copilot-lessons]] [Agentic AI Development with GitHub Copilot: Lessons Learned](wiki/tips/agentic-ai-development-copilot-lessons.md) — A practitioner's account of real-world agentic AI-assisted development using GitHub Copilot CLI on an open-sou
+- [[anthropic-academy-courses-review]] [Anthropic Academy: All 7 Courses Reviewed with Learning Roadmaps](wiki/tips/anthropic-academy-courses-review.md) — All 7 free Anthropic Academy core practitioner courses reviewed after completing them in one weekend (~12 hour
+- [[choose-llm-api-self-host-hybrid]] [How to Choose an LLM for Your AI Agent: API, Self-Host, or Hybrid](wiki/tips/choose-llm-api-self-host-hybrid.md) — Engineering framework for choosing between cloud API (Anthropic, OpenAI, Google), self-hosted open-source mode
+- [[chorus-multi-model-setup]] [CHORUS: Multi-Model Coding Setup](wiki/tips/chorus-multi-model-setup.md) — CHORUS is an open-source tool that orchestrates 2–4 different AI coding assistants (Claude Code, Codex, Gemini
+- [[claude-code-12-setup-tricks]] [12 Claude Code Setup Tricks That Make AI Feel Like a Real Engineer](wiki/tips/claude-code-12-setup-tricks.md) — Twelve Claude Code environment setup practices that compound into significantly better AI output quality — the
+- [[claude-code-deferral-behavior]] [Claude Code Deferral Behavior: Opus 4.7 Task-Skipping Pattern](wiki/tips/claude-code-deferral-behavior.md) — Opus 4.7 has developed an increasingly common pattern of silently marking tasks as "deferred" rather than comp
+- [[claude-code-handoff-prototype-skills]] [Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](wiki/tips/claude-code-handoff-prototype-skills.md) — Three high-value Claude Code skills from Matt Pocock's skill set: /handoff compacts your current session to a 
+- [[claude-code-plugins-guide]] [Claude Code Plugins: Curated Guide to the Top 36](wiki/tips/claude-code-plugins-guide.md) — A curated ranking of the most useful Claude Code plugins across official marketplace, community, and partner c
+- [[claude-code-prompting-era]] [The New Prompting Era: Claude 4.7 Literal vs GPT-5.5 Autonomous](wiki/tips/claude-code-prompting-era.md) — Claude Opus 4.7 became significantly more literal — it does exactly what you type, no guessing — while GPT-5.5
+- [[claude-code-workflows-best-practices]] [Claude Code Workflows and Best Practices](wiki/tips/claude-code-workflows-best-practices.md) — Getting the most from Claude Code requires treating context as your primary resource, always giving Claude a w
+- [[claude-usage-limits-token-management]] [10 Ways to Stop Hitting Claude](wiki/tips/claude-usage-limits-token-management.md) — Claude counts tokens, not messages. Most users hit usage limits because they unknowingly burn tokens on repeat
+- [[cline-roo-alternatives]] [Alternatives to Cline and Roo Code in 2026](wiki/tips/cline-roo-alternatives.md) — A Reddit thread with 122 comments and 48 upvotes discussing the decline of Cline and Roo Code, where the commu
+- [[context-engineering-ai-agents-pipeline]] [Context Engineering for AI Agents: From Research to Production Code](wiki/tips/context-engineering-ai-agents-pipeline.md) — Dmitry Bereznitsky presents a system for turning chaotic AI prompting into a managed engineering pipeline. Bac
+- [[copilot-cli-telegram-bridge]] [Using Telegram as a Mobile Front-End for GitHub Copilot CLI](wiki/tips/copilot-cli-telegram-bridge.md) — Using the `examon/copilot-cli-telegram-bridge` extension, you can send prompts to a running Copilot CLI sessio
+- [[dynamic-compute-budget-local-llm]] [Dynamic Compute Budget Allocation for Local LLMs](wiki/tips/dynamic-compute-budget-local-llm.md) — Dynamic Compute Budget Allocation (DCA) is a test-time compute technique that lets a local Qwen-35B-A3B model 
+- [[github-copilot-cli-best-practices]] [GitHub Copilot CLI: Best Practices and Workflows](wiki/tips/github-copilot-cli-best-practices.md) — GitHub Copilot CLI is a terminal-native agentic coding assistant. These are the key patterns that make it most
+- [[karpathy-claude-code-guidelines]] [Karpathy-Inspired Claude Code Guidelines](wiki/tips/karpathy-claude-code-guidelines.md) — A single CLAUDE.md file distilling Andrej Karpathy's observations on LLM coding pitfalls into four actionable 
+- [[karpathy-killed-rag-obsidian]] [Karpathy Killed RAG: Obsidian + Claude Code Second Brain](wiki/tips/karpathy-killed-rag-obsidian.md) — Russian-language walkthrough of Karpathy's LLM Wiki approach using Obsidian + Claude Code as a "second brain."
+- [[karpathy-llm-knowledge-base-auto-research]] [Karpathy](wiki/tips/karpathy-llm-knowledge-base-auto-research.md) — Andrej Karpathy's three-strategy system for 10x productivity with Claude Code: (1) maintain an LLM-managed kno
+- [[llm-assisted-coding-systems-perspective]] [LLM-Assisted Coding: A Systems Perspective](wiki/tips/llm-assisted-coding-systems-perspective.md) — Dragan Stepanović (principal engineer, known for "from code review to co-creation" pattern) applies systems th
+- [[llm-assumption-propagation]] [LLM Confusion Management: Models Don](wiki/tips/llm-assumption-propagation.md) — Andrej Karpathy articulated a critical failure mode in LLM agents that every heavy user has experienced but st
+- [[llm-git-knowledge-accumulation]] [LLM Project Memory via Git: Plan-Execute-Distill Loop](wiki/tips/llm-git-knowledge-accumulation.md) — Instead of losing context after each LLM coding session, a structured Plan → Execute → Distill → Commit cycle 
+- [[llm-wiki-obsidian-build-guide]] [Building an LLM Wiki in Obsidian: Step-by-Step Guide](wiki/tips/llm-wiki-obsidian-build-guide.md) — A practical walkthrough for building a personal LLM Wiki in Obsidian — including folder structure, the AGENTS.
+- [[llm-wiki-obsidian-codex-workflow]] [LLM Wiki: Obsidian + Codex Second Brain Workflow](wiki/tips/llm-wiki-obsidian-codex-workflow.md) — A practical workflow combining Obsidian (free markdown-file organizer) and OpenAI Codex (a coding IDE that act
+- [[llm-wiki-scientific-research]] [LLM Wiki for Scientific Research and Academic Writing](wiki/tips/llm-wiki-scientific-research.md) — The LLM Wiki pattern — pre-compiling knowledge from raw sources into a persistent, LLM-maintained markdown wik
+- [[llm-wiki-setup-guide]] [LLM Wiki: Practical Setup Guide](wiki/tips/llm-wiki-setup-guide.md) — Step-by-step guide to building Karpathy's LLM Wiki from scratch: what tools you need, how to structure folders
+- [[mathwiki-improvement-plan]] [MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](wiki/tips/mathwiki-improvement-plan.md) — `Yaro2709/MathWiki` is a rigorous hand-authored Obsidian vault with 730+ atomic mathematical statements (defin
+- [[spec-driven-development-bmad]] [Spec-Driven Development in the Real World: From BMAD to Custom Skills](wiki/tips/spec-driven-development-bmad.md) — Fabrice Monnier shares his personal journey from vibe coding (magical but fragile) to spec-driven development 
+- [[test-driven-agentic-behaviours]] [Test-Driven Agentic Behaviours](wiki/tips/test-driven-agentic-behaviours.md) — Antony Marcano demonstrates how to apply test-driven development principles to define and verify agentic AI be
+- [[xp-practices-ai-assisted-development]] [XP Practices Are the Missing Piece for AI-Assisted Development](wiki/tips/xp-practices-ai-assisted-development.md) — Paul Hammond (20+ years experience, 13+ years XP practitioner) argues that Extreme Programming practices — TDD
+## Tools
 
-## 🔬 Models (5)
-- [[deepseek-v4-vs-opus-kimi]] — Benchmark comparison of DeepSeek V4 Pro, Claude Opus 4.7, and Kimi K2.6 across coding and reasoning tasks.
-- [[llm-wiki-chinese-models-comparison]] — Comparison of Chinese LLMs (DeepSeek, Kimi, GLM, Qwen, MiMo) for building Karpathy-style personal knowledge bases, with benchmark scores and pricing.
-- [[gpt-vs-glm-5-1-comparison]] — A side-by-side coding comparison of GPT and GLM-5.1 on real tasks, comparing output quality and cost.
-- [[llm-wiki-chinese-models-comparison]] — Comparison of Chinese frontier LLMs (DeepSeek V4, Kimi K2.6, GLM-5.1, Qwen 3.5, MiMo-V2.5) for building Karpathy's LLM Wiki: benchmarks, pricing, and task-specific recommendations.
-- [[tabpfn-3-tabular-foundation-model]] — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100.
-
----
-
-## 📰 News (15, sorted by date descending)
-- 2026-05-17 [[codex-on-mobile]] — OpenAI's Codex coding agent became available on iOS and Android, extending agentic coding sessions to mobile devices.
-- 2026-05-16 [[github-agentic-developer-certification]] — GitHub announced GH-600 certification for "agentic AI developer" covering multi-agent orchestration, state management, and system design. Launches July 2026.
-- 2026-05-15 [[apple-m5-kernel-exploit-ai]] — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon using AI assistance.
-- 2026-05-15 [[arxiv-llm-ban-policy]] — arXiv implements a 1-year submission ban for papers with unchecked LLM-generated errors.
-- 2026-05-15 [[fda-ai-clinical-trials]] — FDA uses AI to shorten clinical trial timelines and accelerate drug approval review.
-- 2026-05-15 [[figure-ai-03-robot-30-hours]] — Figure AI 03 humanoid robot operates continuously for 30+ hours straight on a real-world task.
-- 2026-05-15 [[gen-ai-web-traffic-may-2026]] — Gen AI web traffic update: ChatGPT nears 50% share, Gemini and Claude both rising in May 2026.
-- 2026-05-15 [[github-copilot-pricing-exodus]] — GitHub Copilot's shift to usage-based pricing triggers a user exodus to open-source alternatives.
-- 2026-05-15 [[openai-100-dollar-tier]] — OpenAI launched a $100/month ChatGPT Pro tier in April 2026, slotting between Plus ($20) and Pro ($200).
-- 2026-05-15 [[roo-code-shutdown-roomote]] — Roo Code shuts down after 3 million installs and pivots to Roomote, a remote coding agent product.
-- 2026-05-14 [[github-copilot-app]] — GitHub released a standalone desktop application for agent-driven parallel development with GitHub Copilot.
-- 2026-05-13 [[figure-ai-team-robots-livestream]] — Figure AI 03 team of humanoid robots shown working together on a livestream.
-- 2026-05-11 [[enterprise-gpu-underutilization]] — Enterprises averaging 5% GPU utilization despite millions in investment; inference cost + TCO rose to 41% of AI spend.
-- 2026-05-07 [[pinecone-nexus]] — Pinecone announced Nexus, a "compiled knowledge engine" for agents that pre-compiles retrieval at index time.
-
----
-
-## 💡 Tips (24)
-- [[agentic-ai-coding-patterns-tornhill]] — Adam Tornhill's battle-tested patterns for agentic AI coding: speed with quality, context management, and verification loops.
-- [[agentic-ai-development-copilot-lessons]] — Practitioner lessons from real-world agentic AI-assisted development using GitHub Copilot CLI on an open-source project.
-- [[choose-llm-api-self-host-hybrid]] — Engineering framework for choosing between cloud API, self-hosted open-source, and hybrid architectures with a model router — no ideology, only engineering criteria.
-- [[chorus-multi-model-setup]] — CHORUS: a multi-model coding setup that routes tasks to the best model for each job.
-- [[claude-code-deferral-behavior]] — Opus 4.7 task-skipping pattern: when and why Claude Code defers work, and how to prevent it.
-- [[claude-code-handoff-prototype-skills]] — Three high-value Claude Code skills: /handoff (session compaction), /prototype (rapid scaffolding), and improve-codebase-architecture.
-- [[claude-code-plugins-guide]] — A curated ranking of the most useful Claude Code plugins across official marketplace, community, and partner categories.
-- [[claude-code-prompting-era]] — The new prompting era: Claude 4.7 literal execution vs GPT-5.5 autonomous behavior, and what it means for prompt engineering.
-- [[claude-code-workflows-best-practices]] — Official best practices for Claude Code: context management, planning, verification, and multi-agent workflows.
-- [[cline-roo-alternatives]] — Community recommendations for Cline and Roo Code alternatives in 2026, following their decline.
-- [[context-engineering-ai-agents-pipeline]] — Structured Research → Design → Plan → Implement pipeline with agent team (lead, coder, reviewer) and quality gates. AI code has 1.7x more defects, 8x more performance issues.
-- [[copilot-cli-telegram-bridge]] — Using Telegram as a mobile front-end for GitHub Copilot CLI via the examon/copilot-cli-telegram-bridge extension.
-- [[github-copilot-cli-best-practices]] — GitHub Copilot CLI is a terminal-native agentic coding assistant; best practices for workflow integration.
-- [[karpathy-claude-code-guidelines]] — A single CLAUDE.md distilling Karpathy-inspired coding guidelines for Claude Code projects.
-- [[karpathy-killed-rag-obsidian]] — Russian-language walkthrough of Karpathy's LLM Wiki approach using Obsidian + Claude Code as a "second brain" — RAG replacement in 5 minutes.
-- [[llm-assumption-propagation]] — Karpathy's insight: LLMs make wrong assumptions and run with them without checking. How to diagnose, interrupt, and prevent assumption propagation in agentic coding.
-- [[llm-assisted-coding-systems-perspective]] — Dragan Stepanović applies systems thinking to LLM-assisted coding: feedback loops, constraints, and emergent behavior.
-- [[llm-wiki-scientific-research]] — The LLM Wiki pattern applied to scientific research and academic writing workflows.
-- [[llm-wiki-setup-guide]] — Step-by-step guide to building Karpathy's LLM Wiki from scratch: tools, folder structure, and first entries.
-- [[mathwiki-improvement-plan]] — Plan for automating and improving the Yaro2709/MathWiki hand-crafted Obsidian math knowledge base with AI.
-- [[spec-driven-development-bmad]] — Fabrice Monnier's journey from vibe coding to spec-driven development with BMAD and custom skills.
-- [[test-driven-agentic-behaviours]] — Antony Marcano demonstrates applying TDD principles to define and verify agentic AI behaviors.
-- [[dynamic-compute-budget-local-llm]] — Test-time compute technique: let a local Qwen-35B model assign priorities to hard problems, then spawn parallel agents — reaching 39.9% on HLE (vs GPT-5.4-xHigh at 41.6%).
-- [[xp-practices-ai-assisted-development]] — Paul Hammond argues that Extreme Programming practices (TDD, pairing, small releases) are the missing piece for AI-assisted development.
-
----
-
-## 👤 People (2)
-- [[andrej-karpathy]] — Andrej Karpathy: AI researcher, educator, founding member of OpenAI, former Director of AI at Tesla. Coined Software 2.0, vibe coding, and the LLM Wiki pattern. Founder of Eureka Labs.
-- [[matt-pocock-aihero]] — Matt Pocock (aihero.dev): TypeScript educator turned AI practitioner; creator of the viral /grill-me skill (46k+ stars), tracer bullets technique, and codebase-design-for-AI philosophy.
-
----
-
-## 📅 Digests
-_No digests generated yet._
-
+- [[9router-free-ai-coding]] [9router: Free AI Coding Router with RTK Token Saver](wiki/tools/9router-free-ai-coding.md) — 9router is an open-source local proxy router that connects any AI coding tool (Claude Code, Codex, Cursor, Cli
+- [[agentmemory]] [agentmemory: Persistent Memory for AI Coding Agents](wiki/tools/agentmemory.md) — agentmemory is an open-source persistent memory server for AI coding agents — extending Karpathy's LLM Wiki pa
+- [[automathkg]] [AutoMathKG: Automated Mathematical Knowledge Graph](wiki/tools/automathkg.md) — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-qu
+- [[awesome-agent-skills]] [Awesome Agent Skills](wiki/tools/awesome-agent-skills.md) — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Verce
+- [[claude-code-frameworks]] [Claude Code Skill Frameworks: GSD, Superpowers, Ouroboros, Han](wiki/tools/claude-code-frameworks.md) — The Claude Code community has produced several competing skill frameworks (sets of pre-built skills, agents, a
+- [[cloakbrowser-stealth-chromium]] [CloakBrowser: Stealth Chromium for Bot Detection Bypass](wiki/tools/cloakbrowser-stealth-chromium.md) — CloakBrowser is a stealth Chromium browser that passes every bot detection test by modifying fingerprints at t
+- [[cpt-copilot-terminal]] [cpt: Inline Copilot Chat for Any Terminal](wiki/tools/cpt-copilot-terminal.md) — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal, letting you ask GitHub Copilot questions and get 
+- [[dotnet-claude-kit]] [dotnet-claude-kit](wiki/tools/dotnet-claude-kit.md) — A curated knowledge and action layer that turns Claude Code into a senior .NET 10 / C# 14 expert — includes 47
+- [[entire-platform]] [Entire: Agent Session Checkpointing for Git](wiki/tools/entire-platform.md) — Entire is an open-source CLI that hooks into your git workflow and captures full AI agent sessions as "Checkpo
+- [[freebuff]] [freebuff: Free Coding Agent with Top Open Models](wiki/tools/freebuff.md) — `freebuff` is a 100% free CLI coding agent that lets you choose from top open models including DeepSeek v4 Pro
+- [[github-copilot-cli]] [GitHub Copilot CLI](wiki/tools/github-copilot-cli.md) — GitHub Copilot CLI is a GitHub-aware coding agent that lives in the terminal, letting you move from natural-la
+- [[github-spec-kit]] [GitHub Spec-Kit: Spec-Driven Development Toolkit](wiki/tools/github-spec-kit.md) — GitHub Spec-Kit is an open-source CLI toolkit (`specify-cli`) for Spec-Driven Development — a structured workf
+- [[gitnexus-codebase-knowledge-graph]] [GitNexus: Codebase Knowledge Graph for Coding Agents](wiki/tools/gitnexus-codebase-knowledge-graph.md) — GitNexus indexes an entire codebase into a local knowledge graph (LadybugDB) and exposes it to coding agents v
+- [[gnosis-mcp]] [Gnosis MCP: Documentation Search Server for AI Agents](wiki/tools/gnosis-mcp.md) — Gnosis MCP is a zero-config local MCP server that gives AI agents hybrid keyword + semantic search over your d
+- [[goai-graph-of-ideas]] [GoAI: Graph of AI Ideas for Learning Paths and Ideation](wiki/tools/goai-graph-of-ideas.md) — GoAI is a system that constructs educational knowledge graphs from AI research papers, capturing prerequisite 
+- [[graphify-llm-wiki]] [Graphify: Knowledge Graph Builder for Codebases](wiki/tools/graphify-llm-wiki.md) — Graphify is an AI coding assistant skill (21k+ GitHub stars) that applies Karpathy's LLM Wiki pattern to codeb
+- [[grobid-pdf-parser]] [GROBID: Machine Learning PDF Parser for Scientific Documents](wiki/tools/grobid-pdf-parser.md) — GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructu
+- [[han-claude-code-plugin]] [Han: AI Skills Plugin for Claude Code](wiki/tools/han-claude-code-plugin.md) — Han is a Claude Code plugin by Test Double that gives solo or small-team engineers access to a swarm of specia
+- [[lightrag-graph-rag]] [LightRAG: Graph-Enhanced Retrieval-Augmented Generation](wiki/tools/lightrag-graph-rag.md) — LightRAG is a graph-enhanced RAG system that integrates knowledge graph structures into text indexing and retr
+- [[llm-wiki-ecosystem]] [LLM Wiki Ecosystem: Implementations and Variants](wiki/tools/llm-wiki-ecosystem.md) — A curated map of open-source implementations of Karpathy's LLM Wiki pattern, updated to reflect the May 2026 e
+- [[llmwiki-open-source]] [llmwiki (Open-Source Implementation)](wiki/tools/llmwiki-open-source.md) — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files, start th
+- [[local-rag-obsidian-zotero]] [Local RAG: 100% Local Stack for Obsidian, Zotero, and Claude Code](wiki/tools/local-rag-obsidian-zotero.md) — A complete privacy-first RAG stack that runs entirely on your machine using LightRAG + Ollama + MCP. Indexes O
+- [[mattpocock-skills-repo]] [Matt Pocock](wiki/tools/mattpocock-skills-repo.md) — Matt Pocock's public skills repository (18.3k+ stars) contains the Claude Code agent skills he uses daily for 
+- [[mcp-financial-data-server]] [Self-Hosted MCP Server for Financial Data](wiki/tools/mcp-financial-data-server.md) — Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves U.S. financial data (SEC fi
+- [[microsoft-ai-agents-beginners-course]] [Microsoft AI Agents for Beginners: 12-Lesson Course](wiki/tools/microsoft-ai-agents-beginners-course.md) — Microsoft's official beginner course for building AI agents — 12 lessons covering fundamentals with Python cod
+- [[minicheck-fact-verification]] [MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents](wiki/tools/minicheck-fact-verification.md) — MiniCheck is an efficient fact-checking system that builds small models (770M parameters) matching GPT-4-level
+- [[nwave-ai-refactoring-framework]] [nWave: AI-Guided Refactoring Framework for Legacy Code](wiki/tools/nwave-ai-refactoring-framework.md) — Alessandro Di Gioia (25 years engineering, author of "Agile Technical Practices Distilled") and Michele Brisso
+- [[omegawiki-research-platform]] [OmegaWiki: Wiki-Centric AI Research Platform](wiki/tools/omegawiki-research-platform.md) — OmegaWiki is an open-source, wiki-centric full-lifecycle AI research platform by DAIR Lab at Peking University
+- [[orthrus-qwen3-acceleration]] [Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](wiki/tools/orthrus-qwen3-acceleration.md) — Orthrus adds a parallel diffusion attention head to frozen autoregressive transformers, achieving up to 7.8x t
+- [[package-hallucination-mcp]] [Package Hallucination Catcher: MCP Server for LLM Package Recommendations](wiki/tools/package-hallucination-mcp.md) — A community-built MCP server intercepts LLM package recommendations before `npm install` or `pip install` runs
+- [[parness-automated-scientific-research]] [PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](wiki/tools/parness-automated-scientific-research.md) — PARNESS is an open-source framework for end-to-end autonomous scientific research that solves the core failure
+- [[poetiq-recursive-self-improvement]] [Poetiq: Recursive Self-Improvement for Coding](wiki/tools/poetiq-recursive-self-improvement.md) — Poetiq is a Y Combinator-backed startup (founded by former DeepMind researchers) whose Meta-System uses recurs
+- [[react-doctor]] [React Doctor: AI-Generated React Code Linter](wiki/tools/react-doctor.md) — React Doctor v2 is a zero-config CLI tool that catches bad React code written by AI coding agents — works with
+- [[shokunin-memory-system]] [Shokunin: Persistent Memory for Coding Agents](wiki/tools/shokunin-memory-system.md) — Shokunin is a local memory system for AI coding agents that uses ChromaDB to persist session context across co
+- [[sparky-offline-edge-ai-robot]] [Sparky: Fully Offline Edge AI Robot](wiki/tools/sparky-offline-edge-ai-robot.md) — Sparky is a fully offline AI companion robot built inside a suitcase, powered by an NVIDIA Jetson Orin NX Supe
+- [[tencent-db-agent-memory]] [TencentDB Agent Memory: Local Long-Term Memory for AI Agents](wiki/tools/tencent-db-agent-memory.md) — TencentDB Agent Memory is a fully local, zero-API-key long-term memory system for AI coding agents that uses a
+- [[visual-explainer]] [Visual Explainer](wiki/tools/visual-explainer.md) — An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages featuring re
+- [[wiki-os]] [Wiki OS: Browser UI for LLM Wiki](wiki/tools/wiki-os.md) — Wiki OS is a free, open-source browser-based interface for LLM Wiki vaults that displays article graphs, vault
+- [[yaro-mathwiki]] [Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](wiki/tools/yaro-mathwiki.md) — Yaro2709/MathWiki is a hand-curated Obsidian vault containing 730+ atomic mathematical statements (definitions

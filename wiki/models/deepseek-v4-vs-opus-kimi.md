@@ -35,7 +35,7 @@ DeepSeek V4 Flash at $0.02 for the entire run represents a new price tier where 
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
 - [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
-
+- [[open-source-models-vs-opus-copilot-benchmark]] ([Open Source Models vs Claude Opus: Coding Benchmark](./open-source-models-vs-opus-copilot-benchmark.md))
 ---
 <!-- RU -->
 
@@ -61,3 +61,4 @@ DeepSeek V4 Flash за $0.02 за весь запуск представляет
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
 - [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
+- [[open-source-models-vs-opus-copilot-benchmark]] ([Open Source Models vs Claude Opus: Coding Benchmark](./open-source-models-vs-opus-copilot-benchmark.md))

@@ -44,7 +44,7 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
-
+- [[ai-agents-arr-framework-ooda-loop]] ([AI Agents: ARR Framework, OODA Loop](../concepts/ai-agents-arr-framework-ooda-loop.md))
 ---
 <!-- RU -->
 
@@ -75,3 +75,4 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[ai-agents-arr-framework-ooda-loop]] ([AI Agents: ARR Framework, OODA Loop](../concepts/ai-agents-arr-framework-ooda-loop.md))

@@ -5,6 +5,19 @@
 ## High Priority
 
 ## Done
+https://walkinglabs.github.io/learn-harness-engineering/en/ <!-- Learn Harness Engineering course index → learn-harness-engineering-course (concepts) -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-01-why-capable-agents-still-fail/ <!-- Lecture 1: Strong Models Don't Mean Reliable Execution -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-02-what-a-harness-actually-is/ <!-- Lecture 2: What Harness Actually Means -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/ <!-- Lecture 3: Repo as system of record -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-04-why-one-giant-instruction-file-fails/ <!-- Lecture 4: Split instructions across files -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/ <!-- Lecture 5: Context alive across sessions -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-06-why-initialization-needs-its-own-phase/ <!-- Lecture 6: Initialize before every session -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-07-why-agents-overreach-and-under-finish/ <!-- Lecture 7: WIP=1, task boundaries -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/ <!-- Lecture 8: Feature lists as harness primitives -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-09-why-agents-declare-victory-too-early/ <!-- Lecture 9: Preventing premature victory declarations -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-10-why-end-to-end-testing-changes-results/ <!-- Lecture 10: E2E testing as true verification -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/ <!-- Lecture 11: Runtime observability -->
+https://walkinglabs.github.io/learn-harness-engineering/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/ <!-- Lecture 12: Clean handoff at session end -->
 https://github.com/rohitg00/agentmemory <!-- agentmemory: persistent memory for AI coding agents -->
 https://github.com/decolua/9router <!-- 9router: free AI coding router + RTK token saver -->
 https://github.com/bytedance/UI-TARS-desktop <!-- UI-TARS-desktop: ByteDance multimodal GUI agent stack -->

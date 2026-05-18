@@ -1,0 +1,25 @@
+Video: How to 10x Your Claude Code Projects (Karpathy's Method)
+Channel: Austin Marchese
+Date: 2026-04-24
+URL: https://www.youtube.com/watch?v=yfeHoOkn2TI
+
+[Full transcript available — 40194 chars, auto-generated captions]
+
+3 strategies from Karpathy's "LLM knowledge bases" post:
+
+Strategy 1: LLM Knowledge Bases (wiki)
+- Layer 1: Raw resources folder (articles, transcripts, PDFs — read-only source of truth)
+- Layer 2: Wiki folder (organized summaries, cross-referenced to raw knowledge — maintained by Claude)
+- Layer 3: Schema file (instructions to Claude on structure, conventions, what to do when new source added)
+- Key Karpathy quote: "Humans abandon wikis because the maintenance burden grows faster than the value. LLMs don't get bored."
+
+Strategy 2: Auto Research
+- Karpathy's open-source project: AI agent proposes change → tests → evaluates → keeps or discards → repeats
+- Achieved 11% performance gain; Shopify CEO ran similar loop: 19% improvement while sleeping
+- For non-quantifiable things: use chat history as proxy for quality; use Claude skill to improve system from back-and-forth history
+- Hooks can remind you to run improvement cycle at session start
+
+Strategy 3: Context Engineering
+- CLAUDE.md file: project description, folder structure, current build, common mistakes — under 50 lines
+- Scope of context: only load what's relevant to the specific task
+- Skills can auto-load the right expert framework based on question type

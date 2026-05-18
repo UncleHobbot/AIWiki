@@ -70,3 +70,15 @@
 **14:45 C:/Program Files/Git/wiki-posts** — 2 posts processed. 1 created: claude-code-12-setup-tricks (tips — 12 env setup practices: CLAUDE.md memory, git worktrees, MCP, subagents, slash commands, CI/CD integration). 1 skipped (trending repos list → 5 URLs queued to links.md: agentmemory, 9router, UI-TARS-desktop, mattpocock/skills, CloakBrowser). Vault: 111 entries.
 
 **14:51 C:/Program Files/Git/wiki-links** — 5 URLs processed: agentmemory (tools — LLM Wiki pattern extension, 95.2% recall R@5, 51 MCP tools, $10/yr), 9router (tools — RTK token saver 20-40%, free AI coding via 40+ providers), ui-tars-desktop (agents — ByteDance GUI agent, books hotels/flights autonomously), mattpocock-skills-repo (tools — 18.3k stars, 14 daily skills), cloakbrowser updated (confidence+aliases). 0 failed. Processed URLs: 290.
+
+---
+
+## 2026-05-18
+
+**06:26 /wiki-reddit** — 14 subs scanned (r/kimi rate-limited), 2 entries created: sparky-offline-edge-ai-robot (tools), llm-git-knowledge-accumulation (tips). Index: 117 total.
+
+**06:50 /wiki-inbox** — 14 created, 2 updated, 5 skipped. Links: learn-harness-engineering-course (concepts). Tweets: memory-skills-unified-harness (concepts), claude-usage-limits-token-management (tips). YT: agent-operating-system, agent-orchestration-multi-model-framework, hermes-agent-llm-wiki-integration, open-source-models-vs-opus-copilot-benchmark, ai-agents-arr-framework-ooda-loop + 5 more. Index: 131 total.
+
+**06:59 /wiki-digest** — 2026-W21 digest generated, 131 entries covered, 17 terms added to memory.json (total 63). Highlights: Mythos cybersecurity AI, Figure AI 03, Copilot pricing exodus, Poetiq SOTA, Orthrus 7.8x, Sparky robot, harness engineering course.
+
+**07:00 /wiki-check** — 0 RU sections needed (all 131 complete), 0 broken links, 0 orphans. Vault fully healthy. 396 tests passed.

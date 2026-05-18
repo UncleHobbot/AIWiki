@@ -1,0 +1,16 @@
+Video: Completely understand hooks in less than 20 minutes
+Channel: Burke Holland
+Date: 2026-04-14
+URL: https://www.youtube.com/watch?v=03CfGf9iw_U
+
+[Full transcript available — 55511 chars, auto-generated captions]
+
+Key topics:
+- Agent lifecycle: session start → user prompt → reasoning → tool calls → sub-agent → response → session end
+- Hook events: SessionStart, UserPromptSubmitted, PreToolUse (blocking), PostToolUse, SubAgentStart, SubAgentStop, SessionEnd, ErrorOccurred
+- Hook format: JSON files in .github/hooks/ or user profile .copilot/.cloud folders
+- Hooks fire deterministically (not model-driven); good for gates and context injection
+- PreToolUse can DENY tool calls (blocking hook) — key difference from others
+- Practical ESLint gate: use PreToolUse to run linting on file writes; deny if lint fails; forces model to write correct code before moving on
+- Context injection via SessionStart: inject env info (Node version, etc.) to avoid model making tool calls for it
+- Debugging: VS Code shows hook output in Output → Chat Hooks panel; CLI requires redirect to log file

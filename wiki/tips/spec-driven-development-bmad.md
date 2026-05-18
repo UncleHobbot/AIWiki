@@ -29,7 +29,7 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[github-spec-kit]] ([GitHub Spec-Kit: Spec-Driven Development Toolkit](../tools/github-spec-kit.md))
-
+- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill](./llm-git-knowledge-accumulation.md))
 ---
 <!-- RU -->
 
@@ -54,3 +54,4 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - [[xp-practices-ai-assisted-development]] ([XP Practices Are the Missing Piece for AI-Assisted Development](../tips/xp-practices-ai-assisted-development.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[github-spec-kit]] ([GitHub Spec-Kit: Spec-Driven Development Toolkit](../tools/github-spec-kit.md))
+- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill](./llm-git-knowledge-accumulation.md))

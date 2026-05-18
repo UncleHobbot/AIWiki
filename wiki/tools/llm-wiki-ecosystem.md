@@ -148,7 +148,7 @@ Our current YouTube/PDF ingestion reads transcripts as flat text. For papers lon
 - [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 - [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
-
+- [[hermes-agent-llm-wiki-integration]] ([Hermes Agent + LLM Wiki](../agents/hermes-agent-llm-wiki-integration.md))
 ---
 <!-- RU -->
 
@@ -238,3 +238,4 @@ AIWiki архитектурно ближе всего к nvk/llm-wiki и skyllwt
 - [[llm-wiki-setup-guide]] ([LLM Wiki: Practical Setup Guide](../tips/llm-wiki-setup-guide.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 - [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
+- [[hermes-agent-llm-wiki-integration]] ([Hermes Agent + LLM Wiki](../agents/hermes-agent-llm-wiki-integration.md))

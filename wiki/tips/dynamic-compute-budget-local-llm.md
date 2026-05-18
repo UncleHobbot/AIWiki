@@ -36,7 +36,7 @@ Community note (r/LocalLLaMA): "The community would probably pool money together
 ## Related Entries
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
-
+- [[sparky-offline-edge-ai-robot]] ([Sparky: Fully Offline Edge AI Robot](../tools/sparky-offline-edge-ai-robot.md))
 ---
 <!-- RU -->
 
@@ -66,3 +66,4 @@ Community note (r/LocalLLaMA): "The community would probably pool money together
 ## Связанные записи
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[sparky-offline-edge-ai-robot]] ([Sparky: Fully Offline Edge AI Robot](../tools/sparky-offline-edge-ai-robot.md))

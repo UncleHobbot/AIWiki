@@ -31,7 +31,7 @@ From community discussion (r/ClaudeCode):
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[llm-assumption-propagation]] ([LLM Confusion Management: Models Don't Check Assumptions](../tips/llm-assumption-propagation.md))
-
+- [[claude-usage-limits-token-management]] ([10 Ways to Stop Hitting Claude Usage Limits](./claude-usage-limits-token-management.md))
 ---
 <!-- RU -->
 
@@ -58,3 +58,4 @@ From community discussion (r/ClaudeCode):
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[llm-assumption-propagation]] ([LLM Confusion Management: Models Don't Check Assumptions](../tips/llm-assumption-propagation.md))
+- [[claude-usage-limits-token-management]] ([10 Ways to Stop Hitting Claude Usage Limits](./claude-usage-limits-token-management.md))

@@ -1,0 +1,12 @@
+Video: What is a Vector Database? Powering Semantic Search & AI Applications
+Channel: IBM Technology
+Date: 2025-03-24
+URL: https://www.youtube.com/watch?v=gl1r1XV0SLw
+
+[Transcript unavailable — no captions/subtitles provided by channel]
+
+Description:
+IBM explainer on vector databases and vector embeddings for semantic search, RAG, and AI applications. Martin Keen explains how vector databases bridge the semantic gap. Topics: vector embeddings, similarity search, semantic search, RAG.
+
+NOTE: This topic is already well-covered in wiki/concepts/rag-explained-embeddings-vector-db.md
+Decision: Skipped entry creation — duplicate coverage.

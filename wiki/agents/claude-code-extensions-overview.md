@@ -48,7 +48,7 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 - [[entire-platform]] ([Entire: Agent Session Checkpointing for Git](../tools/entire-platform.md))
 - [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
 - [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
-
+- [[agent-lifecycle-hooks-copilot-vscode]] ([Agent Lifecycle Hooks in Copilot CLI and Claude Code](../tips/agent-lifecycle-hooks-copilot-vscode.md))
 ---
 <!-- RU -->
 
@@ -92,3 +92,4 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 - [[entire-platform]] ([Entire: Agent Session Checkpointing for Git](../tools/entire-platform.md))
 - [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
 - [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
+- [[agent-lifecycle-hooks-copilot-vscode]] ([Agent Lifecycle Hooks in Copilot CLI and Claude Code](../tips/agent-lifecycle-hooks-copilot-vscode.md))

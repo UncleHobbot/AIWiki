@@ -1,0 +1,21 @@
+Video: Can Open Source Models Beat Opus at a Fraction of the Cost?
+Channel: Burke Holland
+Date: 2026-05-05
+URL: https://www.youtube.com/watch?v=-yz5GDY3-P0
+
+[Full transcript available — 66960 chars, auto-generated captions]
+
+Test: Five open-source models (Kimi K2.6, MiniMax M2.7, GLM 5.1, DeepSeek V4 Pro, Qwen 27B) vs Claude Opus 4.6 on building a URL-sharing app using GitHub Copilot CLI (plan mode + Autopilot + Fleet).
+
+Scoring criteria: Planning, Agency, Accuracy, Cost
+
+Results:
+- Opus 4.6: 10/10 planning, 10/10 agency, 9/10 accuracy, 0/10 cost (~$40 with caching, ~$267 without)
+- Kimi K2.6: 10/10 planning, 8/10 agency, 2/10 accuracy, 4/10 cost ($11.06)
+- MiniMax M2.7: 6/10 planning, 10/10 agency, 3/10 accuracy, 10/10 cost ($1.37)
+- GLM 5.1: 10/10 planning, 10/10 agency, 8/10 accuracy, 6/10 cost ($6)
+- DeepSeek V4 Pro: 10/10 planning, 10/10 agency, 7/10 accuracy, 5/10 cost ($8.72)
+- Qwen 3.6 27B: 10/10 planning, 10/10 agency, 9/10 accuracy, 8/10 cost ($4.90)
+
+Winner: Qwen 3.6 27B — cheapest near-Opus quality, feasibly runnable locally (~$5k machine needed)
+Runner-up: GLM 5.1 — best accuracy/cost ratio after Qwen

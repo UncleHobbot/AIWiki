@@ -6,7 +6,7 @@ tags: [autonomous-agent, openclaw, hermes-agent, zeroclaw, nemoclaw, zo, self-ho
 aliases: [OpenClaw, ZeroClaw, NemoClaw, Hermes Agent, Zo Computer, claw family, personal AI agent]
 confidence: medium
 date: 2026-05-17
-updated: 2026-05-17
+updated: 2026-05-18
 sources:
   - https://github.com/openclaw/openclaw
   - https://github.com/NousResearch/hermes-agent
@@ -16,6 +16,7 @@ sources:
   - https://canitrunopenclaw.com/devices/synology-ds923-plus
   - https://ollama.com/blog/openclaw
   - https://hermes-agent.nousresearch.com/docs/
+  - https://www.youtube.com/watch?v=7xuWZ-3lyQE
 ---
 
 ## Summary
@@ -216,6 +217,8 @@ Managed cloud computer-as-a-service. Not open-source; not self-hostable. Access 
 **The killer use case for OpenClaw** is phone-based appointment booking. The Ring-a-Ding, Pine Voice, ClawdTalk, and Vapi skills enable the agent to make an actual outbound phone call to a doctor's office, navigate the IVR or talk to reception, and book a time slot — all autonomously without any browser or web form. This is the only agent in this comparison where this is confirmed working.
 
 **Real estate automation at scale** has been documented with OpenClaw: one user configured the agent to submit lowball offers on 372 Zillow listings per day — fully autonomous, browser-driven, running on cron. The same pipeline applies to property monitoring, price alert triggers, and listing comparison across sites.
+
+**Hermes + Claude Code "Agentic OS" pattern** (May 2026): a new integration pattern connects Hermes Agent to Claude Code as an underlying "operating system" layer. Hermes acts as the front-end assistant with visual intelligence (screenshot analysis, UI understanding) and Pantheon personas (named specialized sub-agents). Claude Code handles file system and code execution on the backend. Persistent memory is wired through an Obsidian vault, giving both tools a shared knowledge store. This creates a unified "24/7 AI employee" that maintains context across both platforms.
 
 **The Hermes Agent self-improvement loop** is architecturally distinctive. After each task, the agent writes a skill — a reusable procedure for that type of task. A Curator agent (added in v0.12.0) runs on a 7-day cycle, grades all skills by success rate, consolidates duplicates, and prunes underperforming ones. Over weeks of use, the agent accumulates a personal skill library tuned to your exact workflows. No other agent in this comparison has this.
 

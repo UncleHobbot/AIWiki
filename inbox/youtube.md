@@ -1,5 +1,25 @@
 # YouTube Queue
 
+## Done (May 18)
+https://www.youtube.com/watch?v=-yz5GDY3-P0 <!-- Burke Holland: Can Open Source Models Beat Opus? Qwen 3.6 27B wins -->
+https://www.youtube.com/watch?v=03CfGf9iw_U <!-- Burke Holland: Lifecycle hooks in Copilot/Claude Code -->
+https://www.youtube.com/watch?v=-BhfcPseWFQ <!-- Burke Holland: Agent Orchestration multi-model framework -->
+https://www.youtube.com/watch?v=n1TMMZKYMpo&pp=ugUEEgJydQ%3D%3D <!-- already processed (Bereznitsky: How to choose LLM) -->
+https://www.youtube.com/watch?v=gl1r1XV0SLw <!-- IBM vector DB explainer — skipped, covered in rag-explained -->
+https://www.youtube.com/watch?v=qUQbU7h4RoE <!-- Jas Wong: I Took All 7 Anthropic Courses in One Weekend -->
+https://www.youtube.com/watch?v=yfeHoOkn2TI <!-- Austin Marchese: How to 10x Your Claude Code Projects -->
+https://www.youtube.com/watch?v=4TvH-OZhwxI <!-- AI Master: AI Agents Explained 2026 + Prompt Contract -->
+https://www.youtube.com/watch?v=P5sKKnWCvzk <!-- theMITmonk: Learn AI Agents in 13 Minutes — ARR + OODA -->
+https://www.youtube.com/watch?v=7xuWZ-3lyQE <!-- Jack Roberts: Hermes Agent 10X Better - Agentic OS -->
+https://www.youtube.com/watch?v=IVGjBxqygmI <!-- IBM: AI Agents Need an Operating System - 6-component kernel -->
+https://www.youtube.com/watch?v=QbjAQFJJyt0 <!-- Wanderloots: How To Build LLM Wiki In Obsidian -->
+https://www.youtube.com/watch?v=me33-zYAVWs <!-- ToolWeb: LLM Wiki Your Personal Second Brain — skipped, promotional -->
+https://www.youtube.com/watch?v=z_oAi9xdDQs <!-- Matt Wolfe: I Built A Second Brain With Codex in 15 Minutes -->
+https://www.youtube.com/watch?v=zaLD4DUg-hM <!-- Sage Elliott: Karpathy's LLM Wiki live stream — skipped, no new insights -->
+https://www.youtube.com/watch?v=YUz2CLLmdjA <!-- AI SEO Unlocked: Hermes & LLMWiki integration -->
+https://www.youtube.com/watch?v=iY0I3wfjB0s <!-- Thinkyhead: Hermes Agent model selection stream — skipped, narrow scope -->
+https://www.youtube.com/watch?v=-NmPJgMCvyw <!-- databag: Day 6 LLM Wiki not RAG — skipped, covered -->
+
 ## Done (May 17)
 https://youtu.be/JB2P5Gk23VI?si=DC3_BsUVJ9ciTBZK <!-- IBM: RAG's Evolution from Simple Retrieval to Agentic AI -->
 https://youtu.be/bhsd9MXfccg?si=6Lqm69xOBZvpbPW3 <!-- AI Stack Engineer: OpenCode + GitNexus codebase knowledge graph -->

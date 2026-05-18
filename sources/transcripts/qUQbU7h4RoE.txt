@@ -1,0 +1,20 @@
+Video: I Took All 7 Anthropic Courses in One Weekend (Honest Review)
+Channel: Jas Wong
+Date: 2026-04-10
+URL: https://www.youtube.com/watch?v=qUQbU7h4RoE
+
+[Full transcript available — 35274 chars, auto-generated captions]
+
+7 Free Anthropic Academy courses reviewed (https://anthropic.skilljar.com/):
+1. Claude 101 — Overview of Claude features, skills, connectors. Good orientation but heavy reading, light exercises.
+2. AI Fluency: Frameworks and Foundations — How humans interact with AI, prompting techniques, limitations. Exercise-heavy. Recommended for all levels, especially security practitioners.
+3. Introduction to MCP — Beginner-friendly MCP breakdown, server/client/resources, SDK. Requires basic coding knowledge.
+4. MCP Advanced Topics — Sampling, transport (streamable HTTP), message types, file system access. Very technical. Only for active MCP builders.
+5. Claude Code in Action — Tool use under hood, GitHub Actions, Claude SDKs, practical workflows. Essential for developers.
+6. Building with the Claude API — 8 hours: setup, models, temperature, streaming, prompt engineering, tool use, RAG, embeddings, prompt caching, extended thinking, agents. Most comprehensive.
+7. Introduction to Agent Skills — What skills are, how to write/troubleshoot them. Short, no exercises.
+
+Roadmaps:
+- Beginners: Claude 101 → AI Fluency
+- Developers: Claude 101 → AI Fluency → Building with Claude API → MCP Intro → MCP Advanced → Claude Code in Action → Agent Skills
+- Security: AI Fluency → Claude 101 → MCP Intro → Building with Claude API

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-W20",
+  "last_updated": "2026-W21",
   "terms": {
     "RAG": "Retrieval-Augmented Generation: technique where an LLM retrieves relevant content from an external knowledge store before generating a response",
     "LLM": "Large Language Model: a neural network trained on large text corpora capable of generating, understanding, and reasoning over natural language",
@@ -46,6 +46,23 @@
     "CHORUS": "Multi-model code review tool that orchestrates Claude, Codex, Gemini, and Kimi in parallel using existing subscriptions",
     "Karpathy pattern": "See LLM Wiki",
     "bilingual": "In this wiki: every entry contains both an English section and a Russian section in the same .md file",
-    "cursor": "In reddit scanning: the last-seen post ID stored per subreddit to enable incremental fetching of only new posts"
+    "cursor": "In reddit scanning: the last-seen post ID stored per subreddit to enable incremental fetching of only new posts",
+    "Mythos": "Claude Mythos Preview: Anthropic frontier model above Opus, focused on cybersecurity; first AI to complete a full 32-step corporate network attack simulation",
+    "harness": "The scaffolding around an LLM: context assembly, tool exposure, agent loop, and evaluation logic — everything except the model weights themselves",
+    "harness engineering": "The discipline of designing and iterating on the scaffolding (harness) that turns a raw LLM into a reliable working agent",
+    "SGS": "Self-Guided Self-Play: LLM training technique adding a Guide role to prevent Conjecturer collapse in self-play loops",
+    "WIP=1": "Work In Progress limit of one: discipline of giving an agent exactly one active task at a time, preventing context fragmentation",
+    "Agent OS": "Agent Operating System: infrastructure that manages AI agents the way an OS manages processes, providing scheduling, memory, tools, identity, observability, and guardrails",
+    "ARR framework": "Atomic + Reliable + Reversible: three properties a task must have for an AI agent to handle it reliably",
+    "OODA loop": "Observe-Orient-Decide-Act: decision cycle originally from military strategy, applied to AI agent reasoning loops",
+    "TTFT": "Time To First Token: latency from prompt submission to receipt of the first generated token; key metric for interactive AI applications",
+    "Orthrus": "Hybrid diffusion+autoregressive architecture for LLM inference acceleration; injects a trainable diffusion module into a frozen AR transformer to achieve ~7.8× throughput",
+    "Sparky": "Fully offline AI robot built in a suitcase: Jetson Orin NX Super + Gemma 4 E4B, 30+ sensors, zero cloud dependency",
+    "Poetiq": "AI coding harness using recursive self-improvement to achieve SOTA coding benchmark performance beyond frontier model baselines",
+    "distillation loop": "The Plan→Execute→Distill→Commit cycle for accumulating project knowledge in git; the distill step extracts only reusable knowledge into playbooks",
+    "session entropy": "Degradation of agent effectiveness over a session due to accumulated unclean state, half-applied changes, and context drift",
+    "cold-start test": "A test that verifies an agent can pick up a task from a fresh context with no prior session memory; validates harness self-containment",
+    "Prompt Contract": "A structured prompt framework with four required fields: Goal, Constraints, Format, and Failure (what to do when blocked)",
+    "AgentMemory": "Open-source persistent memory layer for coding agents; 51-tool MCP server with semantic + episodic memory tiers, 95.2% R@5 recall"
   }
 }

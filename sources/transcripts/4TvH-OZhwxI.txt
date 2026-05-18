@@ -1,0 +1,23 @@
+Video: AI Agents Explained: How to Create and Use AI Agents in 2026
+Channel: AI Master
+Date: 2026-05-13
+URL: https://www.youtube.com/watch?v=4TvH-OZhwxI
+
+[Full transcript available — 72417 chars, auto-generated captions]
+
+Core agent anatomy: LLM + Tools + Memory + Goals = Agent loop (Observe → Think → Act → repeat)
+
+Four recommended platforms:
+1. Claude Code — best for complex reasoning, interpretable thinking, code+general tasks, orchestration
+2. OpenAI Codex — lowest friction if already on ChatGPT, IDE integration (VS Code/Cursor diff view), cloud sandboxing
+3. OpenClaw (Open Claw) — self-hosted, lives in messengers (Telegram, WhatsApp, iMessage etc.), best for life automation
+4. AntiGravity (Google) — VS Code fork with Gemini, best for visual/frontend work, free with generous limits
+
+Prompt Contract framework (4 sections):
+- Goal: outcome not action — "build a landing page that converts visitors to email sign-ups, ready for local review before deploying"
+- Constraints: what agent is NOT allowed to do (no new dependencies, no files outside folder, no CDN scripts, no deploy)
+- Format: exact shape of output ("single index.html + brief.md listing sections in order")
+- Failure: what to do when stuck ("stop and ask one consolidated question rather than guessing")
+
+Memory: CLAUDE.md / agents.md in project root → agent reads at session start
+Self-modifying memory: "If I corrected you or you hit a bug from a wrong assumption, append new rule to learned_rules section"

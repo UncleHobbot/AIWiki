@@ -1,570 +1,610 @@
 ---
-title: "LLM-Powered Math Research: Ideas to Steal for Your MathWiki"
-title_ru: "LLM-инструменты для математических исследований: идеи для вашей MathWiki"
+title: "Improving AntonIliashenko/MathWiki: What to Add Next"
+title_ru: "Улучшение AntonIliashenko/MathWiki: что добавить дальше"
 category: tips
-tags: [mathwiki, math-research, llm-wiki, omegawiki, knowledge-graph, automation, obsidian, prompts, research-workflow]
-aliases: [MathWiki improvements, math research automation, LLM math wiki]
+tags: [mathwiki, differential-geometry, smith-maps, calibrated-geometry, obsidian, llm-wiki, opencode, research-workflow, prompts]
+aliases: [MathWiki improvements, AntonIliashenko MathWiki improvements, math research automation]
 confidence: high
 updated: 2026-05-18
 sources:
   - https://github.com/AntonIliashenko/MathWiki
   - https://github.com/skyllwt/OmegaWiki
-  - https://github.com/Yaro2709/MathWiki
 ---
 
 ## Summary
 
-A concrete playbook for making a personal math research wiki dramatically more efficient by transplanting six ideas from OmegaWiki and the broader LLM Wiki ecosystem onto an Obsidian-based MathWiki (Yaro2709-style atomic-note architecture). Each improvement is explained, ranked by impact, and shipped with a ready-to-paste Claude Code prompt.
+AntonIliashenko/MathWiki is already a sophisticated LLM-maintained research wiki with 70+ opencode skills, proof error tracking, contradiction directories, and computational verification scripts. This article identifies the **real remaining gaps** — not the basics it already has — and provides ready-to-use prompts and scripts for each one. The focus is on what would make the Smith map deformation theory programme specifically more effective.
 
 ## Key Ideas
 
-- **Typed relation graph** — replace the single `Использует:` field with 7 semantic edge types. Unlocks gap detection, generalization search, and adversarial proof review.
-- **Gap detector** — scan the vault for `[[links]]` that point to non-existent notes; these are stubs waiting to be written, not errors.
-- **Adversarial proof review** — a second model (or a second Claude pass) tries to find a counterexample or logical gap in your proof sketch before you commit it.
-- **arXiv daily digest** — morning scan of relevant math areas (math.AG, math.NT, math.CO, cs.LO…) → new papers become wiki entries with auto-extracted key theorems.
-- **Conjecture tracker** — a dedicated note type with `status: open|proven|disproven|known` that turns your open problems list into a queryable inventory.
-- **Session knowledge capture** — a PostToolUse/session-end hook extracts insights, failed approaches, and new conjectures from each Claude session into the wiki automatically.
+- **What's already working well:** adversarial proof review, citation-first architecture, `wiki/answers/` for error tracking, `wiki/contradictions/` discipline, `math-reasoning` skill, 70+ domain skills.
+- **Gap 1: No automated arXiv scan.** The repo has `literature-search` and `academic-search` skills but runs manually. A weekly GitHub Action for `math.DG`, `math.SG`, `math.AP` would surface relevant new preprints automatically.
+- **Gap 2: No broken-link detector.** The wiki uses `[[wikilinks]]` but there's no script scanning for targets that don't exist. Several referenced concepts have no page yet.
+- **Gap 3: No typed frontmatter relations.** Semantic dependency between papers and concepts lives in prose, not queryable frontmatter fields — limiting automated context assembly.
+- **Gap 4: Single monolithic research-question file.** As the programme expands to Cayley/Spin(7) and enumerative invariants, individual conjecture pages with `status` fields will scale better than one big file.
+- **Gap 5: No failed-approaches archive.** `wiki/answers/` captures resolved errors. There's no `wiki/approaches/` for abandoned proof strategies — causing dead-end rediscovery in long-running programmes.
+- **Gap 6: No daily research context brief.** Each opencode session starts cold. A `research_context.md` injected via AGENTS.md would carry forward current open questions, recent progress, and active methods without manual re-establishment.
 
-## Details
+## Baseline: What the Repo Already Has
 
-### Baseline: What Yaro2709's Architecture Already Gets Right
+Before adding anything, these are the capabilities *already in place*:
 
-The Yaro-style MathWiki uses atomic notes (one claim per file), typed callouts (`[!definition]`, `[!theorem]`, `[!proof]`), and the `Использует:` field to encode prerequisite dependencies as `[[wiki links]]`. This is an excellent substrate. The graph view in Obsidian already surfaces the dependency structure of mathematics in a way no textbook can.
+| Capability | How it's implemented |
+|---|---|
+| Adversarial proof review | `academic-paper-reviewer` (5 reviewers: EIC + 3 peers + Devil's Advocate), `grill-me`, `paper-audit` |
+| Proof error tracking | `wiki/answers/` — 4 entries already (Prop 2.9, Thm 4.2, Spencer cohomology, weak Smith equation) |
+| Contradiction tracking | `wiki/contradictions/` directory (currently empty; discipline is established) |
+| Literature search | `literature-search` (Semantic Scholar/arXiv/OpenAlex), `academic-search`, `deep-research` |
+| Mathematical reasoning | `math-reasoning` skill with LaTeX output |
+| Computational verification | `find_smith_maps.py`, `verify_smith.py`, `prove_smith.py` |
+| LaTeX output | `latex-document`, `latex-paper-en`, `paper-compilation` |
+| Confidence labelling | Every page has `confidence: high|medium|low` in frontmatter |
+| Citation management | `citation-management`, `bib-search-citation` |
+| Novelty checking | `novelty-assessment` skill |
 
-**What's missing** is the LLM automation layer: verification, automation, daily enrichment, and adversarial checks. The improvements below add that layer without changing the note structure.
+Do **not** add these — they're already covered.
 
 ---
 
-### Improvement 1 — Typed Relation Graph (steal from OmegaWiki)
+## Improvement 1 — Automated Weekly arXiv Scan (steal from OmegaWiki)
 
-OmegaWiki uses 9 entity types and semantic edge labels (`builds_on`, `improves_on`, `challenges`, `same_problem_as`). For a math wiki, translate this to 7 edge types stored in frontmatter:
+OmegaWiki runs a GitHub Action daily for arXiv. For Smith map research, the relevant sections are:
+- `math.DG` (Differential Geometry) — Smith maps, calibrated submanifolds, special holonomy
+- `math.SG` (Symplectic Geometry) — J-holomorphic curves, Gromov-Witten theory
+- `math.AP` (Analysis of PDEs) — elliptic PDE, p-harmonic functions, gradient estimates
+- `math.CV` (Complex Variables) — quasiregular maps, Schwarz lemmas
+
+**Add `fetch_arxiv.py` to the repo root:**
+
+```python
+# fetch_arxiv.py — weekly arXiv scanner for Smith map research
+import urllib.request, json, datetime
+from pathlib import Path
+
+AREAS = ["math.DG", "math.SG", "math.AP", "math.CV"]
+KEYWORDS = ["smith map", "calibrated", "associative", "G2 structure",
+            "Spin(7)", "J-holomorphic", "conformal immersion", "p-harmonic"]
+MAX_RESULTS = 20
+
+def fetch_recent(area):
+    base = "https://export.arxiv.org/api/query"
+    query = f"search_query=cat:{area}&sortBy=submittedDate&sortOrder=descending&max_results={MAX_RESULTS}"
+    url = f"{base}?{query}"
+    with urllib.request.urlopen(url, timeout=30) as r:
+        return r.read().decode("utf-8")
+
+def is_relevant(title, abstract):
+    text = (title + " " + abstract).lower()
+    return any(kw in text for kw in KEYWORDS)
+```
+
+**Add to GitHub Actions (`.github/workflows/arxiv-scan.yml`):**
 
 ```yaml
-uses: [[definition-metric-space]]          # prerequisite
-generalizes: [[theorem-bolzano-weierstrass]]  # this is more general
-special_case_of: [[theorem-compactness-general]]  # this is narrower
-equivalent_to: [[definition-cauchy-sequence]]  # equivalent reformulation
-proven_by: [[lemma-triangle-inequality]]      # proof step
-open_problem: [[conjecture-riemann-hypothesis]] # related open question
-contradicts: []                                 # for approaches that clash
+name: Weekly arXiv Scan
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python fetch_arxiv.py
+      - run: |
+          git config user.email "bot@mathwiki"
+          git config user.name "arxiv-bot"
+          git add wiki/papers/ logs/
+          git commit -m "arxiv-scan: $(date +%Y-%m-%d)" || echo "no new papers"
+          git push
 ```
 
-This takes ~5 minutes to retrofit existing notes and pays off immediately in the Gap Detector (Improvement 2).
-
-**Prompt: Add typed relations to an existing note**
+**Prompt: Extract paper wiki entry from arXiv abstract**
 ```
-I have a math wiki note about [THEOREM NAME]. Current frontmatter:
----
-[paste existing frontmatter]
----
-Current body: [paste body]
+New arXiv paper relevant to my Smith map / calibrated geometry research.
 
-Existing entries in my wiki (slugs): [paste list of related slugs]
-
-Task: Add 7 typed relation fields to the frontmatter using only slugs from
-the existing entries list. Fields: uses, generalizes, special_case_of,
-equivalent_to, proven_by, open_problem, contradicts.
-Leave a field empty [] if you can't confidently assign a value.
-Output: complete updated frontmatter only, no commentary.
-```
-
----
-
-### Improvement 2 — Gap Detector (steal from OmegaWiki + obs.py)
-
-Every `[[link]]` to a note that doesn't exist is a gap — a mathematical concept you've referenced but not yet defined or proved. In a math wiki, these accumulate fast. Run this as a weekly hygiene pass:
-
-```bash
-python scripts/obs.py broken
-```
-
-Each broken link is a stub to create. Prioritise by in-degree: the concept referenced by the most existing notes is your highest-leverage next note to write.
-
-**Prompt: Prioritise and scaffold stubs from broken links**
-```
-Here are the broken [[links]] in my math wiki (concepts referenced but not
-yet defined):
-[paste list from obs.py broken]
-
-For each broken link:
-1. Infer from context what type of note it should be (definition/theorem/axiom)
-2. Assign a priority score 1-5 (5 = many existing notes depend on this)
-3. Generate a stub note scaffold following this structure:
-
----
-title: "..."
-category: math
-tags: [...]
-type: definition|theorem|axiom
-status: stub
-uses: []
----
-
-## [!definition] / ## [!theorem]
-[1-sentence statement from what you can infer about this concept]
-
-## Proof / Derivation
-_stub_
-
-Return: prioritised list then all stub files.
-```
-
----
-
-### Improvement 3 — Adversarial Proof Review (steal from OmegaWiki)
-
-OmegaWiki routes a draft paper to a second model for cross-model adversarial review. For a math wiki, apply this to individual proof sketches: one Claude pass writes the proof, a second pass tries to break it.
-
-**Prompt: Adversarial proof review**
-```
-I have a theorem and a proof sketch. Play devil's advocate: your job is to
-find a logical gap, an unverified assumption, a missing lemma, or a
-potential counterexample. Do NOT help fix it — only identify weaknesses.
-
-Theorem: [paste theorem statement]
-
-Proof sketch: [paste proof]
-
-Known prerequisites I've verified: [list the [[uses]] links from this note]
-
-Output format:
-- VERDICT: [LIKELY CORRECT | HAS GAPS | FLAWED]
-- ISSUES: bullet list of specific problems
-- MISSING LEMMAS: what sub-results are assumed but not proven
-- CANDIDATE COUNTEREXAMPLE: (if verdict is FLAWED) concrete case where the
-  claim might fail
-```
-
-**Prompt: Lean 4 stub from proof sketch**
-```
-Convert this informal math proof sketch into a Lean 4 theorem stub with
-`sorry` placeholders where the proof is non-trivial. Preserve the logical
-structure. Add `-- TODO: needs [lemma name]` comments at each sorry.
-
-Theorem name: [name]
-Statement: [LaTeX statement]
-Proof sketch: [informal proof]
-```
-
----
-
-### Improvement 4 — Daily arXiv Digest (steal from OmegaWiki)
-
-OmegaWiki runs a GitHub Action at UTC 00:17 to fetch daily arXiv recommendations and compile them into wiki entries. Adapt this for your research areas:
-
-**Script setup** — add to `scripts/fetch_arxiv.py`:
-```python
-MATH_AREAS = ["math.AG", "math.NT", "math.CO", "math.AT", "cs.LO"]
-MAX_PAPERS = 10
-```
-
-**Prompt: Extract wiki entry from arXiv paper**
-```
-I have an arXiv paper abstract and metadata. Extract a wiki entry for my
-math research knowledge base.
-
-Paper metadata:
 Title: [title]
 Authors: [authors]
-arXiv ID: [id]
+arXiv ID: [id]  (https://arxiv.org/abs/[id])
 Abstract: [abstract]
 
-My existing wiki topics (for cross-linking): [paste tag list or slug list]
+My existing wiki papers (for cross-linking):
+[paste list from wiki/papers/]
 
-Output a wiki entry following this structure:
+My existing concepts (for cross-linking):
+[paste list from wiki/concepts/]
+
+Create a wiki entry following wiki/papers/ conventions:
 ---
-title: "..."
-category: concepts|tools
-tags: [3-5 tags]
-type: paper-summary
-date: [today]
-sources:
-  - https://arxiv.org/abs/[id]
+type: paper
+status: reading|read
+updated: [today]
+confidence: medium
 ---
 
-## Summary
-[2 sentences: what problem + what result]
+# [Title]
 
-## Key Theorems / Results
-- [theorem 1 in plain language]
-- [theorem 2]
+## Key Results
+- [theorem or result 1 — stated precisely]
+- [theorem or result 2]
 
-## Methods
-- [key technique used]
+## Methods Used
+- [technique from wiki/methods/ if applicable]
 
-## Connections to My Wiki
-- [[slug]] — [why this paper relates to this existing entry]
+## Connections to My Research
+- [[Smith Map]] — [how this relates]
+- [[research-question: smith-map-deformation-theory]] — [relevance]
 
-## Open Questions Raised
-- [what the paper leaves open]
-- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](../tools/mathwiki-smith-maps-research.md))
----
-<!-- RU -->
-[Russian translation following the same structure]
+## Open Questions It Raises
+- [question 1]
+
+## Quotes Worth Keeping
+> "[exact quote]" — p. [N]
+
+Flag if any results: (a) contradict existing wiki pages, (b) resolve or
+advance the active research question, (c) introduce a method worth adding
+to wiki/methods/.
 ```
 
 ---
 
-### Improvement 5 — Conjecture Tracker (steal from nvk/llm-wiki theses)
+## Improvement 2 — Broken-Link Detector
 
-nvk/llm-wiki uses `wiki/theses/` entries with `verdict: proven|refuted|contested|open`. For a math wiki, this maps directly onto open problems and conjectures:
+The wiki uses `[[Smith Map]]`, `[[Calibration]]`, etc. throughout, but there's no script to check which referenced pages don't exist. This matters especially as new papers reference concepts not yet documented.
 
-**New note type: conjecture**
+**Add `check_links.py` to the repo root:**
+
+```python
+# check_links.py — find [[links]] with no target page
+import re
+from pathlib import Path
+from collections import defaultdict
+
+WIKI = Path("wiki")
+WIKILINK_RE = re.compile(r"\[\[([^\]|#\n]+?)(?:[|#][^\]]+)?\]\]")
+
+# Build index of all existing page names (case-insensitive)
+existing = set()
+for p in WIKI.rglob("*.md"):
+    existing.add(p.stem.lower())
+    existing.add(p.stem)  # exact case too
+
+# Scan for broken links
+broken = defaultdict(list)
+for p in sorted(WIKI.rglob("*.md")):
+    text = p.read_text(encoding="utf-8")
+    for link in WIKILINK_RE.findall(text):
+        target = link.strip()
+        if target.lower() not in existing and target not in existing:
+            broken[target].append(p.name)
+
+print(f"Broken links: {len(broken)}")
+for target, sources in sorted(broken.items(), key=lambda x: -len(x[1])):
+    print(f"  [[{target}]] — referenced in: {', '.join(sources)}")
+```
+
+Run weekly: `python check_links.py`. Each broken link is a concept page to create.
+
+**Prompt: Scaffold missing concept pages**
+```
+These concept pages are referenced in my differential geometry wiki but
+don't exist yet. For each one, generate a stub following wiki/concepts/
+conventions.
+
+My research focus: Smith maps (calibrated + weakly conformal maps),
+G₂/Spin(7) special holonomy, conformal geometry, deformation theory.
+
+Missing concepts: [paste output from check_links.py]
+
+For each concept, create:
+---
+type: concept
+status: stub
+updated: [today]
+confidence: low
+---
+
+# [Concept Name]
+
+## Definition
+[1-3 sentence definition appropriate for differential geometry research]
+
+## Why It Appears in My Wiki
+[1 sentence: which paper/method uses this concept]
+
+## Related Concepts
+- [[related-concept]]
+
+Mark concepts you're unsure about with `confidence: low` and add a note
+`# unverified — needs source citation`.
+```
+
+---
+
+## Improvement 3 — Typed Frontmatter Relations
+
+Currently cross-links live in body text as `[[wikilinks]]` and in `## Connections` sections. This is readable but not machine-queryable. Adding structured frontmatter fields enables:
+- "What papers does this result depend on?" (automated context injection)
+- "What does this paper contradict?" (contradiction detector)
+- "What research questions does this settle?" (progress tracking)
+
+**Proposed schema for paper pages:**
+```yaml
+builds_on:
+  - 2012-mcduff-salamon-j-holomorphic-symplectic-topology  # foundational reference
+improves_on: []  # direct improvement on a specific prior result
+challenges: []   # papers this result contradicts or weakens
+resolves:
+  - smith-map-deformation-theory  # research question this advances
+uses:
+  - Nash-Moser Implicit Function Theorem  # method page
+  - Moser Iteration Technique
+open_problems:
+  - cayley-smith-map-moduli  # leaves open (create stub if needed)
+```
+
+**Prompt: Add typed relations to existing paper pages**
+```
+I have a paper wiki entry for my differential geometry research. Add
+typed frontmatter relation fields to it.
+
+Paper entry: [paste full page]
+
+Available pages for cross-linking:
+  Papers: [list from wiki/papers/]
+  Concepts: [list from wiki/concepts/]
+  Methods: [list from wiki/methods/]
+  Research questions: [list from wiki/research-questions/]
+
+Add these frontmatter fields (leave empty [] if genuinely not applicable):
+  builds_on: [paper slugs this result requires]
+  improves_on: [paper slugs this directly supersedes]
+  challenges: [paper slugs this contradicts]
+  resolves: [research-question slugs this advances]
+  uses: [method page names]
+  open_problems: [new stubs to create]
+
+Return: complete updated frontmatter block only.
+If any `challenges` entries exist, also draft a one-paragraph entry for
+wiki/contradictions/ explaining the conflict.
+```
+
+---
+
+## Improvement 4 — Individual Conjecture Pages
+
+`wiki/research-questions/smith-map-deformation-theory.md` is a single 300+ line file covering the entire deformation theory programme. As the programme expands (Cayley case, enumerative invariants, Z₂-harmonic spinors connections), this won't scale.
+
+**Proposed structure:**
+```
+wiki/research-questions/
+  _index.md               # overview + links to all questions
+  smith-map-def-theory.md # the associative case (current, mostly settled)
+  cayley-smith-moduli.md  # Spin(7) case — open
+  enumerative-invariants.md # long-term programme — open
+  z2-spinors-connection.md  # connection to Z₂-harmonic spinors — speculative
+```
+
+**Frontmatter for a conjecture page:**
 ```yaml
 ---
-title: "Conjecture: [name]"
-type: conjecture
-status: open|proven|disproven|known  # known = answer known in literature
-difficulty: research|graduate|olympiad
-related_theorems: [[theorem-X]], [[theorem-Y]]
-my_attempts: 1           # how many proof attempts recorded
-last_attempt: 2026-05-18
+type: research-question
+status: open|in-progress|settled|abandoned
+difficulty: foundational|tractable|speculative
+last_worked: 2026-05-18
+attempts: 2
+depends_on:
+  - smith-map-deformation-theory  # must be settled first
+blocks:
+  - enumerative-invariants        # this blocks the longer programme
 ---
-
-## Statement
-[precise mathematical statement]
-
-## Evidence For
-- [why it seems true]
-
-## Evidence Against / Counterexample Attempts
-- [attempt 1: approach, why it failed]
-
-## Related Open Problems
-- [connection to known open problems]
 ```
 
-**Prompt: Generate a conjecture entry from failed proof attempt**
+**Prompt: Split the current research-question page**
 ```
-I tried to prove [THEOREM/CLAIM] and got stuck. Help me extract a
-structured conjecture entry from this failed attempt.
+I have a single large research-question page covering multiple distinct
+sub-problems. Help me split it into individual conjecture pages.
 
-What I was trying to prove: [statement]
-Approach I tried: [proof attempt]
-Where I got stuck: [sticking point]
-What would need to be true for my approach to work: [missing lemma/condition]
+Current page: [paste smith-map-deformation-theory.md]
 
-Output: a complete conjecture wiki entry (see schema above), including:
-- Is this actually an open problem or is the answer known?
-- What weaker version IS provable?
-- What stronger version is the actual research frontier?
+Proposed sub-pages:
+1. smith-map-def-theory (associative G₂ case — largely settled in 2026 preprint)
+2. cayley-smith-moduli (Spin(7) case — fully open)
+3. enumerative-invariants-calibrated (long-term programme — speculative)
+
+For each sub-page:
+- Summarize the specific question (≤ 3 sentences)
+- List "What Is Already Known" (draw from the current page)
+- List "Key Obstacles" (what makes this hard)
+- Set `status:` correctly
+- Set `depends_on:` and `blocks:` relations
+- Preserve all existing proof details in the relevant sub-page
+
+Return all three complete pages.
 ```
 
 ---
 
-### Improvement 6 — Session Knowledge Capture (steal from claude-memory-compiler)
+## Improvement 5 — Failed-Approaches Archive
 
-The claude-memory-compiler project hooks into Claude Code's session end to extract decisions, insights, and lessons. For math research, this means: every session where you work with Claude on a proof or definition automatically produces a knowledge artifact.
+`wiki/answers/` records *resolved* errors (the covering-map mistake, the chain-rule gap). There's no parallel record of *abandoned proof strategies* — approaches that were tried, seemed promising, then hit an obstacle. For a long programme like Cayley Smith map deformation theory, not recording these means rediscovering dead ends months later.
 
-**CLAUDE.md hook addition:**
+**Add `wiki/approaches/` with this schema:**
+```yaml
+---
+type: proof-attempt
+target: cayley-smith-moduli   # which research question
+status: failed|partial|abandoned|promising
+method: Nash-Moser Implicit Function Theorem
+date_attempted: 2026-05-18
+---
+
+# Attempt: Nash-Moser for Cayley Smith Maps
+
+## Strategy
+[What the approach tried to do]
+
+## Where It Got Stuck
+[The exact obstacle — be precise enough that future-you won't retry it]
+
+## Why It Might Still Work With Modifications
+[If applicable: what would need to change]
+
+## Alternative Suggested
+[Next approach to try instead]
+```
+
+**Prompt: Extract a failed-approach entry from a session**
+```
+I just spent a session trying to prove [STATEMENT] using [APPROACH] and
+got stuck. Extract a structured failed-approach entry.
+
+Research question targeted: [slug from wiki/research-questions/]
+Method attempted: [approach]
+Sticking point: [where exactly things broke down — be precise]
+Key insight gained: [what you learned even though it didn't work]
+Reason the approach fundamentally fails (if known): [why]
+What would need to be true for this approach to work: [missing condition]
+
+Output: complete wiki/approaches/ entry in the schema above.
+Also: does this failure suggest a contradiction with any existing wiki
+entry? If so, draft a `wiki/contradictions/` entry.
+```
+
+---
+
+## Improvement 6 — Daily Research Context Brief
+
+Every opencode session starts cold. The AGENTS.md currently provides domain rules and a repository map. Add a generated `research_context.md` — updated after each session — that primes the agent with the current state of the programme:
+
+**Add to AGENTS.md:**
 ```markdown
-## Session End Protocol
-After any math research session, run:
-python scripts/capture_session.py --session "$(date +%Y-%m-%d)"
+## Current Research Context
+See `research_context.md` (regenerate after each session).
 
-This extracts:
-- Any new definitions or theorems discussed
-- Failed proof approaches (annotated with WHY they fail)
-- New conjectures raised
-- Cross-links to existing wiki notes discovered
+The active research question is: wiki/research-questions/smith-map-deformation-theory.md
+Current blockers: [list from approaches/ with status=abandoned or stuck]
+Most recent results: [last 3 entries in wiki/answers/]
+Papers read this month: [from logs/]
 ```
 
-**Prompt: Session debrief extraction**
+**Prompt: Generate a fresh research context brief**
 ```
-We just finished a math research session. Extract structured knowledge
-from our conversation.
+Generate a concise research context brief for injection into my opencode
+AGENTS.md. This will be read at the start of every session.
 
-Session transcript summary: [paste or describe what was discussed]
+Current programme: deformation theory of Smith maps (calibrated, weakly
+conformal maps) — developing moduli spaces analogous to J-holomorphic curves.
 
-Extract into these categories:
+Source material:
+- Active research question: [paste smith-map-deformation-theory.md summary]
+- Recent answers/: [list last 3 answer pages and their resolutions]
+- Recent approaches/: [list any abandoned approaches with reasons]
+- Papers added this month: [list]
 
-NEW KNOWLEDGE (create as wiki stubs):
-- Definitions formulated: [name, statement]
-- Theorems proven or sketched: [name, statement, confidence]
-- Useful lemmas: [name, statement]
+Output: a 150-word brief in this structure:
 
-FAILED APPROACHES (add to relevant conjecture entries):
-- Approach: [description] — Why it failed: [reason]
+## Research Context (updated [date])
+**Programme:** [1 sentence]
+**Current frontier:** [1 sentence — what's the next open problem]
+**Recent progress:** [2-3 bullet points]
+**Active dead ends:** [1-2 bullet points — approaches NOT to retry]
+**Next session should focus on:** [1 sentence recommendation]
 
-NEW OPEN QUESTIONS (create as conjecture stubs):
-- [question]
-
-CROSS-LINKS DISCOVERED:
-- [[existing-slug]] connects to [[existing-slug]] because [reason]
-
-Output: structured JSON following the above schema, ready to file.
+This should read like a handoff note from your past self to your future self.
 ```
 
 ---
 
-## Quick-Win Priority Order
+## What Is Already Excellent (Do Not Rebuild)
 
-| # | Improvement | Effort | Impact | Do first? |
+- **`academic-paper-reviewer`** already simulates 5 reviewers including Devil's Advocate — this is better than OmegaWiki's cross-model review. Use it.
+- **`grill-me`** is a strong adversarial proof checker. Run it on every new proof before filing in the wiki.
+- **`novelty-assessment`** replaces the "novelty check before compile" idea from OmegaWiki — it already does a systematic search.
+- **`wiki/contradictions/`** already encodes the discipline of tracking conflicts. When it gets populated, the `challenges:` frontmatter field (Improvement 3) will make it queryable.
+- **Python scripts** (`find_smith_maps.py` etc.) are already doing computational grounding. These are ahead of OmegaWiki's feature set.
+
+## Priority Table
+
+| # | Improvement | Effort | Impact | When |
 |---|---|---|---|---|
-| 1 | Run `obs.py broken` and create stubs | 15 min | High | **Yes** |
-| 2 | Add typed relation fields to 10 highest-linked notes | 1 hr | High | **Yes** |
-| 3 | Adversarial proof review prompt (paste into any session) | 0 | High | **Yes** |
-| 4 | Conjecture tracker for open problems | 2 hr | Medium | Soon |
-| 5 | Session debrief protocol (add to CLAUDE.md) | 30 min | Medium | Soon |
-| 6 | Daily arXiv digest (requires fetch_arxiv.py) | 4 hr | High (ongoing) | Next sprint |
-
-The first three cost nothing beyond copying a prompt. Start there.
+| 1 | Add `check_links.py` + run it | 20 min | High | **Now** |
+| 2 | Split research-question page into sub-pages | 1 hr | High | **Now** |
+| 3 | Add typed frontmatter relations to 5 key paper pages | 1 hr | Medium | This week |
+| 4 | Start `wiki/approaches/` — file 2-3 past dead ends | 30 min | High | This week |
+| 5 | Generate and commit `research_context.md` | 15 min | High | **Now** |
+| 6 | `fetch_arxiv.py` + GitHub Action | 3 hr | High (ongoing) | Next sprint |
 
 ## Related Entries
 
-- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](./omegawiki-research-platform.md))
-- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](./yaro-mathwiki.md))
-- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](./llm-wiki-ecosystem.md))
-- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
-- [[self-guided-self-play]] ([Self-Guided Self-Play for LLMs: SGS Algorithm](../concepts/self-guided-self-play.md))
-- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](../tips/llm-git-knowledge-accumulation.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](../tools/mathwiki-smith-maps-research.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
+- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](../tools/yaro-mathwiki.md))
+- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](./llm-wiki-scientific-research.md))
+- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](./llm-git-knowledge-accumulation.md))
 
 ---
 <!-- RU -->
 
 ## Краткое описание
 
-Конкретный план действий для повышения эффективности персональной математической вики за счёт шести идей из OmegaWiki и экосистемы LLM Wiki. Каждое улучшение объяснено, отранжировано по влиянию и снабжено готовым промптом для Claude Code.
+AntonIliashenko/MathWiki — уже зрелая LLM-поддерживаемая исследовательская вики с 70+ навыками opencode, трекером ошибок в доказательствах и вычислительными скриптами. Эта статья определяет реальные оставшиеся пробелы и предоставляет готовые промпты и скрипты для каждого из них.
 
 ## Ключевые идеи
 
-- **Типизированный граф связей** — замените единственное поле `Использует:` на 7 типов семантических рёбер. Открывает детектор пробелов, поиск обобщений и состязательную рецензию доказательств.
-- **Детектор пробелов** — сканирует хранилище на `[[ссылки]]` на несуществующие заметки; это заготовки для написания, а не ошибки.
-- **Состязательная рецензия доказательств** — вторая модель (или второй проход Claude) ищет контрпример или логическую брешь в вашем набросках доказательства.
-- **Ежедневный дайджест arXiv** — утреннее сканирование разделов математики → новые статьи становятся записями вики с автоматически извлечёнными теоремами.
-- **Трекер гипотез** — отдельный тип заметок с полем `status: open|proven|disproven|known`, превращающий список открытых задач в запрашиваемый инвентарь.
-- **Захват знаний сессии** — хук PostToolUse извлекает инсайты, неудачные подходы и новые гипотезы из каждой сессии Claude в вики автоматически.
+- **Что уже работает хорошо:** состязательная рецензия доказательств, citation-first архитектура, `wiki/answers/` для трекинга ошибок, дисциплина `wiki/contradictions/`, навык `math-reasoning`, 70+ доменных навыков.
+- **Пробел 1: нет автоматического сканирования arXiv.** `literature-search` и `academic-search` работают вручную. Еженедельный GitHub Action для `math.DG`, `math.SG`, `math.AP` выявит релевантные новые препринты автоматически.
+- **Пробел 2: нет детектора сломанных ссылок.** Несколько концептов, на которые ссылается вики, не имеют страниц.
+- **Пробел 3: нет типизированных полей в frontmatter.** Семантические зависимости между статьями и концептами живут в тексте, а не в запрашиваемых полях frontmatter.
+- **Пробел 4: монолитный файл исследовательского вопроса.** По мере расширения программы (случай Cayley/Spin(7), перечислительные инварианты) нужны отдельные страницы гипотез со статусами.
+- **Пробел 5: нет архива неудачных подходов.** `wiki/answers/` фиксирует ошибки. Нет `wiki/approaches/` для стратегий, которые были опробованы и оставлены — это приводит к повторному открытию тупиков.
+- **Пробел 6: нет ежедневного брифа о текущем состоянии исследования.** Каждая сессия opencode начинается с нуля. `research_context.md`, внедрённый через AGENTS.md, передаст контекст от прошлого «я» будущему.
 
-## Подробнее
+## Базовый уровень: что уже есть в репозитории
 
-### Базовый уровень: что архитектура Yaro уже делает правильно
+| Возможность | Реализация |
+|---|---|
+| Состязательная рецензия | `academic-paper-reviewer` (5 рецензентов), `grill-me`, `paper-audit` |
+| Трекинг ошибок в доказательствах | `wiki/answers/` — 4 записи (Предл. 2.9, Теор. 4.2, когомологии Спенсера, слабое уравнение Smith) |
+| Трекинг противоречий | Директория `wiki/contradictions/` (пока пустая) |
+| Поиск литературы | `literature-search`, `academic-search`, `deep-research` |
+| Математические рассуждения | Навык `math-reasoning` с LaTeX-выводом |
+| Вычислительная верификация | `find_smith_maps.py`, `verify_smith.py`, `prove_smith.py` |
+| LaTeX-экспорт | `latex-document`, `latex-paper-en`, `paper-compilation` |
+| Метки достоверности | Каждая страница имеет `confidence: high|medium|low` |
 
-Стиль MathWiki по Yaro использует атомарные заметки (одно утверждение на файл), типизированные callouts (`[!definition]`, `[!theorem]`, `[!proof]`) и поле `Использует:` для кодирования предпосылочных зависимостей через `[[wiki-ссылки]]`. Это отличный фундамент. Граф Obsidian уже раскрывает структуру зависимостей математики так, как ни один учебник не способен.
-
-**Чего не хватает** — слой LLM-автоматизации: верификация, обогащение, ежедневное пополнение и состязательные проверки. Описанные ниже улучшения добавляют этот слой, не изменяя структуру заметок.
+**Не добавляйте** — всё это уже покрыто.
 
 ---
 
-### Улучшение 1 — Типизированный граф связей (из OmegaWiki)
+## Улучшение 1 — Автоматическое еженедельное сканирование arXiv
 
-Замените `Использует:` на 7 полей в YAML frontmatter:
+Релевантные разделы для Smith map-исследований:
+- `math.DG` (Дифференциальная геометрия) — Smith-отображения, калиброванные подмногообразия, специальная голономия
+- `math.SG` (Симплектическая геометрия) — J-голоморфные кривые, теория Громова-Виттена
+- `math.AP` (Анализ PDE) — эллиптические PDE, p-гармонические функции, оценки градиентов
+- `math.CV` (Комплексный анализ) — квазирегулярные кривые, леммы Шварца
 
+Добавьте `fetch_arxiv.py` + GitHub Action `.github/workflows/arxiv-scan.yml` (ежепонедельный запуск UTC 08:00). Подробнее — в английской версии выше.
+
+**Промпт: извлечение записи вики из аннотации arXiv**
+```
+Новая статья на arXiv, релевантная моей исследовательской программе по
+Smith-отображениям / калиброванной геометрии.
+
+Title, Authors, arXiv ID, Abstract: [вставить]
+Существующие статьи в вики (для перекрёстных ссылок): [список из wiki/papers/]
+Существующие концепты: [список из wiki/concepts/]
+
+Создайте запись вики по конвенциям wiki/papers/.
+Отметьте, если результаты: (а) противоречат существующим страницам,
+(б) продвигают активный исследовательский вопрос, (в) вводят метод
+для wiki/methods/.
+```
+
+---
+
+## Улучшение 2 — Детектор сломанных ссылок
+
+Добавьте `check_links.py` в корень репозитория (код — в английской версии). Запускайте еженедельно: `python check_links.py`. Каждая сломанная ссылка — страница концепта, которую нужно создать.
+
+**Промпт: создание заготовок для отсутствующих концептов**
+```
+Эти страницы концептов упоминаются в моей вики по дифференциальной
+геометрии, но не существуют. Создайте заготовки по конвенциям wiki/concepts/.
+
+Фокус: Smith-отображения, G₂/Spin(7), конформная геометрия, теория деформаций.
+Отсутствующие концепты: [вывод check_links.py]
+```
+
+---
+
+## Улучшение 3 — Типизированные поля frontmatter
+
+Добавьте к страницам статей структурированные поля зависимостей:
 ```yaml
-uses: [[определение-метрическое-пространство]]
-generalizes: [[теорема-больцано-вейерштрасс]]
-special_case_of: [[теорема-компактность-общая]]
-equivalent_to: [[определение-последовательность-коши]]
-proven_by: [[лемма-неравенство-треугольника]]
-open_problem: [[гипотеза-римана]]
-contradicts: []
-```
-
-**Промпт: добавить типизированные связи к существующей заметке**
-```
-У меня есть заметка о [НАЗВАНИЕ ТЕОРЕМЫ]. Существующий frontmatter:
----
-[вставить frontmatter]
----
-Тело заметки: [вставить тело]
-
-Существующие записи в вики (слаги): [вставить список]
-
-Задача: добавить 7 полей типизированных связей в frontmatter, используя
-только слаги из списка существующих записей. Поля: uses, generalizes,
-special_case_of, equivalent_to, proven_by, open_problem, contradicts.
-Оставьте поле пустым [], если не можете уверенно назначить значение.
-Вывод: только обновлённый frontmatter, без комментариев.
+builds_on: [слаг-статьи]
+improves_on: []
+challenges: []
+resolves: [слаг-исследовательского-вопроса]
+uses: [название-метода]
+open_problems: [новые-заготовки]
 ```
 
 ---
 
-### Улучшение 2 — Детектор пробелов (из OmegaWiki + obs.py)
+## Улучшение 4 — Отдельные страницы гипотез
 
-Каждая `[[ссылка]]` на несуществующую заметку — это пробел: математический концепт, на который вы сослались, но ещё не определили или не доказали.
+Разбейте `smith-map-deformation-theory.md` на:
+- `smith-map-def-theory.md` (ассоциативный случай G₂ — в основном решён)
+- `cayley-smith-moduli.md` (случай Spin(7) — полностью открыт)
+- `enumerative-invariants-calibrated.md` (долгосрочная программа — спекулятивно)
 
-```bash
-python scripts/obs.py broken
-```
-
-Каждая сломанная ссылка — заготовка для создания. Приоритизируйте по входящей степени: концепт, на который ссылается больше всего существующих заметок — следующий высокоприоритетный кандидат для написания.
-
-**Промпт: приоритизация и создание заготовок из сломанных ссылок**
-```
-Вот сломанные [[ссылки]] в моей математической вики:
-[вставить список из obs.py broken]
-
-Для каждой сломанной ссылки:
-1. Выведите из контекста, какой тип заметки это должен быть (definition/theorem/axiom)
-2. Назначьте приоритет 1-5 (5 = на это зависит много заметок)
-3. Создайте заготовку заметки по структуре:
-
----
-title: "..."
-type: definition|theorem|axiom
-status: stub
-uses: []
----
-
-## [!definition] / ## [!theorem]
-[1 предложение — утверждение исходя из контекста]
-
-## Доказательство / Вывод
-_stub_
-```
+Frontmatter: `status: open|in-progress|settled|abandoned`, `depends_on:`, `blocks:`.
 
 ---
 
-### Улучшение 3 — Состязательная рецензия доказательства (из OmegaWiki)
+## Улучшение 5 — Архив неудачных подходов
 
-OmegaWiki направляет черновик статьи второй модели на состязательную рецензию. Для математической вики применяйте это к наброскам доказательств.
-
-**Промпт: состязательная рецензия доказательства**
-```
-У меня есть теорема и набросок доказательства. Сыграйте роль критика:
-ваша задача — найти логическую брешь, непроверенное допущение, отсутствующую
-лемму или потенциальный контрпример. НЕ помогайте исправить — только
-выявляйте слабости.
-
-Теорема: [вставить]
-Набросок доказательства: [вставить]
-Известные предпосылки (проверенные): [список uses-ссылок]
-
-Формат вывода:
-- ВЕРДИКТ: [ВЕРОЯТНО ВЕРНО | ЕСТЬ ПРОБЕЛЫ | ОШИБОЧНО]
-- ПРОБЛЕМЫ: список конкретных вопросов
-- ОТСУТСТВУЮЩИЕ ЛЕММЫ: что предполагается, но не доказано
-- КАНДИДАТ НА КОНТРПРИМЕР: (если ОШИБОЧНО) конкретный случай
-```
-
-**Промпт: заготовка Lean 4 из наброска**
-```
-Преобразуйте этот неформальный набросок доказательства в заготовку теоремы
-Lean 4 с плейсхолдерами `sorry`. Добавьте комментарии
-`-- TODO: нужна [название леммы]` в каждом sorry.
-
-Теорема: [название и LaTeX-утверждение]
-Набросок: [неформальное доказательство]
-```
-
----
-
-### Улучшение 4 — Ежедневный дайджест arXiv (из OmegaWiki)
-
-OmegaWiki запускает GitHub Action для ежедневного получения рекомендаций arXiv. Настройте для ваших областей: `math.AG`, `math.NT`, `math.CO`, `math.AT`, `cs.LO`.
-
-**Промпт: извлечение записи вики из статьи arXiv**
-```
-У меня есть аннотация и метаданные статьи arXiv. Создайте запись вики
-для моей математической базы знаний.
-
-Метаданные: Title, Authors, arXiv ID, Abstract.
-Существующие темы вики для перекрёстных ссылок: [список тегов или слагов]
-
-Структура вывода:
----
-title: "..."
-category: concepts
-type: paper-summary
-date: [сегодня]
-sources:
-  - https://arxiv.org/abs/[id]
----
-
-## Краткое описание [Summary]
-[2 предложения: задача + результат]
-
-## Ключевые теоремы / результаты
-## Методы
-## Связи с моей вики
-- [[slug]] — [почему статья связана с этой записью]
-## Открытые вопросы
-```
-
----
-
-### Улучшение 5 — Трекер гипотез (из nvk/llm-wiki)
-
-Выделенный тип заметок для открытых задач и гипотез:
-
+Создайте `wiki/approaches/` для стратегий доказательства, которые были опробованы и оставлены. Schema:
 ```yaml
----
-title: "Гипотеза: [название]"
-type: conjecture
-status: open|proven|disproven|known
-difficulty: research|graduate|olympiad
-related_theorems: [[theorem-X]]
-my_attempts: 1
-last_attempt: 2026-05-18
----
+type: proof-attempt
+target: cayley-smith-moduli
+status: failed|partial|abandoned|promising
+method: Nash-Moser Implicit Function Theorem
+date_attempted: 2026-05-18
 ```
 
-**Промпт: создать запись гипотезы из неудачной попытки**
+**Промпт: запись неудавшегося подхода**
 ```
-Я пытался доказать [УТВЕРЖДЕНИЕ] и застрял. Помогите извлечь структурированную
-запись гипотезы из этой неудачной попытки.
+Я провёл сессию, пытаясь доказать [УТВЕРЖДЕНИЕ] с помощью [ПОДХОД] и
+застрял. Извлеките структурированную запись неудавшегося подхода.
 
-Что я пытался доказать: [утверждение]
-Подход: [попытка доказательства]
-Где застрял: [место]
-Что нужно было бы для работы подхода: [отсутствующая лемма/условие]
+Цель: [слаг из wiki/research-questions/]
+Метод: [подход]
+Точка остановки: [где именно]
+Ключевой инсайт: [что узнали, даже если не сработало]
+Причина фундаментального провала (если известна): [почему]
 
-Вывод: полная запись гипотезы, включая:
-- Это реально открытая задача или ответ известен?
-- Какую более слабую версию МОЖНО доказать?
-- Какая более сильная версия — реальный исследовательский фронтир?
+Вывод: полная запись wiki/approaches/ по схеме выше.
 ```
 
 ---
 
-### Улучшение 6 — Захват знаний сессии (из claude-memory-compiler)
+## Улучшение 6 — Ежедневный бриф о текущем состоянии
 
-Добавьте в CLAUDE.md протокол завершения сессии, автоматически извлекающий знания:
-
-**Промпт: дебриф сессии**
-```
-Мы только что завершили математическую исследовательскую сессию. Извлеките
-структурированные знания из нашего разговора.
-
-Краткое содержание сессии: [описание]
-
-Категории для извлечения:
-
-НОВЫЕ ЗНАНИЯ (создать как заготовки):
-- Сформулированные определения: [название, утверждение]
-- Доказанные или обрисованные теоремы: [название, доверие]
-- Полезные леммы: [название, утверждение]
-
-НЕУДАЧНЫЕ ПОДХОДЫ (добавить в записи гипотез):
-- Подход: [описание] — Почему не сработал: [причина]
-
-НОВЫЕ ОТКРЫТЫЕ ВОПРОСЫ:
-- [вопрос]
-
-ОБНАРУЖЕННЫЕ ПЕРЕКРЁСТНЫЕ СВЯЗИ:
-- [[существующий-слаг]] связан с [[существующий-слаг]] потому что [причина]
-
-Вывод: структурированный JSON, готовый для подачи.
-```
+Добавьте в AGENTS.md ссылку на `research_context.md` — генерируйте его после каждой сессии. Это «записка от прошлого себя будущему себе»: текущий фронтир, недавний прогресс, тупики которых следует избегать.
 
 ---
 
-## Приоритет быстрых побед
+## Что уже отлично (не перестраивайте)
 
-| # | Улучшение | Усилие | Влияние | Сделать первым? |
+- **`academic-paper-reviewer`** — лучше, чем перекрёстная рецензия OmegaWiki. Используйте.
+- **`grill-me`** — сильная состязательная проверка. Запускайте на каждое новое доказательство.
+- **`novelty-assessment`** — уже делает систематический поиск новизны.
+- **Python-скрипты** — уже опережают возможности OmegaWiki.
+
+## Приоритет
+
+| # | Улучшение | Усилие | Влияние | Когда |
 |---|---|---|---|---|
-| 1 | `obs.py broken` + создать заготовки | 15 мин | Высокое | **Да** |
-| 2 | Типизированные связи для 10 самых ссылаемых заметок | 1 час | Высокое | **Да** |
-| 3 | Состязательная рецензия (промпт в любую сессию) | 0 | Высокое | **Да** |
-| 4 | Трекер гипотез для открытых задач | 2 часа | Среднее | Скоро |
-| 5 | Протокол дебрифа сессии (добавить в CLAUDE.md) | 30 мин | Среднее | Скоро |
-| 6 | Ежедневный дайджест arXiv (требует fetch_arxiv.py) | 4 часа | Высокое (регулярно) | Следующий спринт |
+| 1 | `check_links.py` + запустить | 20 мин | Высокое | **Сейчас** |
+| 2 | Разбить файл исследовательского вопроса | 1 час | Высокое | **Сейчас** |
+| 3 | Добавить типизированные связи к 5 ключевым статьям | 1 час | Среднее | На этой неделе |
+| 4 | Начать `wiki/approaches/` — записать 2-3 тупика | 30 мин | Высокое | На этой неделе |
+| 5 | Сгенерировать и закоммитить `research_context.md` | 15 мин | Высокое | **Сейчас** |
+| 6 | `fetch_arxiv.py` + GitHub Action | 3 часа | Высокое (регулярно) | Следующий спринт |
 
 ## Связанные записи
 
-- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](./omegawiki-research-platform.md))
-- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](./yaro-mathwiki.md))
-- [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](./llm-wiki-ecosystem.md))
-- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
-- [[self-guided-self-play]] ([Self-Guided Self-Play for LLMs: SGS Algorithm](../concepts/self-guided-self-play.md))
-- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](../tips/llm-git-knowledge-accumulation.md))
-- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](../tools/mathwiki-smith-maps-research.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: исследовательская вики](../tools/mathwiki-smith-maps-research.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: вики-центрированная платформа](../tools/omegawiki-research-platform.md))
+- [[yaro-mathwiki]] ([Yaro2709/MathWiki: рукотворная база математических знаний](../tools/yaro-mathwiki.md))
+- [[llm-wiki-ecosystem]] ([Экосистема LLM Wiki](../tools/llm-wiki-ecosystem.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki для научных исследований](./llm-wiki-scientific-research.md))
+- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git](./llm-git-knowledge-accumulation.md))

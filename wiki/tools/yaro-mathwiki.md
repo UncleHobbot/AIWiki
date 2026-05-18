@@ -36,7 +36,7 @@ Notable gaps include the absence of English content, no LLM integration for gene
 - [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
-
+- [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../tips/mathwiki-llm-research-automation.md))
 ---
 <!-- RU -->
 
@@ -67,3 +67,4 @@ MathWiki рассматривает математические знания к
 - [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
+- [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../tips/mathwiki-llm-research-automation.md))

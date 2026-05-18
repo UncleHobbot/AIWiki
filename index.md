@@ -1,5 +1,5 @@
 # LLM Wiki Index
-> 131 entries across 7 categories.
+> 132 entries across 7 categories.
 
 ## Agents
 
@@ -102,6 +102,7 @@
 - [[llm-wiki-scientific-research]] [LLM Wiki for Scientific Research and Academic Writing](wiki/tips/llm-wiki-scientific-research.md) — The LLM Wiki pattern — pre-compiling knowledge from raw sources into a persistent, LLM-maintained markdown wik
 - [[llm-wiki-setup-guide]] [LLM Wiki: Practical Setup Guide](wiki/tips/llm-wiki-setup-guide.md) — Step-by-step guide to building Karpathy's LLM Wiki from scratch: what tools you need, how to structure folders
 - [[mathwiki-improvement-plan]] [MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](wiki/tips/mathwiki-improvement-plan.md) — `Yaro2709/MathWiki` is a rigorous hand-authored Obsidian vault with 730+ atomic mathematical statements (defin
+- [[mathwiki-llm-research-automation]] [LLM-Powered Math Research: Ideas to Steal for Your MathWiki](wiki/tips/mathwiki-llm-research-automation.md) — A concrete playbook for making a personal math research wiki dramatically more efficient by transplanting six 
 - [[spec-driven-development-bmad]] [Spec-Driven Development in the Real World: From BMAD to Custom Skills](wiki/tips/spec-driven-development-bmad.md) — Fabrice Monnier shares his personal journey from vibe coding (magical but fragile) to spec-driven development 
 - [[test-driven-agentic-behaviours]] [Test-Driven Agentic Behaviours](wiki/tips/test-driven-agentic-behaviours.md) — Antony Marcano demonstrates how to apply test-driven development principles to define and verify agentic AI be
 - [[xp-practices-ai-assisted-development]] [XP Practices Are the Missing Piece for AI-Assisted Development](wiki/tips/xp-practices-ai-assisted-development.md) — Paul Hammond (20+ years experience, 13+ years XP practitioner) argues that Extreme Programming practices — TDD

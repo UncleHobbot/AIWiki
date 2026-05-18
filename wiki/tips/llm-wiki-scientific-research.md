@@ -72,7 +72,7 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 - [[karpathy-claude-code-guidelines]] ([Karpathy-Inspired Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
-
+- [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](./mathwiki-llm-research-automation.md))
 ---
 <!-- RU -->
 
@@ -123,3 +123,4 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 - [[karpathy-claude-code-guidelines]] ([Karpathy-Inspired Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
+- [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](./mathwiki-llm-research-automation.md))

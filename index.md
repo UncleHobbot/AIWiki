@@ -1,5 +1,5 @@
 # LLM Wiki Index
-> 132 entries across 7 categories.
+> 133 entries across 7 categories.
 
 ## Agents
 
@@ -130,6 +130,7 @@
 - [[llm-wiki-ecosystem]] [LLM Wiki Ecosystem: Implementations and Variants](wiki/tools/llm-wiki-ecosystem.md) — A curated map of open-source implementations of Karpathy's LLM Wiki pattern, updated to reflect the May 2026 e
 - [[llmwiki-open-source]] [llmwiki (Open-Source Implementation)](wiki/tools/llmwiki-open-source.md) — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files, start th
 - [[local-rag-obsidian-zotero]] [Local RAG: 100% Local Stack for Obsidian, Zotero, and Claude Code](wiki/tools/local-rag-obsidian-zotero.md) — A complete privacy-first RAG stack that runs entirely on your machine using LightRAG + Ollama + MCP. Indexes O
+- [[mathwiki-smith-maps-research]] [AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](wiki/tools/mathwiki-smith-maps-research.md) — AntonIliashenko/MathWiki is a citation-first, LLM-maintained research wiki for differential geometry, maintain
 - [[mattpocock-skills-repo]] [Matt Pocock](wiki/tools/mattpocock-skills-repo.md) — Matt Pocock's public skills repository (18.3k+ stars) contains the Claude Code agent skills he uses daily for 
 - [[mcp-financial-data-server]] [Self-Hosted MCP Server for Financial Data](wiki/tools/mcp-financial-data-server.md) — Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves U.S. financial data (SEC fi
 - [[microsoft-ai-agents-beginners-course]] [Microsoft AI Agents for Beginners: 12-Lesson Course](wiki/tools/microsoft-ai-agents-beginners-course.md) — Microsoft's official beginner course for building AI agents — 12 lessons covering fundamentals with Python cod

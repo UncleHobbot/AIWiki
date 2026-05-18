@@ -197,7 +197,7 @@ sources:
 
 ## Open Questions Raised
 - [what the paper leaves open]
-
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](../tools/mathwiki-smith-maps-research.md))
 ---
 <!-- RU -->
 [Russian translation following the same structure]
@@ -567,3 +567,4 @@ last_attempt: 2026-05-18
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[self-guided-self-play]] ([Self-Guided Self-Play for LLMs: SGS Algorithm](../concepts/self-guided-self-play.md))
 - [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](../tips/llm-git-knowledge-accumulation.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](../tools/mathwiki-smith-maps-research.md))

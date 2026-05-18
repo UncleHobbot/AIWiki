@@ -73,6 +73,7 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 - [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](./mathwiki-llm-research-automation.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Smith Map Research Wiki](../tools/mathwiki-smith-maps-research.md))
 ---
 <!-- RU -->
 
@@ -124,3 +125,4 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 - [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](./mathwiki-llm-research-automation.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Smith Map Research Wiki](../tools/mathwiki-smith-maps-research.md))

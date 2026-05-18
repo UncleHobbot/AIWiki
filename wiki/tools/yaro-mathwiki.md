@@ -37,6 +37,7 @@ Notable gaps include the absence of English content, no LLM integration for gene
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
 - [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../tips/mathwiki-llm-research-automation.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](./mathwiki-smith-maps-research.md))
 ---
 <!-- RU -->
 
@@ -68,3 +69,4 @@ MathWiki рассматривает математические знания к
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[automathkg]] ([AutoMathKG: Automated Mathematical Knowledge Graph](../tools/automathkg.md))
 - [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../tips/mathwiki-llm-research-automation.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](./mathwiki-smith-maps-research.md))

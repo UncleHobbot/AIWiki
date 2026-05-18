@@ -34,7 +34,6 @@ At scale, GROBID is a cornerstone infrastructure component. ResearchGate uses it
 
 ## Related Entries
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
-- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))
 
 ---
 <!-- RU -->
@@ -63,4 +62,3 @@ GROBID построен на модульной пайплайн-архитек�
 
 ## Связанные записи
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
-- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../tips/mathwiki-improvement-plan.md))

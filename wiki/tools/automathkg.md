@@ -31,7 +31,6 @@ The MathVD vector database, powered by SBERT embeddings with two specialized str
 
 ## Related Entries
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
-- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../research/mathwiki-improvement-plan.md))
 
 ---
 <!-- RU -->
@@ -58,4 +57,3 @@ AutoMathKG решает задачу организации математиче
 
 ## Связанные записи
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
-- [[mathwiki-improvement-plan]] ([MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](../research/mathwiki-improvement-plan.md))

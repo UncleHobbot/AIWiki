@@ -1,5 +1,5 @@
 # LLM Wiki Index
-> 133 entries across 8 categories. Last updated: 2026-05-18
+> 132 entries across 8 categories. Last updated: 2026-05-18
 
 ## 🤖 Agents (19)
 
@@ -76,9 +76,8 @@
 - [[andrej-karpathy]] [Andrej Karpathy](wiki/people/andrej-karpathy.md) — Andrej Karpathy is a Slovak-Canadian AI researcher, educator, and founding member of OpenAI. He served as Dire
 - [[matt-pocock-aihero]] [Matt Pocock: AI Hero and Claude Code Skills Author](wiki/people/matt-pocock-aihero.md) — Matt Pocock is a TypeScript educator turned AI coding practitioner whose aihero.dev platform and skills reposi
 
-## 🔎 Research (3)
+## 🔎 Research (2)
 
-- [[mathwiki-improvement-plan]] [MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](wiki/research/mathwiki-improvement-plan.md) — `Yaro2709/MathWiki` is a rigorous hand-authored Obsidian vault with 730+ atomic mathematical statements (defin
 - [[mathwiki-llm-research-automation]] [Improving AntonIliashenko/MathWiki: What to Add Next](wiki/research/mathwiki-llm-research-automation.md) — AntonIliashenko/MathWiki is already a sophisticated LLM-maintained research wiki with 70+ opencode skills, pro
 - [[mathwiki-smith-maps-research]] [AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](wiki/research/mathwiki-smith-maps-research.md) — AntonIliashenko/MathWiki is a citation-first, LLM-maintained research wiki for differential geometry, maintain
 

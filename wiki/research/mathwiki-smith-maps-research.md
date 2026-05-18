@@ -1,7 +1,7 @@
 ---
 title: "AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory"
 title_ru: "AntonIliashenko/MathWiki: исследовательская вики по теории деформаций Smith-отображений"
-category: tools
+category: research
 tags: [mathwiki, differential-geometry, smith-maps, calibrated-geometry, obsidian, llm-wiki, opencode, research-tool, knowledge-base]
 aliases: [AntonIliashenko MathWiki, Smith map wiki, calibrated geometry wiki]
 confidence: high
@@ -113,9 +113,9 @@ Both are Obsidian vaults using `[[wikilinks]]` for cross-linking, but they repre
 
 ## Related Entries
 
-- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](./yaro-mathwiki.md))
-- [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../tips/mathwiki-llm-research-automation.md))
-- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](./omegawiki-research-platform.md))
+- [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](../tools/yaro-mathwiki.md))
+- [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](./mathwiki-llm-research-automation.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[self-guided-self-play]] ([Self-Guided Self-Play for LLMs: SGS Algorithm](../concepts/self-guided-self-play.md))
 
@@ -191,8 +191,8 @@ Skills.md       Каталог 70+ навыков opencode с примерами
 
 ## Связанные записи
 
-- [[yaro-mathwiki]] ([Yaro2709/MathWiki: рукотворная база математических знаний](./yaro-mathwiki.md))
-- [[mathwiki-llm-research-automation]] ([LLM-инструменты для математических исследований](../tips/mathwiki-llm-research-automation.md))
-- [[omegawiki-research-platform]] ([OmegaWiki: вики-центрированная платформа для научных исследований](./omegawiki-research-platform.md))
+- [[yaro-mathwiki]] ([Yaro2709/MathWiki: рукотворная база математических знаний](../tools/yaro-mathwiki.md))
+- [[mathwiki-llm-research-automation]] ([LLM-инструменты для математических исследований](./mathwiki-llm-research-automation.md))
+- [[omegawiki-research-platform]] ([OmegaWiki: вики-центрированная платформа для научных исследований](../tools/omegawiki-research-platform.md))
 - [[llm-wiki-scientific-research]] ([LLM Wiki для научных исследований и академического письма](../tips/llm-wiki-scientific-research.md))
 - [[self-guided-self-play]] ([Самонаправленная самоигра для LLM: алгоритм SGS](../concepts/self-guided-self-play.md))

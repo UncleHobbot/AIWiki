@@ -1,0 +1,13 @@
+Fetching r/singularity (limit=25, after=t3_1te1zw0)...
+Traceback (most recent call last):
+  File "C:\Shared\OneDrive\AIProjects\AIWiki\scripts\fetch_reddit.py", line 166, in <module>
+    main()
+    ~~~~^^
+  File "C:\Shared\OneDrive\AIProjects\AIWiki\scripts\fetch_reddit.py", line 143, in main
+    posts = fetch_posts(args.subreddit, limit=args.limit, after=after)
+  File "C:\Shared\OneDrive\AIProjects\AIWiki\scripts\fetch_reddit.py", line 76, in fetch_posts
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\uncle\AppData\Roaming\Python\Python314\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/singularity/new.json?limit=25&raw_json=1&after=t3_1te1zw0

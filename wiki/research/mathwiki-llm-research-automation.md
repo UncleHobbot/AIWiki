@@ -1,7 +1,7 @@
 ---
 title: "Improving AntonIliashenko/MathWiki: What to Add Next"
 title_ru: "Улучшение AntonIliashenko/MathWiki: что добавить дальше"
-category: tips
+category: research
 tags: [mathwiki, differential-geometry, smith-maps, calibrated-geometry, obsidian, llm-wiki, opencode, research-workflow, prompts]
 aliases: [MathWiki improvements, AntonIliashenko MathWiki improvements, math research automation]
 confidence: high
@@ -441,12 +441,12 @@ This should read like a handoff note from your past self to your future self.
 
 ## Related Entries
 
-- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](../tools/mathwiki-smith-maps-research.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](./mathwiki-smith-maps-research.md))
 - [[omegawiki-research-platform]] ([OmegaWiki: Wiki-Centric AI Research Platform](../tools/omegawiki-research-platform.md))
 - [[yaro-mathwiki]] ([Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](../tools/yaro-mathwiki.md))
 - [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
-- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](./llm-wiki-scientific-research.md))
-- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](./llm-git-knowledge-accumulation.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
+- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](../tips/llm-git-knowledge-accumulation.md))
 
 ---
 <!-- RU -->
@@ -602,9 +602,9 @@ date_attempted: 2026-05-18
 
 ## Связанные записи
 
-- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: исследовательская вики](../tools/mathwiki-smith-maps-research.md))
+- [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: исследовательская вики](./mathwiki-smith-maps-research.md))
 - [[omegawiki-research-platform]] ([OmegaWiki: вики-центрированная платформа](../tools/omegawiki-research-platform.md))
 - [[yaro-mathwiki]] ([Yaro2709/MathWiki: рукотворная база математических знаний](../tools/yaro-mathwiki.md))
 - [[llm-wiki-ecosystem]] ([Экосистема LLM Wiki](../tools/llm-wiki-ecosystem.md))
-- [[llm-wiki-scientific-research]] ([LLM Wiki для научных исследований](./llm-wiki-scientific-research.md))
-- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git](./llm-git-knowledge-accumulation.md))
+- [[llm-wiki-scientific-research]] ([LLM Wiki для научных исследований](../tips/llm-wiki-scientific-research.md))
+- [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git](../tips/llm-git-knowledge-accumulation.md))

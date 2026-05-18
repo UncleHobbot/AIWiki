@@ -31,7 +31,7 @@ URL_CACHE_FILE = ROOT / ".state" / "url_check_cache.json"
 
 # ── Schema constants ───────────────────────────────────────────────────────────
 REQUIRED_FM_KEYS = {"title", "title_ru", "category", "tags", "updated", "sources"}
-VALID_CATEGORIES = {"concepts", "tools", "agents", "models", "news", "tips", "people"}
+VALID_CATEGORIES = {"concepts", "tools", "agents", "models", "news", "tips", "people", "research"}
 
 # Exact divider that separates EN from RU in every wiki file
 RU_DIVIDER_RE = re.compile(r"---\s*\n<!--\s*RU\s*-->")

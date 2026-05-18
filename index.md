@@ -1,7 +1,7 @@
 # LLM Wiki Index
-> 133 entries across 7 categories.
+> 133 entries across 8 categories. Last updated: 2026-05-18
 
-## Agents
+## 🤖 Agents (19)
 
 - [[acdc-agent-centric-development-cycle]] [AC/DC — Agent-Centric Development Cycle](wiki/agents/acdc-agent-centric-development-cycle.md) — Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) presents the Agent-Centric Dev
 - [[agent-operating-system]] [Agent Operating System (Agent OS)](wiki/agents/agent-operating-system.md) — An Agent Operating System (Agent OS) is infrastructure that manages AI agents the way a computer OS manages ap
@@ -22,7 +22,8 @@
 - [[new-organizational-models-ai-agents]] [New Organizational Models for the Age of AI Agents](wiki/agents/new-organizational-models-ai-agents.md) — Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on Tech") explores how organizat
 - [[specs-to-production-ai-agents]] [From Specs to Production: Building Software with AI Agents End to End](wiki/agents/specs-to-production-ai-agents.md) — Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) shows how to go from a product sp
 - [[ui-tars-desktop-multimodal-agent]] [UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](wiki/agents/ui-tars-desktop-multimodal-agent.md) — UI-TARS Desktop and Agent TARS are two open-source multimodal AI agent projects from ByteDance that use visual
-## Concepts
+
+## 🧠 Concepts (20)
 
 - [[agent-harness-engineering]] [Agent Harness Engineering](wiki/concepts/agent-harness-engineering.md) — Agent harness engineering is the discipline of designing the scaffolding around a language model — prompts, to
 - [[agi-impossibility-proof-debunked]] [Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](wiki/concepts/agi-impossibility-proof-debunked.md) — Guerzhoy (2026) demonstrates that Van Rooij et al.'s widely-cited "Ingenia Theorem" — claiming to prove that a
@@ -44,14 +45,16 @@
 - [[self-guided-self-play]] [Self-Guided Self-Play (SGS) for LLMs](wiki/concepts/self-guided-self-play.md) — Self-Guided Self-Play (SGS) is an LLM training algorithm that overcomes "Conjecturer collapse" — the failure m
 - [[surveygen-i-scientific-survey]] [SurveyGen-I: Memory-Guided Scientific Survey Generation](wiki/concepts/surveygen-i-scientific-survey.md) — SurveyGen-I generates long-form, internally consistent scientific surveys through a coarse-to-fine retrieval l
 - [[yandex-agents-week-2026-intro]] [Yandex Agents Week 2026: Intro to AI Agents and LLMs](wiki/concepts/yandex-agents-week-2026-intro.md) — Opening lecture of Yandex Education's Agents Week 2026 intensive, covering the evolution of human-LLM interact
-## Models
+
+## 🔬 Models (5)
 
 - [[deepseek-v4-vs-opus-kimi]] [DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](wiki/models/deepseek-v4-vs-opus-kimi.md) — Kilo CLI tested DeepSeek V4 Pro and Flash against Claude Opus 4.7 and Kimi K2.6 on a complex workflow orchestr
 - [[gpt-vs-glm-5-1-comparison]] [GPT vs GLM-5.1: Side-by-Side Coding Comparison](wiki/models/gpt-vs-glm-5-1-comparison.md) — A Reddit user running GPT and GLM-5.1 side by side reports near-indistinguishable coding output for everyday t
 - [[llm-wiki-chinese-models-comparison]] [Chinese LLM Models for Building Karpathy](wiki/models/llm-wiki-chinese-models-comparison.md) — Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wiki knowledge bases — covering 
 - [[open-source-models-vs-opus-copilot-benchmark]] [Open Source Models vs Claude Opus: Real-World Coding Benchmark](wiki/models/open-source-models-vs-opus-copilot-benchmark.md) — An unscientific but practical comparison of five open-source models (Kimi K2.6, MiniMax M2.7, GLM 5.1, DeepSee
 - [[tabpfn-3-tabular-foundation-model]] [TabPFN-3: Pre-trained Tabular Foundation Model](wiki/models/tabpfn-3-tabular-foundation-model.md) — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a si
-## News
+
+## 📰 News (14)
 
 - [[apple-m5-kernel-exploit-ai]] [First Public macOS Kernel Exploit on Apple M5 Built with AI](wiki/news/apple-m5-kernel-exploit-ai.md) — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silicon that su
 - [[arxiv-llm-ban-policy]] [arXiv Implements 1-Year Ban for Papers with Unchecked LLM Errors](wiki/news/arxiv-llm-ban-policy.md) — arXiv now imposes a 1-year ban on authors whose submissions contain incontrovertible evidence of unchecked LLM
@@ -67,11 +70,19 @@
 - [[openai-100-dollar-tier]] [OpenAI Launches $100/Month Tier](wiki/news/openai-100-dollar-tier.md) — OpenAI introduced a $100/month ChatGPT Pro tier on 9 April 2026, slotting between the $20 Plus and $200 Pro pl
 - [[pinecone-nexus]] [Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](wiki/news/pinecone-nexus.md) — Pinecone — the company that defined the RAG era with its vector database — announced Nexus in May 2026, a "com
 - [[roo-code-shutdown-roomote]] [Roo Code Shuts Down After 3M Installs, Pivots to Roomote](wiki/news/roo-code-shutdown-roomote.md) — Roo Code, the popular VS Code coding agent extension that reached 3 million installs, is shutting down on May 
-## People
+
+## 👤 People (2)
 
 - [[andrej-karpathy]] [Andrej Karpathy](wiki/people/andrej-karpathy.md) — Andrej Karpathy is a Slovak-Canadian AI researcher, educator, and founding member of OpenAI. He served as Dire
 - [[matt-pocock-aihero]] [Matt Pocock: AI Hero and Claude Code Skills Author](wiki/people/matt-pocock-aihero.md) — Matt Pocock is a TypeScript educator turned AI coding practitioner whose aihero.dev platform and skills reposi
-## Tips
+
+## 🔎 Research (3)
+
+- [[mathwiki-improvement-plan]] [MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](wiki/research/mathwiki-improvement-plan.md) — `Yaro2709/MathWiki` is a rigorous hand-authored Obsidian vault with 730+ atomic mathematical statements (defin
+- [[mathwiki-llm-research-automation]] [Improving AntonIliashenko/MathWiki: What to Add Next](wiki/research/mathwiki-llm-research-automation.md) — AntonIliashenko/MathWiki is already a sophisticated LLM-maintained research wiki with 70+ opencode skills, pro
+- [[mathwiki-smith-maps-research]] [AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](wiki/research/mathwiki-smith-maps-research.md) — AntonIliashenko/MathWiki is a citation-first, LLM-maintained research wiki for differential geometry, maintain
+
+## 💡 Tips (31)
 
 - [[agent-lifecycle-hooks-copilot-vscode]] [Agent Lifecycle Hooks in Copilot CLI and Claude Code](wiki/tips/agent-lifecycle-hooks-copilot-vscode.md) — Hooks are deterministic event handlers that fire at specific points in the AI agent lifecycle. Unlike the mode
 - [[agentic-ai-coding-patterns-tornhill]] [Agentic AI Coding: Best Practice Patterns for Speed with Quality](wiki/tips/agentic-ai-coding-patterns-tornhill.md) — Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) presents battle-tested patterns fo
@@ -101,12 +112,11 @@
 - [[llm-wiki-obsidian-codex-workflow]] [LLM Wiki: Obsidian + Codex Second Brain Workflow](wiki/tips/llm-wiki-obsidian-codex-workflow.md) — A practical workflow combining Obsidian (free markdown-file organizer) and OpenAI Codex (a coding IDE that act
 - [[llm-wiki-scientific-research]] [LLM Wiki for Scientific Research and Academic Writing](wiki/tips/llm-wiki-scientific-research.md) — The LLM Wiki pattern — pre-compiling knowledge from raw sources into a persistent, LLM-maintained markdown wik
 - [[llm-wiki-setup-guide]] [LLM Wiki: Practical Setup Guide](wiki/tips/llm-wiki-setup-guide.md) — Step-by-step guide to building Karpathy's LLM Wiki from scratch: what tools you need, how to structure folders
-- [[mathwiki-improvement-plan]] [MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base](wiki/tips/mathwiki-improvement-plan.md) — `Yaro2709/MathWiki` is a rigorous hand-authored Obsidian vault with 730+ atomic mathematical statements (defin
-- [[mathwiki-llm-research-automation]] [LLM-Powered Math Research: Ideas to Steal for Your MathWiki](wiki/tips/mathwiki-llm-research-automation.md) — A concrete playbook for making a personal math research wiki dramatically more efficient by transplanting six 
 - [[spec-driven-development-bmad]] [Spec-Driven Development in the Real World: From BMAD to Custom Skills](wiki/tips/spec-driven-development-bmad.md) — Fabrice Monnier shares his personal journey from vibe coding (magical but fragile) to spec-driven development 
 - [[test-driven-agentic-behaviours]] [Test-Driven Agentic Behaviours](wiki/tips/test-driven-agentic-behaviours.md) — Antony Marcano demonstrates how to apply test-driven development principles to define and verify agentic AI be
 - [[xp-practices-ai-assisted-development]] [XP Practices Are the Missing Piece for AI-Assisted Development](wiki/tips/xp-practices-ai-assisted-development.md) — Paul Hammond (20+ years experience, 13+ years XP practitioner) argues that Extreme Programming practices — TDD
-## Tools
+
+## 🛠️ Tools (39)
 
 - [[9router-free-ai-coding]] [9router: Free AI Coding Router with RTK Token Saver](wiki/tools/9router-free-ai-coding.md) — 9router is an open-source local proxy router that connects any AI coding tool (Claude Code, Codex, Cursor, Cli
 - [[agentmemory]] [agentmemory: Persistent Memory for AI Coding Agents](wiki/tools/agentmemory.md) — agentmemory is an open-source persistent memory server for AI coding agents — extending Karpathy's LLM Wiki pa
@@ -130,7 +140,6 @@
 - [[llm-wiki-ecosystem]] [LLM Wiki Ecosystem: Implementations and Variants](wiki/tools/llm-wiki-ecosystem.md) — A curated map of open-source implementations of Karpathy's LLM Wiki pattern, updated to reflect the May 2026 e
 - [[llmwiki-open-source]] [llmwiki (Open-Source Implementation)](wiki/tools/llmwiki-open-source.md) — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files, start th
 - [[local-rag-obsidian-zotero]] [Local RAG: 100% Local Stack for Obsidian, Zotero, and Claude Code](wiki/tools/local-rag-obsidian-zotero.md) — A complete privacy-first RAG stack that runs entirely on your machine using LightRAG + Ollama + MCP. Indexes O
-- [[mathwiki-smith-maps-research]] [AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](wiki/tools/mathwiki-smith-maps-research.md) — AntonIliashenko/MathWiki is a citation-first, LLM-maintained research wiki for differential geometry, maintain
 - [[mattpocock-skills-repo]] [Matt Pocock](wiki/tools/mattpocock-skills-repo.md) — Matt Pocock's public skills repository (18.3k+ stars) contains the Claude Code agent skills he uses daily for 
 - [[mcp-financial-data-server]] [Self-Hosted MCP Server for Financial Data](wiki/tools/mcp-financial-data-server.md) — Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves U.S. financial data (SEC fi
 - [[microsoft-ai-agents-beginners-course]] [Microsoft AI Agents for Beginners: 12-Lesson Course](wiki/tools/microsoft-ai-agents-beginners-course.md) — Microsoft's official beginner course for building AI agents — 12 lessons covering fundamentals with Python cod
@@ -148,3 +157,4 @@
 - [[visual-explainer]] [Visual Explainer](wiki/tools/visual-explainer.md) — An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages featuring re
 - [[wiki-os]] [Wiki OS: Browser UI for LLM Wiki](wiki/tools/wiki-os.md) — Wiki OS is a free, open-source browser-based interface for LLM Wiki vaults that displays article graphs, vault
 - [[yaro-mathwiki]] [Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](wiki/tools/yaro-mathwiki.md) — Yaro2709/MathWiki is a hand-curated Obsidian vault containing 730+ atomic mathematical statements (definitions
+

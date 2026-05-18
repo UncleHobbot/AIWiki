@@ -1,7 +1,7 @@
 ---
 title: "MathWiki Improvement Plan: Automating a Hand-Crafted Math Knowledge Base"
 title_ru: "План улучшения MathWiki: автоматизация рукотворной математической базы знаний"
-category: tips
+category: research
 tags: [mathwiki, obsidian, math, knowledge-base, automation, claude-code, grobid, latex, zettelkasten, atomic-notes]
 updated: 2026-05-16
 sources:

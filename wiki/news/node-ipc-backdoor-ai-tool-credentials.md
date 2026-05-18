@@ -51,9 +51,9 @@ The three malicious versions were published by an account named `atiertant` with
 
 ## Related Entries
 
-- [[ai-agent-security]] ([AI Agent Security](../agents/ai-agent-security.md))
-- [[claude-code]] ([Claude Code](../tools/claude-code.md))
-- [[supply-chain-security]] ([Supply Chain Security](../concepts/supply-chain-security.md))
+- [[praisonai-cve-2026-44338-agent-auth-bypass]] ([PraisonAI CVE-2026-44338](../news/praisonai-cve-2026-44338-agent-auth-bypass.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[microsoft-mdash-agentic-vulnerability-scanner]] ([Microsoft MDASH](../agents/microsoft-mdash-agentic-vulnerability-scanner.md))
 
 ---
 <!-- RU -->
@@ -84,6 +84,6 @@ The three malicious versions were published by an account named `atiertant` with
 
 ## Связанные записи
 
-- [[ai-agent-security]] ([AI Agent Security](../agents/ai-agent-security.md))
-- [[claude-code]] ([Claude Code](../tools/claude-code.md))
-- [[supply-chain-security]] ([Supply Chain Security](../concepts/supply-chain-security.md))
+- [[praisonai-cve-2026-44338-agent-auth-bypass]] ([PraisonAI CVE-2026-44338](../news/praisonai-cve-2026-44338-agent-auth-bypass.md))
+- [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[microsoft-mdash-agentic-vulnerability-scanner]] ([Microsoft MDASH](../agents/microsoft-mdash-agentic-vulnerability-scanner.md))

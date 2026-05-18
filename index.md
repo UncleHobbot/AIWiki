@@ -1,5 +1,5 @@
 # LLM Wiki — Index
-**135 entries** across 8 categories.
+**140 entries** across 8 categories.
 
 ## Concepts (20)
 
@@ -97,13 +97,16 @@
 - [[open-source-models-vs-opus-copilot-benchmark]] [Open Source Models vs Claude Opus: Real-World Coding Benchmark](wiki/models\open-source-models-vs-opus-copilot-benchmark.md) — An unscientific but practical comparison of five open-source models (Kimi K2.6, MiniMax M2.7, GLM 5.
 - [[tabpfn-3-tabular-foundation-model]] [TabPFN-3: Pre-trained Tabular Foundation Model](wiki/models\tabpfn-3-tabular-foundation-model.md) — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training ro
 
-## News (16)
+## News (20)
 
 - [[apple-m5-kernel-exploit-ai]] [First Public macOS Kernel Exploit on Apple M5 Built with AI](wiki/news\apple-m5-kernel-exploit-ai.md) — Security researchers built the first public macOS kernel memory corruption exploit on Apple M5 silic
+- [[apple-m5-kernel-exploit-ai 1]] [apple-m5-kernel-exploit-ai 1](wiki/news\apple-m5-kernel-exploit-ai 1.md)
 - [[arxiv-llm-ban-policy]] [arXiv Implements 1-Year Ban for Papers with Unchecked LLM Errors](wiki/news\arxiv-llm-ban-policy.md) — arXiv now imposes a 1-year ban on authors whose submissions contain incontrovertible evidence of unc
 - [[codex-on-mobile]] [Codex Available on Mobile](wiki/news\codex-on-mobile.md) — OpenAI's Codex coding agent became available on mobile devices, extending terminal-based agentic cod
 - [[enterprise-gpu-underutilization]] [Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](wiki/news\enterprise-gpu-underutilization.md) — Enterprises sitting on millions in GPU investments are averaging just 5% utilization rates, while in
+- [[enterprise-gpu-underutilization 1]] [enterprise-gpu-underutilization 1](wiki/news\enterprise-gpu-underutilization 1.md)
 - [[fda-ai-clinical-trials]] [FDA Shortens Clinical Trial Timelines with AI](wiki/news\fda-ai-clinical-trials.md) — On April 28, 2026, the FDA announced a first-of-its-kind initiative using causal AI to monitor clini
+- [[fda-ai-clinical-trials 1]] [fda-ai-clinical-trials 1](wiki/news\fda-ai-clinical-trials 1.md)
 - [[figure-ai-03-robot-30-hours]] [Figure AI 03 Works 30+ Hours Straight](wiki/news\figure-ai-03-robot-30-hours.md) — Figure AI's humanoid robot 03 demonstrated continuous autonomous operation for over 30 hours on a fa
 - [[figure-ai-team-robots-livestream]] [Figure AI 03: Team of Humanoid Robots on Livestream](wiki/news\figure-ai-team-robots-livestream.md) — Figure AI live-streamed three F.03 humanoid robots working a full 8-hour shift sorting packages on a
 - [[gen-ai-web-traffic-may-2026]] [Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](wiki/news\gen-ai-web-traffic-may-2026.md) — Gen AI web traffic data shows ChatGPT declining from 77.6% to ~50% over 12 months, while Gemini surg
@@ -113,12 +116,14 @@
 - [[node-ipc-backdoor-ai-tool-credentials]] [node-ipc Supply Chain Attack Targets Claude AI and Developer Credentials](wiki/news\node-ipc-backdoor-ai-tool-credentials.md) — Three versions of the popular npm package `node-ipc` (9.1.6, 9.2.3, 12.0.1) were found to contain an
 - [[openai-100-dollar-tier]] [OpenAI Launches $100/Month Tier](wiki/news\openai-100-dollar-tier.md) — OpenAI introduced a $100/month ChatGPT Pro tier on 9 April 2026, slotting between the $20 Plus and $
 - [[pinecone-nexus]] [Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](wiki/news\pinecone-nexus.md) — Pinecone — the company that defined the RAG era with its vector database — announced Nexus in May 20
+- [[pinecone-nexus 1]] [pinecone-nexus 1](wiki/news\pinecone-nexus 1.md)
 - [[praisonai-cve-2026-44338-agent-auth-bypass]] [PraisonAI CVE-2026-44338: Auth Bypass in Multi-Agent Framework Exploited in Under 4 Hours](wiki/news\praisonai-cve-2026-44338-agent-auth-bypass.md) — CVE-2026-44338 is a missing-authentication vulnerability in PraisonAI (an open-source multi-agent or
 - [[roo-code-shutdown-roomote]] [Roo Code Shuts Down After 3M Installs, Pivots to Roomote](wiki/news\roo-code-shutdown-roomote.md) — Roo Code, the popular VS Code coding agent extension that reached 3 million installs, is shutting do
 
-## Tips (31)
+## Tips (32)
 
 - [[agent-lifecycle-hooks-copilot-vscode]] [Agent Lifecycle Hooks in Copilot CLI and Claude Code](wiki/tips\agent-lifecycle-hooks-copilot-vscode.md) — Hooks are deterministic event handlers that fire at specific points in the AI agent lifecycle. Unlik
+- [[agent-lifecycle-hooks-copilot-vscode 1]] [agent-lifecycle-hooks-copilot-vscode 1](wiki/tips\agent-lifecycle-hooks-copilot-vscode 1.md)
 - [[agentic-ai-coding-patterns-tornhill]] [Agentic AI Coding: Best Practice Patterns for Speed with Quality](wiki/tips\agentic-ai-coding-patterns-tornhill.md) — Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) presents battle-tested p
 - [[agentic-ai-development-copilot-lessons]] [Agentic AI Development with GitHub Copilot: Lessons Learned](wiki/tips\agentic-ai-development-copilot-lessons.md) — A practitioner's account of real-world agentic AI-assisted development using GitHub Copilot CLI on a
 - [[anthropic-academy-courses-review]] [Anthropic Academy: All 7 Courses Reviewed with Learning Roadmaps](wiki/tips\anthropic-academy-courses-review.md) — All 7 free Anthropic Academy core practitioner courses reviewed after completing them in one weekend

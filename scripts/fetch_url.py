@@ -5,11 +5,15 @@ Fetch a web page and extract article text, respecting rate limits.
 """
 
 import argparse
+import io
 import json
 import re
 import sys
 import urllib.robotparser
 from urllib.parse import urlparse
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 import requests
 
@@ -109,9 +113,6 @@ def fetch_url(url: str) -> dict:
 
 
 def main():
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-
     parser = argparse.ArgumentParser(description="Fetch URL content for LLM Wiki")
     parser.add_argument("url", help="URL to fetch")
     parser.add_argument("--max-chars", type=int, default=10000, help="Max content length")

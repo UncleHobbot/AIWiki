@@ -13,7 +13,8 @@ for root, dirs, files in os.walk(wiki_dir):
         if not f.endswith(".md"):
             continue
         path = os.path.join(root, f)
-        text = open(path, encoding="utf-8").read()
+        with open(path, encoding="utf-8") as _fh:
+            text = _fh.read()
 
         fm_match = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
         if not fm_match:

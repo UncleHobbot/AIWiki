@@ -5,11 +5,15 @@ Fetch YouTube video metadata and transcript for LLM Wiki processing.
 """
 
 import argparse
+import io
 import json
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 try:
     from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled
@@ -164,9 +168,6 @@ def get_transcript_ytdlp_fallback(video_id: str) -> tuple[str, str]:
 
 
 def main():
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-
     parser = argparse.ArgumentParser(description="Fetch YouTube transcript for LLM Wiki")
     parser.add_argument("url", help="YouTube URL or video ID")
     parser.add_argument("--save", action="store_true", help="Save transcript to sources/transcripts/")

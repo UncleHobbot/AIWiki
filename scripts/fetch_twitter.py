@@ -7,11 +7,15 @@ Optional: RapidAPI key for fetching tweet metadata by URL.
 """
 
 import argparse
+import io
 import json
 import os
 import re
 import sys
 from pathlib import Path
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 import requests
 from dotenv import load_dotenv

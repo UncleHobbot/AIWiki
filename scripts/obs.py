@@ -38,7 +38,7 @@ def cmd_backlinks(slug):
     vault = _load_vault()
     if slug not in vault.md_file_index:
         print(f"WARN: '{slug}' not found in vault (no matching .md file).", file=sys.stderr)
-    raw = vault.get_backlinks(slug)
+    raw = vault.get_backlinks(slug) or []
     links = sorted(_dedup(raw))
     if not links:
         print(f"No backlinks found for '{slug}'.")
@@ -75,7 +75,7 @@ def cmd_broken():
     print(f"Broken [[links]] - targets with no .md file ({len(broken)}):")
     for target in broken:
         # Find which notes link to this broken target
-        sources = sorted(_dedup(vault.get_backlinks(target)))
+        sources = sorted(_dedup(vault.get_backlinks(target) or []))
         src_str = ", ".join(f"[[{s}]]" for s in sources)
         print(f"  [[{target}]]  <-{src_str}")
 
@@ -86,7 +86,7 @@ def cmd_orphans():
     all_notes = list(vault.md_file_index.keys())
     orphans = []
     for note in all_notes:
-        bl = _dedup(vault.get_backlinks(note))
+        bl = _dedup(vault.get_backlinks(note) or [])
         if not bl:
             orphans.append(note)
     orphans.sort()
@@ -119,7 +119,7 @@ def cmd_top(n=10):
     all_notes = list(vault.md_file_index.keys())
     counts = []
     for note in all_notes:
-        bl = _dedup(vault.get_backlinks(note))
+        bl = _dedup(vault.get_backlinks(note) or [])
         counts.append((note, len(bl)))
     counts.sort(key=lambda x: x[1], reverse=True)
     top = counts[:n]
@@ -138,12 +138,12 @@ def cmd_check():
     # Broken links
     broken = sorted(vault.nonexistent_notes)
     # Orphans
-    orphans = sorted(n for n in all_notes if not _dedup(vault.get_backlinks(n)))
+    orphans = sorted(n for n in all_notes if not _dedup(vault.get_backlinks(n) or []))
     # Isolated
     isolated = sorted(vault.isolated_notes)
     # Top linked
     counts = sorted(
-        ((n, len(_dedup(vault.get_backlinks(n)))) for n in all_notes),
+        ((n, len(_dedup(vault.get_backlinks(n) or []))) for n in all_notes),
         key=lambda x: x[1], reverse=True
     )
 
@@ -153,7 +153,7 @@ def cmd_check():
     if broken:
         print(f"[BROKEN] {len(broken)} link target(s) with no .md file:")
         for target in broken:
-            sources = sorted(_dedup(vault.get_backlinks(target)))
+            sources = sorted(_dedup(vault.get_backlinks(target) or []))
             src_str = ", ".join(f"[[{s}]]" for s in sources[:3])
             more = f" +{len(sources)-3} more" if len(sources) > 3 else ""
             print(f"   [[{target}]]  <-  {src_str}{more}")

@@ -21,6 +21,7 @@ The script finds or creates today's ## YYYY-MM-DD heading automatically.
 """
 
 import io
+import re
 import sys
 import datetime
 import pathlib
@@ -62,12 +63,25 @@ def append_log(command: str, message: str) -> None:
     print(f"[log.md] {entry}")
 
 
+def _fix_msys_path(arg: str) -> str:
+    """Undo Git Bash / MSYS2 path translation.
+
+    Git Bash converts leading '/' in args to the Git install dir, e.g.:
+      /wiki-reddit  ->  C:/Program Files/Git/wiki-reddit
+    Detect this pattern and restore the original slash-prefixed string.
+    """
+    m = re.match(r"^[A-Za-z]:[/\\](?:Program Files[/\\])?Git([/\\].+)$", arg)
+    if m:
+        return m.group(1).replace("\\", "/")
+    return arg
+
+
 def main() -> int:
     if len(sys.argv) < 3:
         print("Usage: log_run.py <command> <message>", file=sys.stderr)
         print('Example: log_run.py "/wiki-reddit" "14 subs, 2 entries created."', file=sys.stderr)
         return 1
-    command = sys.argv[1]
+    command = _fix_msys_path(sys.argv[1])
     message = " ".join(sys.argv[2:])
     append_log(command, message)
     return 0

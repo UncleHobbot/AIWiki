@@ -8,7 +8,7 @@ import json
 import os
 import re
 import unicodedata
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 # ─── State management ──────────────────────────────────────────────────────────
@@ -38,7 +38,8 @@ def mark_processed(url: str):
     urls = load_processed_urls()
     urls.add(url.strip().rstrip("/"))
     PROCESSED_URLS_FILE.write_text(
-        json.dumps({"urls": sorted(urls), "count": len(urls)}, indent=2)
+        json.dumps(sorted(urls), indent=2, ensure_ascii=False),
+        encoding="utf-8",
     )
 
 
@@ -52,7 +53,7 @@ def log_run(command: str, stats: dict):
     if LAST_RUN_FILE.exists():
         runs = json.loads(LAST_RUN_FILE.read_text())
     runs.append(
-        {"command": command, "timestamp": datetime.utcnow().isoformat(), **stats}
+        {"command": command, "timestamp": datetime.now(timezone.utc).isoformat(), **stats}
     )
     # Keep last 100 runs
     runs = runs[-100:]

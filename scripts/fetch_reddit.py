@@ -12,8 +12,9 @@ import sys
 import time
 from pathlib import Path
 
-if sys.stdout.encoding != "utf-8":
-    sys.stdout.reconfigure(encoding="utf-8")
+import io as _io
+sys.stdout = _io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+sys.stderr = _io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 import requests
 from dotenv import load_dotenv
@@ -52,12 +53,12 @@ def get_oauth_token() -> str | None:
 
 def load_cursor() -> dict:
     if STATE_FILE.exists():
-        return json.loads(STATE_FILE.read_text())
+        return json.loads(STATE_FILE.read_text(encoding="utf-8"))
     return {}
 
 
 def save_cursor(cursor: dict):
-    STATE_FILE.write_text(json.dumps(cursor, indent=2))
+    STATE_FILE.write_text(json.dumps(cursor, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def fetch_posts(subreddit: str, limit: int = 25, after: str | None = None) -> list[dict]:

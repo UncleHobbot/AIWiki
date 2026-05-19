@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Паттерн LLM Wiki Карпатого — Компилируй, не извлекай</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & Root ─────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #04060f;
+    --bg2:      #080d1c;
+    --cyan:     #00d8ff;
+    --amber:    #ffaa00;
+    --green:    #00ff88;
+    --red:      #ff4757;
+    --white:    #edf2f7;
+    --muted:    #4a5568;
+    --dim:      #718096;
+    --card:     rgba(255,255,255,0.04);
+    --border:   rgba(0,216,255,0.18);
+    --font-display: 'Exo 2', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Exo 2', sans-serif;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Deck Container ───────────────────────────────── */
+  #deck {
+    width: 100vw; height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Slide Base ───────────────────────────────────── */
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 6vw;
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+                transform 0.55s cubic-bezier(0.22,1,0.36,1);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    z-index: 2;
+  }
+  .slide.exit {
+    opacity: 0;
+    transform: translateX(-80px);
+    z-index: 1;
+  }
+
+  /* ── Ambient Background Mesh ─────────────────────── */
+  .slide-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .slide-bg::before,
+  .slide-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.18;
+    animation: drift 12s ease-in-out infinite alternate;
+  }
+
+  .s-title    .slide-bg::before { width:60vw; height:60vw; background:var(--cyan);   top:-20%; left:-15%; }
+  .s-title    .slide-bg::after  { width:45vw; height:45vw; background:var(--amber);  bottom:-10%; right:-10%; animation-delay:-4s; }
+  .s-problem  .slide-bg::before { width:55vw; height:55vw; background:#ff4757;       top:-20%; right:-10%; }
+  .s-problem  .slide-bg::after  { width:40vw; height:40vw; background:#ff8c00;       bottom:-15%; left:-5%; animation-delay:-6s; }
+  .s-who      .slide-bg::before { width:60vw; height:60vw; background:var(--cyan);   bottom:-25%; left:-15%; }
+  .s-who      .slide-bg::after  { width:40vw; height:40vw; background:var(--green);  top:-10%; right:-5%; animation-delay:-3s; }
+  .s-idea     .slide-bg::before { width:65vw; height:65vw; background:var(--cyan);   top:-25%; right:-20%; opacity:0.22; }
+  .s-idea     .slide-bg::after  { width:50vw; height:50vw; background:#7c5cfc;       bottom:-20%; left:-10%; animation-delay:-8s; }
+  .s-arch     .slide-bg::before { width:50vw; height:50vw; background:var(--amber);  top:-10%; left:-10%; }
+  .s-arch     .slide-bg::after  { width:40vw; height:40vw; background:var(--cyan);   bottom:-15%; right:-10%; animation-delay:-5s; }
+  .s-ops      .slide-bg::before { width:55vw; height:55vw; background:var(--green);  bottom:-20%; right:-15%; }
+  .s-ops      .slide-bg::after  { width:40vw; height:40vw; background:var(--cyan);   top:-10%; left:-10%; animation-delay:-7s; }
+  .s-setup    .slide-bg::before { width:60vw; height:60vw; background:#7c5cfc;       top:-20%; left:-20%; }
+  .s-setup    .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan);   bottom:-15%; right:-5%; animation-delay:-4s; }
+  .s-rag      .slide-bg::before { width:55vw; height:55vw; background:#7c5cfc;       top:-15%; left:-10%; }
+  .s-rag      .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan);   bottom:-20%; right:-10%; animation-delay:-5s; }
+  .s-vsrag    .slide-bg::before { width:55vw; height:55vw; background:var(--amber);  top:-15%; right:-15%; }
+  .s-vsrag    .slide-bg::after  { width:50vw; height:50vw; background:var(--red);    bottom:-20%; left:-10%; animation-delay:-6s; }
+  .s-usecases .slide-bg::before { width:60vw; height:60vw; background:var(--green);  top:-20%; left:-10%; }
+  .s-usecases .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan);   bottom:-15%; right:-10%; animation-delay:-3s; }
+  .s-example  .slide-bg::before { width:55vw; height:55vw; background:var(--cyan);   bottom:-20%; left:-15%; }
+  .s-example  .slide-bg::after  { width:45vw; height:45vw; background:var(--green);  top:-10%; right:-10%; animation-delay:-5s; }
+  .s-selfimprove .slide-bg::before { width:60vw; height:60vw; background:#7c5cfc; top:-20%; right:-15%; }
+  .s-selfimprove .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan); bottom:-15%; left:-10%; animation-delay:-7s; }
+  .s-future   .slide-bg::before { width:65vw; height:65vw; background:var(--amber);  top:-25%; left:-15%; opacity:0.2; }
+  .s-future   .slide-bg::after  { width:50vw; height:50vw; background:var(--green);  bottom:-20%; right:-5%; animation-delay:-4s; }
+  .s-closing  .slide-bg::before { width:70vw; height:70vw; background:var(--cyan);   top:-30%; right:-20%; opacity:0.2; }
+  .s-closing  .slide-bg::after  { width:55vw; height:55vw; background:var(--amber);  bottom:-25%; left:-15%; animation-delay:-5s; opacity:0.2; }
+
+  @keyframes drift {
+    from { transform: translate(0,0) scale(1); }
+    to   { transform: translate(4%,3%) scale(1.05); }
+  }
+
+  #deck::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.04) 2px,
+      rgba(0,0,0,0.04) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .slide > * { position: relative; z-index: 1; }
+
+  /* ── Typography ───────────────────────────────────── */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.1s forwards;
+  }
+  h1.hero {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s forwards;
+  }
+  h1.hero .accent  { color: var(--cyan); }
+  h1.hero .accent2 { color: var(--amber); }
+  h2.slide-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.15s forwards;
+  }
+  h2.slide-title .hl  { color: var(--cyan); }
+  h2.slide-title .hl2 { color: var(--amber); }
+  h2.slide-title .hlg { color: var(--green); }
+  h3.section { font-family: var(--font-display); font-size: clamp(1rem,2vw,1.4rem); font-weight:700; color:var(--amber); margin-bottom:0.75rem; letter-spacing:0.02em; }
+  p, li { font-size: clamp(0.85rem, 1.6vw, 1.05rem); line-height: 1.65; color: rgba(237,242,247,0.85); }
+  strong { color: var(--white); font-weight: 600; }
+  em { color: var(--cyan); font-style: normal; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(22px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── Layout Helpers ───────────────────────────────── */
+  .slide-inner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeUp 0.65s 0.25s forwards;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  /* ── Cards ────────────────────────────────────────── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.6rem 1.8rem;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+    opacity: 0.7;
+  }
+  .card.amber::before  { background: linear-gradient(90deg, var(--amber), transparent); }
+  .card.green::before  { background: linear-gradient(90deg, var(--green), transparent); }
+  .card.red::before    { background: linear-gradient(90deg, var(--red), transparent); }
+  .card.purple::before { background: linear-gradient(90deg, #7c5cfc, transparent); }
+
+  /* ── Bullet Lists ─────────────────────────────────── */
+  .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .bullet-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+  }
+  .bullet-list li::before {
+    content: '▹';
+    color: var(--cyan);
+    flex-shrink: 0;
+    margin-top: 0.05em;
+    font-size: 0.9em;
+  }
+  .bullet-list.amber li::before { color: var(--amber); }
+  .bullet-list.green li::before { color: var(--green); }
+
+  /* ── Code Blocks ──────────────────────────────────── */
+  .code-block {
+    font-family: var(--font-mono);
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,216,255,0.2);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    line-height: 1.7;
+    color: var(--green);
+    overflow: hidden;
+  }
+  .code-block .kw  { color: var(--cyan); }
+  .code-block .str { color: var(--amber); }
+  .code-block .cmt { color: var(--muted); }
+
+  /* ── Quote Block ──────────────────────────────────── */
+  .quote-block {
+    border-left: 3px solid var(--cyan);
+    padding: 1rem 1.5rem;
+    background: rgba(0,216,255,0.04);
+    border-radius: 0 8px 8px 0;
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.7;
+    color: rgba(237,242,247,0.9);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .quote-block .attribution {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 0.8em;
+    color: var(--cyan);
+    font-style: normal;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+
+  /* ── Stat Pills ───────────────────────────────────── */
+  .stat-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; }
+  .stat-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,216,255,0.07);
+    border: 1px solid rgba(0,216,255,0.2);
+    border-radius: 10px;
+    padding: 0.8rem 1.4rem;
+    min-width: 100px;
+  }
+  .stat-pill .num {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .stat-pill .label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 0.3rem;
+    text-align: center;
+  }
+  .stat-pill.amber { background: rgba(255,170,0,0.07); border-color: rgba(255,170,0,0.2); }
+  .stat-pill.amber .num { color: var(--amber); }
+  .stat-pill.green { background: rgba(0,255,136,0.06); border-color: rgba(0,255,136,0.18); }
+  .stat-pill.green .num { color: var(--green); }
+
+  /* ── Tag Chips ────────────────────────────────────── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+  .tag {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0,216,255,0.3);
+    color: var(--cyan);
+    background: rgba(0,216,255,0.06);
+  }
+  .tag.amber { border-color: rgba(255,170,0,0.3); color: var(--amber); background: rgba(255,170,0,0.06); }
+  .tag.green { border-color: rgba(0,255,136,0.3); color: var(--green); background: rgba(0,255,136,0.05); }
+
+  /* ── Progress Bar ────────────────────────────────── */
+  #progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--amber));
+    transition: width 0.4s ease;
+    z-index: 900;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+
+  /* ── Slide Dots ──────────────────────────────────── */
+  #dots {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 900;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, width 0.3s;
+  }
+  .dot.active {
+    background: var(--cyan);
+    transform: scale(1.3);
+    width: 18px;
+    border-radius: 3px;
+    box-shadow: 0 0 6px var(--cyan);
+  }
+
+  /* ── Nav Arrows ──────────────────────────────────── */
+  .nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    color: var(--dim);
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-btn:hover { background: rgba(0,216,255,0.1); color: var(--cyan); border-color: rgba(0,216,255,0.3); }
+  #nav-prev { left: 1.2rem; }
+  #nav-next { right: 1.2rem; }
+
+  /* ── Slide Counter ───────────────────────────────── */
+  #counter {
+    position: fixed;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    z-index: 900;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── Logo Mark ───────────────────────────────────── */
+  #logo-mark {
+    position: fixed;
+    top: 1.2rem;
+    left: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    z-index: 900;
+  }
+  #logo-mark span { color: var(--cyan); }
+
+  /* ── Title Slide ─────────────────────────────────── */
+  .s-title { text-align: center; }
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+    font-weight: 300;
+    color: var(--dim);
+    margin-top: 1.5rem;
+    max-width: 620px;
+    line-height: 1.65;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.5s forwards;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.7s forwards;
+  }
+  .pill-btn {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    background: rgba(0,216,255,0.06);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .pill-btn:hover { background: rgba(0,216,255,0.15); }
+  .pill-btn.filled { background: var(--cyan); color: #000; border-color: var(--cyan); font-weight: 700; }
+  .pill-btn.filled:hover { background: #33e0ff; }
+
+  .grid-lines {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(0,216,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,216,255,0.035) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  /* ── Layer Diagram ────────────────────────────────── */
+  .layer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 700px;
+  }
+  .layer {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.4rem;
+  }
+  .layer-num {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cyan);
+    width: 2.5rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .layer-label { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); }
+  .layer-desc { font-size: 0.85rem; color: var(--dim); margin-top: 0.15rem; line-height: 1.5; }
+
+  /* ── Ops Flow ─────────────────────────────────────── */
+  .ops-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-width: 950px;
+  }
+  .op-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .op-card:first-child { border-radius: 12px 0 0 12px; }
+  .op-card:last-child  { border-radius: 0 12px 12px 0; }
+  .op-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .op-ingest::before { background: var(--cyan); }
+  .op-query::before  { background: var(--green); }
+  .op-lint::before   { background: var(--amber); }
+  .op-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+    color: var(--muted);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .op-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+  }
+  .op-ingest .op-title { color: var(--cyan); }
+  .op-query  .op-title { color: var(--green); }
+  .op-lint   .op-title { color: var(--amber); }
+  .op-body { font-size: 0.85rem; color: rgba(237,242,247,0.75); line-height: 1.6; }
+
+  /* ── Timeline ─────────────────────────────────────── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--cyan), var(--amber), var(--green));
+    opacity: 0.4;
+  }
+  .tl-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.2rem;
+    position: relative;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -2rem;
+    top: 6px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--cyan);
+    border: 2px solid var(--bg);
+    flex-shrink: 0;
+  }
+  .tl-date {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--cyan);
+    min-width: 70px;
+    padding-top: 0.15rem;
+    letter-spacing: 0.05em;
+  }
+  .tl-content { font-size: 0.88rem; line-height: 1.5; color: rgba(237,242,247,0.8); }
+  .tl-content strong { color: var(--white); font-weight: 600; }
+
+  /* ── Setup Steps ─────────────────────────────────── */
+  .step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 700px;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 0.8rem 1.1rem;
+  }
+  .step-n {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--cyan);
+    width: 1.5rem;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  .step-text { font-size: 0.88rem; color: rgba(237,242,247,0.85); line-height: 1.5; }
+  .step-text code {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    background: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    padding: 0.1em 0.4em;
+    color: var(--green);
+  }
+
+  /* ── Use Case Grid ───────────────────────────────── */
+  .usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1100px;
+  }
+  .uc-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 1.3rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .uc-icon { font-size: 1.8rem; line-height: 1; }
+  .uc-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 0.2rem;
+  }
+  .uc-desc { font-size: 0.8rem; color: var(--dim); line-height: 1.55; }
+  .uc-example { font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan); margin-top: 0.3rem; }
+
+  /* ── Compare Table ───────────────────────────────── */
+  .compare-table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+  }
+  .compare-table th {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.8rem 1.2rem;
+    text-align: left;
+    background: rgba(0,0,0,0.3);
+  }
+  .compare-table th:nth-child(2) { color: var(--red); }
+  .compare-table th:nth-child(3) { color: var(--green); }
+  .compare-table td {
+    font-size: 0.82rem;
+    padding: 0.6rem 1.2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: rgba(237,242,247,0.8);
+    line-height: 1.5;
+  }
+  .compare-table td:first-child {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--dim);
+  }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* ── Improve Grid ────────────────────────────────── */
+  .improve-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  /* ── Closing ─────────────────────────────────────── */
+  .closing-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
+    max-width: 850px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .closing-quote em { color: var(--cyan); font-style: normal; }
+  .closing-attribution {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--dim);
+    text-align: center;
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.6s forwards;
+    letter-spacing: 0.05em;
+  }
+  .closing-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.9s forwards;
+    flex-wrap: wrap;
+  }
+  .link-chip {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(0,216,255,0.25);
+    border-radius: 4px;
+    color: var(--cyan);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Stagger ─────────────────────────────────────── */
+  .stagger > * {
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 0.3s; }
+  .stagger > *:nth-child(2) { animation-delay: 0.45s; }
+  .stagger > *:nth-child(3) { animation-delay: 0.6s; }
+  .stagger > *:nth-child(4) { animation-delay: 0.75s; }
+  .stagger > *:nth-child(5) { animation-delay: 0.9s; }
+  .stagger > *:nth-child(6) { animation-delay: 1.05s; }
+  .stagger > *:nth-child(7) { animation-delay: 1.2s; }
+  .stagger > *:nth-child(8) { animation-delay: 1.35s; }
+  .stagger > *:nth-child(9) { animation-delay: 1.5s; }
+
+  /* ── Keyboard hint ───────────────────────────────── */
+  #keyboard-hint {
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    z-index: 900;
+  }
+
+  /* ── Evolution Cards ─────────────────────────────── */
+  .evo-card {
+    background: var(--card);
+    border: 1px solid rgba(0,216,255,0.15);
+    border-radius: 12px;
+    padding: 1.2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .evo-era {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+  .evo-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.1rem;
+  }
+  .evo-limit {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    color: var(--dim);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* ── RAG Pipeline Diagram ───────────────────────── */
+  .rag-pipeline { display: flex; flex-direction: column; gap: 0.6rem; }
+  .rag-phase-label {
+    font-family: var(--font-mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+  .rag-flow { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+  .rag-box {
+    font-family: var(--font-mono);
+    font-size: clamp(0.62rem, 1vw, 0.75rem);
+    padding: 0.4rem 0.75rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    color: var(--white);
+    white-space: nowrap;
+  }
+  .rag-box.cyan  { border-color: rgba(0,216,255,0.4);  color: var(--cyan);  background: rgba(0,216,255,0.07); }
+  .rag-box.amber { border-color: rgba(255,170,0,0.4);  color: var(--amber); background: rgba(255,170,0,0.07); }
+  .rag-box.green { border-color: rgba(0,255,136,0.4);  color: var(--green); background: rgba(0,255,136,0.06); }
+  .rag-box.red   { border-color: rgba(255,71,87,0.4);  color: var(--red);   background: rgba(255,71,87,0.06); }
+  .rag-arrow { color: var(--muted); font-size: 0.85rem; flex-shrink: 0; }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 768px) {
+    .two-col, .three-col, .usecase-grid, .improve-grid { grid-template-columns: 1fr; }
+    .ops-flow { flex-direction: column; }
+    .op-card:first-child { border-radius: 12px 12px 0 0; }
+    .op-card:last-child  { border-radius: 0 0 12px 12px; }
+    .op-arrow { display: none; }
+    .compare-table { font-size: 0.75rem; }
+    .compare-table td, .compare-table th { padding: 0.5rem 0.7rem; }
+    h1.hero { font-size: clamp(2.5rem, 10vw, 4rem); }
+    h2.slide-title { font-size: clamp(1.5rem, 6vw, 2.5rem); }
+  }
+</style>
+</head>
+<body>
+
+<div id="deck">
+
+  <!-- ── Слайд 1: Титульный ─────────────────────────── -->
+  <section class="slide s-title active" id="s0">
+    <div class="slide-bg"></div>
+    <div class="grid-lines"></div>
+    <div class="eyebrow">Андрей Карпаты · Апрель 2026</div>
+    <h1 class="hero">
+      <span class="accent">LLM</span><br>
+      <span class="accent2">Вики</span><br>
+      Паттерн
+    </h1>
+    <p class="hero-sub">Скомпилируй знания один раз. Запрашивай скомпилированный артефакт бесконечно.<br>Конец повторному выводу фактов из сырых источников.</p>
+    <div class="hero-cta">
+      <div class="pill-btn filled" onclick="nextSlide()">Начать →</div>
+      <div class="pill-btn">github.com/karpathy</div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 2: Эволюция AI ──────────────────────── -->
+  <section class="slide s-rag" id="s-evo">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Эволюция <span class="hl">AI</span></h2>
+    <div class="slide-inner stagger" style="max-width:1100px; gap:1.4rem;">
+      <div class="card" style="padding:0.85rem 1.4rem; border-color:rgba(255,71,87,0.3);">
+        <p style="font-size:0.88rem;"><strong style="color:var(--red);">Корень проблемы:</strong> У LLM <em>нет постоянной памяти</em>. Каждая сессия начинается с нуля — модель знает только данные из обучения (заморожены на дате отсечки) и то, что вы написали прямо сейчас. Ваши документы, история, знания вашей организации — всё это невидимо для модели.</p>
+      </div>
+      <div class="three-col stagger">
+        <div class="evo-card">
+          <div class="evo-era">Эпоха 1 · 2022–2023</div>
+          <div class="evo-name" style="color:var(--cyan);">ChatGPT<br><span style="font-size:0.65em;color:var(--dim);">Вопрос → Ответ</span></div>
+          <ul class="bullet-list" style="font-size:0.78rem;gap:0.4rem;margin-top:0.6rem;">
+            <li>Один вопрос — один ответ</li>
+            <li>Знания заморожены на дате обучения</li>
+            <li>Нет доступа к частным документам</li>
+            <li>Нет памяти между сессиями</li>
+            <li>Каждый чат полностью изолирован</li>
+          </ul>
+          <div class="evo-limit">❌ Не может работать с вашими данными</div>
+        </div>
+        <div class="evo-card" style="border-color:rgba(255,170,0,0.3);">
+          <div class="evo-era">Эпоха 2 · 2023–2024</div>
+          <div class="evo-name" style="color:var(--amber);">RAG<br><span style="font-size:0.65em;color:var(--dim);">Вопрос → Поиск → Ответ</span></div>
+          <ul class="bullet-list amber" style="font-size:0.78rem;gap:0.4rem;margin-top:0.6rem;">
+            <li>Разбиваем docs → эмбеддинг → векторная БД</li>
+            <li>При запросе: находим похожие фрагменты</li>
+            <li>Вставляем фрагменты в промпт LLM</li>
+            <li>Ответы заземлены в частных / актуальных данных</li>
+            <li>По-прежнему без состояния — каждый раз заново</li>
+          </ul>
+          <div class="evo-limit" style="color:var(--amber);border-color:rgba(255,170,0,0.2);">❌ Нет синтеза, нет памяти</div>
+        </div>
+        <div class="evo-card" style="border-color:rgba(0,255,136,0.3);">
+          <div class="evo-era">Эпоха 3 · 2024 → сейчас</div>
+          <div class="evo-name" style="color:var(--green);">AI Агенты<br><span style="font-size:0.65em;color:var(--dim);">Планируй → Действуй → Наблюдай → Цикл</span></div>
+          <ul class="bullet-list green" style="font-size:0.78rem;gap:0.4rem;margin-top:0.6rem;">
+            <li><strong>Инструменты:</strong> веб, код, файлы, API</li>
+            <li><strong>Память:</strong> постоянное состояние между сессиями</li>
+            <li><strong>Циклы:</strong> план → действие → рефлексия → повтор</li>
+            <li><strong>Управление контекстом</strong> в масштабе</li>
+            <li><em>LLM Wiki = скомпилированный слой памяти</em></li>
+          </ul>
+          <div class="evo-limit" style="color:var(--green);border-color:rgba(0,255,136,0.2);">✓ Здесь мы сейчас</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 3: Что такое RAG ─────────────────────── -->
+  <section class="slide s-rag" id="s-whatrag">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Что такое <span class="hl2">RAG</span>?</h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <h3 class="section">Retrieval-Augmented Generation</h3>
+        <p style="margin-bottom:1rem;">Введён Lewis et al. (Facebook AI Research, 2020). Техника, которая заземляет ответы LLM в конкретном корпусе документов — без дообучения модели на этом корпусе.</p>
+        <ul class="bullet-list" style="margin-bottom:1.2rem;">
+          <li>Документы разбиваются на <em>фрагменты (chunks)</em> → каждый превращается в числовой <em>эмбеддинг</em> → хранится в <em>векторной базе данных</em></li>
+          <li>При запросе: вопрос пользователя тоже преобразуется в эмбеддинг, находятся наиболее похожие фрагменты, они вставляются в промпт LLM как контекст</li>
+          <li>LLM отвечает, опираясь на найденные фрагменты — не на знания из обучения</li>
+          <li>Работает для любой предметной области без переобучения — просто меняйте корпус</li>
+        </ul>
+        <div class="quote-block" style="font-size:0.83rem;">
+          Главное обещание: LLM остаётся точным и актуальным, потому что находит доказательства в момент запроса, а не хранит доменные знания в весах модели.
+          <span class="attribution">— Lewis et al., «RAG for Knowledge-Intensive NLP Tasks», NeurIPS 2020</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">Пайплайн RAG</h3>
+        <div class="rag-pipeline" style="margin-bottom:1.2rem;">
+          <div class="rag-phase-label">Индексирование — один раз, заранее</div>
+          <div class="rag-flow">
+            <div class="rag-box">Документы</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box">Chunk</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box cyan">Embed</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box amber">Векторная БД</div>
+          </div>
+          <div class="rag-phase-label" style="margin-top:0.9rem;">Запрос — повторяется при каждом обращении</div>
+          <div class="rag-flow">
+            <div class="rag-box green">Вопрос</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box cyan">Embed</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box amber">Поиск в БД</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box">Top-K chunks</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box green">LLM + Ответ</div>
+          </div>
+        </div>
+        <div class="card" style="padding:1rem 1.2rem;">
+          <p style="font-size:0.8rem;margin-bottom:0.5rem;"><strong>RAG силён, когда:</strong> корпус огромен (миллионы документов), часто меняется или нужны точные ссылки на исходные фрагменты.</p>
+          <p style="font-size:0.8rem;"><strong style="color:var(--red);">Слепое пятно RAG:</strong> при каждом запросе понимание выводится заново — синтез из нескольких источников, долгосрочные рассуждения и накопленные инсайты между вызовами не сохраняются.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 4: Проблема ──────────────────────────── -->
+  <section class="slide s-problem" id="s1">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hl2">Проблема</span></h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <h3 class="section">Знания, которые исчезают</h3>
+        <ul class="bullet-list" style="margin-bottom:1.5rem;">
+          <li>Каждая сессия LLM начинается с нуля — без памяти о предыдущих рассуждениях</li>
+          <li>RAG повторно выводит выводы из сырого текста при <em>каждом запросе</em></li>
+          <li>Люди создают вики, а потом бросают их — затраты на поддержку растут</li>
+          <li>Перекрёстные ссылки устаревают; противоречия накапливаются незаметно</li>
+        </ul>
+        <div class="quote-block">
+          «Ни один из существующих AI-инструментов не сохраняет знания между запусками — каждый раз они начинают с нуля.»
+          <span class="attribution">— Авторы PARNESS, arXiv:2605.05258</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">Узкое место RAG</h3>
+        <ul class="bullet-list amber">
+          <li>Поиск возвращает фрагменты, а не синтезированное понимание</li>
+          <li>85% усилий агента тратится впустую на поиск <em>(Pinecone, 2026)</em></li>
+          <li>50–60% успешного выполнения задач с агентным RAG</li>
+          <li>Векторные индексы требуют специализированной инфраструктуры</li>
+          <li>Синтез из нескольких источников пересчитывается заново при каждом вызове</li>
+        </ul>
+        <div class="stat-row" style="margin-top:1.5rem;">
+          <div class="stat-pill amber"><span class="num">85%</span><span class="label">трата на поиск</span></div>
+          <div class="stat-pill amber"><span class="num">~50%</span><span class="label">выполнение задач</span></div>
+          <div class="stat-pill"><span class="num">0</span><span class="label">постоян. память</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 5: Кто такой Карпаты ────────────────── -->
+  <section class="slide s-who" id="s2">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Кто такой <span class="hl">Карпаты</span></h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <div class="timeline">
+          <div class="tl-item"><span class="tl-dot" style="background:var(--cyan)"></span><span class="tl-date">2011–2015</span><div class="tl-content"><strong>PhD Stanford</strong> — субтитры к изображениям; разработал и преподавал CS231n (150 → 750 студентов)</div></div>
+          <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">2015–2017</span><div class="tl-content"><strong>OpenAI, основатель</strong> — исследования глубокого обучения и компьютерного зрения</div></div>
+          <div class="tl-item"><span class="tl-dot" style="background:var(--amber)"></span><span class="tl-date">2017–2022</span><div class="tl-content"><strong>Директор по ИИ, Tesla</strong> — создал систему компьютерного зрения автопилота на собственном чипе</div></div>
+          <div class="tl-item"><span class="tl-dot" style="background:var(--green)"></span><span class="tl-date">2024–н.в.</span><div class="tl-content"><strong>Eureka Labs</strong> — образовательная компания на базе ИИ; первый курс: LLM101n</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">Ключевые введённые концепции</h3>
+        <ul class="bullet-list" style="margin-bottom:1.4rem;">
+          <li><em>Software 2.0</em> — нейросети как новая парадигма программирования (2017)</li>
+          <li><em>LLM OS</em> — LLM как ядро операционной системы ИИ (2024)</li>
+          <li><em>Vibe coding</em> — опиши намерение, позволь ИИ написать код (февр. 2025)</li>
+          <li><em>Паттерн LLM Wiki</em> — архитектура «компилируй, потом запрашивай» (апр. 2026)</li>
+        </ul>
+        <div class="quote-block">
+          «Самый горячий новый язык программирования — это английский.»
+          <span class="attribution">— Андрей Карпаты</span>
+        </div>
+        <div class="tag-row" style="margin-top:1rem;">
+          <span class="tag">TIME AI100</span>
+          <span class="tag">MIT Innovators U35</span>
+          <span class="tag amber">41к закладок / неделя</span>
+          <span class="tag">основатель arxiv-sanity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 4: Основная идея ─────────────────────── -->
+  <section class="slide s-idea" id="s3">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hl">Основная</span> идея</h2>
+    <div class="slide-inner stagger" style="max-width:1000px;">
+      <div class="two-col" style="margin-bottom:1.8rem;">
+        <div class="card">
+          <h3 class="section">Аналогия с компиляцией</h3>
+          <p style="margin-bottom:1rem;">Вы не запускаете исходный код при каждом вызове — вы <em>компилируете</em> его один раз в бинарник и запускаете <em>его</em>.</p>
+          <div class="code-block">
+<span class="cmt">// Разработка ПО</span>
+<span class="kw">compile</span>(source_code) → binary
+<span class="kw">run</span>(binary)  <span class="cmt">// быстро, многоразово</span>
+
+<span class="cmt">// LLM Wiki</span>
+<span class="kw">ingest</span>(raw_docs) → wiki_pages
+<span class="kw">query</span>(wiki)  <span class="cmt">// без повторного вывода</span>
+          </div>
+        </div>
+        <div class="card amber">
+          <h3 class="section" style="color:var(--cyan)">Опубликовано 2 апреля 2026</h3>
+          <p style="margin-bottom:0.8rem;">GitHub Gist под названием <code style="font-family:var(--font-mono);font-size:0.8rem;background:rgba(0,0,0,0.3);padding:0.2em 0.4em;border-radius:3px;color:var(--green);">llm-wiki.md</code> — «файл-идея», предназначенный для вставки в любой LLM-агент, который затем адаптирует паттерн под конкретный домен.</p>
+          <ul class="bullet-list" style="font-size:0.85rem;">
+            <li><em>41 000+</em> закладок за первую неделю</li>
+            <li>Pinecone независимо пришёл к той же концепции с <em>Nexus</em> (май 2026)</li>
+            <li>Десятки реализаций с открытым исходным кодом за несколько недель</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote-block" style="font-size:0.95rem;">
+        «Obsidian — это IDE; LLM — программист; вики — кодовая база.»
+        <span class="attribution">— Андрей Карпаты</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 5: Архитектура ───────────────────────── -->
+  <section class="slide s-arch" id="s4">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hl2">Трёхуровневая</span> архитектура</h2>
+    <div class="slide-inner stagger" style="max-width:900px; gap:2rem;">
+      <div class="layer-stack stagger">
+        <div class="layer">
+          <div class="layer-num">1</div>
+          <div>
+            <div class="layer-label">Сырые источники <span style="color:var(--dim);font-size:0.75rem;font-family:var(--font-mono);">→ inbox/ + sources/</span></div>
+            <div class="layer-desc">Неизменяемая база истины. Веб-клипы, PDF, транскрипты, твиты. <strong>Никогда не редактируется</strong> — только пополняется. «Исходный код».</div>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:1.2rem;color:var(--muted);">▼</div>
+        <div class="layer" style="border-color:rgba(0,255,136,0.25);">
+          <div class="layer-num" style="color:var(--green);">2</div>
+          <div>
+            <div class="layer-label">Вики <span style="color:var(--dim);font-size:0.75rem;font-family:var(--font-mono);">→ wiki/</span></div>
+            <div class="layer-desc">Markdown-файлы, управляемые LLM. Перекрёстные ссылки, двуязычность, синтез. «Скомпилированный бинарник». Знания накапливаются — не пересчитываются заново.</div>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:1.2rem;color:var(--muted);">▼</div>
+        <div class="layer" style="border-color:rgba(255,170,0,0.25);">
+          <div class="layer-num" style="color:var(--amber);">3</div>
+          <div>
+            <div class="layer-label">Файл схемы <span style="color:var(--dim);font-size:0.75rem;font-family:var(--font-mono);">→ CLAUDE.md / AGENTS.md</span></div>
+            <div class="layer-desc">Управляет инъекцией контекста. Сообщает агенту: как структурировать страницы, как связывать концепции, что делать с каждым типом источника. <strong>Ключевое нововведение</strong> — одна строка на домен.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="max-width:100%;">
+        <p style="font-size:0.85rem;"><strong>Навигационные файлы:</strong> <em>index.md</em> — каталог всех страниц &nbsp;·&nbsp; <em>log.md</em> — хронологическая история. Вместе позволяют LLM ориентироваться в ~100–500 источниках без инфраструктуры эмбеддингов.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 6: Три операции ──────────────────────── -->
+  <section class="slide s-ops" id="s5">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Три <span class="hlg">операции</span></h2>
+    <div class="slide-inner stagger" style="max-width:980px; gap:2rem;">
+      <div class="ops-flow">
+        <div class="op-card op-ingest">
+          <div class="op-title">INGEST</div>
+          <div class="op-body">
+            Новый источник → LLM читает → создаёт или обновляет <strong>10–15 страниц вики</strong>.<br><br>
+            Перекрёстные ссылки строятся заранее. Противоречия помечаются сразу. Каждый ingest обогащает систему.
+          </div>
+        </div>
+        <div class="op-arrow">→</div>
+        <div class="op-card op-query">
+          <div class="op-title">QUERY</div>
+          <div class="op-body">
+            LLM читает <strong>скомпилированную вики</strong>, синтезирует ответ.<br><br>
+            Хорошие ответы сохраняются как новые страницы — система документирует собственные рассуждения.
+          </div>
+        </div>
+        <div class="op-arrow">→</div>
+        <div class="op-card op-lint">
+          <div class="op-title">LINT</div>
+          <div class="op-body">
+            Периодический аудит: поиск <strong>противоречий</strong>, страниц-сирот, устаревших утверждений, сломанных ссылок.<br><br>
+            Обязателен. Без Lint галлюцинации закрепляются навсегда.
+          </div>
+        </div>
+      </div>
+      <div class="card" style="padding:1rem 1.4rem;">
+        <p style="font-size:0.85rem;"><strong style="color:var(--red);">Ключевой риск:</strong> В чистом RAG галлюцинация влияет на один ответ. В LLM Wiki неверно понятый источник может быть записан как «факт» и <em>распространиться через перекрёстные ссылки</em> на 15 страниц до того, как кто-то заметит. <strong>Lint — ваша страховочная сеть.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 7: Настройка ─────────────────────────── -->
+  <section class="slide s-setup" id="s6">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Настройка за <span class="hl">5 шагов</span></h2>
+    <div class="two-col slide-inner stagger">
+      <div class="step-list">
+        <div class="step"><span class="step-n">1</span><div class="step-text">Установите <strong>Obsidian</strong> (бесплатно) — создайте новое хранилище. Создайте три папки: <code>raw/</code>, <code>wiki/</code>, <code>templates/</code>.</div></div>
+        <div class="step"><span class="step-n">2</span><div class="step-text">Вставьте гист Карпатого в <strong>Claude Code</strong>. Попросите создать <code>claude.md</code> под ваш домен — ответьте на уточняющие вопросы.</div></div>
+        <div class="step"><span class="step-n">3</span><div class="step-text">Положите первый источник в <code>raw/</code> — markdown-клип, PDF или текст. Запустите: <code>"Я добавил новый источник. Обновите вики, пожалуйста."</code></div></div>
+        <div class="step"><span class="step-n">4</span><div class="step-text">Claude напишет <strong>5–15 страниц вики</strong>, обновит <code>index.md</code>, запишет лог. Откройте граф Obsidian — увидите формирующуюся структуру знаний.</div></div>
+        <div class="step"><span class="step-n">5</span><div class="step-text">Повторяйте: добавляйте источники, периодически запускайте <code>"Пожалуйста, сделайте lint вики."</code> и задавайте синтезирующие вопросы. Вики накапливается.</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.2rem;">
+        <h3 class="section">Инструменты</h3>
+        <div class="card" style="padding:1.1rem 1.3rem;">
+          <p style="font-size:0.82rem;margin-bottom:0.8rem;"><strong>Просмотрщик:</strong> Obsidian — граф, обратные ссылки, поиск. Не AI-инструмент — просто читалка markdown.</p>
+          <p style="font-size:0.82rem;margin-bottom:0.8rem;"><strong>Агент:</strong> Claude Code, Codex или Cursor. Любой, кто читает и пишет файлы на вашей машине.</p>
+          <p style="font-size:0.82rem;"><strong>Предел масштаба:</strong> ~100–200 источников без инфраструктуры эмбеддингов. Дальше: <em>qmd</em> для гибридного поиска BM25/vector.</p>
+        </div>
+        <div class="quote-block" style="font-size:0.82rem;">
+          «Скучная часть ведения базы знаний — не чтение и не мышление, а рутина. Люди бросают вики, потому что бремя обслуживания растёт быстрее ценности. LLM не скучают.»
+          <span class="attribution">— Андрей Карпаты</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 8: RAG против LLM Wiki ──────────────── -->
+  <section class="slide s-vsrag" id="s7">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hl2">RAG</span> против <span class="hlg">LLM Wiki</span></h2>
+    <div class="slide-inner stagger" style="max-width:960px; gap:1.5rem;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Параметр</th>
+            <th>RAG</th>
+            <th>LLM Wiki</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Размер корпуса</td><td>Миллионы документов</td><td>100–500 кураторских источников</td></tr>
+          <tr><td>Стоимость запроса</td><td>Поиск эмбеддингов + вызов LLM</td><td>Чтение вики + вызов LLM</td></tr>
+          <tr><td>Синтез из нескольких источников</td><td>Пересчитывается на каждый запрос</td><td>Заранее скомпилирован в страницы</td></tr>
+          <tr><td>Инфраструктура</td><td>Нужна векторная БД</td><td>Markdown-файлы + git</td></tr>
+          <tr><td>Распространение галлюцинаций</td><td>Один ответ</td><td>Может распространяться через ссылки</td></tr>
+          <tr><td>Читаемость человеком</td><td>Непрозрачный индекс</td><td>Вики читают и люди, и LLM</td></tr>
+          <tr><td>Лучше для</td><td>Поиск в реальном времени, цитаты</td><td>Синтез, обучение, исследования</td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="padding:0.9rem 1.2rem;">
+        <p style="font-size:0.83rem;"><strong>Подтверждение Pinecone:</strong> Pinecone — компания за ведущей векторной БД, на которой работает большинство RAG-систем — независимо пришла к той же концепции скомпилированного слоя знаний с запуском продукта «Nexus» (май 2026), указав на 85% потраченных усилий агентов на поиск.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 9: Эта вики в действии ──────────────── -->
+  <section class="slide s-example" id="s8">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Эта <span class="hl">вики</span> в действии</h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <h3 class="section">AIWiki — живая реализация</h3>
+        <ul class="bullet-list" style="margin-bottom:1.2rem;">
+          <li>Двуязычные EN + RU записи в одном <code style="font-family:var(--font-mono);font-size:0.78rem;background:rgba(0,0,0,0.3);padding:0.1em 0.35em;border-radius:3px;color:var(--green);">.md</code> файле</li>
+          <li>8 категорий: концепции, инструменты, агенты, модели, новости, советы, люди, исследования</li>
+          <li>Автоматическое поглощение из YouTube, Reddit, HN, Twitter, веб-клипов</li>
+          <li>Пользовательские команды <code style="font-family:var(--font-mono);font-size:0.78rem;background:rgba(0,0,0,0.3);padding:0.1em 0.35em;border-radius:3px;color:var(--green);">/wiki-*</code> как навыки Claude Code</li>
+          <li>Граф Obsidian + анализ обратных ссылок через <code style="font-family:var(--font-mono);font-size:0.78rem;background:rgba(0,0,0,0.3);padding:0.1em 0.35em;border-radius:3px;color:var(--green);">obs.py</code></li>
+          <li>Оценка достоверности источников по 4 уровням</li>
+        </ul>
+        <div class="stat-row">
+          <div class="stat-pill"><span class="num">100+</span><span class="label">записей</span></div>
+          <div class="stat-pill green"><span class="num">2</span><span class="label">языка</span></div>
+          <div class="stat-pill amber"><span class="num">14</span><span class="label">сабреддитов</span></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">Команды рабочего процесса</h3>
+        <div class="code-block">
+<span class="cmt"># Ежедневный пайплайн</span>
+<span class="kw">/wiki-reddit</span>    <span class="cmt"># 14 сабреддитов</span>
+<span class="kw">/wiki-hackernews</span> <span class="cmt"># AI-статьи</span>
+<span class="kw">/wiki-youtube</span>   <span class="cmt"># транскрипты</span>
+
+<span class="cmt"># По мере необходимости</span>
+<span class="kw">/wiki-inbox</span>     <span class="cmt"># все источники</span>
+<span class="kw">/wiki-links</span>     <span class="cmt"># очередь URL</span>
+
+<span class="cmt"># Обслуживание</span>
+<span class="kw">/wiki-lint</span>      <span class="cmt"># аудит здоровья</span>
+<span class="kw">/wiki-index</span>     <span class="cmt"># перестроить индекс</span>
+<span class="kw">/wiki-digest</span>    <span class="cmt"># недельный дайджест</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 10: Применение ───────────────────────── -->
+  <section class="slide s-usecases" id="s9">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hlg">Применение</span></h2>
+    <div class="slide-inner stagger" style="max-width:1100px; gap:1.5rem;">
+      <div class="usecase-grid stagger">
+        <div class="uc-card">
+          <div class="uc-icon">🧠</div>
+          <div class="uc-title">Личные знания</div>
+          <div class="uc-desc">Фиксируйте всё, что читаете, смотрите, думаете. Перестаньте перечитывать одни и те же статьи. Задавайте синтезирующие вопросы по месяцам ввода.</div>
+          <div class="uc-example">книги · рассылки · подкасты</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(0,255,136,0.15);">
+          <div class="uc-icon">🎓</div>
+          <div class="uc-title">Академические исследования</div>
+          <div class="uc-desc">Обзор литературы по 50+ статьям. Отслеживайте противоречивые выводы, находите пробелы, готовьте разделы обзоров. Конкурирует с PARNESS (arXiv 2026).</div>
+          <div class="uc-example" style="color:var(--green);">статьи · цитаты · гипотезы</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(255,170,0,0.15);">
+          <div class="uc-icon">🔬</div>
+          <div class="uc-title">Научные НИОКР</div>
+          <div class="uc-desc">Знания по предметной области, скомпилированные для каждого проекта. Межобластной синтез, который пропускает RAG. Авто-дайджест для передачи знаний команде.</div>
+          <div class="uc-example" style="color:var(--amber);">протоколы · результаты · модели</div>
+        </div>
+        <div class="uc-card">
+          <div class="uc-icon">✈️</div>
+          <div class="uc-title">Планирование поездок</div>
+          <div class="uc-desc">Поглощайте блоги, гиды, правила виз. Запрос «лучший рёкан в Киото до ¥15 000» — ответ синтезирован из 30 источников, не пересчитан заново.</div>
+          <div class="uc-example">гиды · логистика · советы</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(0,255,136,0.15);">
+          <div class="uc-icon">📈</div>
+          <div class="uc-title">Конкурентная разведка</div>
+          <div class="uc-desc">Отслеживайте обновления конкурентов, выпуски продуктов, изменения цен. Еженедельный дайджест генерируется автоматически. Качество аналитика без аналитика.</div>
+          <div class="uc-example" style="color:var(--green);">релизы · цены · позиционирование</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(255,170,0,0.15);">
+          <div class="uc-icon">⚖️</div>
+          <div class="uc-title">Право / Комплаенс</div>
+          <div class="uc-desc">Компилируйте нормативные акты, судебную практику, внутреннюю политику. Перекрёстно сверяйте новые правила с существующей вики. Противоречия помечаются автоматически.</div>
+          <div class="uc-example" style="color:var(--amber);">регуляции · прецеденты · политика</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 11: Петля саморазвития ──────────────── -->
+  <section class="slide s-selfimprove" id="s10">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Петля <span class="hl">саморазвития</span></h2>
+    <div class="slide-inner stagger" style="max-width:1000px; gap:1.5rem;">
+      <div class="improve-grid stagger">
+        <div class="card">
+          <h3 class="section">Усвоение полезных навыков</h3>
+          <p style="font-size:0.85rem;">Вики наблюдает, какие объяснения резонируют — часто запрашиваемые страницы получают более богатые перекрёстные ссылки. Агент развивает доменную интуицию из паттернов истории запросов. Пробелы в знаниях выявляются как отсутствующие страницы при аудите сломанных ссылок.</p>
+        </div>
+        <div class="card green">
+          <h3 class="section" style="color:var(--green);">«Кража» идей у похожих проектов</h3>
+          <p style="font-size:0.85rem;">PARNESS ввёл память с индексацией по противоречиям между сессиями. SurveyGen-I ввёл память терминов «не объяснять повторно». LightRAG ввёл двухуровневые графы сущностей/концепций. Каждый — импортируемый паттерн, без векторной БД.</p>
+        </div>
+        <div class="card amber">
+          <h3 class="section" style="color:var(--amber);">Обучение на истории сессий</h3>
+          <p style="font-size:0.85rem;"><em>log.md</em> — полный журнал аудита. Соотношение созданных и обновлённых записей показывает, растёт ли вики здоровым образом. Счётчик сирот отслеживает качество интеграции. Сломанные ссылки — накопленный технический долг.</p>
+        </div>
+        <div class="card purple">
+          <h3 class="section" style="color:#a78bfa;">Корректировка поведения по ошибкам</h3>
+          <p style="font-size:0.85rem;">Галлюцинации, выжившие в страницах вики, становятся обучающими примерами для промпта Lint. Схема CLAUDE.md эволюционирует на основе наблюдаемых режимов отказа — ужесточение правил уровней источников, добавление деревьев категоризации, уточнение двуязычного шаблона.</p>
+        </div>
+      </div>
+      <div class="card" style="padding:0.9rem 1.2rem;">
+        <p style="font-size:0.82rem;"><strong>Эффект накопления:</strong> Каждый новый источник обогащает вики. Каждый запрос, превращённый в страницу, добавляет перекрёстные ссылки. Каждый проход lint убирает шум. Система становится <em>лучше как вики</em> со временем — не просто больше.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 12: Открытые проблемы ───────────────── -->
+  <section class="slide s-future" id="s11">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Открытые <span class="hl2">проблемы</span></h2>
+    <div class="three-col slide-inner stagger">
+      <div class="card">
+        <h3 class="section">Обнаружение противоречий</h3>
+        <p style="font-size:0.83rem;margin-bottom:0.8rem;">Сейчас: замечается вручную при Lint. Академическое решение: консенсус 9 агентов KARMA — извлечь ключевые утверждения из каждой новой записи, сравнить с записями той же категории.</p>
+        <div class="code-block" style="font-size:0.72rem;">scripts/check_conflicts.py
+→ auto-populate ## Debate
+  в обеих записях
+        </div>
+      </div>
+      <div class="card green">
+        <h3 class="section" style="color:var(--green);">Реляционный поиск</h3>
+        <p style="font-size:0.83rem;margin-bottom:0.8rem;">Текущий поиск: полнотекстовый ripgrep. Пропускает: «какие инструменты используют RAG?» Подход LightRAG: после каждой записи — вызов Claude для извлечения отношений → запись в <code style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(0,0,0,0.3);padding:0.1em 0.3em;border-radius:3px;color:var(--green)">.state/relations/slug.json</code>.</p>
+        <p style="font-size:0.78rem;color:var(--dim);">Без векторной или граф-БД.</p>
+      </div>
+      <div class="card amber">
+        <h3 class="section" style="color:var(--amber);">Согласованность дайджестов</h3>
+        <p style="font-size:0.83rem;margin-bottom:0.8rem;">Проблема: еженедельный дайджест заново объясняет понятия прошлой недели. Исправление SurveyGen-I: после каждого дайджеста записывать <code style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(0,0,0,0.3);padding:0.1em 0.3em;border-radius:3px;color:var(--green)">digests/memory.json</code> → вводить как ограничение «не объяснять повторно».</p>
+      </div>
+    </div>
+    <div class="slide-inner stagger" style="max-width:1000px;margin-top:1.2rem;">
+      <div class="quote-block">
+        «Узкое место больше не в генерации текста. Оно в том, чтобы знать, что система уже знает.»
+        <span class="attribution">— Обзор LLM4SR, arXiv:2501.04306</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Слайд 13: Финальный ────────────────────────── -->
+  <section class="slide s-closing" id="s12">
+    <div class="slide-bg"></div>
+    <div class="grid-lines" style="opacity:0.3;"></div>
+    <div class="closing-quote">
+      «Obsidian — это <em>IDE</em>.<br>
+      LLM — это <em>программист</em>.<br>
+      Вики — это <em>кодовая база</em>.»
+    </div>
+    <p class="closing-attribution">— Андрей Карпаты · Паттерн LLM Wiki · Апрель 2026</p>
+    <div class="closing-links">
+      <span class="link-chip">gist.github.com/karpathy/442a6b</span>
+      <span class="link-chip">karpathy.ai</span>
+      <span class="link-chip">obsidian.md</span>
+      <span class="link-chip">github.com/mherod/llmwiki</span>
+    </div>
+    <div style="margin-top:2.5rem;opacity:0;animation:fadeUp 0.7s 1.1s forwards;">
+      <div class="tag-row" style="justify-content:center;gap:0.8rem;">
+        <span class="tag">компилируй, не извлекай</span>
+        <span class="tag amber">41к закладок за неделю</span>
+        <span class="tag green">знания накапливаются</span>
+        <span class="tag">люди курируют, LLM поддерживает</span>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /#deck -->
+
+<!-- ── UI Chrome ─────────────────────────────────────── -->
+<div id="progress-bar"></div>
+<div id="dots"></div>
+<button class="nav-btn" id="nav-prev" onclick="prevSlide()">‹</button>
+<button class="nav-btn" id="nav-next" onclick="nextSlide()">›</button>
+<div id="counter"></div>
+<div id="logo-mark">LLM <span>Wiki</span></div>
+<div id="keyboard-hint">← → Пробел · Свайп</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+  let transitioning = false;
+
+  const dotsEl     = document.getElementById('dots');
+  const progressEl = document.getElementById('progress-bar');
+  const counterEl  = document.getElementById('counter');
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function updateUI() {
+    const pct = totalSlides > 1 ? (current / (totalSlides - 1)) * 100 : 0;
+    progressEl.style.width = pct + '%';
+    counterEl.textContent = (current + 1).toString().padStart(2,'0') + ' / ' + totalSlides.toString().padStart(2,'0');
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    document.getElementById('nav-prev').style.opacity = current === 0 ? '0.3' : '1';
+    document.getElementById('nav-next').style.opacity = current === totalSlides - 1 ? '0.3' : '1';
+  }
+
+  function resetAnimations(slide) {
+    slide.querySelectorAll('.eyebrow, h1, h2.slide-title, .slide-inner, .closing-quote, .closing-attribution, .closing-links, .hero-sub, .hero-cta, [style*="animation"]').forEach(el => {
+      el.style.animation = 'none';
+      el.offsetHeight;
+      el.style.animation = '';
+    });
+  }
+
+  function goTo(idx) {
+    if (transitioning || idx === current || idx < 0 || idx >= totalSlides) return;
+    transitioning = true;
+    const from = slides[current];
+    const to   = slides[idx];
+    const dir  = idx > current ? 1 : -1;
+
+    from.classList.remove('active');
+    from.classList.add('exit');
+    if (dir < 0) from.style.transform = 'translateX(80px)';
+
+    resetAnimations(to);
+    to.classList.add('active');
+    current = idx;
+    updateUI();
+
+    setTimeout(() => {
+      from.classList.remove('exit');
+      from.style.transform = '';
+      transitioning = false;
+    }, 600);
+  }
+
+  function nextSlide() { goTo(current + 1); }
+  function prevSlide() { goTo(current - 1); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                    { e.preventDefault(); prevSlide(); }
+    if (e.key === 'Home') goTo(0);
+    if (e.key === 'End')  goTo(totalSlides - 1);
+  });
+
+  let touchX = null;
+  document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 40) { dx < 0 ? nextSlide() : prevSlide(); }
+  }, { passive: true });
+
+  updateUI();
+</script>
+</body>
+</html>

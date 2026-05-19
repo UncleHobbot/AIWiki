@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karpathy's LLM Wiki — Compile, Don't Retrieve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & Root ─────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #04060f;
+    --bg2:      #080d1c;
+    --cyan:     #00d8ff;
+    --amber:    #ffaa00;
+    --green:    #00ff88;
+    --red:      #ff4757;
+    --white:    #edf2f7;
+    --muted:    #4a5568;
+    --dim:      #718096;
+    --card:     rgba(255,255,255,0.04);
+    --border:   rgba(0,216,255,0.18);
+    --font-display: 'Oxanium', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-body: 'IBM Plex Sans', sans-serif;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Deck Container ───────────────────────────────── */
+  #deck {
+    width: 100vw; height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Slide Base ───────────────────────────────────── */
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 6vw;
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+                transform 0.55s cubic-bezier(0.22,1,0.36,1);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    z-index: 2;
+  }
+  .slide.exit {
+    opacity: 0;
+    transform: translateX(-80px);
+    z-index: 1;
+  }
+
+  /* ── Ambient Background Mesh ─────────────────────── */
+  .slide-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .slide-bg::before,
+  .slide-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.18;
+    animation: drift 12s ease-in-out infinite alternate;
+  }
+
+  /* per-slide color personalities */
+  .s-title    .slide-bg::before { width:60vw; height:60vw; background:var(--cyan);   top:-20%; left:-15%; }
+  .s-title    .slide-bg::after  { width:45vw; height:45vw; background:var(--amber);  bottom:-10%; right:-10%; animation-delay:-4s; }
+  .s-problem  .slide-bg::before { width:55vw; height:55vw; background:#ff4757;       top:-20%; right:-10%; }
+  .s-problem  .slide-bg::after  { width:40vw; height:40vw; background:#ff8c00;       bottom:-15%; left:-5%; animation-delay:-6s; }
+  .s-who      .slide-bg::before { width:60vw; height:60vw; background:var(--cyan);   bottom:-25%; left:-15%; }
+  .s-who      .slide-bg::after  { width:40vw; height:40vw; background:var(--green);  top:-10%; right:-5%; animation-delay:-3s; }
+  .s-idea     .slide-bg::before { width:65vw; height:65vw; background:var(--cyan);   top:-25%; right:-20%; opacity:0.22; }
+  .s-idea     .slide-bg::after  { width:50vw; height:50vw; background:#7c5cfc;       bottom:-20%; left:-10%; animation-delay:-8s; }
+  .s-arch     .slide-bg::before { width:50vw; height:50vw; background:var(--amber);  top:-10%; left:-10%; }
+  .s-arch     .slide-bg::after  { width:40vw; height:40vw; background:var(--cyan);   bottom:-15%; right:-10%; animation-delay:-5s; }
+  .s-ops      .slide-bg::before { width:55vw; height:55vw; background:var(--green);  bottom:-20%; right:-15%; }
+  .s-ops      .slide-bg::after  { width:40vw; height:40vw; background:var(--cyan);   top:-10%; left:-10%; animation-delay:-7s; }
+  .s-setup    .slide-bg::before { width:60vw; height:60vw; background:#7c5cfc;       top:-20%; left:-20%; }
+  .s-setup    .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan);   bottom:-15%; right:-5%; animation-delay:-4s; }
+  .s-rag      .slide-bg::before { width:55vw; height:55vw; background:#7c5cfc;       top:-15%; left:-10%; }
+  .s-rag      .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan);   bottom:-20%; right:-10%; animation-delay:-5s; }
+  .s-vsrag    .slide-bg::before { width:55vw; height:55vw; background:var(--amber);  top:-15%; right:-15%; }
+  .s-vsrag    .slide-bg::after  { width:50vw; height:50vw; background:var(--red);    bottom:-20%; left:-10%; animation-delay:-6s; }
+  .s-usecases .slide-bg::before { width:60vw; height:60vw; background:var(--green);  top:-20%; left:-10%; }
+  .s-usecases .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan);   bottom:-15%; right:-10%; animation-delay:-3s; }
+  .s-example  .slide-bg::before { width:55vw; height:55vw; background:var(--cyan);   bottom:-20%; left:-15%; }
+  .s-example  .slide-bg::after  { width:45vw; height:45vw; background:var(--green);  top:-10%; right:-10%; animation-delay:-5s; }
+  .s-selfimprove .slide-bg::before { width:60vw; height:60vw; background:#7c5cfc; top:-20%; right:-15%; }
+  .s-selfimprove .slide-bg::after  { width:45vw; height:45vw; background:var(--cyan); bottom:-15%; left:-10%; animation-delay:-7s; }
+  .s-future   .slide-bg::before { width:65vw; height:65vw; background:var(--amber);  top:-25%; left:-15%; opacity:0.2; }
+  .s-future   .slide-bg::after  { width:50vw; height:50vw; background:var(--green);  bottom:-20%; right:-5%; animation-delay:-4s; }
+  .s-closing  .slide-bg::before { width:70vw; height:70vw; background:var(--cyan);   top:-30%; right:-20%; opacity:0.2; }
+  .s-closing  .slide-bg::after  { width:55vw; height:55vw; background:var(--amber);  bottom:-25%; left:-15%; animation-delay:-5s; opacity:0.2; }
+
+  @keyframes drift {
+    from { transform: translate(0,0) scale(1); }
+    to   { transform: translate(4%,3%) scale(1.05); }
+  }
+
+  /* scan-line texture overlay */
+  #deck::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.04) 2px,
+      rgba(0,0,0,0.04) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  /* ── Slide Content Layer ──────────────────────────── */
+  .slide > * { position: relative; z-index: 1; }
+
+  /* ── Typography ───────────────────────────────────── */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: clamp(0.65rem, 1.2vw, 0.85rem);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.1s forwards;
+  }
+  h1.hero {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s forwards;
+  }
+  h1.hero .accent { color: var(--cyan); }
+  h1.hero .accent2 { color: var(--amber); }
+  h2.slide-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.15s forwards;
+  }
+  h2.slide-title .hl { color: var(--cyan); }
+  h2.slide-title .hl2 { color: var(--amber); }
+  h2.slide-title .hlg { color: var(--green); }
+  h3.section { font-family: var(--font-display); font-size: clamp(1rem,2vw,1.5rem); font-weight:600; color:var(--amber); margin-bottom:0.75rem; letter-spacing:0.03em; }
+  p, li { font-size: clamp(0.85rem, 1.6vw, 1.05rem); line-height: 1.65; color: rgba(237,242,247,0.85); }
+  strong { color: var(--white); font-weight: 500; }
+  em { color: var(--cyan); font-style: normal; }
+
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(22px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── Layout Helpers ───────────────────────────────── */
+  .slide-inner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeUp 0.65s 0.25s forwards;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  /* ── Cards ────────────────────────────────────────── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.6rem 1.8rem;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+    opacity: 0.7;
+  }
+  .card.amber::before { background: linear-gradient(90deg, var(--amber), transparent); }
+  .card.green::before { background: linear-gradient(90deg, var(--green), transparent); }
+  .card.red::before   { background: linear-gradient(90deg, var(--red), transparent); }
+  .card.purple::before{ background: linear-gradient(90deg, #7c5cfc, transparent); }
+
+  /* ── Bullet Lists ─────────────────────────────────── */
+  .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .bullet-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+  }
+  .bullet-list li::before {
+    content: '▹';
+    color: var(--cyan);
+    flex-shrink: 0;
+    margin-top: 0.05em;
+    font-size: 0.9em;
+  }
+  .bullet-list.amber li::before { color: var(--amber); }
+  .bullet-list.green li::before { color: var(--green); }
+
+  /* ── Code Blocks ──────────────────────────────────── */
+  .code-block {
+    font-family: var(--font-mono);
+    font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,216,255,0.2);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    line-height: 1.7;
+    color: var(--green);
+    overflow: hidden;
+  }
+  .code-block .kw  { color: var(--cyan); }
+  .code-block .str { color: var(--amber); }
+  .code-block .cmt { color: var(--muted); }
+
+  /* ── Quote Block ──────────────────────────────────── */
+  .quote-block {
+    border-left: 3px solid var(--cyan);
+    padding: 1rem 1.5rem;
+    background: rgba(0,216,255,0.04);
+    border-radius: 0 8px 8px 0;
+    font-family: var(--font-mono);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    line-height: 1.7;
+    color: rgba(237,242,247,0.9);
+    font-style: italic;
+  }
+  .quote-block .attribution {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 0.8em;
+    color: var(--cyan);
+    font-style: normal;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Stat Pills ───────────────────────────────────── */
+  .stat-row { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; }
+  .stat-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,216,255,0.07);
+    border: 1px solid rgba(0,216,255,0.2);
+    border-radius: 10px;
+    padding: 0.8rem 1.4rem;
+    min-width: 100px;
+  }
+  .stat-pill .num {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .stat-pill .label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 0.3rem;
+  }
+  .stat-pill.amber { background: rgba(255,170,0,0.07); border-color: rgba(255,170,0,0.2); }
+  .stat-pill.amber .num { color: var(--amber); }
+  .stat-pill.green { background: rgba(0,255,136,0.06); border-color: rgba(0,255,136,0.18); }
+  .stat-pill.green .num { color: var(--green); }
+
+  /* ── Tag Chips ────────────────────────────────────── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0,216,255,0.3);
+    color: var(--cyan);
+    background: rgba(0,216,255,0.06);
+  }
+  .tag.amber { border-color: rgba(255,170,0,0.3); color: var(--amber); background: rgba(255,170,0,0.06); }
+  .tag.green { border-color: rgba(0,255,136,0.3); color: var(--green); background: rgba(0,255,136,0.05); }
+
+  /* ── Progress Bar ────────────────────────────────── */
+  #progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--amber));
+    transition: width 0.4s ease;
+    z-index: 900;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+
+  /* ── Slide Dots ──────────────────────────────────── */
+  #dots {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 900;
+  }
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--muted);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, width 0.3s;
+  }
+  .dot.active {
+    background: var(--cyan);
+    transform: scale(1.3);
+    width: 18px;
+    border-radius: 3px;
+    box-shadow: 0 0 6px var(--cyan);
+  }
+
+  /* ── Nav Arrows ──────────────────────────────────── */
+  .nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    z-index: 900;
+    color: var(--dim);
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-btn:hover { background: rgba(0,216,255,0.1); color: var(--cyan); border-color: rgba(0,216,255,0.3); }
+  #nav-prev { left: 1.2rem; }
+  #nav-next { right: 1.2rem; }
+
+  /* ── Slide Counter ───────────────────────────────── */
+  #counter {
+    position: fixed;
+    top: 1.2rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    z-index: 900;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── Logo Mark ───────────────────────────────────── */
+  #logo-mark {
+    position: fixed;
+    top: 1.2rem;
+    left: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    z-index: 900;
+  }
+  #logo-mark span { color: var(--cyan); }
+
+  /* ── Title Slide Specific ─────────────────────────── */
+  .s-title { text-align: center; }
+  .hero-sub {
+    font-family: var(--font-mono);
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+    color: var(--dim);
+    margin-top: 1.5rem;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.5s forwards;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.7s forwards;
+  }
+  .pill-btn {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    background: rgba(0,216,255,0.06);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .pill-btn:hover { background: rgba(0,216,255,0.15); }
+  .pill-btn.filled { background: var(--cyan); color: #000; border-color: var(--cyan); font-weight:600; }
+  .pill-btn.filled:hover { background: #33e0ff; }
+
+  /* ── Cinematic grid lines on title ──────────────────── */
+  .grid-lines {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(0,216,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,216,255,0.035) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  /* ── Venn / Compare visual ────────────────────────── */
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+  }
+  .vs-divider {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--amber);
+    text-align: center;
+  }
+
+  /* ── Layer Diagram ────────────────────────────────── */
+  .layer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 700px;
+  }
+  .layer {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.4rem;
+  }
+  .layer-num {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cyan);
+    width: 2.5rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .layer-label { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--white); }
+  .layer-desc { font-size: 0.85rem; color: var(--dim); margin-top: 0.15rem; }
+
+  /* ── Ops Flow ─────────────────────────────────────── */
+  .ops-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-width: 950px;
+  }
+  .op-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .op-card:first-child { border-radius: 12px 0 0 12px; }
+  .op-card:last-child  { border-radius: 0 12px 12px 0; }
+  .op-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .op-ingest::before { background: var(--cyan); }
+  .op-query::before  { background: var(--green); }
+  .op-lint::before   { background: var(--amber); }
+  .op-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 0.3rem;
+    color: var(--muted);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .op-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  .op-ingest .op-title { color: var(--cyan); }
+  .op-query  .op-title { color: var(--green); }
+  .op-lint   .op-title { color: var(--amber); }
+  .op-body { font-size: 0.85rem; color: rgba(237,242,247,0.75); line-height: 1.6; }
+
+  /* ── Timeline ─────────────────────────────────────── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--cyan), var(--amber), var(--green));
+    opacity: 0.4;
+  }
+  .tl-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.2rem;
+    position: relative;
+  }
+  .tl-dot {
+    position: absolute;
+    left: -2rem;
+    top: 6px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--cyan);
+    border: 2px solid var(--bg);
+    flex-shrink: 0;
+  }
+  .tl-date {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--cyan);
+    min-width: 70px;
+    padding-top: 0.15rem;
+    letter-spacing: 0.05em;
+  }
+  .tl-content { font-size: 0.88rem; line-height: 1.5; color: rgba(237,242,247,0.8); }
+  .tl-content strong { color: var(--white); font-weight: 500; }
+
+  /* ── Setup Steps ─────────────────────────────────── */
+  .step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 700px;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 0.8rem 1.1rem;
+  }
+  .step-n {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cyan);
+    width: 1.5rem;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  .step-text { font-size: 0.88rem; color: rgba(237,242,247,0.85); line-height: 1.5; }
+  .step-text code {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    background: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    padding: 0.1em 0.4em;
+    color: var(--green);
+  }
+
+  /* ── Use Case Grid ───────────────────────────────── */
+  .usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1100px;
+  }
+  .uc-card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 1.3rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .uc-icon { font-size: 1.8rem; line-height: 1; }
+  .uc-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 0.2rem;
+  }
+  .uc-desc { font-size: 0.8rem; color: var(--dim); line-height: 1.5; }
+  .uc-example { font-family: var(--font-mono); font-size: 0.7rem; color: var(--cyan); margin-top: 0.3rem; }
+
+  /* ── RAG vs Wiki table ───────────────────────────── */
+  .compare-table {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+  }
+  .compare-table th {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.8rem 1.2rem;
+    text-align: left;
+    background: rgba(0,0,0,0.3);
+  }
+  .compare-table th:nth-child(2) { color: var(--red); }
+  .compare-table th:nth-child(3) { color: var(--green); }
+  .compare-table td {
+    font-size: 0.82rem;
+    padding: 0.6rem 1.2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: rgba(237,242,247,0.8);
+    line-height: 1.5;
+  }
+  .compare-table td:first-child {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--dim);
+    white-space: nowrap;
+  }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* ── Self-improve cards ──────────────────────────── */
+  .improve-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  /* ── Closing slide ───────────────────────────────── */
+  .closing-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
+    max-width: 850px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+  .closing-quote em { color: var(--cyan); font-style: normal; }
+  .closing-attribution {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--dim);
+    text-align: center;
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.6s forwards;
+    letter-spacing: 0.05em;
+  }
+  .closing-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.9s forwards;
+  }
+  .link-chip {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(0,216,255,0.25);
+    border-radius: 4px;
+    color: var(--cyan);
+    letter-spacing: 0.08em;
+  }
+
+  /* ── Animated reveal for staggered content ───────── */
+  .stagger > * {
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 0.3s; }
+  .stagger > *:nth-child(2) { animation-delay: 0.45s; }
+  .stagger > *:nth-child(3) { animation-delay: 0.6s; }
+  .stagger > *:nth-child(4) { animation-delay: 0.75s; }
+  .stagger > *:nth-child(5) { animation-delay: 0.9s; }
+  .stagger > *:nth-child(6) { animation-delay: 1.05s; }
+  .stagger > *:nth-child(7) { animation-delay: 1.2s; }
+  .stagger > *:nth-child(8) { animation-delay: 1.35s; }
+  .stagger > *:nth-child(9) { animation-delay: 1.5s; }
+
+  /* ── Keyboard hint ───────────────────────────────── */
+  #keyboard-hint {
+    position: fixed;
+    bottom: 3rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    z-index: 900;
+  }
+
+  /* ── Evolution Cards ─────────────────────────────── */
+  .evo-card {
+    background: var(--card);
+    border: 1px solid rgba(0,216,255,0.15);
+    border-radius: 12px;
+    padding: 1.2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .evo-era {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+  .evo-name {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.1rem;
+  }
+  .evo-limit {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    color: var(--dim);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* ── RAG Pipeline Diagram ───────────────────────── */
+  .rag-pipeline { display: flex; flex-direction: column; gap: 0.6rem; }
+  .rag-phase-label {
+    font-family: var(--font-mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+  .rag-flow { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+  .rag-box {
+    font-family: var(--font-mono);
+    font-size: clamp(0.62rem, 1vw, 0.75rem);
+    padding: 0.4rem 0.75rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    color: var(--white);
+    white-space: nowrap;
+  }
+  .rag-box.cyan  { border-color: rgba(0,216,255,0.4);  color: var(--cyan);  background: rgba(0,216,255,0.07); }
+  .rag-box.amber { border-color: rgba(255,170,0,0.4);  color: var(--amber); background: rgba(255,170,0,0.07); }
+  .rag-box.green { border-color: rgba(0,255,136,0.4);  color: var(--green); background: rgba(0,255,136,0.06); }
+  .rag-box.red   { border-color: rgba(255,71,87,0.4);  color: var(--red);   background: rgba(255,71,87,0.06); }
+  .rag-arrow { color: var(--muted); font-size: 0.85rem; flex-shrink: 0; }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 768px) {
+    .two-col, .three-col, .usecase-grid, .improve-grid { grid-template-columns: 1fr; }
+    .ops-flow { flex-direction: column; }
+    .op-card:first-child { border-radius: 12px 12px 0 0; }
+    .op-card:last-child  { border-radius: 0 0 12px 12px; }
+    .op-arrow { display: none; }
+    .compare-row { grid-template-columns: 1fr; }
+    .vs-divider { display: none; }
+    .compare-table { font-size: 0.75rem; }
+    .compare-table td, .compare-table th { padding: 0.5rem 0.7rem; }
+    h1.hero { font-size: clamp(2.5rem, 10vw, 4rem); }
+    h2.slide-title { font-size: clamp(1.5rem, 6vw, 2.5rem); }
+  }
+</style>
+</head>
+<body>
+
+<div id="deck">
+
+  <!-- ── Slide 1: Title ──────────────────────────────── -->
+  <section class="slide s-title active" id="s0">
+    <div class="slide-bg"></div>
+    <div class="grid-lines"></div>
+    <div class="eyebrow">Andrej Karpathy · April 2026</div>
+    <h1 class="hero">
+      <span class="accent">LLM</span><br>
+      <span class="accent2">Wiki</span><br>
+      Pattern
+    </h1>
+    <p class="hero-sub">Compile knowledge once. Query the compiled artifact forever.<br>The end of re-deriving facts from scratch.</p>
+    <div class="hero-cta">
+      <div class="pill-btn filled" onclick="nextSlide()">Begin →</div>
+      <div class="pill-btn">github.com/karpathy</div>
+    </div>
+  </section>
+
+  <!-- ── Slide 2: The AI Evolution ─────────────────── -->
+  <section class="slide s-rag" id="s-evo">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">The AI <span class="hl">Evolution</span></h2>
+    <div class="slide-inner stagger" style="max-width:1100px; gap:1.4rem;">
+      <div class="card" style="padding:0.85rem 1.4rem; border-color:rgba(255,71,87,0.3);">
+        <p style="font-size:0.88rem;"><strong style="color:var(--red);">Root cause:</strong> An LLM has <em>no persistent memory</em>. Every session starts completely blank — it only knows its training data (frozen at cutoff) and whatever you type right now. Your documents, your history, your domain knowledge are all invisible to it.</p>
+      </div>
+      <div class="three-col stagger">
+        <div class="evo-card">
+          <div class="evo-era">Era 1 · 2022–2023</div>
+          <div class="evo-name" style="color:var(--cyan);">ChatGPT<br><span style="font-size:0.65em;color:var(--dim);">Query → Answer</span></div>
+          <ul class="bullet-list" style="font-size:0.78rem;gap:0.4rem;margin-top:0.6rem;">
+            <li>Single question, single answer</li>
+            <li>Knowledge frozen at training cutoff</li>
+            <li>No access to private documents</li>
+            <li>No memory between sessions</li>
+            <li>Each chat is fully isolated</li>
+          </ul>
+          <div class="evo-limit">❌ Can't use your data</div>
+        </div>
+        <div class="evo-card" style="border-color:rgba(255,170,0,0.3);">
+          <div class="evo-era">Era 2 · 2023–2024</div>
+          <div class="evo-name" style="color:var(--amber);">RAG<br><span style="font-size:0.65em;color:var(--dim);">Query → Retrieve → Answer</span></div>
+          <ul class="bullet-list amber" style="font-size:0.78rem;gap:0.4rem;margin-top:0.6rem;">
+            <li>Chunk docs → embed → vector DB</li>
+            <li>At query time: find similar chunks</li>
+            <li>Inject chunks into LLM prompt as context</li>
+            <li>Grounds answers in private / fresh data</li>
+            <li>Still stateless — re-derives every call</li>
+          </ul>
+          <div class="evo-limit" style="color:var(--amber);border-color:rgba(255,170,0,0.2);">❌ No synthesis, no memory</div>
+        </div>
+        <div class="evo-card" style="border-color:rgba(0,255,136,0.3);">
+          <div class="evo-era">Era 3 · 2024 → now</div>
+          <div class="evo-name" style="color:var(--green);">AI Agents<br><span style="font-size:0.65em;color:var(--dim);">Plan → Act → Observe → Loop</span></div>
+          <ul class="bullet-list green" style="font-size:0.78rem;gap:0.4rem;margin-top:0.6rem;">
+            <li><strong>Tools:</strong> web, code, file I/O, APIs</li>
+            <li><strong>Memory:</strong> persistent state across sessions</li>
+            <li><strong>Loops:</strong> plan → act → reflect → repeat</li>
+            <li><strong>Context management</strong> at scale</li>
+            <li><em>LLM Wiki = compiled memory layer</em></li>
+          </ul>
+          <div class="evo-limit" style="color:var(--green);border-color:rgba(0,255,136,0.2);">✓ Where we are now</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 3: What is RAG ───────────────────────── -->
+  <section class="slide s-rag" id="s-whatrag">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">What is <span class="hl2">RAG</span>?</h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <h3 class="section">Retrieval-Augmented Generation</h3>
+        <p style="margin-bottom:1rem;">Introduced by Lewis et al. (Facebook AI Research, 2020). A technique that grounds LLM responses in a specific document corpus — without fine-tuning the model on that corpus.</p>
+        <ul class="bullet-list" style="margin-bottom:1.2rem;">
+          <li>Split documents into <em>chunks</em> → convert each chunk into a numeric <em>embedding</em> → store in a <em>vector database</em></li>
+          <li>At query time: embed the user's question, find the most similar chunks via cosine similarity, inject them into the LLM prompt as context</li>
+          <li>The LLM answers using retrieved chunks as evidence — it doesn't rely on memorized training knowledge</li>
+          <li>Works for any domain without retraining — swap the corpus, keep the model</li>
+        </ul>
+        <div class="quote-block" style="font-size:0.83rem;">
+          The core promise: keep an LLM factual and current by retrieving evidence at query time, rather than baking domain knowledge into model weights.
+          <span class="attribution">— Lewis et al., "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", NeurIPS 2020</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">The RAG Pipeline</h3>
+        <div class="rag-pipeline" style="margin-bottom:1.2rem;">
+          <div class="rag-phase-label">Indexing — done once offline</div>
+          <div class="rag-flow">
+            <div class="rag-box">Raw Docs</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box">Chunk</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box cyan">Embed</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box amber">Vector DB</div>
+          </div>
+          <div class="rag-phase-label" style="margin-top:0.9rem;">Query — repeated on every request</div>
+          <div class="rag-flow">
+            <div class="rag-box green">Question</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box cyan">Embed</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box amber">Search DB</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box">Top-K Chunks</div>
+            <div class="rag-arrow">→</div>
+            <div class="rag-box green">LLM + Answer</div>
+          </div>
+        </div>
+        <div class="card" style="padding:1rem 1.2rem;">
+          <p style="font-size:0.8rem;margin-bottom:0.5rem;"><strong>RAG shines when:</strong> corpus is large (millions of docs), changes frequently, or precise citations back to source chunks are required.</p>
+          <p style="font-size:0.8rem;"><strong style="color:var(--red);">RAG's blind spot:</strong> every query re-derives understanding from scratch — cross-source synthesis, longitudinal reasoning, and accumulated insight are not preserved between calls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 4: The Problem ───────────────────────── -->
+  <section class="slide s-problem" id="s1">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">The <span class="hl2">Problem</span></h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <h3 class="section">Knowledge that disappears</h3>
+        <ul class="bullet-list" style="margin-bottom:1.5rem;">
+          <li>Every LLM session starts cold — no memory of previous reasoning</li>
+          <li>RAG re-derives conclusions from raw text on <em>every query</em></li>
+          <li>Humans build wikis, then abandon them when maintenance costs grow</li>
+          <li>Cross-references rot; contradictions accumulate silently</li>
+        </ul>
+        <div class="quote-block">
+          "No existing AI-scientist tool persists knowledge retrievably across runs — they begin from scratch each session."
+          <span class="attribution">— PARNESS authors, arXiv:2605.05258</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">The RAG Bottleneck</h3>
+        <ul class="bullet-list amber">
+          <li>Retrieval returns chunks, not synthesized understanding</li>
+          <li>85% of agent effort wasted on retrieval overhead <em>(Pinecone, 2026)</em></li>
+          <li>50–60% task completion rate with agentic RAG at scale</li>
+          <li>Vector indexes require specialized infrastructure</li>
+          <li>Cross-source synthesis is re-done from scratch every call</li>
+        </ul>
+        <div class="stat-row" style="margin-top:1.5rem;">
+          <div class="stat-pill amber"><span class="num">85%</span><span class="label">retrieval waste</span></div>
+          <div class="stat-pill amber"><span class="num">~50%</span><span class="label">task completion</span></div>
+          <div class="stat-pill"><span class="num">0</span><span class="label">persistent memory</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 5: Who is Karpathy ───────────────────── -->
+  <section class="slide s-who" id="s2">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Who is <span class="hl">Karpathy</span></h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <div class="timeline">
+          <div class="tl-item"><span class="tl-dot" style="background:var(--cyan)"></span><span class="tl-date">2011–2015</span><div class="tl-content"><strong>PhD Stanford</strong> — image captioning; designed & taught CS231n (150 → 750 students)</div></div>
+          <div class="tl-item"><span class="tl-dot"></span><span class="tl-date">2015–2017</span><div class="tl-content"><strong>OpenAI founding member</strong> — deep learning, computer vision research</div></div>
+          <div class="tl-item"><span class="tl-dot" style="background:var(--amber)"></span><span class="tl-date">2017–2022</span><div class="tl-content"><strong>Director of AI, Tesla</strong> — built Autopilot Vision end-to-end on custom inference chip</div></div>
+          <div class="tl-item"><span class="tl-dot" style="background:var(--green)"></span><span class="tl-date">2024–now</span><div class="tl-content"><strong>Eureka Labs</strong> — AI-native education company; first course: LLM101n</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">Key Concepts Coined</h3>
+        <ul class="bullet-list" style="margin-bottom:1.4rem;">
+          <li><em>Software 2.0</em> — neural nets as a new programming paradigm (2017)</li>
+          <li><em>LLM OS</em> — LLM as kernel of an AI operating system (2024)</li>
+          <li><em>Vibe coding</em> — describe intent, let AI write code (Feb 2025)</li>
+          <li><em>LLM Wiki pattern</em> — compile-then-query knowledge architecture (Apr 2026)</li>
+        </ul>
+        <div class="quote-block">
+          "The hottest new programming language is English."
+          <span class="attribution">— Andrej Karpathy</span>
+        </div>
+        <div class="tag-row" style="margin-top:1rem;">
+          <span class="tag">TIME AI100</span>
+          <span class="tag">MIT Innovators U35</span>
+          <span class="tag amber">41k bookmarks / week</span>
+          <span class="tag">arxiv-sanity founder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 4: The Idea ───────────────────────────── -->
+  <section class="slide s-idea" id="s3">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">The <span class="hl">Core Idea</span></h2>
+    <div class="slide-inner stagger" style="max-width:1000px;">
+      <div class="two-col" style="margin-bottom:1.8rem;">
+        <div class="card">
+          <h3 class="section">The Compilation Analogy</h3>
+          <p style="margin-bottom:1rem;">You don't re-run source code on every execution — you <em>compile</em> it once into a binary and run <em>that</em>.</p>
+          <div class="code-block">
+<span class="cmt">// Software engineering</span>
+<span class="kw">compile</span>(source_code) → binary
+<span class="kw">run</span>(binary)  <span class="cmt">// fast, reusable</span>
+
+<span class="cmt">// LLM Wiki</span>
+<span class="kw">ingest</span>(raw_docs) → wiki_pages
+<span class="kw">query</span>(wiki)  <span class="cmt">// no re-derivation</span>
+          </div>
+        </div>
+        <div class="card amber">
+          <h3 class="section" style="color:var(--cyan)">Published April 2, 2026</h3>
+          <p style="margin-bottom:0.8rem;">GitHub Gist titled <code style="font-family:var(--font-mono);font-size:0.8rem;background:rgba(0,0,0,0.3);padding:0.2em 0.4em;border-radius:3px;color:var(--green);">llm-wiki.md</code> — an "idea file" designed to be pasted into any LLM agent, which then instantiates the pattern for its specific domain.</p>
+          <ul class="bullet-list" style="font-size:0.85rem;">
+            <li><em>41,000+</em> bookmarks in the first week</li>
+            <li>Pinecone independently converged on the same concept with <em>Nexus</em> (May 2026)</li>
+            <li>Dozens of open-source implementations within weeks</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote-block" style="font-size:0.95rem;">
+        "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase."
+        <span class="attribution">— Andrej Karpathy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 5: Architecture ───────────────────────── -->
+  <section class="slide s-arch" id="s4">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hl2">Three-Layer</span> Architecture</h2>
+    <div class="slide-inner stagger" style="max-width:900px; gap:2rem;">
+      <div class="layer-stack stagger">
+        <div class="layer">
+          <div class="layer-num">1</div>
+          <div>
+            <div class="layer-label">Raw Sources <span style="color:var(--dim);font-size:0.75rem;font-family:var(--font-mono);">→ inbox/ + sources/</span></div>
+            <div class="layer-desc">Immutable ground truth. Web clips, PDFs, transcripts, tweets. <strong>Never edited</strong> — only appended to. The "source code."</div>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:1.2rem;color:var(--muted);">▼</div>
+        <div class="layer" style="border-color:rgba(0,255,136,0.25);">
+          <div class="layer-num" style="color:var(--green);">2</div>
+          <div>
+            <div class="layer-label">Wiki <span style="color:var(--dim);font-size:0.75rem;font-family:var(--font-mono);">→ wiki/</span></div>
+            <div class="layer-desc">LLM-owned markdown files. Cross-referenced, bilingual, synthesized. The "compiled binary." Knowledge accumulates — not re-derived per query.</div>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:1.2rem;color:var(--muted);">▼</div>
+        <div class="layer" style="border-color:rgba(255,170,0,0.25);">
+          <div class="layer-num" style="color:var(--amber);">3</div>
+          <div>
+            <div class="layer-label">Schema File <span style="color:var(--dim);font-size:0.75rem;font-family:var(--font-mono);">→ CLAUDE.md / AGENTS.md</span></div>
+            <div class="layer-desc">Controls context injection. Tells the agent: how to structure pages, how to link concepts, what to do with each source type. <strong>The critical innovation</strong> — one line per domain.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="max-width:100%;">
+        <p style="font-size:0.85rem;"><strong>Navigation files:</strong> <em>index.md</em> — content catalog of all pages &nbsp;·&nbsp; <em>log.md</em> — append-only chronological history. Together they let the LLM navigate ~100–500 sources without embedding infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 6: Three Operations ──────────────────── -->
+  <section class="slide s-ops" id="s5">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Three <span class="hlg">Operations</span></h2>
+    <div class="slide-inner stagger" style="max-width:980px; gap:2rem;">
+      <div class="ops-flow">
+        <div class="op-card op-ingest">
+          <div class="op-title">INGEST</div>
+          <div class="op-body">
+            New source → LLM reads it → writes or updates <strong>10–15 wiki pages</strong>.<br><br>
+            Cross-references are pre-built. Contradictions flagged immediately. Each ingest makes the whole richer.
+          </div>
+        </div>
+        <div class="op-arrow">→</div>
+        <div class="op-card op-query">
+          <div class="op-title">QUERY</div>
+          <div class="op-body">
+            LLM reads <strong>compiled wiki</strong>, synthesizes answer.<br><br>
+            Good answers get filed back as new wiki pages — the system self-documents its own reasoning.
+          </div>
+        </div>
+        <div class="op-arrow">→</div>
+        <div class="op-card op-lint">
+          <div class="op-title">LINT</div>
+          <div class="op-body">
+            Periodic audit: find <strong>contradictions</strong>, orphan pages, stale claims, broken cross-links.<br><br>
+            Non-optional. Without Lint, hallucinations bake in permanently.
+          </div>
+        </div>
+      </div>
+      <div class="card" style="padding:1rem 1.4rem;">
+        <p style="font-size:0.85rem;"><strong style="color:var(--red);">Key risk:</strong> In pure RAG a hallucination affects one answer. In LLM Wiki, a misunderstood source can get written as "fact" and <em>propagate via cross-links</em> to 15 other pages before anyone notices. <strong>Lint is your safety net.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 7: Setup / Implementation ────────────── -->
+  <section class="slide s-setup" id="s6">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Setup in <span class="hl">5 Steps</span></h2>
+    <div class="two-col slide-inner stagger">
+      <div class="step-list">
+        <div class="step"><span class="step-n">1</span><div class="step-text">Install <strong>Obsidian</strong> (free) — create a new vault. Create three folders: <code>raw/</code>, <code>wiki/</code>, <code>templates/</code>.</div></div>
+        <div class="step"><span class="step-n">2</span><div class="step-text">Paste Karpathy's gist into <strong>Claude Code</strong>. Ask it to create <code>claude.md</code> tailored to your domain — answer its clarifying questions.</div></div>
+        <div class="step"><span class="step-n">3</span><div class="step-text">Drop your first source into <code>raw/</code> — markdown clip, PDF, or text. Run: <code>"I just added a new source. Please update the wiki."</code></div></div>
+        <div class="step"><span class="step-n">4</span><div class="step-text">Claude writes <strong>5–15 wiki pages</strong>, updates <code>index.md</code>, logs the run. Open Obsidian graph view to see the knowledge structure forming.</div></div>
+        <div class="step"><span class="step-n">5</span><div class="step-text">Repeat: add sources, run <code>"Please lint the wiki."</code> periodically, ask synthesis questions. The wiki compounds.</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.2rem;">
+        <h3 class="section">Tools</h3>
+        <div class="card" style="padding:1.1rem 1.3rem;">
+          <p style="font-size:0.82rem;margin-bottom:0.8rem;"><strong>Viewer:</strong> Obsidian — graph view, backlinks, search. Not an AI tool — just a markdown reader.</p>
+          <p style="font-size:0.82rem;margin-bottom:0.8rem;"><strong>Agent:</strong> Claude Code, Codex, or Cursor. Anything that reads and writes files on your machine.</p>
+          <p style="font-size:0.82rem;"><strong>Scale limit:</strong> ~100–200 sources without embedding infra. Beyond that: add <em>qmd</em> for hybrid BM25/vector search.</p>
+        </div>
+        <div class="quote-block" style="font-size:0.82rem;">
+          "The tedious part of maintaining a knowledge base is not the reading or the thinking — it's the bookkeeping. Humans abandon wikis because the maintenance burden grows faster than the value. LLMs don't get bored."
+          <span class="attribution">— Andrej Karpathy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 8: RAG vs LLM Wiki ───────────────────── -->
+  <section class="slide s-vsrag" id="s7">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title"><span class="hl2">RAG</span> vs <span class="hlg">LLM Wiki</span></h2>
+    <div class="slide-inner stagger" style="max-width:960px; gap:1.5rem;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>RAG</th>
+            <th>LLM Wiki</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Corpus size</td><td>Millions of documents</td><td>100–500 curated sources</td></tr>
+          <tr><td>Per-query cost</td><td>Embedding lookup + LLM call</td><td>Read compiled wiki + LLM call</td></tr>
+          <tr><td>Cross-source synthesis</td><td>Re-derived every query</td><td>Pre-compiled into wiki pages</td></tr>
+          <tr><td>Infrastructure</td><td>Vector database required</td><td>Markdown files + git</td></tr>
+          <tr><td>Hallucination blast radius</td><td>One answer</td><td>Can propagate via cross-links</td></tr>
+          <tr><td>Human readability</td><td>Opaque index</td><td>Wiki readable by humans + LLMs</td></tr>
+          <tr><td>Best for</td><td>Real-time retrieval, citations</td><td>Synthesis, learning, research</td></tr>
+        </tbody>
+      </table>
+      <div class="card" style="padding:0.9rem 1.2rem;">
+        <p style="font-size:0.83rem;"><strong>Pinecone validation:</strong> Pinecone — company behind the market-leading vector DB powering most RAG systems — independently converged on the same compiled-knowledge-layer concept with their "Nexus" product launch (May 2026), citing 85% agent effort wasted on retrieval.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 9: This Wiki as Example ──────────────── -->
+  <section class="slide s-example" id="s8">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">This <span class="hl">Wiki</span> in Action</h2>
+    <div class="two-col slide-inner stagger">
+      <div>
+        <h3 class="section">AIWiki — Live Implementation</h3>
+        <ul class="bullet-list" style="margin-bottom:1.2rem;">
+          <li>Bilingual EN + RU wiki entries in a single <code style="font-family:var(--font-mono);font-size:0.78rem;background:rgba(0,0,0,0.3);padding:0.1em 0.35em;border-radius:3px;color:var(--green);">.md</code> file</li>
+          <li>8 categories: concepts, tools, agents, models, news, tips, people, research</li>
+          <li>Automated ingestion from YouTube, Reddit, HN, Twitter, web clippings</li>
+          <li>Custom <code style="font-family:var(--font-mono);font-size:0.78rem;background:rgba(0,0,0,0.3);padding:0.1em 0.35em;border-radius:3px;color:var(--green);">/wiki-*</code> slash commands as Claude Code skills</li>
+          <li>Obsidian graph view + backlink analysis via <code style="font-family:var(--font-mono);font-size:0.78rem;background:rgba(0,0,0,0.3);padding:0.1em 0.35em;border-radius:3px;color:var(--green);">obs.py</code></li>
+          <li>Source-tier reliability scoring (4 levels)</li>
+        </ul>
+        <div class="stat-row">
+          <div class="stat-pill"><span class="num">100+</span><span class="label">entries</span></div>
+          <div class="stat-pill green"><span class="num">2</span><span class="label">languages</span></div>
+          <div class="stat-pill amber"><span class="num">14</span><span class="label">subreddits</span></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="section">Workflow Commands</h3>
+        <div class="code-block">
+<span class="cmt"># Daily pipeline</span>
+<span class="kw">/wiki-reddit</span>    <span class="cmt"># 14 subreddits</span>
+<span class="kw">/wiki-hackernews</span> <span class="cmt"># AI articles</span>
+<span class="kw">/wiki-youtube</span>   <span class="cmt"># transcripts</span>
+
+<span class="cmt"># As-needed</span>
+<span class="kw">/wiki-inbox</span>     <span class="cmt"># all sources</span>
+<span class="kw">/wiki-links</span>     <span class="cmt"># URL queue</span>
+
+<span class="cmt"># Maintenance</span>
+<span class="kw">/wiki-lint</span>      <span class="cmt"># health audit</span>
+<span class="kw">/wiki-index</span>     <span class="cmt"># rebuild index</span>
+<span class="kw">/wiki-digest</span>    <span class="cmt"># weekly summary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 10: Use Cases ────────────────────────── -->
+  <section class="slide s-usecases" id="s9">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Use <span class="hlg">Cases</span></h2>
+    <div class="slide-inner stagger" style="max-width:1100px; gap:1.5rem;">
+      <div class="usecase-grid stagger">
+        <div class="uc-card">
+          <div class="uc-icon">🧠</div>
+          <div class="uc-title">Personal Knowledge</div>
+          <div class="uc-desc">Capture everything you read, watch, and think. Stop re-reading the same articles. Ask synthesis questions across months of input.</div>
+          <div class="uc-example">books · newsletters · podcasts</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(0,255,136,0.15);">
+          <div class="uc-icon">🎓</div>
+          <div class="uc-title">Academic Research</div>
+          <div class="uc-desc">Literature review across 50+ papers. Track conflicting findings, identify gaps, prepare survey sections. Competes with PARNESS (arXiv 2026).</div>
+          <div class="uc-example" style="color:var(--green);">papers · citations · hypotheses</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(255,170,0,0.15);">
+          <div class="uc-icon">🔬</div>
+          <div class="uc-title">Scientific R&D</div>
+          <div class="uc-desc">Domain knowledge compiled per project. Cross-domain synthesis that RAG misses. Auto-digest for team knowledge transfer.</div>
+          <div class="uc-example" style="color:var(--amber);">protocols · results · models</div>
+        </div>
+        <div class="uc-card">
+          <div class="uc-icon">✈️</div>
+          <div class="uc-title">Travel Planning</div>
+          <div class="uc-desc">Ingest blogs, guides, visa rules. Query "best ryokan in Kyoto under ¥15,000" — answer synthesized from 30 sources, not re-derived.</div>
+          <div class="uc-example">guides · logistics · tips</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(0,255,136,0.15);">
+          <div class="uc-icon">📈</div>
+          <div class="uc-title">Competitive Intel</div>
+          <div class="uc-desc">Track competitor updates, product releases, pricing changes. Weekly digest auto-generated. Analyst-quality synthesis without the analyst.</div>
+          <div class="uc-example" style="color:var(--green);">releases · pricing · positioning</div>
+        </div>
+        <div class="uc-card" style="border-color:rgba(255,170,0,0.15);">
+          <div class="uc-icon">⚖️</div>
+          <div class="uc-title">Legal / Compliance</div>
+          <div class="uc-desc">Compile regulations, case law, internal policy. Cross-reference new rules against existing wiki. Flag contradictions automatically.</div>
+          <div class="uc-example" style="color:var(--amber);">regulations · precedents · policy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 11: Self-Improvement ─────────────────── -->
+  <section class="slide s-selfimprove" id="s10">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Self-<span class="hl">Improvement</span> Loop</h2>
+    <div class="slide-inner stagger" style="max-width:1000px; gap:1.5rem;">
+      <div class="improve-grid stagger">
+        <div class="card">
+          <h3 class="section">Adopt Useful Skills</h3>
+          <p style="font-size:0.85rem;">The wiki observes which explanations resonate — frequently queried pages get richer cross-references. The agent develops domain intuition from patterns in query history. Knowledge gaps in the wiki surface as missing pages in broken-link audits.</p>
+        </div>
+        <div class="card green">
+          <h3 class="section" style="color:var(--green);">"Steal" Ideas from Similar Projects</h3>
+          <p style="font-size:0.85rem;">PARNESS introduced contradiction-indexed cross-run memory. SurveyGen-I introduced "do not re-explain" term memory. LightRAG introduced dual-level entity/concept graphs. Each is an importable pattern — no vector DB required.</p>
+        </div>
+        <div class="card amber">
+          <h3 class="section" style="color:var(--amber);">Learn from History of Sessions</h3>
+          <p style="font-size:0.85rem;"><em>log.md</em> is a complete audit trail. Entries created vs. updated ratio reveals whether the wiki is growing healthily. Orphan counts track integration quality. Broken links track debt accumulation.</p>
+        </div>
+        <div class="card purple">
+          <h3 class="section" style="color:#a78bfa;">Adjust Behavior from Failures</h3>
+          <p style="font-size:0.85rem;">Hallucinations that survived into wiki pages become training examples for the Lint prompt. The CLAUDE.md schema evolves based on observed failure modes — tightening source-tier rules, adding category decision trees, refining the bilingual template.</p>
+        </div>
+      </div>
+      <div class="card" style="padding:0.9rem 1.2rem;">
+        <p style="font-size:0.82rem;"><strong>The compounding effect:</strong> Each new source makes the wiki richer. Each query that gets filed as a new page adds cross-references. Each lint pass removes noise. The system gets <em>better at being a wiki</em> over time — not just bigger.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 12: Future / Open Gaps ───────────────── -->
+  <section class="slide s-future" id="s11">
+    <div class="slide-bg"></div>
+    <h2 class="slide-title">Open <span class="hl2">Gaps</span> to Close</h2>
+    <div class="three-col slide-inner stagger">
+      <div class="card">
+        <h3 class="section">Contradiction Detection</h3>
+        <p style="font-size:0.83rem;margin-bottom:0.8rem;">Currently: caught manually during Lint. Academic solution: KARMA's 9-agent consensus — extract core claims from each new entry, compare against same-category entries.</p>
+        <div class="code-block" style="font-size:0.72rem;">scripts/check_conflicts.py
+→ auto-populate ## Debate
+  in both entries
+        </div>
+      </div>
+      <div class="card green">
+        <h3 class="section" style="color:var(--green);">Relational Retrieval</h3>
+        <p style="font-size:0.83rem;margin-bottom:0.8rem;">Current search: full-text ripgrep. Misses: "which tools use RAG?" LightRAG approach: after each entry, run relation-extraction Claude call → write to <code style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(0,0,0,0.3);padding:0.1em 0.3em;border-radius:3px;color:var(--green)">.state/relations/slug.json</code>.</p>
+        <p style="font-size:0.78rem;color:var(--dim);">No vector DB or graph DB required.</p>
+      </div>
+      <div class="card amber">
+        <h3 class="section" style="color:var(--amber);">Digest Coherence</h3>
+        <p style="font-size:0.83rem;margin-bottom:0.8rem;">Problem: weekly digest re-explains concepts defined last week. SurveyGen-I fix: after each digest, write <code style="font-family:var(--font-mono);font-size:0.75rem;background:rgba(0,0,0,0.3);padding:0.1em 0.3em;border-radius:3px;color:var(--green)">digests/memory.json</code> of all defined terms → inject as "do not re-explain" constraint next run.</p>
+      </div>
+    </div>
+    <div class="slide-inner stagger" style="max-width:1000px;margin-top:1.2rem;">
+      <div class="quote-block">
+        "The bottleneck is no longer generating text. It is knowing what the system already knows."
+        <span class="attribution">— LLM4SR survey, arXiv:2501.04306</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Slide 13: Closing ───────────────────────────── -->
+  <section class="slide s-closing" id="s12">
+    <div class="slide-bg"></div>
+    <div class="grid-lines" style="opacity:0.3;"></div>
+    <div class="closing-quote">
+      "Obsidian is the <em>IDE</em>.<br>
+      The LLM is the <em>programmer</em>.<br>
+      The wiki is the <em>codebase</em>."
+    </div>
+    <p class="closing-attribution">— Andrej Karpathy · LLM Wiki Pattern · April 2026</p>
+    <div class="closing-links">
+      <span class="link-chip">gist.github.com/karpathy/442a6b</span>
+      <span class="link-chip">karpathy.ai</span>
+      <span class="link-chip">obsidian.md</span>
+      <span class="link-chip">github.com/mherod/llmwiki</span>
+    </div>
+    <div style="margin-top:2.5rem;opacity:0;animation:fadeUp 0.7s 1.1s forwards;">
+      <div class="tag-row" style="justify-content:center;gap:0.8rem;">
+        <span class="tag">compile don't retrieve</span>
+        <span class="tag amber">41k bookmarks/week</span>
+        <span class="tag green">knowledge compounds</span>
+        <span class="tag">humans curate, LLMs maintain</span>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /#deck -->
+
+<!-- ── UI Chrome ─────────────────────────────────────── -->
+<div id="progress-bar"></div>
+<div id="dots"></div>
+<button class="nav-btn" id="nav-prev" onclick="prevSlide()">‹</button>
+<button class="nav-btn" id="nav-next" onclick="nextSlide()">›</button>
+<div id="counter"></div>
+<div id="logo-mark">LLM <span>Wiki</span></div>
+<div id="keyboard-hint">← → Space · Swipe</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+  let transitioning = false;
+
+  const dotsEl = document.getElementById('dots');
+  const progressEl = document.getElementById('progress-bar');
+  const counterEl = document.getElementById('counter');
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function updateUI() {
+    const pct = totalSlides > 1 ? (current / (totalSlides - 1)) * 100 : 0;
+    progressEl.style.width = pct + '%';
+    counterEl.textContent = (current + 1).toString().padStart(2,'0') + ' / ' + totalSlides.toString().padStart(2,'0');
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    document.getElementById('nav-prev').style.opacity = current === 0 ? '0.3' : '1';
+    document.getElementById('nav-next').style.opacity = current === totalSlides - 1 ? '0.3' : '1';
+  }
+
+  function resetAnimations(slide) {
+    // Reset CSS animations by re-triggering them
+    slide.querySelectorAll('.eyebrow, h1, h2.slide-title, .slide-inner, .closing-quote, .closing-attribution, .closing-links, .hero-sub, .hero-cta, [style*="animation"]').forEach(el => {
+      el.style.animation = 'none';
+      el.offsetHeight; // reflow
+      el.style.animation = '';
+    });
+  }
+
+  function goTo(idx) {
+    if (transitioning || idx === current || idx < 0 || idx >= totalSlides) return;
+    transitioning = true;
+    const from = slides[current];
+    const to   = slides[idx];
+    const dir  = idx > current ? 1 : -1;
+
+    from.classList.remove('active');
+    from.classList.add('exit');
+    if (dir < 0) {
+      from.style.transform = 'translateX(80px)';
+    }
+
+    resetAnimations(to);
+    to.classList.add('active');
+    current = idx;
+    updateUI();
+
+    setTimeout(() => {
+      from.classList.remove('exit');
+      from.style.transform = '';
+      transitioning = false;
+    }, 600);
+  }
+
+  function nextSlide() { goTo(current + 1); }
+  function prevSlide() { goTo(current - 1); }
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prevSlide(); }
+    if (e.key === 'Home') goTo(0);
+    if (e.key === 'End') goTo(totalSlides - 1);
+  });
+
+  // Touch / Swipe
+  let touchX = null;
+  document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 40) { dx < 0 ? nextSlide() : prevSlide(); }
+  }, { passive: true });
+
+  // Prevent stagger children from animating before slide is active
+  // (they animate on first entry because slides start as opacity:0)
+  updateUI();
+</script>
+</body>
+</html>

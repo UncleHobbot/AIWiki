@@ -88,3 +88,15 @@
 **13:43 C:/Program Files/Git/wiki-hackernews** — 10 articles fetched, 3 qualified. Created: praisonai-cve-2026-44338-agent-auth-bypass (news), microsoft-mdash-agentic-vulnerability-scanner (agents), node-ipc-backdoor-ai-tool-credentials (news). Skipped 7 (no AI angle or vendor puff piece). Index rebuild pending.
 
 **13:43 C:/Program Files/Git/wiki-hackernews** — 10 articles fetched, 3 qualified, 3 entries created. See above.
+
+**20:45 C:/Program Files/Git/wiki-inbox** — All inboxes empty — 0 entries created, 0 updated. Clippings: 0, Links: 0, Tweets: 0, Posts: 0, YouTube: 0. Index: 140 total.
+
+---
+
+## 2026-05-19
+
+**11:08 C:/Program Files/Git/wiki-inbox** — 0 created, 0 updated. All inbox queues empty: clippings/ (0 files), links.md (0 to-read), twitter.md (0 new), posts.md (0 posts), youtube.md (0 new). Index: 135 total.
+
+**12:05 C:/Program Files/Git/wiki-reddit** — 14 subs, 94 posts scanned, 4 created: programbench-gpt55-first-solve (news), isomorphic-labs-series-b-2b (news), vibe-coding-bundling-what-already-exists (tips), kimi-2-6-vs-glm-5-1-agent-reliability (models). 8 skipped (already exist). Index: 139 total.
+
+**12:08 C:/Program Files/Git/wiki-hackernews** — 30 articles fetched, 2 qualified (score>=2), 1 created: supply-chain-attacks-ai-coding-tools-2026 (news) — Nx Console+Mini Shai-Hulud wave targeting Claude Code. Index: 140 total.

@@ -100,3 +100,10 @@
 
 **12:08 C:/Program Files/Git/wiki-hackernews** — 30 articles fetched, 2 qualified (score>=2), 1 created: supply-chain-attacks-ai-coding-tools-2026 (news) — Nx Console+Mini Shai-Hulud wave targeting Claude Code. Index: 140 total.
 
+---
+
+## 2026-05-20
+
+**08:18 /wiki-reddit** — 14 subs (12 OK, 2 rate-limited: opencode/opencodeCLI), 91 posts scanned, 2 created: lawzero-scientist-ai-bengio (concepts), gemini-3-1-agent-api-preview (news). Skipped: all singularity/Copilot/kimi/vibecoding posts already exist. Index: 142 total.
+
+**08:57 /wiki-hackernews** — 30 articles fetched, 1 qualified (score=2), 0 created: Trapdoor Android ad fraud skipped (no AI angle, pure malvertising). Index: 142 total.

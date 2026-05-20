@@ -1,6 +1,6 @@
 # Wiki Index
 
-**140 entries** across 8 categories.
+**142 entries** across 8 categories.
 
 
 ## Agents
@@ -35,6 +35,7 @@
 - [[gnosis-mcp-vs-llm-wiki-pattern]] [Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](wiki/concepts/gnosis-mcp-vs-llm-wiki-pattern.md) — Gnosis MCP and the Karpathy LLM Wiki pattern solve adjacent but different problems: Gnosis
 - [[karma-knowledge-graph-enrichment]] [KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](wiki/concepts/karma-knowledge-graph-enrichment.md) — KARMA is a multi-agent LLM framework that automates knowledge graph enrichment by deployin
 - [[karpathy-deep-dive-llms]] [Karpathy: Deep Dive into LLMs like ChatGPT](wiki/concepts/karpathy-deep-dive-llms.md) — Andrej Karpathy's comprehensive, general-audience deep dive into how large language models
+- [[lawzero-scientist-ai-bengio]] [LawZero: Yoshua Bengio's Scientist AI for Safe Alignment](wiki/concepts/lawzero-scientist-ai-bengio.md) — LawZero is Yoshua Bengio's nonprofit AI safety lab proposing the **Scientist AI** — a syst
 - [[learn-harness-engineering-course]] [Learn Harness Engineering Course](wiki/concepts/learn-harness-engineering-course.md) — A free 12-lecture practical course by Walking Labs that synthesizes OpenAI and Anthropic h
 - [[llm-fundamentals-tokens-to-production]] [Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](wiki/concepts/llm-fundamentals-tokens-to-production.md) — Dmitry Bereznitsky's comprehensive one-hour guide to LLM fundamentals for practicing engin
 - [[llm-wiki-academic-applications]] [LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](wiki/concepts/llm-wiki-academic-applications.md) — The academic landscape around LLM-maintained knowledge bases splits into two clusters — au
@@ -67,6 +68,7 @@
 - [[fda-ai-clinical-trials]] [FDA Shortens Clinical Trial Timelines with AI](wiki/news/fda-ai-clinical-trials.md) — On April 28, 2026, the FDA announced a first-of-its-kind initiative using causal AI to mon
 - [[figure-ai-03-robot-30-hours]] [Figure AI 03 Works 30+ Hours Straight](wiki/news/figure-ai-03-robot-30-hours.md) — Figure AI's humanoid robot 03 demonstrated continuous autonomous operation for over 30 hou
 - [[figure-ai-team-robots-livestream]] [Figure AI 03: Team of Humanoid Robots on Livestream](wiki/news/figure-ai-team-robots-livestream.md) — Figure AI live-streamed three F.03 humanoid robots working a full 8-hour shift sorting pac
+- [[gemini-3-1-agent-api-preview]] [Gemini 3.1 Agent API Preview: Google's Agentic Orchestrator Models](wiki/news/gemini-3-1-agent-api-preview.md) — Gemini 3.1 "agent" variants — including `gemini-3.1-flash-lite-preview-agent` — appeared i
 - [[gen-ai-web-traffic-may-2026]] [Gen AI Web Traffic: ChatGPT Nears 50%, Gemini and Claude Rising](wiki/news/gen-ai-web-traffic-may-2026.md) — Gen AI web traffic data shows ChatGPT declining from 77.6% to ~50% over 12 months, while G
 - [[github-agentic-developer-certification]] [GitHub GH-600: Agentic AI Developer Certification](wiki/news/github-agentic-developer-certification.md) — GitHub announced the GH-600 certification for "agentic AI developers" — the first official
 - [[github-copilot-app]] [GitHub Copilot App: Desktop Agent for Parallel Development](wiki/news/github-copilot-app.md) — GitHub released a standalone desktop application for agent-driven development that brings 

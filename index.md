@@ -1,6 +1,6 @@
 # Wiki Index
 
-**139 entries** across 8 categories.
+**140 entries** across 8 categories.
 
 
 ## Agents
@@ -94,6 +94,7 @@
 - [[agentic-ai-coding-patterns-tornhill]] [Agentic AI Coding: Best Practice Patterns for Speed with Quality](wiki/tips/agentic-ai-coding-patterns-tornhill.md) — Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) presents battl
 - [[agentic-ai-development-copilot-lessons]] [Agentic AI Development with GitHub Copilot: Lessons Learned](wiki/tips/agentic-ai-development-copilot-lessons.md) — A practitioner's account of real-world agentic AI-assisted development using GitHub Copilo
 - [[agentic-coding-addiction-behavioral-changes]] [Agentic Coding Addiction: Behavioral Changes Developers Report](wiki/tips/agentic-coding-addiction-behavioral-changes.md) — A LeadDev investigation (265 pts, 93 comments on r/ChatGPTCoding) documents a pattern of c
+- [[ambient-analog-ai-coding-workflows]] [Ambient & Analog AI Coding: Breaking the Desk Constraint](wiki/tips/ambient-analog-ai-coding-workflows.md) — A viral developer blog post argues that AI coding agents have broken the assumption that s
 - [[anthropic-academy-courses-review]] [Anthropic Academy: All 7 Courses Reviewed with Learning Roadmaps](wiki/tips/anthropic-academy-courses-review.md) — All 7 free Anthropic Academy core practitioner courses reviewed after completing them in o
 - [[choose-llm-api-self-host-hybrid]] [How to Choose an LLM for Your AI Agent: API, Self-Host, or Hybrid](wiki/tips/choose-llm-api-self-host-hybrid.md) — Engineering framework for choosing between cloud API (Anthropic, OpenAI, Google), self-hos
 - [[chorus-multi-model-setup]] [CHORUS: Multi-Model Coding Setup](wiki/tips/chorus-multi-model-setup.md) — CHORUS is an open-source tool that orchestrates 2–4 different AI coding assistants (Claude

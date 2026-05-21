@@ -113,3 +113,9 @@
 **22:14 /wiki-hackernews** — 30 articles fetched, 1 qualified (score=3 from agent keywords), 0 created: RAMPART/Clarity Microsoft AI agent security testing framework skipped — primary subject is security testing, aligns with removed AI Security topic. Index: 139 total.
 
 **22:19 /wiki-reddit** — 14 subs (11 OK, 3 rate-limited: ollama/opencode/opencodeCLI), 92 posts, 0 created, 1 updated: kimi-2-6-vs-glm-5-1-agent-reliability (Z.ai service improvement note). 1 URL queued: Google REPLIQA quantum+AI. Most posts already covered. Index: 139 total.
+
+---
+
+## 2026-05-21
+
+**14:44 /wiki-reddit** — 14 subs (all OK), 101 posts, 1 created: ambient-analog-ai-coding-workflows (tips). Skipped 55 repeats. Claude usage reset posts (182+194pts) skipped — image-only. Index: 140 total.

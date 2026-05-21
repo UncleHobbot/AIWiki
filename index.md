@@ -1,6 +1,6 @@
 # Wiki Index
 
-**142 entries** across 8 categories.
+**139 entries** across 8 categories.
 
 
 ## Agents
@@ -20,8 +20,6 @@
 - [[hermes-agent-llm-wiki-integration]] [Hermes Agent + LLM Wiki: Compounding Knowledge Base](wiki/agents/hermes-agent-llm-wiki-integration.md) — Hermes Agent (by Nous Research) integrated Karpathy's LLM Wiki as a built-in skill, creati
 - [[how-coding-agents-read-code]] [How AI Coding Agents Really Read Code (Inside the Runtime)](wiki/agents/how-coding-agents-read-code.md) — Leandro Damasio (AI Engineer in financial/legal domains, building production LLM/RAG syste
 - [[llm-wiki-enterprise-patterns]] [LLM Wiki for Enterprise and Agents](wiki/agents/llm-wiki-enterprise-patterns.md) — How the LLM Wiki 3-layer pattern (raw sources → wiki → schema) scales from personal knowle
-- [[microsoft-mdash-agentic-vulnerability-scanner]] [Microsoft MDASH: Multi-Model Agentic Vulnerability Scanner](wiki/agents/microsoft-mdash-agentic-vulnerability-scanner.md) — MDASH (multi-model agentic scanning harness) is Microsoft's production-grade AI system for
-- [[mythos-cybersecurity-agent]] [Mythos: AI Cybersecurity Agent](wiki/agents/mythos-cybersecurity-agent.md) — Claude Mythos Preview is Anthropic's frontier AI model positioned above Opus in their mode
 - [[new-organizational-models-ai-agents]] [New Organizational Models for the Age of AI Agents](wiki/agents/new-organizational-models-ai-agents.md) — Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on Tech") ex
 - [[specs-to-production-ai-agents]] [From Specs to Production: Building Software with AI Agents End to End](wiki/agents/specs-to-production-ai-agents.md) — Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) shows how to 
 - [[ui-tars-desktop-multimodal-agent]] [UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](wiki/agents/ui-tars-desktop-multimodal-agent.md) — UI-TARS Desktop and Agent TARS are two open-source multimodal AI agent projects from ByteD
@@ -61,7 +59,6 @@
 
 ## News
 
-- [[apple-m5-kernel-exploit-ai]] [First Public macOS Kernel Exploit on Apple M5 Built with AI](wiki/news/apple-m5-kernel-exploit-ai.md) — Security researchers built the first public macOS kernel memory corruption exploit on Appl
 - [[arxiv-llm-ban-policy]] [arXiv Implements 1-Year Ban for Papers with Unchecked LLM Errors](wiki/news/arxiv-llm-ban-policy.md) — arXiv now imposes a 1-year ban on authors whose submissions contain incontrovertible evide
 - [[codex-on-mobile]] [Codex Available on Mobile](wiki/news/codex-on-mobile.md) — OpenAI's Codex coding agent became available on mobile devices, extending terminal-based a
 - [[enterprise-gpu-underutilization]] [Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](wiki/news/enterprise-gpu-underutilization.md) — Enterprises sitting on millions in GPU investments are averaging just 5% utilization rates
@@ -73,14 +70,13 @@
 - [[github-agentic-developer-certification]] [GitHub GH-600: Agentic AI Developer Certification](wiki/news/github-agentic-developer-certification.md) — GitHub announced the GH-600 certification for "agentic AI developers" — the first official
 - [[github-copilot-app]] [GitHub Copilot App: Desktop Agent for Parallel Development](wiki/news/github-copilot-app.md) — GitHub released a standalone desktop application for agent-driven development that brings 
 - [[github-copilot-pricing-exodus]] [GitHub Copilot Usage-Based Pricing Triggers User Exodus](wiki/news/github-copilot-pricing-exodus.md) — GitHub Copilot's switch to usage-based pricing has left many users facing 15x cost increas
+- [[gpt55-frontiermath-benchmark-errors]] [GPT-5.5 Flags Fatal Errors in ~1/3 of FrontierMath Benchmark Problems](wiki/news/gpt55-frontiermath-benchmark-errors.md) — GPT-5.5 was used to audit Epoch AI's FrontierMath benchmark and flagged fatal errors in ap
 - [[isomorphic-labs-series-b-2b]] [Isomorphic Labs Raises $2.1B Series B for AI Drug Discovery](wiki/news/isomorphic-labs-series-b-2b.md) — Isomorphic Labs, the AI drug discovery company spun out of DeepMind by Demis Hassabis, has
-- [[node-ipc-backdoor-ai-tool-credentials]] [node-ipc Supply Chain Attack Targets Claude AI and Developer Credentials](wiki/news/node-ipc-backdoor-ai-tool-credentials.md) — Three versions of the popular npm package `node-ipc` (9.1.6, 9.2.3, 12.0.1) were found to 
+- [[japan-autonomous-medicine-lab-aist]] [Japan's World-First Fully Automated Medicine Lab: No Humans, 10 Robots, 2,000 by 2040](wiki/news/japan-autonomous-medicine-lab-aist.md) — The Institute of Science Tokyo (AIST) has opened the world's first fully unmanned medical 
 - [[openai-100-dollar-tier]] [OpenAI Launches $100/Month Tier](wiki/news/openai-100-dollar-tier.md) — OpenAI introduced a $100/month ChatGPT Pro tier on 9 April 2026, slotting between the $20 
 - [[pinecone-nexus]] [Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](wiki/news/pinecone-nexus.md) — Pinecone — the company that defined the RAG era with its vector database — announced Nexus
-- [[praisonai-cve-2026-44338-agent-auth-bypass]] [PraisonAI CVE-2026-44338: Auth Bypass in Multi-Agent Framework Exploited in Under 4 Hours](wiki/news/praisonai-cve-2026-44338-agent-auth-bypass.md) — CVE-2026-44338 is a missing-authentication vulnerability in PraisonAI (an open-source mult
 - [[programbench-gpt55-first-solve]] [ProgramBench: GPT-5.5 Achieves First Solve on Difficult SWE Benchmark](wiki/news/programbench-gpt55-first-solve.md) — ProgramBench — a new, harder software-engineering benchmark from Facebook Research — saw i
 - [[roo-code-shutdown-roomote]] [Roo Code Shuts Down After 3M Installs, Pivots to Roomote](wiki/news/roo-code-shutdown-roomote.md) — Roo Code, the popular VS Code coding agent extension that reached 3 million installs, is s
-- [[supply-chain-attacks-ai-coding-tools-2026]] [Supply Chain Attacks Explicitly Targeting AI Coding Tools (May 2026 Wave)](wiki/news/supply-chain-attacks-ai-coding-tools-2026.md) — Two related supply chain attacks disclosed on May 19, 2026, mark an escalation in attacker
 
 ## People
 
@@ -97,6 +93,7 @@
 - [[agent-lifecycle-hooks-copilot-vscode]] [Agent Lifecycle Hooks in Copilot CLI and Claude Code](wiki/tips/agent-lifecycle-hooks-copilot-vscode.md) — Hooks are deterministic event handlers that fire at specific points in the AI agent lifecy
 - [[agentic-ai-coding-patterns-tornhill]] [Agentic AI Coding: Best Practice Patterns for Speed with Quality](wiki/tips/agentic-ai-coding-patterns-tornhill.md) — Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) presents battl
 - [[agentic-ai-development-copilot-lessons]] [Agentic AI Development with GitHub Copilot: Lessons Learned](wiki/tips/agentic-ai-development-copilot-lessons.md) — A practitioner's account of real-world agentic AI-assisted development using GitHub Copilo
+- [[agentic-coding-addiction-behavioral-changes]] [Agentic Coding Addiction: Behavioral Changes Developers Report](wiki/tips/agentic-coding-addiction-behavioral-changes.md) — A LeadDev investigation (265 pts, 93 comments on r/ChatGPTCoding) documents a pattern of c
 - [[anthropic-academy-courses-review]] [Anthropic Academy: All 7 Courses Reviewed with Learning Roadmaps](wiki/tips/anthropic-academy-courses-review.md) — All 7 free Anthropic Academy core practitioner courses reviewed after completing them in o
 - [[choose-llm-api-self-host-hybrid]] [How to Choose an LLM for Your AI Agent: API, Self-Host, or Hybrid](wiki/tips/choose-llm-api-self-host-hybrid.md) — Engineering framework for choosing between cloud API (Anthropic, OpenAI, Google), self-hos
 - [[chorus-multi-model-setup]] [CHORUS: Multi-Model Coding Setup](wiki/tips/chorus-multi-model-setup.md) — CHORUS is an open-source tool that orchestrates 2–4 different AI coding assistants (Claude

@@ -49,7 +49,6 @@ Community reaction on r/singularity was modest (70 pts) but the accompanying pod
 ## Related Entries
 
 - [[agi-impossibility-proof-debunked]] ([AGI Impossibility Proof Debunked](../concepts/agi-impossibility-proof-debunked.md))
-- [[mythos-cybersecurity-agent]] ([Mythos Cybersecurity Agent](../agents/mythos-cybersecurity-agent.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 
 ---
@@ -78,5 +77,4 @@ LawZero — некоммерческая лаборатория безопасн
 ## Связанные записи
 
 - [[agi-impossibility-proof-debunked]] ([AGI Impossibility Proof Debunked](../concepts/agi-impossibility-proof-debunked.md))
-- [[mythos-cybersecurity-agent]] ([Mythos Cybersecurity Agent](../agents/mythos-cybersecurity-agent.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))

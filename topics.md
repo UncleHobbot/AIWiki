@@ -44,14 +44,7 @@ uses this file to rank incoming content and decide what warrants a full wiki ent
 
 ## Secondary Topics
 
-### 5. AI Safety & Security
-**Priority:** medium
-**Keywords:** AI safety, alignment, red team, jailbreak, cybersecurity, exploit,
-  model safety, responsible AI, Anthropic safety, AI governance
-**Subreddits:** r/MachineLearning, r/singularity
-**Wiki categories:** news, concepts
-
-### 6. AI Research & Papers
+### 5. AI Research & Papers
 **Priority:** medium
 **Keywords:** arxiv, paper, research, NeurIPS, ICLR, ICML, training, fine-tuning,
   RLHF, self-play, diffusion model, multimodal, embedding

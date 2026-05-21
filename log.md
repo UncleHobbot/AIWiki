@@ -107,3 +107,9 @@
 **08:18 /wiki-reddit** — 14 subs (12 OK, 2 rate-limited: opencode/opencodeCLI), 91 posts scanned, 2 created: lawzero-scientist-ai-bengio (concepts), gemini-3-1-agent-api-preview (news). Skipped: all singularity/Copilot/kimi/vibecoding posts already exist. Index: 142 total.
 
 **08:57 /wiki-hackernews** — 30 articles fetched, 1 qualified (score=2), 0 created: Trapdoor Android ad fraud skipped (no AI angle, pure malvertising). Index: 142 total.
+
+**21:55 /wiki-reddit** — 14 subs (11 OK, 3 rate-limited: ollama/opencode/opencodeCLI; LocalLLaMA/ML/ChatGPT retried OK), 3 created: gpt55-frontiermath-benchmark-errors (news), japan-autonomous-medicine-lab-aist (news), agentic-coding-addiction-behavioral-changes (tips). Index: 145 total.
+
+**22:14 /wiki-hackernews** — 30 articles fetched, 1 qualified (score=3 from agent keywords), 0 created: RAMPART/Clarity Microsoft AI agent security testing framework skipped — primary subject is security testing, aligns with removed AI Security topic. Index: 139 total.
+
+**22:19 /wiki-reddit** — 14 subs (11 OK, 3 rate-limited: ollama/opencode/opencodeCLI), 92 posts, 0 created, 1 updated: kimi-2-6-vs-glm-5-1-agent-reliability (Z.ai service improvement note). 1 URL queued: Google REPLIQA quantum+AI. Most posts already covered. Index: 139 total.

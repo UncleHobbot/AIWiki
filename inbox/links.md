@@ -1,6 +1,7 @@
 # Links to Process
 
 ## To Read
+https://blog.google/innovation-and-ai/models-and-research/quantum-computing/repliqa-quantum-computing-life-sciences/ <!-- Google REPLIQA: $10M quantum+AI initiative for life sciences (Harvard, MIT, UCSD) — peripheral AI angle -->
 
 ## High Priority
 

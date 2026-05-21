@@ -6,10 +6,11 @@ tags: [kimi, glm, moonshot, zhipu, chinese-models, coding-agents, reliability, r
 aliases: [Kimi 2.6, GLM 5.1, Moonshot Kimi, ZhipuAI GLM]
 confidence: medium
 date: 2026-05-19
-updated: 2026-05-19
+updated: 2026-05-20
 sources:
   - https://www.reddit.com/r/kimi/comments/1te1dns/
   - https://www.reddit.com/r/kimi/comments/1tbq8st/
+  - https://www.reddit.com/r/ZaiGLM/comments/1tdv5xy/
 ---
 
 ## Summary
@@ -36,7 +37,9 @@ The GLM criticism centres on the API infrastructure:
 
 Kimi 2.6 on the Allegro plan appears to handle the same workloads with fewer interruptions. The post that sparked the thread (66 pts, 39 comments) described running "a team of agents from East to the West side of AI world" — mixing Kimi, GLM, Claude, and Codex — and finding Kimi the most reliable Chinese model for production pipelines.
 
-**Note:** This is community data (Tier 3 reliability), not benchmarked. Zhipu may have improved GLM's concurrency limits since these reports.
+**Update (2026-05-20):** A separate r/ZaiGLM thread (40 pts, 32 comments) reports the Z.ai service has "drastically improved": no broken context above 120K tokens, no mysterious API rate-limit messages, no unexplained stops during long-running tasks, and speed on par with other mainstream services. A user reported running a documentation task for 12+ hours without interruption. If verified, this resolves the primary complaints from May 19 reports — the gap vs Kimi 2.6 on infrastructure reliability may have narrowed significantly.
+
+**Note:** This is community data (Tier 3 reliability), not benchmarked.
 
 ## Related Entries
 
@@ -62,7 +65,9 @@ Kimi 2.6 on the Allegro plan appears to handle the same workloads with fewer int
 
 Практическое сравнение, возникшее в тредах сообщества в мае 2026 года, касается не столько бенчмарков моделей, сколько производственной надёжности для автономных агентов кодирования. Критика GLM сосредоточена на инфраструктуре API: строгие лимиты параллелизма, неэффективное повторное использование кэша контекста, высокая стоимость при масштабировании.
 
-**Примечание:** это данные сообщества (уровень достоверности 3), а не результаты бенчмарков.
+**Обновление (2026-05-20):** Отдельный тред на r/ZaiGLM (40 баллов, 32 комментария) сообщает о значительном улучшении сервиса Z.ai: нет сломанного контекста выше 120К токенов, нет загадочных 429-ошибок, нет необъяснимых остановок при длительных задачах. Пользователь сообщил о непрерывном выполнении задачи документирования более 12 часов. Если подтвердится — разрыв с Kimi 2.6 по надёжности инфраструктуры мог существенно сократиться.
+
+**Примечание:** это данные сообщества (уровень достоверности 3), не бенчмарки.
 
 ## Связанные записи
 

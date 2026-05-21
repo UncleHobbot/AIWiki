@@ -1,5 +1,12 @@
 # Twitter / X Queue
 
+## Done (May 21)
+https://x.com/mattpocockuk/status/2057389140623208493 <!-- Matt Pocock: /tdd anti-pattern — tests that restate implementation provide zero confidence → updated test-driven-agentic-behaviours.md -->
+https://x.com/bibryam/status/2057126955388993990 <!-- queued to links.md, content unknown -->
+https://x.com/iammukeshm/status/2057000917086478356 <!-- queued to links.md, content unknown -->
+https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: 430 hours Claude Code, 73% wasted — queued to links.md, needs full thread -->
+https://x.com/alex_prompter/status/2049596193282375831 <!-- queued to links.md, content unknown -->
+
 ## Done (May 18)
 https://x.com/tricalt/status/2055876832797581406 <!-- Vasilije: "Memory isn't a plugin. Skills aren't a plugin. They're the same harness." → wiki/concepts/memory-skills-unified-harness.md -->
 https://x.com/0x_kaize/status/2038286026284667239 <!-- kaize: "I stopped hitting Claude's usage limits - 10 things I changed" → wiki/tips/claude-usage-limits-token-management.md -->

@@ -1,6 +1,6 @@
 # Wiki Index
 
-**140 entries** across 8 categories.
+**143 entries** across 8 categories.
 
 
 ## Agents
@@ -10,6 +10,7 @@
 - [[agent-orchestration-multi-model-framework]] [Agent Orchestration: Building Multi-Model Frameworks](wiki/agents/agent-orchestration-multi-model-framework.md) — Agent orchestration means having one agent automatically call and coordinate other special
 - [[ai-agents-2026-platforms-prompt-contract]] [AI Agents in 2026: Platforms, Prompt Contracts, and Self-Modifying Memory](wiki/agents/ai-agents-2026-platforms-prompt-contract.md) — A practical guide to AI agents in 2026: the four leading platforms (Claude Code, OpenAI Co
 - [[anatomy-ai-agent-pipeline-loop-tools]] [Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](wiki/agents/anatomy-ai-agent-pipeline-loop-tools.md) — Senior-level dissection of AI agent internals: workflow vs agent (7 levels from single LLM
+- [[anthropic-agent-memory-dreaming]] [Anthropic Agent Memory and Dreaming: Cross-Session Learning for Claude Agents](wiki/agents/anthropic-agent-memory-dreaming.md) — Anthropic has launched **Memory** and **Dreaming** as building blocks for Claude managed a
 - [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] [Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw, NemoClaw, Zo](wiki/agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md) — Five personal autonomous AI agent platforms — OpenClaw, Hermes Agent, ZeroClaw, NemoClaw, 
 - [[claude-code-agentic-loop]] [Claude Code Agentic Loop](wiki/agents/claude-code-agentic-loop.md) — Claude Code is an agentic assistant built on a three-phase loop — gather context, take act
 - [[claude-code-directory]] [The .claude Directory](wiki/agents/claude-code-directory.md) — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules
@@ -20,6 +21,7 @@
 - [[hermes-agent-llm-wiki-integration]] [Hermes Agent + LLM Wiki: Compounding Knowledge Base](wiki/agents/hermes-agent-llm-wiki-integration.md) — Hermes Agent (by Nous Research) integrated Karpathy's LLM Wiki as a built-in skill, creati
 - [[how-coding-agents-read-code]] [How AI Coding Agents Really Read Code (Inside the Runtime)](wiki/agents/how-coding-agents-read-code.md) — Leandro Damasio (AI Engineer in financial/legal domains, building production LLM/RAG syste
 - [[llm-wiki-enterprise-patterns]] [LLM Wiki for Enterprise and Agents](wiki/agents/llm-wiki-enterprise-patterns.md) — How the LLM Wiki 3-layer pattern (raw sources → wiki → schema) scales from personal knowle
+- [[mcp-vs-adk-agent-connectivity]] [MCP vs ADK: Two Different Problems in AI Agent Architecture](wiki/agents/mcp-vs-adk-agent-connectivity.md) — MCP (Model Context Protocol) and ADK (Google's Agent Development Kit) are often compared a
 - [[new-organizational-models-ai-agents]] [New Organizational Models for the Age of AI Agents](wiki/agents/new-organizational-models-ai-agents.md) — Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on Tech") ex
 - [[specs-to-production-ai-agents]] [From Specs to Production: Building Software with AI Agents End to End](wiki/agents/specs-to-production-ai-agents.md) — Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) shows how to 
 - [[ui-tars-desktop-multimodal-agent]] [UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](wiki/agents/ui-tars-desktop-multimodal-agent.md) — UI-TARS Desktop and Agent TARS are two open-source multimodal AI agent projects from ByteD
@@ -100,6 +102,7 @@
 - [[chorus-multi-model-setup]] [CHORUS: Multi-Model Coding Setup](wiki/tips/chorus-multi-model-setup.md) — CHORUS is an open-source tool that orchestrates 2–4 different AI coding assistants (Claude
 - [[claude-code-12-setup-tricks]] [12 Claude Code Setup Tricks That Make AI Feel Like a Real Engineer](wiki/tips/claude-code-12-setup-tricks.md) — Twelve Claude Code environment setup practices that compound into significantly better AI 
 - [[claude-code-deferral-behavior]] [Claude Code Deferral Behavior: Opus 4.7 Task-Skipping Pattern](wiki/tips/claude-code-deferral-behavior.md) — Opus 4.7 has developed an increasingly common pattern of silently marking tasks as "deferr
+- [[claude-code-explore-plan-code-commit]] [The Explore → Plan → Code → Commit Workflow in Claude Code](wiki/tips/claude-code-explore-plan-code-commit.md) — Anthropic's official recommended workflow for Claude Code is a four-step loop — Explore, P
 - [[claude-code-handoff-prototype-skills]] [Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](wiki/tips/claude-code-handoff-prototype-skills.md) — Three high-value Claude Code skills from Matt Pocock's skill set: /handoff compacts your c
 - [[claude-code-plugins-guide]] [Claude Code Plugins: Curated Guide to the Top 36](wiki/tips/claude-code-plugins-guide.md) — A curated ranking of the most useful Claude Code plugins across official marketplace, comm
 - [[claude-code-prompting-era]] [The New Prompting Era: Claude 4.7 Literal vs GPT-5.5 Autonomous](wiki/tips/claude-code-prompting-era.md) — Claude Opus 4.7 became significantly more literal — it does exactly what you type, no gues

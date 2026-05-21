@@ -1,5 +1,17 @@
 # YouTube Queue
 
+## Done (May 21)
+https://www.youtube.com/watch?v=xJQuF02NAK8 <!-- Claude: Explore→Plan→Code→Commit workflow → claude-code-explore-plan-code-commit (tips) -->
+https://www.youtube.com/watch?v=IGo225tfF2I <!-- Claude: Memory and dreaming for self-learning agents → anthropic-agent-memory-dreaming (agents) -->
+https://www.youtube.com/watch?v=BedAaB1RKgE <!-- IBM Technology: MCP vs ADK → mcp-vs-adk-agent-connectivity (agents) -->
+https://www.youtube.com/watch?v=K4-flzsPraE <!-- Claude: Building best agentic analytics harness (Omni) — skipped, product-specific -->
+https://www.youtube.com/watch?v=P0uMXS6emHA <!-- Claude: Picking the right model — skipped, short/covered -->
+https://www.youtube.com/watch?v=8bKcGBa3WUw <!-- .NET Foundation: Introduction to AI for Developers — skipped, beginner content -->
+https://www.youtube.com/watch?v=x4QITiQINhg <!-- Burke Holland: GitHub's New App — skipped, github-copilot-app.md exists -->
+https://www.youtube.com/watch?v=n1TMMZKYMpo <!-- already processed (Bereznitsky: How to choose LLM) -->
+https://www.youtube.com/watch?v=t-4a20_iYhg <!-- unavailable video -->
+https://www.youtube.com/watch?v=dxq7WtWxi44 <!-- Nate B Jones: Karpathy's Wiki vs Open Brain — already processed -->
+
 ## Done (May 18)
 https://www.youtube.com/watch?v=-yz5GDY3-P0 <!-- Burke Holland: Can Open Source Models Beat Opus? Qwen 3.6 27B wins -->
 https://www.youtube.com/watch?v=03CfGf9iw_U <!-- Burke Holland: Lifecycle hooks in Copilot/Claude Code -->

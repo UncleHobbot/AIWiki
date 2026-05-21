@@ -3,9 +3,10 @@ title: "Test-Driven Agentic Behaviours"
 title_ru: "Test-driven разработка для агентного поведения"
 category: tips
 tags: [ai-agents, tdd, test-driven, agentic, claude-code, quality, behaviors]
-updated: 2026-05-16
+updated: 2026-05-21
 sources:
   - https://youtu.be/J6QILoLM0CE
+  - https://x.com/mattpocockuk/status/2057389140623208493
 ---
 
 ## Summary
@@ -17,6 +18,7 @@ Antony Marcano demonstrates how to apply test-driven development principles to d
 - **Clarifying questions early, deep dives later**: a practical interaction model — interrupt for confusing things immediately, save detail questions for the end (applicable to both human talks and AI agent sessions).
 - **Demo required Claude Code**: the talk was supposed to include a live Claude Code demo but Claude had elevated errors during the session — illustrating how agentic workflows depend on reliable tool availability.
 - **Behavior-first design**: think about what the agent should accomplish (observable outcomes) before thinking about how it will accomplish it (implementation).
+- **Anti-pattern: implementation-restating tests.** Matt Pocock added a rule to his `/tdd` skill: "Do not add tests which simply restate the implementation. These provide zero confidence." AI agents know the code they wrote, so they tend to write tests that pass against their own implementation — tests that verify *what the code does* rather than *what it should do*. These tests break nothing when the implementation is wrong, only when it changes.
 
 ## Video Notes
 - Talk from AI Agents Montreal meetup (2026-05-15), speaker Antony Marcano.
@@ -41,6 +43,7 @@ Antony Marcano demonstrates how to apply test-driven development principles to d
 - **Уточняющие вопросы сразу, глубокое погружение позже**: практическая модель взаимодействия — прерывайте для непонятных вещей немедленно, оставляйте детальные вопросы на конец (применимо как к докладам людей, так и к сессиям AI-агентов).
 - **Демо требовало Claude Code**: доклад должен был включать живое демо Claude Code, но во время сессии Claude имел повышенную частоту ошибок — иллюстрирует, как агентные рабочие процессы зависят от надёжности инструментов.
 - **Поведение прежде реализации**: думайте о том, что должен достигнуть агент (наблюдаемые результаты), прежде чем думать о том, как он это сделает.
+- **Антипаттерн: тесты, повторяющие реализацию.** Мэтт Покок добавил правило в свой `/tdd` навык: «Не добавляйте тесты, которые просто воспроизводят реализацию. Они не дают никакой уверенности.» AI-агенты знают написанный ими код, поэтому склонны писать тесты, которые проходят против их собственной реализации — тесты, проверяющие *что делает код*, а не *что он должен делать*.
 
 ## Заметки по видео
 - Доклад на AI Agents Montreal meetup (2026-05-15), спикер Энтони Маркано.

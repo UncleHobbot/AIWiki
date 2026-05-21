@@ -119,3 +119,7 @@
 ## 2026-05-21
 
 **14:44 /wiki-reddit** — 14 subs (all OK), 101 posts, 1 created: ambient-analog-ai-coding-workflows (tips). Skipped 55 repeats. Claude usage reset posts (182+194pts) skipped — image-only. Index: 140 total.
+
+**16:18 /wiki-inbox** — 3 created, 1 updated. Links: REPLIQA skipped. Tweets: Matt Pocock /tdd insight → updated test-driven-agentic-behaviours; 4 queued to links.md. YT: 3 entries from Claude/IBM channels: claude-code-explore-plan-code-commit (tips), anthropic-agent-memory-dreaming (agents), mcp-vs-adk-agent-connectivity (agents). Index: 143 total.
+
+**16:19 /wiki-hackernews** — 30 articles fetched, 0 qualified (score>=2). Nothing to process. Index: 143 total.

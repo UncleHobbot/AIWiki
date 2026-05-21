@@ -1,7 +1,13 @@
 # Links to Process
 
 ## To Read
-https://blog.google/innovation-and-ai/models-and-research/quantum-computing/repliqa-quantum-computing-life-sciences/ <!-- Google REPLIQA: $10M quantum+AI initiative for life sciences (Harvard, MIT, UCSD) — peripheral AI angle -->
+https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns." — needs RapidAPI to fetch full thread -->
+https://x.com/bibryam/status/2057126955388993990 <!-- bibryam tweet — content unknown -->
+https://x.com/iammukeshm/status/2057000917086478356 <!-- iammukeshm tweet — content unknown -->
+https://x.com/alex_prompter/status/2049596193282375831 <!-- alex_prompter tweet — content unknown -->
+
+## Done (May 21)
+https://blog.google/innovation-and-ai/models-and-research/quantum-computing/repliqa-quantum-computing-life-sciences/ <!-- Google REPLIQA: quantum+biology — score 1 after full read, skipped -->
 
 ## High Priority
 

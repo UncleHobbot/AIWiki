@@ -123,3 +123,15 @@
 **16:18 /wiki-inbox** — 3 created, 1 updated. Links: REPLIQA skipped. Tweets: Matt Pocock /tdd insight → updated test-driven-agentic-behaviours; 4 queued to links.md. YT: 3 entries from Claude/IBM channels: claude-code-explore-plan-code-commit (tips), anthropic-agent-memory-dreaming (agents), mcp-vs-adk-agent-connectivity (agents). Index: 143 total.
 
 **16:19 /wiki-hackernews** — 30 articles fetched, 0 qualified (score>=2). Nothing to process. Index: 143 total.
+
+---
+
+## 2026-05-22
+
+**09:17 /wiki-reddit** — 14 subs (11 OK, 3 rate-limited: ollama/opencode/opencodeCLI), 92 posts, 2 created: artificial-analysis-coding-agent-index (news), cola-dlm-bytedance-diffusion-lm (models). Rest repeats. Index: 145 total.
+
+**10:06 /wiki-hackernews** — 30 articles fetched, 0 qualified (score>=2), 0 entries created. 1 queued to links.md: agent-ai-identity (news). 5 malware/no-AI-angle articles skipped. Index: unchanged.
+
+**10:16 /wiki-inbox** — 1 created, 0 updated, 4 skipped. Created: ai-agent-identity-iam-risks (concepts). 4 tweet URLs blocked (web-reader rate-limited until 2026-05-26). Index: 146 total.
+
+**16:40 /wiki-reddit** — 14 subs, 4 entries created: equibles-mcp-financial-data (tools), chorus-multi-llm-code-review (tips), claude-code-usage-reset-may-2026 (news), greg-brockman-openai-product-lead (news). Index: 150 total. Queued 5 URLs to links.md.

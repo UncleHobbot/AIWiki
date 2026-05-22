@@ -1,10 +1,20 @@
 # Links to Process
+[github/copilot-sdk: Multi-platform SDK for integrating GitHub Copilot Agent into apps and services](https://github.com/github/copilot-sdk)
+
 
 ## To Read
-https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns." — needs RapidAPI to fetch full thread -->
-https://x.com/bibryam/status/2057126955388993990 <!-- bibryam tweet — content unknown -->
-https://x.com/iammukeshm/status/2057000917086478356 <!-- iammukeshm tweet — content unknown -->
-https://x.com/alex_prompter/status/2049596193282375831 <!-- alex_prompter tweet — content unknown -->
+https://github.com/daniel3303/Equibles <!-- Equibles: self-hosted MCP server for financial data, 155pts r/LocalLLaMA -->
+https://artificialanalysis.ai/agents/coding-agents <!-- AA Coding Agent Index: model+harness comparisons, 165pts r/singularity -->
+https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing <!-- AISI: Mythos new checkpoint, 431pts r/singularity -->
+https://bhave.sh/make-humans-analog-again <!-- Make humans analog again: Claude Code + analog workflows, 26pts r/ChatGPTCoding -->
+https://spinogenix.com/press-release/spinogenix-reports-early-improvements-in-phase-2-trial-of-tazbentetol <!-- Tazbentetol schizophrenia Phase 2 breakthrough, 133pts r/singularity -->
+https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns." — web-reader rate-limited until 2026-05-26, retry then -->
+https://x.com/bibryam/status/2057126955388993990 <!-- bibryam tweet — content unknown; web-reader rate-limited until 2026-05-26 -->
+https://x.com/iammukeshm/status/2057000917086478356 <!-- iammukeshm tweet — content unknown; web-reader rate-limited until 2026-05-26 -->
+https://x.com/alex_prompter/status/2049596193282375831 <!-- alex_prompter tweet — content unknown; web-reader rate-limited until 2026-05-26 -->
+
+## Done (May 22)
+https://thehackernews.com/2026/05/agent-ai-is-coming-are-you-ready.html <!-- Orchid Security: Agent AI identity gaps → ai-agent-identity-iam-risks (concepts) -->
 
 ## Done (May 21)
 https://blog.google/innovation-and-ai/models-and-research/quantum-computing/repliqa-quantum-computing-life-sciences/ <!-- Google REPLIQA: quantum+biology — score 1 after full read, skipped -->

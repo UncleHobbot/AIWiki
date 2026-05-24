@@ -44,6 +44,7 @@ The key insight on guardrails: "put them in code, not in prompts." Prompt-based 
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[context-engineering-ai-agents-pipeline]] ([Context Engineering for AI Agents: From Research to Production Code](../tips/context-engineering-ai-agents-pipeline.md))
 - [[agent-operating-system]] ([Agent Operating System](../agents/agent-operating-system.md))
+- [[japan-autonomous-medicine-lab-aist]] ([Japan Autonomous Medicine Lab](../news/japan-autonomous-medicine-lab-aist.md))
 ---
 <!-- RU -->
 
@@ -74,3 +75,4 @@ The key insight on guardrails: "put them in code, not in prompts." Prompt-based 
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[context-engineering-ai-agents-pipeline]] ([Context Engineering for AI Agents: From Research to Production Code](../tips/context-engineering-ai-agents-pipeline.md))
 - [[agent-operating-system]] ([Agent Operating System](../agents/agent-operating-system.md))
+- [[japan-autonomous-medicine-lab-aist]] ([Japan Autonomous Medicine Lab](../news/japan-autonomous-medicine-lab-aist.md))

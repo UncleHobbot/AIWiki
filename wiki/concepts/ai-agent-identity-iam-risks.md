@@ -36,6 +36,9 @@ The recommended response: treat AI agent identities as a first-class IAM problem
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[agent-operating-system]] ([Agent Operating System](../agents/agent-operating-system.md))
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
+- [[lawzero-scientist-ai-bengio]] ([LawZero: Bengio AI Alignment](../concepts/lawzero-scientist-ai-bengio.md))
+- [[llm-hallucination-bixonimania-case]] ([LLM Medical Hallucination: Bixonimania](../concepts/llm-hallucination-bixonimania-case.md))
+- [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 
 ---
 <!-- RU -->
@@ -64,3 +67,6 @@ AI-агенты обладают целеориентированной авто
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[agent-operating-system]] ([Agent Operating System](../agents/agent-operating-system.md))
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
+- [[lawzero-scientist-ai-bengio]] ([LawZero: Bengio AI Alignment](../concepts/lawzero-scientist-ai-bengio.md))
+- [[llm-hallucination-bixonimania-case]] ([LLM Medical Hallucination: Bixonimania](../concepts/llm-hallucination-bixonimania-case.md))
+- [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))

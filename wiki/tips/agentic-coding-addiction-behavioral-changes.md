@@ -52,6 +52,7 @@ The r/ChatGPTCoding discussion (265 pts) attracted substantial community validat
 - [[vibe-coding-bundling-what-already-exists]] ([Vibe Coding Failure Mode: Bundling What Already Exists](../tips/vibe-coding-bundling-what-already-exists.md))
 - [[matt-pocock-aihero]] ([Matt Pocock: AI Hero](../people/matt-pocock-aihero.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[ambient-analog-ai-coding-workflows]] ([Ambient Analog AI Coding Workflows](../tips/ambient-analog-ai-coding-workflows.md))
 
 ---
 <!-- RU -->
@@ -91,3 +92,4 @@ The r/ChatGPTCoding discussion (265 pts) attracted substantial community validat
 - [[vibe-coding-bundling-what-already-exists]] ([Vibe Coding Failure Mode: Bundling What Already Exists](../tips/vibe-coding-bundling-what-already-exists.md))
 - [[matt-pocock-aihero]] ([Matt Pocock: AI Hero](../people/matt-pocock-aihero.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[ambient-analog-ai-coding-workflows]] ([Ambient Analog AI Coding Workflows](../tips/ambient-analog-ai-coding-workflows.md))

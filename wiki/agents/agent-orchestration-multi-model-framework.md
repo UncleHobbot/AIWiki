@@ -49,6 +49,8 @@ Areas for improvement: (1) have the planner save its plan to a file and always p
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent Pipeline](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[chorus-multi-llm-code-review]] ([Chorus: Multi-LLM Code Review](../tips/chorus-multi-llm-code-review.md))
+- [[mcp-vs-adk-agent-connectivity]] ([MCP vs ADK](../agents/mcp-vs-adk-agent-connectivity.md))
 
 ---
 <!-- RU -->
@@ -84,3 +86,5 @@ Areas for improvement: (1) have the planner save its plan to a file and always p
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent Pipeline](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
+- [[chorus-multi-llm-code-review]] ([Chorus: Multi-LLM Code Review](../tips/chorus-multi-llm-code-review.md))
+- [[mcp-vs-adk-agent-connectivity]] ([MCP vs ADK](../agents/mcp-vs-adk-agent-connectivity.md))

@@ -33,7 +33,7 @@ Community analysis noted that the 2.5M token budget AISI allocated is relatively
 > "Frontier AI's autonomous cyber and software capability is advancing quickly: the length of cyber tasks that frontier models can complete autonomously has doubled on the order of months, not years." — AISI, May 2026
 
 ## Related Entries
-- [[aisi-mythos-cyber]] ([AISI Mythos](../news/mythos-aisi-cyber-capability-2026.md))
+- [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[ai-agent-identity-iam-risks]] ([AI Agent Identity and IAM Risks](../concepts/ai-agent-identity-iam-risks.md))
 
@@ -56,5 +56,6 @@ AISI тестирует Mythos на сценариях кибератак — с
 Важный вывод: значительные прыжки в возможностях могут происходить не при выпуске новых версий моделей, а между ними — через внутренние итерации. Сообщество также указало, что лимит в 2.5M токенов, выделенный AISI, относительно мал: с более широким контекстом и лучшим харнесом показатели были бы выше.
 
 ## Связанные записи
+- [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[ai-agent-identity-iam-risks]] ([AI Agent Identity and IAM Risks](../concepts/ai-agent-identity-iam-risks.md))

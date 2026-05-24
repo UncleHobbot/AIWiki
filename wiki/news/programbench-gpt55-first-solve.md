@@ -40,6 +40,7 @@ No official paper has been published as of this writing; the benchmark is availa
 ## Related Entries
 
 - [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[gpt55-frontiermath-benchmark-errors]] ([GPT-5.5 FrontierMath Benchmark Errors](../news/gpt55-frontiermath-benchmark-errors.md))
 
 ---
 <!-- RU -->
@@ -65,3 +66,4 @@ ProgramBench устраняет известную слабость SWE-bench Ve
 ## Связанные записи
 
 - [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
+- [[gpt55-frontiermath-benchmark-errors]] ([GPT-5.5 FrontierMath Benchmark Errors](../news/gpt55-frontiermath-benchmark-errors.md))

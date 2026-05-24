@@ -49,6 +49,7 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 - [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
 - [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
 - [[agent-lifecycle-hooks-copilot-vscode]] ([Agent Lifecycle Hooks in Copilot CLI and Claude Code](../tips/agent-lifecycle-hooks-copilot-vscode.md))
+- [[microsoft-waza]] ([Microsoft Waza: Agent Skill Evaluator](../tools/microsoft-waza.md))
 ---
 <!-- RU -->
 
@@ -93,3 +94,4 @@ Claude Code's extension layer lets you add persistent context (CLAUDE.md), reusa
 - [[gnosis-mcp]] ([Gnosis MCP: Documentation Search Server for AI Agents](../tools/gnosis-mcp.md))
 - [[mcp-financial-data-server]] ([Self-Hosted MCP Server for Financial Data](../tools/mcp-financial-data-server.md))
 - [[agent-lifecycle-hooks-copilot-vscode]] ([Agent Lifecycle Hooks in Copilot CLI and Claude Code](../tips/agent-lifecycle-hooks-copilot-vscode.md))
+- [[microsoft-waza]] ([Microsoft Waza: Agent Skill Evaluator](../tools/microsoft-waza.md))

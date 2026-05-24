@@ -31,6 +31,9 @@ Claude's growth from 1.37% to 7.95% represents the strongest relative gain, driv
 ## Related Entries
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
 - [[enterprise-gpu-underutilization]] ([Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](../news/enterprise-gpu-underutilization.md))
+- [[artificial-analysis-coding-agent-index]] ([AA Coding Agent Index](../news/artificial-analysis-coding-agent-index.md))
+- [[gemini-3-1-agent-api-preview]] ([Gemini 3.1 Agent API Preview](../news/gemini-3-1-agent-api-preview.md))
+- [[greg-brockman-openai-product-lead]] ([Greg Brockman Returns to OpenAI Product Lead](../news/greg-brockman-openai-product-lead.md))
 
 ---
 <!-- RU -->
@@ -55,3 +58,6 @@ Claude's growth from 1.37% to 7.95% represents the strongest relative gain, driv
 ## Связанные записи
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
 - [[enterprise-gpu-underutilization]] ([Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](../news/enterprise-gpu-underutilization.md))
+- [[artificial-analysis-coding-agent-index]] ([AA Coding Agent Index](../news/artificial-analysis-coding-agent-index.md))
+- [[gemini-3-1-agent-api-preview]] ([Gemini 3.1 Agent API Preview](../news/gemini-3-1-agent-api-preview.md))
+- [[greg-brockman-openai-product-lead]] ([Greg Brockman Returns to OpenAI Product Lead](../news/greg-brockman-openai-product-lead.md))

@@ -29,6 +29,7 @@ The core insight behind CHORUS is that relying on a single LLM for code review i
 
 ## Related Entries
 - [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Coding Setup](../tips/chorus-multi-model-setup.md))
+- [[kimi-2-6-vs-glm-5-1-agent-reliability]] ([Kimi K2.6 vs GLM 5.1: Agent Reliability](../models/kimi-2-6-vs-glm-5-1-agent-reliability.md))
 
 ---
 <!-- RU -->
@@ -52,3 +53,4 @@ CHORUS решает фундаментальную проблему: даже л
 
 ## Связанные записи
 - [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Coding Setup](../tips/chorus-multi-model-setup.md))
+- [[kimi-2-6-vs-glm-5-1-agent-reliability]] ([Kimi K2.6 vs GLM 5.1: Agent Reliability](../models/kimi-2-6-vs-glm-5-1-agent-reliability.md))

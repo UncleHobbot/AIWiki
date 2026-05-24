@@ -232,6 +232,7 @@ Managed cloud computer-as-a-service. Not open-source; not self-hostable. Access 
 - [[tencent-db-agent-memory]] ([TencentDB Agent Memory: Local Long-Term Memory for AI Agents](../tools/tencent-db-agent-memory.md))
 - [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
 - [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
+- [[hermes-agent-llm-wiki-integration]] ([Hermes Agent + LLM Wiki](../agents/hermes-agent-llm-wiki-integration.md))
 
 ---
 <!-- RU -->
@@ -344,3 +345,4 @@ MIT, ~134k звёзд, Nous Research. Ключевая функция: петл�
 - [[tencent-db-agent-memory]] ([TencentDB Agent Memory: Local Long-Term Memory for AI Agents](../tools/tencent-db-agent-memory.md))
 - [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
 - [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
+- [[hermes-agent-llm-wiki-integration]] ([Hermes Agent + LLM Wiki](../agents/hermes-agent-llm-wiki-integration.md))

@@ -147,3 +147,5 @@
 **15:06 /wiki-inbox** — 5 created, 0 updated, 6 skipped. Created: github-copilot-sdk (tools), microsoft-waza (tools), stop-slop-skill (tools), superpowers-plugin-claude-code (agents), using-git-worktrees-claude-code (tips). Tweets still blocked (retry May 26). Index: 159 total.
 
 **15:07 /wiki-inbox** — Inbox empty — 0 clippings, 0 links (4 rate-limited tweets skipped), 0 tweets, 0 posts, 0 youtube. Index: 159 total.
+
+**15:14 /wiki-check** — 1 RU section added (mythos), 1 broken link fixed (aisi-mythos-cyber self-link → glasswing), 18 orphans connected, 1 duplicate deleted (hermes 1.md). Vault: 159 entries, 0 broken links, 0 orphans.

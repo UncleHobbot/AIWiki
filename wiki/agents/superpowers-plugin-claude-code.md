@@ -47,6 +47,7 @@ The `finishing-a-development-branch` skill closes the loop: after all tasks are 
 - [[claude-code-extensions-overview]] ([Claude Code Extensions](../agents/claude-code-extensions-overview.md))
 - [[using-git-worktrees-claude-code]] ([Git Worktrees in Claude Code](../tips/using-git-worktrees-claude-code.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[stop-slop-skill]] ([stop-slop Skill](../tools/stop-slop-skill.md))
 
 ---
 <!-- RU -->
@@ -72,3 +73,4 @@ The `finishing-a-development-branch` skill closes the loop: after all tasks are 
 - [[claude-code-extensions-overview]] ([Claude Code Extensions](../agents/claude-code-extensions-overview.md))
 - [[using-git-worktrees-claude-code]] ([Git Worktrees in Claude Code](../tips/using-git-worktrees-claude-code.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[stop-slop-skill]] ([stop-slop Skill](../tools/stop-slop-skill.md))

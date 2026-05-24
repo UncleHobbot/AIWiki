@@ -55,6 +55,7 @@ This follows a growing line of work on diffusion language models (MDLM, SEDD, PL
 
 - [[llm-fundamentals-tokens-to-production]] ([LLM Fundamentals: From Tokens to Production](../concepts/llm-fundamentals-tokens-to-production.md))
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 vs Opus vs Kimi](../models/deepseek-v4-vs-opus-kimi.md))
+- [[intern-s2-preview]] ([Intern-S2-Preview: 35B Scientific Model](../models/intern-s2-preview.md))
 
 ---
 <!-- RU -->
@@ -81,3 +82,4 @@ Cola-DLM — это исследовательский чекпоинт, а не
 
 - [[llm-fundamentals-tokens-to-production]] ([LLM Fundamentals: From Tokens to Production](../concepts/llm-fundamentals-tokens-to-production.md))
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 vs Opus vs Kimi](../models/deepseek-v4-vs-opus-kimi.md))
+- [[intern-s2-preview]] ([Intern-S2-Preview: 35B Scientific Model](../models/intern-s2-preview.md))

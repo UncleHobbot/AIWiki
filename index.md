@@ -1,7 +1,7 @@
 # LLM Wiki Index
-**150 entries** across 8 categories.
+**159 entries** across 8 categories.
 
-## [concepts] Concepts (22)
+## [concepts] Concepts (23)
 - [[concepts/agent-harness-engineering]] [Agent Harness Engineering](wiki\concepts\\agent-harness-engineering.md) Agent harness engineering is the discipline of designing the scaffolding around a language model — prompts, tools, conte
 - [[concepts/agi-impossibility-proof-debunked]] [Barriers to Complexity-Theoretic Proofs That AGI Is Impossible](wiki\concepts\\agi-impossibility-proof-debunked.md) Guerzhoy (2026) demonstrates that Van Rooij et al.'s widely-cited "Ingenia Theorem" — claiming to prove that achieving h
 - [[concepts/ai-agent-identity-iam-risks]] [AI Agent Identity and IAM Risks](wiki\concepts\\ai-agent-identity-iam-risks.md) As enterprises deploy AI agents at scale, traditional Identity and Access Management (IAM) programs face a new threat: a
@@ -13,6 +13,7 @@
 - [[concepts/lawzero-scientist-ai-bengio]] [LawZero: Yoshua Bengio's Scientist AI for Safe Alignment](wiki\concepts\\lawzero-scientist-ai-bengio.md) LawZero is Yoshua Bengio's nonprofit AI safety lab proposing the **Scientist AI** — a system designed to be maximally in
 - [[concepts/learn-harness-engineering-course]] [Learn Harness Engineering Course](wiki\concepts\\learn-harness-engineering-course.md) A free 12-lecture practical course by Walking Labs that synthesizes OpenAI and Anthropic harness engineering research in
 - [[concepts/llm-fundamentals-tokens-to-production]] [Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](wiki\concepts\\llm-fundamentals-tokens-to-production.md) Dmitry Bereznitsky's comprehensive one-hour guide to LLM fundamentals for practicing engineers: how tokens, attention, a
+- [[concepts/llm-hallucination-bixonimania-case]] [LLM Medical Hallucination: The Bixonimania Case Study](wiki\concepts\\llm-hallucination-bixonimania-case.md) A Swedish researcher invented a completely fictional eye disease ("bixonimania") with fabricated papers and AI-generated
 - [[concepts/llm-wiki-academic-applications]] [LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](wiki\concepts\\llm-wiki-academic-applications.md) The academic landscape around LLM-maintained knowledge bases splits into two clusters — automated knowledge-graph constr
 - [[concepts/llm-wiki-compiled-knowledge-vs-rag]] [LLM Wiki vs RAG: Compiled Knowledge Architecture](wiki\concepts\\llm-wiki-compiled-knowledge-vs-rag.md) Two independent analyses comparing LLM Wiki (compiled knowledge) vs RAG (interpreted retrieval) vs Agentic Search. Parti
 - [[concepts/llm-wiki-implementations-landscape]] [LLM Wiki Implementations Landscape: State of the Ecosystem (May 2026)](wiki\concepts\\llm-wiki-implementations-landscape.md) Six weeks after Andrej Karpathy published a 400-line GitHub Gist on April 2, 2026, the LLM Wiki pattern had generated 30
@@ -25,7 +26,7 @@
 - [[concepts/surveygen-i-scientific-survey]] [SurveyGen-I: Memory-Guided Scientific Survey Generation](wiki\concepts\\surveygen-i-scientific-survey.md) SurveyGen-I generates long-form, internally consistent scientific surveys through a coarse-to-fine retrieval loop combin
 - [[concepts/yandex-agents-week-2026-intro]] [Yandex Agents Week 2026: Intro to AI Agents and LLMs](wiki\concepts\\yandex-agents-week-2026-intro.md) Opening lecture of Yandex Education's Agents Week 2026 intensive, covering the evolution of human-LLM interaction, what 
 
-## [tools] Tools (40)
+## [tools] Tools (43)
 - [[tools/9router-free-ai-coding]] [9router: Free AI Coding Router with RTK Token Saver](wiki\tools\\9router-free-ai-coding.md) 9router is an open-source local proxy router that connects any AI coding tool (Claude Code, Codex, Cursor, Cline, Copilo
 - [[tools/agentmemory]] [agentmemory: Persistent Memory for AI Coding Agents](wiki\tools\\agentmemory.md) agentmemory is an open-source persistent memory server for AI coding agents — extending Karpathy's LLM Wiki pattern with
 - [[tools/automathkg]] [AutoMathKG: Automated Mathematical Knowledge Graph](wiki\tools\\automathkg.md) AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, wid
@@ -38,6 +39,7 @@
 - [[tools/equibles-mcp-financial-data]] [Equibles: Self-Hosted MCP Server for U.S. Financial Data](wiki\tools\\equibles-mcp-financial-data.md) Equibles is a self-hosted, open-source MCP server that scrapes and serves public U.S. financial data — SEC filings, 13F 
 - [[tools/freebuff]] [freebuff: Free Coding Agent with Top Open Models](wiki\tools\\freebuff.md) `freebuff` is a 100% free CLI coding agent that lets you choose from top open models including DeepSeek v4 Pro/Flash, Ki
 - [[tools/github-copilot-cli]] [GitHub Copilot CLI](wiki\tools\\github-copilot-cli.md) GitHub Copilot CLI is a GitHub-aware coding agent that lives in the terminal, letting you move from natural-language int
+- [[tools/github-copilot-sdk]] [GitHub Copilot SDK: Embed Copilot Agent into Any App](wiki\tools\\github-copilot-sdk.md) The GitHub Copilot SDK (public preview) exposes the same agent runtime that powers Copilot CLI as a programmable SDK for
 - [[tools/github-spec-kit]] [GitHub Spec-Kit: Spec-Driven Development Toolkit](wiki\tools\\github-spec-kit.md) GitHub Spec-Kit is an open-source CLI toolkit (`specify-cli`) for Spec-Driven Development — a structured workflow where 
 - [[tools/gitnexus-codebase-knowledge-graph]] [GitNexus: Codebase Knowledge Graph for Coding Agents](wiki\tools\\gitnexus-codebase-knowledge-graph.md) GitNexus indexes an entire codebase into a local knowledge graph (LadybugDB) and exposes it to coding agents via MCP. It
 - [[tools/gnosis-mcp]] [Gnosis MCP: Documentation Search Server for AI Agents](wiki\tools\\gnosis-mcp.md) Gnosis MCP is a zero-config local MCP server that gives AI agents hybrid keyword + semantic search over your documentati
@@ -52,6 +54,7 @@
 - [[tools/mattpocock-skills-repo]] [Matt Pocock's Skills Repo: Engineering Skills for Real Engineers](wiki\tools\\mattpocock-skills-repo.md) Matt Pocock's public skills repository (18.3k+ stars) contains the Claude Code agent skills he uses daily for real engin
 - [[tools/mcp-financial-data-server]] [Self-Hosted MCP Server for Financial Data](wiki\tools\\mcp-financial-data-server.md) Equibles is a self-hosted, open-source MCP server that scrapes, stores, and serves U.S. financial data (SEC filings, 13F
 - [[tools/microsoft-ai-agents-beginners-course]] [Microsoft AI Agents for Beginners: 12-Lesson Course](wiki\tools\\microsoft-ai-agents-beginners-course.md) Microsoft's official beginner course for building AI agents — 12 lessons covering fundamentals with Python code samples 
+- [[tools/microsoft-waza]] [Microsoft Waza: CLI for Evaluating AI Agent Skills](wiki\tools\\microsoft-waza.md) Waza is Microsoft's open-source Go CLI for creating, testing, measuring, and improving AI agent skills. It scaffolds eva
 - [[tools/minicheck-fact-verification]] [MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents](wiki\tools\\minicheck-fact-verification.md) MiniCheck is an efficient fact-checking system that builds small models (770M parameters) matching GPT-4-level accuracy 
 - [[tools/nwave-ai-refactoring-framework]] [nWave: AI-Guided Refactoring Framework for Legacy Code](wiki\tools\\nwave-ai-refactoring-framework.md) Alessandro Di Gioia (25 years engineering, author of "Agile Technical Practices Distilled") and Michele Brissoni (Formul
 - [[tools/omegawiki-research-platform]] [OmegaWiki: Wiki-Centric AI Research Platform](wiki\tools\\omegawiki-research-platform.md) OmegaWiki is an open-source, wiki-centric full-lifecycle AI research platform by DAIR Lab at Peking University, powered 
@@ -62,12 +65,13 @@
 - [[tools/react-doctor]] [React Doctor: AI-Generated React Code Linter](wiki\tools\\react-doctor.md) React Doctor v2 is a zero-config CLI tool that catches bad React code written by AI coding agents — works with Next.js, 
 - [[tools/shokunin-memory-system]] [Shokunin: Persistent Memory for Coding Agents](wiki\tools\\shokunin-memory-system.md) Shokunin is a local memory system for AI coding agents that uses ChromaDB to persist session context across conversation
 - [[tools/sparky-offline-edge-ai-robot]] [Sparky: Fully Offline Edge AI Robot](wiki\tools\\sparky-offline-edge-ai-robot.md) Sparky is a fully offline AI companion robot built inside a suitcase, powered by an NVIDIA Jetson Orin NX Super 16GB and
+- [[tools/stop-slop-skill]] [stop-slop: Claude Code Skill for Removing AI Tells from Prose](wiki\tools\\stop-slop-skill.md) `stop-slop` is an open-source Claude Code skill (also usable as Claude Project knowledge or custom instructions) that te
 - [[tools/tencent-db-agent-memory]] [TencentDB Agent Memory: Local Long-Term Memory for AI Agents](wiki\tools\\tencent-db-agent-memory.md) TencentDB Agent Memory is a fully local, zero-API-key long-term memory system for AI coding agents that uses a 4-tier pr
 - [[tools/visual-explainer]] [Visual Explainer](wiki\tools\\visual-explainer.md) An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages featuring real typogra
 - [[tools/wiki-os]] [Wiki OS: Browser UI for LLM Wiki](wiki\tools\\wiki-os.md) Wiki OS is a free, open-source browser-based interface for LLM Wiki vaults that displays article graphs, vault statistic
 - [[tools/yaro-mathwiki]] [Yaro2709/MathWiki: Hand-Crafted Math Knowledge Base](wiki\tools\\yaro-mathwiki.md) Yaro2709/MathWiki is a hand-curated Obsidian vault containing 730+ atomic mathematical statements (definitions, theorems
 
-## [agents] Agents (20)
+## [agents] Agents (21)
 - [[agents/acdc-agent-centric-development-cycle]] [AC/DC — Agent-Centric Development Cycle](wiki\agents\\acdc-agent-centric-development-cycle.md) Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) presents the Agent-Centric Development C
 - [[agents/agent-operating-system]] [Agent Operating System (Agent OS)](wiki\agents\\agent-operating-system.md) An Agent Operating System (Agent OS) is infrastructure that manages AI agents the way a computer OS manages applications
 - [[agents/agent-orchestration-multi-model-framework]] [Agent Orchestration: Building Multi-Model Frameworks](wiki\agents\\agent-orchestration-multi-model-framework.md) Agent orchestration means having one agent automatically call and coordinate other specialized sub-agents, rather than t
@@ -87,21 +91,25 @@
 - [[agents/mcp-vs-adk-agent-connectivity]] [MCP vs ADK: Two Different Problems in AI Agent Architecture](wiki\agents\\mcp-vs-adk-agent-connectivity.md) MCP (Model Context Protocol) and ADK (Google's Agent Development Kit) are often compared as competing technologies — but
 - [[agents/new-organizational-models-ai-agents]] [New Organizational Models for the Age of AI Agents](wiki\agents\\new-organizational-models-ai-agents.md) Matthias Patzak (AWS Executive in Residence, former CTO, author of "All Hands on Tech") explores how organizations must 
 - [[agents/specs-to-production-ai-agents]] [From Specs to Production: Building Software with AI Agents End to End](wiki\agents\\specs-to-production-ai-agents.md) Soma Bini (fractional CTO, Dubai-based, 10+ years with early-stage startups) shows how to go from a product specificatio
+- [[agents/superpowers-plugin-claude-code]] [Superpowers Plugin for Claude Code: Structured Agentic Workflow Skills](wiki\agents\\superpowers-plugin-claude-code.md) The Superpowers plugin (`orba/superpowers`) extends Claude Code with a structured pipeline of workflow skills: brainstor
 - [[agents/ui-tars-desktop-multimodal-agent]] [UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](wiki\agents\\ui-tars-desktop-multimodal-agent.md) UI-TARS Desktop and Agent TARS are two open-source multimodal AI agent projects from ByteDance that use visual language 
 
-## [models] Models (7)
+## [models] Models (8)
 - [[models/cola-dlm-bytedance-diffusion-lm]] [Cola-DLM: ByteDance's Continuous Latent Diffusion Language Model](wiki\models\\cola-dlm-bytedance-diffusion-lm.md) Cola-DLM (Continuous Latent Diffusion Language Model) is a hierarchical diffusion-based language model from ByteDance's 
 - [[models/deepseek-v4-vs-opus-kimi]] [DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](wiki\models\\deepseek-v4-vs-opus-kimi.md) Kilo CLI tested DeepSeek V4 Pro and Flash against Claude Opus 4.7 and Kimi K2.6 on a complex workflow orchestration back
 - [[models/gpt-vs-glm-5-1-comparison]] [GPT vs GLM-5.1: Side-by-Side Coding Comparison](wiki\models\\gpt-vs-glm-5-1-comparison.md) A Reddit user running GPT and GLM-5.1 side by side reports near-indistinguishable coding output for everyday tasks, with
+- [[models/intern-s2-preview]] [Intern-S2-Preview: 35B Scientific Multimodal Foundation Model](wiki\models\\intern-s2-preview.md) Intern-S2-Preview is a 35B scientific multimodal foundation model from Shanghai AI Lab (InternLM team) that matches the 
 - [[models/kimi-2-6-vs-glm-5-1-agent-reliability]] [Kimi 2.6 vs GLM 5.1: Agent Reliability at Scale](wiki\models\\kimi-2-6-vs-glm-5-1-agent-reliability.md) Community reports from r/kimi in May 2026 show Kimi 2.6 (Moonshot AI) pulling ahead of GLM 5.1 (Zhipu AI) for multi-agen
 - [[models/llm-wiki-chinese-models-comparison]] [Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](wiki\models\\llm-wiki-chinese-models-comparison.md) Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wiki knowledge bases — covering DeepSeek V
 - [[models/open-source-models-vs-opus-copilot-benchmark]] [Open Source Models vs Claude Opus: Real-World Coding Benchmark](wiki\models\\open-source-models-vs-opus-copilot-benchmark.md) An unscientific but practical comparison of five open-source models (Kimi K2.6, MiniMax M2.7, GLM 5.1, DeepSeek V4 Pro, 
 - [[models/tabpfn-3-tabular-foundation-model]] [TabPFN-3: Pre-trained Tabular Foundation Model](wiki\models\\tabpfn-3-tabular-foundation-model.md) TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100 
 
-## [news] News (21)
+## [news] News (23)
+- [[news/project-glasswing-anthropic-vulnerability-discovery]] [Project Glasswing: Mythos AI Finds 10,000 High-Severity Vulnerabilities](wiki\news\\project-glasswing-anthropic-vulnerability-discovery.md) -- 2026-05-23 Anthropic's Project Glasswing — a defensive cybersecurity initiative giving ~50 trusted partners early access to Claude 
 - [[news/artificial-analysis-coding-agent-index]] [Artificial Analysis Coding Agent Index: Benchmarking Model+Harness Combinations](wiki\news\\artificial-analysis-coding-agent-index.md) -- 2026-05-22 Artificial Analysis launched a **Coding Agent Index** that benchmarks model and harness *combinations* rather than model
 - [[news/claude-code-usage-reset-may-2026]] [Anthropic Resets All Claude Code Usage Limits Globally](wiki\news\\claude-code-usage-reset-may-2026.md) -- 2026-05-22 On May 22, 2026, Anthropic reset all Claude Code usage limits to 0% for every paid user globally — an unscheduled, compa
 - [[news/greg-brockman-openai-product-lead]] [Greg Brockman Takes Control of OpenAI Products, Merges ChatGPT and Codex](wiki\news\\greg-brockman-openai-product-lead.md) -- 2026-05-22 OpenAI co-founder Greg Brockman officially took control of product strategy, announcing a reorganization that merges Cha
+- [[news/mythos-aisi-cyber-capability-2026]] [Mythos Cyber Capability: Autonomous AI Now Completes 20-Hour Network Attacks](wiki\news\\mythos-aisi-cyber-capability-2026.md) -- 2026-05-22 The UK AI Security Institute (AISI) revealed that a newer Mythos Preview checkpoint — not the one in Anthropic's origina
 - [[news/gemini-3-1-agent-api-preview]] [Gemini 3.1 Agent API Preview: Google's Agentic Orchestrator Models](wiki\news\\gemini-3-1-agent-api-preview.md) -- 2026-05-20 Gemini 3.1 "agent" variants — including `gemini-3.1-flash-lite-preview-agent` — appeared in the Google API in May 2026, 
 - [[news/gpt55-frontiermath-benchmark-errors]] [GPT-5.5 Flags Fatal Errors in ~1/3 of FrontierMath Benchmark Problems](wiki\news\\gpt55-frontiermath-benchmark-errors.md) -- 2026-05-20 GPT-5.5 was used to audit Epoch AI's FrontierMath benchmark and flagged fatal errors in approximately one third of Tier 
 - [[news/japan-autonomous-medicine-lab-aist]] [Japan's World-First Fully Automated Medicine Lab: No Humans, 10 Robots, 2,000 by 2040](wiki\news\\japan-autonomous-medicine-lab-aist.md) -- 2026-05-20 The Institute of Science Tokyo (AIST) has opened the world's first fully unmanned medical research laboratory, currently
@@ -121,7 +129,7 @@
 - [[news/enterprise-gpu-underutilization]] [Enterprise GPU Underutilization: 5% Average Rates as AI Costs Rise](wiki\news\\enterprise-gpu-underutilization.md) -- 2026-05-11 Enterprises sitting on millions in GPU investments are averaging just 5% utilization rates, while inference costs plus c
 - [[news/pinecone-nexus]] [Pinecone Launches Nexus: Compiled Knowledge Engine for Agents](wiki\news\\pinecone-nexus.md) -- 2026-05-07 Pinecone — the company that defined the RAG era with its vector database — announced Nexus in May 2026, a "compiled know
 
-## [tips] Tips (36)
+## [tips] Tips (37)
 - [[tips/agent-lifecycle-hooks-copilot-vscode]] [Agent Lifecycle Hooks in Copilot CLI and Claude Code](wiki\tips\\agent-lifecycle-hooks-copilot-vscode.md) Hooks are deterministic event handlers that fire at specific points in the AI agent lifecycle. Unlike the model itself, 
 - [[tips/agentic-ai-coding-patterns-tornhill]] [Agentic AI Coding: Best Practice Patterns for Speed with Quality](wiki\tips\\agentic-ai-coding-patterns-tornhill.md) Adam Tornhill (author of "Your Code as a Crime Scene," calling from Sweden) presents battle-tested patterns for agentic 
 - [[tips/agentic-ai-development-copilot-lessons]] [Agentic AI Development with GitHub Copilot: Lessons Learned](wiki\tips\\agentic-ai-development-copilot-lessons.md) A practitioner's account of real-world agentic AI-assisted development using GitHub Copilot CLI on an open-source Rust p
@@ -156,6 +164,7 @@
 - [[tips/llm-wiki-setup-guide]] [LLM Wiki: Practical Setup Guide](wiki\tips\\llm-wiki-setup-guide.md) Step-by-step guide to building Karpathy's LLM Wiki from scratch: what tools you need, how to structure folders, how to w
 - [[tips/spec-driven-development-bmad]] [Spec-Driven Development in the Real World: From BMAD to Custom Skills](wiki\tips\\spec-driven-development-bmad.md) Fabrice Monnier shares his personal journey from vibe coding (magical but fragile) to spec-driven development with BMAD 
 - [[tips/test-driven-agentic-behaviours]] [Test-Driven Agentic Behaviours](wiki\tips\\test-driven-agentic-behaviours.md) Antony Marcano demonstrates how to apply test-driven development principles to define and verify agentic AI behaviors — 
+- [[tips/using-git-worktrees-claude-code]] [Git Worktrees with Claude Code: Parallel Isolated Feature Work](wiki\tips\\using-git-worktrees-claude-code.md) Claude Code's built-in `EnterWorktree` and `ExitWorktree` tools let you create isolated git worktrees per feature, enabl
 - [[tips/vibe-coding-bundling-what-already-exists]] [Vibe Coding Failure Mode: Bundling What Already Exists](wiki\tips\\vibe-coding-bundling-what-already-exists.md) A viral r/vibecoding post (362 pts, 220 comments) captures a recurring failure pattern: AI-assisted code bundles resourc
 - [[tips/xp-practices-ai-assisted-development]] [XP Practices Are the Missing Piece for AI-Assisted Development](wiki\tips\\xp-practices-ai-assisted-development.md) Paul Hammond (20+ years experience, 13+ years XP practitioner) argues that Extreme Programming practices — TDD, pairing,
 

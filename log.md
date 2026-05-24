@@ -135,3 +135,15 @@
 **10:16 /wiki-inbox** — 1 created, 0 updated, 4 skipped. Created: ai-agent-identity-iam-risks (concepts). 4 tweet URLs blocked (web-reader rate-limited until 2026-05-26). Index: 146 total.
 
 **16:40 /wiki-reddit** — 14 subs, 4 entries created: equibles-mcp-financial-data (tools), chorus-multi-llm-code-review (tips), claude-code-usage-reset-may-2026 (news), greg-brockman-openai-product-lead (news). Index: 150 total. Queued 5 URLs to links.md.
+
+---
+
+## 2026-05-24
+
+**14:55 /wiki-reddit** — 14 subs scanned (kimi retried after 429). 3 entries created: mythos-aisi-cyber-capability-2026 (news), intern-s2-preview (models), llm-hallucination-bixonimania-case (concepts). 8 skipped (already exist: gen-ai-web-traffic, github-copilot-app, deepseek-v4, tabpfn-3, lawzero, isomorphic-labs, fda-ai-clinical-trials, chorus). Index: 153 total.
+
+**14:58 /wiki-hackernews** — 30 articles fetched, 1 qualified (score 1 but high-relevance override). 1 entry created: project-glasswing-anthropic-vulnerability-discovery (news). 1 skipped: laravel-lang supply chain (no AI angle). Index: 154 total.
+
+**15:06 /wiki-inbox** — 5 created, 0 updated, 6 skipped. Created: github-copilot-sdk (tools), microsoft-waza (tools), stop-slop-skill (tools), superpowers-plugin-claude-code (agents), using-git-worktrees-claude-code (tips). Tweets still blocked (retry May 26). Index: 159 total.
+
+**15:07 /wiki-inbox** — Inbox empty — 0 clippings, 0 links (4 rate-limited tweets skipped), 0 tweets, 0 posts, 0 youtube. Index: 159 total.

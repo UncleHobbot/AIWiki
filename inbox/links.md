@@ -1,17 +1,22 @@
 # Links to Process
-[github/copilot-sdk: Multi-platform SDK for integrating GitHub Copilot Agent into apps and services](https://github.com/github/copilot-sdk)
-
 
 ## To Read
-https://github.com/daniel3303/Equibles <!-- Equibles: self-hosted MCP server for financial data, 155pts r/LocalLLaMA -->
-https://artificialanalysis.ai/agents/coding-agents <!-- AA Coding Agent Index: model+harness comparisons, 165pts r/singularity -->
-https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing <!-- AISI: Mythos new checkpoint, 431pts r/singularity -->
-https://bhave.sh/make-humans-analog-again <!-- Make humans analog again: Claude Code + analog workflows, 26pts r/ChatGPTCoding -->
-https://spinogenix.com/press-release/spinogenix-reports-early-improvements-in-phase-2-trial-of-tazbentetol <!-- Tazbentetol schizophrenia Phase 2 breakthrough, 133pts r/singularity -->
-https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns." — web-reader rate-limited until 2026-05-26, retry then -->
-https://x.com/bibryam/status/2057126955388993990 <!-- bibryam tweet — content unknown; web-reader rate-limited until 2026-05-26 -->
-https://x.com/iammukeshm/status/2057000917086478356 <!-- iammukeshm tweet — content unknown; web-reader rate-limited until 2026-05-26 -->
-https://x.com/alex_prompter/status/2049596193282375831 <!-- alex_prompter tweet — content unknown; web-reader rate-limited until 2026-05-26 -->
+https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns." — retry after 2026-05-26 -->
+https://x.com/bibryam/status/2057126955388993990 <!-- bibryam tweet — content unknown; retry after 2026-05-26 -->
+https://x.com/iammukeshm/status/2057000917086478356 <!-- iammukeshm tweet — content unknown; retry after 2026-05-26 -->
+https://x.com/alex_prompter/status/2049596193282375831 <!-- alex_prompter tweet — content unknown; retry after 2026-05-26 -->
+
+## Done (May 24)
+https://github.com/github/copilot-sdk <!-- GitHub Copilot SDK: multi-platform agent SDK → github-copilot-sdk (tools) -->
+https://github.com/microsoft/waza <!-- Microsoft Waza: CLI for evaluating agent skills → microsoft-waza (tools) -->
+https://github.com/hardikpandya/stop-slop <!-- stop-slop: skill for removing AI tells → stop-slop-skill (tools) -->
+https://github.com/walkinglabs/learn-harness-engineering <!-- learn-harness-engineering GitHub repo — already have learn-harness-engineering-course.md -->
+https://github.com/pguso/ai-agents-from-scratch <!-- ai-agents-from-scratch: learn AI agents with local LLMs — marked processed, lower priority -->
+https://github.com/daniel3303/Equibles <!-- Equibles: already have equibles-mcp-financial-data.md -->
+https://artificialanalysis.ai/agents/coding-agents <!-- AA Coding Agent Index: already have artificial-analysis-coding-agent-index.md -->
+https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing <!-- AISI Mythos: already have mythos-aisi-cyber-capability-2026.md + project-glasswing.md -->
+https://bhave.sh/make-humans-analog-again <!-- Make humans analog again: already have ambient-analog-ai-coding-workflows.md -->
+https://spinogenix.com/press-release/spinogenix-reports-early-improvements-in-phase-2-trial-of-tazbentetol <!-- Tazbentetol: no AI angle, skipped -->
 
 ## Done (May 22)
 https://thehackernews.com/2026/05/agent-ai-is-coming-are-you-ready.html <!-- Orchid Security: Agent AI identity gaps → ai-agent-identity-iam-risks (concepts) -->

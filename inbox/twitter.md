@@ -1,5 +1,8 @@
 # Twitter / X Queue
 
+## Done (May 24)
+https://x.com/KSimback/status/2058262328496554021 <!-- Kevin Simback: Hermes Agent Memory Guidebook — RapidAPI 403, web-reader limit exhausted, skipped -->
+
 ## Done (May 21)
 https://x.com/mattpocockuk/status/2057389140623208493 <!-- Matt Pocock: /tdd anti-pattern — tests that restate implementation provide zero confidence → updated test-driven-agentic-behaviours.md -->
 https://x.com/bibryam/status/2057126955388993990 <!-- queued to links.md, content unknown -->

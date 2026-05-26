@@ -149,3 +149,29 @@
 **15:07 /wiki-inbox** — Inbox empty — 0 clippings, 0 links (4 rate-limited tweets skipped), 0 tweets, 0 posts, 0 youtube. Index: 159 total.
 
 **15:14 /wiki-check** — 1 RU section added (mythos), 1 broken link fixed (aisi-mythos-cyber self-link → glasswing), 18 orphans connected, 1 duplicate deleted (hermes 1.md). Vault: 159 entries, 0 broken links, 0 orphans.
+
+---
+
+## 2026-05-25
+
+**07:58 /wiki-reddit** — 14 subs scanned (ollama 429 both tries). 3 entries created: claude-code-remote-system-prompt-injection (news), cate-canvas-ide (tools), yet-another-statusline (tools). All other posts already processed. Index: 162 total.
+
+**08:58 /wiki-hackernews** — 30 articles fetched, 1 qualified (score 2), 0 entries created. 1 queued to links.md: NDR + agentic AI (score 2, vendor blog). 9 already in cursor. Index: 162 total.
+
+**08:59 /wiki-inbox** — 0 created, 0 updated, 5 skipped. Clippings/twitter/posts/youtube all empty. 4 tweet URLs still blocked (retry 2026-05-26). THN NDR article skipped (score 2 vendor blog). Index: 162 total.
+
+**08:59 /wiki-links** — 0 created, 0 updated, 4 skipped. All items are X.com tweets — web-reader rate-limited until 2026-05-26 02:29 UTC. Retry tomorrow. Processed URLs: 380.
+
+---
+
+## 2026-05-26
+
+**16:33 /wiki-links** — 4 tweets processed, 3 entries created: claude-code-9-mistakes-wasting-tokens (tips), microsoft-agent-governance-toolkit (tools), dotnet-agent-skills (tools). 1 skipped (already exists: claude-code-prompting-era). Index: 165 total.
+
+**16:53 /wiki-products** — 7 product index pages created: product-github-copilot (tools), product-claude-code (agents), product-zai-glm (models), product-deepseek (models), product-ollama (tools), product-hermes-agent (agents), product-llm-wiki (concepts). Products.md updated with links. Index: 172 total.
+
+**17:05 /wiki-hackernews** — 8 articles fetched, 0 created, 8 skipped (generic cybersecurity). Claude Mythos already in wiki. All URLs marked processed.
+
+**17:05 /wiki-update** — 1 entry updated: github-copilot-pricing-exodus (news) — added 3 Reddit sources ( cost spiral, lawsuit thread, cost projection). 2 new URLs added to processed_urls.json.
+
+**17:08 /wiki-reddit + /wiki-hackernews** — 13 subs scanned. 2 entries created: codex-vs-claude-code-may-2026 (tips), ollama-cloud-quality-concerns (news). 1 entry updated: github-copilot-pricing-exodus (news). HackerNews: 8 articles fetched, 0 new entries (1 already processed, 7 skipped - not AI-relevant). Index: 174 total.

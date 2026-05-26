@@ -1,4 +1,12 @@
 # Social Media Posts
+
+---
+
+Raw text posts from LinkedIn, Bluesky, Mastodon, Threads, and other platforms.
+One post per block, separated by ---.
+
+## To Process
+
 <!-- Post: Superpowers plugin review — processed 2026-05-24 → wiki/agents/superpowers-plugin-claude-code.md -->
 <!-- Original: Telegram post in Russian reviewing orba/superpowers plugin skills and workflow -->
 Протестировал orba\superpowers Как это работает: • Вы просто устанавливаете плагин из официального репо /plugins он там первый в списке. • Он просто начинает работать в фоне, дополняя собой стандартный /plan Клод Код. Сначала: • brainstorming, он подробно пишет спеку и сохраняет в папку проекта /docs/superpowers/specs • По спеке writing-plans пишет план и сохраняет его в /docs/superpowers/docs • Запускает executing-plans - для выполнения плана Дальше будет вилка: 1. Subagent-Driven (рекомендую) — отдельный агент на каждую задачу, проверка между задачами, быстрая итерация 2. Inline Execution — исполнение в этой сессии с чекпоинтами Потом: • Скилл для разбивки на субагенты: superpowers:subagent-driven-development • После каждой задачи автоматически запускается ревью субагент receiving-code-review (но по мне так review субагент из feature-dev как-то понятнее) Ну в общем-то и все. Если после этого нужно запиарить, он запустит: finishing-a-development-branch и так далее. Вот все скиллы из плагина в виде списка: • superpowers:using-superpowers — вводный скилл, объясняет, как находить и использовать другие скиллы • superpowers:brainstorming — превращает идею в дизайн через диалог, пишет спецификацию • superpowers:writing-plans — создаёт детальный план реализации по спецификации • superpowers:executing-plans — исполняет план в текущей сессии с чекпоинтами • superpowers:subagent-driven-development — исполняет план через субагентов с двухэтапным ревью • superpowers:dispatching-parallel-agents — запускает независимые задачи параллельно • superpowers:test-driven-development — TDD-workflow для субагентов при реализации фич • superpowers:systematic-debugging — систематический дебаггинг: анализ, трассировка, исправление • superpowers:requesting-code-review — шаблон для отправки кода на ревью • superpowers:receiving-code-review — обработка фидбека от ревью перед внесением правок • superpowers:verification-before-completion — проверка перед тем, как заявить, что задача выполнена • superpowers:writing-skills — создание и редактирование самих скиллов • superpowers:finishing-a-development-branch — финализация ветки: тесты, PR, слияние • superpowers:using-git-worktrees — изолированная работа через git worktrees Раньше плагин работал иначе, и использовал сейчас устаревшие команды: • superpowers:write-plan — заменён на writing-plans • superpowers:execute-plan — заменён на executing-plans • superpowers:brainstorm — заменён на brainstorming Они еще есть в пакете, но в следующей мажорной версии будут удалены. Чего мне лично не хватило в суперпаверс - так это перепроверки реализации плана. Потому что каждый раз, как я проверяю реализацию плана агентом, каждый раз чего-то не хватает. [Как установить](https://t.me/prog_ai/1005)
@@ -12,13 +20,6 @@
 
 <!-- Post: Git Worktrees in Claude Code — processed 2026-05-24 → wiki/tips/using-git-worktrees-claude-code.md -->
 Git Worktrees в Claude Code и не только А сейчас будет очень крутой пост про теорию кодировния, но если вы коммитите в мэин, и не создает веток, то вам его еще рано читать. Это не для начинающих. Итак, запиарить 5000 строк кода одним комитом, ну так себе идея - ревьювить будет тяжеловато. Что же делать? Решение будет очевидное - разбить на несколько логических веток, хотя бы, фиксы отдельно, фичи отдельно, но идеально - отделить и изобировать каждую фичу. Но как? Итак, мэин - это тоже ветка, и когда вы вносите туда изменения, вы блокируете ветку в Джит, даже если переключаетесь на другую ветку. Никакой команды для создания нового Ворктри не предусмотрено. Есть только инструменты: - EnterWorktree — создать и войти в изолированный worktree - ExitWorktree — выйти из worktree (с опцией сохранить или удалить ветку/worktree) Просто попросите Код Код "Войди в новое ворктрии" И он создаст директорию в project/.claude/worktrees/... После этого вы можете создать новое окно Клод Кода и переключится в мэин. После этого повторить цикл столько раз, сколько фич вы хотите запилить параллельно. Типичные кейсы: • Вы пилите фичу, и тут прилетает срочный баг фикс • Или пока вы ревьювите фичу - запустить написание тестов. • Или пилить несколько фич одновременно. А что потом делать со всеми этими ветвями и деревьями? Установите офф. плагин commit-commands и появится /commit-commands:clean_gone (а так же commit и commit-push-pr). - ну и зачистите все, что gone. Потому что нельзя удалить ветку, пока она checkout'нута в worktree. Ну он их и почистит. Главное, теперь не запутаться, в каком ворктри вы чего делаете ![😂](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC)
-
----
-
-Raw text posts from LinkedIn, Bluesky, Mastodon, Threads, and other platforms.
-One post per block, separated by ---.
-
-## To Process
 
 ## Done (May 24)
 <!-- 3 Telegram posts processed above (superpowers plugin, git worktrees) or skipped (top-10 repos) -->

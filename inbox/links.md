@@ -1,10 +1,15 @@
 # Links to Process
 
 ## To Read
-https://x.com/Mnilax/status/2050261839653556522 <!-- Mnimiy: "I tracked 430 hours of Claude Code usage. 73% was wasted on these 9 patterns." — retry after 2026-05-26 -->
-https://x.com/bibryam/status/2057126955388993990 <!-- bibryam tweet — content unknown; retry after 2026-05-26 -->
-https://x.com/iammukeshm/status/2057000917086478356 <!-- iammukeshm tweet — content unknown; retry after 2026-05-26 -->
-https://x.com/alex_prompter/status/2049596193282375831 <!-- alex_prompter tweet — content unknown; retry after 2026-05-26 -->
+
+## Done (May 26)
+https://x.com/Mnilax/status/2050261839653556522 <!-- 9 Claude Code mistakes wasting 73% of tokens → claude-code-9-mistakes-wasting-tokens (tips) -->
+https://x.com/bibryam/status/2057126955388993990 <!-- MS Agent Governance Toolkit → microsoft-agent-governance-toolkit (tools) -->
+https://x.com/iammukeshm/status/2057000917086478356 <!-- MS dotnet/skills repo → dotnet-agent-skills (tools) -->
+https://x.com/alex_prompter/status/2049596193282375831 <!-- Prompting era shift → already have claude-code-prompting-era.md -->
+
+## Done (May 25)
+https://thehackernews.com/2026/05/the-alert-firehose-finally-meets-its.html <!-- Agentic AI in NDR vendor blog — score 2 after full read, skipped (threshold not met) -->
 
 ## Done (May 24)
 https://github.com/github/copilot-sdk <!-- GitHub Copilot SDK: multi-platform agent SDK → github-copilot-sdk (tools) -->

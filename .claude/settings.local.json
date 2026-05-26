@@ -41,7 +41,8 @@
       "Bash(python *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(pytest tests/test_wiki.py -v --tb=short)"
+      "Bash(pytest tests/test_wiki.py -v --tb=short)",
+      "Bash(python3 *)"
     ]
   }
 }

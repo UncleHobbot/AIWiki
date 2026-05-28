@@ -1,5 +1,9 @@
 # Twitter / X Queue
 
+## Done (May 28)
+https://x.com/itsPaulAi/status/2058612202668720449 <!-- Paul Couvert: Qwen3.7-Max 50% off promo — promotional content, skipped -->
+https://x.com/haider1/status/2058621553307168834 <!-- haider1: 403 forbidden, unreadable — skipped -->
+
 ## Done (May 24)
 https://x.com/KSimback/status/2058262328496554021 <!-- Kevin Simback: Hermes Agent Memory Guidebook — RapidAPI 403, web-reader limit exhausted, skipped -->
 

@@ -2,6 +2,13 @@
 
 ## To Read
 
+## Done (May 28)
+https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf <!-- Anthropic Complete Guide to Building Skills for Claude → anthropic-skills-building-guide (tips) -->
+https://github.com/mattpocock/dictionary-of-ai-coding <!-- Matt Pocock's AI coding jargon dictionary 1.9k stars → dictionary-of-ai-coding (tools) -->
+https://www.aihero.dev/skills-handoff <!-- AIHero handoff skill: smart/dumb zone + DIY sub-agent → updated claude-code-handoff-prototype-skills (tips) -->
+https://github.com/mattpocock/skills <!-- already processed → mattpocock-skills-repo (tools) -->
+https://github.com/microsoft/agent-governance-toolkit <!-- already processed → microsoft-agent-governance-toolkit (tools) -->
+
 ## Done (May 26)
 https://x.com/Mnilax/status/2050261839653556522 <!-- 9 Claude Code mistakes wasting 73% of tokens → claude-code-9-mistakes-wasting-tokens (tips) -->
 https://x.com/bibryam/status/2057126955388993990 <!-- MS Agent Governance Toolkit → microsoft-agent-governance-toolkit (tools) -->

@@ -78,6 +78,8 @@ Works with Claude Code, Codex, and any agent that supports skills/instructions.
 
 ## Related Entries
 - [[matt-pocock-aihero]] ([Matt Pocock: AI Hero and Claude Code Skills Author](../people/matt-pocock-aihero.md))
+- [[dictionary-of-ai-coding]] ([Dictionary of AI Coding](../tools/dictionary-of-ai-coding.md))
+- [[anthropic-skills-building-guide]] ([Anthropic's Complete Guide to Building Skills for Claude](../tips/anthropic-skills-building-guide.md))
 - [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 - [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
@@ -110,6 +112,8 @@ Works with Claude Code, Codex, and any agent that supports skills/instructions.
 
 ## Связанные записи
 - [[matt-pocock-aihero]] ([Matt Pocock: AI Hero and Claude Code Skills Author](../people/matt-pocock-aihero.md))
+- [[dictionary-of-ai-coding]] ([Dictionary of AI Coding](../tools/dictionary-of-ai-coding.md))
+- [[anthropic-skills-building-guide]] ([Anthropic's Complete Guide to Building Skills for Claude](../tips/anthropic-skills-building-guide.md))
 - [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 - [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))

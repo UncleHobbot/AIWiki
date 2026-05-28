@@ -34,6 +34,7 @@ Community analysis noted that the 2.5M token budget AISI allocated is relatively
 
 ## Related Entries
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
+- [[openai-daybreak-cyber-defense]] ([OpenAI Daybreak: Frontier AI for Cyber Defense](../news/openai-daybreak-cyber-defense.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[ai-agent-identity-iam-risks]] ([AI Agent Identity and IAM Risks](../concepts/ai-agent-identity-iam-risks.md))
 
@@ -57,5 +58,6 @@ AISI тестирует Mythos на сценариях кибератак — с
 
 ## Связанные записи
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
+- [[openai-daybreak-cyber-defense]] ([OpenAI Daybreak: Frontier AI for Cyber Defense](../news/openai-daybreak-cyber-defense.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[ai-agent-identity-iam-risks]] ([AI Agent Identity and IAM Risks](../concepts/ai-agent-identity-iam-risks.md))

@@ -14,8 +14,7 @@ Ollama is a local LLM inference platform that lets you run large language models
 
 ## Related Entries
 - [[local-rag-obsidian-zotero]] ([Local RAG Stack](../tools/local-rag-obsidian-zotero.md)) — 100% local stack using Ollama with Obsidian and Zotero
-- [[kytmanov-obsidian-llm-wiki-local]] ([obsidian-llm-wiki-local](https://github.com/kytmanov/obsidian-llm-wiki-local)) — 100% local with Ollama: no data leaves the machine
-- [[local-rag]] ([local-rag](https://github.com/Ricardo-Kaminski/local-rag)) — LightRAG + Ollama + MCP for local RAG
+- [[llm-wiki-implementations-landscape]] ([LLM Wiki Implementations Landscape](../concepts/llm-wiki-implementations-landscape.md)) — includes kytmanov/obsidian-llm-wiki-local (100% local, no data leaves machine)
 - [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget](../tips/dynamic-compute-budget-local-llm.md)) — Test-time compute technique for local LLMs
 - [[choose-llm-api-self-host-hybrid]] ([API, Self-Host, or Hybrid](../tips/choose-llm-api-self-host-hybrid.md)) — How to choose an LLM deployment strategy
 

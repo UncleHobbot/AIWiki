@@ -35,7 +35,7 @@ As one commenter noted: "The hidden cost of AI is 'Contextual Debt' — overload
 > "The real cost is not tokens. The real cost is bad system design. Claude Code rewards engineers who think in: context + workflows + tools + structure. Not prompts." — Brij Kishore Pandey
 
 ## Related Entries
-- [[claude-code-usage-limits-token-management]] ([10 Ways to Stop Hitting Claude](../tips/claude-code-usage-limits-token-management.md))
+- [[claude-usage-limits-token-management]] ([10 Ways to Stop Hitting Claude](../tips/claude-usage-limits-token-management.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks](../tips/claude-code-12-setup-tricks.md))
 - [[claude-code-prompting-era]] ([The New Prompting Era](../tips/claude-code-prompting-era.md))
@@ -69,7 +69,7 @@ As one commenter noted: "The hidden cost of AI is 'Contextual Debt' — overload
 > "Настоящая стоимость — не токены. Настоящая стоимость — плохая системная архитектура. Claude Code вознаграждает инженеров, мыслящих категориями: контекст + рабочие процессы + инструменты + структура. А не промптов." — Бридж Кишор Пандей
 
 ## Связанные записи
-- [[claude-code-usage-limits-token-management]] ([10 Ways to Stop Hitting Claude](../tips/claude-code-usage-limits-token-management.md))
+- [[claude-usage-limits-token-management]] ([10 Ways to Stop Hitting Claude](../tips/claude-usage-limits-token-management.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks](../tips/claude-code-12-setup-tricks.md))
 - [[claude-code-prompting-era]] ([The New Prompting Era](../tips/claude-code-prompting-era.md))

@@ -42,7 +42,9 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(pytest tests/test_wiki.py -v --tb=short)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.aihero.dev)"
     ]
   }
 }

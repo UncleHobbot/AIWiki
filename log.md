@@ -175,3 +175,15 @@
 **17:05 /wiki-update** — 1 entry updated: github-copilot-pricing-exodus (news) — added 3 Reddit sources ( cost spiral, lawsuit thread, cost projection). 2 new URLs added to processed_urls.json.
 
 **17:08 /wiki-reddit + /wiki-hackernews** — 13 subs scanned. 2 entries created: codex-vs-claude-code-may-2026 (tips), ollama-cloud-quality-concerns (news). 1 entry updated: github-copilot-pricing-exodus (news). HackerNews: 8 articles fetched, 0 new entries (1 already processed, 7 skipped - not AI-relevant). Index: 174 total.
+
+---
+
+## 2026-05-28
+
+**09:15 /wiki-inbox** — 3 links processed, 2 tweets skipped. 2 created: dictionary-of-ai-coding (tools), anthropic-skills-building-guide (tips). 1 updated: claude-code-handoff-prototype-skills (tips, +smart-zone/dumb-zone). Index: 176 total.
+
+**10:38 /wiki-reddit** — 14 subs scanned. 1 entry created: openai-daybreak-cyber-defense (news). 26 posts examined across subs, rest already processed or low-quality. Index: 177 total.
+
+**10:44 /wiki-hackernews** — 3 articles fetched, 2 qualified (1 crypto malware skipped). 2 entries created: claude-security-plugin-code-review (news), malware-slop-npm-claude-user-directory (news). Index: 179 total.
+
+**11:22 /wiki-check** — 0 RU sections missing (179/179 complete). 3 broken links fixed: claude-code-usage-limits slug, kytmanov stub replaced, local-rag deduplicated. 3 orphans connected: anthropic-skills-building-guide, dictionary-of-ai-coding, openai-daybreak-cyber-defense. Vault: 179 entries, 0 broken links, 8 orphans remaining.

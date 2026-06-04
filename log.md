@@ -187,3 +187,9 @@
 **10:44 /wiki-hackernews** — 3 articles fetched, 2 qualified (1 crypto malware skipped). 2 entries created: claude-security-plugin-code-review (news), malware-slop-npm-claude-user-directory (news). Index: 179 total.
 
 **11:22 /wiki-check** — 0 RU sections missing (179/179 complete). 3 broken links fixed: claude-code-usage-limits slug, kytmanov stub replaced, local-rag deduplicated. 3 orphans connected: anthropic-skills-building-guide, dictionary-of-ai-coding, openai-daybreak-cyber-defense. Vault: 179 entries, 0 broken links, 8 orphans remaining.
+
+---
+
+## 2026-06-04
+
+**17:24 /wiki-reddit** — 14 subs scanned, 0 new qualifying posts (cursors current from earlier today). Index: 179 total.

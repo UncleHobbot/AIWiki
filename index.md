@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-05-28 | Total entries: 179_
+_Last updated: 2026-06-04 | Total entries: 181_
 
 ## 🤖 Agents (23)
 - [[acdc-agent-centric-development-cycle]] — Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) presents the Agent-Centric Development Cycle (AC/DC) — a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons to existing workflows.
@@ -62,7 +62,7 @@ _Last updated: 2026-05-28 | Total entries: 179_
 - [[claude-code-frameworks]] — The Claude Code community has produced several competing skill frameworks (sets of pre-built skills, agents, and workflows packaged as plugins).
 - [[cloakbrowser-stealth-chromium]] — CloakBrowser is a stealth Chromium browser that passes every bot detection test by modifying fingerprints at the C++ source level (49 patches).
 - [[cpt-copilot-terminal]] — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal, letting you ask GitHub Copilot questions and get shell command suggestions without leaving your current terminal session.
-- [[dictionary-of-ai-coding]] — Matt Pocock's open-source glossary of 100+ AI coding terms (1.9k stars), organized into seven thematic sections. *(orphan)*
+- [[dictionary-of-ai-coding]] — Matt Pocock's open-source glossary of 100+ AI coding terms (1.9k stars), organized into seven thematic sections.
 - [[dotnet-claude-kit]] — A curated knowledge and action layer that turns Claude Code into a senior .NET 10 / C# 14 expert — includes 47 skills, 10 specialist agents, 16 slash commands, 10 rules, 5 project templates, and 15 Roslyn-powered MCP tools.
 - [[entire-platform]] — Entire is an open-source CLI that hooks into your git workflow and captures full AI agent sessions as "Checkpoints" — linked to git commits so you can always see not just *what* code was written, but *why*, with the ability to rewind or resume any past session.
 - [[equibles-mcp-financial-data]] — Equibles is a self-hosted, open-source MCP server that scrapes and serves public U.S.
@@ -116,7 +116,9 @@ _Last updated: 2026-05-28 | Total entries: 179_
 - [[tabpfn-3-tabular-foundation-model]] — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100 GPU with a single forward pass — no training, no hyperparameter tuning required.
 - [[product-zai-glm]] — Z.ai GLM is a Chinese LLM platform by Zhipu AI offering the GLM series of models (GLM-4, GLM-5.1) with coding agent capabilities. *(orphan)*
 
-## 📰 News (28)
+## 📰 News (30)
+- 2026-06-04 [[claude-code-github-action-prompt-injection]] — Security researcher RyotaK (GMO Flatt Security) found a flaw in Anthropic's Claude Code GitHub Action where a bot actor check bypass combined with indirect prompt injection let an attacker open a single GitHub issue, hijack the workflow, exfiltrate repo secrets, and — because Anthropic's own action repo used the vulnerable workflow — potentially poison the upstream action itself.
+- 2026-06-03 [[http2-bomb-openai-codex-discovery]] — OpenAI Codex discovered a novel remote denial-of-service vulnerability in major web servers (NGINX, Apache, IIS, Envoy, Cloudflare Pingora) by chaining two known techniques — HPACK header compression bombs and Slowloris connection holds — in a way that bypasses existing header-size limits, demonstrating AI-assisted offensive security research at the protocol level.
 - 2026-05-28 [[claude-security-plugin-code-review]] — Anthropic announced two new security features: a self-hosted sandbox for Claude Managed Agents that keeps execution on your own infrastructure, and a security-guidance plugin that makes Claude automatically review its own code changes for common vulnerabilities in the same session they are introduced.
 - 2026-05-28 [[openai-daybreak-cyber-defense]] — OpenAI Daybreak is OpenAI's vision for AI-powered cyber defense, combining GPT-5.5 models with Codex as an agentic harness to automate secure code review, threat modeling, patch validation, and vulnerability remediation at scale.
 - 2026-05-27 [[malware-slop-npm-claude-user-directory]] — OX Security discovered a malicious npm package ("mouse5212-super-formatter") that targets Anthropic's Claude AI tool by exfiltrating all files from its `/mnt/user-data` directory to a threat-actor-controlled GitHub repository — with the attack codenamed "Malware-Slop" to highlight the AI-generated, low-OPSEC quality of modern AI-assisted malware.
@@ -157,7 +159,7 @@ _Last updated: 2026-05-28 | Total entries: 179_
 - [[cline-roo-alternatives]] — A Reddit thread with 122 comments and 48 upvotes discussing the decline of Cline and Roo Code, where the community overwhelmingly recommends Claude Code as the top alternative, followed by Kilo Code (a Cline fork) and OpenCode for API-based workflows.
 - [[ambient-analog-ai-coding-workflows]] — A viral developer blog post argues that AI coding agents have broken the assumption that software development requires sitting at a desk — enabling a new class of "ambient" workflows where code emerges from walks, spoken ideas, and hand-drawn sketches fed to Claude Code.
 - [[anthropic-academy-courses-review]] — All 7 free Anthropic Academy core practitioner courses reviewed after completing them in one weekend (~12 hours total).
-- [[anthropic-skills-building-guide]] — Anthropic's official 32-page guide covering the full lifecycle of building Claude skills — from SKILL.md structure and YAML frontmatter through testing frameworks, distribution patterns, and five orchestration patterns. *(orphan)*
+- [[anthropic-skills-building-guide]] — Anthropic's official 32-page guide covering the full lifecycle of building Claude skills — from SKILL.md structure and YAML frontmatter through testing frameworks, distribution patterns, and five orchestration patterns.
 - [[llm-wiki-obsidian-build-guide]] — A practical walkthrough for building a personal LLM Wiki in Obsidian — including folder structure, the AGENTS.md schema, ingest/query/lint workflows, optional agentic firewalls between vaults, and local model integration for fully private operation.
 - [[chorus-multi-llm-code-review]] — CHORUS is a multi-LLM code review system that runs parallel reviews across Claude Code, Codex, Gemini CLI, OpenCode, and Kimi simultaneously, using tmux or headless sessions, then aggregates results via unanimous or majority consensus with optional persona assignments per reviewer.
 - [[chorus-multi-model-setup]] — CHORUS is an open-source tool that orchestrates 2–4 different AI coding assistants (Claude Code, Codex, Gemini CLI, Kimi, OpenCode) to review the same code in parallel, catching bugs that any single model would miss — at zero extra cost by piggybacking on CLI subscriptions you already pay for.

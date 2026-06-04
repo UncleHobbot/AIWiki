@@ -193,3 +193,5 @@
 ## 2026-06-04
 
 **17:24 /wiki-reddit** — 14 subs scanned, 0 new qualifying posts (cursors current from earlier today). Index: 179 total.
+
+**17:28 /wiki-hackernews** — 5 articles fetched, 2 qualified (2 skipped: vendor piece + geopolitical). 2 entries created: claude-code-github-action-prompt-injection (news), http2-bomb-openai-codex-discovery (news). Index: 181 total.

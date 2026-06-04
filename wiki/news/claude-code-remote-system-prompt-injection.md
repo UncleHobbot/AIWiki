@@ -33,6 +33,7 @@ Anthropic's position, implied by the lack of changelog disclosure, is that this 
 Practically, setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` blocks it for security-conscious users.
 
 ## Related Entries
+- [[claude-code-github-action-prompt-injection]] ([Claude Code GitHub Action: Prompt Injection Flaw](../news/claude-code-github-action-prompt-injection.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
@@ -56,6 +57,7 @@ Practically, setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` blocks it for 
 Проблема безопасности: сочетание живого удалённого контента, обновляемого каждые 60 секунд, с инъекцией в модель с полным доступом к shell на машине пользователя. Практически: установка `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` блокирует это для security-ориентированных пользователей.
 
 ## Связанные записи
+- [[claude-code-github-action-prompt-injection]] ([Claude Code GitHub Action: Prompt Injection Flaw](../news/claude-code-github-action-prompt-injection.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))

@@ -3,13 +3,17 @@
 scripts/fetch_reddit.py
 Fetch posts from a subreddit using Reddit's public JSON API (no OAuth needed for public posts).
 With .env credentials, switches to OAuth for higher rate limits.
+Falls back to RSS Atom feed if the JSON API returns 403 (unauthenticated access blocked).
 """
 
 import argparse
 import json
 import os
+import re
 import sys
 import time
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import io as _io
@@ -28,8 +32,9 @@ REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "llm-wiki-bot/1.0")
 STATE_FILE = Path(".state/reddit_cursor.json")
 STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-
 PLACEHOLDER_VALUES = {"your_client_id_here", "your_client_secret_here", "your_rapidapi_key_here"}
+
+RSS_NS = {"atom": "http://www.w3.org/2005/Atom"}
 
 
 def get_oauth_token() -> str | None:
@@ -61,7 +66,8 @@ def save_cursor(cursor: dict):
     STATE_FILE.write_text(json.dumps(cursor, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def fetch_posts(subreddit: str, limit: int = 25, after: str | None = None) -> list[dict]:
+def fetch_posts_json(subreddit: str, limit: int = 25, after: str | None = None) -> list[dict]:
+    """Fetch posts via the JSON API (requires OAuth or open public access)."""
     token = get_oauth_token()
     base = "https://oauth.reddit.com" if token else "https://www.reddit.com"
     headers = {"User-Agent": REDDIT_USER_AGENT}
@@ -82,7 +88,7 @@ def fetch_posts(subreddit: str, limit: int = 25, after: str | None = None) -> li
         p = child["data"]
         posts.append({
             "id": p["id"],
-            "name": p["name"],          # fullname e.g. t3_abc123
+            "name": p["name"],
             "title": p["title"],
             "author": p["author"],
             "url": p["url"],
@@ -94,11 +100,90 @@ def fetch_posts(subreddit: str, limit: int = 25, after: str | None = None) -> li
             "is_self": p["is_self"],
             "link_flair_text": p.get("link_flair_text"),
             "subreddit": subreddit,
+            "_via": "json",
         })
     return posts
 
 
+def fetch_posts_rss(subreddit: str, limit: int = 25, days: int = 14) -> list[dict]:
+    """Fallback: fetch posts via Atom RSS (public, no auth). No scores/comments available."""
+    url = f"https://www.reddit.com/r/{subreddit}/new.rss?limit={min(limit, 100)}"
+    r = requests.get(url, headers={"User-Agent": REDDIT_USER_AGENT}, timeout=15)
+    r.raise_for_status()
+
+    root = ET.fromstring(r.content)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+
+    posts = []
+    for entry in root.findall("atom:entry", RSS_NS):
+        # Permalink
+        link_el = entry.find("atom:link[@rel='alternate']", RSS_NS)
+        if link_el is None:
+            link_el = entry.find("atom:link", RSS_NS)
+        permalink = (link_el.attrib.get("href", "") if link_el is not None else "").strip()
+
+        # Post ID from permalink: .../comments/<id>/...
+        m = re.search(r"/comments/([a-z0-9]+)/", permalink)
+        post_id = m.group(1) if m else ""
+
+        # Timestamp
+        updated_str = (entry.findtext("atom:updated", "", RSS_NS) or "").strip()
+        try:
+            updated = datetime.fromisoformat(updated_str.replace("Z", "+00:00"))
+        except Exception:
+            updated = datetime.now(timezone.utc)
+
+        if updated < cutoff:
+            continue  # older than requested window
+
+        title = (entry.findtext("atom:title", "", RSS_NS) or "").strip()
+        author = (entry.findtext("atom:author/atom:name", "", RSS_NS) or "").strip()
+
+        # selftext: strip HTML from content element
+        content_el = entry.find("atom:content", RSS_NS)
+        content_html = (content_el.text or "") if content_el is not None else ""
+        selftext = re.sub(r"<[^>]+>", " ", content_html).strip()[:1000]
+
+        # External URL: try to extract from content HTML, fall back to permalink
+        ext_url_m = re.search(r'href="(https?://[^"]+)"', content_html)
+        if ext_url_m and "reddit.com" not in ext_url_m.group(1):
+            ext_url = ext_url_m.group(1)
+        else:
+            ext_url = permalink
+
+        posts.append({
+            "id": post_id,
+            "name": f"t3_{post_id}",
+            "title": title,
+            "author": author,
+            "url": ext_url,
+            "permalink": permalink,
+            "selftext": selftext,
+            "score": 0,          # not available in RSS
+            "num_comments": 0,   # not available in RSS
+            "created_utc": updated.timestamp(),
+            "is_self": ext_url == permalink,
+            "link_flair_text": None,
+            "subreddit": subreddit,
+            "_via": "rss",
+        })
+
+    return posts[:limit]
+
+
+def fetch_posts(subreddit: str, limit: int = 25, after: str | None = None) -> list[dict]:
+    """Fetch posts, falling back to RSS if the JSON API returns 403."""
+    try:
+        return fetch_posts_json(subreddit, limit=limit, after=after)
+    except requests.HTTPError as e:
+        if e.response is not None and e.response.status_code == 403:
+            print(f"  [info] JSON API 403 — falling back to RSS for r/{subreddit}", file=sys.stderr)
+            return fetch_posts_rss(subreddit, limit=limit)
+        raise
+
+
 def fetch_top_comments(permalink: str, limit: int = 5) -> list[dict]:
+    """Fetch top comments via JSON API. Returns [] on 403 (not available via RSS)."""
     token = get_oauth_token()
     base = "https://oauth.reddit.com" if token else "https://www.reddit.com"
     headers = {"User-Agent": REDDIT_USER_AGENT}
@@ -130,9 +215,10 @@ def main():
     parser.add_argument("subreddit", help="Subreddit name (without r/)")
     parser.add_argument("--limit", type=int, default=25, help="Max posts to fetch")
     parser.add_argument("--after", help="Fetch posts after this fullname (pagination)")
-    parser.add_argument("--min-score", type=int, default=10, help="Minimum post score")
+    parser.add_argument("--min-score", type=int, default=10, help="Minimum post score (ignored when RSS fallback active)")
     parser.add_argument("--with-comments", action="store_true", help="Include top comments")
     parser.add_argument("--use-cursor", action="store_true", help="Use saved cursor for incremental fetch")
+    parser.add_argument("--days", type=int, default=14, help="Days to look back when using RSS fallback (default: 14)")
     args = parser.parse_args()
 
     after = args.after
@@ -143,17 +229,27 @@ def main():
     print(f"Fetching r/{args.subreddit} (limit={args.limit}, after={after})...", file=sys.stderr)
     posts = fetch_posts(args.subreddit, limit=args.limit, after=after)
 
-    # Filter by score
-    qualifying = [p for p in posts if p["score"] >= args.min_score or p["num_comments"] >= 20]
-    print(f"  {len(posts)} posts fetched, {len(qualifying)} qualify (score≥{args.min_score} or comments≥20)", file=sys.stderr)
+    # Determine if we're in RSS fallback mode
+    via_rss = any(p.get("_via") == "rss" for p in posts)
 
-    if args.with_comments:
+    # Filter: score/comments thresholds only apply when we have real data (JSON mode).
+    # In RSS mode all posts pass (no score data), leaving content filtering to the caller.
+    if via_rss:
+        qualifying = posts
+        print(f"  {len(posts)} posts fetched via RSS (no score data — all qualify)", file=sys.stderr)
+    else:
+        qualifying = [p for p in posts if p["score"] >= args.min_score or p["num_comments"] >= 20]
+        print(f"  {len(posts)} posts fetched, {len(qualifying)} qualify (score≥{args.min_score} or comments≥20)", file=sys.stderr)
+
+    if args.with_comments and not via_rss:
         for post in qualifying:
             print(f"  Fetching comments for: {post['title'][:60]}...", file=sys.stderr)
             post["top_comments"] = fetch_top_comments(post["permalink"])
             time.sleep(0.5)  # polite rate limiting
+    elif args.with_comments and via_rss:
+        print("  [info] Comment fetching skipped (RSS fallback — JSON API unavailable)", file=sys.stderr)
 
-    # Update cursor to newest post
+    # Update cursor to newest post (works for both JSON and RSS since both set 'name')
     if posts and args.use_cursor:
         cursor = load_cursor()
         cursor[args.subreddit] = posts[0]["name"]

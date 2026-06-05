@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-06-04 | Total entries: 181_
+_Last updated: 2026-06-05 | Total entries: 185_
 
 ## 🤖 Agents (23)
 - [[acdc-agent-centric-development-cycle]] — Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) presents the Agent-Centric Development Cycle (AC/DC) — a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons to existing workflows.
@@ -26,8 +26,9 @@ _Last updated: 2026-06-04 | Total entries: 181_
 - [[claude-code-directory]] — Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, subagents, rules, and auto memory — from `.claude/` in your project and from `~/.claude/` in your home directory.
 - [[ui-tars-desktop-multimodal-agent]] — UI-TARS Desktop and Agent TARS are two open-source multimodal AI agent projects from ByteDance that use visual language models to control computers and browsers through natural language — capable of booking hotels and flights autonomously, controlling any desktop app via screenshots, and integrating with MCP tools for real-world task automation.
 
-## 🧠 Concepts (24)
+## 🧠 Concepts (25)
 - [[agent-harness-engineering]] — Agent harness engineering is the discipline of designing the scaffolding around a language model — prompts, tools, context policies, hooks, subagents, feedback loops, and recovery paths — that turns a raw model into a working agent.
+- [[agent-lifespan-agingbench]] — AgingBench (arXiv 2605.26302) introduces longitudinal reliability evaluation for deployed AI agents, finding that agent reliability is a lifespan property of the full harness — not a snapshot property of the base model — and that behavioral tests can remain clean while factual precision silently decays.
 - [[ai-agent-identity-iam-risks]] — As enterprises deploy AI agents at scale, traditional Identity and Access Management (IAM) programs face a new threat: agents are "shortcut-seekers" that will use any available credential or permission path to complete a task — including ones they were never supposed to access.
 - [[ai-agents-arr-framework-ooda-loop]] — A concise conceptual framework for understanding, using, and succeeding with AI agents.
 - [[agi-impossibility-proof-debunked]] — Guerzhoy (2026) demonstrates that Van Rooij et al.'s widely-cited "Ingenia Theorem" — claiming to prove that achieving human-like intelligence via machine learning is computationally intractable — contains an unjustified assumption that fatally undermines the proof, published as a response in the same journal.
@@ -52,7 +53,7 @@ _Last updated: 2026-06-04 | Total entries: 181_
 - [[surveygen-i-scientific-survey]] — SurveyGen-I generates long-form, internally consistent scientific surveys through a coarse-to-fine retrieval loop combined with a terminology memory mechanism that stores previously written definitions and prevents re-explanation across sections and across subsequent generation runs.
 - [[yandex-agents-week-2026-intro]] — Opening lecture of Yandex Education's Agents Week 2026 intensive, covering the evolution of human-LLM interaction, what LLMs are (weights, next-token prediction), how they train, what they do well, and building a basic agent in practice.
 
-## 🛠️ Tools (50)
+## 🛠️ Tools (52)
 - [[dotnet-agent-skills]] — Microsoft's official .NET Agent Skills repository provides 14 curated plugin packages that AI coding agents (Copilot CLI, Claude Code, Cursor, Codex) load on demand for consistent, high-quality .NET development across ASP.NET Core, Blazor, MAUI, EF, diagnostics, and more.
 - [[9router-free-ai-coding]] — 9router is an open-source local proxy router that connects any AI coding tool (Claude Code, Codex, Cursor, Cline, Copilot, OpenClaw) to 40+ providers including completely free tiers, automatically saves 20–40% of tokens per request via RTK compression, and falls back across tiers (subscription → cheap → free) so you never stop mid-session.
 - [[agentmemory]] — agentmemory is an open-source persistent memory server for AI coding agents — extending Karpathy's LLM Wiki pattern with confidence scoring, memory lifecycle (decay + auto-forget), knowledge graphs, and hybrid BM25+vector+graph search — that silently captures what agents do across sessions and injects the right context when the next session starts.
@@ -64,6 +65,7 @@ _Last updated: 2026-06-04 | Total entries: 181_
 - [[cpt-copilot-terminal]] — `cpt` adds an inline `ctrl+k` chat shortcut to any terminal, letting you ask GitHub Copilot questions and get shell command suggestions without leaving your current terminal session.
 - [[dictionary-of-ai-coding]] — Matt Pocock's open-source glossary of 100+ AI coding terms (1.9k stars), organized into seven thematic sections.
 - [[dotnet-claude-kit]] — A curated knowledge and action layer that turns Claude Code into a senior .NET 10 / C# 14 expert — includes 47 skills, 10 specialist agents, 16 slash commands, 10 rules, 5 project templates, and 15 Roslyn-powered MCP tools.
+- [[dual-brain-agentic-protocol]] — Dual-Brain is a portable Claude Code / Codex skill that routes hard tasks through two specialized debating sub-agents — a Right Brain that interrogates assumptions and a Left Brain that verifies claims against real code — preventing the three main single-agent failure modes: taking requests at face value, drowning in detail, and forgetting the project.
 - [[entire-platform]] — Entire is an open-source CLI that hooks into your git workflow and captures full AI agent sessions as "Checkpoints" — linked to git commits so you can always see not just *what* code was written, but *why*, with the ability to rewind or resume any past session.
 - [[equibles-mcp-financial-data]] — Equibles is a self-hosted, open-source MCP server that scrapes and serves public U.S.
 - [[freebuff]] — `freebuff` is a 100% free CLI coding agent that lets you choose from top open models including DeepSeek v4 Pro/Flash, Kimi K2.6, and MiniMax M2.7 — installed with a single npm command.
@@ -86,6 +88,7 @@ _Last updated: 2026-06-04 | Total entries: 181_
 - [[microsoft-ai-agents-beginners-course]] — Microsoft's official beginner course for building AI agents — 12 lessons covering fundamentals with Python code samples using Microsoft Agent Framework and Azure AI Foundry Agent Service V2.
 - [[microsoft-waza]] — Waza is Microsoft's open-source Go CLI for creating, testing, measuring, and improving AI agent skills.
 - [[minicheck-fact-verification]] — MiniCheck is an efficient fact-checking system that builds small models (770M parameters) matching GPT-4-level accuracy on grounding verification at ~400x lower cost, using synthetically generated training data from structured GPT-4 prompts.
+- [[noosphere-ai-memory]] — Noosphere is a self-hosted memory and knowledge layer for AI agents and humans — a PostgreSQL-backed wiki with confidence scoring, revision history, and scoped API keys that lets agents recall structured context while humans browse and curate the same data through a Markdown interface.
 - [[nwave-ai-refactoring-framework]] — Alessandro Di Gioia (25 years engineering, author of "Agile Technical Practices Distilled") and Michele Brissoni (Formula 1 engineering background) present nWave — an agentic AI framework designed to bring engineering excellence to AI-assisted development, demonstrated by refactoring real legacy (spaghetti) code.
 - [[product-ollama]] — Ollama is a local LLM inference platform that lets you run large language models on your own hardware.
 - [[omegawiki-research-platform]] — OmegaWiki is an open-source, wiki-centric full-lifecycle AI research platform by DAIR Lab at Peking University, powered by 24 Claude Code skills that cover everything from paper ingestion to peer review response.
@@ -116,9 +119,10 @@ _Last updated: 2026-06-04 | Total entries: 181_
 - [[tabpfn-3-tabular-foundation-model]] — TabPFN-3 is the latest generation of Prior Labs' tabular foundation model, scaling to 1M training rows on a single H100 GPU with a single forward pass — no training, no hyperparameter tuning required.
 - [[product-zai-glm]] — Z.ai GLM is a Chinese LLM platform by Zhipu AI offering the GLM series of models (GLM-4, GLM-5.1) with coding agent capabilities. *(orphan)*
 
-## 📰 News (30)
+## 📰 News (31)
 - 2026-06-04 [[claude-code-github-action-prompt-injection]] — Security researcher RyotaK (GMO Flatt Security) found a flaw in Anthropic's Claude Code GitHub Action where a bot actor check bypass combined with indirect prompt injection let an attacker open a single GitHub issue, hijack the workflow, exfiltrate repo secrets, and — because Anthropic's own action repo used the vulnerable workflow — potentially poison the upstream action itself.
 - 2026-06-03 [[http2-bomb-openai-codex-discovery]] — OpenAI Codex discovered a novel remote denial-of-service vulnerability in major web servers (NGINX, Apache, IIS, Envoy, Cloudflare Pingora) by chaining two known techniques — HPACK header compression bombs and Slowloris connection holds — in a way that bypasses existing header-size limits, demonstrating AI-assisted offensive security research at the protocol level.
+- 2026-05-28 [[claude-opus-4-8-release]] — Claude Opus 4.8, released May 28, 2026, improves on Opus 4.7 with sharper agentic judgment, dynamic parallel subagents in Claude Code for massive-scale tasks, a new effort-control feature on claude.ai, and a Fast Mode that runs at 2.5× speed at 3× cheaper pricing.
 - 2026-05-28 [[claude-security-plugin-code-review]] — Anthropic announced two new security features: a self-hosted sandbox for Claude Managed Agents that keeps execution on your own infrastructure, and a security-guidance plugin that makes Claude automatically review its own code changes for common vulnerabilities in the same session they are introduced.
 - 2026-05-28 [[openai-daybreak-cyber-defense]] — OpenAI Daybreak is OpenAI's vision for AI-powered cyber defense, combining GPT-5.5 models with Codex as an agentic harness to automate secure code review, threat modeling, patch validation, and vulnerability remediation at scale.
 - 2026-05-27 [[malware-slop-npm-claude-user-directory]] — OX Security discovered a malicious npm package ("mouse5212-super-formatter") that targets Anthropic's Claude AI tool by exfiltrating all files from its `/mnt/user-data` directory to a threat-actor-controlled GitHub repository — with the attack codenamed "Malware-Slop" to highlight the AI-generated, low-OPSEC quality of modern AI-assisted malware.

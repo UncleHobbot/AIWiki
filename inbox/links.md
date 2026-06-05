@@ -1,6 +1,10 @@
 # Links to Process
 
 ## To Read
+https://github.com/beabys/ilnamiqui <!-- ilnamiqui: per-project context persistence tool for OpenCode -->
+https://github.com/atomicstrata/atomicmemory <!-- atomic memory for agents -->
+https://github.com/zriyansh/awesome-agent-vault <!-- awesome-agent-vault: community curated agent tools -->
+https://research.nvidia.com/benchmarks/sol-execbench <!-- NVIDIA SOL-ExecBench: AI-generated CUDA kernels silently breaking training -->
 
 ## Done (May 28)
 https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf <!-- Anthropic Complete Guide to Building Skills for Claude → anthropic-skills-building-guide (tips) -->

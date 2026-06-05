@@ -195,3 +195,11 @@
 **17:24 /wiki-reddit** — 14 subs scanned, 0 new qualifying posts (cursors current from earlier today). Index: 179 total.
 
 **17:28 /wiki-hackernews** — 5 articles fetched, 2 qualified (2 skipped: vendor piece + geopolitical). 2 entries created: claude-code-github-action-prompt-injection (news), http2-bomb-openai-codex-discovery (news). Index: 181 total.
+
+**17:31 /wiki-reddit** — 14 subs attempted, 0 posts fetched — Reddit API returning 403 (unauthenticated access blocked). OAuth credentials needed in .env. Index: 181 total.
+
+---
+
+## 2026-06-05
+
+**13:20 /wiki-reddit** — 14 subs via RSS fallback (JSON API 403). 1202 posts scanned, 4 entries created: claude-opus-4-8-release (news), agent-lifespan-agingbench (concepts), dual-brain-agentic-protocol (tools), noosphere-ai-memory (tools). 4 URLs queued to inbox/links.md. Index: 185 total.

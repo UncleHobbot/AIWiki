@@ -349,7 +349,7 @@ Parses YouTube URLs from `inbox/youtube.md`, runs `python scripts/fetch_youtube.
 
 Runs `python scripts/fetch_reddit.py <subreddit> --use-cursor --with-comments` for each monitored subreddit, filters posts with score > 50 or comment count > 20, classifies each post, writes bilingual entries to `wiki/<category>/<slug>.md`, queues any external URLs for the `/wiki-links` workflow, and updates `.state/reddit_cursor.json`.
 
-**Monitored subreddits:** r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding
+**Monitored subreddits:** r/GithubCopilot, r/opencodeCLI, r/opencode, r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding, r/DeepSeek, r/Qwen_AI
 
 ---
 

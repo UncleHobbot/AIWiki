@@ -28,9 +28,9 @@ any discovered external URLs into `inbox/links.md ## To Read`.
 ```
 python scripts/fetch_reddit.py <subreddit> --use-cursor --with-comments --min-score 50
 ```
-Run for all 14 subreddits: r/GithubCopilot, r/opencodeCLI, r/opencode,
+Run for all 16 subreddits: r/GithubCopilot, r/opencodeCLI, r/opencode,
 r/ClaudeCode, r/ZaiGLM, r/kimi, r/AI_Agents, r/LocalLLaMA, r/MachineLearning,
-r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding
+r/singularity, r/ChatGPT, r/ChatGPTCoding, r/ollama, r/vibecoding, r/DeepSeek, r/Qwen_AI
 
 **Success criteria:**
 - `.state/reddit_cursor.json` updated with new post IDs for each subreddit

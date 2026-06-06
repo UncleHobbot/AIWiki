@@ -56,7 +56,7 @@ URL_RE = re.compile(r'https?://\S+')
 SUBREDDITS = [
     "GithubCopilot", "opencodeCLI", "opencode", "ClaudeCode", "ZaiGLM",
     "kimi", "AI_Agents", "LocalLLaMA", "MachineLearning", "singularity",
-    "ChatGPT", "ChatGPTCoding", "ollama", "vibecoding",
+    "ChatGPT", "ChatGPTCoding", "ollama", "vibecoding", "DeepSeek", "Qwen_AI",
 ]
 
 ACADEMIC_DOMAINS = [

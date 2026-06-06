@@ -258,8 +258,8 @@ Longer explanation, 2-4 paragraphs.
 
 ## Monitored Sources
 
-**Subreddits (14):**
-r/GithubCopilot · r/opencodeCLI · r/opencode · r/ClaudeCode · r/ZaiGLM · r/kimi · r/AI_Agents · r/LocalLLaMA · r/MachineLearning · r/singularity · r/ChatGPT · r/ChatGPTCoding · r/ollama · r/vibecoding
+**Subreddits (16):**
+r/GithubCopilot · r/opencodeCLI · r/opencode · r/ClaudeCode · r/ZaiGLM · r/kimi · r/AI_Agents · r/LocalLLaMA · r/MachineLearning · r/singularity · r/ChatGPT · r/ChatGPTCoding · r/ollama · r/vibecoding · r/DeepSeek · r/Qwen_AI
 
 **News sites:**
 thehackernews.com — AI security, model releases, LLM-powered attacks, agent vulnerabilities

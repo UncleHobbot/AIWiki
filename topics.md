@@ -37,7 +37,7 @@ uses this file to rank incoming content and decide what warrants a full wiki ent
 **Keywords:** Claude, GPT, Gemini, DeepSeek, Qwen, Kimi, GLM, Llama, Mistral,
   frontier model, benchmark, model release, model comparison, context window,
   reasoning model, thinking model, SOTA, open source model, local LLM
-**Subreddits:** r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT
+**Subreddits:** r/LocalLLaMA, r/MachineLearning, r/singularity, r/ChatGPT, r/DeepSeek, r/Qwen_AI
 **Wiki categories:** models, news
 
 ---

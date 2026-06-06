@@ -6,11 +6,12 @@ tags: [kimi, glm, moonshot, zhipu, chinese-models, coding-agents, reliability, r
 aliases: [Kimi 2.6, GLM 5.1, Moonshot Kimi, ZhipuAI GLM]
 confidence: medium
 date: 2026-05-19
-updated: 2026-05-20
+updated: 2026-06-06
 sources:
   - https://www.reddit.com/r/kimi/comments/1te1dns/
   - https://www.reddit.com/r/kimi/comments/1tbq8st/
   - https://www.reddit.com/r/ZaiGLM/comments/1tdv5xy/
+  - https://www.reddit.com/r/kimi/comments/1twuwc3/
 ---
 
 ## Summary
@@ -39,6 +40,8 @@ Kimi 2.6 on the Allegro plan appears to handle the same workloads with fewer int
 
 **Update (2026-05-20):** A separate r/ZaiGLM thread (40 pts, 32 comments) reports the Z.ai service has "drastically improved": no broken context above 120K tokens, no mysterious API rate-limit messages, no unexplained stops during long-running tasks, and speed on par with other mainstream services. A user reported running a documentation task for 12+ hours without interruption. If verified, this resolves the primary complaints from May 19 reports — the gap vs Kimi 2.6 on infrastructure reliability may have narrowed significantly.
 
+**Update (2026-06-06):** A 10-year SWE on r/kimi reports dropping Kimi K2.6 as their primary agent despite acknowledging it's "really good." The specific complaints: K2.6 thinks too long (30 minutes vs. Sonnet 4.6's 5 minutes for equivalent tasks), the thinking block frequently contradicts itself mid-reasoning, and it relies heavily on an orchestrator pattern that Kimi doesn't support well. The user prefers K2.5 as their main agent — an older generation model — suggesting that for agentic workflows, speed and consistency can outweigh raw capability. This is a notable counterpoint to the "Kimi is more reliable" narrative: K2.6 may be more reliable than GLM at scale, but still slower and less predictable than Sonnet for individual agent tasks.
+
 **Note:** This is community data (Tier 3 reliability), not benchmarked.
 
 ## Related Entries
@@ -66,6 +69,8 @@ Kimi 2.6 on the Allegro plan appears to handle the same workloads with fewer int
 Практическое сравнение, возникшее в тредах сообщества в мае 2026 года, касается не столько бенчмарков моделей, сколько производственной надёжности для автономных агентов кодирования. Критика GLM сосредоточена на инфраструктуре API: строгие лимиты параллелизма, неэффективное повторное использование кэша контекста, высокая стоимость при масштабировании.
 
 **Обновление (2026-05-20):** Отдельный тред на r/ZaiGLM (40 баллов, 32 комментария) сообщает о значительном улучшении сервиса Z.ai: нет сломанного контекста выше 120К токенов, нет загадочных 429-ошибок, нет необъяснимых остановок при длительных задачах. Пользователь сообщил о непрерывном выполнении задачи документирования более 12 часов. Если подтвердится — разрыв с Kimi 2.6 по надёжности инфраструктуры мог существенно сократиться.
+
+**Обновление (2026-06-06):** Разработчик с 10-летним стажем на r/kimi отказался от Kimi K2.6 как основного агента, несмотря на признание, что модель «действительно хороша». Конкретные претензии: K2.6 думает слишком долго (30 минут против 5 минут Sonnet 4.6), блок размышлений часто противоречит сам себе, модель сильно зависит от паттерна оркестратора, который Kimi не поддерживает. Пользователь предпочитает K2.5 — модель предыдущего поколения — что говорит о том, что для агентных workflow скорость и предсказуемость могут перевешивать «сырую» мощность. Заметная контрточка к нарративу «Kimi надёжнее»: K2.6 надёжнее GLM в масштабе, но медленнее и менее предсказуем, чем Sonnet для отдельных задач.
 
 **Примечание:** это данные сообщества (уровень достоверности 3), не бенчмарки.
 

@@ -4,7 +4,7 @@ title_ru: "Переход GitHub Copilot на оплату по использо
 category: news
 tags: [github-copilot, pricing, coding-agents, opencode, codex]
 date: 2026-05-15
-updated: 2026-05-26
+updated: 2026-06-06
 sources:
   - https://www.reddit.com/r/GithubCopilot/comments/1tdxs93/yelp_x15_monthly_cost_ill_take_x2_and_switch_to/
   - https://www.reddit.com/r/GithubCopilot/comments/1tdxtb7/should_i_go_to_opencode_with_deepseek_codex_or/
@@ -12,6 +12,7 @@ sources:
   - https://www.reddit.com/r/GithubCopilot/comments/1tdi8tl/how_were_people_spending_so_much/
   - https://www.reddit.com/r/GithubCopilot/comments/1td6iu1/can_i_sue_over_a_yearly_subscription_after_major/
   - https://www.reddit.com/r/GithubCopilot/comments/1tdd337/more_advanced_cost_projection_and_optimization/
+  - https://www.reddit.com/r/GithubCopilot/comments/1tygatj/
 ---
 
 ## Summary
@@ -35,6 +36,8 @@ The usage-based pricing model means that agent-driven workflows — which can pu
 The most extreme case came from user hardestbutton2, who used Copilot's coordination agent calling 4–5 subagents (design research, planner with critic, architect, reviewer). A single premium request prompt could run 6–8 hours. Over 6–8 weeks they built an entire app, but extra premium request charges spiraled from $100 to $6,800. This prompted the community thread "How were people spending so much?" — user Kwerdna's top-voted reply: "Slop slop and more slop. People throwing multiple agents at entire 'projects' for the cost of 1 request."
 
 The backlash has escalated beyond complaints to legal threats. One user posted asking whether they can sue over a yearly subscription that was fundamentally changed mid-term. Meanwhile, cost-conscious users are building advanced projection and optimization models to predict and control spending before it spirals.
+
+**Update (2026-06-06):** A counter-narrative has emerged: some users report that the new pricing actually made them more efficient. Forced to be cost-conscious, they started making small changes themselves instead of delegating everything to the agent, and investing more time in prompt context before sending requests. This "pricing as a forcing function for discipline" perspective suggests the previous "slop" approach was driven by artificially cheap access, not best practice. The community is split between those who see the pricing as exploitative and those who see it as a needed correction.
 
 The broader trend: coding agent pricing is in flux across all providers. Claude Code users also report rapidly drying limits, and OpenAI just introduced a $100 tier for Codex.
 
@@ -70,7 +73,9 @@ The broader trend: coding agent pricing is in flux across all providers. Claude 
 
 Модель оплаты по использованию означает, что агентные рабочие процессы — которые могут непредсказуемо затягивать файлы и потреблять токены — генерируют огромные счета. Наиболее показательный случай: пользователь hardestbutton2 задействовал координационный агент Copilot, вызывающий 4–5 субагентов (исследование дизайна, планировщик с критиком, архитектор, ревьюер). Один premium-запрос мог выполняться 6–8 часов. За 6–8 недель было построено целое приложение, но расходы выросли со $100 до $6,800.
 
-Ответ сообщества: «Slop slop and more slop» — критика подхода, при котором несколько агентов бросают на целые проекты. Возникают и юридические угрозы: пользователи обсуждают возможность подать иск из-за изменений продукта в середине срока годовой подписки. Более расчётливые пользователи строят модели прогнозирования расходов. Общий тренд: ценообразование кодинговых агентов нестабильно у всех провайдеров.
+Ответ сообщества: «Slop slop and more slop» — критика подхода, при котором несколько агентов бросают на целые проекты. Возникают и юридические угрозы: пользователи обсуждают возможность подать иск из-за изменений продукта в середине срока годовой подписки. Более расчётливые пользователи строят модели прогнозирования расходов.
+
+**Обновление (2026-06-06):** Появилась контр-нарративная точка зрения: некоторые пользователи сообщают, что новые цены сделали их эффективнее. Вынужденные экономить, они начали делать мелкие изменения сами, вместо того чтобы делегировать всё агенту, и больше времени уделять контексту промпта. Этот взгляд «цены как принуждающая функция дисциплины» предполагает, что прежний подход «slop» был порождён искусственно дешёвым доступом. Сообщество разделилось: одни считают цены эксплуататорскими, другие — необходимой коррекцией. Общий тренд: ценообразование кодинговых агентов нестабильно у всех провайдеров.
 
 ## Примечательные цитаты
 > «Slop slop and more slop. People throwing multiple agents at entire "projects" for the cost of 1 request.» — Kwerdna, r/GithubCopilot

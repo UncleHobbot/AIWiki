@@ -213,3 +213,11 @@
 **10:05 /wiki-inbox** — 5 entries created: ilnamiqui-session-memory (tools), atomicmemory-semantic-memory (tools), awesome-agent-vault-credentials (tools), nvidia-sol-execbench (concepts), zsh-opencode-plugin (tools). 1 skipped (Supra-50M low quality), 5 Reddit blocked by robots.txt. 0 clippings/tweets/posts/youtube (all already processed). Index: 192 total.
 
 **10:57 /wiki-config** — Added r/DeepSeek and r/Qwen_AI to monitored subreddits (now 16). Updated CLAUDE.md, AGENTS.md, README.md, topics.md, wiki-reddit.md, wiki-pipeline SKILL.md, inbox_coordinator.py. Both verified fetchable via RSS.
+
+**10:57 /wiki-reddit** — 14 subs scanned (RSS), 6 qualifying posts. 4 entries created: redactable-pii-protection (tools), shrimp-coding-agent (tools), llm-wrapper-performance-gap (tips), minimax-m3-coding-model (models). 2 updated: kimi-2-6-vs-glm-5-1-agent-reliability (models), github-copilot-pricing-exodus (news). Index: 196 total.
+
+**10:59 /wiki-reddit** — 14 subs scanned (RSS fallback, JSON API 403). 4 entries created: redactable-pii-protection (tools), shrimp-coding-agent (tools), llm-wrapper-performance-gap (tips), minimax-m3-coding-model (models). 2 updated: kimi-2-6-vs-glm-5-1-agent-reliability (models), github-copilot-pricing-exodus (news). Index: 196 total.
+
+**11:16 /wiki-reddit** — 3 entries created: ashub-deepseek-coding-agent (tools), tool-calling-loop-management (tips), custom-agent-loop-vs-sdk (agents). Index: 199 total.
+
+**11:22 /wiki-hackernews** — 5 entries created: claude-code-github-action-flaw (news), ai-agent-ffmpeg-zero-days (news), chatgpt-lockdown-mode (news), gemini-android-notification-hijack (news), smart-tv-ai-scraping-proxies (news). Index: 204 total.

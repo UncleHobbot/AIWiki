@@ -209,3 +209,5 @@
 ## 2026-06-06
 
 **09:47 /wiki-reddit** — 14 subs via RSS, 2nd 2-week pass. 2 new entries from newer threads: kimi-code-cli (tools), ab-method-workflow (tools). 7 model/tool URLs queued to inbox. Index: 187 total.
+
+**10:05 /wiki-inbox** — 5 entries created: ilnamiqui-session-memory (tools), atomicmemory-semantic-memory (tools), awesome-agent-vault-credentials (tools), nvidia-sol-execbench (concepts), zsh-opencode-plugin (tools). 1 skipped (Supra-50M low quality), 5 Reddit blocked by robots.txt. 0 clippings/tweets/posts/youtube (all already processed). Index: 192 total.

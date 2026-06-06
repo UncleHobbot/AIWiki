@@ -1,19 +1,21 @@
 # Links to Process
 
 ## To Read
-https://github.com/beabys/ilnamiqui <!-- ilnamiqui: per-project context persistence tool for OpenCode -->
-https://github.com/atomicstrata/atomicmemory <!-- atomic memory for agents -->
-https://github.com/zriyansh/awesome-agent-vault <!-- awesome-agent-vault: community curated agent tools -->
-https://research.nvidia.com/benchmarks/sol-execbench <!-- NVIDIA SOL-ExecBench: AI-generated CUDA kernels silently breaking training -->
-https://github.com/mskadu/zsh-opencode-plugin <!-- opencode plugin for zsh -->
-https://huggingface.co/SupraLabs/Supra-50M-Reasoning <!-- SupraLabs Supra-50M-Reasoning small model -->
-https://www.reddit.com/r/ollama/comments/1tygy20/ <!-- Gemini 3 Flash Preview token usage discussion - new model to research -->
-https://www.reddit.com/r/vibecoding/comments/1tyh7kf/ <!-- Minimax M3 - new model, worth a models/ entry -->
-https://www.reddit.com/r/singularity/comments/1trkfo4/ <!-- Mimo V2.5 (non-pro) - underrated model discussion -->
-https://www.reddit.com/r/LocalLLaMA/comments/1tyfqmp/ <!-- Domino: decoupling causal modeling from autoregressive drafting (speculative decoding) -->
-https://www.reddit.com/r/ClaudeCode/comments/1ty7f34/ <!-- Claude Code Hooks underused - tips entry candidate -->
 
 ## Done (May 28)
+https://github.com/beabys/ilnamiqui <!-- ilnamiqui: per-project session memory for OpenCode & Claude Code → ilnamiqui-session-memory (tools) -->
+https://github.com/atomicstrata/atomicmemory <!-- AtomicMemory: portable semantic memory for AI agents → atomicmemory-semantic-memory (tools) -->
+https://github.com/zriyansh/awesome-agent-vault <!-- awesome-agent-vault: agent credential management directory → awesome-agent-vault-credentials (tools) -->
+https://research.nvidia.com/benchmarks/sol-execbench <!-- NVIDIA SOL-ExecBench: AI-generated CUDA kernels → nvidia-sol-execbench (concepts) -->
+https://github.com/mskadu/zsh-opencode-plugin <!-- zsh plugin for opencode → zsh-opencode-plugin (tools) -->
+https://huggingface.co/SupraLabs/Supra-50M-Reasoning <!-- Supra-50M-Reasoning: 50M model with poor benchmarks — score 2, skipped -->
+https://www.reddit.com/r/ollama/comments/1tygy20/ <!-- Gemini 3 Flash token usage — robots.txt blocked -->
+https://www.reddit.com/r/vibecoding/comments/1tyh7kf/ <!-- Minimax M3 — robots.txt blocked -->
+https://www.reddit.com/r/singularity/comments/1trkfo4/ <!-- Mimo V2.5 — robots.txt blocked -->
+https://www.reddit.com/r/LocalLLaMA/comments/1tyfqmp/ <!-- Domino speculative decoding — robots.txt blocked -->
+https://www.reddit.com/r/ClaudeCode/comments/1ty7f34/ <!-- Claude Code Hooks underused — robots.txt blocked -->
+
+## Done (May 28 prev)
 https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf <!-- Anthropic Complete Guide to Building Skills for Claude → anthropic-skills-building-guide (tips) -->
 https://github.com/mattpocock/dictionary-of-ai-coding <!-- Matt Pocock's AI coding jargon dictionary 1.9k stars → dictionary-of-ai-coding (tools) -->
 https://www.aihero.dev/skills-handoff <!-- AIHero handoff skill: smart/dumb zone + DIY sub-agent → updated claude-code-handoff-prototype-skills (tips) -->

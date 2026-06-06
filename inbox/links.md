@@ -5,6 +5,13 @@ https://github.com/beabys/ilnamiqui <!-- ilnamiqui: per-project context persiste
 https://github.com/atomicstrata/atomicmemory <!-- atomic memory for agents -->
 https://github.com/zriyansh/awesome-agent-vault <!-- awesome-agent-vault: community curated agent tools -->
 https://research.nvidia.com/benchmarks/sol-execbench <!-- NVIDIA SOL-ExecBench: AI-generated CUDA kernels silently breaking training -->
+https://github.com/mskadu/zsh-opencode-plugin <!-- opencode plugin for zsh -->
+https://huggingface.co/SupraLabs/Supra-50M-Reasoning <!-- SupraLabs Supra-50M-Reasoning small model -->
+https://www.reddit.com/r/ollama/comments/1tygy20/ <!-- Gemini 3 Flash Preview token usage discussion - new model to research -->
+https://www.reddit.com/r/vibecoding/comments/1tyh7kf/ <!-- Minimax M3 - new model, worth a models/ entry -->
+https://www.reddit.com/r/singularity/comments/1trkfo4/ <!-- Mimo V2.5 (non-pro) - underrated model discussion -->
+https://www.reddit.com/r/LocalLLaMA/comments/1tyfqmp/ <!-- Domino: decoupling causal modeling from autoregressive drafting (speculative decoding) -->
+https://www.reddit.com/r/ClaudeCode/comments/1ty7f34/ <!-- Claude Code Hooks underused - tips entry candidate -->
 
 ## Done (May 28)
 https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf <!-- Anthropic Complete Guide to Building Skills for Claude → anthropic-skills-building-guide (tips) -->

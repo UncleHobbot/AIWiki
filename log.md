@@ -203,3 +203,9 @@
 ## 2026-06-05
 
 **13:20 /wiki-reddit** — 14 subs via RSS fallback (JSON API 403). 1202 posts scanned, 4 entries created: claude-opus-4-8-release (news), agent-lifespan-agingbench (concepts), dual-brain-agentic-protocol (tools), noosphere-ai-memory (tools). 4 URLs queued to inbox/links.md. Index: 185 total.
+
+---
+
+## 2026-06-06
+
+**09:47 /wiki-reddit** — 14 subs via RSS, 2nd 2-week pass. 2 new entries from newer threads: kimi-code-cli (tools), ab-method-workflow (tools). 7 model/tool URLs queued to inbox. Index: 187 total.

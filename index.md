@@ -1,5 +1,5 @@
 # LLM Wiki Index
-_Last updated: 2026-06-05 | Total entries: 185_
+_Last updated: 2026-06-05 | Total entries: 187_
 
 ## 🤖 Agents (23)
 - [[acdc-agent-centric-development-cycle]] — Edgar Kussberg (Product Director at SonarQube, former AI strategy lead at SNIK) presents the Agent-Centric Development Cycle (AC/DC) — a framework for restructuring the entire SDLC around AI agents rather than treating agents as add-ons to existing workflows.
@@ -53,9 +53,10 @@ _Last updated: 2026-06-05 | Total entries: 185_
 - [[surveygen-i-scientific-survey]] — SurveyGen-I generates long-form, internally consistent scientific surveys through a coarse-to-fine retrieval loop combined with a terminology memory mechanism that stores previously written definitions and prevents re-explanation across sections and across subsequent generation runs.
 - [[yandex-agents-week-2026-intro]] — Opening lecture of Yandex Education's Agents Week 2026 intensive, covering the evolution of human-LLM interaction, what LLMs are (weights, next-token prediction), how they train, what they do well, and building a basic agent in practice.
 
-## 🛠️ Tools (52)
+## 🛠️ Tools (54)
 - [[dotnet-agent-skills]] — Microsoft's official .NET Agent Skills repository provides 14 curated plugin packages that AI coding agents (Copilot CLI, Claude Code, Cursor, Codex) load on demand for consistent, high-quality .NET development across ASP.NET Core, Blazor, MAUI, EF, diagnostics, and more.
 - [[9router-free-ai-coding]] — 9router is an open-source local proxy router that connects any AI coding tool (Claude Code, Codex, Cursor, Cline, Copilot, OpenClaw) to 40+ providers including completely free tiers, automatically saves 20–40% of tokens per request via RTK compression, and falls back across tiers (subscription → cheap → free) so you never stop mid-session.
+- [[ab-method-workflow]] — ab-method is a workflow system for Claude Code and Codex that "grills" a problem statement into a domain-grounded implementation plan, then either drives it through test-driven missions you review one at a time, or hands it to an autonomous `/goal` loop with verifiable stop conditions.
 - [[agentmemory]] — agentmemory is an open-source persistent memory server for AI coding agents — extending Karpathy's LLM Wiki pattern with confidence scoring, memory lifecycle (decay + auto-forget), knowledge graphs, and hybrid BM25+vector+graph search — that silently captures what agents do across sessions and injects the right context when the next session starts.
 - [[automathkg]] — AutoMathKG is an automated mathematical knowledge graph that uses LLMs and vector databases to build a high-quality, wide-coverage, multi-dimensional representation of mathematical knowledge.
 - [[awesome-agent-skills]] — A community-curated collection of 1000+ agent skills from official engineering teams (Anthropic, Google, Vercel, Cloudflare, Sentry, Microsoft, and more), compatible with Claude Code, Codex, Gemini CLI, Cursor, OpenCode, and other coding agents.
@@ -79,6 +80,7 @@ _Last updated: 2026-06-05 | Total entries: 185_
 - [[graphify-llm-wiki]] — Graphify is an AI coding assistant skill (21k+ GitHub stars) that applies Karpathy's LLM Wiki pattern to codebases — it reads your source files, builds a structured knowledge graph, and surfaces relationships and structures you didn't know were there.
 - [[grobid-pdf-parser]] — GROBID (GeneRation Of BIbliographic Data) is a machine learning library for extracting, parsing, and restructuring raw documents — especially scientific PDFs — into structured TEI XML.
 - [[han-claude-code-plugin]] — Han is a Claude Code plugin by Test Double that gives solo or small-team engineers access to a swarm of specialist AI agents for planning, code review, architectural analysis, and documentation — work that normally requires a full team.
+- [[kimi-code-cli]] — Kimi Code is Moonshot AI's official terminal coding agent (1.9k stars, MIT licensed) — a single-binary CLI that reads and edits code, runs shell commands, searches files, and fetches web pages, with native MCP support, subagents, lifecycle hooks, and a notable video-input capability for screen recordings.
 - [[lightrag-graph-rag]] — LightRAG is a graph-enhanced RAG system that integrates knowledge graph structures into text indexing and retrieval, achieving significantly lower cost and faster performance than Microsoft GraphRAG while supporting incremental updates.
 - [[llm-wiki-ecosystem]] — A curated map of open-source implementations of Karpathy's LLM Wiki pattern, updated to reflect the May 2026 ecosystem: 30+ repos, a peer-reviewed scientific benchmark (WiCER), a dedicated hub site, and two distinct camps — personal PKM tools and agent knowledge layers.
 - [[llmwiki-open-source]] — An open-source implementation of Karpathy's LLM Wiki pattern: point it at a folder of research files, start the local app, and connect Claude via MCP — Claude then reads sources, writes wiki pages, and maintains cross-references and citations automatically.

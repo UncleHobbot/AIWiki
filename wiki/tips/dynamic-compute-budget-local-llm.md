@@ -37,6 +37,13 @@ Community note (r/LocalLLaMA): "The community would probably pool money together
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
 - [[sparky-offline-edge-ai-robot]] ([Sparky: Fully Offline Edge AI Robot](../tools/sparky-offline-edge-ai-robot.md))
+- [[dual-dgx-spark-deepseek-v4-flash]] ([Dual DGX Spark Setup for Running DeepSeek V4 Flash Locally](../tips/dual-dgx-spark-deepseek-v4-flash.md))
+- [[llm-wrapper-performance-gap]] ([The LLM Wrapper Performance Gap: Same Model, Different Results](../tips/llm-wrapper-performance-gap.md))
+- [[mtp-hardware-dependent-speedup]] ([MTP Hardware-Dependent Speedup (Gemma 4)](../tips/mtp-hardware-dependent-speedup.md))
+- [[q4-0-quant-scale-deduplication]] ([Deduplicating Quantization Scales to Shrink Q4_0 GGUF Files](../tips/q4-0-quant-scale-deduplication.md))
+- [[turbo-llm-launcher]] ([Turbo-LLM: Run Any llama.cpp Fork Without Compiling](../tools/turbo-llm-launcher.md))
+- [[ollama-cloud-quality-concerns]] ([Ollama Cloud Quality Concerns](../news/ollama-cloud-quality-concerns.md))
+- [[nvidia-sol-execbench]] ([NVIDIA SOL-ExecBench](../concepts/nvidia-sol-execbench.md))
 ---
 <!-- RU -->
 
@@ -67,3 +74,10 @@ Community note (r/LocalLLaMA): "The community would probably pool money together
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[karpathy-deep-dive-llms]] ([Karpathy: Deep Dive into LLMs like ChatGPT](../concepts/karpathy-deep-dive-llms.md))
 - [[sparky-offline-edge-ai-robot]] ([Sparky: Fully Offline Edge AI Robot](../tools/sparky-offline-edge-ai-robot.md))
+- [[dual-dgx-spark-deepseek-v4-flash]] ([Связка из двух DGX Spark для локального запуска DeepSeek V4 Flash](../tips/dual-dgx-spark-deepseek-v4-flash.md))
+- [[llm-wrapper-performance-gap]] ([Разрыв производительности LLM-обёрток: одна модель, разные результаты](../tips/llm-wrapper-performance-gap.md))
+- [[mtp-hardware-dependent-speedup]] ([Ускорение MTP зависит от железа (Gemma 4)](../tips/mtp-hardware-dependent-speedup.md))
+- [[q4-0-quant-scale-deduplication]] ([Дедупликация scale-значений для уменьшения GGUF-файлов в Q4_0](../tips/q4-0-quant-scale-deduplication.md))
+- [[turbo-llm-launcher]] ([Turbo-LLM: запуск любого форка llama.cpp без компиляции](../tools/turbo-llm-launcher.md))
+- [[ollama-cloud-quality-concerns]] ([Проблемы качества Ollama Cloud](../news/ollama-cloud-quality-concerns.md))
+- [[nvidia-sol-execbench]] ([NVIDIA SOL-ExecBench](../concepts/nvidia-sol-execbench.md))

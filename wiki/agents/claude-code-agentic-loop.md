@@ -35,6 +35,7 @@ When you give Claude a task, it doesn't produce a single response. Instead it ch
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[how-coding-agents-read-code]] ([How AI Coding Agents Really Read Code (Inside the Runtime)](../agents/how-coding-agents-read-code.md))
+- [[tool-calling-loop-management]] ([Managing Agentic Tool-Calling Loops: Hard Caps and Model Behavior](../tips/tool-calling-loop-management.md))
 
 ---
 <!-- RU -->
@@ -65,3 +66,4 @@ Claude Code — агентный ассистент, работающий по �
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[how-coding-agents-read-code]] ([How AI Coding Agents Really Read Code (Inside the Runtime)](../agents/how-coding-agents-read-code.md))
+- [[tool-calling-loop-management]] ([Управление циклами вызова инструментов в агентах: жёсткие ограничения и поведение моделей](../tips/tool-calling-loop-management.md))

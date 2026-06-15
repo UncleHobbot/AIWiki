@@ -31,6 +31,7 @@ The subagent design (coder/explore/plan) and lifecycle hooks indicate Moonshot i
 
 ## Related Entries
 - [[kimi-2-6-vs-glm-5-1-agent-reliability]] ([Kimi 2.6 vs GLM 5.1 Agent Reliability](../models/kimi-2-6-vs-glm-5-1-agent-reliability.md))
+- [[kimi-k2-7-code-release]] ([Kimi K2.7-Code Release](../news/kimi-k2-7-code-release.md))
 - [[product-claude-code]] ([Claude Code](../agents/product-claude-code.md))
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[claude-code-frameworks]] ([Claude Code Frameworks](../tools/claude-code-frameworks.md))
@@ -56,6 +57,7 @@ Kimi Code — ответ Moonshot AI на Claude Code и более широку
 
 ## Связанные записи
 - [[kimi-2-6-vs-glm-5-1-agent-reliability]] ([Kimi 2.6 vs GLM 5.1 Agent Reliability](../models/kimi-2-6-vs-glm-5-1-agent-reliability.md))
+- [[kimi-k2-7-code-release]] ([Релиз Kimi K2.7-Code](../news/kimi-k2-7-code-release.md))
 - [[product-claude-code]] ([Claude Code](../agents/product-claude-code.md))
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[claude-code-frameworks]] ([Claude Code Frameworks](../tools/claude-code-frameworks.md))

@@ -15,7 +15,8 @@ wiki_dir = Path('wiki')
 entries = []
 for f in sorted(wiki_dir.rglob('*.md')):
     rel = f.relative_to(wiki_dir)
-    slug = rel.with_suffix('').as_posix()
+    cat_dir = rel.parts[0]
+    slug = f.stem
     text = read_text(f)
     m = re.match(r'^---\s*\n(.*?)\n---', text, re.DOTALL)
     if not m:
@@ -25,14 +26,17 @@ for f in sorted(wiki_dir.rglob('*.md')):
         if ':' in line:
             key, _, val = line.partition(':')
             fm[key.strip()] = val.strip().strip('"').strip("'")
-    title = fm.get('title', slug.split('/')[-1])
-    cat = fm.get('category', 'concepts')
+    title = fm.get('title', slug)
+    cat = fm.get('category', cat_dir)
     date = fm.get('date', '')
     sum_m = re.search(r'## Summary\s*\n(.+?)(?:\n##|\n---)', text, re.DOTALL)
     summary = ''
     if sum_m:
-        summary = sum_m.group(1).strip().replace('\n', ' ')[:120]
-    entries.append({'slug': slug, 'title': title, 'cat': cat, 'date': date, 'summary': summary})
+        para = ' '.join(sum_m.group(1).strip().split())
+        first = re.match(r'(.*?[.!?])(\s|$)', para)
+        summary = first.group(1) if first else para
+    entries.append({'slug': slug, 'title': title, 'cat': cat, 'date': date,
+                     'summary': summary, 'path': f'wiki/{cat_dir}/{f.name}'})
 
 cats = {}
 for e in entries:
@@ -41,11 +45,6 @@ for e in entries:
 total = len(entries)
 lines = [f'# LLM Wiki Index', f'**{total} entries** across {len(cats)} categories.', '']
 
-EMOJIS = {
-    'concepts': '[concepts]', 'tools': '[tools]', 'agents': '[agents]',
-    'models': '[models]', 'news': '[news]', 'tips': '[tips]',
-    'people': '[people]', 'research': '[research]'
-}
 NAMES = {
     'concepts': 'Concepts', 'tools': 'Tools', 'agents': 'Agents',
     'models': 'Models', 'news': 'News', 'tips': 'Tips',
@@ -62,16 +61,12 @@ for cat in ORDER:
     else:
         items.sort(key=lambda x: x['slug'])
     name = NAMES.get(cat, cat.capitalize())
-    lines.append(f'## {EMOJIS.get(cat, "[?]")} {name} ({len(items)})')
+    lines.append(f'## {name} ({len(items)})')
     for e in items:
-        desc = e['summary']
-        prefix = f' {desc}' if desc else ''
-        if cat == 'news' and e['date']:
-            prefix = f' -- {e["date"]}' + prefix
-        sp = e['slug']
-        pp = sp.replace('/', '\\\\')
-        lines.append(f'- [[{sp}]] [{e["title"]}](wiki\\{pp}.md){prefix}')
+        prefix = f'{e["date"]} ' if cat == 'news' and e['date'] else ''
+        suffix = f' — {e["summary"]}' if e['summary'] else ''
+        lines.append(f'- {prefix}[[{e["slug"]}]] [{e["title"]}]({e["path"]}){suffix}')
     lines.append('')
 
-Path('index.md').write_text('\n'.join(lines), encoding='utf-8')
+Path('index.md').write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
 print(f'Index rebuilt: {total} entries')

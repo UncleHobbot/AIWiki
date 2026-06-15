@@ -40,6 +40,8 @@ As one commenter noted: "The hidden cost of AI is 'Contextual Debt' — overload
 - [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks](../tips/claude-code-12-setup-tricks.md))
 - [[claude-code-prompting-era]] ([The New Prompting Era](../tips/claude-code-prompting-era.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[headroom-token-saver]] ([Headroom: Token-Saving Tool for Claude Code and Copilot](../tools/headroom-token-saver.md))
+- [[llm-wrapper-performance-gap]] ([The LLM Wrapper Performance Gap: Same Model, Different Results](../tips/llm-wrapper-performance-gap.md))
 
 ---
 <!-- RU -->
@@ -74,3 +76,5 @@ As one commenter noted: "The hidden cost of AI is 'Contextual Debt' — overload
 - [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks](../tips/claude-code-12-setup-tricks.md))
 - [[claude-code-prompting-era]] ([The New Prompting Era](../tips/claude-code-prompting-era.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
+- [[headroom-token-saver]] ([Headroom: инструмент экономии токенов для Claude Code и Copilot](../tools/headroom-token-saver.md))
+- [[llm-wrapper-performance-gap]] ([Разрыв производительности LLM-обёрток: одна модель, разные результаты](../tips/llm-wrapper-performance-gap.md))

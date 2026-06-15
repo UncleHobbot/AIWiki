@@ -39,6 +39,7 @@ A key practical advantage is the incremental update algorithm. Unlike systems th
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 - [[rag-explained-embeddings-vector-db]] ([RAG Explained in 18 Minutes: Embeddings, Vector DBs, and Advanced Techniques](../concepts/rag-explained-embeddings-vector-db.md))
 - [[local-rag-obsidian-zotero]] ([Local RAG: 100% Local Stack for Obsidian, Zotero, and Claude Code](../tools/local-rag-obsidian-zotero.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — Graph Memory for RAG](../tools/turbo-graph-rag-memory.md))
 
 ---
 <!-- RU -->
@@ -69,3 +70,4 @@ LightRAG разработан исследователями из Универс
 - [[karma-knowledge-graph-enrichment]] ([KARMA: Multi-Agent LLMs for Automated Knowledge Graph Enrichment](../concepts/karma-knowledge-graph-enrichment.md))
 - [[parness-automated-scientific-research]] ([PARNESS: End-to-End Automated Scientific Research with Cross-Run Knowledge](../tools/parness-automated-scientific-research.md))
 - [[rag-explained-embeddings-vector-db]] ([RAG Explained in 18 Minutes: Embeddings, Vector DBs, and Advanced Techniques](../concepts/rag-explained-embeddings-vector-db.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — графовая память для RAG](../tools/turbo-graph-rag-memory.md))

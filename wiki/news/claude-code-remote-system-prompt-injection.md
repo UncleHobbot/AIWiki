@@ -37,6 +37,9 @@ Practically, setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` blocks it for 
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[vibe-coding-security-checklist]] ([Vibe Coding Security Checklist: What AI Skips by Default](../tips/vibe-coding-security-checklist.md))
+- [[langgraph-rce-vulnerability]] ([LangGraph RCE Vulnerability Chain: SQL Injection to Full Code Execution](../news/langgraph-rce-vulnerability.md))
+- [[agentjacking-attack]] ([Agentjacking: Hijacking AI Coding Agents via Fake Sentry Error Reports](../news/agentjacking-attack.md))
 
 ---
 <!-- RU -->
@@ -61,3 +64,6 @@ Practically, setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` blocks it for 
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[vibe-coding-security-checklist]] ([Чек-лист безопасности для vibe coding: что AI пропускает по умолчанию](../tips/vibe-coding-security-checklist.md))
+- [[langgraph-rce-vulnerability]] ([Цепочка уязвимостей LangGraph: от SQL-инъекции до полного RCE](../news/langgraph-rce-vulnerability.md))
+- [[agentjacking-attack]] ([Agentjacking: перехват AI-кодинг-агентов через фальшивые отчёты об ошибках Sentry](../news/agentjacking-attack.md))

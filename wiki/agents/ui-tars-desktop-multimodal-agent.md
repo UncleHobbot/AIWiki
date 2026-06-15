@@ -75,6 +75,7 @@ UI-TARS Desktop is powered by the **UI-TARS model** (arXiv:2501.12326) — a nat
 - [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] ([Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw, NemoClaw, Zo](../agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[self-improving-gui-agent]] ([Self-Improving GUI Agent (MIT)](../agents/self-improving-gui-agent.md))
 
 ---
 <!-- RU -->
@@ -101,3 +102,4 @@ UI-TARS Desktop и Agent TARS — два open-source мультимодальн�
 - [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] ([Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw, NemoClaw, Zo](../agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
+- [[self-improving-gui-agent]] ([Самоулучшающийся GUI-агент (MIT)](../agents/self-improving-gui-agent.md))

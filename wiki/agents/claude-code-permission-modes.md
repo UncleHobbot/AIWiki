@@ -31,6 +31,7 @@ Claude Code's permission modes control how often it pauses to ask approval befor
 ## Related Entries
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[temenos-agent-sandbox]] ([temenos — Sandbox for Agent-Executed Code](../tools/temenos-agent-sandbox.md))
 
 ---
 <!-- RU -->
@@ -58,3 +59,4 @@ Claude Code's permission modes control how often it pauses to ask approval befor
 ## Связанные записи
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[temenos-agent-sandbox]] ([temenos — песочница для кода, выполняемого агентами](../tools/temenos-agent-sandbox.md))

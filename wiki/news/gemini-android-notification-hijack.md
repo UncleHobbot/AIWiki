@@ -25,6 +25,7 @@ The research builds on SafeBreach's earlier "Invitation Is All You Need" work us
 ## Related Entries
 - [[chatgpt-lockdown-mode]] ([ChatGPT Lockdown Mode](../news/chatgpt-lockdown-mode.md))
 - [[claude-code-github-action-flaw]] ([Claude Code GitHub Action Flaw](../news/claude-code-github-action-flaw.md))
+- [[google-gemini-smishing-lawsuit]] ([Google Sues Chinese Smishing Network for Weaponizing Gemini AI](../news/google-gemini-smishing-lawsuit.md))
 
 ---
 <!-- RU -->
@@ -45,3 +46,4 @@ The research builds on SafeBreach's earlier "Invitation Is All You Need" work us
 ## Связанные записи
 - [[chatgpt-lockdown-mode]] ([ChatGPT Lockdown Mode](../news/chatgpt-lockdown-mode.md))
 - [[claude-code-github-action-flaw]] ([Claude Code GitHub Action Flaw](../news/claude-code-github-action-flaw.md))
+- [[google-gemini-smishing-lawsuit]] ([Google судится с китайской сетью smishing-атак за Weaponizing ИИ Gemini](../news/google-gemini-smishing-lawsuit.md))

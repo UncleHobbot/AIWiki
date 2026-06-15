@@ -67,6 +67,7 @@ Claude charges tokens on everything in the context window at every turn, not jus
 - [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks](../tips/claude-code-12-setup-tricks.md))
 - [[context-engineering-ai-agents-pipeline]] ([Context Engineering for AI Agent Pipelines](../tips/context-engineering-ai-agents-pipeline.md))
 - [[claude-code-usage-reset-may-2026]] ([Claude Code Usage Reset May 2026](../news/claude-code-usage-reset-may-2026.md))
+- [[headroom-token-saver]] ([Headroom: Token-Saving Tool for Claude Code and Copilot](../tools/headroom-token-saver.md))
 
 ---
 <!-- RU -->
@@ -127,3 +128,4 @@ Claude тратит токены на всё в окне контекста пр
 - [[claude-code-12-setup-tricks]] ([12 Claude Code Setup Tricks](../tips/claude-code-12-setup-tricks.md))
 - [[context-engineering-ai-agents-pipeline]] ([Context Engineering for AI Agent Pipelines](../tips/context-engineering-ai-agents-pipeline.md))
 - [[claude-code-usage-reset-may-2026]] ([Claude Code Usage Reset May 2026](../news/claude-code-usage-reset-may-2026.md))
+- [[headroom-token-saver]] ([Headroom: инструмент экономии токенов для Claude Code и Copilot](../tools/headroom-token-saver.md))

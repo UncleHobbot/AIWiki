@@ -45,6 +45,7 @@ If memory and skills are the same layer, harness design simplifies to one questi
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[claude-code-frameworks]] ([Claude Code Skill Frameworks](../tools/claude-code-frameworks.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP Server with Persistent Rules Harness for Coding Agents](../tools/opensddrag-mcp-harness.md))
 
 ---
 <!-- RU -->
@@ -82,3 +83,4 @@ If memory and skills are the same layer, harness design simplifies to one questi
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[claude-code-frameworks]] ([Claude Code Skill Frameworks](../tools/claude-code-frameworks.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP-сервер с постоянным движком правил для coding-агентов](../tools/opensddrag-mcp-harness.md))

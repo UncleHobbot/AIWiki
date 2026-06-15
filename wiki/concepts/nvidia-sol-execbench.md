@@ -36,6 +36,8 @@ The benchmark is particularly relevant for teams using AI agents to write or opt
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[clean-architecture-ai-coding-era]] ([Clean Architecture in AI Coding Era](../concepts/clean-architecture-ai-coding-era.md))
 - [[minicheck-fact-verification]] ([MiniCheck Fact Verification](../tools/minicheck-fact-verification.md))
+- [[pyrecall-catastrophic-forgetting]] ([Pyrecall — Detect Catastrophic Forgetting](../tools/pyrecall-catastrophic-forgetting.md))
+- [[dual-dgx-spark-deepseek-v4-flash]] ([Dual DGX Spark Setup for Running DeepSeek V4 Flash Locally](../tips/dual-dgx-spark-deepseek-v4-flash.md))
 
 ---
 <!-- RU -->
@@ -63,3 +65,5 @@ SOL-ExecBench решает эту проблему, предоставляя с�
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[clean-architecture-ai-coding-era]] ([Clean Architecture in AI Coding Era](../concepts/clean-architecture-ai-coding-era.md))
 - [[minicheck-fact-verification]] ([MiniCheck Fact Verification](../tools/minicheck-fact-verification.md))
+- [[pyrecall-catastrophic-forgetting]] ([Pyrecall — обнаружение катастрофического забывания](../tools/pyrecall-catastrophic-forgetting.md))
+- [[dual-dgx-spark-deepseek-v4-flash]] ([Связка из двух DGX Spark для локального запуска DeepSeek V4 Flash](../tips/dual-dgx-spark-deepseek-v4-flash.md))

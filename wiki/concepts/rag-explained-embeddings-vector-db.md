@@ -36,6 +36,7 @@ Russian-language deep dive into RAG (Retrieval Augmented Generation) — from ba
 - [[rags-evolution-agentic-ai]] ([RAG's Evolution: From Simple Retrieval to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — Graph Memory for RAG](../tools/turbo-graph-rag-memory.md))
 
 ---
 <!-- RU -->
@@ -64,3 +65,4 @@ Russian-language deep dive into RAG (Retrieval Augmented Generation) — from ba
 - [[rags-evolution-agentic-ai]] ([RAG's Evolution: From Simple Retrieval to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs. LLM Wiki Pattern: Use Cases, Trade-offs, and When to Combine](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — графовая память для RAG](../tools/turbo-graph-rag-memory.md))

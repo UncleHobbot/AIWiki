@@ -233,6 +233,8 @@ Managed cloud computer-as-a-service. Not open-source; not self-hostable. Access 
 - [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
 - [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
 - [[hermes-agent-llm-wiki-integration]] ([Hermes Agent + LLM Wiki](../agents/hermes-agent-llm-wiki-integration.md))
+- [[openclaw-free-hosting]] ([OpenClaw Hosting Goes Free](../news/openclaw-free-hosting.md))
+- [[product-hermes-agent]] ([Hermes Agent](../agents/product-hermes-agent.md))
 
 ---
 <!-- RU -->
@@ -346,3 +348,5 @@ MIT, ~134k звёзд, Nous Research. Ключевая функция: петл�
 - [[new-organizational-models-ai-agents]] ([New Organizational Models for the Age of AI Agents](../agents/new-organizational-models-ai-agents.md))
 - [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
 - [[hermes-agent-llm-wiki-integration]] ([Hermes Agent + LLM Wiki](../agents/hermes-agent-llm-wiki-integration.md))
+- [[openclaw-free-hosting]] ([Хостинг OpenClaw стал бесплатным](../news/openclaw-free-hosting.md))
+- [[product-hermes-agent]] ([Hermes Agent](../agents/product-hermes-agent.md))

@@ -36,6 +36,7 @@ No official announcement had been made at time of writing. The post's 70 pts and
 - [[agent-orchestration-multi-model-framework]] ([Agent Orchestration Multi-Model Framework](../agents/agent-orchestration-multi-model-framework.md))
 - [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Code Review Setup](../tips/chorus-multi-model-setup.md))
 - [[agent-operating-system]] ([Agent Operating System](../agents/agent-operating-system.md))
+- [[google-gemini-smishing-lawsuit]] ([Google Sues Chinese Smishing Network for Weaponizing Gemini AI](../news/google-gemini-smishing-lawsuit.md))
 
 ---
 <!-- RU -->
@@ -62,3 +63,4 @@ No official announcement had been made at time of writing. The post's 70 pts and
 - [[agent-orchestration-multi-model-framework]] ([Agent Orchestration Multi-Model Framework](../agents/agent-orchestration-multi-model-framework.md))
 - [[chorus-multi-model-setup]] ([CHORUS: Multi-Model Code Review Setup](../tips/chorus-multi-model-setup.md))
 - [[agent-operating-system]] ([Agent Operating System](../agents/agent-operating-system.md))
+- [[google-gemini-smishing-lawsuit]] ([Google судится с китайской сетью smishing-атак за Weaponizing ИИ Gemini](../news/google-gemini-smishing-lawsuit.md))

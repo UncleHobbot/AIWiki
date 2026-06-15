@@ -32,6 +32,7 @@ The Copilot SDK (technical preview as of 2026) exposes the same execution engine
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
 - [[cpt-copilot-terminal]] ([cpt: Inline Copilot Chat for Any Terminal](../tools/cpt-copilot-terminal.md))
+- [[product-github-copilot]] ([GitHub Copilot CLI and App](../tools/product-github-copilot.md))
 
 ---
 <!-- RU -->
@@ -60,3 +61,4 @@ Copilot SDK (техническое превью на 2026 год) предос�
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
 - [[cpt-copilot-terminal]] ([cpt: Inline Copilot Chat for Any Terminal](../tools/cpt-copilot-terminal.md))
+- [[product-github-copilot]] ([GitHub Copilot CLI и App](../tools/product-github-copilot.md))

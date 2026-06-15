@@ -45,6 +45,7 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[ai-agents-arr-framework-ooda-loop]] ([AI Agents: ARR Framework, OODA Loop](../concepts/ai-agents-arr-framework-ooda-loop.md))
+- [[llm-wrapper-performance-gap]] ([The LLM Wrapper Performance Gap: Same Model, Different Results](../tips/llm-wrapper-performance-gap.md))
 ---
 <!-- RU -->
 
@@ -76,3 +77,4 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[anatomy-ai-agent-pipeline-loop-tools]] ([Anatomy of an AI Agent: Pipeline, Loop, Tools, and Traps](../agents/anatomy-ai-agent-pipeline-loop-tools.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[ai-agents-arr-framework-ooda-loop]] ([AI Agents: ARR Framework, OODA Loop](../concepts/ai-agents-arr-framework-ooda-loop.md))
+- [[llm-wrapper-performance-gap]] ([Разрыв производительности LLM-обёрток: одна модель, разные результаты](../tips/llm-wrapper-performance-gap.md))

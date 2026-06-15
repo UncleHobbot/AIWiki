@@ -35,6 +35,8 @@ The multi-provider recall orchestration supports Noosphere articles alongside Hi
 - [[anthropic-agent-memory-dreaming]] ([Anthropic Agent Memory & Dreaming](../agents/anthropic-agent-memory-dreaming.md))
 - [[shokunin-memory-system]] ([Shokunin Memory System](../tools/shokunin-memory-system.md))
 - [[agent-lifespan-agingbench]] ([Agent Lifespan Engineering: AgingBench](../concepts/agent-lifespan-agingbench.md))
+- [[atomicmemory-semantic-memory]] ([AtomicMemory](../tools/atomicmemory-semantic-memory.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — Graph Memory for RAG](../tools/turbo-graph-rag-memory.md))
 
 ---
 <!-- RU -->
@@ -59,3 +61,5 @@ Noosphere решает конкретный пробел в памяти аге�
 - [[anthropic-agent-memory-dreaming]] ([Anthropic Agent Memory & Dreaming](../agents/anthropic-agent-memory-dreaming.md))
 - [[shokunin-memory-system]] ([Shokunin Memory System](../tools/shokunin-memory-system.md))
 - [[agent-lifespan-agingbench]] ([Agent Lifespan Engineering: AgingBench](../concepts/agent-lifespan-agingbench.md))
+- [[atomicmemory-semantic-memory]] ([AtomicMemory](../tools/atomicmemory-semantic-memory.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — графовая память для RAG](../tools/turbo-graph-rag-memory.md))

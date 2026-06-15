@@ -73,6 +73,8 @@ Every captured session is replayable — scrub through prompts, tool calls, tool
 - [[shokunin-memory-system]] ([Shokunin: Persistent Memory for Coding Agents](../tools/shokunin-memory-system.md))
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[atomicmemory-semantic-memory]] ([AtomicMemory](../tools/atomicmemory-semantic-memory.md))
+- [[noosphere-ai-memory]] ([Noosphere: Auditable Human-AI Shared Memory Layer](../tools/noosphere-ai-memory.md))
 
 ---
 <!-- RU -->
@@ -106,3 +108,5 @@ npx @agentmemory/agentmemory          # запуск сервера памяти
 - [[shokunin-memory-system]] ([Shokunin: Persistent Memory for Coding Agents](../tools/shokunin-memory-system.md))
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
+- [[atomicmemory-semantic-memory]] ([AtomicMemory](../tools/atomicmemory-semantic-memory.md))
+- [[noosphere-ai-memory]] ([Noosphere: проверяемый общий слой памяти для людей и AI](../tools/noosphere-ai-memory.md))

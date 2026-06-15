@@ -30,6 +30,9 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[github-spec-kit]] ([GitHub Spec-Kit: Spec-Driven Development Toolkit](../tools/github-spec-kit.md))
 - [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill](./llm-git-knowledge-accumulation.md))
+- [[ab-method-workflow]] ([ab-method: Domain-Grounded Planning Workflow for Claude Code and Codex](../tools/ab-method-workflow.md))
+- [[break-tasks-into-tiny-pieces-ai-coding]] ([Break It Into Tiny Pieces: The Real Lesson from a Month-Long AI-Coded Game](../tips/break-tasks-into-tiny-pieces-ai-coding.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP Server with Persistent Rules Harness for Coding Agents](../tools/opensddrag-mcp-harness.md))
 ---
 <!-- RU -->
 
@@ -55,3 +58,6 @@ Fabrice Monnier shares his personal journey from vibe coding (magical but fragil
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[github-spec-kit]] ([GitHub Spec-Kit: Spec-Driven Development Toolkit](../tools/github-spec-kit.md))
 - [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill](./llm-git-knowledge-accumulation.md))
+- [[ab-method-workflow]] ([ab-method: workflow планирования с привязкой к домену для Claude Code и Codex](../tools/ab-method-workflow.md))
+- [[break-tasks-into-tiny-pieces-ai-coding]] ([Разбивай на мелкие части: главный урок месячного проекта с AI-кодингом](../tips/break-tasks-into-tiny-pieces-ai-coding.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP-сервер с постоянным движком правил для coding-агентов](../tools/opensddrag-mcp-harness.md))

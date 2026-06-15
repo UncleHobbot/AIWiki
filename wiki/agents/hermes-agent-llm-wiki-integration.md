@@ -59,6 +59,7 @@ The Nous Research team demonstrated this by feeding Hermes their own GitHub proj
 - [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] ([Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw](../agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md))
 - [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem](../tools/llm-wiki-ecosystem.md))
 - [[awesome-agent-skills]] ([Awesome Agent Skills](../tools/awesome-agent-skills.md))
+- [[product-hermes-agent]] ([Hermes Agent](../agents/product-hermes-agent.md))
 
 ---
 <!-- RU -->
@@ -97,3 +98,4 @@ Hermes Agent (26 000+ звёзд на GitHub) — это open-source самох�
 - [[autonomous-personal-agents-openclaw-hermes-zeroclaw]] ([Autonomous Personal AI Agents: OpenClaw, Hermes, ZeroClaw](../agents/autonomous-personal-agents-openclaw-hermes-zeroclaw.md))
 - [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem](../tools/llm-wiki-ecosystem.md))
 - [[awesome-agent-skills]] ([Awesome Agent Skills](../tools/awesome-agent-skills.md))
+- [[product-hermes-agent]] ([Hermes Agent](../agents/product-hermes-agent.md))

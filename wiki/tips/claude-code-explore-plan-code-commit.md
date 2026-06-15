@@ -42,6 +42,9 @@ From Anthropic's official YouTube channel (May 17, 2026). Short instructional cl
 - [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development](../tips/spec-driven-development-bmad.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[codeboarding-architecture-diagrams]] ([CodeBoarding: Live Architecture Diagrams That Track Agent Changes](../tools/codeboarding-architecture-diagrams.md))
+- [[break-tasks-into-tiny-pieces-ai-coding]] ([Break It Into Tiny Pieces: The Real Lesson from a Month-Long AI-Coded Game](../tips/break-tasks-into-tiny-pieces-ai-coding.md))
+- [[investigate-before-plan-workflow]] ([Investigate-Then-Handoff: A Workflow for Better Coding-Agent Plans](../tips/investigate-before-plan-workflow.md))
 
 ---
 <!-- RU -->
@@ -75,3 +78,6 @@ From Anthropic's official YouTube channel (May 17, 2026). Short instructional cl
 - [[test-driven-agentic-behaviours]] ([Test-Driven Agentic Behaviours](../tips/test-driven-agentic-behaviours.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development](../tips/spec-driven-development-bmad.md))
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows Best Practices](../tips/claude-code-workflows-best-practices.md))
+- [[codeboarding-architecture-diagrams]] ([CodeBoarding: живые архитектурные диаграммы, отслеживающие изменения агента](../tools/codeboarding-architecture-diagrams.md))
+- [[break-tasks-into-tiny-pieces-ai-coding]] ([Разбивай на мелкие части: главный урок месячного проекта с AI-кодингом](../tips/break-tasks-into-tiny-pieces-ai-coding.md))
+- [[investigate-before-plan-workflow]] ([Сначала исследование, потом передача: workflow для лучших планов coding agent](../tips/investigate-before-plan-workflow.md))

@@ -39,6 +39,8 @@ The MCP server integration is notable: any MCP-compatible host can connect to At
 - [[tencent-db-agent-memory]] ([Tencent DB Agent Memory](../tools/tencent-db-agent-memory.md))
 - [[shokunin-memory-system]] ([Shokunin Memory System](../tools/shokunin-memory-system.md))
 - [[ilnamiqui-session-memory]] ([Ilnamiqui Session Memory](../tips/ilnamiqui-session-memory.md))
+- [[noosphere-ai-memory]] ([Noosphere: Auditable Human-AI Shared Memory Layer](../tools/noosphere-ai-memory.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — Graph Memory for RAG](../tools/turbo-graph-rag-memory.md))
 
 ---
 <!-- RU -->
@@ -72,3 +74,5 @@ AtomicMemory решает фундаментальную проблему аге
 - [[tencent-db-agent-memory]] ([Tencent DB Agent Memory](../tools/tencent-db-agent-memory.md))
 - [[shokunin-memory-system]] ([Shokunin Memory System](../tools/shokunin-memory-system.md))
 - [[ilnamiqui-session-memory]] ([Ilnamiqui Session Memory](../tips/ilnamiqui-session-memory.md))
+- [[noosphere-ai-memory]] ([Noosphere: проверяемый общий слой памяти для людей и AI](../tools/noosphere-ai-memory.md))
+- [[turbo-graph-rag-memory]] ([turbo-graph — графовая память для RAG](../tools/turbo-graph-rag-memory.md))

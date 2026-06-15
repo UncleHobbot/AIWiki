@@ -39,6 +39,7 @@ Early adopter Oren Melamed (GitHub Star) described it as growing into "a new way
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
 - [[github-agentic-developer-certification]] ([GitHub GH-600: Agentic AI Developer Certification](../news/github-agentic-developer-certification.md))
+- [[product-github-copilot]] ([GitHub Copilot CLI and App](../tools/product-github-copilot.md))
 
 ---
 <!-- RU -->
@@ -62,3 +63,4 @@ GitHub Copilot App (репозиторий: `github/app`) вышел в мае 2
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
 - [[github-agentic-developer-certification]] ([GitHub GH-600: Agentic AI Developer Certification](../news/github-agentic-developer-certification.md))
+- [[product-github-copilot]] ([GitHub Copilot CLI и App](../tools/product-github-copilot.md))

@@ -221,3 +221,35 @@
 **11:16 /wiki-reddit** — 3 entries created: ashub-deepseek-coding-agent (tools), tool-calling-loop-management (tips), custom-agent-loop-vs-sdk (agents). Index: 199 total.
 
 **11:22 /wiki-hackernews** — 5 entries created: claude-code-github-action-flaw (news), ai-agent-ffmpeg-zero-days (news), chatgpt-lockdown-mode (news), gemini-android-notification-hijack (news), smart-tv-ai-scraping-proxies (news). Index: 204 total.
+
+**11:36 /wiki-update** — Updated llm-wiki-chinese-models-comparison: added Qwen3.7 Max (BenchLM 91), MiniMax-M3, MiMo-V2.5-Pro benchmarks. Corrected pricing, added Art.Analysis scores, LM Arena rankings, 7 new sources.
+
+---
+
+## 2026-06-11
+
+**09:22 /wiki-reddit** — 16 subs scanned, 10 entries created: claude-fable-5-ai-research-restrictions (news), huawei-deepseek-v4-ascend-training (news), opencoderag-rag-plugin (tools), mimo-code-xiaomi-opencode-fork (tools), amore-opencode-research-plugin (tools), oc-claw-agent-monitor (tools), self-improving-gui-agent (agents), openclaw-free-hosting (news), small-models-clean-architecture (tips), mtp-hardware-dependent-speedup (tips). 8 URLs queued. Index: 214 total.
+
+**09:32 /wiki-hackernews** — 9 articles fetched, 2 qualified, 2 entries created: claude-fable-5-mythos-5-release (news), self-replicating-ai-worm-local-models (news). Index: 216 total.
+
+**20:24 /wiki-reddit** — 16 subs scanned (2 rate-limited), 302 posts fetched, 6 entries created: ship-skills-claude-code-pipeline (tools), grind-claude-code-nonstop (tools), turbo-graph-rag-memory (tools), temenos-agent-sandbox (tools), nex-n2-pro-mini-qwen-finetune (models), pyrecall-catastrophic-forgetting (tools). Index: 222 total.
+
+**20:26 /wiki-hackernews** — 12 articles fetched, 2 new qualified, 1 entry created: openclaw-agent-security-vulnerabilities (news). 10 skipped (already processed or no AI angle). Index: 223 total.
+
+---
+
+## 2026-06-14
+
+**09:55 /wiki-update** — Added GLM-5.2 and Kimi K2.7 Code entries; updated llm-wiki-chinese-models-comparison with new context, pricing, benchmark tables. Index: X total.
+
+**09:57 /wiki-create-core-stubs** — Created 4 bilingual entries: opencode (tools), claude-code (tools), glm-5-1 (models), kimi-k2-6 (models). Added 9 source URLs to processed_urls.json; critical broken links resolved.
+
+**10:14 /wiki-update** — Added detailed pricing sections to GLM-5.2 and Kimi K2.7 Code entries; enriched pricing tables and notes in llm-wiki-chinese-models-comparison (EN+RU).
+
+**10:44 /wiki-reddit** — 16 subs (RSS fallback, score-filter applied manually), 20 entries created: heimdall-ai-security-scanner (tools), claude-agent-sdk-credit-june-2026 (news), glm-5-2-release (news), kimi-k2-7-code-release (news), fable5-mythos5-export-control-suspension (news), verifier-tax-tool-agent-safety (concepts), turbo-llm-launcher (tools), opensddrag-mcp-harness (tools); 5 updated. 8 URLs queued. Index: 249.
+
+**10:44 /wiki-index** — index.md rebuilt (249 entries, 38 orphans flagged), 4 topic indexes regenerated, relations rebuilt for 249 entries.
+
+**10:55 /wiki-hackernews** — 30 articles fetched, 5 qualified, 3 entries created: langgraph-rce-vulnerability (news), agentjacking-attack (news), google-gemini-smishing-lawsuit (news). 2 already processed. Index: 252 total.
+
+**17:30 /wiki-check** — 0 RU sections missing (all complete), 24 broken links fixed (7 entries created + 10 rewritten as plain text), 39 orphans connected (40→1). Vault: 252+ entries.

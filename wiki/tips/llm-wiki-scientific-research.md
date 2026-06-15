@@ -73,6 +73,7 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../research/mathwiki-llm-research-automation.md))
 - [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Smith Map Research Wiki](../research/mathwiki-smith-maps-research.md))
+- [[researchclawbench-llm-research-reproduction]] ([ResearchClawBench: LLMs Score Only ~20-26/100 at Reproducing Scientific Research](../research/researchclawbench-llm-research-reproduction.md))
 ---
 <!-- RU -->
 
@@ -124,3 +125,4 @@ FutureHouse's WikiCrow (closest prior art at scale) generated Wikipedia articles
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[mathwiki-llm-research-automation]] ([LLM-Powered Math Research: Ideas to Steal for Your MathWiki](../research/mathwiki-llm-research-automation.md))
 - [[mathwiki-smith-maps-research]] ([AntonIliashenko/MathWiki: Smith Map Research Wiki](../research/mathwiki-smith-maps-research.md))
+- [[researchclawbench-llm-research-reproduction]] ([ResearchClawBench: LLM набирают лишь ~20-26/100 при воспроизведении научных исследований](../research/researchclawbench-llm-research-reproduction.md))

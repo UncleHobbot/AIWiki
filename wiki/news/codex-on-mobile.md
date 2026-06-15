@@ -27,6 +27,7 @@ The practical ceiling remains the mobile keyboard and screen — complex multi-f
 - [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
 - [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[codex-vs-claude-code-may-2026]] ([Codex vs Claude Code: Community Workflow Comparison (May 2026)](../tips/codex-vs-claude-code-may-2026.md))
 
 ---
 <!-- RU -->
@@ -49,3 +50,4 @@ Coding-агент Codex от OpenAI стал доступен на мобиль�
 - [[openai-100-dollar-tier]] ([OpenAI Launches $100/Month Tier](../news/openai-100-dollar-tier.md))
 - [[github-copilot-app]] ([GitHub Copilot App: Desktop Agent for Parallel Development](../news/github-copilot-app.md))
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
+- [[codex-vs-claude-code-may-2026]] ([Codex против Claude Code: сравнение рабочих процессов сообщества (май 2026)](../tips/codex-vs-claude-code-may-2026.md))

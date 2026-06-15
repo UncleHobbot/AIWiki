@@ -73,6 +73,8 @@ The gap between using AI occasionally and building an AI-native engineering work
 - [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 - [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
 - [[karpathy-claude-code-guidelines]] ([Karpathy-Inspired Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
+- [[yet-another-statusline]] ([Yet Another Statusline (YAS): Claude Code Status Bar Tool](../tools/yet-another-statusline.md))
+- [[headroom-token-saver]] ([Headroom: Token-Saving Tool for Claude Code and Copilot](../tools/headroom-token-saver.md))
 
 ---
 <!-- RU -->
@@ -114,3 +116,5 @@ The gap between using AI occasionally and building an AI-native engineering work
 - [[claude-code-plugins-guide]] ([Claude Code Plugins: Curated Guide to the Top 36](../tips/claude-code-plugins-guide.md))
 - [[claude-code-handoff-prototype-skills]] ([Claude Code Skills: /handoff, /prototype, and improve-codebase-architecture](../tips/claude-code-handoff-prototype-skills.md))
 - [[karpathy-claude-code-guidelines]] ([Karpathy-Inspired Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
+- [[yet-another-statusline]] ([Yet Another Statusline (YAS): строка статуса для Claude Code](../tools/yet-another-statusline.md))
+- [[headroom-token-saver]] ([Headroom: инструмент экономии токенов для Claude Code и Copilot](../tools/headroom-token-saver.md))

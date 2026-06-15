@@ -62,6 +62,9 @@ Skills and hooks are the iterative improvement layer: each skill encodes a lesso
 - [[specs-to-production-ai-agents]] ([From Specs to Production: Building Software with AI Agents End to End](../agents/specs-to-production-ai-agents.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
 - [[memory-skills-unified-harness]] ([Memory and Skills Are the Same Harness](../concepts/memory-skills-unified-harness.md))
+- [[ab-method-workflow]] ([ab-method: Domain-Grounded Planning Workflow for Claude Code and Codex](../tools/ab-method-workflow.md))
+- [[verifier-tax-tool-agent-safety]] ([The Verifier Tax: Safety-Success Tradeoffs in Tool-Using LLM Agents](../concepts/verifier-tax-tool-agent-safety.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP Server with Persistent Rules Harness for Coding Agents](../tools/opensddrag-mcp-harness.md))
 ---
 <!-- RU -->
 
@@ -103,3 +106,6 @@ CLAUDE.md и навыки — практическое выражение harnes
 - [[specs-to-production-ai-agents]] ([From Specs to Production: Building Software with AI Agents End to End](../agents/specs-to-production-ai-agents.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
 - [[memory-skills-unified-harness]] ([Memory and Skills Are the Same Harness](../concepts/memory-skills-unified-harness.md))
+- [[ab-method-workflow]] ([ab-method: workflow планирования с привязкой к домену для Claude Code и Codex](../tools/ab-method-workflow.md))
+- [[verifier-tax-tool-agent-safety]] ([Verifier Tax: компромисс между безопасностью и успехом у tool-using агентов](../concepts/verifier-tax-tool-agent-safety.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP-сервер с постоянным движком правил для coding-агентов](../tools/opensddrag-mcp-harness.md))

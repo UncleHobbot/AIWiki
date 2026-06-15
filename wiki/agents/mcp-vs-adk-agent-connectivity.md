@@ -74,6 +74,7 @@ Both can — and often should — be used together: ADK for the agent's structur
 - [[mcp-financial-data-server]] ([MCP Financial Data Server](../tools/mcp-financial-data-server.md))
 - [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs LLM Wiki Pattern](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
 - [[anthropic-agent-memory-dreaming]] ([Anthropic Agent Memory and Dreaming](../agents/anthropic-agent-memory-dreaming.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP Server with Persistent Rules Harness for Coding Agents](../tools/opensddrag-mcp-harness.md))
 
 ---
 <!-- RU -->
@@ -115,3 +116,4 @@ MCP (Model Context Protocol) и ADK (Agent Development Kit от Google) част
 - [[mcp-financial-data-server]] ([MCP Financial Data Server](../tools/mcp-financial-data-server.md))
 - [[gnosis-mcp-vs-llm-wiki-pattern]] ([Gnosis MCP vs LLM Wiki Pattern](../concepts/gnosis-mcp-vs-llm-wiki-pattern.md))
 - [[anthropic-agent-memory-dreaming]] ([Anthropic Agent Memory and Dreaming](../agents/anthropic-agent-memory-dreaming.md))
+- [[opensddrag-mcp-harness]] ([OpenSddRag: MCP-сервер с постоянным движком правил для coding-агентов](../tools/opensddrag-mcp-harness.md))

@@ -29,6 +29,7 @@ Poetiq frames LLM capability across three pillars — reasoning (ARC-AGI), retri
 ## Related Entries
 - [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
 - [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
+- [[self-improving-gui-agent]] ([Self-Improving GUI Agent (MIT)](../agents/self-improving-gui-agent.md))
 
 ---
 <!-- RU -->
@@ -51,3 +52,4 @@ Poetiq рассматривает возможности LLM через три �
 ## Связанные записи
 - [[self-guided-self-play]] ([Self-Guided Self-Play (SGS) for LLMs](../concepts/self-guided-self-play.md))
 - [[dynamic-compute-budget-local-llm]] ([Dynamic Compute Budget Allocation for Local LLMs](../tips/dynamic-compute-budget-local-llm.md))
+- [[self-improving-gui-agent]] ([Самоулучшающийся GUI-агент (MIT)](../agents/self-improving-gui-agent.md))

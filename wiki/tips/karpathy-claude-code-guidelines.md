@@ -34,6 +34,7 @@ The guidelines are designed to compose with project-specific instructions — ad
 ## Related Entries
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[investigate-before-plan-workflow]] ([Investigate-Then-Handoff: A Workflow for Better Coding-Agent Plans](../tips/investigate-before-plan-workflow.md))
 
 ---
 <!-- RU -->
@@ -62,3 +63,4 @@ The guidelines are designed to compose with project-specific instructions — ad
 ## Связанные записи
 - [[claude-code-workflows-best-practices]] ([Claude Code Workflows and Best Practices](../tips/claude-code-workflows-best-practices.md))
 - [[spec-driven-development-bmad]] ([Spec-Driven Development in the Real World: From BMAD to Custom Skills](../tips/spec-driven-development-bmad.md))
+- [[investigate-before-plan-workflow]] ([Сначала исследование, потом передача: workflow для лучших планов coding agent](../tips/investigate-before-plan-workflow.md))

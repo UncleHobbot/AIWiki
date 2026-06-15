@@ -327,6 +327,7 @@ Section 2.3 of the 2026 preprint (`output/smith-map-deformation-theory.pdf`) is 
 - [[llm-wiki-ecosystem]] ([LLM Wiki Ecosystem: Implementations and Variants](../tools/llm-wiki-ecosystem.md))
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git: Plan-Execute-Distill Loop](../tips/llm-git-knowledge-accumulation.md))
+- [[researchclawbench-llm-research-reproduction]] ([ResearchClawBench: LLMs Score Only ~20-26/100 at Reproducing Scientific Research](../research/researchclawbench-llm-research-reproduction.md))
 
 ---
 <!-- RU -->
@@ -428,3 +429,4 @@ Section 2.3 препринта пуста. Следующий шаг: напис
 - [[llm-wiki-ecosystem]] ([Экосистема LLM Wiki](../tools/llm-wiki-ecosystem.md))
 - [[llm-wiki-scientific-research]] ([LLM Wiki для научных исследований](../tips/llm-wiki-scientific-research.md))
 - [[llm-git-knowledge-accumulation]] ([LLM Project Memory via Git](../tips/llm-git-knowledge-accumulation.md))
+- [[researchclawbench-llm-research-reproduction]] ([ResearchClawBench: LLM набирают лишь ~20-26/100 при воспроизведении научных исследований](../research/researchclawbench-llm-research-reproduction.md))

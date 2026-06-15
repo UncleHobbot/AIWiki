@@ -29,6 +29,7 @@ Leandro Damasio (AI Engineer in financial/legal domains, building production LLM
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
 - [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[codeboarding-architecture-diagrams]] ([CodeBoarding: Live Architecture Diagrams That Track Agent Changes](../tools/codeboarding-architecture-diagrams.md))
 
 ---
 <!-- RU -->
@@ -53,3 +54,4 @@ Leandro Damasio (AI Engineer in financial/legal domains, building production LLM
 - [[claude-code-agentic-loop]] ([Claude Code Agentic Loop](../agents/claude-code-agentic-loop.md))
 - [[acdc-agent-centric-development-cycle]] ([AC/DC — Agent-Centric Development Cycle](../agents/acdc-agent-centric-development-cycle.md))
 - [[llm-assisted-coding-systems-perspective]] ([LLM-Assisted Coding: A Systems Perspective](../tips/llm-assisted-coding-systems-perspective.md))
+- [[codeboarding-architecture-diagrams]] ([CodeBoarding: живые архитектурные диаграммы, отслеживающие изменения агента](../tools/codeboarding-architecture-diagrams.md))

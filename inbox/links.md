@@ -2,6 +2,29 @@
 
 ## To Read
 
+https://github.com/leighstillard/ship-skills <!-- Ship Skills: 5 Claude Code skills for full PR pipeline (already processed) -->
+https://github.com/cloudlinqed/grind <!-- Grind: Claude Code hook that prevents agent from pausing (already processed) -->
+https://github.com/bigmacfive/turbo-graph/ <!-- turbo-graph: GraphMemoryIndex for RAG (already processed) -->
+https://github.com/vitalops/temenos <!-- temenos: gVisor sandbox for agent code execution (already processed) -->
+https://huggingface.co/nex-agi/Nex-N2-mini <!-- Nex-N2 Mini: 35B Qwen 3.5 fine-tune (already processed) -->
+https://github.com/Arths17/Pyrecall <!-- Pyrecall: detect catastrophic forgetting in fine-tunes (already processed) -->
+https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/ <!-- Wired: Anthropic walks back Fable 5 silent nerfing -->
+https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf <!-- Fable 5 model card PDF -->
+https://github.com/MrDoe/OpenCodeRAG <!-- OpenCodeRAG: RAG plugin for OpenCode via local models -->
+https://github.com/XiaomiMiMo/MiMo-Code <!-- MiMo-Code: Xiaomi's OpenCode fork -->
+https://github.com/lubludrova/ah-my-openresearch <!-- amore: OpenCode plugin for researchers -->
+https://github.com/rainnoon/oc-claw <!-- OC-Claw: desktop pet for agent monitoring -->
+https://bric.pe.kr/blog/mtp-hardware-dependent-gemma-12b-3090-vs-m1-max <!-- MTP hardware-dependent speedup analysis -->
+https://github.com/tanaos/cognitor <!-- Cognitor: open-source semantic search engine -->
+https://woliveiras.com/posts/hype-check-on-loop-engineering/ <!-- "Loop engineering" hype critique for coding agents -->
+https://fish.audio/blog/llms-txt-mcp-agent-skills/ <!-- llms.txt + MCP + Skills to fix outdated API docs in Claude Code -->
+https://github.com/harshv-v/Memgram <!-- Memgram: active memory layer for AI agents with decay/reinforcement -->
+https://llm2014.github.io/llm_benchmark <!-- Community SWE benchmark comparing GLM-5.2 and other coding models -->
+https://github.com/router-for-me/CLIProxyAPI <!-- CLIProxyAPI: proxy enabling Kimi inside Codex -->
+https://github.com/elsung/dgx-spark-deepseek-v4-flash <!-- Dual DGX Spark DeepSeek V4 Flash benchmark recipes -->
+https://github.com/mohitsoni48/Turbo-LLM <!-- Turbo-LLM repo: deeper read for usage details -->
+https://github.com/shadowbipnode/sysai-assistant <!-- SysAI Assistant: local-first AI ops/security workspace -->
+
 ## Done (May 28)
 https://github.com/beabys/ilnamiqui <!-- ilnamiqui: per-project session memory for OpenCode & Claude Code → ilnamiqui-session-memory (tools) -->
 https://github.com/atomicstrata/atomicmemory <!-- AtomicMemory: portable semantic memory for AI agents → atomicmemory-semantic-memory (tools) -->

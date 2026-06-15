@@ -47,6 +47,7 @@ RyotaK has now reported ~50 separate ways to bypass Claude Code's permission sys
 - [[claude-code-remote-system-prompt-injection]] ([Claude Code Remote System Prompt Injection](../news/claude-code-remote-system-prompt-injection.md))
 - [[malware-slop-npm-claude-user-directory]] ([Malware-Slop: npm Package Targeting Claude User Directory](../news/malware-slop-npm-claude-user-directory.md))
 - [[claude-security-plugin-code-review]] ([Claude Security Plugin: Built-in Vulnerability Review](../news/claude-security-plugin-code-review.md))
+- [[agentjacking-attack]] ([Agentjacking: Hijacking AI Coding Agents via Fake Sentry Error Reports](../news/agentjacking-attack.md))
 
 ---
 <!-- RU -->
@@ -73,3 +74,4 @@ RyotaK на сегодня сообщил ~50 способов обхода си
 - [[claude-code-remote-system-prompt-injection]] ([Claude Code Remote System Prompt Injection](../news/claude-code-remote-system-prompt-injection.md))
 - [[malware-slop-npm-claude-user-directory]] ([Malware-Slop: npm Package Targeting Claude User Directory](../news/malware-slop-npm-claude-user-directory.md))
 - [[claude-security-plugin-code-review]] ([Claude Security Plugin: Built-in Vulnerability Review](../news/claude-security-plugin-code-review.md))
+- [[agentjacking-attack]] ([Agentjacking: перехват AI-кодинг-агентов через фальшивые отчёты об ошибках Sentry](../news/agentjacking-attack.md))

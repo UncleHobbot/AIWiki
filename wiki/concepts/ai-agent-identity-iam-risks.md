@@ -39,6 +39,7 @@ The recommended response: treat AI agent identities as a first-class IAM problem
 - [[lawzero-scientist-ai-bengio]] ([LawZero: Bengio AI Alignment](../concepts/lawzero-scientist-ai-bengio.md))
 - [[llm-hallucination-bixonimania-case]] ([LLM Medical Hallucination: Bixonimania](../concepts/llm-hallucination-bixonimania-case.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
+- [[guardian-agents-identity-governance]] ([Guardian Agents: An Autonomous Control Layer for AI Agent Identity Governance](../concepts/guardian-agents-identity-governance.md))
 
 ---
 <!-- RU -->
@@ -70,3 +71,4 @@ AI-агенты обладают целеориентированной авто
 - [[lawzero-scientist-ai-bengio]] ([LawZero: Bengio AI Alignment](../concepts/lawzero-scientist-ai-bengio.md))
 - [[llm-hallucination-bixonimania-case]] ([LLM Medical Hallucination: Bixonimania](../concepts/llm-hallucination-bixonimania-case.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](../news/project-glasswing-anthropic-vulnerability-discovery.md))
+- [[guardian-agents-identity-governance]] ([Guardian Agents: An Autonomous Control Layer for AI Agent Identity Governance](../concepts/guardian-agents-identity-governance.md))

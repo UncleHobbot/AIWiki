@@ -33,6 +33,7 @@ The Copilot SDK (technical preview as of 2026) exposes the same execution engine
 - [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
 - [[cpt-copilot-terminal]] ([cpt: Inline Copilot Chat for Any Terminal](../tools/cpt-copilot-terminal.md))
 - [[product-github-copilot]] ([GitHub Copilot CLI and App](../tools/product-github-copilot.md))
+- [[unify-chat-provider-copilot-byok]] ([Unify Chat Provider: Use the VS Code Copilot Harness With Any BYOK Model](../tools/unify-chat-provider-copilot-byok.md))
 
 ---
 <!-- RU -->
@@ -62,3 +63,4 @@ Copilot SDK (техническое превью на 2026 год) предос�
 - [[llmwiki-open-source]] ([llmwiki (Open-Source Implementation)](../tools/llmwiki-open-source.md))
 - [[cpt-copilot-terminal]] ([cpt: Inline Copilot Chat for Any Terminal](../tools/cpt-copilot-terminal.md))
 - [[product-github-copilot]] ([GitHub Copilot CLI и App](../tools/product-github-copilot.md))
+- [[unify-chat-provider-copilot-byok]] ([Unify Chat Provider: Use the VS Code Copilot Harness With Any BYOK Model](../tools/unify-chat-provider-copilot-byok.md))

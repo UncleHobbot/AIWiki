@@ -253,3 +253,13 @@
 **10:55 /wiki-hackernews** — 30 articles fetched, 5 qualified, 3 entries created: langgraph-rce-vulnerability (news), agentjacking-attack (news), google-gemini-smishing-lawsuit (news). 2 already processed. Index: 252 total.
 
 **17:30 /wiki-check** — 0 RU sections missing (all complete), 24 broken links fixed (7 entries created + 10 rewritten as plain text), 39 orphans connected (40→1). Vault: 252+ entries.
+
+---
+
+## 2026-06-29
+
+**16:04 /wiki-reddit** — 16 subreddits scanned (all via RSS fallback; JSON API 403). 12 entries created: deepseek-v4-peak-pricing (news), dspark-speculative-decoding (concepts), qwen-agentworld (models), context-warp-drive (tools), world-model-mcp (tools), moe-watcher-modifier (tools), orkestra-multi-cli (tools), oxidellm-ollama-gateway (tools), unify-chat-provider-copilot-byok (tools), ai-rules-modular-instructions (tools), deepseek-flash-glm-advisor-config (tips), dual-gpu-subagent-parallelism (tips). 15 external URLs queued to inbox/links.md. Cursors updated for all 16 subs. Index: 271 total.
+
+**16:11 /wiki-hackernews** — 30 articles fetched, 2 qualified (score>=2). 1 entry created: guardian-agents-identity-governance (concepts) — autonomous control layer for AI agent identity governance. 1 skipped: DirtyClone Linux kernel CVE (no AI angle; spurious 'rag' substring match). 0 queued. Cursor + processed_urls updated. Index: 272 total. Topic indexes rebuilt (ai-agents: 95).
+
+**16:15 /wiki-check** — 272 entries scanned: 0 missing RU sections, 0 short RU sections. 0 broken links. 8 orphans found, 8 connected via backlinks to semantically close entries (ai-rules<-memory-skills, context-warp-drive<-agent-harness-engineering, orkestra+dual-gpu<-agent-orchestration, guardian-agents<-iam-risks, oxidellm<-product-ollama, product-llm-wiki<-llm-wiki-pattern, unify-chat-provider<-github-copilot-cli). Vault now: 0 orphans, 0 broken, 0 isolated. Index: 272.

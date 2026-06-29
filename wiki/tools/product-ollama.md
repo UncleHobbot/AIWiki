@@ -19,6 +19,7 @@ Ollama is a local LLM inference platform that lets you run large language models
 - [[choose-llm-api-self-host-hybrid]] ([API, Self-Host, or Hybrid](../tips/choose-llm-api-self-host-hybrid.md)) — How to choose an LLM deployment strategy
 - [[turbo-llm-launcher]] ([Turbo-LLM: Run Any llama.cpp Fork Without Compiling](../tools/turbo-llm-launcher.md))
 - [[ollama-cloud-quality-concerns]] ([Ollama Cloud Quality Concerns](../news/ollama-cloud-quality-concerns.md))
+- [[oxidellm-ollama-gateway]] ([oxideLLM: Rust Gateway That Stops Ollama Wasting GPU on Closed Tabs](../tools/oxidellm-ollama-gateway.md))
 
 ---
 <!-- RU -->
@@ -32,3 +33,4 @@ Ollama — платформа локального вывода LLM, позво�
 - [[choose-llm-api-self-host-hybrid]] — Как выбрать стратегию развёртывания LLM: API, self-host или гибрид
 - [[turbo-llm-launcher]] ([Turbo-LLM: запуск любого форка llama.cpp без компиляции](../tools/turbo-llm-launcher.md))
 - [[ollama-cloud-quality-concerns]] ([Проблемы качества Ollama Cloud](../news/ollama-cloud-quality-concerns.md))
+- [[oxidellm-ollama-gateway]] ([oxideLLM: Rust Gateway That Stops Ollama Wasting GPU on Closed Tabs](../tools/oxidellm-ollama-gateway.md))

@@ -51,6 +51,8 @@ Areas for improvement: (1) have the planner save its plan to a file and always p
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[chorus-multi-llm-code-review]] ([Chorus: Multi-LLM Code Review](../tips/chorus-multi-llm-code-review.md))
 - [[mcp-vs-adk-agent-connectivity]] ([MCP vs ADK](../agents/mcp-vs-adk-agent-connectivity.md))
+- [[orkestra-multi-cli]] ([Orkestra: Multi-CLI Studio to Run Claude Code, Codex, and Gemini From One Panel](../tools/orkestra-multi-cli.md))
+- [[dual-gpu-subagent-parallelism]] ([Parallelism Beats Higher Quants: Dual-GPU Subagent Strategy for Local Coding Agents](../tips/dual-gpu-subagent-parallelism.md))
 
 ---
 <!-- RU -->
@@ -88,3 +90,5 @@ Areas for improvement: (1) have the planner save its plan to a file and always p
 - [[github-copilot-cli]] ([GitHub Copilot CLI](../tools/github-copilot-cli.md))
 - [[chorus-multi-llm-code-review]] ([Chorus: Multi-LLM Code Review](../tips/chorus-multi-llm-code-review.md))
 - [[mcp-vs-adk-agent-connectivity]] ([MCP vs ADK](../agents/mcp-vs-adk-agent-connectivity.md))
+- [[orkestra-multi-cli]] ([Orkestra: Multi-CLI Studio to Run Claude Code, Codex, and Gemini From One Panel](../tools/orkestra-multi-cli.md))
+- [[dual-gpu-subagent-parallelism]] ([Parallelism Beats Higher Quants: Dual-GPU Subagent Strategy for Local Coding Agents](../tips/dual-gpu-subagent-parallelism.md))

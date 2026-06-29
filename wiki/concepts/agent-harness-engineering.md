@@ -65,6 +65,7 @@ Skills and hooks are the iterative improvement layer: each skill encodes a lesso
 - [[ab-method-workflow]] ([ab-method: Domain-Grounded Planning Workflow for Claude Code and Codex](../tools/ab-method-workflow.md))
 - [[verifier-tax-tool-agent-safety]] ([The Verifier Tax: Safety-Success Tradeoffs in Tool-Using LLM Agents](../concepts/verifier-tax-tool-agent-safety.md))
 - [[opensddrag-mcp-harness]] ([OpenSddRag: MCP Server with Persistent Rules Harness for Coding Agents](../tools/opensddrag-mcp-harness.md))
+- [[context-warp-drive]] ([Context Warp Drive: Deterministic Folding for LLM Agent Continuity](../tools/context-warp-drive.md))
 ---
 <!-- RU -->
 
@@ -109,3 +110,4 @@ CLAUDE.md и навыки — практическое выражение harnes
 - [[ab-method-workflow]] ([ab-method: workflow планирования с привязкой к домену для Claude Code и Codex](../tools/ab-method-workflow.md))
 - [[verifier-tax-tool-agent-safety]] ([Verifier Tax: компромисс между безопасностью и успехом у tool-using агентов](../concepts/verifier-tax-tool-agent-safety.md))
 - [[opensddrag-mcp-harness]] ([OpenSddRag: MCP-сервер с постоянным движком правил для coding-агентов](../tools/opensddrag-mcp-harness.md))
+- [[context-warp-drive]] ([Context Warp Drive: Deterministic Folding for LLM Agent Continuity](../tools/context-warp-drive.md))

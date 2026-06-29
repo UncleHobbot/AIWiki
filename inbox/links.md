@@ -180,3 +180,18 @@ https://github.com/andysingal/LLMops
 [Andrej Karpathy's LLM Wiki: Create your own knowledge base | by Urvil Joshi | Apr, 2026 | Medium](https://medium.com/@urvvil08/andrej-karpathys-llm-wiki-create-your-own-knowledge-base-8779014accd5)
 [What Is Andrej Karpathy's LLM Wiki? How to Build a Personal Knowledge Base With Claude Code | MindStudio](https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code)
 [lucasastorian/llmwiki: Open Source Implementation of Karpathy's LLM Wiki. Upload documents, connect your Claude account via MCP, and have it write your wiki !](https://github.com/lucasastorian/llmwiki)
+https://github.com/oxbshw/Agent-Span <!-- Agent-Span: web access gateway for OpenCode workflows (reddit scan) -->
+https://github.com/parsehawk/parsehawk <!-- parsehawk: local structured-JSON extraction from PDFs/scans/images (reddit scan) -->
+https://github.com/ceceli33/titan-cognitive-core <!-- AkbasCore: sub-threshold inference-layer steering engine (reddit scan) -->
+https://github.com/Syntropy-AI-Labs/picotron <!-- Picotron: LLM training framework that runs on older GPUs (reddit scan) -->
+https://github.com/duongtrongnguyen123/recurrent-depth-ttc <!-- recurrent-depth: when looping helps + falsifiable supervision theorem (reddit scan) -->
+https://github.com/AvAdiii/rewardspy <!-- rewardspy: debugger for RL reward functions that detects reward hacking (reddit scan) -->
+https://github.com/AnthonyBeeblebrox/pybench <!-- pybench: pytest-like statistical regression testing for ML metrics (reddit scan) -->
+https://github.com/Abhinand20/MathFormer <!-- MathFormer: is symbolic math pattern matching or reasoning? (reddit scan) -->
+https://github.com/fishonbike/vault-engine <!-- vault-engine: PII scrubber on top of Ollama before cloud calls (reddit scan) -->
+https://github.com/tiagomonteiro0715/pessoa <!-- Pessoa: local LLM-agnostic agent infrastructure (memory+tools+skills) (reddit scan) -->
+https://github.com/Bessouat40/chainything <!-- Chainything: Rust DAG workflow framework with Ollama LLM nodes (reddit scan) -->
+https://github.com/lugga1s/oxideLLM <!-- oxideLLM: Rust gateway stopping Ollama GPU waste on closed tabs (reddit scan) -->
+https://www.wsj.com/tech/ai/chinese-ai-anthropic-mythos-cybersecurity-574b02c2 <!-- WSJ: ZAi/China matched Anthropic in cybersecurity (reddit scan) -->
+https://huggingface.co/HaseebAsif/Qwen2.5-1.5B-Abliterated <!-- Qwen2.5-1.5B with refusal direction removed (reddit scan) -->
+https://en.wikipedia.org/wiki/TOP500#TOP500 <!-- TOP500: LineShine Chinese supercomputer tops ranking (reddit scan) -->

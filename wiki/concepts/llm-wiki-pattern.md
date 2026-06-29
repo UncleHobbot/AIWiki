@@ -65,6 +65,7 @@ Pinecone — the company that built the market-leading vector database powering 
 - [[llm-wiki-academic-applications]] ([LLM-Powered Personal Wikis: Academic Landscape and Feature Roadmap](../concepts/llm-wiki-academic-applications.md))
 - [[karpathy-killed-rag-obsidian]] ([Karpathy Killed RAG: Obsidian + Claude Code Second Brain](../tips/karpathy-killed-rag-obsidian.md))
 - [[karpathy-llm-knowledge-base-auto-research]] ([Karpathy 3-Strategy System: Wiki + Auto-Research](../tips/karpathy-llm-knowledge-base-auto-research.md))
+- [[product-llm-wiki]] ([LLM Wiki](../concepts/product-llm-wiki.md))
 ---
 <!-- RU -->
 
@@ -105,3 +106,4 @@ Pinecone — the company that built the market-leading vector database powering 
 - [[lightrag-graph-rag]] ([LightRAG: Graph-Enhanced Retrieval-Augmented Generation](../tools/lightrag-graph-rag.md))
 - [[karpathy-killed-rag-obsidian]] ([Karpathy Killed RAG: Obsidian + Claude Code Second Brain](../tips/karpathy-killed-rag-obsidian.md))
 - [[karpathy-llm-knowledge-base-auto-research]] ([Karpathy 3-Strategy System: Wiki + Auto-Research](../tips/karpathy-llm-knowledge-base-auto-research.md))
+- [[product-llm-wiki]] ([LLM Wiki](../concepts/product-llm-wiki.md))

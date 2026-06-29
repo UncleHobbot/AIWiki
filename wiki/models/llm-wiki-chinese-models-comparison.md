@@ -4,7 +4,7 @@ title_ru: "Китайские LLM-модели для создания LLM Wiki 
 category: models
 tags: [deepseek, kimi, glm, qwen, mimo, minimax, chinese-llm, benchmarks, llm-wiki, karpathy, lmarena, pricing]
 date: 2026-05-16
-updated: 2026-06-14
+updated: 2026-06-29
 sources:
   - https://benchlm.ai/blog/posts/best-chinese-llm
   - https://www.verdent.ai/guides/deepseek-v4-pricing-api-migration-2026
@@ -25,18 +25,24 @@ sources:
   - https://platform.kimi.ai/docs/guide/kimi-k2-7-code-quickstart
   - https://openrouter.ai/models/moonshotai/kimi-k2.7-code
   - https://benchlm.ai/models/kimi-k2-7-code
+  - https://huggingface.co/blog/zai-org/glm-52-blog
+  - https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost
+  - https://www.reddit.com/r/DeepSeek/comments/1uio6yf/deepseek_v4_official_launch_peakoffpeak_pricing/
+  - https://www.reddit.com/r/DeepSeek/comments/1uiq1lk/v4_peak_pricing_is_coming_midjuly_heres_how_to/
+  - https://platform.minimax.io/docs/guides/pricing-paygo
 ---
 
 ## Summary
 
-Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wiki knowledge bases — covering DeepSeek V4, Kimi K2.6/K2.7 Code, GLM-5/5.1/5.2, Qwen 3.5/3.7, Xiaomi MiMo-V2.5, and MiniMax-M3. Includes BenchLM scores, LM Arena rankings, Artificial Analysis intelligence indices, API pricing, context windows, and suitability for knowledge extraction, bilingual summarization, and agentic wiki workflows. Updated June 2026 with Qwen3.7 Max, MiniMax-M3, GLM-5.2 (1M context), and Kimi K2.7 Code.
+Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wiki knowledge bases — covering DeepSeek V4, Kimi K2.6/K2.7 Code, GLM-5/5.1/5.2, Qwen 3.5/3.7, Xiaomi MiMo-V2.5, and MiniMax-M3. Includes BenchLM scores, LM Arena rankings, Artificial Analysis intelligence indices, API pricing, context windows, and suitability for knowledge extraction, bilingual summarization, and agentic wiki workflows. Updated June 29, 2026: GLM-5.2 full benchmarks published (beats GPT-5.5 on long-horizon coding), DeepSeek V4 peak/valley pricing announced (2× during peak hours, official launch mid-July), and corrected pricing across providers.
 
 ## Key Ideas
 
 - **Qwen3.7 Max** is the new Chinese frontier leader at BenchLM 91, ranking #5 globally — a massive 12-point jump over Qwen3.5
 - DeepSeek V4 Pro (Max) leads on coding benchmarks (LiveCodeBench 93.5) at BenchLM 87, but is now #2 Chinese model
 - MiniMax-M3 enters the frontier tier at Artificial Analysis score 55, priced at just $0.22/M tokens — the cheapest frontier option
-- **GLM-5.2** launched June 13, 2026 with a **1M-token context window** and High/Max thinking modes; open weights promised under MIT, but no benchmark scores published yet
+- **GLM-5.2** launched June 13, 2026 (753B params) with a **1M-token context window**. Full benchmarks published June 17: it **beats GPT-5.5** on SWE-bench Pro (62.1 vs 58.6), FrontierSWE (74.4 vs 72.6), PostTrainBench, and HLE-w-tools — the **strongest open-source model** globally, ranking #2 on long-horizon tasks behind only Claude Opus 4.8. MIT-licensed, no regional limits
+- **DeepSeek V4** official launch mid-July 2026 with new **peak/valley (time-of-day) pricing**: peak hours cost **2× the regular rate** (peak = UTC 01:00–04:00 & 06:00–10:00). DSpark speculative decoding now live for faster inference
 - **Kimi K2.7 Code** released June 12, 2026 improves over K2.6 on all six Moonshot coding/agentic benchmarks, but still trails GPT-5.5 and Claude Opus 4.8
 - All top Chinese models remain open-weight (MIT/Apache), a structural advantage over Western proprietary APIs
 - For LLM Wiki tasks, the cost landscape shifted: MiMo-V2.5-Pro at $0.18/M and MiniMax-M3 at $0.22/M offer frontier quality at budget prices
@@ -58,7 +64,7 @@ Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wi
 | 8 | Kimi K2.5 (Reasoning) | Moonshot AI | 77 | No | 128K |
 | 9 | DeepSeek V4 Flash (Max) | DeepSeek | 77 | Yes (MIT) | 1M |
 | 10 | Qwen3.5-27B | Alibaba | 75 | Yes | 262K |
-| 11 | GLM-5.2 | Z.AI | N/A | Yes (MIT, pending) | 1M |
+| 11 | GLM-5.2 | Z.AI | N/A (BenchLM) | Yes (MIT) | 1M |
 | 12 | Kimi K2.7 Code | Moonshot AI | Unranked | Yes (Mod. MIT) | 256K |
 
 ### Artificial Analysis Intelligence Index (June 2026)
@@ -92,12 +98,29 @@ Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wi
 | Model | LiveCodeBench | SWE-bench Verified | SWE-bench Pro | Codeforces |
 |-------|--------------|-------------------|---------------|------------|
 | DeepSeek V4 Pro (Max) | **93.5** | 80.6% | 55.4% | **3206** |
-| Qwen3.7 Max | 91.6 | 80.4% | — | — |
+| Qwen3.7 Max | 91.6 | 80.4% | 60.6 | — |
 | DeepSeek V4 Flash (Max) | 91.6 | 79.0% | — | — |
+| **GLM-5.2** | — | — | **62.1** | — |
 | Kimi K2.6 | 89.6 | 80.2% | **58.6%** | — |
 | GLM-5.1 | — | — | 58.4% | — |
 | Qwen3.5-27B | 80.7 | 72.4% | — | — |
 | MiMo-V2.5-Pro | — | 78.9% | — | — |
+
+### Long-Horizon Coding Benchmarks (Z.AI, June 2026)
+
+These benchmarks measure multi-hour autonomous engineering tasks — increasingly relevant for agentic wiki maintenance.
+
+| Benchmark | GLM-5.2 | GLM-5.1 | DeepSeek V4 Pro | Qwen3.7 Max | GPT-5.5 | Opus 4.8 |
+|-----------|---------|---------|-----------------|-------------|---------|----------|
+| FrontierSWE (Dominance) | **74.4** | 30.5 | 29.0 | — | 72.6 | **75.1** |
+| PostTrainBench | **34.3** | 20.1 | — | — | 28.4 | **37.2** |
+| SWE-Marathon | 13.0 | 1.0 | — | — | 12.0 | **26.0** |
+| Terminal-Bench 2.1 | **81.0** | 63.5 | 64 | 75 | 84 | **85** |
+| MCP-Atlas | **76.8** | 71.8 | 73.6 | 76.4 | 75.3 | **77.8** |
+| ProgramBench | **63.7** | 50.9 | 47.8 | — | 70.8 | **71.9** |
+| HLE (w/ Tools) | **54.7** | 52.3 | 48.2 | 53.5 | 52.2 | **57.9** |
+
+> GLM-5.2 is the highest-ranked open-source model on every long-horizon benchmark, beating GPT-5.5 on most. It ranks #2 globally behind only Claude Opus 4.8.
 
 ### Kimi K2.7 Code vs Frontier (Moonshot benchmarks)
 
@@ -130,25 +153,49 @@ Comparison of Chinese frontier LLMs evaluated for building Karpathy-style LLM Wi
 
 | Model | Input ($/M tokens) | Output ($/M tokens) | Context | Max Output | OpenRouter |
 |-------|--------------------|--------------------|---------|-----------|-----------|
-| **MiMo-V2.5-Pro** | $0.18 | $0.36 | 1M | Standard | Yes |
+| **MiMo-V2.5-Pro** (≤256K) | $1.00 | $3.00 | 1M | Standard | Yes |
+| **MiMo-V2.5 Flash** | $0.10 | $0.30 | 1M | Standard | Yes |
 | **DeepSeek V4 Flash** | $0.14 (miss) / $0.003 (hit) | $0.28 | 1M | 384K | Yes ($0.10/$0.20) |
 | **DeepSeek V4 Pro** | $0.435 (miss) / $0.004 (hit) | $0.87 | 1M | 384K | Yes |
-| **MiniMax-M3** | $0.22 | $0.22 | — | Standard | Yes |
+| **MiniMax-M3** | $0.30 | $1.20 | — | Standard | Yes |
 | **MiniMax-M2.7** | $0.22 | $0.22 | — | Standard | Yes |
-| **Kimi K2.6** | $0.68 | $3.42 | 262K | Standard | Yes |
+| **Qwen3.7 Plus** | $0.40 | $1.60 | 1M | Standard | Yes |
+| **Kimi K2.6** | $0.95 | $4.00 | 262K | Standard | Yes |
 | **Kimi K2.7 Code** | $0.95 / $0.19 (cache hit) | $4.00 | 262K | Standard | Yes |
 | **GLM-5.1** | $0.98 | $3.08 | 203K | 64K | Yes |
-| **GLM-5.2** | Bundled in Coding Plan | Bundled in Coding Plan | 1M | 131K | Yes (pending) |
-| **Qwen3.7 Max** | $1.43 | — | — | — | Yes |
-| **Qwen3.7 Plus** | $0.25 | — | — | — | Yes |
+| **GLM-5.2** | $1.40 / $0.26 (cache hit) | $4.40 | 1M | 131K | Yes |
+| **Qwen3.7 Max** | $1.25 (OpenRouter) / $2.50 (Alibaba) | $3.75 (OR) / $7.50 (Alibaba) | 1M | — | Yes |
 | **Qwen3.5-27B** | ~$0.02 | ~$0.06 | 262K | Standard | — |
+
+> **Pricing note:** Prices vary significantly by provider (OpenRouter vs direct API vs Alibaba Cloud/DashScope). The VentureBeat June 2026 snapshot and OpenRouter listings were used where available; prior figures from earlier sources may differ.
+
+### Official Provider Pricing (First-Party APIs)
+
+Prices from each model creator's **own API platform** (not resellers like OpenRouter). DeepSeek prices are regular (off-peak); peak hours will cost 2× starting mid-July 2026.
+
+| Model | Official Provider | Input $/M (cache miss) | Input $/M (cache hit) | Output $/M | Context | Max Output |
+|-------|-------------------|------------------------|-----------------------|------------|---------|------------|
+| DeepSeek V4 Flash | api.deepseek.com | $0.14 | $0.0028 | $0.28 | 1M | 384K |
+| DeepSeek V4 Pro | api.deepseek.com | $0.435 | $0.003625 | $0.87 | 1M | 384K |
+| GLM-5.1 | Z.AI API (z.ai) | $1.40 | — | $4.40 | 203K | 64K |
+| GLM-5.2 | Z.AI API (z.ai) | $1.40 | $0.26 | $4.40 | 1M | 131K |
+| Qwen3.7 Plus | Alibaba DashScope | $0.40 | — | $1.60 | 1M | Standard |
+| Qwen3.7 Max | Alibaba DashScope | $2.50 | — | $7.50 | 1M | Standard |
+| Kimi K2.6 | Moonshot Platform | $0.95 | — | $4.00 | 262K | Standard |
+| Kimi K2.7 Code | Moonshot Platform | $0.95 | $0.19 | $4.00 | 262K | Standard |
+| MiMo-V2.5 Flash | Xiaomi Platform | $0.10 | — | $0.30 | 1M | Standard |
+| MiMo-V2.5 Pro (≤256K) | Xiaomi Platform | $1.00 | — | $3.00 | 1M | Standard |
+| MiniMax-M3 (≤512K) | platform.minimax.io | $0.30 | $0.06 | $1.20 | — | Standard |
+
+> GLM-5.2 matches GLM-5.1's official Z.AI rates ($1.40/$4.40). OpenRouter resells GLM-5.1 at a lower $0.98/$3.08 — the discount varies by reseller. DeepSeek's cache-hit pricing ($0.0028–$0.0036/M) is the most aggressive in the industry, making repeated context-heavy queries nearly free.
 
 ### Detailed Pricing Notes
 
 - **DeepSeek V4** uses aggressive cache-hit pricing: $0.003/M input and $0.004/M output, making repeated queries nearly free.
+- **DeepSeek V4 peak/valley pricing** (announced June 26, effective mid-July): peak hours cost **2× the regular rate**. Peak = UTC 01:00–04:00 and 06:00–10:00 (Beijing 09:00–12:00, 14:00–18:00). V4-Flash: 0.02/1.00/2.00 RMB → 0.04 RMB peak. V4-Pro output at peak: RMB 12/M. 2× applies to all token billing. This signals LLM APIs becoming a schedulable, electricity-grid-style compute market.
 - **Kimi K2.7 Code** cache-hit input on Kimi Platform is $0.19/M; OpenRouter flat rate is $0.75/$3.50.
-- **GLM-5.2** is subscription-only at launch; no per-token API price. GLM Coding Plan Lite starts around $18/month for ~400 prompts/week.
-- **Qwen3.7 Max** and **Qwen3.7 Plus** use Alibaba Cloud/DashScope; Plus is $0.25/M input, Max is $1.43/M input. Output pricing is not publicly listed.
+- **GLM-5.2** API: $1.40/M input, $4.40/M output (matching GLM-5.1 rates); cached input $0.26/M. Also available via GLM Coding Plan tiers (annual billing): Lite $12.60/mo, Pro $50.40/mo, Max $112.00/mo. Quota consumption: 3× peak (14:00–18:00 Beijing), 2× off-peak; limited-time promo: off-peak billed at 1× through end of September.
+- **Qwen3.7 Max** and **Qwen3.7 Plus** use Alibaba Cloud/DashScope; Plus is $0.40/M input, $1.60/M output and includes vision. Max is $2.50/$7.50 on Alibaba direct or $1.25/$3.75 via OpenRouter. Open weights still not released as of June 29.
 
 ### Cost for Typical LLM Wiki Workload
 
@@ -171,19 +218,19 @@ Assuming processing 50 wiki entries/day, ~4K input + ~2K output tokens each:
 
 ### DeepSeek V4 (DeepSeek)
 
-**Strengths:** Highest coding benchmark among all models globally (LiveCodeBench 93.5, Codeforces 3206). 1M context window. MIT-licensed open weights. Three reasoning modes: Non-Think, Think High, Think Max. Hybrid Attention (CSA+HCA) reduces long-context inference cost by 73% vs V3.2. Anthropic API compatibility. Cache-hit pricing at $0.003/$0.004 per M tokens — effectively free for repeated queries.
+**Strengths:** Highest coding benchmark among all models globally (LiveCodeBench 93.5, Codeforces 3206). 1M context window. MIT-licensed open weights. Three reasoning modes: Non-Think, Think High, Think Max. Hybrid Attention (CSA+HCA) reduces long-context inference cost by 73% vs V3.2. DSpark speculative decoding now live for faster inference. Cache-hit pricing at $0.003/$0.004 per M tokens — effectively free for repeated queries.
 
-**Weaknesses:** BenchLM 87 now trails Qwen3.7 Max by 4 points. Legacy API aliases (`deepseek-chat`, `deepseek-reasoner`) retire July 24, 2026. Pro pricing is 3x Flash.
+**Weaknesses:** BenchLM 87 now trails Qwen3.7 Max by 4 points. **Peak/valley pricing** (mid-July): peak hours cost 2× — teams in certain time zones will feel this disproportionately. Legacy API aliases (`deepseek-chat`, `deepseek-reasoner`) retire July 24, 2026. Pro pricing is 3× Flash.
 
 **Best for LLM Wiki:** Flash tier for high-volume extraction and summarization. Pro tier for complex classification and coding-heavy wiki maintenance scripts. Cache-hit pricing makes repeated index rebuilds nearly free.
 
 ### Qwen3.7 Max / Qwen3.5 (Alibaba)
 
-**Strengths:** Qwen3.7 Max at BenchLM 91 is the strongest Chinese model ever tested, ranking #5 globally. Qwen3.5-27B dense model (not MoE) punches far above its weight — SWE-bench 72.4%, LiveCodeBench 80.7, competitive with models 5-10x larger. Gated DeltaNet architecture (linear attention at 16:1 ratio) is more efficient than pure transformers. Qwen3.7 Max ranks #7 on WebDev Arena (Elo 1537). 262K context for Qwen3.5 sizes.
+**Strengths:** Qwen3.7 Max at BenchLM 91 is the strongest Chinese model ever tested, ranking #5 globally. Artificial Analysis score **56.6** (4.8 points above Qwen3.6 Max Preview). Full benchmark scores now available: HLE 41.4, HLE-w-tools 53.5, AIME 2026 97, GPQA-Diamond 90, SWE-bench Pro 60.6, Terminal-Bench 2.1 75, MCP-Atlas 76.4. Qwen3.5-27B dense model (not MoE) punches far above its weight — SWE-bench 72.4%, LiveCodeBench 80.7, competitive with models 5-10x larger. Gated DeltaNet architecture (linear attention at 16:1 ratio) is more efficient than pure transformers. Qwen3.7 Max ranks #7 on WebDev Arena (Elo 1537). 262K context for Qwen3.5 sizes.
 
-**Weaknesses:** Qwen3.7 Max is not open-weight (closed). Qwen3.5-397B scores 78 — 13 points behind Qwen3.7 Max. Requires choosing from a large model family. No Qwen 4 announced yet.
+**Weaknesses:** Qwen3.7 Max is **not open-weight** (closed) — community actively requesting open weights as of June 29. Qwen3.5-397B scores 78 — 13 points behind Qwen3.7 Max. Requires choosing from a large model family. No Qwen 4 announced yet.
 
-**Best for LLM Wiki:** Qwen3.7 Max for frontier-quality bilingual generation via API. Qwen3.5-27B for cost-effective self-hosted deployment. Qwen3.7 Plus at $0.25/M for mid-tier quality. Small variants for real-time classification.
+**Best for LLM Wiki:** Qwen3.7 Max for frontier-quality bilingual generation via API. Qwen3.5-27B for cost-effective self-hosted deployment. Qwen3.7 Plus at $0.40/$1.60 with vision for mid-tier quality and multimodal tasks. Small variants for real-time classification.
 
 ### Kimi K2.6 / K2.7 Code (Moonshot AI)
 
@@ -199,11 +246,15 @@ Assuming processing 50 wiki entries/day, ~4K input + ~2K output tokens each:
 
 **GLM-5.1 strengths:** Leads Chinese models on Agent Arena (#8, 3.38% net improvement) and WebDev Arena (Elo 1532). BenchLM 82. GLM-5 (Reasoning) BenchLM 83, excels at math/reasoning and cybersecurity (CyberGym 68.7). 8+ hours continuous autonomous work on a single task. MIT license. Supports vLLM, SGLang, KTransformers.
 
-**GLM-5.2:** Released June 13, 2026 with a **1M-token context window** (5× GLM-5.1's 203K), High/Max thinking modes, and **131K max output**. Bundled in GLM Coding Plan tiers; open weights under MIT promised for the following week. As of launch, **no benchmark scores** have been published for coding, text, or math. The main verified improvement is context size; architecture and performance remain unverified by third parties. By June 14, it was already available in OpenCode via the Z.ai provider with early positive first impressions (see [[glm-5-2]]).
+**GLM-5.2:** Released June 13, 2026 — a **753B-parameter** flagship engineered for long-horizon autonomous coding, with a **solid 1M-token context** that stably sustains multi-hour engineering trajectories. **Full benchmarks published June 17** (via Z.AI HuggingFace blog): it is the **strongest open-source model** globally and **beats GPT-5.5** on most long-horizon coding tasks — SWE-bench Pro 62.1 (vs GPT-5.5 58.6), FrontierSWE Dominance 74.4 (vs 72.6), Terminal-Bench 2.1 81.0 (vs 84), PostTrainBench 34.3 (vs 28.4), HLE-w-tools 54.7 (vs 52.2), MCP-Atlas 76.8 (vs 75.3). It ranks **#2 globally** on long-horizon tasks, behind only Claude Opus 4.8. Also won **Design Arena** (#1, ELO 1360), beating Claude Fable 5.
 
-**Weaknesses:** GLM-5.1: 203K context (smallest among frontier tier), premium $3.08/M output pricing. GLM-5.2: no public benchmarks yet; standalone API pricing not available at launch.
+**Architecture:** IndexShare (reuses one indexer across every 4 sparse-attention layers → **2.9× fewer FLOPs** at 1M context); improved MTP speculative decoding (+20% acceptance length via IndexShare + KVShare + rejection sampling + end-to-end TV loss); `slime` agentic-RL framework; critic-based PPO for long-horizon tasks; anti-hack module that blocks reward-hacking tool calls (e.g., `curl`-ing eval artifacts) during RL training. Flexible effort modes: **High** (balances performance/latency, ~halves token output) and **Max** (peak intelligence, ~85k output tokens/task).
 
-**Best for LLM Wiki:** GLM-5.1 best for autonomous wiki maintenance agents. GLM-5 (Reasoning) for complex classification and knowledge graph construction. GLM-5.2 is promising for long-document wiki generation once benchmarks confirm quality; currently a context-size bet.
+**Pricing:** API $1.40/M input, $4.40/M output, cached input $0.26/M. GLM Coding Plan tiers (annual): Lite $12.60/mo, Pro $50.40/mo, Max $112.00/mo. Quota: 3× peak, 2× off-peak; promo: off-peak 1× through September. MIT license — **no regional limits**. Day-one integrations: Claude Code, OpenCode, ZCode, Cline, Kilo Code, OpenClaw, Crush, Factory.
+
+**Weaknesses:** Trails Claude Opus 4.8 by 1–13% on long-horizon benchmarks. SWE-Marathon (13.0) still far behind Opus 4.8 (26.0). Not yet ranked on BenchLM or LM Arena. Higher per-token cost than DeepSeek V4 Flash or MiMo.
+
+**Best for LLM Wiki:** GLM-5.1 best for autonomous wiki maintenance agents. GLM-5 (Reasoning) for complex classification and knowledge graph construction. GLM-5.2 is now the top choice for long-document wiki generation and long-horizon autonomous coding — confirmed benchmarks show it beats GPT-5.5 on most agentic coding tasks at ~1/6th the cost.
 
 ### Xiaomi MiMo-V2.5-Pro (Xiaomi)
 
@@ -258,6 +309,8 @@ For a Karpathy-style three-layer wiki system:
 
 > "MiMo-V2.5-Pro at $0.18/$0.36 delivers frontier-tier intelligence at prices that make 24/7 autonomous agents economically viable." — Artificial Analysis
 
+> "GLM-5.2 is the first open-weights model to cross 80% on Terminal-Bench, and beats every other open model available. It also beats Gemini, making it a frontier-level model for a fraction of the cost. Open weights is back." — Cline IDE, on GLM-5.2 day-one integration
+
 ## Related Entries
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))
 - [[gpt-vs-glm-5-1-comparison]] ([GPT vs GLM-5.1: Side-by-Side Coding Comparison](../models/gpt-vs-glm-5-1-comparison.md))
@@ -275,14 +328,15 @@ For a Karpathy-style three-layer wiki system:
 
 ## Краткое описание
 
-Сравнение китайских передовых LLM-моделей для создания базы знаний в стиле LLM Wiki Карпати — охватывает DeepSeek V4, Kimi K2.6/K2.7 Code, GLM-5/5.1/5.2, Qwen 3.5/3.7, Xiaomi MiMo-V2.5 и MiniMax-M3. Включает оценки BenchLM, рейтинги LM Arena, индексы интеллекта Artificial Analysis, цены API, размеры контекстного окна и применимость для извлечения знаний, двуязычного реферирования и агентных вики-воркфлоу. Обновлено в июне 2026: Qwen3.7 Max, MiniMax-M3, GLM-5.2 (контекст 1M) и Kimi K2.7 Code.
+Сравнение китайских передовых LLM-моделей для создания базы знаний в стиле LLM Wiki Карпати — охватывает DeepSeek V4, Kimi K2.6/K2.7 Code, GLM-5/5.1/5.2, Qwen 3.5/3.7, Xiaomi MiMo-V2.5 и MiniMax-M3. Включает оценки BenchLM, рейтинги LM Arena, индексы интеллекта Artificial Analysis, цены API, размеры контекстного окна и применимость для извлечения знаний, двуязычного реферирования и агентных вики-воркфлоу. Обновлено 29 июня 2026: опубликованы полные бенчмарки GLM-5.2 (превосходит GPT-5.5 на длинных кодинговых задачах), анонсировано пиковое/внепиковое ценообразование DeepSeek V4 (2× в пиковые часы, официальный запуск в середине июля), исправлены цены по провайдерам.
 
 ## Ключевые идеи
 
 - **Qwen3.7 Max** — новый лидер китайского фронтира с оценкой BenchLM 91, занимая 5-е место в мире — скачок на 12 очков по сравнению с Qwen3.5
 - DeepSeek V4 Pro (Max) лидирует в кодинговых бенчмарках (LiveCodeBench 93.5) при оценке BenchLM 87, но теперь лишь второй среди китайских моделей
 - MiniMax-M3 выходит на фронтир-уровень с оценкой Artificial Analysis 55 по цене всего $0.22/М токенов — самый дешёвый вариант фронтира
-- **GLM-5.2** выпущена 13 июня 2026 года с **контекстом 1M токенов** и режимами рассуждения High/Max; открытые веса обещаны по MIT, но бенчмарки ещё не опубликованы
+- **GLM-5.2** выпущена 13 июня 2026 (753 млрд параметров) с **контекстом 1M токенов**. Полные бенчмарки опубликованы 17 июня: **превосходит GPT-5.5** на SWE-bench Pro (62.1 vs 58.6), FrontierSWE (74.4 vs 72.6), PostTrainBench и HLE-w-tools — **сильнейшая open-source модель** в мире, #2 на длинных задачах после Claude Opus 4.8. Лицензия MIT, без региональных ограничений
+- **DeepSeek V4** — официальный запуск в середине июля 2026 с новым **пиковым/внепиковым (повременным) ценообразованием**: пиковые часы стоят **в 2 раза дороже** (пик = UTC 01:00–04:00 и 06:00–10:00). DSpark (спекулятивное декодирование) теперь работает для ускорения инференса
 - **Kimi K2.7 Code** выпущена 12 июня 2026 года и превосходит K2.6 по всем шести кодинговым/агентным бенчмаркам Moonshot, но всё ещё отстаёт от GPT-5.5 и Claude Opus 4.8
 - Все ведущие китайские модели остаются с открытыми весами (MIT/Apache) — структурное преимущество перед западными проприетарными API
 - Для задач LLM Wiki ценовой ландшафт изменился: MiMo-V2.5-Pro за $0.18/М и MiniMax-M3 за $0.22/М предлагают качество фронтира по бюджетным ценам
@@ -304,7 +358,7 @@ For a Karpathy-style three-layer wiki system:
 | 8 | Kimi K2.5 (Reasoning) | Moonshot AI | 77 | Нет | 128K |
 | 9 | DeepSeek V4 Flash (Max) | DeepSeek | 77 | Да (MIT) | 1M |
 | 10 | Qwen3.5-27B | Alibaba | 75 | Да | 262K |
-| 11 | GLM-5.2 | Z.AI | N/A | Да (MIT, в ожидании) | 1M |
+| 11 | GLM-5.2 | Z.AI | N/A (BenchLM) | Да (MIT) | 1M |
 | 12 | Kimi K2.7 Code | Moonshot AI | Unranked | Да (Mod. MIT) | 256K |
 
 ### Индекс интеллекта Artificial Analysis (июнь 2026)
@@ -351,22 +405,46 @@ For a Karpathy-style three-layer wiki system:
 
 | Модель | Ввод ($/М токенов) | Вывод ($/М токенов) | Контекст |
 |--------|--------------------|--------------------|----------|
-| **MiMo-V2.5-Pro** | $0.18 | $0.36 | 1M |
+| **MiMo-V2.5 Flash** | $0.10 | $0.30 | 1M |
 | **DeepSeek V4 Flash** | $0.14 | $0.28 | 1M |
-| **MiniMax-M3** | $0.22 | $0.22 | — |
+| **MiniMax-M3** | $0.30 | $1.20 | — |
 | **DeepSeek V4 Pro** | $0.435 | $0.87 | 1M |
-| **Kimi K2.6** | $0.68 | $3.42 | 262K |
+| **Qwen3.7 Plus** | $0.40 | $1.60 | 1M |
+| **Kimi K2.6** | $0.95 | $4.00 | 262K |
 | **Kimi K2.7 Code** | $0.95 / $0.19 (cache hit) | $4.00 | 262K |
 | **GLM-5.1** | $0.98 | $3.08 | 203K |
-| **GLM-5.2** | Bundled in Coding Plan | Bundled in Coding Plan | 1M |
-| **Qwen3.7 Max** | $1.43 | — | — |
+| **GLM-5.2** | $1.40 / $0.26 (cache hit) | $4.40 | 1M |
+| **Qwen3.7 Max** | $1.25 (OpenRouter) / $2.50 (Alibaba) | $3.75 (OR) / $7.50 (Alibaba) | 1M |
+
+> **Примечание о ценах:** цены существенно зависят от провайдера (OpenRouter vs прямой API vs Alibaba Cloud/DashScope). Использованы данные VentureBeat (июнь 2026) и OpenRouter; цифры из более ранних источников могут отличаться.
+
+### Цены официальных провайдеров (first-party API)
+
+Цены от **собственных API-платформ** создателей моделей (не реселлеры вроде OpenRouter). Цены DeepSeek — обычные (внепиковые); с середины июля пиковые часы будут стоить 2×.
+
+| Модель | Официальный провайдер | Ввод $/М (cache miss) | Ввод $/М (cache hit) | Вывод $/М | Контекст | Макс. вывод |
+|--------|----------------------|------------------------|-----------------------|------------|---------|-------------|
+| DeepSeek V4 Flash | api.deepseek.com | $0.14 | $0.0028 | $0.28 | 1M | 384K |
+| DeepSeek V4 Pro | api.deepseek.com | $0.435 | $0.003625 | $0.87 | 1M | 384K |
+| GLM-5.1 | Z.AI API (z.ai) | $1.40 | — | $4.40 | 203K | 64K |
+| GLM-5.2 | Z.AI API (z.ai) | $1.40 | $0.26 | $4.40 | 1M | 131K |
+| Qwen3.7 Plus | Alibaba DashScope | $0.40 | — | $1.60 | 1M | Standard |
+| Qwen3.7 Max | Alibaba DashScope | $2.50 | — | $7.50 | 1M | Standard |
+| Kimi K2.6 | Moonshot Platform | $0.95 | — | $4.00 | 262K | Standard |
+| Kimi K2.7 Code | Moonshot Platform | $0.95 | $0.19 | $4.00 | 262K | Standard |
+| MiMo-V2.5 Flash | Xiaomi Platform | $0.10 | — | $0.30 | 1M | Standard |
+| MiMo-V2.5 Pro (≤256K) | Xiaomi Platform | $1.00 | — | $3.00 | 1M | Standard |
+| MiniMax-M3 (≤512K) | platform.minimax.io | $0.30 | $0.06 | $1.20 | — | Standard |
+
+> GLM-5.2 соответствует официальным тарифам GLM-5.1 от Z.AI ($1.40/$4.40). OpenRouter перепродаёт GLM-5.1 дешевле — $0.98/$3.08; скидка зависит от реселлера. Cache-hit ценообразование DeepSeek ($0.0028–$0.0036/М) — самое агрессивное в индустрии, делая повторные запросы с тяжёлым контекстом почти бесплатными.
 
 ### Детали ценообразования
 
 - **DeepSeek V4** использует агрессивное cache-hit ценообразование: $0.003/М на ввод и $0.004/М на вывод, что делает повторные запросы почти бесплатными.
-- **Kimi K2.7 Code** на Kimi Platform: cache-hit ввод $0.19/М; OpenRouter предлагает фlat-рейт $0.75/$3.50.
-- **GLM-5.2** на старте только по подписке; отдельной цены за токены нет. Lite-тариф GLM Coding Plan начинается примерно с $18/месяц за ~400 промптов/неделю.
-- **Qwen3.7 Max** и **Qwen3.7 Plus** работают через Alibaba Cloud/DashScope; Plus — $0.25/М ввод, Max — $1.43/М ввод. Цены на вывод публично не указаны.
+- **Пиковое/внепиковое ценообразование DeepSeek V4** (анонсировано 26 июня, действует с середины июля): пиковые часы стоят **в 2 раза дороже**. Пик = UTC 01:00–04:00 и 06:00–10:00 (по Пекину 09:00–12:00, 14:00–18:00). V4-Flash: 0.02/1.00/2.00 RMB → 0.04 RMB в пик. Вывод V4-Pro в пик: RMB 12/М. 2× применяется ко всей биллинговой статистике. Это сигнал, что LLM API становятся планируемым рынком вычислительных ресурсов по типу электротариффа.
+- **Kimi K2.7 Code** на Kimi Platform: cache-hit ввод $0.19/М; OpenRouter предлагает flat-рейт $0.75/$3.50.
+- **GLM-5.2** API: $1.40/М ввод, $4.40/М вывод (на уровне GLM-5.1); кэшированный ввод $0.26/М. Также доступна через тарифы GLM Coding Plan (годовая оплата): Lite $12.60/мес, Pro $50.40/мес, Max $112.00/мес. Квота: 3× в пик (14:00–18:00 по Пекину), 2× внепик; промо: внепик 1× до конца сентября.
+- **Qwen3.7 Max** и **Qwen3.7 Plus** работают через Alibaba Cloud/DashScope; Plus — $0.40/М ввод, $1.60/М вывод, включает vision. Max — $2.50/$7.50 напрямую у Alibaba или $1.25/$3.75 через OpenRouter. Открытые веса всё ещё не выпущены по состоянию на 29 июня.
 
 ### Стоимость типичной нагрузки LLM Wiki
 
@@ -389,19 +467,19 @@ For a Karpathy-style three-layer wiki system:
 
 ### DeepSeek V4 (DeepSeek)
 
-**Сильные стороны:** Наивысший кодинговый бенчмарк среди всех моделей мира (LiveCodeBench 93.5, Codeforces 3206). Контекст 1M. Открытые веса MIT. Три режима рассуждений: без размышлений, Think High, Think Max. Гибридное внимание снижает стоимость на 73%. Совместимость с API Anthropic. Цены с попаданием в кэш $0.003/$0.004 за М токенов — фактически бесплатно.
+**Сильные стороны:** Наивысший кодинговый бенчмарк среди всех моделей мира (LiveCodeBench 93.5, Codeforces 3206). Контекст 1M. Открытые веса MIT. Три режима рассуждений: без размышлений, Think High, Think Max. Гибридное внимание снижает стоимость на 73%. DSpark (спекулятивное декодирование) теперь работает для ускорения инференса. Цены с попаданием в кэш $0.003/$0.004 за М токенов — фактически бесплатно.
 
-**Слабые стороны:** BenchLM 87 теперь отстаёт от Qwen3.7 Max на 4 очка. Устаревшие API-алиасы отключаются 24 июля 2026. Pro в 3 раза дороже Flash.
+**Слабые стороны:** BenchLM 87 теперь отстаёт от Qwen3.7 Max на 4 очка. **Пиковое/внепиковое ценообразование** (с середины июля): пиковые часы 2× — команды в определённых часовых поясах почувствуют это сильнее. Устаревшие API-алиасы отключаются 24 июля 2026. Pro в 3 раза дороже Flash.
 
 **Лучше всего для LLM Wiki:** Уровень Flash для высокоинтенсивного извлечения и реферирования. Уровень Pro для сложной классификации и обслуживания вики-скриптов. Кэширование делает повторные перестроения индекса почти бесплатными.
 
 ### Qwen3.7 Max / Qwen3.5 (Alibaba)
 
-**Сильные стороны:** Qwen3.7 Max с BenchLM 91 — сильнейшая китайская модель, 5-е место в мире. Qwen3.5-27B (плотная модель) превосходит ожидания — SWE-bench 72.4%, конкурентоспособна с моделями в 5-10 раз больше. Архитектура Gated DeltaNet эффективнее чистых трансформеров. WebDev Arena Elo 1537 (#7). 262K контекст для вариантов Qwen3.5.
+**Сильные стороны:** Qwen3.7 Max с BenchLM 91 — сильнейшая китайская модель, 5-е место в мире. Индекс Artificial Analysis **56.6** (на 4.8 очка выше Qwen3.6 Max Preview). Полные оценки бенчмарков теперь доступны: HLE 41.4, HLE-w-tools 53.5, AIME 2026 97, GPQA-Diamond 90, SWE-bench Pro 60.6, Terminal-Bench 2.1 75, MCP-Atlas 76.4. Qwen3.5-27B (плотная модель) превосходит ожидания — SWE-bench 72.4%, конкурентоспособна с моделями в 5-10 раз больше. Архитектура Gated DeltaNet эффективнее чистых трансформеров. WebDev Arena Elo 1537 (#7). 262K контекст для вариантов Qwen3.5.
 
-**Слабые стороны:** Qwen3.7 Max не имеет открытых весов. Qwen3.5-397B набирает 78 — на 13 очков меньше Qwen3.7 Max. Qwen 4 ещё не анонсирована.
+**Слабые стороны:** Qwen3.7 Max **не имеет открытых весов** — сообщество активно запрашивает открытие весов по состоянию на 29 июня. Qwen3.5-397B набирает 78 — на 13 очков меньше Qwen3.7 Max. Qwen 4 ещё не анонсирована.
 
-**Лучше всего для LLM Wiki:** Qwen3.7 Max для генерации качества фронтира через API. Qwen3.5-27B для экономичного самохостинга. Qwen3.7 Plus за $0.25/М для среднего уровня.
+**Лучше всего для LLM Wiki:** Qwen3.7 Max для генерации качества фронтира через API. Qwen3.5-27B для экономичного самохостинга. Qwen3.7 Plus за $0.40/$1.60 с vision для среднего уровня и мультимодальных задач. Маленькие варианты для реалтайм-классификации.
 
 ### Kimi K2.6 / K2.7 Code (Moonshot AI)
 
@@ -417,11 +495,15 @@ For a Karpathy-style three-layer wiki system:
 
 **GLM-5.1:** Лидирует среди китайских моделей в Agent Arena (#8, 3.38%) и WebDev Arena (Elo 1532). BenchLM 82. GLM-5 (Reasoning) BenchLM 83, силён в математике и кибербезопасности (CyberGym 68.7). 8+ часов автономной работы. Лицензия MIT.
 
-**GLM-5.2:** Выпущена 13 июня 2026 года с **контекстом 1M токенов** (в 5 раз больше, чем у GLM-5.1), режимами рассуждения High/Max и **максимальным выводом 131K**. Входит в GLM Coding Plan; открытые веса по MIT обещаны на следующей неделе. На момент запуска **не опубликованы оценки бенчмарков** по кодингу, тексту и математике. Главное подтверждённое улучшение — размер контекста; архитектура и производительность пока не проверены третьими сторонами. К 14 июня модель уже была доступна в OpenCode через провайдера Z.ai с положительными первыми впечатлениями сообщества (см. [[glm-5-2]]).
+**GLM-5.2:** Выпущена 13 июня 2026 — флагман на **753 млрд параметров**, созданный для длинных автономных кодинговых задач, со **стабильным контекстом 1M токенов**. **Полные бенчмарки опубликованы 17 июня** (блог Z.AI на HuggingFace): это **сильнейшая open-source модель** в мире, **превосходящая GPT-5.5** на большинстве длинных кодинговых задач — SWE-bench Pro 62.1 (vs GPT-5.5 58.6), FrontierSWE Dominance 74.4 (vs 72.6), Terminal-Bench 2.1 81.0 (vs 84), PostTrainBench 34.3 (vs 28.4), HLE-w-tools 54.7 (vs 52.2), MCP-Atlas 76.8 (vs 75.3). Занимает **#2 в мире** на длинных задачах, уступая только Claude Opus 4.8. Также победила в **Design Arena** (#1, ELO 1360), обогнав Claude Fable 5.
 
-**Слабые стороны:** GLM-5.1: контекст 203K (наименьший среди фронтира), премиальный вывод $3.08/М. GLM-5.2: нет публичных бенчмарков; отдельное API-ценообразование пока недоступно.
+**Архитектура:** IndexShare (повторное использование одного индексера на каждые 4 слоя sparse-внимания → **в 2.9× меньше FLOPs** при контексте 1M); улучшенный MTP для спекулятивного декодирования (+20% к длине принятия); фреймворк `slime` для агентного RL; critic-based PPO для длинных задач; anti-hack модуль, блокирующий reward-hacking вызовы инструментов во время RL-обучения. Гибкие режимы усилия: **High** (баланс производительности/задержки, примерно вдвое меньше токенов вывода) и **Max** (пиковый интеллект, ~85k токенов вывода на задачу).
 
-**Лучше всего для LLM Wiki:** GLM-5.1 — лучший выбор для автономных агентов обслуживания вики. GLM-5 (Reasoning) для классификации и графов знаний. GLM-5.2 перспективна для генерации длинных документов вики, как только бенчмарки подтвердят качество; сейчас это ставка на размер контекста.
+**Цены:** API $1.40/М ввод, $4.40/М вывод (на уровне GLM-5.1), кэшированный ввод $0.26/М. Тарифы GLM Coding Plan (годовая оплата): Lite $12.60/мес, Pro $50.40/мес, Max $112.00/мес. Квота: 3× пик, 2× внепик; промо: внепик 1× до конца сентября. Лицензия MIT — **без региональных ограничений**. Интеграции первого дня: Claude Code, OpenCode, ZCode, Cline, Kilo Code, OpenClaw, Crush, Factory.
+
+**Слабые стороны:** Отстаёт от Claude Opus 4.8 на 1–13% на длинных бенчмарках. SWE-Marathon (13.0) ещё далеко до Opus 4.8 (26.0). Пока не ранжирована на BenchLM и LM Arena. Выше стоимость за токен, чем у DeepSeek V4 Flash или MiMo.
+
+**Лучше всего для LLM Wiki:** GLM-5.1 — лучший выбор для автономных агентов обслуживания вики. GLM-5 (Reasoning) для классификации и графов знаний. GLM-5.2 — теперь топовый выбор для генерации длинных документов вики и длинных автономных кодинговых задач — подтверждённые бенчмарки показывают, что она превосходит GPT-5.5 на большинстве агентных кодинговых задач примерно за 1/6 стоимости.
 
 ### Xiaomi MiMo-V2.5-Pro (Xiaomi)
 
@@ -473,6 +555,8 @@ For a Karpathy-style three-layer wiki system:
 > «Qwen3.7 Max с оценкой BenchLM 91 — сильнейшая китайская модель. Впервые китайская модель входит в глобальную пятёрку.» — BenchLM, июнь 2026
 
 > «MiMo-V2.5-Pro за $0.18/$0.36 обеспечивает интеллект уровня фронтира по ценам, делающим 24/7 автономных агентов экономически целесообразными.» — Artificial Analysis
+
+> «GLM-5.2 — первая модель с открытыми весами, преодолевшая 80% на Terminal-Bench, и она превосходит все остальные open-модели. Также обходит Gemini, делая её моделью фронтир-уровня за малую долю стоимости. Open weights возвращаются.» — Cline IDE, об интеграции GLM-5.2 в первый день
 
 ## Связанные записи
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 Pro vs Claude Opus 4.7 vs Kimi K2.6 Benchmark](../models/deepseek-v4-vs-opus-kimi.md))

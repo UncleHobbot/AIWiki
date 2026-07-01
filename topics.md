@@ -18,7 +18,7 @@ uses this file to rank incoming content and decide what warrants a full wiki ent
 
 ### 2. Agentic Coding Tools
 **Priority:** highest
-**Keywords:** Claude Code, Codex, GitHub Copilot, OpenCode, 
+**Keywords:** Claude Code, Codex, ZCode, GitHub Copilot, OpenCode,
   vibe coding, spec-driven development, AI coding, coding assistant, AI pair programmer,
   coding harness, CLAUDE.md, AGENTS.md, skill, hook, plugin, MCP server
 **Subreddits:** r/ClaudeCode, r/GithubCopilot, r/opencodeCLI, r/opencode, r/ChatGPTCoding, r/vibecoding

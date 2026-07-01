@@ -267,3 +267,11 @@
 **16:45 /research** — Updated llm-wiki-chinese-models-comparison: GLM-5.2 full benchmarks now published (753B params, beats GPT-5.5 on SWE-bench Pro 62.1, FrontierSWE 74.4, Terminal-Bench 81.0 — strongest open-source model globally). Added DeepSeek V4 peak/valley pricing (2x peak hours, mid-July launch). Corrected pricing across providers (MiniMax-M3, Kimi K2.6, GLM-5.2 API, Qwen3.7). Added Qwen3.7 Max full benchmark scores. New long-horizon benchmarks subsection. EN+RU both updated. Index: 272.
 
 **16:49 /edit** — llm-wiki-chinese-models-comparison: added 'Official Provider Pricing (First-Party APIs)' table with confirmed prices from each model creator's own API (DeepSeek api.deepseek.com, Z.AI, Alibaba DashScope, Moonshot, Xiaomi, MiniMax platform.minimax.io). Includes cache-hit rates and context/max-output columns. EN+RU. Index: 272.
+
+---
+
+## 2026-07-01
+
+**15:01 /wiki-reddit** — 16 subs (RSS fallback — JSON API 403, OAuth creds invalid). 12 entries created, 1 updated (glm-5-2). Key items: agentplugins-cross-harness (tools), arc-gate-prompt-injection-proxy (tools), 10x-coding-agent-methodology (tools), opencode-rate-limiter-plugin (tools), browser-snapshot-format-token-cost (research), mothrag-graph-free-multihop (research), reap-coding-agent-benchmark-curation (research), closed-vs-open-model-scaffolding-gap (concepts), local-agentic-web-research-stack (tips), opencode-12m-token-burn (tips), github-copilot-jetbrains-native (news), cerebras-openai-capacity-lockup (news), zai-max-plan-undisclosed-weekly-limit (news). Index: 285 total. 0 orphans, 0 broken links. 22 URLs marked processed (562->584).
+
+**15:11 /wiki-hackernews** — 50 articles fetched, 8 AI/agent-relevant processed. 7 entries created, 1 updated (fable5 export-control lift). Key items: duneslide-cursor-sandbox-escape (news), mcp-tool-poisoning-microsoft (news), guardfall-coding-agent-shell-injection (news), amazon-q-mcp-config-rce (news), bioshocking-ai-browser-credential-leak (news), gpt-5-6-sol-preview (news), deepseek-generated-browser-ransomware (news). Index: 292 total. 0 orphans, 0 broken. 8 URLs marked processed (584->592).

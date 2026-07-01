@@ -21,6 +21,7 @@ DeepSeek is a Chinese AI lab producing open-weight LLMs including DeepSeek V4 Pr
 - [[9router-free-ai-coding]] ([9router](../tools/9router-free-ai-coding.md)) — Free AI coding router supporting DeepSeek models
 - [[freebuff]] ([freebuff](../tools/freebuff.md)) — Free coding agent with DeepSeek V4 Pro/Flash
 - [[local-rag-obsidian-zotero]] ([Local RAG Stack](../tools/local-rag-obsidian-zotero.md)) — 100% local stack including DeepSeek
+- [[deepseek-generated-browser-ransomware]] ([AI-Generated Browser Ransomware via DeepSeek](../news/deepseek-generated-browser-ransomware.md)) — First frontier-model-synthesized novel attack path
 
 ---
 <!-- RU -->

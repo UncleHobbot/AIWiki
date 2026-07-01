@@ -45,6 +45,7 @@ The same LLM (e.g., Claude Opus 4.7 or GPT-5.5) can produce significantly differ
 - [[programbench-gpt55-first-solve]] ([ProgramBench: GPT-5.5 First Solve](../news/programbench-gpt55-first-solve.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[claude-code-explore-plan-code-commit]] ([Explore→Plan→Code→Commit Workflow](../tips/claude-code-explore-plan-code-commit.md))
+- [[reap-coding-agent-benchmark-curation]] ([REAP — Coding-Agent Benchmarks from Production](../research/reap-coding-agent-benchmark-curation.md))
 
 ---
 <!-- RU -->
@@ -75,3 +76,4 @@ Artificial Analysis — независимая организация по бе�
 - [[programbench-gpt55-first-solve]] ([ProgramBench: GPT-5.5 First Solve](../news/programbench-gpt55-first-solve.md))
 - [[agent-harness-engineering]] ([Agent Harness Engineering](../concepts/agent-harness-engineering.md))
 - [[claude-code-explore-plan-code-commit]] ([Explore→Plan→Code→Commit Workflow](../tips/claude-code-explore-plan-code-commit.md))
+- [[reap-coding-agent-benchmark-curation]] ([REAP — Coding-Agent Benchmarks from Production](../research/reap-coding-agent-benchmark-curation.md))

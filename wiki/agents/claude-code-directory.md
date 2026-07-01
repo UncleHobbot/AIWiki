@@ -38,6 +38,7 @@ Claude Code reads all configuration — CLAUDE.md, settings, skills, hooks, suba
 ## Related Entries
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[agentplugins-cross-harness]] ([AgentPlugins — Cross-Harness Plugin Compiler](../tools/agentplugins-cross-harness.md))
 
 ---
 <!-- RU -->
@@ -72,3 +73,4 @@ Claude Code читает всю конфигурацию — CLAUDE.md, наст
 ## Связанные записи
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 - [[claude-code-memory]] ([Claude Code Memory: CLAUDE.md and Auto Memory](../agents/claude-code-memory.md))
+- [[agentplugins-cross-harness]] ([AgentPlugins — Cross-Harness Plugin Compiler](../tools/agentplugins-cross-harness.md))

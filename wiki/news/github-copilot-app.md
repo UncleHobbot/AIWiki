@@ -40,6 +40,7 @@ Early adopter Oren Melamed (GitHub Star) described it as growing into "a new way
 - [[llm-wiki-enterprise-patterns]] ([LLM Wiki for Enterprise and Agents](../agents/llm-wiki-enterprise-patterns.md))
 - [[github-agentic-developer-certification]] ([GitHub GH-600: Agentic AI Developer Certification](../news/github-agentic-developer-certification.md))
 - [[product-github-copilot]] ([GitHub Copilot CLI and App](../tools/product-github-copilot.md))
+- [[github-copilot-jetbrains-native]] ([Copilot Natively Integrated into JetBrains IDEs](github-copilot-jetbrains-native.md))
 
 ---
 <!-- RU -->

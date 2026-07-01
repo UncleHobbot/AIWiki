@@ -4,13 +4,15 @@ title_ru: "GLM-5.2: кодинговая модель Z.AI с контексто
 category: models
 tags: [glm, zai, chinese-llm, coding, open-source, 1m-context]
 date: 2026-06-13
-updated: 2026-06-14
+updated: 2026-07-01
 sources:
   - https://docs.z.ai/devpack/latest-model.md
   - https://digg.com/tech/ii9xibgn
   - https://www.ithome.com/0/963/855.htm
   - https://codersera.com/blog/glm-5-2-release-1m-context-coding-2026/
   - https://www.reddit.com/r/opencodeCLI/comments/1u4z06y/glm52_by_zai_is_now_on_opencode/
+  - https://www.reddit.com/r/ZaiGLM/comments/1uje356/glm52_failing_with_method_not_allowed_405_in/
+  - https://www.reddit.com/r/ZaiGLM/comments/1ujhvpq/is_glm_52_really_that_good_or_too_sugarcoat/
 ---
 
 ## Summary
@@ -51,10 +53,17 @@ Until independent evaluations appear, treat GLM-5.2 as a context expansion relea
 
 GLM-5.2 became available in OpenCode via the Z.ai provider within a day of release. Early community first impressions (r/opencodeCLI, Tier 3 — unverified): "snappy" performance through the Z.ai provider, good results on smaller coding tasks, and the 1M context window cited as a real practical win — though still no formal benchmark comparisons.
 
+## Community Reception (late June 2026)
+
+- **ZCode 405 errors:** multiple r/ZaiGLM users report GLM-5.2 failing in ZCode with a persistent `405 Method Not Allowed` on every request, unresolved by restart/relogin — possibly tied to plan tier (`start-plan`). (Tier 3 community report.)
+- **"Is it really that good?":** an r/ZaiGLM thread asks whether GLM-5.2 genuinely reaches Claude Code / Codex-level for serious product engineering, or whether hype is ahead of reality — a signal that real-world verdict is still mixed.
+- See also [[closed-vs-open-model-scaffolding-gap]] for the argument that GLM-5.2's benchmark gap vs Claude may partly be a *scaffolding* gap, not a model gap.
+
 ## Related Entries
 
 - [[kimi-k2-7-code]] ([Kimi K2.7 Code](./kimi-k2-7-code.md))
 - [[glm-5-1]] ([GLM-5.1](glm-5-1.md))
+- [[closed-vs-open-model-scaffolding-gap]] ([Closed vs Open Scaffolding Gap](../concepts/closed-vs-open-model-scaffolding-gap.md))
 - GLM Coding Plan ([Z.AI GLM Coding Plan](../tools/zai-glm-coding-plan.md))
 
 ---
@@ -97,6 +106,12 @@ GLM-5.2 входит в подписочные тарифы GLM Coding Plan; о�
 ## Обновление по внедрению (14 июня 2026)
 
 GLM-5.2 стала доступна в OpenCode через провайдера Z.ai в течение суток после релиза. Первые впечатления сообщества (r/opencodeCLI, tier 3 — не проверено): "отзывчивая" работа через провайдера Z.ai, хорошие результаты на небольших задачах кодинга, контекст 1M токенов отмечен как реальное практическое преимущество — хотя формальных бенчмарк-сравнений пока нет.
+
+## Реакция сообщества (конец июня 2026)
+
+- **Ошибки 405 в ZCode:** несколько пользователей r/ZaiGLM сообщают, что GLM-5.2 в ZCode падает с постоянной `405 Method Not Allowed` на каждый запрос, не чинится перезапуском/перелогином — возможно, привязано к тарифу (`start-plan`). (Уровень 3, сообщество.)
+- **«Действительно ли она так хороша?»:** тред в r/ZaiGLM спрашивает, действительно ли GLM-5.2 дотягивает до уровня Claude Code / Codex для серьёзной продуктовой разработки, или хайп опережает реальность — сигнал, что реальный вердикт пока смешанный.
+- См. также [[closed-vs-open-model-scaffolding-gap]] — аргумент, что разрыв GLM-5.2 vs Claude в бенчмарках может быть частично разрывом в *scaffolding*, а не в модели.
 
 ## Связанные записи
 

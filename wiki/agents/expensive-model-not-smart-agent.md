@@ -46,6 +46,8 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[ai-agents-arr-framework-ooda-loop]] ([AI Agents: ARR Framework, OODA Loop](../concepts/ai-agents-arr-framework-ooda-loop.md))
 - [[llm-wrapper-performance-gap]] ([The LLM Wrapper Performance Gap: Same Model, Different Results](../tips/llm-wrapper-performance-gap.md))
+- [[browser-snapshot-format-token-cost]] ([Browser Snapshot Format vs Token Cost](../research/browser-snapshot-format-token-cost.md))
+- [[closed-vs-open-model-scaffolding-gap]] ([Closed vs Open Scaffolding Gap](../concepts/closed-vs-open-model-scaffolding-gap.md))
 ---
 <!-- RU -->
 

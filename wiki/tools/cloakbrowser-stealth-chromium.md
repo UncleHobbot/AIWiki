@@ -37,6 +37,7 @@ The result is a real Chromium binary that antibot systems score as a normal brow
 - [[react-doctor]] ([React Doctor: AI-Generated React Code Linter](../tools/react-doctor.md))
 - [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
 - [[ui-tars-desktop-multimodal-agent]] ([UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](../agents/ui-tars-desktop-multimodal-agent.md))
+- [[local-agentic-web-research-stack]] ([Fully Local Agentic Web Research Stack](../tips/local-agentic-web-research-stack.md))
 
 ---
 <!-- RU -->
@@ -58,3 +59,4 @@ CloakBrowser — скрытый браузер на базе Chromium, прох�
 - [[react-doctor]] ([React Doctor: AI-Generated React Code Linter](../tools/react-doctor.md))
 - [[package-hallucination-mcp]] ([Package Hallucination Catcher: MCP Server for LLM Package Recommendations](../tools/package-hallucination-mcp.md))
 - [[ui-tars-desktop-multimodal-agent]] ([UI-TARS Desktop & Agent TARS: ByteDance Multimodal AI Agent Stack](../agents/ui-tars-desktop-multimodal-agent.md))
+- [[local-agentic-web-research-stack]] ([Fully Local Agentic Web Research Stack](../tips/local-agentic-web-research-stack.md))

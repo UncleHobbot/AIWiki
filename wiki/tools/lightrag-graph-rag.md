@@ -40,6 +40,7 @@ A key practical advantage is the incremental update algorithm. Unlike systems th
 - [[rag-explained-embeddings-vector-db]] ([RAG Explained in 18 Minutes: Embeddings, Vector DBs, and Advanced Techniques](../concepts/rag-explained-embeddings-vector-db.md))
 - [[local-rag-obsidian-zotero]] ([Local RAG: 100% Local Stack for Obsidian, Zotero, and Claude Code](../tools/local-rag-obsidian-zotero.md))
 - [[turbo-graph-rag-memory]] ([turbo-graph — Graph Memory for RAG](../tools/turbo-graph-rag-memory.md))
+- [[mothrag-graph-free-multihop]] ([MOTHRAG — Graph-Free Multi-Hop Retrieval](../research/mothrag-graph-free-multihop.md))
 
 ---
 <!-- RU -->

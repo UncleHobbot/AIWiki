@@ -6,7 +6,7 @@ tags: [anthropic, claude, fable, mythos, export-control, ai-policy, ai-safety, g
 aliases: [Fable 5 ban, Mythos 5 suspension, AI export ban]
 confidence: low
 date: 2026-06-13
-updated: 2026-06-14
+updated: 2026-07-01
 sources:
   - https://www.christianfindlay.com/blog/ai-export-ban
   - https://www.reddit.com/r/singularity/comments/1u55r4m/the_us_government_switched_off_anthropics_most/
@@ -14,6 +14,7 @@ sources:
   - https://www.reddit.com/r/singularity/comments/1u4y3kc/david_sacks_explains_the_sequence_of_events/
   - https://www.reddit.com/r/singularity/comments/1u4wrxb/amazon_ceos_talks_with_us_officials_triggered/
   - https://x.com/DavidSacks/status/2065853007619588171
+  - https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html
 ---
 
 ## Summary
@@ -34,11 +35,16 @@ According to the linked reporting, the suspension was driven by an export-contro
 
 Multiple r/singularity threads from the same window discuss this from different angles: a "what's the actual play here" thread speculating about whether Anthropic would build US-only verification infrastructure or fight the order publicly; a thread relaying David Sacks' account of the sequence of events; and a thread specifically attributing the catalyst to Amazon CEO Andy Jassy's conversations with officials. As with all rapidly-developing political/regulatory stories sourced primarily from social media and a single blog writeup, this should be treated as a developing story (confidence: low) pending official statements from Anthropic and US government sources — but the underlying premise (worldwide suspension of a just-launched frontier model via export-control authority) appears to be corroborated across multiple independent posts in the same time window.
 
+## Resolution (July 1, 2026) — Export Controls Lifted, Fable 5 Restored
+
+The U.S. lifted the jailbreak-linked export controls, and Anthropic restored Claude Fable 5 to customers. The suspension therefore proved temporary — the export-control mechanism was used as a short-term brake rather than a permanent ban, though it still set the precedent noted above. See also [[gpt-5-6-sol-preview]] for how OpenAI is now staging frontier cyber-capable models (restricted access by design) in the wake of this episode.
+
 ## Related Entries
 - [[claude-fable-5-mythos-5-release]] ([Claude Fable 5 / Mythos 5 Dual Release](claude-fable-5-mythos-5-release.md))
 - [[claude-fable-5-ai-research-restrictions]] ([Claude Fable 5 AI Research Restrictions](claude-fable-5-ai-research-restrictions.md))
 - [[mythos-aisi-cyber-capability-2026]] ([Mythos Cyber Capability: 20-Hour Network Attacks](mythos-aisi-cyber-capability-2026.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](project-glasswing-anthropic-vulnerability-discovery.md))
+- [[gpt-5-6-sol-preview]] ([GPT-5.6 Sol Preview](gpt-5-6-sol-preview.md))
 
 ---
 <!-- RU -->
@@ -61,8 +67,13 @@ Multiple r/singularity threads from the same window discuss this from different 
 
 Несколько тредов r/singularity того же периода обсуждают это с разных сторон: тред «в чём реальный план» со спекуляциями о том, построит ли Anthropic инфраструктуру верификации только для США или будет публично оспаривать решение; тред, пересказывающий версию событий от Дэвида Сакса; и тред, конкретно связывающий катализатор с переговорами CEO Amazon Энди Джасси с чиновниками. Как и для всех быстро развивающихся политических/регуляторных историй, основанных в первую очередь на соцсетях и одном блог-посте, это следует считать развивающейся историей (confidence: low) до официальных заявлений Anthropic и властей США — но базовая предпосылка (приостановка только что запущенной frontier-модели по всему миру через экспортный контроль) подтверждается несколькими независимыми постами в один и тот же период времени.
 
+## Развязка (1 июля 2026) — экспортный контроль снят, Fable 5 восстановлен
+
+США сняли экспортный контроль, привязанный к jailbreak, и Anthropic восстановила Claude Fable 5 для клиентов. Приостановка оказалась временной — механизм экспортного контроля сработал как краткосрочный тормоз, а не постоянный запрет, хотя прецедент (см. выше) сохраняется. См. также [[gpt-5-6-sol-preview]] — как OpenAI теперь staging'ует frontier киберспособные модели (ограниченный доступ by design) по следам этого эпизода.
+
 ## Связанные записи
 - [[claude-fable-5-mythos-5-release]] ([Claude Fable 5 / Mythos 5 Dual Release](claude-fable-5-mythos-5-release.md))
 - [[claude-fable-5-ai-research-restrictions]] ([Claude Fable 5 AI Research Restrictions](claude-fable-5-ai-research-restrictions.md))
 - [[mythos-aisi-cyber-capability-2026]] ([Mythos Cyber Capability: 20-Hour Network Attacks](mythos-aisi-cyber-capability-2026.md))
 - [[project-glasswing-anthropic-vulnerability-discovery]] ([Project Glasswing](project-glasswing-anthropic-vulnerability-discovery.md))
+- [[gpt-5-6-sol-preview]] ([GPT-5.6 Sol Preview](gpt-5-6-sol-preview.md))

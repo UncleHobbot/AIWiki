@@ -32,6 +32,8 @@ The deeper lesson is about trust boundaries in agent harnesses. Coding agents al
 - [[malware-slop-npm-claude-user-directory]] ([Malware-Slop: npm Package Targeting Claude](../news/malware-slop-npm-claude-user-directory.md))
 - [[microsoft-agent-governance-toolkit]] ([Microsoft Agent Governance Toolkit](../tools/microsoft-agent-governance-toolkit.md))
 - [[self-replicating-ai-worm-local-models]] ([Self-Replicating AI Worm](../news/self-replicating-ai-worm-local-models.md))
+- [[arc-gate-prompt-injection-proxy]] ([Arc Gate — Prompt-Injection Defense Proxy](../tools/arc-gate-prompt-injection-proxy.md))
+- [[bioshocking-ai-browser-credential-leak]] ([BioShocking — AI Browser Credential Leak](bioshocking-ai-browser-credential-leak.md))
 
 ---
 <!-- RU -->
@@ -59,3 +61,5 @@ Tenet Security раскрыла «Agentjacking» — новый класс ат�
 - [[malware-slop-npm-claude-user-directory]] ([Malware-Slop: npm Package Targeting Claude](../news/malware-slop-npm-claude-user-directory.md))
 - [[microsoft-agent-governance-toolkit]] ([Microsoft Agent Governance Toolkit](../tools/microsoft-agent-governance-toolkit.md))
 - [[self-replicating-ai-worm-local-models]] ([Self-Replicating AI Worm](../news/self-replicating-ai-worm-local-models.md))
+- [[arc-gate-prompt-injection-proxy]] ([Arc Gate — Prompt-Injection Defense Proxy](../tools/arc-gate-prompt-injection-proxy.md))
+- [[bioshocking-ai-browser-credential-leak]] ([BioShocking — AI Browser Credential Leak](bioshocking-ai-browser-credential-leak.md))

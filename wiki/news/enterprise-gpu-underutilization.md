@@ -39,6 +39,7 @@ Implication for developers: local models on consumer GPUs (e.g., RTX 3090/4090 r
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
 - [[nvidia-sol-execbench]] ([NVIDIA SOL-ExecBench](../concepts/nvidia-sol-execbench.md))
+- [[cerebras-openai-capacity-lockup]] ([Cerebras × OpenAI Capacity Deal](cerebras-openai-capacity-lockup.md))
 
 ---
 <!-- RU -->
@@ -72,3 +73,4 @@ Implication for developers: local models on consumer GPUs (e.g., RTX 3090/4090 r
 - [[orthrus-qwen3-acceleration]] ([Orthrus-Qwen3: Diffusion Attention for 7.8x LLM Speedup](../tools/orthrus-qwen3-acceleration.md))
 - [[llm-wiki-chinese-models-comparison]] ([Chinese LLM Models for Building Karpathy's LLM Wiki: DeepSeek, Kimi, GLM, Qwen, MiMo](../models/llm-wiki-chinese-models-comparison.md))
 - [[nvidia-sol-execbench]] ([NVIDIA SOL-ExecBench](../concepts/nvidia-sol-execbench.md))
+- [[cerebras-openai-capacity-lockup]] ([Cerebras × OpenAI Capacity Deal](cerebras-openai-capacity-lockup.md))

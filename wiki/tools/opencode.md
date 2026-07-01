@@ -40,6 +40,8 @@ Because the project is open-source, most advanced behavior is added by the commu
 - [[redactable-pii-protection]] ([Redactable: PII Protection Plugin for OpenCode](../tools/redactable-pii-protection.md))
 - [[zsh-opencode-plugin]] ([zsh-opencode-plugin](../tools/zsh-opencode-plugin.md))
 - [[codeboarding-architecture-diagrams]] ([CodeBoarding: Live Architecture Diagrams That Track Agent Changes](../tools/codeboarding-architecture-diagrams.md))
+- [[opencode-rate-limiter-plugin]] ([opencode-rate-limiter-plugin](opencode-rate-limiter-plugin.md))
+- [[opencode-12m-token-burn]] ([Burning 12M Tokens in a Few Prompts](../tips/opencode-12m-token-burn.md))
 
 ---
 <!-- RU -->

@@ -1,5 +1,5 @@
 # LLM Wiki Index
-**292 entries** across 8 categories.
+**293 entries** across 8 categories.
 
 ## Concepts (33)
 - [[agent-harness-engineering]] [Agent Harness Engineering](wiki/concepts/agent-harness-engineering.md) — Agent harness engineering is the discipline of designing the scaffolding around a language model — prompts, tools, context policies, hooks, subagents, feedback loops, and recovery paths — that turns a raw model into a working agent.
@@ -301,10 +301,11 @@
 - [[andrej-karpathy]] [Andrej Karpathy](wiki/people/andrej-karpathy.md) — Andrej Karpathy is a Slovak-Canadian AI researcher, educator, and founding member of OpenAI.
 - [[matt-pocock-aihero]] [Matt Pocock: AI Hero and Claude Code Skills Author](wiki/people/matt-pocock-aihero.md) — Matt Pocock is a TypeScript educator turned AI coding practitioner whose aihero.dev platform and skills repository (46k+ stars) have become a reference point for Claude Code workflows — most notably the `/grill-me` skill, the "tracer bullets" technique, and the codebase-design-for-AI philosophy built on the "AI is the guy from Memento" insight.
 
-## Research (6)
+## Research (7)
 - [[browser-snapshot-format-token-cost]] [Browser-Snapshot Format vs Token Cost — 35 Agent Trials](wiki/research/browser-snapshot-format-token-cost.md) — A controlled experiment (35 trials) from the Opera browser-tooling team found that the format used to represent a browser page to an agent has no effect on task pass rate but a ~5× effect on input-token cost.
 - [[mathwiki-llm-research-automation]] [Improving AntonIliashenko/MathWiki: What to Add Next](wiki/research/mathwiki-llm-research-automation.md) — AntonIliashenko/MathWiki is a sophisticated LLM-maintained research wiki for Smith map deformation theory.
 - [[mathwiki-smith-maps-research]] [AntonIliashenko/MathWiki: Research Wiki for Smith Map Deformation Theory](wiki/research/mathwiki-smith-maps-research.md) — AntonIliashenko/MathWiki is a citation-first, LLM-maintained research wiki for differential geometry, maintained by Anton Iliashenko (co-author of the 2026 Smith map deformation theory preprint).
 - [[mothrag-graph-free-multihop]] [MOTHRAG — Graph-Free Multi-Hop Retrieval via Query-Time Orchestration](wiki/research/mothrag-graph-free-multihop.md) — MOTHRAG is an open-sourced multi-hop RAG framework that drops the offline knowledge graph entirely.
 - [[reap-coding-agent-benchmark-curation]] [REAP — Automatic Curation of Coding-Agent Benchmarks from Production Usage](wiki/research/reap-coding-agent-benchmark-curation.md) — REAP is a research project ([R]-tagged) proposing automatic curation of coding-agent benchmarks derived from interactive production usage — i.e., turning real agent sessions into benchmark tasks rather than hand-authored eval scenarios.
 - [[researchclawbench-llm-research-reproduction]] [ResearchClawBench: LLMs Score Only ~20-26/100 at Reproducing Scientific Research](wiki/research/researchclawbench-llm-research-reproduction.md) — A new benchmark, ResearchClawBench, gives AI systems an expert-prepared package (research question, literature, raw data, tools, executable workspace) and asks them to independently reproduce a hidden paper's core results — Claude Code with Opus 4.6 scored only 21.5/100, and even the best model picked per-task averaged just 26.5/100.
+- [[zcode-zai-agentic-development-environment]] [ZCode — Z.ai's Agentic Development Environment (Deep Dive)](wiki/research/zcode-zai-agentic-development-environment.md) — **ZCode** is Z.ai's (Zhipu AI's) closed-source **desktop Agentic Development Environment (ADE)** — the official harness for the **GLM-5.2** model (1M-token context).

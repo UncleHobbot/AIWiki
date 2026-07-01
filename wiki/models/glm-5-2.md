@@ -64,6 +64,7 @@ GLM-5.2 became available in OpenCode via the Z.ai provider within a day of relea
 - [[kimi-k2-7-code]] ([Kimi K2.7 Code](./kimi-k2-7-code.md))
 - [[glm-5-1]] ([GLM-5.1](glm-5-1.md))
 - [[closed-vs-open-model-scaffolding-gap]] ([Closed vs Open Scaffolding Gap](../concepts/closed-vs-open-model-scaffolding-gap.md))
+- [[zcode-zai-agentic-development-environment]] ([ZCode — Z.ai's Agentic Development Environment](../research/zcode-zai-agentic-development-environment.md))
 - GLM Coding Plan ([Z.AI GLM Coding Plan](../tools/zai-glm-coding-plan.md))
 
 ---

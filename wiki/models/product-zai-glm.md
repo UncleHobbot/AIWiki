@@ -26,6 +26,7 @@ Z.ai GLM is a Chinese LLM platform by Zhipu AI offering the GLM series of models
 - [[deepseek-v4-vs-opus-kimi]] ([DeepSeek V4 vs Opus vs Kimi](../models/deepseek-v4-vs-opus-kimi.md)) — Benchmark comparison including Chinese models
 - [[open-source-models-vs-opus-copilot-benchmark]] ([Open Source vs Opus](../models/open-source-models-vs-opus-copilot-benchmark.md)) — Real-world coding benchmarks
 - [[zai-max-plan-undisclosed-weekly-limit]] ([z.ai Max Plan — Undisclosed Weekly Limit](../news/zai-max-plan-undisclosed-weekly-limit.md))
+- [[zcode-zai-agentic-development-environment]] ([ZCode — Z.ai's Agentic Development Environment](../research/zcode-zai-agentic-development-environment.md))
 
 ---
 <!-- RU -->

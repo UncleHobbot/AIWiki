@@ -30,6 +30,7 @@ GitHub Copilot CLI is a GitHub-aware terminal coding agent, and the Copilot App 
 - [[github-agentic-developer-certification]] ([GH-600 Certification](../news/github-agentic-developer-certification.md)) — Agentic AI developer certification
 - [[microsoft-agent-governance-toolkit]] ([Agent Governance Toolkit](../tools/microsoft-agent-governance-toolkit.md)) — Policy enforcement for AI agents
 - [[microsoft-waza]] ([Microsoft Waza](../tools/microsoft-waza.md)) — CLI for evaluating agent skills
+- [[github-copilot-dual-behavior-code-bypass]] ([Copilot Dual-Behavior Code Bypass](../news/github-copilot-dual-behavior-code-bypass.md)) — Refuses in chat, writes in code
 
 ---
 <!-- RU -->

@@ -33,6 +33,7 @@ The 2.x sandbox was Cursor's answer to the earlier prompt-injection wave. DuneSl
 - [[arc-gate-prompt-injection-proxy]] ([Arc Gate Prompt-Injection Proxy](../tools/arc-gate-prompt-injection-proxy.md))
 
 ---
+- [[ghostapproval-symlink-coding-agent-flaw]] ([GhostApproval Symlink Flaws](ghostapproval-symlink-coding-agent-flaw.md))
 <!-- RU -->
 
 ## Краткое описание

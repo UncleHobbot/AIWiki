@@ -37,6 +37,7 @@ The MCP server solution is architecturally simple: register it as an MCP tool na
 - [[equibles-mcp-financial-data]] ([Equibles: Financial Data MCP](../tools/equibles-mcp-financial-data.md))
 
 ---
+- [[hallusquatting-ai-hallucination-botnet]] ([HalluSquatting](../news/hallusquatting-ai-hallucination-botnet.md))
 <!-- RU -->
 
 ## Краткое описание

@@ -43,6 +43,7 @@ A key practical advantage is the incremental update algorithm. Unlike systems th
 - [[mothrag-graph-free-multihop]] ([MOTHRAG — Graph-Free Multi-Hop Retrieval](../research/mothrag-graph-free-multihop.md))
 
 ---
+- [[mcpg-postgresql-mcp-server]] ([MCPg](mcpg-postgresql-mcp-server.md))
 <!-- RU -->
 
 ## Краткое описание

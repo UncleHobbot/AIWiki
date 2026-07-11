@@ -31,6 +31,7 @@ Community source (Tier 3 — Reddit speculation about a GitHub repo); treat all 
 - [[heimdall-ai-security-scanner]] ([Heimdall](../tools/heimdall-ai-security-scanner.md))
 
 ---
+- [[mcp-tool-schema-bloat-token-cost]] ([MCP Tool-Schema Bloat](../tips/mcp-tool-schema-bloat-token-cost.md))
 <!-- RU -->
 
 ## Краткое описание

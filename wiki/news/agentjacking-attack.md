@@ -36,6 +36,7 @@ The deeper lesson is about trust boundaries in agent harnesses. Coding agents al
 - [[bioshocking-ai-browser-credential-leak]] ([BioShocking — AI Browser Credential Leak](bioshocking-ai-browser-credential-leak.md))
 
 ---
+- [[agentic-safety-vs-textual-safety-mcp-attacks]] ([Agentic Safety vs Textual Safety](../research/agentic-safety-vs-textual-safety-mcp-attacks.md))
 <!-- RU -->
 
 ## Краткое описание

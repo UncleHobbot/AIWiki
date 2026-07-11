@@ -68,6 +68,7 @@ GLM-5.2 became available in OpenCode via the Z.ai provider within a day of relea
 - GLM Coding Plan ([Z.AI GLM Coding Plan](../tools/zai-glm-coding-plan.md))
 
 ---
+- [[glm-5-2-nested-tool-call-bug]] ([GLM-5.2 Nested Tool-Call Bug](../news/glm-5-2-nested-tool-call-bug.md))
 <!-- RU -->
 
 ## Краткое описание

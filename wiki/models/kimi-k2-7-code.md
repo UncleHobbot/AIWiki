@@ -61,6 +61,7 @@ Kimi Platform cache-hit input is significantly cheaper ($0.19/M), making repeate
 - [[moonshot-kimi]] ([Moonshot Kimi](../tools/moonshot-kimi.md))
 
 ---
+- [[kimi-k2-5-vs-k2-6-vs-k2-7-code]] ([Kimi K2.5 vs K2.6 vs K2.7](kimi-k2-5-vs-k2-6-vs-k2-7-code.md))
 <!-- RU -->
 
 ## Краткое описание

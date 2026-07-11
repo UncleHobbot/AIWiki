@@ -49,6 +49,7 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[browser-snapshot-format-token-cost]] ([Browser Snapshot Format vs Token Cost](../research/browser-snapshot-format-token-cost.md))
 - [[closed-vs-open-model-scaffolding-gap]] ([Closed vs Open Scaffolding Gap](../concepts/closed-vs-open-model-scaffolding-gap.md))
 ---
+- [[mcp-tool-schema-bloat-token-cost]] ([MCP Tool-Schema Bloat](../tips/mcp-tool-schema-bloat-token-cost.md))
 <!-- RU -->
 
 ## Краткое описание

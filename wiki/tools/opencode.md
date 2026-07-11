@@ -44,6 +44,7 @@ Because the project is open-source, most advanced behavior is added by the commu
 - [[opencode-12m-token-burn]] ([Burning 12M Tokens in a Few Prompts](../tips/opencode-12m-token-burn.md))
 
 ---
+- [[aethereum-multi-session-coordination]] ([aethereum](aethereum-multi-session-coordination.md))
 <!-- RU -->
 
 ## Краткое описание

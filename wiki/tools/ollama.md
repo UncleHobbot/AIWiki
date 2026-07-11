@@ -36,6 +36,7 @@ Because it manages the full model lifecycle (download, versioning, prompt templa
 - [[small-models-clean-architecture]] ([Small Models, Clean Architecture](../tips/small-models-clean-architecture.md))
 
 ---
+- [[clifford-control-plane-local-ai]] ([Clifford](clifford-control-plane-local-ai.md))
 <!-- RU -->
 
 ## Краткое описание

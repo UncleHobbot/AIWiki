@@ -277,3 +277,9 @@
 **15:11 /wiki-hackernews** — 50 articles fetched, 8 AI/agent-relevant processed. 7 entries created, 1 updated (fable5 export-control lift). Key items: duneslide-cursor-sandbox-escape (news), mcp-tool-poisoning-microsoft (news), guardfall-coding-agent-shell-injection (news), amazon-q-mcp-config-rce (news), bioshocking-ai-browser-credential-leak (news), gpt-5-6-sol-preview (news), deepseek-generated-browser-ransomware (news). Index: 292 total. 0 orphans, 0 broken. 8 URLs marked processed (584->592).
 
 **16:50 research** — Created zcode-zai-agentic-development-environment (research) — deep-dive on Z.ai's desktop ADE: form factor, models/providers, execution modes, AGENTS.md config, pricing, community reception, version history. Bilingual. Researched from official docs (zcode.z.ai) + r/ZaiGLM + HN. Backlinked from product-zai-glm and glm-5-2. Index: 293 total. 0 orphans, 0 broken.
+
+---
+
+## 2026-07-11
+
+**09:12 /wiki-reddit** — 16 subs (RSS fallback). 12 entries created. Key items: hard-gates-over-soft-prompts (tips), mcp-tool-schema-bloat-token-cost (tips), aethereum-multi-session-coordination (tools), packmind-local-second-brain (tools), clifford-control-plane-local-ai (tools), mcpg-postgresql-mcp-server (tools), toolhound-tool-call-failure-taxonomy (research), agentic-safety-vs-textual-safety-mcp-attacks (research), gpt-5-6-pareto-frontier-copilot (models), kimi-k2-5-vs-k2-6-vs-k2-7-code (models), glm-5-2-nested-tool-call-bug (news), skill-md-supply-chain-risks (news). Index: 305 total. 0 orphans, 0 broken. 18 URLs marked processed (592->610).

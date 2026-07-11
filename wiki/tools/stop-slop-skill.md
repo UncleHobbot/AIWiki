@@ -32,6 +32,7 @@ Compatible with any LLM that supports custom instructions or skill/tool injectio
 - [[karpathy-claude-code-guidelines]] ([Karpathy Claude Code Guidelines](../tips/karpathy-claude-code-guidelines.md))
 
 ---
+- [[skill-md-supply-chain-risks]] ([Agent Skills Supply-Chain Risks](../news/skill-md-supply-chain-risks.md))
 <!-- RU -->
 
 ## Краткое описание

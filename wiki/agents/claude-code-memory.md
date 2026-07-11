@@ -39,6 +39,7 @@ Claude Code persists knowledge across sessions through two complementary systems
 - [[claude-code-extensions-overview]] ([Claude Code Extensions: Skills, MCP, Hooks, Subagents](../agents/claude-code-extensions-overview.md))
 
 ---
+- [[packmind-local-second-brain]] ([PackMind](../tools/packmind-local-second-brain.md))
 <!-- RU -->
 
 ## Краткое описание

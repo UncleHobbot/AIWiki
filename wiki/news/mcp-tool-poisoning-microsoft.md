@@ -33,6 +33,8 @@ The attack exploits that MCP picks up description changes on the fly — in setu
 - [[microsoft-agent-governance-toolkit]] ([Microsoft Agent Governance Toolkit](../tools/microsoft-agent-governance-toolkit.md))
 
 ---
+- [[agentic-safety-vs-textual-safety-mcp-attacks]] ([Agentic Safety vs Textual Safety](../research/agentic-safety-vs-textual-safety-mcp-attacks.md))
+- [[skill-md-supply-chain-risks]] ([Agent Skills Supply-Chain Risks](skill-md-supply-chain-risks.md))
 <!-- RU -->
 
 ## Краткое описание

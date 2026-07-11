@@ -31,6 +31,7 @@ Limited-access previews are how OpenAI is handling models with advanced cyber ca
 - [[deepseek-v4]] ([DeepSeek V4](../models/deepseek-v4.md))
 
 ---
+- [[gpt-5-6-pareto-frontier-copilot]] ([GPT-5.6 Pareto Frontier](../models/gpt-5-6-pareto-frontier-copilot.md))
 <!-- RU -->
 
 ## Краткое описание

@@ -2,6 +2,18 @@
 
 ## To Read
 
+https://news.ycombinator.com/item?id=49471714 <!-- HN: AI Engineer Notebooks - free framework-free RAG/agents/evals notebooks on Colab, 112 pts (browser hackernews scan 2026-08-30) -->
+https://news.ycombinator.com/item?id=49445727 <!-- HN: RAG Is Simpler Than You Think - essay on full-text search over embeddings, 510 pts 216 comments (browser hackernews scan 2026-08-30) -->
+https://news.ycombinator.com/item?id=49424758 <!-- HN: A Claude Code skill that recovers export-blocked Kindle highlights, 45 pts (browser hackernews scan 2026-08-30) -->
+https://news.ycombinator.com/item?id=49488654 <!-- HN Ask: Why do we need MCP? - community discussion on Model Context Protocol value (browser hackernews scan 2026-08-30) -->
+https://news.ycombinator.com/item?id=49467437 <!-- HN video: DHH - Future of Programming, AI, Agentic Engineering, Vibe Coding and Linux (browser hackernews scan 2026-08-30) -->
+
+https://www.reddit.com/r/AI_Agents/comments/1lq3w0d/why_use_mcp_when_agents_can_useapis_directly/ <!-- r/AI_Agents: Why use MCP when Agents can use APIs directly? - 187 upvotes, 146 comments, MCP vs raw API integration debate (browser reddit scan 2026-08-30) -->
+https://www.reddit.com/r/ClaudeCode/comments/1jz4xny/opus_5_is_insufferrable/ <!-- r/ClaudeCode: Opus 5 is insufferrable - 2.6K upvotes, 575 comments on Opus 5 behavior in Claude Code (browser reddit scan 2026-08-30) -->
+https://www.reddit.com/r/vibecoding/comments/1kr4s7f/insane_levels_of_vibe_coding/ <!-- r/vibecoding: Insane levels of vibe coding - 3.2K upvotes showcase of apps built via vibe coding (browser reddit scan 2026-08-30) -->
+https://www.reddit.com/r/LocalLLaMA/comments/1km4y8c/nvidia_buying_hf_isnt_a_good_thing_for_open_source/ <!-- r/LocalLLaMA: NVIDIA buying HuggingFace is not good for open source - 2.6K upvotes, 549 comments (browser reddit scan 2026-08-30) -->
+https://www.reddit.com/r/singularity/comments/1kq3w9s/sam_altman_tells_time_that_openai_will_achieve/ <!-- r/singularity: Sam Altman tells TIME OpenAI will achieve AGI by end of year - 2K upvotes, 1K comments (browser reddit scan 2026-08-30) -->
+
 https://github.com/leighstillard/ship-skills <!-- Ship Skills: 5 Claude Code skills for full PR pipeline (already processed) -->
 https://github.com/cloudlinqed/grind <!-- Grind: Claude Code hook that prevents agent from pausing (already processed) -->
 https://github.com/bigmacfive/turbo-graph/ <!-- turbo-graph: GraphMemoryIndex for RAG (already processed) -->

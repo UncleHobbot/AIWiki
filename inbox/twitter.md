@@ -1,5 +1,11 @@
 # Twitter / X Queue
 
+https://x.com/ClaudeDevs/status/2093742321473065266 <!-- ClaudeDevs: from Sep 14 permanent +25% weekly limits raise in Claude Code for Pro/Max/Team/Enterprise plans, 18K likes (browser scan, Aug 29) -->
+https://x.com/DailyDoseOfDS_/status/2093632264408273011 <!-- Daily Dose of Data Science: Stateful vs Stateless MCP core - Anthropic biggest MCP update, 130K views (browser scan, Aug 29) -->
+https://x.com/AiswaryaVenkit1/status/2093994639141273663 <!-- Aiswarya Venkitesh: Microsoft evolving from AI Assistants to Autonomous Work Agents, Copilot plans/executes across Word/Excel/PowerPoint (browser scan, Aug 30) -->
+https://x.com/opencode/status/2093369212068864219 <!-- OpenCode: Hy4 preview in OpenCode Go - 770B/49B params, 1M context, built for coding agents, 1.9K likes (browser scan, Aug 28) -->
+https://x.com/ranjankumar/status/2092478002827518192 <!-- Ranjan Kumar: The Ralph Loop and /goal - what Claude Code actually automated, agentic workflow design lessons (browser scan, Aug 26) -->
+
 ## Done (May 28)
 https://x.com/itsPaulAi/status/2058612202668720449 <!-- Paul Couvert: Qwen3.7-Max 50% off promo — promotional content, skipped -->
 https://x.com/haider1/status/2058621553307168834 <!-- haider1: 403 forbidden, unreadable — skipped -->

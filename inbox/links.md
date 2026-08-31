@@ -2,6 +2,20 @@
 
 ## To Read
 
+<!-- from /wiki-reddit scan 2026-08-31 -->
+https://github.com/hamin2006/OpenCrew <!-- KiroCrew with OpenCode backend, score 15 -->
+https://arxiv.org/abs/2608.28444 <!-- Sliding-window beats linear attention (r/LocalLLaMA) -->
+https://arxiv.org/abs/2606.14066 <!-- paper behind "Codex limits last 3x longer with one change" -->
+https://github.com/github/copilot-sdk <!-- Agent Host in VS Code blog post (already have github-copilot-sdk, check for update) -->
+https://huggingface.co/unsloth/Qwen3.8-27B-GGUF <!-- Unsloth Qwen3.8 27B GGUF quants -->
+https://github.com/InfraGuard-Labs/rag-access-check <!-- open-source access-control checker for RAG apps -->
+https://github.com/rautaditya2606/Shardflow <!-- 28 TPS Qwen2.5-7B across cloud regions over public WAN -->
+https://github.com/kyliamet/geo-optimize-site <!-- Codex skill for GEO / AI search optimization -->
+https://github.com/visnia-ai/browser-agent <!-- GLM 5.3 flash vs GPT 5.6 Luna browsing benchmark -->
+https://pickleshell.github.io/model-benchmarks.html <!-- open LLM testing pipeline + results -->
+https://github.com/roandejager/Hillock <!-- local neuro-symbolic memory engine for Ollama -->
+https://github.com/yangbobo2021/relay-dsh-plugin-codex <!-- DSH Codex/Claude plugins, 162 migration tests -->
+
 https://news.ycombinator.com/item?id=49424758 <!-- HN: Claude Code skill recovering export-blocked Kindle highlights, 45 pts — niche, low priority -->
 https://news.ycombinator.com/item?id=49467437 <!-- HN video: DHH - Future of Programming, AI, Agentic Engineering — needs transcript, queue for /wiki-youtube -->
 https://www.youtube.com/watch?v=NYFGCESmikA <!-- DHH interview video (from HN 49467437) -->

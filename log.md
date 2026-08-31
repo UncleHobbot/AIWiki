@@ -291,3 +291,5 @@
 ## 2026-08-31
 
 **16:35 /wiki-inbox** — 4 created, 0 updated. Key items: rag-simpler-than-you-think (concepts), mcp-vs-direct-api-debate (concepts), ai-engineer-notebooks (tools), skill-doctor (tools). Clippings/posts/youtube empty; 4 tweets + 8 links blocked by robots.txt/X, requeued. Index: 317 total.
+
+**17:05 /wiki-reddit** — 16/16 subs via RSS (rate-limit retry added to fetch_reddit.py). 1564 posts scanned, 4 entries created: qwen-3-8-flash-next (models), glm-5-3-release (models), openai-huggingface-sandbox-escape (news), openusage-subscription-tracker (tools). 12 URLs queued. Index: 321 total.

@@ -105,10 +105,35 @@ def fetch_posts_json(subreddit: str, limit: int = 25, after: str | None = None) 
     return posts
 
 
-def fetch_posts_rss(subreddit: str, limit: int = 25, days: int = 14) -> list[dict]:
-    """Fallback: fetch posts via Atom RSS (public, no auth). No scores/comments available."""
+def fetch_posts_rss(subreddit: str, limit: int = 25, days: int = 14,
+                    max_retries: int = 4) -> list[dict]:
+    """Fallback: fetch posts via Atom RSS (public, no auth). No scores/comments available.
+
+    Reddit rate-limits RSS aggressively when many feeds are pulled back to back,
+    so retry 429/5xx with exponential backoff, honouring Retry-After when sent.
+    """
     url = f"https://www.reddit.com/r/{subreddit}/new.rss?limit={min(limit, 100)}"
-    r = requests.get(url, headers={"User-Agent": REDDIT_USER_AGENT}, timeout=15)
+
+    r = None
+    for attempt in range(max_retries):
+        r = requests.get(url, headers={"User-Agent": REDDIT_USER_AGENT}, timeout=15)
+        if r.status_code < 400:
+            break
+        if r.status_code == 429 or r.status_code >= 500:
+            if attempt == max_retries - 1:
+                break
+            retry_after = r.headers.get("Retry-After")
+            try:
+                delay = float(retry_after) if retry_after else 2.0 * (2 ** attempt)
+            except ValueError:
+                delay = 2.0 * (2 ** attempt)
+            delay = min(delay, 60.0)
+            print(f"  [warn] r/{subreddit} RSS HTTP {r.status_code}, retrying in {delay:.0f}s "
+                  f"({attempt + 1}/{max_retries - 1})", file=sys.stderr)
+            time.sleep(delay)
+            continue
+        break  # other 4xx: not worth retrying
+
     r.raise_for_status()
 
     root = ET.fromstring(r.content)

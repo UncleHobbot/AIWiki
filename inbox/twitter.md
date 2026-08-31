@@ -1,5 +1,11 @@
 # Twitter / X Queue
 
+https://x.com/theo/status/2094172153956680132 <!-- Theo: important detail missed in OpenAI announcement on banning Cursor from using their models (browser bookmarks scan 2026-08-30) -->
+https://x.com/mattpocockuk/status/2094156122441625770 <!-- Matt Pocock: AFK agent workflow, /implement-spec as multi-agent implementer from spec+tickets with parallel subagents (browser bookmarks scan 2026-08-30) -->
+https://x.com/BHolmesDev/status/2093370341418582346 <!-- Ben Holmes: /skill-doctor v1 - skill that improves skills, crawls CC/Codex/Warp convos, scores efficiency, proposes diffs (browser bookmarks scan 2026-08-30) -->
+https://x.com/dani_avila7/status/2089165107364278341 <!-- Daniel San: Anthropic Cost Optimization cookbook - agent cost down 90% without accuracy drop, model downgrade is the last lever (browser bookmarks scan 2026-08-30) -->
+https://x.com/daniel_mac8/status/2088601662533361761 <!-- Dan McAteer: Opus 5 can be sane - Attention-kind output style, 97% coding pass rate, 43% shorter output (browser bookmarks scan 2026-08-30) -->
+
 https://x.com/ClaudeDevs/status/2093742321473065266 <!-- ClaudeDevs: from Sep 14 permanent +25% weekly limits raise in Claude Code for Pro/Max/Team/Enterprise plans, 18K likes (browser scan, Aug 29) -->
 https://x.com/DailyDoseOfDS_/status/2093632264408273011 <!-- Daily Dose of Data Science: Stateful vs Stateless MCP core - Anthropic biggest MCP update, 130K views (browser scan, Aug 29) -->
 https://x.com/AiswaryaVenkit1/status/2093994639141273663 <!-- Aiswarya Venkitesh: Microsoft evolving from AI Assistants to Autonomous Work Agents, Copilot plans/executes across Word/Excel/PowerPoint (browser scan, Aug 30) -->

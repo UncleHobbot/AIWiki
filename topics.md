@@ -12,13 +12,14 @@ uses this file to rank incoming content and decide what warrants a full wiki ent
 **Priority:** highest
 **Keywords:** agent, agentic, multi-agent, autonomous agent, AI agent, agent orchestration,
   agent harness, agent loop, MCP, model context protocol, tool use, function calling,
-  agentic coding, coding agent, subagent, agent framework, agent memory, agent OS
+  agentic coding, coding agent, subagent, agent framework, agent memory, agent OS,
+  AutoClaw, OpenClaw, work agent
 **Subreddits:** r/AI_Agents, r/ClaudeCode, r/opencodeCLI, r/opencode, r/vibecoding
 **Wiki categories:** agents, concepts, tools
 
 ### 2. Agentic Coding Tools
 **Priority:** highest
-**Keywords:** Claude Code, Codex, ZCode, GitHub Copilot, OpenCode,
+**Keywords:** Claude Code, Codex, ZCode, AutoClaw, GitHub Copilot, OpenCode,
   vibe coding, spec-driven development, AI coding, coding assistant, AI pair programmer,
   coding harness, CLAUDE.md, AGENTS.md, skill, hook, plugin, MCP server
 **Subreddits:** r/ClaudeCode, r/GithubCopilot, r/opencodeCLI, r/opencode, r/ChatGPTCoding, r/vibecoding

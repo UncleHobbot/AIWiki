@@ -285,3 +285,9 @@
 **09:12 /wiki-reddit** — 16 subs (RSS fallback). 12 entries created. Key items: hard-gates-over-soft-prompts (tips), mcp-tool-schema-bloat-token-cost (tips), aethereum-multi-session-coordination (tools), packmind-local-second-brain (tools), clifford-control-plane-local-ai (tools), mcpg-postgresql-mcp-server (tools), toolhound-tool-call-failure-taxonomy (research), agentic-safety-vs-textual-safety-mcp-attacks (research), gpt-5-6-pareto-frontier-copilot (models), kimi-k2-5-vs-k2-6-vs-k2-7-code (models), glm-5-2-nested-tool-call-bug (news), skill-md-supply-chain-risks (news). Index: 305 total. 0 orphans, 0 broken. 18 URLs marked processed (592->610).
 
 **12:10 /wiki-hackernews** — 49 articles fetched, 8 AI/agent-relevant entries created. Key items: friendly-fire-ai-code-review-agents-tricked (news), ghostapproval-symlink-coding-agent-flaw (news), ai-coding-agents-triggering-edr-rules (news), github-copilot-dual-behavior-code-bypass (news), gitlost-github-agentic-workflow-leak (news), hallusquatting-ai-hallucination-botnet (news), writer-ai-agent-builder-tenant-token-leak (news), rogue-agent-dialogflow-cx-xss (news). Index: 313 total. 0 orphans, 0 broken. 8 URLs marked processed (610->618).
+
+---
+
+## 2026-08-31
+
+**16:35 /wiki-inbox** — 4 created, 0 updated. Key items: rag-simpler-than-you-think (concepts), mcp-vs-direct-api-debate (concepts), ai-engineer-notebooks (tools), skill-doctor (tools). Clippings/posts/youtube empty; 4 tweets + 8 links blocked by robots.txt/X, requeued. Index: 317 total.

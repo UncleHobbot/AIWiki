@@ -1,16 +1,18 @@
 # Twitter / X Queue
 
-https://x.com/theo/status/2094172153956680132 <!-- Theo: important detail missed in OpenAI announcement on banning Cursor from using their models (browser bookmarks scan 2026-08-30) -->
-https://x.com/mattpocockuk/status/2094156122441625770 <!-- Matt Pocock: AFK agent workflow, /implement-spec as multi-agent implementer from spec+tickets with parallel subagents (browser bookmarks scan 2026-08-30) -->
-https://x.com/BHolmesDev/status/2093370341418582346 <!-- Ben Holmes: /skill-doctor v1 - skill that improves skills, crawls CC/Codex/Warp convos, scores efficiency, proposes diffs (browser bookmarks scan 2026-08-30) -->
-https://x.com/dani_avila7/status/2089165107364278341 <!-- Daniel San: Anthropic Cost Optimization cookbook - agent cost down 90% without accuracy drop, model downgrade is the last lever (browser bookmarks scan 2026-08-30) -->
-https://x.com/daniel_mac8/status/2088601662533361761 <!-- Dan McAteer: Opus 5 can be sane - Attention-kind output style, 97% coding pass rate, 43% shorter output (browser bookmarks scan 2026-08-30) -->
+https://x.com/theo/status/2094172153956680132 <!-- Theo: OpenAI banning Cursor from using their models — X fetch blocked, needs alt source -->
+https://x.com/mattpocockuk/status/2094156122441625770 <!-- Matt Pocock: AFK agent workflow, /implement-spec multi-agent from spec+tickets — X fetch blocked, check aihero.dev -->
+https://x.com/dani_avila7/status/2089165107364278341 <!-- Anthropic Cost Optimization cookbook — X blocked; cookbook URL queued to links.md instead -->
+https://x.com/daniel_mac8/status/2088601662533361761 <!-- Dan McAteer: Opus 5 Attention-kind output style, 97% pass rate, 43% shorter — X fetch blocked -->
 
 https://x.com/ClaudeDevs/status/2093742321473065266 <!-- ClaudeDevs: from Sep 14 permanent +25% weekly limits raise in Claude Code for Pro/Max/Team/Enterprise plans, 18K likes (browser scan, Aug 29) -->
 https://x.com/DailyDoseOfDS_/status/2093632264408273011 <!-- Daily Dose of Data Science: Stateful vs Stateless MCP core - Anthropic biggest MCP update, 130K views (browser scan, Aug 29) -->
 https://x.com/AiswaryaVenkit1/status/2093994639141273663 <!-- Aiswarya Venkitesh: Microsoft evolving from AI Assistants to Autonomous Work Agents, Copilot plans/executes across Word/Excel/PowerPoint (browser scan, Aug 30) -->
 https://x.com/opencode/status/2093369212068864219 <!-- OpenCode: Hy4 preview in OpenCode Go - 770B/49B params, 1M context, built for coding agents, 1.9K likes (browser scan, Aug 28) -->
 https://x.com/ranjankumar/status/2092478002827518192 <!-- Ranjan Kumar: The Ralph Loop and /goal - what Claude Code actually automated, agentic workflow design lessons (browser scan, Aug 26) -->
+
+## Done (Aug 30)
+https://x.com/BHolmesDev/status/2093370341418582346 <!-- Ben Holmes: /skill-doctor v1 — resolved via WebSearch + GitHub repo → skill-doctor (tools) -->
 
 ## Done (May 28)
 https://x.com/itsPaulAi/status/2058612202668720449 <!-- Paul Couvert: Qwen3.7-Max 50% off promo — promotional content, skipped -->

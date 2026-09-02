@@ -30,6 +30,7 @@ The Pareto framing is the transferable insight: on usage-based billing, model se
 - [[open-source-models-vs-opus-copilot-benchmark]] ([Open Source vs Opus/Copilot Benchmark](open-source-models-vs-opus-copilot-benchmark.md))
 
 ---
+- [[anthropic-cost-optimization-cookbook]] ([Anthropic Cost Optimization Cookbook](../tips/anthropic-cost-optimization-cookbook.md))
 <!-- RU -->
 
 ## Краткое описание

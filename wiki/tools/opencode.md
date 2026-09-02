@@ -45,6 +45,7 @@ Because the project is open-source, most advanced behavior is added by the commu
 
 ---
 - [[aethereum-multi-session-coordination]] ([aethereum](aethereum-multi-session-coordination.md))
+- [[opencrew-ai-workspace]] ([OpenCrew](../agents/opencrew-ai-workspace.md))
 <!-- RU -->
 
 ## Краткое описание

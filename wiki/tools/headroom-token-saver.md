@@ -32,6 +32,7 @@ Community source (Tier 3 — Reddit speculation about a GitHub repo); treat all 
 
 ---
 - [[mcp-tool-schema-bloat-token-cost]] ([MCP Tool-Schema Bloat](../tips/mcp-tool-schema-bloat-token-cost.md))
+- [[anthropic-cost-optimization-cookbook]] ([Anthropic Cost Optimization Cookbook](../tips/anthropic-cost-optimization-cookbook.md))
 <!-- RU -->
 
 ## Краткое описание

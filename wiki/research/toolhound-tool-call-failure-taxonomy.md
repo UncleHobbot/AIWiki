@@ -36,6 +36,7 @@ ToolHound is a diagnostic instrument, not a leaderboard. By forcing every failur
 - [[reap-coding-agent-benchmark-curation]] ([REAP — Coding-Agent Benchmarks from Production](reap-coding-agent-benchmark-curation.md))
 
 ---
+- [[polyglot-tolerant-tool-calls]] ([Polyglot](../tools/polyglot-tolerant-tool-calls.md))
 <!-- RU -->
 
 ## Краткое описание

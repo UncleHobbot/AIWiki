@@ -37,6 +37,7 @@ The subagent design (coder/explore/plan) and lifecycle hooks indicate Moonshot i
 - [[claude-code-frameworks]] ([Claude Code Frameworks](../tools/claude-code-frameworks.md))
 
 ---
+- [[kimi-k3-reasoning-history-regression]] ([Kimi K3 Reasoning Regression](../news/kimi-k3-reasoning-history-regression.md))
 <!-- RU -->
 
 ## Краткое описание

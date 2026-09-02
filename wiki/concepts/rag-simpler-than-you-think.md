@@ -52,6 +52,8 @@ This argument reinforces the compiled-knowledge case: if retrieval quality is th
 - [[rags-evolution-agentic-ai]] ([RAG's Evolution to Agentic AI](../concepts/rags-evolution-agentic-ai.md))
 
 ---
+- [[ai-engineer-notebooks]] ([AI Engineer Notebooks](../tools/ai-engineer-notebooks.md))
+- [[shardflow-distributed-inference]] ([Shardflow Distributed Inference](../research/shardflow-distributed-inference.md))
 <!-- RU -->
 
 ## Краткое описание

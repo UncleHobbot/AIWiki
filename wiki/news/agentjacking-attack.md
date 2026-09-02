@@ -38,6 +38,8 @@ The deeper lesson is about trust boundaries in agent harnesses. Coding agents al
 ---
 - [[agentic-safety-vs-textual-safety-mcp-attacks]] ([Agentic Safety vs Textual Safety](../research/agentic-safety-vs-textual-safety-mcp-attacks.md))
 - [[ai-coding-agents-triggering-edr-rules]] ([AI Coding Agents Triggering EDR Rules](ai-coding-agents-triggering-edr-rules.md))
+- [[openai-cursor-model-winddown]] ([OpenAI Winds Down Cursor Access](openai-cursor-model-winddown.md))
+- [[ai-agents-top-attack-vector-aug-2026]] ([AI Agents #1 Attack Vector (Aug 2026)](ai-agents-top-attack-vector-aug-2026.md))
 <!-- RU -->
 
 ## Краткое описание

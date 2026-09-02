@@ -69,6 +69,7 @@ GLM-5.2 became available in OpenCode via the Z.ai provider within a day of relea
 
 ---
 - [[glm-5-2-nested-tool-call-bug]] ([GLM-5.2 Nested Tool-Call Bug](../news/glm-5-2-nested-tool-call-bug.md))
+- [[llm2014-llm-benchmark]] ([llm2014 LLM Benchmark](../research/llm2014-llm-benchmark.md))
 <!-- RU -->
 
 ## Краткое описание

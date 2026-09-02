@@ -5,13 +5,15 @@ category: research
 tags: [zcode, zai, glm, coding-agent, desktop-app, agentic-ide, chinese-llm, agents-md, mcp]
 aliases: [Z Code, zcode.z.ai, ZCode ADE, ZCode 3.0]
 confidence: high
-updated: 2026-07-01
+updated: 2026-09-03
 sources:
   - https://zcode.z.ai/en
   - https://zcode.z.ai/en/docs/agents
   - https://zcode.z.ai/en/docs/install
   - https://zcode.z.ai/en/docs/configuration
   - https://zcode.z.ai/en/changelog
+  - https://z.ai/blog/glm-5.3
+  - https://www.reddit.com/r/ZaiGLM/comments/1w3dp1h/
   - https://zcode.z.ai/cn/docs/qa
   - https://docs.z.ai/devpack/overview
   - https://github.com/zai-org
@@ -135,9 +137,36 @@ ZCode discussion is concentrated on **r/ZaiGLM**. Sentiment is **polarized**: th
 
 ## Version History
 
-- **v3.2.2** — July 1, 2026 (current at time of writing).
+- **v3.10.2** — Aug 31, 2026 (current at September update).
+- **v3.7.7** — Aug 14, 2026: GLM-5.3 flagship available in ZCode (same day as the model launch).
+- **v3.2.2** — July 1, 2026 (at the time of the original deep-dive below).
 - **v3.0** — major milestone: "GLM-5.2 optimized, better multi-agent collaboration." The 3.x line is tied to the GLM-5.2 launch window (June 2026).
-- Exact original release date not published in primary sources.
+- Exact original release date not published in primary sources. Note: no public changelog entries exist for v3.4.x–v3.7.4 (July 16 – Aug 9) — a version-numbering gap that could not be verified.
+
+## September 2026 Update (v3.3 → v3.10.2)
+
+Two months of rapid iteration substantially changed the picture from the July deep-dive below:
+
+### GLM-5.3 era (Aug 14 onward)
+- **GLM-5.3** landed in ZCode in v3.7.7 (Aug 14, launch day) — ZCode is now branded "Official Harness for GLM-5.3." Three effort levels (low/high/max, default max). **Breaking change:** thinking can no longer be disabled at the API level.
+- **GLM-5.3-Flash multimodal** arrived in v3.9.2 (Aug 26) out of the box for subscribers — screenshot/image understanding, improved Computer Use accuracy, permission prompts before computer control, Intel-chip macOS support.
+
+### New capability surface (July–August)
+- **Goal mode** — plan → code → test → verify loops until the target is met (long-horizon mode).
+- **Remote Control** — monitor and steer long-running tasks from a phone via WeChat or Feishu.
+- **Idle-time tasks** — subscribers run tasks free without consuming plan quota; custom-model subagents for them (v3.7.5).
+- **Background sub-agents and bash** (v3.3.4), minute-based automations (v3.7.5), workspace-level Hooks (v3.8.1), MCP OAuth for local dev (v3.3.2), multi-language codebase Wiki generation (v3.3.6).
+- **Computer Use / Browser Control** matured: video recording in the built-in browser, renamed from "Browser" (v3.10.1).
+- **New Team plan** (v3.3.0); "Weekend Plan" free-quota claiming via friend invites (v3.10.1).
+
+### Pricing shift: points-based quota
+With GLM-5.3, the GLM Coding Plan switched to a **points-based quota**: points counted separately for input / cached-input / output tokens; **off-peak = 50% of standard points** (peak = 14:00–18:00 UTC+8 Mon–Fri; weekends are off-peak). Third-party trackers put GLM-5.3-Flash at 0.4× off-peak / 1.2× peak (unverified against official docs). A 1.5× limited-time quota boost in ZCode ran through Aug 31, stackable with ~30% cache savings. Tier prices per trackers: Lite ~$18, Pro ~$72–80, Max ~$160–168 per month (sources disagree; verify at z.ai/subscribe).
+
+### Community reception shift
+- **The harness criticism flipped:** *"ZCode was an awful harness until very recently, now it has a really high cache rate and barely ever tool call errors. They give 150% usage"* (r/ZaiGLM, Sept 2026) — directly contradicting the July "confuses the model" complaints.
+- **Quota friction remains the top complaint:** "server busy" notices on free tiers, "very strict quota" reports (r/ZaiGLM, Aug 2026).
+- **No ZCode↔AutoClaw integration exists** — AutoClaw is a separate Zhipu product (zero-threshold local agent supporting OpenClaw core capabilities); OpenClaw appears only as a GLM Coding Plan-compatible tool.
+- **Linux remains beta** (x64 + ARM64 AppImage via Feishu beta group); no GA announcement found.
 
 ## Honest Gaps
 
@@ -154,6 +183,8 @@ ZCode discussion is concentrated on **r/ZaiGLM**. Sentiment is **polarized**: th
 - [[kimi-code-cli]] ([Kimi Code CLI](../tools/kimi-code-cli.md))
 - [[zai-max-plan-undisclosed-weekly-limit]] ([z.ai Max Plan — Undisclosed Weekly Limit](../news/zai-max-plan-undisclosed-weekly-limit.md))
 - [[expensive-model-not-smart-agent]] ([Expensive Model ≠ Smart Agent](../agents/expensive-model-not-smart-agent.md))
+- [[t3-code]] ([T3 Code](t3-code.md))
+- [[t3-code]] ([T3 Code](t3-code.md))
 
 ---
 <!-- RU -->
@@ -245,6 +276,39 @@ Default (стандарт), Confirm Before Changes (подтверждение �
 - **v3.2.2** — 1 июля 2026 (актуальная на момент написания).
 - **v3.0** — крупный рубеж: «оптимизация под GLM-5.2, улучшенное много-агентное взаимодействие». Линейка 3.x привязана к окну запуска GLM-5.2 (июнь 2026).
 - Точная дата первоначального релиза в первоисточниках не опубликована.
+
+## История версий
+
+- **v3.10.2** — 31 августа 2026 (актуальная на сентябрьское обновление).
+- **v3.7.7** — 14 августа 2026: флагман GLM-5.3 доступен в ZCode (в день релиза модели).
+- **v3.2.2** — 1 июля 2026 (на момент изначального разбора ниже).
+- **v3.0** — крупный рубеж: «оптимизация под GLM-5.2, улучшенное много-агентное взаимодействие».
+- Точная дата первоначального релиза не опубликована. Примечание: публичных записей changelog для v3.4.x–v3.7.4 нет (16 июля – 9 авг) — пробел в нумерации версий, который не удалось верифицировать.
+
+## Сентябрьское обновление 2026 (v3.3 → v3.10.2)
+
+Два месяца быстрой итерации заметно изменили картину июльского разбора ниже:
+
+### Эра GLM-5.3 (с 14 августа)
+- **GLM-5.3** появился в ZCode в v3.7.7 (14 августа, в день релиза модели) — ZCode теперь брендируется как «Official Harness for GLM-5.3». Три уровня effort (low/high/max, дефолт max). **Ломающее изменение:** thinking больше нельзя отключить на уровне API.
+- **GLM-5.3-Flash мультимодальная** — в v3.9.2 (26 августа) из коробки для подписчиков: понимание скриншотов/изображений, улучшенная точность Computer Use, подтверждения перед управлением компьютером, поддержка Intel-маков.
+
+### Новая поверхность возможностей (июль–август)
+- **Режим Goal** — циклы план → код → тест → верификация до достижения цели.
+- **Remote Control** — мониторинг и управление долгими задачами с телефона через WeChat или Feishu.
+- **Idle-time задачи** — подписчики запускают задачи бесплатно, без расхода квоты плана.
+- **Фоновые сабагенты и bash** (v3.3.4), минутные автоматизации (v3.7.5), Hooks на уровне воркспейса (v3.8.1), MCP OAuth для локальной разработки (v3.3.2), генерация Wiki кодовой базы (v3.3.6).
+- **Computer Use / Browser Control** повзрослел: запись видео во встроенном браузере, переименован из «Browser» (v3.10.1).
+- **Новый план Team** (v3.3.0); «Weekend Plan» с бесплатной квотой по приглашениям (v3.10.1).
+
+### Смена ценообразования: очковая квота
+С GLM-5.3 план GLM Coding перешёл на **очковую квоту**: очки считаются отдельно для входных / кэшированных / выходных токенов; **внепик = 50% стандартных очков** (пик = 14:00–18:00 UTC+8 пн–пт; выходные — внепик). Сторонние трекеры дают GLM-5.3-Flash 0.4× внепик / 1.2× пик (не верифицировано). Лимитированный буст квоты 1.5× в ZCode шёл до 31 августа. Цены тиров по трекерам: Lite ~$18, Pro ~$72–80, Max ~$160–168 в месяц (источники расходятся; проверяйте на z.ai/subscribe).
+
+### Сдвиг в приёме сообществом
+- **Критика харнеса развернулась:** «ZCode был ужасным харнесом до недавнего времени, теперь у него высокий cache rate и почти нет ошибок tool call. Дают 150% usage» (r/ZaiGLM, сентябрь 2026) — прямое противоречие июльским жалобам «путает модель».
+- **Квотное трение остаётся главной жалобой:** «server busy» на бесплатных тирах, «очень строгая квота» (r/ZaiGLM, август 2026).
+- **Интеграции ZCode↔AutoClaw не существует** — AutoClaw отдельный продукт Zhipu; OpenClaw лишь совместимый с GLM Coding Plan инструмент.
+- **Linux остаётся в бете** (x64 + ARM64 AppImage через бета-группу Feishu); анонса GA не найдено.
 
 ## Честные пробелы
 

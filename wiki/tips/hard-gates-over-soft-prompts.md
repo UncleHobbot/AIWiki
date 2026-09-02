@@ -29,6 +29,7 @@ This is the agent-behavior version of "make the right thing the only thing." Sof
 - [[claude-code-permission-modes]] ([Claude Code Permission Modes](../agents/claude-code-permission-modes.md))
 
 ---
+- [[loop-engineering-hype-check]] ([Loop Engineering Hype-Check](loop-engineering-hype-check.md))
 <!-- RU -->
 
 ## Краткое описание

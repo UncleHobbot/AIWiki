@@ -32,6 +32,7 @@ The study isolates a variable many browser-agent benchmarks ignore: the represen
 - [[context-warp-drive]] ([Context Warp Drive](../tools/context-warp-drive.md))
 
 ---
+- [[anywebmcp-webmcp-any-site]] ([AnyWebMCP](../tools/anywebmcp-webmcp-any-site.md))
 <!-- RU -->
 
 ## Краткое описание

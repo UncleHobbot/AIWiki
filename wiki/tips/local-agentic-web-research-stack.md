@@ -32,6 +32,7 @@ The inference layer gets most attention, but getting an agent to actually browse
 - [[ollama]] ([Ollama](../tools/ollama.md))
 
 ---
+- [[visnia-browser-agent]] ([Visnia Browser Agent](../tools/visnia-browser-agent.md))
 <!-- RU -->
 
 ## Краткое описание

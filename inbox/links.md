@@ -1,55 +1,51 @@
 # Links to Process
 
+# Links to Process
+
 ## To Read
 
-<!-- from /wiki-reddit scan 2026-08-31 -->
-https://github.com/hamin2006/OpenCrew <!-- KiroCrew with OpenCode backend, score 15 -->
-https://arxiv.org/abs/2608.28444 <!-- Sliding-window beats linear attention (r/LocalLLaMA) -->
-https://arxiv.org/abs/2606.14066 <!-- paper behind "Codex limits last 3x longer with one change" -->
-https://github.com/github/copilot-sdk <!-- Agent Host in VS Code blog post (already have github-copilot-sdk, check for update) -->
-https://huggingface.co/unsloth/Qwen3.8-27B-GGUF <!-- Unsloth Qwen3.8 27B GGUF quants -->
-https://github.com/InfraGuard-Labs/rag-access-check <!-- open-source access-control checker for RAG apps -->
-https://github.com/rautaditya2606/Shardflow <!-- 28 TPS Qwen2.5-7B across cloud regions over public WAN -->
-https://github.com/kyliamet/geo-optimize-site <!-- Codex skill for GEO / AI search optimization -->
-https://github.com/visnia-ai/browser-agent <!-- GLM 5.3 flash vs GPT 5.6 Luna browsing benchmark -->
-https://pickleshell.github.io/model-benchmarks.html <!-- open LLM testing pipeline + results -->
-https://github.com/roandejager/Hillock <!-- local neuro-symbolic memory engine for Ollama -->
-https://github.com/yangbobo2021/relay-dsh-plugin-codex <!-- DSH Codex/Claude plugins, 162 migration tests -->
+<!-- from /wiki-reddit scan 2026-09-02 -->
+https://openrouter.ai/benchmarks/tau2-bench-airline <!-- tau2-bench leaderboard (chinese-code-harness-comparison) -->
+https://arena.ai/leaderboard/agent/code <!-- LLM Arena agent/code leaderboard (chinese-code-harness-comparison) -->
+https://www.techinasia.com/news/chinas-moonshot-ai-seeks-nvidia-chips-kimi-k4 <!-- TechInAsia: Moonshot seeking NVIDIA chips for K4 (kimi-k4-rumor) -->
+https://developer.meta.com/ai/resources/blog/muse-code-new-plans-and-features/ <!-- Meta Muse Code coding plans from $5/m (not yet in wiki) -->
+https://github.com/irons163/orchestrate-sol-terra-luna <!-- deeper read: 3-tier GPT-5.6 skill repo -->
+https://github.com/errslima/1f517 <!-- shared evidence pool project (model-diversity entry covers one experiment) -->
+https://unland.dev/blog/youyeetoo-x1s-ollama-llamacpp-matched-retest <!-- Celeron N5095 Ollama/llama.cpp matched retest (r/LocalLLaMA) -->
+https://ai-vendor-price-tracking.all-the.rest/ <!-- vendor price tracker incl. z.ai/mimo/ollama (r/opencodeCLI) -->
+https://cc-pricing.all-the.rest/ <!-- Command Code pricing tracker -->
+https://github.com/errslima/1f517/blob/main/experiments/corroboration-independence/RESULTS.md <!-- full RESULTS.md of the 720-eval experiment -->
 
-https://news.ycombinator.com/item?id=49424758 <!-- HN: Claude Code skill recovering export-blocked Kindle highlights, 45 pts — niche, low priority -->
-https://news.ycombinator.com/item?id=49467437 <!-- HN video: DHH - Future of Programming, AI, Agentic Engineering — needs transcript, queue for /wiki-youtube -->
-https://www.youtube.com/watch?v=NYFGCESmikA <!-- DHH interview video (from HN 49467437) -->
+## Done (Sep 1)
 
-https://www.reddit.com/r/ClaudeCode/comments/1jz4xny/opus_5_is_insufferrable/ <!-- Opus 5 behavior complaints, 2.6K upvotes — robots.txt blocked, needs alt source -->
-https://www.reddit.com/r/vibecoding/comments/1kr4s7f/insane_levels_of_vibe_coding/ <!-- vibe coding showcase, 3.2K upvotes — robots.txt blocked -->
-https://www.reddit.com/r/LocalLLaMA/comments/1km4y8c/nvidia_buying_hf_isnt_a_good_thing_for_open_source/ <!-- NVIDIA buying HuggingFace, 2.6K upvotes — robots.txt blocked, needs news source -->
-https://www.reddit.com/r/singularity/comments/1kq3w9s/sam_altman_tells_time_that_openai_will_achieve/ <!-- Altman AGI-by-year-end claim to TIME — robots.txt blocked, needs TIME source -->
 
-https://github.com/anthropics/claude-cookbooks/blob/main/cost_optimization/cost_optimization.ipynb <!-- Anthropic cost optimization cookbook: pass rate + cost/task Pareto checklist (from dani_avila7 tweet) -->
-https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/ <!-- Wired: Anthropic walks back Fable 5 silent nerfing — WebFetch blocked for wired.com -->
-
-https://github.com/leighstillard/ship-skills <!-- Ship Skills: 5 Claude Code skills for full PR pipeline (already processed) -->
-https://github.com/cloudlinqed/grind <!-- Grind: Claude Code hook that prevents agent from pausing (already processed) -->
-https://github.com/bigmacfive/turbo-graph/ <!-- turbo-graph: GraphMemoryIndex for RAG (already processed) -->
-https://github.com/vitalops/temenos <!-- temenos: gVisor sandbox for agent code execution (already processed) -->
-https://huggingface.co/nex-agi/Nex-N2-mini <!-- Nex-N2 Mini: 35B Qwen 3.5 fine-tune (already processed) -->
-https://github.com/Arths17/Pyrecall <!-- Pyrecall: detect catastrophic forgetting in fine-tunes (already processed) -->
-https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/ <!-- Wired: Anthropic walks back Fable 5 silent nerfing -->
-https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf <!-- Fable 5 model card PDF -->
-https://github.com/MrDoe/OpenCodeRAG <!-- OpenCodeRAG: RAG plugin for OpenCode via local models -->
-https://github.com/XiaomiMiMo/MiMo-Code <!-- MiMo-Code: Xiaomi's OpenCode fork -->
-https://github.com/lubludrova/ah-my-openresearch <!-- amore: OpenCode plugin for researchers -->
-https://github.com/rainnoon/oc-claw <!-- OC-Claw: desktop pet for agent monitoring -->
-https://bric.pe.kr/blog/mtp-hardware-dependent-gemma-12b-3090-vs-m1-max <!-- MTP hardware-dependent speedup analysis -->
-https://github.com/tanaos/cognitor <!-- Cognitor: open-source semantic search engine -->
-https://woliveiras.com/posts/hype-check-on-loop-engineering/ <!-- "Loop engineering" hype critique for coding agents -->
-https://fish.audio/blog/llms-txt-mcp-agent-skills/ <!-- llms.txt + MCP + Skills to fix outdated API docs in Claude Code -->
-https://github.com/harshv-v/Memgram <!-- Memgram: active memory layer for AI agents with decay/reinforcement -->
-https://llm2014.github.io/llm_benchmark <!-- Community SWE benchmark comparing GLM-5.2 and other coding models -->
-https://github.com/router-for-me/CLIProxyAPI <!-- CLIProxyAPI: proxy enabling Kimi inside Codex -->
-https://github.com/elsung/dgx-spark-deepseek-v4-flash <!-- Dual DGX Spark DeepSeek V4 Flash benchmark recipes -->
-https://github.com/mohitsoni48/Turbo-LLM <!-- Turbo-LLM repo: deeper read for usage details -->
-https://github.com/shadowbipnode/sysai-assistant <!-- SysAI Assistant: local-first AI ops/security workspace -->
+https://github.com/hamin2006/OpenCrew <!-- → opencrew-ai-workspace (agents) -->
+https://arxiv.org/abs/2608.28444 <!-- → sliding-window-beats-linear-attention (research) -->
+https://arxiv.org/abs/2606.14066 <!-- FastContext — paper WITHDRAWN by author (30 Jun 2026), repo 404; "Codex 3x longer" was community interpretation; skipped -->
+https://github.com/github/copilot-sdk <!-- → updated github-copilot-sdk with v0.3.0 -->
+https://huggingface.co/unsloth/Qwen3.8-27B-GGUF <!-- → unsloth-qwen38-27b-gguf (models) -->
+https://github.com/InfraGuard-Labs/rag-access-check <!-- → rag-access-check (tools) -->
+https://github.com/rautaditya2606/Shardflow <!-- → shardflow-distributed-inference (research) -->
+https://github.com/kyliamet/geo-optimize-site <!-- → geo-optimize-codex-skill (tips) -->
+https://github.com/visnia-ai/browser-agent <!-- → visnia-browser-agent (tools); NOTE: no GLM-vs-Luna benchmark inside, all runs on gpt-5.6-luna -->
+https://pickleshell.github.io/model-benchmarks.html <!-- → pickleshell-model-benchmarks (tools) -->
+https://github.com/roandejager/Hillock <!-- → hillock-neurosymbolic-memory (tools) -->
+https://github.com/yangbobo2021/relay-dsh-plugin-codex <!-- → relay-dsh-plugin-codex (tools) -->
+https://news.ycombinator.com/item?id=49424758 <!-- → kindle-highlights-recovery-claude-skill (tools) -->
+https://news.ycombinator.com/item?id=49467437 <!-- → DHH video → dhh-agentic-programming-lex-fridman (people) -->
+https://www.youtube.com/watch?v=NYFGCESmikA <!-- → dhh-agentic-programming-lex-fridman (people), transcript saved -->
+https://www.reddit.com/r/ClaudeCode/comments/1jz4xny/opus_5_is_insufferrable/ <!-- robots.txt blocked → alt sources → claude-opus-5-backlash (models) -->
+https://www.reddit.com/r/vibecoding/comments/1kr4s7f/insane_levels_of_vibe_coding/ <!-- robots.txt blocked; no alt coverage exists, content unrecoverable — skipped -->
+https://www.reddit.com/r/LocalLLaMA/comments/1km4y8c/nvidia_buying_hf_isnt_a_good_thing_for_open_source/ <!-- robots.txt blocked → alt sources → nvidia-hugging-face-acquisition (news) -->
+https://www.reddit.com/r/singularity/comments/1kq3w9s/sam_altman_tells_time_that_openai_will_achieve/ <!-- robots.txt blocked → TIME source → altman-agi-by-end-of-2026 (news) -->
+https://github.com/anthropics/claude-cookbooks/blob/main/cost_optimization/cost_optimization.ipynb <!-- → anthropic-cost-optimization-cookbook (tips) -->
+https://github.com/tanaos/cognitor <!-- repo deleted from canonical location, only untrusted mirror — skipped -->
+https://github.com/harshv-v/Memgram <!-- zero traction, stale 7 weeks, crowded memory niche — skipped -->
+https://github.com/router-for-me/CLIProxyAPI <!-- → cli-proxy-api (tools) -->
+https://github.com/shadowbipnode/sysai-assistant <!-- off-topic ops tool, stale, promotional — skipped -->
+https://woliveiras.com/posts/hype-check-on-loop-engineering/ <!-- → loop-engineering-hype-check (tips) -->
+https://fish.audio/blog/llms-txt-mcp-agent-skills/ <!-- → llms-txt-mcp-agent-skills (tips) -->
+https://llm2014.github.io/llm_benchmark <!-- → llm2014-llm-benchmark (research) 
 
 ## Done (Aug 30)
 https://news.ycombinator.com/item?id=49445727 <!-- RAG Is Simpler Than You Think, 513 pts → rag-simpler-than-you-think (concepts) -->

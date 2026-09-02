@@ -38,6 +38,7 @@ BenchLM benchmarks place Mythos 5 at 99 and Fable 5 at the Opus 4.8 tier (95), c
 - [[fable5-mythos5-export-control-suspension]] ([US Export-Control Order Suspends Anthropic's Fable 5 and Mythos 5 Worldwide](../news/fable5-mythos5-export-control-suspension.md))
 
 ---
+- [[claude-fable-5-1-ga]] ([Fable 5.1 GA](claude-fable-5-1-ga.md))
 <!-- RU -->
 
 ## Краткое описание

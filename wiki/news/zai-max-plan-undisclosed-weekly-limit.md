@@ -30,6 +30,7 @@ This matters operationally for anyone running heavy agentic workflows on z.ai's 
 - [[claude-code-usage-reset-may-2026]] ([Claude Code Usage Reset](claude-code-usage-reset-may-2026.md))
 
 ---
+- [[kimi-code-quota-audit]] ([Kimi Code Quota Audit](kimi-code-quota-audit.md))
 <!-- RU -->
 
 ## Краткое описание

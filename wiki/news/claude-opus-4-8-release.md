@@ -39,6 +39,7 @@ API model ID: `claude-opus-4-8`
 - [[expensive-model-not-smart-agent]] ([Expensive Model ≠ Smart Agent](../agents/expensive-model-not-smart-agent.md))
 
 ---
+- [[claude-opus-5-backlash]] ([Opus 5 Backlash](claude-opus-5-backlash.md))
 <!-- RU -->
 
 ## Краткое описание

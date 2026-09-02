@@ -6,7 +6,7 @@ tags: [github-copilot, sdk, agent, byok, multi-platform, json-rpc, cli, python, 
 aliases: [Copilot SDK, GitHub Copilot Agent SDK, copilot-sdk]
 confidence: high
 date: 2026-05-24
-updated: 2026-05-24
+updated: 2026-09-01
 sources:
   - https://github.com/github/copilot-sdk
 ---
@@ -29,6 +29,10 @@ The SDK architecture is: `Your Application → SDK Client → JSON-RPC → Copil
 BYOK is the key feature for teams that want Copilot agent capabilities without routing traffic through GitHub authentication — useful for enterprise deployments on Azure or Anthropic's API. Standard usage (non-BYOK) counts toward the premium request quota per the Copilot CLI billing model.
 
 The SDK is currently in **public preview** — functional and used in development/testing, but may not be suitable for production use yet.
+
+## Version History
+
+- **v0.3.0 (pre-GA cleanup):** per-session GitHub auth (`gitHubToken`), per-agent tool visibility (`excludedTools`) and `skills` injection, sub-agent streaming tagged with `agentId`, `sessionIdleTimeoutSeconds` (idle sessions now live indefinitely by default instead of timing out at 30 min), custom BYOK headers (`requestHeaders`), MCP interop helper `convertMcpCallToolResult()`, scoped permission approvals (`approve-for-session` / `approve-for-location`). Breaking renames for GA: `*Params → *Request`, result/event-type renames, permission vocabulary changed (`approved` → `approve-once`, `denied-interactively-by-user` → `reject`), MCP config types renamed (`MCPLocalServerConfig` → `MCPStdioServerConfig`).
 
 ## Related Entries
 - [[github-copilot-app]] ([GitHub Copilot App](../news/github-copilot-app.md))
@@ -56,6 +60,10 @@ GitHub Copilot SDK (публичная preview) открывает агентн�
 BYOK — ключевая функция для команд, которые хотят возможности агента Copilot без маршрутизации через аутентификацию GitHub. Стандартное использование учитывается в квоте premium requests по модели тарификации Copilot CLI.
 
 SDK сейчас в **публичной preview** — функционален для разработки и тестирования, но может быть не готов для продакшена.
+
+## История версий
+
+- **v0.3.0 (пред-GA чистка):** пер-сессионная GitHub-аутентификация (`gitHubToken`), видимость инструментов по агенту (`excludedTools`) и инъекция `skills`, стриминг сабагентов с тегом `agentId`, `sessionIdleTimeoutSeconds` (idle-сессии теперь живут бесконечно вместо таймаута в 30 мин), кастомные BYOK-заголовки, MCP-interop `convertMcpCallToolResult()`, скоупные подтверждения прав (`approve-for-session` / `approve-for-location`). Ломающие переименования к GA: `*Params → *Request`, переименования result/event-типов, новый словарь прав (`approved` → `approve-once`), переименованы MCP-конфиги (`MCPLocalServerConfig` → `MCPStdioServerConfig`).
 
 ## Связанные записи
 - [[github-copilot-app]] ([GitHub Copilot App](../news/github-copilot-app.md))

@@ -86,6 +86,8 @@ Works with Claude Code, Codex, and any agent that supports skills/instructions.
 - [[9router-free-ai-coding]] ([9router: Free AI Coding Router with RTK Token Saver](../tools/9router-free-ai-coding.md))
 
 ---
+- [[skill-doctor]] ([Skill Doctor](skill-doctor.md))
+- [[kindle-highlights-recovery-claude-skill]] ([Kindle Highlights Recovery Skill](kindle-highlights-recovery-claude-skill.md))
 <!-- RU -->
 
 ## Краткое описание

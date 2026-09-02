@@ -70,6 +70,8 @@ A unique feature: injects a brief prompt telling the model to reply in compresse
 - [[choose-llm-api-self-host-hybrid]] ([How to Choose an LLM for Your AI Agent: API, Self-Host, or Hybrid](../tips/choose-llm-api-self-host-hybrid.md))
 
 ---
+- [[cli-proxy-api]] ([CLIProxyAPI](cli-proxy-api.md))
+- [[openusage-subscription-tracker]] ([OpenUsage Subscription Tracker](openusage-subscription-tracker.md))
 <!-- RU -->
 
 ## Краткое описание

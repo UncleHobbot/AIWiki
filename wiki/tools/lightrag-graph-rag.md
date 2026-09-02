@@ -44,6 +44,7 @@ A key practical advantage is the incremental update algorithm. Unlike systems th
 
 ---
 - [[mcpg-postgresql-mcp-server]] ([MCPg](mcpg-postgresql-mcp-server.md))
+- [[rag-access-check]] ([rag-access-check](rag-access-check.md))
 <!-- RU -->
 
 ## Краткое описание

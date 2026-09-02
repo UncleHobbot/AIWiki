@@ -1,15 +1,19 @@
 # Twitter / X Queue
 
-https://x.com/theo/status/2094172153956680132 <!-- Theo: OpenAI banning Cursor from using their models — X fetch blocked, needs alt source -->
-https://x.com/mattpocockuk/status/2094156122441625770 <!-- Matt Pocock: AFK agent workflow, /implement-spec multi-agent from spec+tickets — X fetch blocked, check aihero.dev -->
-https://x.com/dani_avila7/status/2089165107364278341 <!-- Anthropic Cost Optimization cookbook — X blocked; cookbook URL queued to links.md instead -->
-https://x.com/daniel_mac8/status/2088601662533361761 <!-- Dan McAteer: Opus 5 Attention-kind output style, 97% pass rate, 43% shorter — X fetch blocked -->
+## To Read
 
-https://x.com/ClaudeDevs/status/2093742321473065266 <!-- ClaudeDevs: from Sep 14 permanent +25% weekly limits raise in Claude Code for Pro/Max/Team/Enterprise plans, 18K likes (browser scan, Aug 29) -->
-https://x.com/DailyDoseOfDS_/status/2093632264408273011 <!-- Daily Dose of Data Science: Stateful vs Stateless MCP core - Anthropic biggest MCP update, 130K views (browser scan, Aug 29) -->
-https://x.com/AiswaryaVenkit1/status/2093994639141273663 <!-- Aiswarya Venkitesh: Microsoft evolving from AI Assistants to Autonomous Work Agents, Copilot plans/executes across Word/Excel/PowerPoint (browser scan, Aug 30) -->
-https://x.com/opencode/status/2093369212068864219 <!-- OpenCode: Hy4 preview in OpenCode Go - 770B/49B params, 1M context, built for coding agents, 1.9K likes (browser scan, Aug 28) -->
-https://x.com/ranjankumar/status/2092478002827518192 <!-- Ranjan Kumar: The Ralph Loop and /goal - what Claude Code actually automated, agentic workflow design lessons (browser scan, Aug 26) -->
+<!-- (empty — all queued tweets processed on 2026-09-01, see Done (Sep 1)) -->
+
+## Done (Sep 1)
+https://x.com/theo/status/2094172153956680132 <!-- OpenAI winding down Cursor access post-SpaceX acquisition → openai-cursor-model-winddown (news) -->
+https://x.com/mattpocockuk/status/2094156122441625770 <!-- AFK agent workflow /implement-spec — X blocked; covered by existing mattpocock-skills-repo ecosystem; skipped as low-novelty -->
+https://x.com/dani_avila7/status/2089165107364278341 <!-- → anthropic-cost-optimization-cookbook (tips) via links.md -->
+https://x.com/daniel_mac8/status/2088601662533361761 <!-- Opus 5 Attention output style — folded into claude-opus-5-backlash (models) context -->
+https://x.com/ClaudeDevs/status/2093742321473065266 <!-- → claude-code-weekly-limits-sep-raise (news) -->
+https://x.com/DailyDoseOfDS_/status/2093632264408273011 <!-- → mcp-stateless-core-spec (news) -->
+https://x.com/AiswaryaVenkit1/status/2093994639141273663 <!-- Microsoft Autonomous Work Agents — thin single-tweet signal, no alt coverage found; skipped -->
+https://x.com/opencode/status/2093369212068864219 <!-- → tencent-hy4-preview (news); Hy4 is Tencent Hunyuan 4 -->
+https://x.com/ranjankumar/status/2092478002827518192 <!-- Ralph Loop /goal — agentic workflow design; folded into loop-engineering-hype-check (tips) topic -->
 
 ## Done (Aug 30)
 https://x.com/BHolmesDev/status/2093370341418582346 <!-- Ben Holmes: /skill-doctor v1 — resolved via WebSearch + GitHub repo → skill-doctor (tools) -->

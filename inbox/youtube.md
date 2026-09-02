@@ -1,5 +1,12 @@
 # YouTube Queue
 
+## To Process
+
+<!-- (empty) -->
+
+## Done (Sep 1)
+https://www.youtube.com/watch?v=NYFGCESmikA <!-- DHH: Future of Programming, AI, Agentic Engineering (Lex Fridman #501) → dhh-agentic-programming-lex-fridman (people); transcript in sources/transcripts/NYFGCESmikA.txt -->
+
 ## Done (May 21)
 https://www.youtube.com/watch?v=xJQuF02NAK8 <!-- Claude: Explore→Plan→Code→Commit workflow → claude-code-explore-plan-code-commit (tips) -->
 https://www.youtube.com/watch?v=IGo225tfF2I <!-- Claude: Memory and dreaming for self-learning agents → anthropic-agent-memory-dreaming (agents) -->

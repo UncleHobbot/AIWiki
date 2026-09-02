@@ -37,6 +37,8 @@ Because it manages the full model lifecycle (download, versioning, prompt templa
 
 ---
 - [[clifford-control-plane-local-ai]] ([Clifford](clifford-control-plane-local-ai.md))
+- [[hillock-neurosymbolic-memory]] ([Hillock](hillock-neurosymbolic-memory.md))
+- [[polyglot-tolerant-tool-calls]] ([Polyglot](polyglot-tolerant-tool-calls.md))
 <!-- RU -->
 
 ## Краткое описание

@@ -32,6 +32,7 @@ Poetiq frames LLM capability across three pillars — reasoning (ARC-AGI), retri
 - [[self-improving-gui-agent]] ([Self-Improving GUI Agent (MIT)](../agents/self-improving-gui-agent.md))
 
 ---
+- [[evoundo-recoverability-self-evolution]] ([EvoUndo](../research/evoundo-recoverability-self-evolution.md))
 <!-- RU -->
 
 ## Краткое описание

@@ -324,6 +324,7 @@ For a Karpathy-style three-layer wiki system:
 - [[huawei-deepseek-v4-ascend-training]] ([Huawei Post-Trains DeepSeek V4 on Domestic Chips](../news/huawei-deepseek-v4-ascend-training.md))
 
 ---
+- [[chinese-code-harness-comparison]] ([Chinese Code Harness Comparison](chinese-code-harness-comparison.md))
 <!-- RU -->
 
 ## Краткое описание

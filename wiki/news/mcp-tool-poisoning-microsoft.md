@@ -35,6 +35,8 @@ The attack exploits that MCP picks up description changes on the fly — in setu
 ---
 - [[agentic-safety-vs-textual-safety-mcp-attacks]] ([Agentic Safety vs Textual Safety](../research/agentic-safety-vs-textual-safety-mcp-attacks.md))
 - [[skill-md-supply-chain-risks]] ([Agent Skills Supply-Chain Risks](skill-md-supply-chain-risks.md))
+- [[mcp-stateless-core-spec]] ([MCP 2026-07-28 Stateless-Core Spec](mcp-stateless-core-spec.md))
+- [[mcp-vs-direct-api-debate]] ([MCP vs Direct API Debate](../concepts/mcp-vs-direct-api-debate.md))
 <!-- RU -->
 
 ## Краткое описание

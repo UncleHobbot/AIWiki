@@ -293,3 +293,15 @@
 **16:35 /wiki-inbox** — 4 created, 0 updated. Key items: rag-simpler-than-you-think (concepts), mcp-vs-direct-api-debate (concepts), ai-engineer-notebooks (tools), skill-doctor (tools). Clippings/posts/youtube empty; 4 tweets + 8 links blocked by robots.txt/X, requeued. Index: 317 total.
 
 **17:05 /wiki-reddit** — 16/16 subs via RSS (rate-limit retry added to fetch_reddit.py). 1564 posts scanned, 4 entries created: qwen-3-8-flash-next (models), glm-5-3-release (models), openai-huggingface-sandbox-escape (news), openusage-subscription-tracker (tools). 12 URLs queued. Index: 321 total.
+
+---
+
+## 2026-09-02
+
+**07:32 /wiki-inbox** — Full inbox pass (5 parallel research agents). 21 entries created, 1 updated (github-copilot-sdk v0.3.0). clippings: empty. links: 12 fresh + 7 stale backlog processed (4 skips: FastContext withdrawn, cognitor deleted, Memgram stale, sysai off-topic). twitter: 9 queued (2 skips: thin signals). posts: 3 stuck posts moved to Done. youtube: DHH Lex Fridman #501 → dhh-agentic-programming-lex-fridman (people), transcript saved. Key items: anthropic-cost-optimization-cookbook (tips), openai-cursor-model-winddown (news), nvidia-hugging-face-acquisition (news), claude-opus-5-backlash (models), altman-agi-by-end-of-2026 (news), tencent-hy4-preview (news), mcp-stateless-core-spec (news), claude-code-weekly-limits-sep-raise (news), hillock-neurosymbolic-memory (tools), cli-proxy-api (tools). Index: 345 total. 0 orphans, 0 broken links. 38 URLs marked processed (645->680).
+
+**13:06 /wiki-inbox** — Inbox empty — all 5 queues (clippings/links/twitter/posts/youtube) already cleared by previous run. 0 created, 0 updated, 0 skipped. Index: 345 total.
+
+**13:40 /wiki-reddit** — 17 subs (incl. new r/Codex), 140 candidates. 15 entries created. Key items: anywebmcp-webmcp-any-site (tools), polyglot-tolerant-tool-calls (tools), tokenray-cost-dashboard (tools), evoundo-recoverability-self-evolution (research), model-diversity-multi-agent-verification (research), qwen25-coder-mql5-finetune (research), free-api-tiers-coding-agents (research), glm-5-3-flash-vs-deepseek-v4-flash (models), chinese-code-harness-comparison (models), gpt-5-6-three-tier-workflow (tips), qwen38-27b-rtx-5080-tuning (tips), kimi-code-quota-audit (news), ai-agents-top-attack-vector-aug-2026 (news), claude-fable-5-1-ga (news), kimi-k3-reasoning-history-regression (news), kimi-k4-nvidia-chips-rumor (news). Index: 361 total. 0 orphans, 0 broken. 28 URLs marked processed (680->708). 10 URLs queued to links.md.
+
+**16:45 research** — T3 Code article created (tools) + ZCode deep-dive refreshed with September update. t3-code: Theo Browne/Ping.gg 'agent harness control surface' — free OSS GUI+mobile for orchestrating existing agent CLIs (Claude Code, Codex, Gemini CLI, OpenCode), 20k stars in a month, launched Jul 28 2026. ZCode: added v3.3→v3.10.2 changelog (GLM-5.3 era from Aug 14, GLM-5.3-Flash multimodal Aug 26, Goal mode, Remote Control, points-based quota, community sentiment flip), version history + RU sections updated. Index: 362 total. 0 orphans, 0 broken.

@@ -34,6 +34,7 @@ The stateless-core decision settles the debate framed by the "Stateful vs Statel
 - [[mcpg-postgresql-mcp-server]] ([MCPg PostgreSQL MCP Server](../tools/mcpg-postgresql-mcp-server.md))
 
 ---
+- [[jetbrains-mcp-agentic-ide]] ([JetBrains as Agentic Platform](../research/jetbrains-mcp-agentic-ide.md))
 <!-- RU -->
 
 ## Краткое описание

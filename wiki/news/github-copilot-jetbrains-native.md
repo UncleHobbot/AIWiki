@@ -30,6 +30,7 @@ The integration means teams standardized on Copilot no longer need the standalon
 - [[github-copilot-app]] ([GitHub Copilot App](github-copilot-app.md))
 
 ---
+- [[jetbrains-mcp-agentic-ide]] ([JetBrains as Agentic Platform](../research/jetbrains-mcp-agentic-ide.md))
 <!-- RU -->
 
 ## Краткое описание

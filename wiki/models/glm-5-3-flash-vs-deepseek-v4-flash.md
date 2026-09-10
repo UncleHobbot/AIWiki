@@ -29,6 +29,7 @@ This adds a third data point to the GLM-tool-calling reliability file ([[glm-5-2
 - [[chinese-code-harness-comparison]] ([Chinese Code Harness Comparison](chinese-code-harness-comparison.md))
 
 ---
+- [[budget-flash-models-comparison]] ([Budget Flash Models Comparison](../research/budget-flash-models-comparison.md))
 <!-- RU -->
 
 ## Краткое описание

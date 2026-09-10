@@ -42,6 +42,7 @@ The peak/valley mechanism is a load-balancing move. At 1M tokens, V4-Pro reporte
 - [[huawei-deepseek-v4-ascend-training]] ([Huawei-Led DeepSeek V4 Training on Ascend](huawei-deepseek-v4-ascend-training.md))
 
 ---
+- [[budget-flash-models-comparison]] ([Budget Flash Models Comparison](../research/budget-flash-models-comparison.md))
 <!-- RU -->
 
 ## Краткое описание

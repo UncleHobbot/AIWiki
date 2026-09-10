@@ -30,6 +30,7 @@ The transferable pattern: model-family tier routing as a *skill* rather than man
 - [[hard-gates-over-soft-prompts]] ([Hard Gates Beat Soft Prompts](hard-gates-over-soft-prompts.md))
 
 ---
+- [[budget-flash-models-comparison]] ([Budget Flash Models Comparison](../research/budget-flash-models-comparison.md))
 <!-- RU -->
 
 ## Краткое описание

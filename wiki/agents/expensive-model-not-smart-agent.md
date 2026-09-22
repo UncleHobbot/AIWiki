@@ -50,6 +50,7 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[closed-vs-open-model-scaffolding-gap]] ([Closed vs Open Scaffolding Gap](../concepts/closed-vs-open-model-scaffolding-gap.md))
 ---
 - [[mcp-tool-schema-bloat-token-cost]] ([MCP Tool-Schema Bloat](../tips/mcp-tool-schema-bloat-token-cost.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))
 <!-- RU -->
 
 ## Краткое описание
@@ -81,3 +82,4 @@ The Claude Code architecture breakdown is particularly valuable — it reveals t
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
 - [[ai-agents-arr-framework-ooda-loop]] ([AI Agents: ARR Framework, OODA Loop](../concepts/ai-agents-arr-framework-ooda-loop.md))
 - [[llm-wrapper-performance-gap]] ([Разрыв производительности LLM-обёрток: одна модель, разные результаты](../tips/llm-wrapper-performance-gap.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))

@@ -62,6 +62,7 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 - [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))
 - [[llm-fundamentals-tokens-to-production]] ([Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](../concepts/llm-fundamentals-tokens-to-production.md))
 - [[yandex-agents-week-2026-intro]] ([Yandex Agents Week 2026: Intro to AI Agents and LLMs](../concepts/yandex-agents-week-2026-intro.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))
 
 ---
 <!-- RU -->
@@ -100,3 +101,4 @@ The model is trained on a massive corpus (e.g. FineWeb from Common Crawl) via ne
 - [[andrej-karpathy]] ([Andrej Karpathy](../people/andrej-karpathy.md))
 - [[llm-fundamentals-tokens-to-production]] ([Critical LLM Knowledge Base for Developers: Tokens to Production AI Agents](../concepts/llm-fundamentals-tokens-to-production.md))
 - [[yandex-agents-week-2026-intro]] ([Yandex Agents Week 2026: Intro to AI Agents and LLMs](../concepts/yandex-agents-week-2026-intro.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))

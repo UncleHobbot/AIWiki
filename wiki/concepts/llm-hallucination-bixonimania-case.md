@@ -35,6 +35,7 @@ The broader context reinforces the finding: ECRI's 2026 report identified chatbo
 ## Related Entries
 - [[llm-wiki-compiled-knowledge-vs-rag]] ([LLM Wiki vs RAG](../concepts/llm-wiki-compiled-knowledge-vs-rag.md))
 - [[ai-agent-identity-iam-risks]] ([AI Agent Identity and IAM Risks](../concepts/ai-agent-identity-iam-risks.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))
 
 ---
 <!-- RU -->
@@ -58,3 +59,4 @@ The broader context reinforces the finding: ECRI's 2026 report identified chatbo
 ## Связанные записи
 - [[llm-wiki-compiled-knowledge-vs-rag]] ([LLM Wiki vs RAG](../concepts/llm-wiki-compiled-knowledge-vs-rag.md))
 - [[ai-agent-identity-iam-risks]] ([AI Agent Identity and IAM Risks](../concepts/ai-agent-identity-iam-risks.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))

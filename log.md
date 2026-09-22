@@ -313,3 +313,21 @@
 ## 2026-09-10
 
 **11:20 research** — Created budget-flash-models-comparison (research) — deep 3-way comparison of GPT-5.6 Luna vs GLM-5.3-Flash vs DeepSeek V4.1 Flash (3 parallel research agents). Key findings: price convergence at $0.15-0.20/$0.50-1.20 per 1M tokens (Luna cut 80% Jul 30); benchmarks NOT cross-comparable (different AA index versions); effort-dependence is the real differentiator (Luna slow at xhigh, GLM Flash mandatory thinking 7x tokens, DeepSeek verbose); DeepSeek released V4.1 Flash TODAY (Sep 10) and is retiring V4 Pro Sep 14; 2 of 3 are MIT open weights; OpenRouter traffic: Luna #4 globally at 1.27T tokens/week. Decision guide + pricing/spec/benchmark tables, RU section. Index: 364 total. 0 orphans, 0 broken.
+
+**15:03 /teach** — Teaching workspace created: teaching/ (MISSION, NOTES, RESOURCES, learning-record 0001, assets, reference/glossary.html 69 terms EN+RU, program.html 8 lessons, lessons/0001). Source: mattpocock/dictionary-of-ai-coding cloned to .state.
+
+**15:08 /teach** — Course update: lesson 9 (capstone) added — Matt Pocock skills flow (aihero.dev/skills) mapped to dictionary terms; program.html now 9 lessons; RESOURCES/NOTES updated.
+
+**15:21 /teach** — Teaching: lesson 1 completed by user; gap map received (The Model 3/16, rest 0) -> LR-0002 sequential path. Lesson 2 'Tokens & money' created with spaced-recap quiz; program updated.
+
+**15:32 /teach** — Teaching: lesson 2 completed (quizzes 3/3 + 5/5) -> LR-0003. Lesson 3 'Sessions & context window' (star) created and opened.
+
+**15:57 /teach** — Bilingual term pages: all 69 dictionary articles translated to RU (teaching/reference/term/), popup component added to lessons/program/glossary (hover/tap cards, full page in new tab). Generators: build_terms.py + term_translations_1..3.py.
+
+**16:12 /teach** — Teaching: lesson 3 completed (LR-0004). Lesson 4 'Tools & permissions' created and opened. Progress: 4/9 lessons built, lessons 1-3 passed.
+
+---
+
+## 2026-09-21
+
+**13:26 research** — Created typesafe-ai-jev (tools) — deep-dive on TypeSafe AI's Jev, first 'System One Model' (typed decisions + confidence instead of text gen; 3 primitives Choice/Score/Noul, RLCD on synthetic data, $42/Btok). Researched via background agent from primary sources (site/docs/blog/team) + TechCrunch, The Register, Forkast, MarkTechPost, HN thread 1941pts, Mikulski experiment; vendor 193.6x/444.6x claims vs independent 18-25x noted. $40M DCVC seed, founders ex-OpenAI RLHF/InstructGPT. Research notes cached at sources/web/typesafe-ai-jev-research-notes.md. Bilingual, 5 backlinks. Index: 365 total, 0 broken.

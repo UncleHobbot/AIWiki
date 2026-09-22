@@ -31,6 +31,7 @@ The authors also released LLM-AggreFact, a unified benchmark that aggregates dat
 ## Related Entries
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))
 
 ---
 <!-- RU -->
@@ -57,3 +58,4 @@ MiniCheck решает ключевую проблему развёртыван�
 ## Связанные записи
 - [[llm-wiki-scientific-research]] ([LLM Wiki for Scientific Research and Academic Writing](../tips/llm-wiki-scientific-research.md))
 - [[llm-wiki-pattern]] ([LLM Wiki Pattern](../concepts/llm-wiki-pattern.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))

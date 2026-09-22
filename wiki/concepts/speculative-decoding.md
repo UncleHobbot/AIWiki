@@ -37,6 +37,7 @@ The practical catch is that the win depends on hardware and draft accuracy. On f
 
 - [[mtp-hardware-dependent-speedup]] ([MTP Hardware-Dependent Speedup](../tips/mtp-hardware-dependent-speedup.md))
 - [[ollama]] ([Ollama](../tools/ollama.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))
 
 ---
 <!-- RU -->
@@ -67,3 +68,4 @@ The practical catch is that the win depends on hardware and draft accuracy. On f
 
 - [[mtp-hardware-dependent-speedup]] ([MTP Hardware-Dependent Speedup](../tips/mtp-hardware-dependent-speedup.md))
 - [[ollama]] ([Ollama](../tools/ollama.md))
+- [[typesafe-ai-jev]] ([TypeSafe AI Jev: System One Models](../tools/typesafe-ai-jev.md))

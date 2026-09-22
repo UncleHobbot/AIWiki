@@ -1,5 +1,5 @@
 # LLM Wiki Index
-**364 entries** across 8 categories.
+**365 entries** across 8 categories.
 
 ## Concepts (35)
 - [[agent-harness-engineering]] [Agent Harness Engineering](wiki/concepts/agent-harness-engineering.md) — Agent harness engineering is the discipline of designing the scaffolding around a language model — prompts, tools, context policies, hooks, subagents, feedback loops, and recovery paths — that turns a raw model into a working agent.
@@ -38,7 +38,7 @@
 - [[verifier-tax-tool-agent-safety]] [The Verifier Tax: Safety-Success Tradeoffs in Tool-Using LLM Agents](wiki/concepts/verifier-tax-tool-agent-safety.md) — A paper presented at ACM CAIS 2026 argues that standard "task completion" metrics for tool-using LLM agents are misleading, because an agent can complete a task while violating a safety or policy constraint — and adding runtime verification to catch this introduces a "Verifier Tax" that gets worse as tasks get longer.
 - [[yandex-agents-week-2026-intro]] [Yandex Agents Week 2026: Intro to AI Agents and LLMs](wiki/concepts/yandex-agents-week-2026-intro.md) — Opening lecture of Yandex Education's Agents Week 2026 intensive, covering the evolution of human-LLM interaction, what LLMs are (weights, next-token prediction), how they train, what they do well, and building a basic agent in practice.
 
-## Tools (111)
+## Tools (112)
 - [[10x-coding-agent-methodology]] [10x — A Working Method for Coding Agents (SKILL.md)](wiki/tools/10x-coding-agent-methodology.md) — 10x is an open-source, single-file Markdown methodology (`SKILL.md`) the author drops into coding agents.
 - [[9router-free-ai-coding]] [9router: Free AI Coding Router with RTK Token Saver](wiki/tools/9router-free-ai-coding.md) — 9router is an open-source local proxy router that connects any AI coding tool (Claude Code, Codex, Cursor, Cline, Copilot, OpenClaw) to 40+ providers including completely free tiers, automatically saves 20–40% of tokens per request via RTK compression, and falls back across tiers (subscription → cheap → free) so you never stop mid-session.
 - [[ab-method-workflow]] [ab-method: Domain-Grounded Planning Workflow for Claude Code and Codex](wiki/tools/ab-method-workflow.md) — ab-method is a workflow system for Claude Code and Codex that "grills" a problem statement into a domain-grounded implementation plan, then either drives it through test-driven missions you review one at a time, or hands it to an autonomous `/goal` loop with verifiable stop conditions.
@@ -142,6 +142,7 @@
 - [[tokenray-cost-dashboard]] [TokenRay — Per-Project, Per-Machine Cost Dashboard for Coding Agents](wiki/tools/tokenray-cost-dashboard.md) — **TokenRay** is a hosted dashboard answering "what are my AI coding agents actually costing?" — broken down by day, project, machine, session, and token type (input/output/reasoning/cache).
 - [[turbo-graph-rag-memory]] [turbo-graph — Graph Memory for RAG](wiki/tools/turbo-graph-rag-memory.md) — GraphMemoryIndex implementation on turbovec that adds graph-based memory to RAG systems.
 - [[turbo-llm-launcher]] [Turbo-LLM: Run Any llama.cpp Fork Without Compiling](wiki/tools/turbo-llm-launcher.md) — Turbo-LLM is a community-built CLI tool (`npx turbollm`) that downloads, launches, and auto-tunes any `llama-server`-based llama.cpp fork for your specific GPU — without manual compilation or flag-guessing.
+- [[typesafe-ai-jev]] [TypeSafe AI Jev: System One Models — Typed Decisions Instead of Text](wiki/tools/typesafe-ai-jev.md) — Jev is the first "System One Model" from TypeSafe AI (typesafe.ai, San Francisco): a hosted API that answers narrow questions about input text with typed, structured decisions — choices, scores, yes/no probabilities — plus a confidence score, instead of generating natural language.
 - [[unify-chat-provider-copilot-byok]] [Unify Chat Provider: Use the VS Code Copilot Harness With Any BYOK Model](wiki/tools/unify-chat-provider-copilot-byok.md) — Unify Chat Provider is a VS Code extension that lets developers keep using GitHub Copilot's agent harness in VS Code after cancelling their Copilot subscription, by bringing their own keys (BYOK) for Codex, Claude, Gemini, and OpenCode.
 - [[visnia-browser-agent]] [Visnia Browser Agent — Self-Hosted Browser Automation Benchmark Leader](wiki/tools/visnia-browser-agent.md) — Visnia is an open-source (MIT) TypeScript browser-automation agent with a CLI and TypeScript/Python SDKs, built on Playwright with bundled OCR (Tesseract).
 - [[visual-explainer]] [Visual Explainer](wiki/tools/visual-explainer.md) — An agent skill that replaces ASCII art and terminal tables with styled, self-contained HTML pages featuring real typography, dark/light themes, interactive Mermaid diagrams, and Chart.js dashboards — no build step required.
